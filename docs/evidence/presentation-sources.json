@@ -1,0 +1,44 @@
+[
+  {
+    "slide": 1,
+    "path": "docs/presentation-assets/final-library.png",
+    "sha256": "ca38f931c673447df50997ff0af442abe2e48ce2881f40e8953c110f5682f444",
+    "alt": "Actual TouchMap Library captured from installed final HAP 1209c8712549."
+  },
+  {
+    "slide": 2,
+    "path": "app/entry/src/main/resources/rawfile/samples/water-cycle/source-preview.png",
+    "sha256": "ece8dac5232a1aba587e9835c2549777577d63d306d22dab35d5a2b24f0f085e",
+    "alt": "Original water-cycle diagram with four labelled regions and directed connections."
+  },
+  {
+    "slide": 3,
+    "path": "docs/evidence/final-candidate-canvas.png",
+    "sha256": "879e0af5a272cdf5742dacb20e37dedeac20eedc298425ec1e196c6304a38130",
+    "alt": "Actual Canvas exploration showing selected Precipitation and native controls, with the diagram partly above the scrolled viewport."
+  },
+  {
+    "slide": 4,
+    "path": "docs/presentation-assets/resume.png",
+    "sha256": "d7adeab646cf6d579865ae2b7b87e385adb4f4fb699a3f79b2c235e8c4c997a6",
+    "alt": "Actual Resume screen showing restored water-cycle learning context after restart."
+  },
+  {
+    "slide": 5,
+    "path": "docs/presentation-assets/author-review.png",
+    "sha256": "6b61aae7c0f61dbbd914e42250195fb4165d610f5df0207d76f06a48d72b8b11",
+    "alt": "Actual author editor with separate geometry and meaning confirmation controls."
+  },
+  {
+    "slide": 7,
+    "path": "docs/evidence/native-export-dialog.png",
+    "sha256": "3e194fbc05601e2c8f8c177faf0241f66ac3a93e1c37e805edb456a7924f9e03",
+    "alt": "Actual native SystemPicker Save dialog for a touchmap lesson package."
+  },
+  {
+    "slide": 9,
+    "path": "docs/evidence/native-settings-200.jpeg",
+    "sha256": "776f12b796311a123a83fb4c3c6649ca222f8e13ec0819954bd3dbc74b2e7845",
+    "alt": "Actual 200 percent Settings screen explicitly reporting that the system screen reader is disabled."
+  }
+]

@@ -20,11 +20,14 @@ From the project directory in PowerShell:
 ./scripts/setup-platform.ps1
 ./scripts/build.ps1 -Product openharmonyApi20
 ./scripts/start-emulator.ps1
+./scripts/configure-emulator-audio.ps1 -Target 127.0.0.1:55555 -Action apply
 ./scripts/doctor.ps1
 ./scripts/install.ps1 -Target 127.0.0.1:55555
 ```
 
 All wrappers accept `-Distribution` for another WSL distribution. Setup pins `@oniroproject/oniro-app` to `0.11.0`, SDK to OpenHarmony `6.0` (API 20), and emulator to Oniro `v6.1` (API 23). The exact installed component versions and runtime test results are recorded in `toolchain.lock.json` and `docs/evidence/`. Newer runtime success alone does not verify API 20 runtime compatibility.
+
+The wrapper starts the emulator headless with the pinned launcher's VNC display `:0`, TCP port `5900`. Connect a VNC viewer to `127.0.0.1:5900` on the same computer (through WSL2 localhost forwarding on Windows). QEMU uses the host sound service; on the tested Windows setup this is WSLg PulseAudio. VNC itself does not carry the lesson audio. Keep emulator access local.
 
 By default the CLI is installed at `~/touchmap-toolchain`, SDK at `~/setup-ohos-sdk`, command tools at `~/command-line-tools`, and emulator at `~/oniro-emulator`. Environment variables `TOUCHMAP_TOOLS_DIR`, `ONIRO_SDK_ROOT_DIR`, `ONIRO_CMD_TOOLS_PATH`, and `ONIRO_EMULATOR_DIR` override these paths. No coordinator directory or private provider account is required for the native build.
 
@@ -33,7 +36,7 @@ The actual public commands run by the wrapper are:
 ```sh
 oniro-app sign <private-build-directory> --bootstrap
 oniro-app build <private-build-directory> --product openharmonyApi20 --mode debug --json
-oniro-app app install app --hap dist/touchmap-signed.hap --device 127.0.0.1:55555
+oniro-app app install app --hap ../dist/touchmap-signed.hap --device 127.0.0.1:55555
 oniro-app app launch app --ability EntryAbility --device 127.0.0.1:55555
 ```
 

@@ -1,0 +1,130 @@
+{
+  "reviewedAt": "2026-10-03T19:39:54.000295+00:00",
+  "reviewer": "Codex backend agent, independent of deck author; not a human participant review",
+  "status": "passed",
+  "version": "final-v6-pdf-links-v5-pptx",
+  "pdf": {
+    "sha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
+    "bytes": 370329,
+    "pages": 10,
+    "actualUriAnnotations": [
+      "https://github.com/Defozo/TouchMap",
+      "https://github.com/Defozo/TouchMap/releases/tag/v1.0.0"
+    ]
+  },
+  "pptx": {
+    "sha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
+    "bytes": 471888,
+    "slidesAndNotes": [
+      10,
+      10
+    ],
+    "editableTables": 2
+  },
+  "coverage": {
+    "v1RenderedSlidesIndividuallyViewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "v3ChangedRenderedSlidesIndividuallyViewed": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "remainingRenderedSlidesByteIdenticalToReviewedV1": {
+      "2": true,
+      "4": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": true
+    },
+    "allNarrationsReviewed": true,
+    "narrationTextPresentInActualPptx": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "localCitationFilesChecked": 33,
+    "missingCitationFiles": [],
+    "finalRenderedSlidesByteIdenticalToReviewedV3": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": true,
+      "10": true
+    },
+    "finalPdfPageRendersByteIdenticalBeforeAndAfterLinkAnnotations": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true,
+      "8": true,
+      "9": true,
+      "10": true
+    }
+  },
+  "resolvedFindings": [
+    "Replaced historical stale-guide exploration screenshot with fixed-candidate evidence.",
+    "Used current production Library on cover and kept historical flow provenance in notes.",
+    "Corrected publication versus separate Ready offline requirements.",
+    "Replaced nonexistent/private citations with existing public-source targets.",
+    "Corrected setup path to docs/platform.md and restored legible mint hyperlinks.",
+    "Added the two actual PDF URI annotations; independent pdfinfo inspection confirms both destinations and all ten PDF render pixels remain identical."
+  ],
+  "factualChecks": [
+    "Team and sole human member match TEAM.json.",
+    "Native18, audio100/p9525ms plus303ms including dwell, restore100/p95130ms and92+8 split match evidence.",
+    "API20 build versus API23 runtime and no genuine-reader/physical-hardware/participant-study claims remain explicit."
+  ],
+  "limits": [
+    "Visual inspection used PowerPoint-exported PNGs, not an interactive slideshow or a blind-reader session.",
+    "Public source access is verified separately; release asset URL publication and anonymous byte readback remain a separate external release check."
+  ],
+  "previousReviewedCandidate": {
+    "version": "v3",
+    "pdfSha256": "540a09f632f193800beafa46164458328d02172101e8590d0cc93d6ea372fd2c",
+    "pptxSha256": "920221f1e97d449c27639e2ba0ecec034d8cf44e7dc5ef6e508fddfe5d24ecfd"
+  },
+  "previousMetadataCandidate": {
+    "version": "v5",
+    "pdf": {
+      "sha256": "6f17bb912fc38d73c75f4cb0e1cd2dfae65d3fbbc5865ad24aa5212fc78b3696",
+      "bytes": 335999,
+      "pages": 10
+    },
+    "pptx": {
+      "sha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
+      "bytes": 471888,
+      "slidesAndNotes": [
+        10,
+        10
+      ],
+      "editableTables": 2
+    }
+  }
+}

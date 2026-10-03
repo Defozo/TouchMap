@@ -1,387 +1,399 @@
-Building project at /home/test123/.cache/touchmap-build/build-PT1uSeQJ...
+{
+  "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+  "appSourceFileCount": 122,
+  "appSourceBytes": 7342792,
+  "gitHeadAtBuild": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+  "workingTreeDirty": true,
+  "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+}
+Building project at /home/test123/.cache/touchmap-build/build-QfG6NSN4...
 [build] ran ohpm install --all (oh_modules was missing)
 [build] /home/test123/command-line-tools/bin/hvigorw assembleHap --mode module -p product=openharmonyApi20 -p buildMode=debug --stacktrace --no-daemon
-> hvigor [32mFinished :entry:clean... after 15 ms [39m
-> hvigor [32mFinished :entry:default@PreBuild... after 654 ms [39m
-> hvigor [32mFinished :entry:default@CreateModuleInfo... after 4 ms [39m
-> hvigor [32mFinished :entry:default@GenerateMetadata... after 11 ms [39m
-> hvigor [32mFinished :entry:default@ConfigureCmake... after 9 ms [39m
-> hvigor [32mFinished :entry:default@MergeProfile... after 20 ms [39m
-> hvigor [32mFinished :entry:default@CreateBuildProfile... after 9 ms [39m
+> hvigor [32mFinished :entry:clean... after 5 ms [39m
+> hvigor [32mFinished :entry:default@PreBuild... after 220 ms [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 5 ms [39m
+> hvigor [32mFinished :entry:default@GenerateMetadata... after 5 ms [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 2 ms [39m
+> hvigor [32mFinished :entry:default@MergeProfile... after 6 ms [39m
+> hvigor [32mFinished :entry:default@CreateBuildProfile... after 3 ms [39m
 > hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
-> hvigor [32mFinished :entry:default@GeneratePkgContextInfo... after 16 ms [39m
-> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 3 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgContextInfo... after 7 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 2 ms [39m
 > hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 1 ms [39m
-> hvigor [32mFinished :entry:default@MakePackInfo... after 13 ms [39m
-> hvigor [32mFinished :entry:default@ProcessProfile... after 337 ms [39m
+> hvigor [32mFinished :entry:default@MakePackInfo... after 6 ms [39m
+> hvigor [32mFinished :entry:default@ProcessProfile... after 131 ms [39m
 > hvigor [32mFinished :entry:default@ProcessRouterMap... after 6 ms [39m
-> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
-> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 4 ms [39m
-> hvigor [32mFinished :entry:default@ProcessResource... after 13 ms [39m
-> hvigor [32mFinished :entry:default@GenerateLoaderJson... after 22 ms [39m
-> hvigor [32mFinished :entry:default@ProcessLibs... after 26 ms [39m
-> hvigor [32mFinished :entry:default@CompileResource... after 424 ms [39m
-> hvigor [32mFinished :entry:default@DoNativeStrip... after 4 ms [39m
-> hvigor [32mFinished :entry:default@BuildJS... after 11 ms [39m
-> hvigor [32mFinished :entry:default@SyscapTransform... after 117 ms [39m
-> hvigor [32mFinished :entry:default@CacheNativeLibs... after 33 ms [39m
-> hvigor [32m[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/SystemPicker.ets:13:26
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessResource... after 4 ms [39m
+> hvigor [32mFinished :entry:default@GenerateLoaderJson... after 15 ms [39m
+> hvigor [32mFinished :entry:default@ProcessLibs... after 12 ms [39m
+> hvigor [32mFinished :entry:default@CompileResource... after 323 ms [39m
+> hvigor [32mFinished :entry:default@DoNativeStrip... after 12 ms [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 4 ms [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 49 ms [39m
+> hvigor [32mFinished :entry:default@CacheNativeLibs... after 9 ms [39m
+> hvigor [32m[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/SystemPicker.ets:14:26
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:8:16
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:9:16
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:9:13
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:10:13
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:9:132
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:10:119
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:9:167
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:10:154
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:12:16
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:13:16
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:14:18
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:15:18
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:17:64
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:18:64
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:22:15
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:23:15
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:46:3
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:47:3
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:50:57
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:51:57
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:50:87
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:51:87
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:51:13
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:52:13
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:52:54
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:53:54
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:55:9
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:56:9
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:58:15
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:59:15
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:59:52
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:60:52
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:62:9
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:63:9
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:63:15
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:64:15
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:64:52
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:65:52
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:84:19
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:85:19
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/PackageExporter.ets:84:42
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/PackageExporter.ets:85:42
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/ArchiveWorker.ets:13:16
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/ArchiveWorker.ets:14:16
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:41:59
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:42:59
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:42:60
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:43:60
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:42:60
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:43:60
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:42:110
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:43:110
  'decodeWithStream' has been deprecated.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:44:14
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:45:14
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:45:9
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:46:9
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:46:24
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:47:24
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:50:16
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:51:16
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:52:18
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:53:18
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:58:19
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:59:19
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:64:15
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:65:15
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:68:8
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:69:8
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:68:33
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:69:33
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:69:16
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:70:16
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:70:13
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:71:13
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:70:141
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:71:123
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:70:176
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:71:158
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:144:21
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:145:21
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:145:11
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:146:11
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:146:11
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:147:11
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:147:11
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:148:11
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:148:24
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:149:24
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:149:37
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:150:37
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:158:24
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:159:24
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:161:13
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:162:13
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:161:13
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:162:13
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:161:48
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:162:48
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:165:9
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:166:9
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:165:35
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:166:35
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:166:5
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:167:5
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:167:17
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:168:17
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:169:13
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:170:13
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:169:52
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:170:52
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:173:9
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:174:9
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:174:26
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:175:26
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:176:39
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:177:39
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:176:39
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:177:39
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:176:74
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:177:74
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:181:11
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:182:11
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:181:70
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:182:70
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:185:10
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:186:10
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:185:33
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:186:33
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:186:32
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:187:32
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:189:86
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:190:86
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:193:26
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:194:26
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:195:18
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:196:18
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:195:64
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:196:64
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:195:113
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:196:113
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:201:23
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:202:23
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:203:11
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:204:11
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:204:32
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:205:32
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:207:17
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:212:17
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:208:11
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:213:11
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:274:110
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:279:110
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:310:5
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:315:5
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:318:12
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:323:12
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:318:67
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:323:67
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:319:7
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:324:7
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:320:71
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:325:71
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:321:21
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:326:21
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:321:45
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:326:45
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:334:76
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:332:12
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:359:168
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:350:76
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:359:205
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:381:21
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:363:77
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:381:49
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:375:23
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:386:77
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:376:18
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:398:23
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:376:50
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:399:18
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:376:129
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:399:50
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:381:7
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:399:129
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:392:25
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:404:7
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:398:5
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:415:25
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:404:23
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:421:5
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:405:81
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:427:23
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:405:118
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:428:81
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:411:5
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:428:118
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:415:23
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:434:5
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:421:18
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:438:23
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:422:15
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:444:18
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:422:149
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:445:15
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Repository.ets:422:184
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:445:125
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Feedback.ets:32:5
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Repository.ets:445:160
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Feedback.ets:55:5
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Feedback.ets:42:5
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Feedback.ets:56:5
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Feedback.ets:65:5
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Feedback.ets:160:32
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Feedback.ets:66:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Feedback.ets:194:32
  'write' has been deprecated.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/entryability/EntryAbility.ets:13:64
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/entryability/EntryAbility.ets:17:64
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Preparation.ets:37:30
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Preparation.ets:38:30
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Preparation.ets:111:35
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Preparation.ets:112:35
  'packing' has been deprecated.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/platform/Preparation.ets:117:64
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/platform/Preparation.ets:118:64
  Function may throw exceptions. Special handling is required.
 [39m[39m
-[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/src/main/ets/pages/Index.ets:66:40
+[33mWARN: [33m[33mArkTS:WARN File: /home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/src/main/ets/pages/Index.ets:72:40
  'getContext' has been deprecated.
 [39m[39m
 [39m
-> hvigor [32mFinished :entry:default@CompileArkTS... after 31 s 697 ms [39m
-> hvigor [32mFinished :entry:default@GeneratePkgModuleJson... after 4 ms [39m
-> hvigor [32mFinished :entry:default@PackageHap... after 1 s 414 ms [39m
-> hvigor [32mFinished :entry:default@SignHap... after 7 s 336 ms [39m
-> hvigor [32mFinished :entry:default@CollectDebugSymbol... after 10 ms [39m
+> hvigor [32mFinished :entry:default@CompileArkTS... after 20 s 267 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgModuleJson... after 2 ms [39m
+> hvigor [32mFinished :entry:default@PackageHap... after 519 ms [39m
+> hvigor [32mFinished :entry:default@SignHap... after 2 s 628 ms [39m
+> hvigor [32mFinished :entry:default@CollectDebugSymbol... after 2 ms [39m
 > hvigor [32mFinished :entry:assembleHap... after 1 ms [39m
-> hvigor [32mBUILD SUCCESSFUL in 56 s 293 ms [39m
+> hvigor [32mBUILD SUCCESSFUL in 27 s 971 ms [39m
 {
   "exitCode": 0,
-  "durationMs": 64684,
+  "durationMs": 33331,
   "discoveredHaps": {
     "entry": {
       "signed": [
-        "/home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/build/openharmonyApi20/outputs/default/entry-default-signed.hap"
+        "/home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/build/openharmonyApi20/outputs/default/entry-default-signed.hap"
       ],
       "unsigned": [
-        "/home/test123/.cache/touchmap-build/build-PT1uSeQJ/entry/build/openharmonyApi20/outputs/default/entry-default-unsigned.hap"
+        "/home/test123/.cache/touchmap-build/build-QfG6NSN4/entry/build/openharmonyApi20/outputs/default/entry-default-unsigned.hap"
       ]
     }
   },
@@ -389,13 +401,23 @@ Building project at /home/test123/.cache/touchmap-build/build-PT1uSeQJ...
 }
 Build complete.
 {
-  "sha256": "ce0ad907fcb97ec1c45ccd7b803bd1ae9a2094b7af642c2cdf88bb6e515a9a12",
-  "bytes": 8361198,
+  "sha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e",
+  "bytes": 8527155,
   "bundleName": "org.touchmap.app",
   "minAPIVersion": 20,
   "targetAPIVersion": 20,
   "apiReleaseType": "Beta1",
   "module": "entry",
-  "signatureVerification": "hap-sign-tool verify-app must pass before this script runs; installation recorded separately"
+  "signatureVerification": "hap-sign-tool verify-app must pass before this script runs; installation recorded separately",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7342792,
+    "gitHeadAtBuild": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b"
 }
-Signed HAP: /tmp/touchmap-checkout-1KneRGD2/dist/touchmap-signed.hap
+Signed HAP: /tmp/touchmap-checkout-mB5dJfHl/dist/touchmap-signed.hap

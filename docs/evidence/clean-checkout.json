@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-03T15:22:12.776551+00:00",
-  "commit": "ebc1dc20af8e2d818edf3d3174fb014428faaca8",
+  "checkedAt": "2026-10-03T19:20:28.742823+00:00",
+  "commit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
   "method": "Fresh local git clone --no-local; dependencies installed from lockfiles; no credentials copied",
   "checks": {
     "npmCi": true,
@@ -10,8 +10,18 @@
     "nativeCleanBuild": true,
     "signatureVerification": true
   },
-  "signedHapSha256": "ce0ad907fcb97ec1c45ccd7b803bd1ae9a2094b7af642c2cdf88bb6e515a9a12",
-  "signedHapBytes": 8361198,
+  "signedHapSha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e",
+  "signedHapBytes": 8527155,
   "signingNote": "Independent development signing can change the HAP hash. This verifies source reproduction, not byte-identical signatures.",
-  "installation": "Separate runtime evidence is required; this script does not modify a device."
+  "installation": "Separate runtime evidence is required; this script does not modify a device.",
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7342792,
+    "gitHeadAtBuild": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  }
 }

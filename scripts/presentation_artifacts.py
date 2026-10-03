@@ -52,9 +52,12 @@ def inspect_pptx(data: bytes) -> tuple[int, int]:
 
         def target(base: str, relation) -> str:
             value = relation.get('Target', '')
-            if relation.get('TargetMode') == 'External' or not value or '\\' in value or ':' in value:
+            if (relation.get('TargetMode') == 'External' or not value or '\\' in value
+                    or ':' in value or value.startswith('//')):
                 raise ValueError('Presentation slide/notes relationship must reference an internal part')
-            name = posixpath.normpath(posixpath.join(posixpath.dirname(base), value))
+            # OPC root-relative targets address the ZIP package, not the host filesystem.
+            name = posixpath.normpath(value[1:] if value.startswith('/')
+                                     else posixpath.join(posixpath.dirname(base), value))
             if name.startswith('/') or name.startswith('../'):
                 raise ValueError('Presentation relationship escapes its package')
             return name

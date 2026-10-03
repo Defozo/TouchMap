@@ -1,0 +1,37 @@
+{
+  "checkedAtUtc": "2026-10-03T19:20:40.512165+00:00",
+  "status": "passed",
+  "repositoryUrl": "https://github.com/Defozo/TouchMap",
+  "public": true,
+  "defaultBranch": "main",
+  "sourceCommit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+  "anonymousRequests": true,
+  "credentialsOrCookiesSent": false,
+  "files": [
+    {
+      "path": "README.md",
+      "status": 200,
+      "bytes": 6755,
+      "sha256": "6ebcc1c57952a6d25ee4f6fdb548dd560e6d807073878308652f8fcef5177270"
+    },
+    {
+      "path": "toolchain.lock.json",
+      "status": 200,
+      "bytes": 2245,
+      "sha256": "db7f57a0c1ab39e41fa39dda920d5e6768704498c54d10bcd30fe013a480a2ee"
+    },
+    {
+      "path": "app/entry/src/main/module.json5",
+      "status": 200,
+      "bytes": 1262,
+      "sha256": "eb372f01f4f41e249b923d5a81d86b0a91898e796b10f6aaf79f0388324b08e0"
+    },
+    {
+      "path": "docs/evidence/demo-manifest.json",
+      "status": 200,
+      "bytes": 15129,
+      "sha256": "c011c799b900a12b1a77458917f06fd918f354bfd5e2a46750729785385cebd0"
+    }
+  ],
+  "scope": "Public repository metadata, branch commit and exact source-file bytes read using a fresh HTTP session with no authorization, cookie jar or environment credentials. Native clean checkout and human independent reproduction are separate checks."
+}

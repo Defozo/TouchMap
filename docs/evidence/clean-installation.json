@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T19:20:56.224051+00:00",
+  "commit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+  "productionHapSha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e",
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7342792,
+    "gitHeadAtBuild": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "scope": "Independent clean-checkout HAP installed over the existing second installation with data retained. Native Hypium, actual audio controls and ordinary Library launch are executed against these independently built bytes.",
+  "nativeTests": {
+    "run": 18,
+    "failed": 0,
+    "errors": 0,
+    "passed": 18
+  },
+  "testHapSha256": "e9ccb129f77bb3b336ddb9ef5e9470ff39446823402c7edad9b5cad23604ade2",
+  "audioControls": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "stop_before_dwell",
+        "passed": true,
+        "detail": "Observed 0 native onset callbacks after cancellation."
+      },
+      {
+        "name": "rapid_replacement_only_latest_target",
+        "passed": true,
+        "detail": "Native PCM targets: evaporation"
+      },
+      {
+        "name": "pause_resume_finishes_same_recording",
+        "passed": true,
+        "detail": "Playing local PCM recording | Recording paused. Resume keeps your place. | Recording resumed at the saved position. | Recording finished"
+      },
+      {
+        "name": "four_byte_final_pcm_tail_finishes",
+        "passed": true,
+        "detail": "964 PCM bytes: Playing local PCM recording | Recording finished; failures: "
+      }
+    ]
+  },
+  "ordinaryLibraryVisible": true,
+  "finishedUtc": "2026-10-03T19:22:00.537103+00:00"
+}

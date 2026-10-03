@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "recordedAt": "2026-10-03T19:18:14.073705+00:00",
+  "recordedAt": "2026-10-03T19:26:25.823941+00:00",
   "backend": {
-    "passed": 90,
+    "passed": 93,
     "failures": 0,
     "errors": 0,
-    "junitSeconds": 12.415,
-    "gitHeadAtRun": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+    "junitSeconds": 7.791,
+    "gitHeadAtRun": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
     "workingTreeIncludedUncommittedPresentationChanges": true,
     "sourceSha256": {
       "backend/tests/crash_worker.py": "86c0428a5de36e08fba3e31dae3c264140140f45cc673d85e05887328b368246",
@@ -15,7 +15,7 @@
       "backend/tests/test_api.py": "45eeda07bd2fc4221959f4e75be9501cf97425c5e2ba4fa669df25734059f6c0",
       "backend/tests/test_archive.py": "cc8f8413a5fe106c4cf99da91c26ecab8873424ca4b0b7ee45616bd53a3360bb",
       "backend/tests/test_core.py": "0e8f946735af3c7c3e0bc28c0d9f28cbf6f7bfa1e9a3436830b2d46d2abba16c",
-      "backend/tests/test_release_packaging.py": "b8bbcd183fff73807d452541d8cf585ff78167a1ff1fa857cf45cfed5c44f5e1",
+      "backend/tests/test_release_packaging.py": "d6fe5002a486f2699b69a25320b3646c3cdc38fda114d9d34fd96c4dbe5e3a6b",
       "backend/touchmap/__init__.py": "808aa1bb780a0cc600b2efe3538090ad80b01fee222274a993f0eb7b0447477f",
       "backend/touchmap/api.py": "ae177791d69d0fb13410be1dfd40f0e8b4d2c91e9b1f9e75b514c2dda1ed3cba",
       "backend/touchmap/audio.py": "7735d54311db0adc925742854f5e180396f3810e1b8dfa897a3487b20f50a3db",
@@ -30,7 +30,7 @@
       "backend/touchmap/svg.py": "8c8f8afbcdcdb0c81004108907f58630d5b847b1a0e0df0b49d9b9008dc0eec1",
       "scripts/app_source_fingerprint.py": "c7bbcd55b712f5cf51ee53da2be69eeeb6a1f427f4a44fb82c70617cd6b6d6c4",
       "scripts/package-release.py": "4c026fd8339856e7a6248a23c0ed0b36a1bea7e358b803e4d3e734558ef3b682",
-      "scripts/presentation_artifacts.py": "7a8eeca1ab168083905bf2f191a51c5d3a08835986260d202c8508a73e238c4d",
+      "scripts/presentation_artifacts.py": "86f8305ec77d7c61f48e8b31e48925e66f3c6dc9ab95379989a858a27b597140",
       "scripts/verify-release.py": "0f86d3d08fe0080c1a232a250547e42e91ff02b4fd8851a0b1d71bde20a5c687"
     }
   },
@@ -47,9 +47,9 @@
     "appSourceSha256": "c748b4b79ffb34a1fb0a5c8327aea49a581c9505885b01cf3b7a626c695700d5"
   },
   "evidenceSha256": {
-    "docs/evidence/backend-pytest.xml": "cbf52c77e5bf7c2d0be75194a0911b31be1897a684f748933cf346798bf60aaf",
+    "docs/evidence/backend-pytest.xml": "5c75725bebd76985f6bc620f019b7411265fa5931d383bb29b809d58450fa28d",
     "docs/evidence/native-audit-host-tests.txt": "676d5e6588e826fb5aaf0a4707332b77fd3aeeea944349334b22061d9178abe4",
     "docs/evidence/native-audit-typecheck.txt": "8542d4a8147a5f75a2f1b80e5edf3ab478a9bc3f3c3154463b55edac98ed78a0"
   },
-  "scope": "Local host executions with separate source identities. Backend 90 includes the presentation packaging changes recorded by exact source hashes. Host 51 and typecheck were executed at the earlier frozen app checkpoint; the subsequent app changes are native measurement hooks, not shared pure TypeScript. Independent clean-clone reproduction and native execution are separate evidence."
+  "scope": "Local host executions with separate source identities. Backend 93 includes the presentation packaging and valid OPC root-relative relationship changes recorded by exact source hashes. Host 51 and typecheck were executed at the earlier frozen app checkpoint; the subsequent app changes are native measurement hooks, not shared pure TypeScript. Independent clean-clone reproduction and native execution are separate evidence."
 }

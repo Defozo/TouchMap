@@ -211,3 +211,21 @@ def test_pdf_page_verification_explains_missing_dependency(tmp_path,monkeypatch)
     monkeypatch.setattr(release._PRESENTATION.shutil,'which',lambda name:None)
     with pytest.raises(ValueError,match='install Poppler'):
         release._PRESENTATION.inspect_pdf(tmp_path/'deck.pdf')
+
+
+@pytest.mark.parametrize('target,valid',[
+    ('/ppt/slides/slide1.xml',True),
+    ('../../../slide1.xml',False),
+    ('//example.invalid/slide1.xml',False)])
+def test_presentation_resolves_package_root_and_rejects_external_escape(target,valid):
+    with zipfile.ZipFile(io.BytesIO(presentation_pptx())) as archive:
+        parts={name:archive.read(name) for name in archive.namelist()}
+    name='ppt/_rels/presentation.xml.rels'
+    parts[name]=parts[name].replace(b'Target="slides/slide1.xml"',f'Target="{target}"'.encode())
+    name='ppt/slides/_rels/slide1.xml.rels'
+    parts[name]=parts[name].replace(b'Target="../notesSlides/notesSlide1.xml"',b'Target="/ppt/notesSlides/notesSlide1.xml"')
+    data=release.deterministic_zip(parts)
+    if valid:assert release._PRESENTATION.inspect_pptx(data)==(1,1)
+    else:
+        with pytest.raises(ValueError,match='escapes|internal'):
+            release._PRESENTATION.inspect_pptx(data)

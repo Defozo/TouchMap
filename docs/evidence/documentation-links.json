@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03T19:18:02.512645+00:00",
+  "checkedAt": "2026-10-03T19:43:42.724238+00:00",
   "scope": "Relative Markdown and image targets in public documentation; original untracked planning materials excluded. URL liveness and heading fragments are outside this local-file audit.",
   "documents": [
     "AI_INTEGRATION.md",
@@ -10,8 +10,10 @@
     "THIRD_PARTY.md",
     "contracts/CONTRACT.md",
     "docs/ACCESSIBILITY.md",
+    "docs/DEMO_ACCESS.md",
     "docs/DEMO_SCRIPT.md",
     "docs/LOCALIZATION.md",
+    "docs/PRESENTATION.md",
     "docs/PRIVACY.md",
     "docs/RELEASE.md",
     "docs/STUDY_PROTOCOL.md",
@@ -49,6 +51,11 @@
     },
     {
       "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/ai-chart-evaluation/INTERPRETATION.md#decision-after-the-held-out-diagnostic-failure",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
       "target": "docs/evidence/native-authoring-flow.json",
       "exists": true
     },
@@ -65,6 +72,11 @@
     {
       "document": "AI_INTEGRATION.md",
       "target": "docs/evidence/provider-cost-estimates.json",
+      "exists": true
+    },
+    {
+      "document": "AI_WORKFLOW.md",
+      "target": "docs/PRESENTATION.md",
       "exists": true
     },
     {
@@ -94,12 +106,22 @@
     },
     {
       "document": "README.md",
+      "target": "docs/DEMO_ACCESS.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
       "target": "docs/platform.md",
       "exists": true
     },
     {
       "document": "README.md",
       "target": "docs/platform.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/DEMO_ACCESS.md",
       "exists": true
     },
     {
@@ -283,6 +305,21 @@
       "exists": true
     },
     {
+      "document": "docs/DEMO_ACCESS.md",
+      "target": "platform.md",
+      "exists": true
+    },
+    {
+      "document": "docs/DEMO_ACCESS.md",
+      "target": "evidence/hap-metadata.json",
+      "exists": true
+    },
+    {
+      "document": "docs/DEMO_ACCESS.md",
+      "target": "TEST_REPORT.md",
+      "exists": true
+    },
+    {
       "document": "docs/DEMO_SCRIPT.md",
       "target": "demo-storyboard.json",
       "exists": true
@@ -300,6 +337,41 @@
     {
       "document": "docs/DEMO_SCRIPT.md",
       "target": "evidence/second-import-integrity.json",
+      "exists": true
+    },
+    {
+      "document": "docs/PRESENTATION.md",
+      "target": "evidence/presentation-manifest.json",
+      "exists": true
+    },
+    {
+      "document": "docs/PRESENTATION.md",
+      "target": "evidence/presentation-sources.json",
+      "exists": true
+    },
+    {
+      "document": "docs/PRESENTATION.md",
+      "target": "evidence/presentation-notes.json",
+      "exists": true
+    },
+    {
+      "document": "docs/PRESENTATION.md",
+      "target": "../scripts/build-presentation.mjs",
+      "exists": true
+    },
+    {
+      "document": "docs/PRESENTATION.md",
+      "target": "evidence/presentation-qc.json",
+      "exists": true
+    },
+    {
+      "document": "docs/PRESENTATION.md",
+      "target": "evidence/presentation-review.json",
+      "exists": true
+    },
+    {
+      "document": "docs/PRESENTATION.md",
+      "target": "evidence/presentation-independent-review.json",
       "exists": true
     },
     {
@@ -534,6 +606,21 @@
     },
     {
       "document": "docs/TEST_REPORT.md",
+      "target": "evidence/presentation-manifest.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "PRESENTATION.md",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/presentation-independent-review.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
       "target": "evidence/secret-scan.json",
       "exists": true
     },
@@ -574,6 +661,11 @@
     },
     {
       "document": "docs/TEST_REPORT.md",
+      "target": "evidence/clean-installation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
       "target": "evidence/hap-metadata.json",
       "exists": true
     },
@@ -595,6 +687,16 @@
     {
       "document": "docs/TEST_REPORT.md",
       "target": "evidence/demo-independent-review.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/public-clean-clone.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/public-source-access.json",
       "exists": true
     },
     {
@@ -710,6 +812,11 @@
     {
       "document": "docs/TEST_REPORT.md",
       "target": "STUDY_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/final-staged-secret-scan.json",
       "exists": true
     },
     {

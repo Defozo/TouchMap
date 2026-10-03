@@ -4,7 +4,7 @@
     "evidence": [
       "docs/evidence/backend-pytest.xml"
     ],
-    "result": "90 tests, 0 failures, 0 errors; JUnit 12.415 s, including 23 presentation/demo release-packaging checks."
+    "result": "93 tests, 0 failures, 0 errors; JUnit 7.791 s, including 26 presentation/demo release-packaging checks."
   },
   "hostAutomated": {
     "status": "passed",
@@ -111,7 +111,7 @@
       "docs/evidence/secret-scan.json",
       "docs/evidence/documentation-links.json"
     ],
-    "result": "Working-tree snapshot:474 scanner-selected text files,537 reviewed algorithm-literal false positives,0 unresolved. Link snapshot:138 checked relative targets,0 failures. Final staged inputs need a fresh scan."
+    "result": "Earlier working-tree vault snapshot:474 scanner-selected text files,537 reviewed public-algorithm matches,0 unresolved. Current documentation audit:163 relative targets,0 failures. Final staged changes and Git history are separately recorded."
   },
   "finalSourceFreeze": {
     "status": "passed",
@@ -124,15 +124,20 @@
     "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b"
   },
   "finalCleanBuildAndSignature": {
-    "status": "pending",
+    "status": "passed",
     "evidence": [
       "docs/evidence/clean-checkout.json",
-      "docs/evidence/hap-metadata.json"
+      "docs/evidence/clean-stage-input-fingerprint.json",
+      "docs/evidence/clean-installation.json",
+      "docs/evidence/clean-native-test-artifact.json",
+      "docs/evidence/clean-audio-controls.json"
     ],
-    "reason": "Earlier clean checkout succeeded, but it predates current fixes. Final committed app bytes, clean rebuild, signature and release HAP must match."
+    "commit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+    "result": "Fresh git clone --no-local, locked dependencies, backend90/host51/typecheck, native build and signature verification passed. Independently signed HAP145b installed over the second emulator with data retained; native18/audio4 and ordinary Library passed. App fingerprint a332 matches release1209; different signatures are not claimed byte-identical.",
+    "productionHapSha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e"
   },
   "finalNativeAndHostAcceptance": {
-    "result": "90 backend and 51 host tests passed; typecheck exit 0. Current HAP1209 passed 18 native tests and four audio controls. The 15 added backend tests cover presentation packaging; app and pure TypeScript sources are unchanged. Independent clean-clone rerun remains separately gated.",
+    "result": "Latest local backend 93 passed, including three additional package-root PPTX regressions. Independent clean checkout at12eea57 passed backend90, host51, typecheck, build/signature and actual independent install/native18/audio4/ordinary Library. App inputs remain identical to release HAP1209.",
     "evidence": [
       "docs/evidence/backend-pytest.xml",
       "docs/evidence/native-audit-host-tests.txt",
@@ -184,11 +189,15 @@
   },
   "finalReleaseArchive": {
     "status": "pending",
-    "reason": "Package frozen committed source, signed HAP, examples, demo, licences, environment manifest and checksums after preflight; no final archive claimed here."
+    "reason": "Pre-construction snapshot. The final ZIP is constructed after this committed source freeze; its independent .verification.json sidecar verifies exact archive bytes, complete checksums, HAP/source identity and reviewed media after construction."
   },
   "finalReleaseSecretScan": {
-    "status": "pending",
-    "reason": "Repeat secret/path review on final staged source and selected public evidence, excluding private/local/generated data and the redundant 53 MB raw playback WAV."
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/final-staged-secret-scan.json",
+      "docs/evidence/history-secret-scan.json"
+    ],
+    "result": "Final staged changes reviewed together with the previously scanned source history and checkpoint. Matches are public algorithm literals or the public repository owner within project URLs;0 unresolved. Private task intake, local credentials, signing material and redundant raw playback are excluded."
   },
   "genuineScreenReader": {
     "status": "blocked_environment",
@@ -277,12 +286,12 @@
     ]
   },
   "publicSourceAccess": {
-    "status": "pending",
-    "reason": "Public source publication and anonymous repository readback are not yet verified."
-  },
-  "independentDeveloperReproduction": {
-    "status": "pending_external",
-    "reason": "A second human developer has not independently reproduced the final sources. Automated clean checkout is verified separately."
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/public-source-access.json"
+    ],
+    "repositoryUrl": "https://github.com/Defozo/TouchMap",
+    "result": "Anonymous readback verified public metadata, main commit12eea57 and four exact source files with no authorization, cookies or environment credentials. Human reproduction and release asset publication remain separate."
   },
   "competitionMaterialDraftSave": {
     "status": "pending",
@@ -292,7 +301,25 @@
     "reason": "Prepared material updates have not yet been saved and read back from the existing HackTribe project. New Idea and current visibility are preserved."
   },
   "finalEnglishPresentation": {
-    "status": "pending",
-    "reason": "The user requested an English PDF of at most ten slides and editable PPTX with speaker notes. Generated files, visual review, exact committed hash manifest and release preflight remain to be completed."
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/presentation-manifest.json",
+      "docs/evidence/presentation-qc.json",
+      "docs/evidence/presentation-review.json",
+      "docs/evidence/presentation-independent-review.json"
+    ],
+    "result": "Reviewed English PDF10 pages and editable PPTX10 slides,10 speaker scripts,2 native tables and33 existing local citations. Actual PDF links verified. All final rendered pixels remain unchanged after metadata/link corrections. Both files are below10 MB. Artifact review is separate from external release publication.",
+    "pdfSha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
+    "pptxSha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf"
+  },
+  "independentSourceReproduction": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/public-source-access.json",
+      "docs/evidence/public-clean-clone.json",
+      "docs/evidence/clean-checkout.json",
+      "docs/evidence/clean-installation.json"
+    ],
+    "result": "Public12eea57 was freshly cloned anonymously with credential helpers and auth configurations disabled; its complete pristine Git tree and122 app files match the independently built/signed/installed145b and release1209 inputs. Automated reproduction passed backend90/host51/typecheck/native18/audio4/Library. This is a separate automated checkout and execution on the verification host, with no assertion of a second human operator."
   }
 }

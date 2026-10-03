@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "startedUtc": "2026-10-03T19:30:39.285520+00:00",
+  "url": "https://github.com/Defozo/TouchMap.git",
+  "requestedCommit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+  "authentication": "HTTPS URL with no userinfo; credential.helper, http.extraHeader and core.askPass empty; global/system Git configs disabled; inherited GIT_* variables removed; terminal prompting disabled.",
+  "scope": "Fresh anonymous network clone on the same verification host. Exact source comparison to the independently built and installed clean-checkout artifact. This is automated reproducibility evidence, not a second human tester.",
+  "commit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+  "completeGitTree": "eb20d05c2e05433b70e346b64957842243980169",
+  "cleanWorktree": true,
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+  "appSourceFileCount": 122,
+  "independentlyInstalledHapSha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e",
+  "releaseHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+  "comparisonEvidence": "clean-installation.json and hap-metadata.json",
+  "checkoutRetainedAt": "/tmp/touchmap-public-zu3u_k_y",
+  "finishedUtc": "2026-10-03T19:30:41.918176+00:00"
+}

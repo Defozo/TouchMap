@@ -1,0 +1,41 @@
+{
+  "status": "accepted",
+  "pdfSha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
+  "pptxSha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
+  "scope": "Developer visual and factual artifact review. No independent human presentation rehearsal or genuine screen-reader audit is claimed.",
+  "slidesInspectedIndividually": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "powerPoint": {
+    "version": "16.0",
+    "openedFinalPptxSuccessfully": true,
+    "exportedPdfAndEverySlide": true,
+    "renderSize": [1600, 900],
+    "finalMetadataOnlyRevisionImagesIdenticalToReviewedV3": 10
+  },
+  "pdf": {
+    "renderEngine": "Poppler pdftoppm",
+    "resolutionDpi": 120,
+    "pagesInspectedIndividually": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "renderSize": [1600, 900],
+    "title": "TouchMap",
+    "author": "DEFOZO SOFTWARE HOUSE / Michał Kiełtyka",
+    "uriAnnotationsAddedAfterOfficeExport": 2,
+    "all10FinalPdfRendersByteIdenticalAfterUriAnnotations": true
+  },
+  "resolvedFindings": [
+    "Replaced the historical stale-guide exploration image with a later corrected native Canvas capture.",
+    "Used the installed final HAP1209 Library capture on the cover.",
+    "Replaced missing document paths and private planning references with existing public sources.",
+    "Set explicit bright mint hyperlink theme colors and inspected their PowerPoint and PDF renders.",
+    "Separated reviewed publication from complete audio and offline readiness.",
+    "Set the document author and title to the confirmed team and TouchMap.",
+    "Added two PDF URI annotations after Office SaveAs omitted hyperlinks, preserving every rendered pixel."
+  ],
+  "blockingFindings": [],
+  "retainedLimits": [
+    "Other screenshots retain their earlier native-session provenance and do not imply all flows ran on the final HAP.",
+    "Audio timing ends at an accepted PCM write, not physical speaker output.",
+    "Restore timing ends at active-app layout and draw, with 100 observations across explicit 92 + 8 batches.",
+    "Genuine reader use, physical vibration and representative-user research remain unverified.",
+    "External release publication and anonymous access checks are separate from this deck review."
+  ]
+}

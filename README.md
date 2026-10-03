@@ -7,6 +7,8 @@ Explore a diagram through touch, spoken labels and accessible controls. Teachers
 
 The product is a native ArkTS/ArkUI application for OpenHarmony API 20 or later. The Python preparation service and CLI are optional authoring tools. A browser or desktop preview is not the mobile deliverable.
 
+[Download the native application and demonstration](https://github.com/Defozo/TouchMap/releases/tag/v1.0.0), or follow the [account-free demo and installation walkthrough](docs/DEMO_ACCESS.md). The release includes an English PDF, editable PPTX with notes, and a three-minute recording of actual native interaction.
+
 ## Start the native application
 
 Windows requires WSL2 Ubuntu; Linux can invoke the corresponding shell scripts directly. The tested toolchain uses the official Eclipse Oniro CLI, OpenHarmony API 20 SDK and an Oniro API 23 emulator. See [platform setup and signing](docs/platform.md) for prerequisites and the exact underlying commands.
@@ -22,12 +24,14 @@ Windows requires WSL2 Ubuntu; Linux can invoke the corresponding shell scripts d
 
 The installable artifact is `dist/touchmap-signed.hap`, with checksums and packaged API metadata beside the evidence. The pinned QEMU image also needs the checked audio-configuration correction described in [platform setup](docs/platform.md); the application itself retains ordinary permissions. The build creates development signing material in a private build directory. No provider key, account or backend is needed to use bundled lessons. A successful API 23 run does not establish API 20 runtime compatibility.
 
+The emulator wrapper runs headless. Connect a local VNC viewer to `127.0.0.1:5900` (display `:0`) for the interactive screen; QEMU uses the host sound service for audio. The [release walkthrough](docs/DEMO_ACCESS.md) explains how to install the downloaded HAP without building it.
+
 ## Try the complete learning flow
 
 1. Open **The water cycle** from the library. Inspect its source and author declaration, then accept the material locally.
 2. Complete the three-shape tutorial and choose touch, list or single-button scanning. Preferences include label dwell, volume, vibration, contrast and text size.
 3. Explore **Evaporation**, open **Connections**, and follow **Vapour cools into droplets** to **Condensation**. Overlapping objects remain available through the layer chooser.
-4. Open the first lesson question. Select **Condensation** and press **Submit answer**. Exploration and selecting an option do not submit an answer.
+4. Open the first lesson question. Select **Condensation** and press **Submit selected answer**. Exploration and selecting an option do not submit an answer.
 5. Begin another answer, leave or terminate the application, then reopen it. **Resume** restores the last explored object, submitted answer and unfinished selection. **Repeat context** describes the committed state.
 6. Export the teaching package and import it into a second installation. History and local acceptance are deliberately absent from teaching packages. History export is a separate action.
 
