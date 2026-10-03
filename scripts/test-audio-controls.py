@@ -34,7 +34,15 @@ def main():
         run('file', 'recv', remote, str(output))
         report = json.loads(output.read_text())
         print(json.dumps(report, indent=2))
-        if report.get('status') != 'passed' or not report.get('checks') or not all(item['passed'] for item in report['checks']):
+        expected = {'four_byte_final_pcm_tail_finishes'}
+        if args.mode == 'all':
+            expected.update({'stop_before_dwell', 'rapid_replacement_only_latest_target',
+                             'pause_resume_finishes_same_recording',
+                             'replace_pending_batched_write_finishes_latest_only'})
+        checks = report.get('checks', [])
+        if (report.get('status') != 'passed' or len(checks) != len(expected)
+                or {item.get('name') for item in checks} != expected
+                or not all(item['passed'] for item in checks)):
             raise RuntimeError('Native audio controls did not all pass.')
     except Exception as error:
         report = json.loads(output.read_text())
