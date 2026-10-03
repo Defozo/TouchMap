@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "packageId": "rainfall-chart",
+  "revision": 1,
+  "title": "Reading a rainfall chart",
+  "language": "en",
+  "author": {
+    "name": "TouchMap example author",
+    "declaration": "Original illustration and explicitly authored facts. Reviewed against the source by the implementation team. This declaration is not independent accessibility certification."
+  },
+  "license": "CC-BY-4.0; generated audio subject to ElevenLabs terms",
+  "assets": [
+    {
+      "path": "diagram.json",
+      "sha256": "d289aaf8c682a12e6c045b70948d005381d140a00cc7f39b4b57db1bd17be679",
+      "bytes": 12069,
+      "mediaType": "application/json"
+    },
+    {
+      "path": "source.svg",
+      "sha256": "612e6cbcd8d7d51db4bb492bb40abe24b80eb580e4790c635eaac4e081c6b2b0",
+      "bytes": 2309,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "path": "audio/rainfall-chart-overview.wav",
+      "sha256": "7818c5e7318ec710067a7226f83e24a139676fad852b5d6e0cd96959504b5096",
+      "bytes": 711132,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/april-label.wav",
+      "sha256": "77cc05c1864d8a1574efe2afd0db4bca7575c0c12b6da9acb6a9aa280133d775",
+      "bytes": 95896,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/april-description.wav",
+      "sha256": "8f80512d46261e111ca04e231ea5d30d16e67a5e4a6456c26651787b2bbb3436",
+      "bytes": 111500,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/may-label.wav",
+      "sha256": "51af6771b763fc4e117b13c4700cae278a374efde33a11bb8fbaf2fe0ecb9f57",
+      "bytes": 86980,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/may-description.wav",
+      "sha256": "6367fdc0f5ab75a05672311dc365cc9a670c570fd7bbb9f5bc3c9e9874e0452f",
+      "bytes": 109270,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/june-label.wav",
+      "sha256": "15ba3fabc3b0fd5c389d6296246a9391d8ead6e4f0079d4c91aeeb1eb1564704",
+      "bytes": 64688,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/june-description.wav",
+      "sha256": "c2d0b106ba16c21128ff6f78a74214c5d18a64613cbd7ddc66cfc81119328926",
+      "bytes": 207352,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/q-more-question.wav",
+      "sha256": "7a9986a5985a9eba07e1ba61fe9382bac6fedd692e8ebc82628b4888285be239",
+      "bytes": 100354,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/q-value-question.wav",
+      "sha256": "77dea31e05e9a028d963c4b01fbf3b9b905dae0df108369dbf1d01feb413cd81",
+      "bytes": 107042,
+      "mediaType": "audio/wav"
+    }
+  ]
+}

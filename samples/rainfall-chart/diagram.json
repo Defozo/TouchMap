@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "packageId": "rainfall-chart",
+  "revision": 1,
+  "title": "Reading a rainfall chart",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "612e6cbcd8d7d51db4bb492bb40abe24b80eb580e4790c635eaac4e081c6b2b0",
+    "width": 640,
+    "height": 440,
+    "path": "source.svg",
+    "attribution": "Original TouchMap educational illustration, 2026",
+    "license": "CC-BY-4.0",
+    "viewBox": [
+      0,
+      0,
+      640,
+      440
+    ]
+  },
+  "regions": [
+    {
+      "id": "april",
+      "label": "April: 20 millimetres",
+      "description": "Recorded rainfall is 20 millimetres.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 105,
+              "y": 280
+            },
+            {
+              "x": 210,
+              "y": 280
+            },
+            {
+              "x": 210,
+              "y": 360
+            },
+            {
+              "x": 105,
+              "y": 360
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#april",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "may",
+      "label": "May: 40 millimetres",
+      "description": "Recorded rainfall is 40 millimetres.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 265,
+              "y": 200
+            },
+            {
+              "x": 370,
+              "y": 200
+            },
+            {
+              "x": 370,
+              "y": 360
+            },
+            {
+              "x": 265,
+              "y": 360
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#may",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "june",
+      "label": "June: unknown",
+      "description": "June rainfall was not recorded. It is unknown, not zero.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 425,
+              "y": 350
+            },
+            {
+              "x": 530,
+              "y": 350
+            },
+            {
+              "x": 530,
+              "y": 360
+            },
+            {
+              "x": 425,
+              "y": 360
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#june",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "rainfall",
+      "title": "Recorded rainfall",
+      "kind": "bar",
+      "xAxis": {
+        "label": "Month",
+        "unit": "",
+        "scale": "category",
+        "domain": [],
+        "ticks": []
+      },
+      "yAxis": {
+        "label": "Rainfall",
+        "unit": "mm",
+        "scale": "linear",
+        "domain": [
+          0,
+          60
+        ],
+        "ticks": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 20,
+            "label": "20"
+          },
+          {
+            "value": 40,
+            "label": "40"
+          },
+          {
+            "value": 60,
+            "label": "60"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "rain-series",
+          "label": "Recorded rainfall",
+          "values": [
+            {
+              "id": "april-value",
+              "regionId": "april",
+              "x": "April",
+              "value": 20,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "#april-value",
+                  "origin": "human-authored"
+                }
+              ]
+            },
+            {
+              "id": "may-value",
+              "regionId": "may",
+              "x": "May",
+              "value": 40,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "#may-value",
+                  "origin": "human-authored"
+                }
+              ]
+            },
+            {
+              "id": "june-value",
+              "regionId": "june",
+              "x": "June",
+              "value": null,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "#june-value",
+                  "origin": "human-authored"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#rainfall",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-more",
+      "prompt": "Which recorded month has more rainfall?",
+      "type": "comparison",
+      "factIds": [
+        "april-value",
+        "may-value"
+      ],
+      "options": [
+        {
+          "id": "april",
+          "label": "April"
+        },
+        {
+          "id": "may",
+          "label": "May"
+        }
+      ],
+      "acceptedAnswers": [
+        "may"
+      ],
+      "hint": "Explore the named objects and their connections.",
+      "explanation": "May has 40 millimetres and April has 20 millimetres. June is unknown.",
+      "requiredRevision": 1,
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "q-value",
+      "prompt": "How much rainfall was recorded in April?",
+      "type": "value",
+      "factIds": [
+        "april-value"
+      ],
+      "options": [
+        {
+          "id": "20",
+          "label": "20 millimetres"
+        },
+        {
+          "id": "40",
+          "label": "40 millimetres"
+        },
+        {
+          "id": "unknown",
+          "label": "Unknown"
+        }
+      ],
+      "acceptedAnswers": [
+        "20"
+      ],
+      "hint": "Explore the named objects and their connections.",
+      "explanation": "The source explicitly labels April as 20 millimetres.",
+      "requiredRevision": 1,
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "audio": [
+    {
+      "id": "audio-rainfall-chart-overview",
+      "targetId": "rainfall-chart",
+      "kind": "overview",
+      "path": "audio/rainfall-chart-overview.wav",
+      "textHash": "f3f49f0b022df512196acf969a31d115d5e378b58103e41d74096b0b19dbfaeb",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "7818c5e7318ec710067a7226f83e24a139676fad852b5d6e0cd96959504b5096",
+      "durationMs": 14814
+    },
+    {
+      "id": "audio-april-label",
+      "targetId": "april",
+      "kind": "label",
+      "path": "audio/april-label.wav",
+      "textHash": "cc85ab74908d78ce82210eeb17aa3b9dc9497d8ec4b1c3565cf099a1a963781c",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "77cc05c1864d8a1574efe2afd0db4bca7575c0c12b6da9acb6a9aa280133d775",
+      "durationMs": 1997
+    },
+    {
+      "id": "audio-april-description",
+      "targetId": "april",
+      "kind": "description",
+      "path": "audio/april-description.wav",
+      "textHash": "33daed2055d51a5bd7b6a56eb7720f83f79eddf607cf50be07d2e22d292d743e",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "8f80512d46261e111ca04e231ea5d30d16e67a5e4a6456c26651787b2bbb3436",
+      "durationMs": 2322
+    },
+    {
+      "id": "audio-may-label",
+      "targetId": "may",
+      "kind": "label",
+      "path": "audio/may-label.wav",
+      "textHash": "5b05f887dc02673c0a0d646bf6b39162fbc5e557b0f403d8efdeb292f1138fa7",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "51af6771b763fc4e117b13c4700cae278a374efde33a11bb8fbaf2fe0ecb9f57",
+      "durationMs": 1811
+    },
+    {
+      "id": "audio-may-description",
+      "targetId": "may",
+      "kind": "description",
+      "path": "audio/may-description.wav",
+      "textHash": "992b82279feb157c59fa732f75018f2b7073c349cde67b6891396822c5ba8712",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "6367fdc0f5ab75a05672311dc365cc9a670c570fd7bbb9f5bc3c9e9874e0452f",
+      "durationMs": 2276
+    },
+    {
+      "id": "audio-june-label",
+      "targetId": "june",
+      "kind": "label",
+      "path": "audio/june-label.wav",
+      "textHash": "e3e4d04dece047173c8417333a60fea196ef1f016876760a871507efcc3cbc00",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "15ba3fabc3b0fd5c389d6296246a9391d8ead6e4f0079d4c91aeeb1eb1564704",
+      "durationMs": 1347
+    },
+    {
+      "id": "audio-june-description",
+      "targetId": "june",
+      "kind": "description",
+      "path": "audio/june-description.wav",
+      "textHash": "4c2ef8225d3e12e244f1114d47098fa3cd0f95e3e9c6fdbcd357d0b9b0d46747",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "c2d0b106ba16c21128ff6f78a74214c5d18a64613cbd7ddc66cfc81119328926",
+      "durationMs": 4319
+    },
+    {
+      "id": "audio-q-more-question",
+      "targetId": "q-more",
+      "kind": "question",
+      "path": "audio/q-more-question.wav",
+      "textHash": "f2619fd9b0fed93530d16600c1f0fae3bc137fef541f95827bbc5a1d3d3b4ad8",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "7a9986a5985a9eba07e1ba61fe9382bac6fedd692e8ebc82628b4888285be239",
+      "durationMs": 2090
+    },
+    {
+      "id": "audio-q-value-question",
+      "targetId": "q-value",
+      "kind": "question",
+      "path": "audio/q-value-question.wav",
+      "textHash": "89e165bc5eb6fe83475c496917867c140d2f3368aa170eb8544b27420bdc8b9c",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "77dea31e05e9a028d963c4b01fbf3b9b905dae0df108369dbf1d01feb413cd81",
+      "durationMs": 2229
+    }
+  ],
+  "description": "A simple bar chart. The horizontal axis shows April, May and June. The vertical axis shows rainfall in millimetres on a linear scale from zero to sixty. April has twenty millimetres, May forty, and June is unknown."
+}

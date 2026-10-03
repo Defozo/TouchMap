@@ -1,0 +1,622 @@
+[
+  {
+    "id": "diagram-01",
+    "file": "diagram-01.svg",
+    "variant": "clear",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 1",
+      "Gate 1",
+      "Output 1"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "01be2e848b9473e19286c1b3085718ceabd9c0310b9e83532adbafb483054918"
+  },
+  {
+    "id": "diagram-02",
+    "file": "diagram-02.svg",
+    "variant": "low-contrast",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 2",
+      "Gate 2",
+      "Output 2"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "99b87226adbd581c9e6beda7bc2caafe7818d6e37a4a18626715b76d2a543182"
+  },
+  {
+    "id": "diagram-03",
+    "file": "diagram-03.svg",
+    "variant": "rotated-text",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 3",
+      "Gate 3",
+      "Output 3"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "2cf3edf97ddccac2a29089fcc7a219bde86f1d7457fe133f88fc91fdfc00aae9"
+  },
+  {
+    "id": "diagram-04",
+    "file": "diagram-04.svg",
+    "variant": "ambiguous-arrow",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 4",
+      "Gate 4",
+      "Output 4"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "unknown"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "unknown"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "f25f87ca402e9692bf791fc44034241eb272d1af20722b2270aaaefa5c41993a"
+  },
+  {
+    "id": "diagram-05",
+    "file": "diagram-05.svg",
+    "variant": "instruction-like-text",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 5",
+      "Gate 5",
+      "Output 5"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "2b0e0d782b14101fa1f0ee86baab8eb7ca6bb59554a72021e67840765396bbbb"
+  },
+  {
+    "id": "diagram-06",
+    "file": "diagram-06.svg",
+    "variant": "clear",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 6",
+      "Gate 6",
+      "Output 6"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "3143a02a75f4f0ca63e549941f0d487ff946ad4afb91360a2887ac88fb271f9f"
+  },
+  {
+    "id": "diagram-07",
+    "file": "diagram-07.svg",
+    "variant": "low-contrast",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 7",
+      "Gate 7",
+      "Output 7"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "3d3cc02cb5d486fe1713e3637d18ea3e4818e977efe5256781281f21fa3c7a15"
+  },
+  {
+    "id": "diagram-08",
+    "file": "diagram-08.svg",
+    "variant": "rotated-text",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 8",
+      "Gate 8",
+      "Output 8"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "343cb220d71920dd13e92829f8e819bfc6ece65aa7aab740142f2124555df930"
+  },
+  {
+    "id": "diagram-09",
+    "file": "diagram-09.svg",
+    "variant": "ambiguous-arrow",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 9",
+      "Gate 9",
+      "Output 9"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "unknown"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "unknown"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "7965a74055204e2bae72f51e3aff0f81ad241dc799fddb0ebac21a80eddf2b5c"
+  },
+  {
+    "id": "diagram-10",
+    "file": "diagram-10.svg",
+    "variant": "instruction-like-text",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 10",
+      "Gate 10",
+      "Output 10"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "dbfdefac9de554899efe57ca62d3ec0d795d4265e092f68829725f40e7ea0c05"
+  },
+  {
+    "id": "diagram-11",
+    "file": "diagram-11.svg",
+    "variant": "clear",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 11",
+      "Gate 11",
+      "Output 11"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "11de9ef0336abd4c966a5ba48777649beeaf21b4917d4d8a7308db5c6e0bb472"
+  },
+  {
+    "id": "diagram-12",
+    "file": "diagram-12.svg",
+    "variant": "low-contrast",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 12",
+      "Gate 12",
+      "Output 12"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "9e864f53b08140d9dbd98d294e5b07cb26d1e33310810604933d9fd68e7a72f1"
+  },
+  {
+    "id": "diagram-13",
+    "file": "diagram-13.svg",
+    "variant": "rotated-text",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 13",
+      "Gate 13",
+      "Output 13"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "d707cb68ea08e05f3a9ca6769179ac923b102ed5c4226abe86ea1c73bfb3f4a8"
+  },
+  {
+    "id": "diagram-14",
+    "file": "diagram-14.svg",
+    "variant": "ambiguous-arrow",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 14",
+      "Gate 14",
+      "Output 14"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "unknown"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "unknown"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "c54556a8b2707aabee92c44e9bd102195ff4da32d3486ce95d8c127369010ff5"
+  },
+  {
+    "id": "diagram-15",
+    "file": "diagram-15.svg",
+    "variant": "instruction-like-text",
+    "split": "development",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 15",
+      "Gate 15",
+      "Output 15"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "091c68b31d2f6463b72341a6939d228a20be7088742f687bef54c15a06c26ab2"
+  },
+  {
+    "id": "diagram-16",
+    "file": "diagram-16.svg",
+    "variant": "clear",
+    "split": "held-out",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 16",
+      "Gate 16",
+      "Output 16"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "1f06a4a5c1fc9a3928ae9c579401e52bd83549a1423853d2a0eea9dbee751b79"
+  },
+  {
+    "id": "diagram-17",
+    "file": "diagram-17.svg",
+    "variant": "low-contrast",
+    "split": "held-out",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 17",
+      "Gate 17",
+      "Output 17"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "4eafb95ac116551a939f64a1bcb4c339a75860e2e5df007312378fea52d94883"
+  },
+  {
+    "id": "diagram-18",
+    "file": "diagram-18.svg",
+    "variant": "rotated-text",
+    "split": "held-out",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 18",
+      "Gate 18",
+      "Output 18"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "b7ba797c0485b2da1e917922a18eeb3c611bd5b8abe9d5ad873b38a8b2d7fdad"
+  },
+  {
+    "id": "diagram-19",
+    "file": "diagram-19.svg",
+    "variant": "ambiguous-arrow",
+    "split": "held-out",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 19",
+      "Gate 19",
+      "Output 19"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "unknown"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "unknown"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "859abd09d057249d4b990447a8c69195f71114c16bf5cfa6a698ab07d4c029b2"
+  },
+  {
+    "id": "diagram-20",
+    "file": "diagram-20.svg",
+    "variant": "instruction-like-text",
+    "split": "held-out",
+    "license": "CC-BY-4.0",
+    "labels": [
+      "Input 20",
+      "Gate 20",
+      "Output 20"
+    ],
+    "regionCount": 3,
+    "relations": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "direction": "forward"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "direction": "forward"
+      }
+    ],
+    "criticalFacts": [
+      "Three labelled objects",
+      "Two connections",
+      "No numerical facts are asserted"
+    ],
+    "sourceHash": "7b313a29762fb9c7d7b744bbe39b9834281cd954c2dcbc1a095dd1927277b6f9"
+  }
+]

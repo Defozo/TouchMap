@@ -1,0 +1,707 @@
+{
+  "schemaVersion": 1,
+  "packageId": "lumina-process",
+  "revision": 1,
+  "title": "The Lumina workshop",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "deb8caf75783b7183bd2c8a008745f6f686923c8e756a0b15b9df46ff2db100e",
+    "width": 640,
+    "height": 440,
+    "path": "source.svg",
+    "attribution": "Original TouchMap educational illustration, 2026",
+    "license": "CC-BY-4.0",
+    "viewBox": [
+      0,
+      0,
+      640,
+      440
+    ]
+  },
+  "regions": [
+    {
+      "id": "seed",
+      "label": "Seed",
+      "description": "The starting input for this fictional workshop.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30,
+              "y": 185
+            },
+            {
+              "x": 160,
+              "y": 185
+            },
+            {
+              "x": 160,
+              "y": 260
+            },
+            {
+              "x": 30,
+              "y": 260
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#seed",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "prism",
+      "label": "Prism",
+      "description": "The prism receives the seed and has two outgoing connections.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 240,
+              "y": 185
+            },
+            {
+              "x": 375,
+              "y": 185
+            },
+            {
+              "x": 375,
+              "y": 260
+            },
+            {
+              "x": 240,
+              "y": 260
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#prism",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "loom",
+      "label": "Loom",
+      "description": "The loom uses light from the prism to make a ribbon.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 450,
+              "y": 65
+            },
+            {
+              "x": 595,
+              "y": 65
+            },
+            {
+              "x": 595,
+              "y": 140
+            },
+            {
+              "x": 450,
+              "y": 140
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#loom",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "store",
+      "label": "Store",
+      "description": "The store receives spare energy from the prism. It does not feed the loom.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 450,
+              "y": 305
+            },
+            {
+              "x": 595,
+              "y": 305
+            },
+            {
+              "x": 595,
+              "y": 380
+            },
+            {
+              "x": 450,
+              "y": 380
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 3,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#store",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "ribbon",
+      "label": "Ribbon",
+      "description": "The finished output made by the loom.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 450,
+              "y": 185
+            },
+            {
+              "x": 595,
+              "y": 185
+            },
+            {
+              "x": 595,
+              "y": 260
+            },
+            {
+              "x": 450,
+              "y": 260
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 4,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#ribbon",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "seed-prism",
+      "fromId": "seed",
+      "toId": "prism",
+      "label": "Seed enters prism",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 160,
+          "y": 222
+        },
+        {
+          "x": 240,
+          "y": 222
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#seed-prism",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "prism-loom",
+      "fromId": "prism",
+      "toId": "loom",
+      "label": "Light feeds loom",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 375,
+          "y": 210
+        },
+        {
+          "x": 420,
+          "y": 210
+        },
+        {
+          "x": 420,
+          "y": 103
+        },
+        {
+          "x": 450,
+          "y": 103
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#prism-loom",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "prism-store",
+      "fromId": "prism",
+      "toId": "store",
+      "label": "Spare energy enters store",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 375,
+          "y": 242
+        },
+        {
+          "x": 415,
+          "y": 242
+        },
+        {
+          "x": 415,
+          "y": 342
+        },
+        {
+          "x": 450,
+          "y": 342
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#prism-store",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "loom-ribbon",
+      "fromId": "loom",
+      "toId": "ribbon",
+      "label": "Loom makes ribbon",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 522,
+          "y": 140
+        },
+        {
+          "x": 522,
+          "y": 185
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#loom-ribbon",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [
+    {
+      "id": "q-branches",
+      "prompt": "Which two destinations receive output directly from the prism?",
+      "type": "adjacency",
+      "factIds": [
+        "prism-loom",
+        "prism-store"
+      ],
+      "options": [
+        {
+          "id": "loom",
+          "label": "Loom"
+        },
+        {
+          "id": "store",
+          "label": "Store"
+        },
+        {
+          "id": "ribbon",
+          "label": "Ribbon"
+        },
+        {
+          "id": "seed",
+          "label": "Seed"
+        }
+      ],
+      "acceptedAnswers": [
+        "loom",
+        "store"
+      ],
+      "hint": "Explore the named objects and their connections.",
+      "explanation": "The prism has arrows to the loom and the store. The ribbon is reached through the loom.",
+      "requiredRevision": 1,
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "q-inference",
+      "prompt": "Which object must the seed pass through immediately before becoming a ribbon?",
+      "type": "sequence",
+      "factIds": [
+        "seed-prism",
+        "prism-loom",
+        "loom-ribbon"
+      ],
+      "options": [
+        {
+          "id": "loom",
+          "label": "Loom"
+        },
+        {
+          "id": "store",
+          "label": "Store"
+        },
+        {
+          "id": "seed",
+          "label": "Seed"
+        }
+      ],
+      "acceptedAnswers": [
+        "loom"
+      ],
+      "hint": "Explore the named objects and their connections.",
+      "explanation": "The path is seed, prism, loom, ribbon. The store is a separate branch.",
+      "requiredRevision": 1,
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "audio": [
+    {
+      "id": "audio-lumina-process-overview",
+      "targetId": "lumina-process",
+      "kind": "overview",
+      "path": "audio/lumina-process-overview.wav",
+      "textHash": "409fef1a9f97b15fcc891d44f0f65bd7deb434b32baa41423a6b762b5b406b27",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "d18c22919e7064e6c1d55d18448e03da1b5371be16cf758ca06ed8cd6e0d6dbb",
+      "durationMs": 11517
+    },
+    {
+      "id": "audio-seed-label",
+      "targetId": "seed",
+      "kind": "label",
+      "path": "audio/seed-label.wav",
+      "textHash": "367ef06b8fbf3aaaccd9cff1301628fae45901ccd9661b5a1b256c7cc5314d24",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "3db22f39b22eb6eb9651faa79f4dc98d56bb4f44f39b0e9323b10026e4e86a7f",
+      "durationMs": 697
+    },
+    {
+      "id": "audio-seed-description",
+      "targetId": "seed",
+      "kind": "description",
+      "path": "audio/seed-description.wav",
+      "textHash": "82fdc9144df62c75a00480f6624329429d572845f9be39b7c8b89a2cee78de04",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "487fcda94f52fbe2e721417a79981561afdf3732839dcbb64f161f7a7158675b",
+      "durationMs": 2647
+    },
+    {
+      "id": "audio-prism-label",
+      "targetId": "prism",
+      "kind": "label",
+      "path": "audio/prism-label.wav",
+      "textHash": "ca67ec3e0ba3c06710459f5cf93fb2e801a30677e8f8c36256d7a487d4cf13f0",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "2e15413918c3d830b91bbeab39186fdcfc759ad235d2cf80935f6c48e2e4c738",
+      "durationMs": 604
+    },
+    {
+      "id": "audio-prism-description",
+      "targetId": "prism",
+      "kind": "description",
+      "path": "audio/prism-description.wav",
+      "textHash": "e94e9252e1a66be86c04f90b0d34d822a1fa21faa523d437002fa5c5b15d2abb",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "0d6e60ba187079bd756c925aa7b418398d16bb5e61d8e5834c4e25ab5f814041",
+      "durationMs": 3808
+    },
+    {
+      "id": "audio-loom-label",
+      "targetId": "loom",
+      "kind": "label",
+      "path": "audio/loom-label.wav",
+      "textHash": "33d0fa882c35523c6b87229e26a9de74dc6447a71a34219c6945182d09654ceb",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "47110705bbb62b7b9dc6a593769444075f734eece0e19d3d246ae40fc497e29e",
+      "durationMs": 557
+    },
+    {
+      "id": "audio-loom-description",
+      "targetId": "loom",
+      "kind": "description",
+      "path": "audio/loom-description.wav",
+      "textHash": "17802c907f5b053929b0d08566b9d977946e2b4993614dd4207e4b6159b040e9",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "725aecfb9d1366e58541d5af3714ddf16300dd3c3b946f374aee13fb503a21f8",
+      "durationMs": 2972
+    },
+    {
+      "id": "audio-store-label",
+      "targetId": "store",
+      "kind": "label",
+      "path": "audio/store-label.wav",
+      "textHash": "ee7da936b5cb293e9ae2fa0982bc5fcd4bdb11f4e7233bfdd81c1446010b4478",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "9f72c8f5b60ebdd0144ba79d738921ac46b9c567a0ccfdc79db5320a360ac889",
+      "durationMs": 604
+    },
+    {
+      "id": "audio-store-description",
+      "targetId": "store",
+      "kind": "description",
+      "path": "audio/store-description.wav",
+      "textHash": "c4ecf7cf316aff125ead26994ed81b1f0205f70db69a1c36eeea1db58b32342d",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "71cc4297a14d895d18974aacd993567678544481eda8af9c2c01a643d6491f1c",
+      "durationMs": 4969
+    },
+    {
+      "id": "audio-ribbon-label",
+      "targetId": "ribbon",
+      "kind": "label",
+      "path": "audio/ribbon-label.wav",
+      "textHash": "ed5a4ba1c163cdddd7224f24a64a7a97eeb373b483978397c5216740ecd3c31a",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "103818cec8f6ac14fa0c944565a5556c1e93dabfc055ab166257099c849372b9",
+      "durationMs": 557
+    },
+    {
+      "id": "audio-ribbon-description",
+      "targetId": "ribbon",
+      "kind": "description",
+      "path": "audio/ribbon-description.wav",
+      "textHash": "e2383846e9ff729ff33dc38637be476ada25e89d324c0252f16365e804d0edf1",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "25ac673b493bdf2250ecf7d87c79a44e0a8375376efeb37dc36026bbfb71bebc",
+      "durationMs": 2136
+    },
+    {
+      "id": "audio-seed-prism-label",
+      "targetId": "seed-prism",
+      "kind": "label",
+      "path": "audio/seed-prism-label.wav",
+      "textHash": "60cfe4f2192352af9aa0ec13956544b189f0b70b559a2c5330dab5e4bc74722c",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "3d7f37128978678a3844a504a49fb67758d75c21f2811e86e104137d4f8709dc",
+      "durationMs": 1300
+    },
+    {
+      "id": "audio-prism-loom-label",
+      "targetId": "prism-loom",
+      "kind": "label",
+      "path": "audio/prism-loom-label.wav",
+      "textHash": "510629163c7650fac4be58a7012d0982d33c059b6ee770878a39ce095760a9dc",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "e0e98555d56c4158ca552f43b782e89cb8bff74fd09d2e511cd86a076c7ac34e",
+      "durationMs": 1347
+    },
+    {
+      "id": "audio-prism-store-label",
+      "targetId": "prism-store",
+      "kind": "label",
+      "path": "audio/prism-store-label.wav",
+      "textHash": "c5280271c90e03ab6c5e153c9f9624c9d64d97c1a039f9234a66478fbe14e164",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "a07e49329050e09920f8b6fe377eddae01754ee1cc8e25a3773a0d67c826e579",
+      "durationMs": 1811
+    },
+    {
+      "id": "audio-loom-ribbon-label",
+      "targetId": "loom-ribbon",
+      "kind": "label",
+      "path": "audio/loom-ribbon-label.wav",
+      "textHash": "5760d1dffde8e897d658a2988a8a57820ca6f6e10fd394f232e29d03842cce13",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "c1459f9af6470069c202623721cd8c8d9415640cd4d3f2899f65244171f173c6",
+      "durationMs": 1161
+    },
+    {
+      "id": "audio-q-branches-question",
+      "targetId": "q-branches",
+      "kind": "question",
+      "path": "audio/q-branches-question.wav",
+      "textHash": "b2f9a383d5a75fc5d9ac0aa92d73bccfe6fc8d6a5a1d3f9e39e5cf29cd745150",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "cda33382dd1268cd44f12ded68856ce31260e1bd5c39237f462813359b6e1bb1",
+      "durationMs": 3529
+    },
+    {
+      "id": "audio-q-inference-question",
+      "targetId": "q-inference",
+      "kind": "question",
+      "path": "audio/q-inference-question.wav",
+      "textHash": "dcf867b2e3ed8378988e67020144090403711ddefd2d01554f851c625ab6413e",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "9200504d7250ed9171e22459afba9494e3b15a0f084a8a0afaf4f82aa32ac493",
+      "durationMs": 4226
+    }
+  ],
+  "description": "An invented process with no prior knowledge required. A seed enters a prism. The prism sends light to a loom and spare energy to a store. The loom makes a ribbon."
+}

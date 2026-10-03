@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "packageId": "lumina-process",
+  "revision": 1,
+  "title": "The Lumina workshop",
+  "language": "en",
+  "author": {
+    "name": "TouchMap example author",
+    "declaration": "Original illustration and explicitly authored facts. Reviewed against the source by the implementation team. This declaration is not independent accessibility certification."
+  },
+  "license": "CC-BY-4.0; generated audio subject to ElevenLabs terms",
+  "assets": [
+    {
+      "path": "diagram.json",
+      "sha256": "d077eac49c2d52424699d94252871dd12dd59d642dba1f5a40598d233a81b272",
+      "bytes": 18554,
+      "mediaType": "application/json"
+    },
+    {
+      "path": "source.svg",
+      "sha256": "deb8caf75783b7183bd2c8a008745f6f686923c8e756a0b15b9df46ff2db100e",
+      "bytes": 2771,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "path": "audio/lumina-process-overview.wav",
+      "sha256": "d18c22919e7064e6c1d55d18448e03da1b5371be16cf758ca06ed8cd6e0d6dbb",
+      "bytes": 552864,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/seed-label.wav",
+      "sha256": "3db22f39b22eb6eb9651faa79f4dc98d56bb4f44f39b0e9323b10026e4e86a7f",
+      "bytes": 33480,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/seed-description.wav",
+      "sha256": "487fcda94f52fbe2e721417a79981561afdf3732839dcbb64f161f7a7158675b",
+      "bytes": 127104,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/prism-label.wav",
+      "sha256": "2e15413918c3d830b91bbeab39186fdcfc759ad235d2cf80935f6c48e2e4c738",
+      "bytes": 29022,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/prism-description.wav",
+      "sha256": "0d6e60ba187079bd756c925aa7b418398d16bb5e61d8e5834c4e25ab5f814041",
+      "bytes": 182832,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/loom-label.wav",
+      "sha256": "47110705bbb62b7b9dc6a593769444075f734eece0e19d3d246ae40fc497e29e",
+      "bytes": 26794,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/loom-description.wav",
+      "sha256": "725aecfb9d1366e58541d5af3714ddf16300dd3c3b946f374aee13fb503a21f8",
+      "bytes": 142708,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/store-label.wav",
+      "sha256": "9f72c8f5b60ebdd0144ba79d738921ac46b9c567a0ccfdc79db5320a360ac889",
+      "bytes": 29022,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/store-description.wav",
+      "sha256": "71cc4297a14d895d18974aacd993567678544481eda8af9c2c01a643d6491f1c",
+      "bytes": 238560,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/ribbon-label.wav",
+      "sha256": "103818cec8f6ac14fa0c944565a5556c1e93dabfc055ab166257099c849372b9",
+      "bytes": 26794,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/ribbon-description.wav",
+      "sha256": "25ac673b493bdf2250ecf7d87c79a44e0a8375376efeb37dc36026bbfb71bebc",
+      "bytes": 102584,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/seed-prism-label.wav",
+      "sha256": "3d7f37128978678a3844a504a49fb67758d75c21f2811e86e104137d4f8709dc",
+      "bytes": 62460,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/prism-loom-label.wav",
+      "sha256": "e0e98555d56c4158ca552f43b782e89cb8bff74fd09d2e511cd86a076c7ac34e",
+      "bytes": 64688,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/prism-store-label.wav",
+      "sha256": "a07e49329050e09920f8b6fe377eddae01754ee1cc8e25a3773a0d67c826e579",
+      "bytes": 86980,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/loom-ribbon-label.wav",
+      "sha256": "c1459f9af6470069c202623721cd8c8d9415640cd4d3f2899f65244171f173c6",
+      "bytes": 55772,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/q-branches-question.wav",
+      "sha256": "cda33382dd1268cd44f12ded68856ce31260e1bd5c39237f462813359b6e1bb1",
+      "bytes": 169456,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/q-inference-question.wav",
+      "sha256": "9200504d7250ed9171e22459afba9494e3b15a0f084a8a0afaf4f82aa32ac493",
+      "bytes": 202894,
+      "mediaType": "audio/wav"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440">
+<title>The Lumina workshop</title>
+<desc>An invented process with no prior knowledge required. A seed enters a prism. The prism sends light to a loom and spare energy to a store. The loom makes a ribbon.</desc>
+<rect width="640" height="440" fill="#f4f5ef"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#24544c"/></marker></defs>
+<text x="32" y="35" font-size="23" fill="#183b34">The Lumina workshop</text>
+<polyline id="seed-prism" points="160,222 240,222" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Seed enters prism</title></polyline>
+<polyline id="prism-loom" points="375,210 420,210 420,103 450,103" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Light feeds loom</title></polyline>
+<polyline id="prism-store" points="375,242 415,242 415,342 450,342" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Spare energy enters store</title></polyline>
+<polyline id="loom-ribbon" points="522,140 522,185" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Loom makes ribbon</title></polyline>
+<rect id="seed" x="30" y="185" width="130" height="75" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Seed</title><desc>The starting input for this fictional workshop.</desc></rect>
+<text x="95.0" y="228.5" text-anchor="middle" font-size="19" fill="#183b34">Seed</text>
+<rect id="prism" x="240" y="185" width="135" height="75" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Prism</title><desc>The prism receives the seed and has two outgoing connections.</desc></rect>
+<text x="307.5" y="228.5" text-anchor="middle" font-size="19" fill="#183b34">Prism</text>
+<rect id="loom" x="450" y="65" width="145" height="75" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Loom</title><desc>The loom uses light from the prism to make a ribbon.</desc></rect>
+<text x="522.5" y="108.5" text-anchor="middle" font-size="19" fill="#183b34">Loom</text>
+<rect id="store" x="450" y="305" width="145" height="75" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Store</title><desc>The store receives spare energy from the prism. It does not feed the loom.</desc></rect>
+<text x="522.5" y="348.5" text-anchor="middle" font-size="19" fill="#183b34">Store</text>
+<rect id="ribbon" x="450" y="185" width="145" height="75" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Ribbon</title><desc>The finished output made by the loom.</desc></rect>
+<text x="522.5" y="228.5" text-anchor="middle" font-size="19" fill="#183b34">Ribbon</text>
+</svg>

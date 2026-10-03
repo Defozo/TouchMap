@@ -1,0 +1,609 @@
+{
+  "schemaVersion": 1,
+  "packageId": "water-cycle",
+  "revision": 1,
+  "title": "The water cycle",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "f0a283dacad001f19637fc1679068f28ce8aad8824b44752c57228ea874928ce",
+    "width": 640,
+    "height": 440,
+    "path": "source.svg",
+    "attribution": "Original TouchMap educational illustration, 2026",
+    "license": "CC-BY-4.0",
+    "viewBox": [
+      0,
+      0,
+      640,
+      440
+    ]
+  },
+  "regions": [
+    {
+      "id": "collection",
+      "label": "Collection",
+      "description": "Liquid water gathers in rivers, lakes and oceans.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 55,
+              "y": 300
+            },
+            {
+              "x": 255,
+              "y": 300
+            },
+            {
+              "x": 255,
+              "y": 380
+            },
+            {
+              "x": 55,
+              "y": 380
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#collection",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "evaporation",
+      "label": "Evaporation",
+      "description": "Heat changes liquid water into water vapour.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 55,
+              "y": 85
+            },
+            {
+              "x": 255,
+              "y": 85
+            },
+            {
+              "x": 255,
+              "y": 165
+            },
+            {
+              "x": 55,
+              "y": 165
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#evaporation",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "condensation",
+      "label": "Condensation",
+      "description": "Cooling water vapour forms tiny liquid droplets in clouds.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 385,
+              "y": 85
+            },
+            {
+              "x": 585,
+              "y": 85
+            },
+            {
+              "x": 585,
+              "y": 165
+            },
+            {
+              "x": 385,
+              "y": 165
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#condensation",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "precipitation",
+      "label": "Precipitation",
+      "description": "Water falls from clouds as rain, snow or other precipitation.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 385,
+              "y": 300
+            },
+            {
+              "x": 585,
+              "y": 300
+            },
+            {
+              "x": 585,
+              "y": 380
+            },
+            {
+              "x": 385,
+              "y": 380
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 3,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#precipitation",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "evaporates",
+      "fromId": "collection",
+      "toId": "evaporation",
+      "label": "Water rises as vapour",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 155,
+          "y": 300
+        },
+        {
+          "x": 155,
+          "y": 165
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#evaporates",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "condenses",
+      "fromId": "evaporation",
+      "toId": "condensation",
+      "label": "Vapour cools into droplets",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 255,
+          "y": 125
+        },
+        {
+          "x": 385,
+          "y": 125
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#condenses",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "falls",
+      "fromId": "condensation",
+      "toId": "precipitation",
+      "label": "Droplets fall",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 485,
+          "y": 165
+        },
+        {
+          "x": 485,
+          "y": 300
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#falls",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "collects",
+      "fromId": "precipitation",
+      "toId": "collection",
+      "label": "Water collects again",
+      "type": "process",
+      "direction": "forward",
+      "path": [
+        {
+          "x": 385,
+          "y": 340
+        },
+        {
+          "x": 255,
+          "y": 340
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#collects",
+          "origin": "human-authored"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [
+    {
+      "id": "q-after-evaporation",
+      "prompt": "Which stage follows evaporation?",
+      "type": "direction",
+      "factIds": [
+        "condenses"
+      ],
+      "options": [
+        {
+          "id": "condensation",
+          "label": "Condensation"
+        },
+        {
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "id": "precipitation",
+          "label": "Precipitation"
+        }
+      ],
+      "acceptedAnswers": [
+        "condensation"
+      ],
+      "hint": "Explore the named objects and their connections.",
+      "explanation": "The directed connection leads from evaporation to condensation.",
+      "requiredRevision": 1,
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "q-two-steps",
+      "prompt": "Starting at condensation, which stage is two connections away?",
+      "type": "sequence",
+      "factIds": [
+        "falls",
+        "collects"
+      ],
+      "options": [
+        {
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "id": "evaporation",
+          "label": "Evaporation"
+        },
+        {
+          "id": "precipitation",
+          "label": "Precipitation"
+        }
+      ],
+      "acceptedAnswers": [
+        "collection"
+      ],
+      "hint": "Explore the named objects and their connections.",
+      "explanation": "Condensation leads to precipitation, then to collection.",
+      "requiredRevision": 1,
+      "review": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "audio": [
+    {
+      "id": "audio-water-cycle-overview",
+      "targetId": "water-cycle",
+      "kind": "overview",
+      "path": "audio/water-cycle-overview.wav",
+      "textHash": "66c76a8f9c01d54ec931daaeb72e259978d9157b09da42a12dcf30d743e38cc4",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "bc7abe8a5a0bb518b60c067393ff6a666772b8b142354a1cea930d3d5dffc183",
+      "durationMs": 11424
+    },
+    {
+      "id": "audio-collection-label",
+      "targetId": "collection",
+      "kind": "label",
+      "path": "audio/collection-label.wav",
+      "textHash": "7b790708ff1b171315a152018f3712e8c71c82f4f9000635f77a1336c34f1893",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "09827d53d6ebfe9acf6aa66d27906985d2f7a3ad9a464715bec1a8daf06ab47a",
+      "durationMs": 789
+    },
+    {
+      "id": "audio-collection-description",
+      "targetId": "collection",
+      "kind": "description",
+      "path": "audio/collection-description.wav",
+      "textHash": "21569c05de6c2d2c7834c1eea6c78126807b6e7c279b4a3655d4c2e140938752",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b",
+      "durationMs": 3297
+    },
+    {
+      "id": "audio-evaporation-label",
+      "targetId": "evaporation",
+      "kind": "label",
+      "path": "audio/evaporation-label.wav",
+      "textHash": "5bbc10ae437da3b951d1ab2308e7b6e8f7877adfccfb3b4967765ca8aa9e9c94",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "b0d6dd1907556c324d72fa34469ca66c609f009501da4f46a5171f528f9036eb",
+      "durationMs": 1068
+    },
+    {
+      "id": "audio-evaporation-description",
+      "targetId": "evaporation",
+      "kind": "description",
+      "path": "audio/evaporation-description.wav",
+      "textHash": "ace60052dfb96e189538f3ab01b0fbbf8eb816a7d94fc8d6d27db341f80d1b38",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "13809f805f8a55a4d4f940d15adbc59028f94d42744d7781145f8e71288f9455",
+      "durationMs": 2879
+    },
+    {
+      "id": "audio-condensation-label",
+      "targetId": "condensation",
+      "kind": "label",
+      "path": "audio/condensation-label.wav",
+      "textHash": "b77ff05d13e1cbcc6b9866fc1ea8dd279b33b077cbd936cb11dcbfc8e8421276",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "f9c6fede18bd47117acb70eac4c3a1bf574badf119427b7c774bec9bf5c36b07",
+      "durationMs": 1115
+    },
+    {
+      "id": "audio-condensation-description",
+      "targetId": "condensation",
+      "kind": "description",
+      "path": "audio/condensation-description.wav",
+      "textHash": "490c2a0b78b9b8ecd4f7ae6832b764f9c566bc2e0307dd1425a0001d05dac25a",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "b2c1ae652fff05ce9a8306ada8e71a569626f5f0994d2d829e2c79e686334cbb",
+      "durationMs": 3901
+    },
+    {
+      "id": "audio-precipitation-label",
+      "targetId": "precipitation",
+      "kind": "label",
+      "path": "audio/precipitation-label.wav",
+      "textHash": "123c1648c30423da8c61dcfc7d7896878e8a7598f5100a74bff0526d905eb894",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "f98378d4c9c1b6e4c7766cd26ddcf3943a291097648e75caa9d3f1bf7b1fd8f9",
+      "durationMs": 1068
+    },
+    {
+      "id": "audio-precipitation-description",
+      "targetId": "precipitation",
+      "kind": "description",
+      "path": "audio/precipitation-description.wav",
+      "textHash": "219b456b283adc3328623221de111969275cccc0ad23aa3904ec5c18ce7827c0",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "77b2783515f8960791274069da87da10a74627d49fd2acc8bfcd76d7083885fe",
+      "durationMs": 4412
+    },
+    {
+      "id": "audio-evaporates-label",
+      "targetId": "evaporates",
+      "kind": "label",
+      "path": "audio/evaporates-label.wav",
+      "textHash": "bec20284cf535dfa38a9ba135495abae0a6e40bc114ac54dd557abeed96501f8",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "f84ab7364f98fccb0942e577b0fdcaaf75c61c93e7a625bfdd472d24641e6f55",
+      "durationMs": 1858
+    },
+    {
+      "id": "audio-condenses-label",
+      "targetId": "condenses",
+      "kind": "label",
+      "path": "audio/condenses-label.wav",
+      "textHash": "2247252ad8e0a23a3d223ba85e86aa6b3566c42053d554e2b30501d54547911c",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "ee2b006556b220987bd73f9b28e2b82f0c2ddedbf10f75774dc3fad724c3cd39",
+      "durationMs": 1765
+    },
+    {
+      "id": "audio-falls-label",
+      "targetId": "falls",
+      "kind": "label",
+      "path": "audio/falls-label.wav",
+      "textHash": "2d1177b74607fbde913db9847943a588e3c16156fe73eb29eee7ed624ed992aa",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "1f14eb5594e5f2d5ac2d6410da4338d8810441fbaf1ed1e43ee1aaa32140390e",
+      "durationMs": 1115
+    },
+    {
+      "id": "audio-collects-label",
+      "targetId": "collects",
+      "kind": "label",
+      "path": "audio/collects-label.wav",
+      "textHash": "ed3a3fed1a2895b608f5e835cb01edecbdd93ab79b20b5159f183a005301f791",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "770853581ce764f0f1480fd6bdb36afe66c0cd1b2e4f4edeb750c0a6c1b6a8ac",
+      "durationMs": 1254
+    },
+    {
+      "id": "audio-q-after-evaporation-question",
+      "targetId": "q-after-evaporation",
+      "kind": "question",
+      "path": "audio/q-after-evaporation-question.wav",
+      "textHash": "c180fde6a6162d7d9e7d68a1205fccd0d1afbc7e922b08315f0a30daf65dd766",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "fd24bea44dbed867e29e2286cfa6f7ee5c881a21f88abd6925edce16fffc3ba2",
+      "durationMs": 2136
+    },
+    {
+      "id": "audio-q-two-steps-question",
+      "targetId": "q-two-steps",
+      "kind": "question",
+      "path": "audio/q-two-steps-question.wav",
+      "textHash": "c341c9e2cd39a3028408f4dae02fbd0a92e8a7fbfc269c5897f9f6765ffde068",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "698d429a939181b20fc571986028e6ace3bd4567506ad4ab7dd17a02bbdd1fbf",
+      "durationMs": 3669
+    }
+  ],
+  "description": "Water moves through a cycle: collection, evaporation, condensation, precipitation, and back to collection. Explore four stages and the directed connections."
+}

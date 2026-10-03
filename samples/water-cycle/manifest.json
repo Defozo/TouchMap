@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "packageId": "water-cycle",
+  "revision": 1,
+  "title": "The water cycle",
+  "language": "en",
+  "author": {
+    "name": "TouchMap example author",
+    "declaration": "Original illustration and explicitly authored facts. Reviewed against the source by the implementation team. This declaration is not independent accessibility certification."
+  },
+  "license": "CC-BY-4.0; generated audio subject to ElevenLabs terms",
+  "assets": [
+    {
+      "path": "diagram.json",
+      "sha256": "ef58c012ce268f7fd9c46d3cee42509c7ddbe14ff2d66a48baf42d2a5a1a9a65",
+      "bytes": 16452,
+      "mediaType": "application/json"
+    },
+    {
+      "path": "source.svg",
+      "sha256": "f0a283dacad001f19637fc1679068f28ce8aad8824b44752c57228ea874928ce",
+      "bytes": 2497,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "path": "audio/water-cycle-overview.wav",
+      "sha256": "bc7abe8a5a0bb518b60c067393ff6a666772b8b142354a1cea930d3d5dffc183",
+      "bytes": 548406,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/collection-label.wav",
+      "sha256": "09827d53d6ebfe9acf6aa66d27906985d2f7a3ad9a464715bec1a8daf06ab47a",
+      "bytes": 37938,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/collection-description.wav",
+      "sha256": "3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b",
+      "bytes": 158312,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/evaporation-label.wav",
+      "sha256": "b0d6dd1907556c324d72fa34469ca66c609f009501da4f46a5171f528f9036eb",
+      "bytes": 51314,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/evaporation-description.wav",
+      "sha256": "13809f805f8a55a4d4f940d15adbc59028f94d42744d7781145f8e71288f9455",
+      "bytes": 138250,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/condensation-label.wav",
+      "sha256": "f9c6fede18bd47117acb70eac4c3a1bf574badf119427b7c774bec9bf5c36b07",
+      "bytes": 53542,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/condensation-description.wav",
+      "sha256": "b2c1ae652fff05ce9a8306ada8e71a569626f5f0994d2d829e2c79e686334cbb",
+      "bytes": 187290,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/precipitation-label.wav",
+      "sha256": "f98378d4c9c1b6e4c7766cd26ddcf3943a291097648e75caa9d3f1bf7b1fd8f9",
+      "bytes": 51314,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/precipitation-description.wav",
+      "sha256": "77b2783515f8960791274069da87da10a74627d49fd2acc8bfcd76d7083885fe",
+      "bytes": 211810,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/evaporates-label.wav",
+      "sha256": "f84ab7364f98fccb0942e577b0fdcaaf75c61c93e7a625bfdd472d24641e6f55",
+      "bytes": 89208,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/condenses-label.wav",
+      "sha256": "ee2b006556b220987bd73f9b28e2b82f0c2ddedbf10f75774dc3fad724c3cd39",
+      "bytes": 84750,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/falls-label.wav",
+      "sha256": "1f14eb5594e5f2d5ac2d6410da4338d8810441fbaf1ed1e43ee1aaa32140390e",
+      "bytes": 53542,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/collects-label.wav",
+      "sha256": "770853581ce764f0f1480fd6bdb36afe66c0cd1b2e4f4edeb750c0a6c1b6a8ac",
+      "bytes": 60230,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/q-after-evaporation-question.wav",
+      "sha256": "fd24bea44dbed867e29e2286cfa6f7ee5c881a21f88abd6925edce16fffc3ba2",
+      "bytes": 102584,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/q-two-steps-question.wav",
+      "sha256": "698d429a939181b20fc571986028e6ace3bd4567506ad4ab7dd17a02bbdd1fbf",
+      "bytes": 176144,
+      "mediaType": "audio/wav"
+    }
+  ]
+}

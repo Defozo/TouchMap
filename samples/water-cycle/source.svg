@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440">
+<title>The water cycle</title>
+<desc>Water moves through a cycle: collection, evaporation, condensation, precipitation, and back to collection. Explore four stages and the directed connections.</desc>
+<rect width="640" height="440" fill="#f4f5ef"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#24544c"/></marker></defs>
+<text x="32" y="35" font-size="23" fill="#183b34">The water cycle</text>
+<polyline id="evaporates" points="155,300 155,165" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Water rises as vapour</title></polyline>
+<polyline id="condenses" points="255,125 385,125" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Vapour cools into droplets</title></polyline>
+<polyline id="falls" points="485,165 485,300" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Droplets fall</title></polyline>
+<polyline id="collects" points="385,340 255,340" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>Water collects again</title></polyline>
+<rect id="collection" x="55" y="300" width="200" height="80" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Collection</title><desc>Liquid water gathers in rivers, lakes and oceans.</desc></rect>
+<text x="155.0" y="346.0" text-anchor="middle" font-size="19" fill="#183b34">Collection</text>
+<rect id="evaporation" x="55" y="85" width="200" height="80" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Evaporation</title><desc>Heat changes liquid water into water vapour.</desc></rect>
+<text x="155.0" y="131.0" text-anchor="middle" font-size="19" fill="#183b34">Evaporation</text>
+<rect id="condensation" x="385" y="85" width="200" height="80" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Condensation</title><desc>Cooling water vapour forms tiny liquid droplets in clouds.</desc></rect>
+<text x="485.0" y="131.0" text-anchor="middle" font-size="19" fill="#183b34">Condensation</text>
+<rect id="precipitation" x="385" y="300" width="200" height="80" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>Precipitation</title><desc>Water falls from clouds as rain, snow or other precipitation.</desc></rect>
+<text x="485.0" y="346.0" text-anchor="middle" font-size="19" fill="#183b34">Precipitation</text>
+</svg>
