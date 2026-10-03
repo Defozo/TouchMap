@@ -32,7 +32,7 @@ def main():
             for child in node.get('children',[]):
                 visit(child)
         visit(tree)
-        return 'Library' in labels and 'A world you can explore.' in labels
+        return 'Library' in labels and 'Explore diagrams by touch and sound.' in labels
 
     report = {'status':'running','device':args.device,'startedUtc':datetime.now(timezone.utc).isoformat(),
               'installedHap':json.loads((ROOT/f'docs/evidence/installation-{args.device.replace(":","_")}.json').read_text()),

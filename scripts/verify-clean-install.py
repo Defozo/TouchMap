@@ -58,7 +58,7 @@ def main():
             for child in node.get('children', []):
                 visit(child)
         visit(layout['tree'])
-        if 'Library' not in labels or 'A world you can explore.' not in labels:
+        if 'Library' not in labels or 'Explore diagrams by touch and sound.' not in labels:
             raise RuntimeError('The independent HAP did not show the ordinary Library.')
         report['ordinaryLibraryVisible'] = True
         report['status'] = 'passed'
