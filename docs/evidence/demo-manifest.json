@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-03T21:16:54.669233+00:00",
+  "createdAt": "2026-10-03T22:48:46.272873+00:00",
   "team": {
     "team_name": "DEFOZO SOFTWARE HOUSE",
     "members": [
@@ -9,8 +9,8 @@
     "confirmed_by": "user",
     "confirmed_at": "2026-10-03T13:25:07.108700+00:00"
   },
-  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
-  "durationSeconds": 180.0,
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "durationSeconds": 179.916667,
   "scenes": [
     {
       "clip": "dist/pitch-library-raw.mp4",
@@ -36,10 +36,7 @@
         "durationSeconds": 5.146349206349206,
         "outputStartSeconds": 0.3,
         "outputEndSeconds": 5.446349206349207
-      },
-      "sourceSha256": "e7a321cac32b6672be5fa13089ac03cb15987f45b58076699a1dbbdb30b33cce",
-      "renderCache": "dist/_video_work/render/scenes/scene-6ef09defd6aed790d799.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-offline-raw.mp4",
@@ -62,10 +59,7 @@
         "durationSeconds": 12.394897959183673,
         "outputStartSeconds": 7.3,
         "outputEndSeconds": 19.694897959183674
-      },
-      "sourceSha256": "fba74abbbf4a402c452d0423864099a28a9e4d2c48b814291b429bf88d9173e9",
-      "renderCache": "dist/_video_work/render/scenes/scene-21f4f8cdef2f8c9db0cc.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-offline-raw.mp4",
@@ -88,10 +82,7 @@
         "durationSeconds": 9.144988662131519,
         "outputStartSeconds": 21.3,
         "outputEndSeconds": 30.444988662131518
-      },
-      "sourceSha256": "fba74abbbf4a402c452d0423864099a28a9e4d2c48b814291b429bf88d9173e9",
-      "renderCache": "dist/_video_work/render/scenes/scene-f321b8d9b5fc3a642182.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-touch-raw.mp4",
@@ -102,10 +93,7 @@
       "title": "Touch an object. Hear its label.",
       "body": "Explore the picture directly.\n\nUse the same actions through large controls and a structured list.",
       "annotation": "TouchMap | Native emulator demo | Original app audio",
-      "sourceAnnotation": "Actual emulator touch and captured QEMU audio | Build 2616f496",
-      "sourceSha256": "5d1a377341ebd1196ba71fea500c0577076d5cb1f3e5b1921138b9be98410dc4",
-      "renderCache": "dist/_video_work/render/scenes/scene-8d986662c80c32a08cc8.mov",
-      "visualSource": "actual recorded native framebuffer"
+      "sourceAnnotation": "Actual emulator touch and captured QEMU audio | Build 2616f496"
     },
     {
       "clip": "dist/demo-offline-raw.mp4",
@@ -128,10 +116,7 @@
         "durationSeconds": 7.37671201814059,
         "outputStartSeconds": 48.3,
         "outputEndSeconds": 55.67671201814059
-      },
-      "sourceSha256": "fba74abbbf4a402c452d0423864099a28a9e4d2c48b814291b429bf88d9173e9",
-      "renderCache": "dist/_video_work/render/scenes/scene-751544f4ba28a764d24c.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-offline-resume-raw.mp4",
@@ -154,10 +139,7 @@
         "durationSeconds": 8.493696145124716,
         "outputStartSeconds": 62.3,
         "outputEndSeconds": 70.79369614512471
-      },
-      "sourceSha256": "06058f0203676fd6001ef0a297041eccf82f39fdab78e2a501813cd320b8d110",
-      "renderCache": "dist/_video_work/render/scenes/scene-e65876238a74f4cbf4a0.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-offline-resume-raw.mp4",
@@ -180,10 +162,7 @@
         "durationSeconds": 6.21891156462585,
         "outputStartSeconds": 72.3,
         "outputEndSeconds": 78.51891156462585
-      },
-      "sourceSha256": "06058f0203676fd6001ef0a297041eccf82f39fdab78e2a501813cd320b8d110",
-      "renderCache": "dist/_video_work/render/scenes/scene-429c5290914616478232.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-offline-resume-raw.mp4",
@@ -206,10 +185,7 @@
         "durationSeconds": 3.295578231292517,
         "outputStartSeconds": 81.3,
         "outputEndSeconds": 84.59557823129252
-      },
-      "sourceSha256": "06058f0203676fd6001ef0a297041eccf82f39fdab78e2a501813cd320b8d110",
-      "renderCache": "dist/_video_work/render/scenes/scene-7999a9692d99af9e84d7.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-offline-resume-raw.mp4",
@@ -232,10 +208,7 @@
         "durationSeconds": 8.584263038548753,
         "outputStartSeconds": 87.3,
         "outputEndSeconds": 95.88426303854875
-      },
-      "sourceSha256": "06058f0203676fd6001ef0a297041eccf82f39fdab78e2a501813cd320b8d110",
-      "renderCache": "dist/_video_work/render/scenes/scene-64fcb24471f93048c169.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-ai-request-raw.mp4",
@@ -258,10 +231,7 @@
         "durationSeconds": 10.441020408163265,
         "outputStartSeconds": 97.3,
         "outputEndSeconds": 107.74102040816327
-      },
-      "sourceSha256": "c9b111dcbe91ddedd26a8b0f9f478f625a499a0f8f256116796bf9c43aa30077",
-      "renderCache": "dist/_video_work/render/scenes/scene-1451cd2bf17b58bfd4c5.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-ai-request-raw.mp4",
@@ -284,10 +254,7 @@
         "durationSeconds": 5.15204081632653,
         "outputStartSeconds": 111.3,
         "outputEndSeconds": 116.45204081632653
-      },
-      "sourceSha256": "c9b111dcbe91ddedd26a8b0f9f478f625a499a0f8f256116796bf9c43aa30077",
-      "renderCache": "dist/_video_work/render/scenes/scene-e671040f12e25f4d0c56.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-author-raw.mp4",
@@ -310,10 +277,7 @@
         "durationSeconds": 10.026666666666667,
         "outputStartSeconds": 118.3,
         "outputEndSeconds": 128.32666666666665
-      },
-      "sourceSha256": "67598cd8bca3e8fbbfb8888ae750d11e087e76222ef10edb72a7dca865e3708b",
-      "renderCache": "dist/_video_work/render/scenes/scene-15f5d8e8b7bb5df23651.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-tts-success-raw.mp4",
@@ -336,10 +300,7 @@
         "durationSeconds": 6.103968253968254,
         "outputStartSeconds": 130.3,
         "outputEndSeconds": 136.40396825396826
-      },
-      "sourceSha256": "720b6725fae5fd1cb70458107699140806c5fe5a5a44f2e1f248e36fb40b4742",
-      "renderCache": "dist/_video_work/render/scenes/scene-e82b0403caea7dc0e2a4.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-ready-raw.mp4",
@@ -362,10 +323,7 @@
         "durationSeconds": 9.095873015873016,
         "outputStartSeconds": 137.3,
         "outputEndSeconds": 146.395873015873
-      },
-      "sourceSha256": "327d34132fdfb3f0620d0f98ad4f804f026b8110c284ebb94fafe3f2c2c4788d",
-      "renderCache": "dist/_video_work/render/scenes/scene-e35627d7d954e77fb52a.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-transfer-raw.mp4",
@@ -388,10 +346,7 @@
         "durationSeconds": 6.590453514739229,
         "outputStartSeconds": 147.3,
         "outputEndSeconds": 153.89045351473922
-      },
-      "sourceSha256": "568e0bab1f9a9ed3b1ffcb1faf74b1540b3174f677a3361b23f2124cbf042c2d",
-      "renderCache": "dist/_video_work/render/scenes/scene-66a11ff1e47b35cee60a.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
       "clip": "dist/demo-transfer-raw.mp4",
@@ -414,13 +369,10 @@
         "durationSeconds": 9.111609977324264,
         "outputStartSeconds": 155.3,
         "outputEndSeconds": 164.41160997732428
-      },
-      "sourceSha256": "568e0bab1f9a9ed3b1ffcb1faf74b1540b3174f677a3361b23f2124cbf042c2d",
-      "renderCache": "dist/_video_work/render/scenes/scene-886dbc7a0ec39e87a8ce.mov",
-      "visualSource": "actual recorded native framebuffer"
+      }
     },
     {
-      "duration": 15,
+      "duration": 14.916666666666666,
       "title": "Try the lesson yourself",
       "body": "Import. Explore. Answer. Resume.\n\nDownload TouchMap and the sample lessons.\n\ngithub.com/Defozo/TouchMap",
       "annotation": "DEFOZO SOFTWARE HOUSE | Michał Kiełtyka",
@@ -438,19 +390,16 @@
         "durationSeconds": 13.465374149659864,
         "outputStartSeconds": 165.3,
         "outputEndSeconds": 178.76537414965986
-      },
-      "sourceSha256": null,
-      "renderCache": "dist/_video_work/render/scenes/scene-0187cb82924860b865ff.mov",
-      "visualSource": "English information card"
+      }
     }
   ],
   "storyboard": "docs/demo-storyboard.json",
-  "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
+  "storyboardSha256": "3082ce30f4a56bd50d126a20332feb1f37e02fd2970aec5abcf92db0e344012b",
   "approval": {
-    "actor": "agent:/root/pitch_video",
-    "recordedAtUtc": "2026-10-03T21:16:32.406323+00:00",
-    "planSha256": "2201ed82e5c890d60809a0b06f94be3609a1ddd47b959010b61b6a7ee211f26e",
-    "authorization": "Explicit user request USER_REQUEST_PITCH_AUDIO_2026-10-03.md and chat: update the existing film with energetic English narration and quiet music, retain good native audio, publish reviewed materials. No new story direction or fabricated app footage."
+    "actor": "agent:/root/pitch_video integration of independently reviewed repair",
+    "recordedAtUtc": "2026-10-03T22:48:46.140144+00:00",
+    "planSha256": "37c592106b10388a220571577e8a93f097fc977976414b8c6edc1a7a69eb9953",
+    "authorization": "Explicit user priority request in USER_REQUEST_SONG_VIDEO_2026-10-04.md to repair the narrated film audio gap, plus parent instruction to adopt the independently reviewed copy as the main v1.0.1 film. No new audio generation or changes to the song variant."
   },
   "sourceBuilds": {
     "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54": "Primary offline, touch, resumed lesson, new AI request and already-published ready revision captures. Historical development build; not the final source snapshot.",
@@ -466,15 +415,47 @@
       "origin": "Original instrumental composed and synthesized locally for this film; no sampled recordings.",
       "license": "Project-created composition and recording, released with the project under MIT."
     },
-    "mix": "Narration has foreground priority. The original 15-second application-audio scene has no narration and no added music. Music is quiet beneath speech, with a 4-second final fade.",
-    "mixAsset": "dist/_video_work/audio/pitch-v2/narration-and-music.wav",
-    "mixSha256": "c7b245c345c3aa0dbbf9e391f6d168e810dbec7a73b3c4363441c8b4407ff83b",
-    "musicAsset": "dist/_video_work/audio/pitch-v2/music-original.wav",
-    "musicSha256": "316bbc262fb890c11ae40354695409b8b7b0be5f86aba9bc57c352f73413e7c7"
+    "mix": "Complete delivery soundtrack retains all sixteen narration clips and captured Evaporation. Continuous original score fills32.3-48.7seconds and is ducked12dB around the actual label. A200ms final music fade ends after the complete narration. Original audio must not be added again.",
+    "musicAsset": "dist/_video_work/audio/pitch-repair-v3/music-continuous.wav",
+    "musicSha256": "812af7e3e23242bcc9911340eb951b8b3e0439833a5a6f57efaa795370163ebc",
+    "deliveryAsset": "dist/_video_work/audio/pitch-repair-v3/delivery.wav",
+    "deliverySha256": "4649bfbca4b54e2de531a61f1ee8261d783138e8c083f57528bf641ea0b90b3f",
+    "originalMutedMusicAsset": "dist/_video_work/audio/pitch-v2/music-original.wav",
+    "originalMutedMusicSha256": "316bbc262fb890c11ae40354695409b8b7b0be5f86aba9bc57c352f73413e7c7",
+    "nativeLabelRangeSeconds": [
+      35.2,
+      36.5
+    ],
+    "musicDucking": {
+      "attack": [
+        34.7,
+        35.1
+      ],
+      "release": [
+        36.5,
+        36.9
+      ],
+      "linearGain": 0.251
+    },
+    "repairEvidence": "docs/evidence/demo-repair/TOUCHMAP_NARRATION_REPAIR.json"
   },
-  "expectedVideoFrames": 4320,
+  "expectedVideoFrames": 4318,
   "sourceCaptureLimits": "Actual framebuffer captures may hold the last received frame between VNC updates. Authoring excerpts are condensed. Native application audio is isolated QEMU output with approximate UTC start alignment, not physical acoustic timing. Added narration and original instrumental music have separate provenance and whole-audio review.",
   "policy": "Captions beside actual native recordings. Cuts and accelerated author excerpts are labelled. No fabricated UI state.",
   "reviewed": true,
-  "reviewEvidence": "docs/evidence/demo-review.json"
+  "sourceMaster": {
+    "path": "dist/_video_work/history/pitch-v2-520b/touchmap-demo.mp4",
+    "sha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "storyboard": "dist/_video_work/history/pitch-v2-520b/demo-storyboard.json",
+    "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
+    "manifest": "dist/_video_work/history/pitch-v2-520b/demo-manifest.json",
+    "manifestSha256": "2878e1483dbbeaea1bcc269e9f7c008aa816adfea5d1f9c05bfd8a0f05b5c764",
+    "trimFinalFrames": 2,
+    "reason": "User-observed soundtrack gap repaired on a separate copy, independently reviewed before adoption."
+  },
+  "repairEvidence": "docs/evidence/demo-repair/TOUCHMAP_NARRATION_REPAIR.json",
+  "integrationStatus": "verified",
+  "reviewEvidence": "docs/evidence/demo-review.json",
+  "integrationEvidence": "docs/evidence/demo-repair-integration.json",
+  "reviewedAtUtc": "2026-10-03T22:55:23.637397+00:00"
 }

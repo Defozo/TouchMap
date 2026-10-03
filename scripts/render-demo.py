@@ -19,13 +19,89 @@ def run(command):
     subprocess.run(command, check=True)
 
 
+def require_approval(story):
+    if not story.get('approved') or not story.get('approval', {}).get('authorization'):
+        raise ValueError('The storyboard must record the real delegated authorization before assembly.')
+    normalized = {**story, 'approved': False, 'approval': {}}
+    digest = hashlib.sha256(json.dumps(normalized, sort_keys=True, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
+    if story['approval'].get('planSha256') != digest:
+        raise ValueError('The storyboard changed after its delegated approval record.')
+
+
+def render_soundtrack_derivative(story, args):
+    """Reproduce an approved bounded soundtrack correction from its retained master.
+
+    The captured scene sequence and text must remain identical. A complete audio
+    delivery stem replaces the old soundtrack; original app audio is already in it.
+    """
+    require_approval(story)
+    source = story['sourceMaster']
+    work = (ROOT / 'dist/_video_work').resolve()
+    paths = {}
+    for key, digest_key in [('path', 'sha256'), ('storyboard', 'storyboardSha256'), ('manifest', 'manifestSha256')]:
+        path = (ROOT / source[key]).resolve()
+        if not path.is_relative_to(work) or not path.is_file():
+            raise ValueError('Retained source-master dependencies must exist inside the private video work directory.')
+        if hashlib.sha256(path.read_bytes()).hexdigest() != source[digest_key]:
+            raise ValueError(f'Source-master dependency changed: {key}')
+        paths[key] = path
+    baseline = json.loads(paths['storyboard'].read_text(encoding='utf-8'))
+    baseline_manifest = json.loads(paths['manifest'].read_text(encoding='utf-8'))
+    if not baseline_manifest.get('reviewed') or baseline_manifest['videoSha256'] != source['sha256']:
+        raise ValueError('The retained master must match its historical reviewed manifest.')
+    require_approval(baseline)
+    if len(story['scenes']) != len(baseline['scenes']):
+        raise ValueError('A soundtrack derivative cannot add or remove scenes.')
+    for index, (current, prior) in enumerate(zip(story['scenes'], baseline['scenes'])):
+        expected = dict(prior)
+        if index == len(story['scenes']) - 1:
+            expected['duration'] = prior['duration'] - source['trimFinalFrames'] / 24
+        if current != expected:
+            raise ValueError('A soundtrack derivative must preserve all scene contents and timings except the declared final frame trim.')
+    audio = story['audio']
+    mix = (ROOT / audio['deliveryAsset']).resolve()
+    if not mix.is_relative_to(work) or hashlib.sha256(mix.read_bytes()).hexdigest() != audio['deliverySha256']:
+        raise ValueError('The complete delivery soundtrack differs from the approved plan.')
+    frames = round(sum(float(scene['duration']) for scene in story['scenes']) * 24)
+    duration = frames / 24
+    if not 0 < duration < 180 or frames != story['expectedVideoFrames']:
+        raise ValueError('The bounded pitch delivery must have its exact approved frame count and remain below 180 seconds.')
+    if args.prepare:
+        print(json.dumps({'prepared': True, 'sourceMasterSha256': source['sha256'], 'deliverySha256': audio['deliverySha256'], 'frames': frames}))
+        return
+    if args.output.resolve() == paths['path']:
+        raise ValueError('A retained source master must never be overwritten.')
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    run(['ffmpeg', '-y', '-v', 'error', '-i', str(paths['path']), '-i', str(mix),
+         '-map', '0:v:0', '-map', '1:a:0', '-frames:v', str(frames), '-t', str(duration),
+         '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-threads', '2', '-pix_fmt', 'yuv420p',
+         '-video_track_timescale', '24000', '-c:a', 'aac', '-b:a', '256k', '-movflags', '+faststart',
+         '-metadata', 'title=TouchMap - narrated demo, repaired audio', str(args.output.resolve())])
+    probe = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_format', '-show_streams', '-of', 'json', str(args.output)]))
+    report = {**baseline_manifest, 'createdAt': datetime.now(timezone.utc).isoformat(),
+              'videoSha256': hashlib.sha256(args.output.read_bytes()).hexdigest(),
+              'durationSeconds': float(probe['format']['duration']), 'scenes': story['scenes'],
+              'storyboard': str(args.storyboard.resolve().relative_to(ROOT)),
+              'storyboardSha256': hashlib.sha256(args.storyboard.read_bytes()).hexdigest(),
+              'approval': story['approval'], 'audio': audio, 'sourceMaster': source,
+              'expectedVideoFrames': frames, 'reviewed': False,
+              'policy': 'Approved soundtrack derivative from the preserved native-recording master. Scene contents are unchanged; only the final declared static frames are trimmed.'}
+    report.pop('reviewEvidence', None)
+    args.manifest.parent.mkdir(parents=True, exist_ok=True)
+    args.manifest.write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    print(json.dumps({'output': str(args.output), 'durationSeconds': report['durationSeconds'], 'sha256': report['videoSha256']}))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('storyboard', type=Path)
     parser.add_argument('--output', type=Path, default=ROOT / 'dist/touchmap-demo.mp4')
+    parser.add_argument('--manifest', type=Path, default=ROOT / 'docs/evidence/demo-manifest.json')
     parser.add_argument('--prepare', action='store_true', help='Cache available scenes without assembling pending transfer footage.')
     args = parser.parse_args()
     story = json.loads(args.storyboard.read_text(encoding='utf-8'))
+    if story.get('sourceMaster'):
+        return render_soundtrack_derivative(story, args)
     font = ROOT / 'backend/touchmap/assets/DejaVuSans.ttf'
     args.output.parent.mkdir(parents=True, exist_ok=True)
     evidence = []
@@ -108,12 +184,7 @@ def main():
         (work / 'render/prepared-scenes.json').write_text(json.dumps(evidence, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
         print(json.dumps({'prepared': len(outputs), 'assembly': False}), flush=True)
         return
-    if not story.get('approved') or not story.get('approval', {}).get('authorization'):
-        raise ValueError('The storyboard must record the real delegated authorization before assembly.')
-    normalized = {**story, 'approved': False, 'approval': {}}
-    approved_hash = hashlib.sha256(json.dumps(normalized, sort_keys=True, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
-    if story['approval'].get('planSha256') != approved_hash:
-        raise ValueError('The storyboard changed after its delegated approval record.')
+    require_approval(story)
     concat = stage / 'concat.txt'
     concat.write_text(''.join(f"file '{path.name}'\n" for path in outputs))
     assembly = ['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', str(concat)]
@@ -139,7 +210,8 @@ def main():
               'sourceCaptureLimits': 'Actual framebuffer captures may hold the last received frame between VNC updates. Authoring excerpts are condensed. Native application audio is isolated QEMU output with approximate UTC start alignment, not physical acoustic timing. Added narration and original instrumental music have separate provenance and whole-audio review.',
               'policy': 'Captions beside actual native recordings. Cuts and accelerated author excerpts are labelled. No fabricated UI state.',
               'reviewed': False}
-    (ROOT / 'docs/evidence/demo-manifest.json').write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    args.manifest.parent.mkdir(parents=True, exist_ok=True)
+    args.manifest.write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     print(json.dumps({'output': str(args.output), 'durationSeconds': report['durationSeconds'], 'sha256': report['videoSha256']}))
 
 

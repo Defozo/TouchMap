@@ -28,9 +28,18 @@ def pcm(path,start=0,duration=180):
         '-t',str(duration),'-vn','-ac','1','-ar','8000','-f','f32le','pipe:1'])
     return np.frombuffer(result,dtype='<f4')
 
-final=pcm(video)
-stem=pcm(ROOT/story['audio']['mixAsset'])
+duration=manifest['expectedVideoFrames']/24
+final=pcm(video,duration=duration)
+delivery=story['audio'].get('deliveryAsset')
+stem_path=ROOT/(delivery or story['audio']['mixAsset'])
+stem_hash=story['audio']['deliverySha256' if delivery else 'mixSha256']
+assert hashlib.sha256(stem_path.read_bytes()).hexdigest()==stem_hash
+stem=pcm(stem_path,duration=duration)
 music=pcm(ROOT/story['audio']['musicAsset'])
+if delivery:
+    assert hashlib.sha256((ROOT/story['audio']['musicAsset']).read_bytes()).hexdigest()==story['audio']['musicSha256']
+    t=np.arange(len(music))/8000
+    music=music*(1-.749*np.clip((t-34.7)/.4,0,1)*np.clip((36.9-t)/.4,0,1))
 checks=[]
 for i,scene in enumerate(story['scenes']):
     item=scene.get('narration')
@@ -53,7 +62,20 @@ stereo=np.frombuffer(stereo_raw,dtype='<f4')
 peak=float(np.max(np.abs(stereo)))
 ending=float(np.sqrt(np.mean(final[-400:]**2)))
 assert peak<.99 and ending<.0008,(peak,ending)
-assert abs(len(final)/8000-180) <= 1024/44100, 'Decoded AAC duration may differ by at most one codec frame.'
+assert abs(len(final)/8000-duration) <= 1024/44100, 'Decoded AAC duration may differ by at most one codec frame.'
+dropouts=[]
+if delivery:
+    start=None
+    for i in range(0,len(final),800):
+        level=float(20*np.log10(max(np.sqrt(np.mean(final[i:i+800]**2)),1e-12)))
+        if level < -65 and start is None:
+            start=i/8000
+        elif level >= -65 and start is not None:
+            if i/8000-start>.4: dropouts.append([start,i/8000])
+            start=None
+    if start is not None and len(final)/8000-start>.4: dropouts.append([start,len(final)/8000])
+    assert not dropouts,dropouts
+    assert duration<180
 
 def words(text):
     text=re.sub(r'\[App Audio:\s*(.*?)\]',r'\1',text,flags=re.IGNORECASE)
@@ -72,7 +94,8 @@ report={'recordedAtUtc':datetime.now(timezone.utc).isoformat(),'videoSha256':vid
     'durationSeconds':manifest['durationSeconds'],'decodedAudioDurationSeconds':len(final)/8000,
     'aacFrameDurationToleranceSeconds':1024/44100,'narrationScenesChecked':len(checks),'checks':checks,
     'decodedNativeStereoPeak':peak,'endingLast50msRms':ending,
-    'nativeApplicationAudio':'Separately verified in demo-qc.json; original 33-48second captured audio remains unmixed.',
+    'nativeApplicationAudio':('Original captured Evaporation label retained with quiet ducked music; separately verified against captured source in demo-qc.json.' if delivery else 'Separately verified in demo-qc.json; original 33-48second captured audio remains unmixed.'),
+    'unexpectedDropoutsLongerThan400msBelowMinus65Dbfs':dropouts,
     'actualAudioPerceptionReview':str(args.review.resolve().relative_to(ROOT)).replace('\\','/'),
     'perceptionReviewer':review['reviewer'],'completeAudioInputSha256':review['audioSha256'],
     'narrationTranscript':review['review']['transcript'],'scriptTranscriptWordAgreement':matcher.ratio(),

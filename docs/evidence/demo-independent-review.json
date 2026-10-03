@@ -1,36 +1,35 @@
 {
-  "recordedAtUtc": "2026-10-03T21:27:15.337950+00:00",
-  "reviewer": "Codex root reviewer, separate from video editor",
-  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "reviewer": "agent:/root/narration_repair/repair_review",
+  "context": "Independent, read-only review; fresh fork none; initial visual assessment preceded plan and QC inspection.",
   "result": "acceptable_with_stated_review_scope",
   "blockingFindings": [],
-  "reviewedVisuals": [
-    "contact-1.jpg through contact-5.jpg: all 17 scene midpoint samples and captions",
-    "boundary-03-in.png and boundary-03-out.png: actual native interaction and retained application-audio passage",
-    "boundary-08-out.png: restored lesson state",
-    "boundary-16-out.png: full-resolution closing call to action"
-  ],
-  "reviewedDocuments": [
-    "docs/evidence/demo-qc.json",
-    "docs/evidence/demo-pitch-audio-review.json",
-    "docs/evidence/pitch-library-capture.json",
-    "docs/evidence/demo-independent-av-review.json"
-  ],
-  "observations": [
-    "Rendered captions fit and remain legible. Native interaction is visibly separated from explanatory panels.",
-    "The opening and closing identify TouchMap, DEFOZO SOFTWARE HOUSE and sole human member Michał Kiełtyka.",
-    "The new AI request and earlier authoring session are labelled, without implying immediate publication of the newly requested draft.",
-    "The opening uses the recorded current pitch capture; historical native flow captures retain their own provenance.",
-    "Separate actual-audio perception finds clear narration, quiet accompaniment, intact Evaporation playback and a complete ending.",
-    "The objective zero added stem in seconds 33-48 and source correlation take precedence over imprecise model observations.",
-    "The presentation makes no deployment, user-study or physical-device claim."
-  ],
+  "sourceReport": "docs/evidence/demo-repair/independent-review.json",
+  "coverage": {
+    "watched_motion": "None; no full audiovisual playback claimed.",
+    "viewed": "All 23 sampled frames in contact-1.jpg through contact-3.jpg, at output seconds 0, 10, 25, 33, 35.8, 38, 42, 46, 48.3, 55, 67, 76, 83, 92, 103, 115, 125, 133, 142, 151, 160, 171 and 179.85. Also inspected full-resolution PNGs at 46 and 179.85 seconds.",
+    "heard_directly": "None. I did not independently audition the audio.",
+    "secondary_audio_evidence": "Read the complete existing automated actual-audio review and its request, checked its transcript against the storyboard and transcript-verification.json, and independently verified the supplied MP3 hash. That review reports complete audio coverage, audible accompaniment near 46 seconds, clear narration and an intact ending.",
+    "read": "Full USER_REQUEST_SONG_VIDEO_2026-10-04.md; reusable-video-editing skill and final-cut-review reference; storyboard narration and timeline; source manifest and capture limits; repair plan; technical QC; ffprobe; source/final audio-analysis summaries and targeted bins; verification script; SSIM report; loudness summary; transcript verification.",
+    "independent_identity_checks": "At the independent review, before adoption, candidate and review-audio hashes matched their reports and the original dist/touchmap-demo.mp4 still hashed to 520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b. Adoption later preserved that source under historicalMaster.path; the current canonical MP4 is the reviewed 93d78 repair."
+  },
   "limits": [
-    "Root inspected saved visual samples, not every frame continuously.",
-    "Fresh full-MP4 model review sampled video at 2 fps. Its mistaken OS and second spoken-label observations are rejected explicitly in the companion report.",
-    "Full actual-audio automated perception is recorded separately; no human listening or physical-device acoustics is inferred.",
-    "Strict decoding verifies all 4320 frames. It complements rather than replaces perceptual review."
+    "Static samples do not establish motion, transitions, full caption timing or audiovisual synchronization.",
+    "The secondary model's interval anchors are not reliable timestamps: some quoted phrases fall outside their stated 30-second bins. Use storyboard and signal timing for exact ranges.",
+    "Restored accompaniment repairs film soundtrack continuity; it does not establish repair of the application's native player or additional spoken labels.",
+    "No physical-device, vibration, screen-reader, public hosting or HackTribe submission verification was performed.",
+    "No edits, renders, paid calls or asset generation were performed by this reviewer."
   ],
   "audioEvidence": "docs/evidence/demo-pitch-audio-review.json",
-  "independentAvEvidence": "docs/evidence/demo-independent-av-review.json"
+  "historicalMaster": {
+    "path": "dist/_video_work/history/pitch-v2-520b/touchmap-demo.mp4",
+    "sha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "storyboard": "dist/_video_work/history/pitch-v2-520b/demo-storyboard.json",
+    "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
+    "manifest": "dist/_video_work/history/pitch-v2-520b/demo-manifest.json",
+    "manifestSha256": "2878e1483dbbeaea1bcc269e9f7c008aa816adfea5d1f9c05bfd8a0f05b5c764",
+    "trimFinalFrames": 2,
+    "reason": "User-observed soundtrack gap repaired on a separate copy, independently reviewed before adoption."
+  },
+  "reviewScope": "Independently reviewed bounded soundtrack repair. Prior full-MP4 model review pertains to the retained520b master, not these new bytes."
 }

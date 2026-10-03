@@ -1,0 +1,179 @@
+{
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "recordedAtUtc": "2026-10-03T22:36:29.702266+00:00",
+  "passed": true,
+  "durationSeconds": 179.916667,
+  "decodedFrames": 4318,
+  "fullDecodeReturnCode": 0,
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "pixelFormat": "yuv420p",
+    "frameRate": "24/1"
+  },
+  "audio": {
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "avDeltaSeconds": -0.0006579999999871688,
+    "decodedPeak": 0.8180994987487793,
+    "final50msRmsDbfs": -108.69686126708984,
+    "losslessMixCorrelation": 0.9999834884625802,
+    "nativeLabelRange": [
+      35.2,
+      36.5
+    ],
+    "nativeLabelAboveMusicRmsDb": 23.67186963591056,
+    "longDropoutsAtMinus65dB": [],
+    "oldScoreReconstructionMaxSampleError": 1.1896600528673619e-07,
+    "narrationChecks": [
+      {
+        "scene": 0,
+        "range": [
+          0.3,
+          5.446349206349207
+        ],
+        "correlationWithOriginalNarration": 0.9999799006145433,
+        "text": "Touch an object. Hear its name. Follow its connections. This is TouchMap."
+      },
+      {
+        "scene": 1,
+        "range": [
+          7.3,
+          19.694897959183674
+        ],
+        "correlationWithOriginalNarration": 0.999987446535448,
+        "text": "For a blind or low-vision learner, a diagram can be the hardest part of a lesson. TouchMap brings the picture, spoken labels, relationships and questions into one offline package."
+      },
+      {
+        "scene": 2,
+        "range": [
+          21.3,
+          30.444988662131518
+        ],
+        "correlationWithOriginalNarration": 0.9999897079003839,
+        "text": "Start with the source and the author declaration. Check what the material contains, then accept it locally. The learner stays in control."
+      },
+      {
+        "scene": 4,
+        "range": [
+          48.3,
+          55.67671201814059
+        ],
+        "correlationWithOriginalNarration": 0.9999058793807213,
+        "text": "Select a connection to move from one object to the next. Follow the process, or return to the part you want to explore."
+      },
+      {
+        "scene": 5,
+        "range": [
+          62.3,
+          70.79369614512471
+        ],
+        "correlationWithOriginalNarration": 0.9999201399013705,
+        "text": "Choose an answer and submit it. TouchMap checks the reviewed diagram facts, so each result follows the lesson the author approved."
+      },
+      {
+        "scene": 6,
+        "range": [
+          72.3,
+          78.51891156462585
+        ],
+        "correlationWithOriginalNarration": 0.9999919420442612,
+        "text": "Need a break? Your next selection is saved separately from your completed answers. Come back when you are ready."
+      },
+      {
+        "scene": 7,
+        "range": [
+          81.3,
+          84.59557823129252
+        ],
+        "correlationWithOriginalNarration": 0.9999888000549159,
+        "text": "Even after the app stops, the lesson is still there."
+      },
+      {
+        "scene": 8,
+        "range": [
+          87.3,
+          95.88426303854875
+        ],
+        "correlationWithOriginalNarration": 0.9999897330789874,
+        "text": "Reopen the material. Your earlier answer remains, and the new selection is waiting for you. There is no need to start the lesson again."
+      },
+      {
+        "scene": 9,
+        "range": [
+          97.3,
+          107.74102040816327
+        ],
+        "correlationWithOriginalNarration": 0.9999868371299178,
+        "text": "For educators, preparation starts with an image. With permission, AI proposes the objects and connections. The author gets a draft to inspect and improve."
+      },
+      {
+        "scene": 10,
+        "range": [
+          111.3,
+          116.45204081632653
+        ],
+        "correlationWithOriginalNarration": 0.9999853909736428,
+        "text": "The source stays visible, so every proposed object can be checked against the picture."
+      },
+      {
+        "scene": 11,
+        "range": [
+          118.3,
+          128.32666666666665
+        ],
+        "correlationWithOriginalNarration": 0.9999911639066426,
+        "text": "Adjust the regions, correct the wording, and confirm the relationships. Separate checks for geometry and meaning put the author in charge of the published lesson."
+      },
+      {
+        "scene": 12,
+        "range": [
+          130.3,
+          136.40396825396826
+        ],
+        "correlationWithOriginalNarration": 0.9999907605411421,
+        "text": "Add recorded speech, or generate spoken labels. Listen to the important words before publishing."
+      },
+      {
+        "scene": 13,
+        "range": [
+          137.3,
+          146.395873015873
+        ],
+        "correlationWithOriginalNarration": 0.9999849164008074,
+        "text": "The reviewed revision brings the diagram, connections, questions and recordings together. TouchMap checks the required files before marking it ready offline."
+      },
+      {
+        "scene": 14,
+        "range": [
+          147.3,
+          153.89045351473922
+        ],
+        "correlationWithOriginalNarration": 0.999990640963109,
+        "text": "Export the package and open it on another installation. The teaching material travels with its audio."
+      },
+      {
+        "scene": 15,
+        "range": [
+          155.3,
+          164.41160997732428
+        ],
+        "correlationWithOriginalNarration": 0.9999861557088265,
+        "text": "The package carries the lesson, while learning history stays private. Reimport the material and keep the progress already saved on that device."
+      },
+      {
+        "scene": 16,
+        "range": [
+          165.3,
+          178.76537414965986
+        ],
+        "correlationWithOriginalNarration": 0.9999876928347239,
+        "text": "TouchMap gives learners a way to explore diagrams, and educators a way to prepare them. Download the app and sample lessons. Import a diagram, follow a connection, and try the lesson yourself."
+      }
+    ]
+  },
+  "originalVideoStillSameSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "limits": "Signal analysis and complete decoding do not replace perceptual audio review. All original picture timings retained; final two static ending frames omitted."
+}

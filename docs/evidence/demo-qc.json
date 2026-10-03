@@ -1,9 +1,9 @@
 {
-  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
   "technicalPassed": true,
-  "durationSeconds": 180.0,
-  "decodedFrames": 4320,
-  "expectedFrames": 4320,
+  "durationSeconds": 179.916667,
+  "decodedFrames": 4318,
+  "expectedFrames": 4318,
   "videoCodec": "h264",
   "audioCodec": "aac",
   "frameRate": "24/1",
@@ -11,17 +11,22 @@
     1920,
     1080
   ],
-  "audioVideoDeltaSeconds": -0.0231290000000115,
+  "audioVideoDeltaSeconds": -0.0006579999999871688,
   "audioChecks": [
     {
       "scene": 3,
       "outputStart": 33,
       "sourceStart": 8,
       "duration": 15,
-      "correlation": 0.9999988419626891,
-      "peak": 0.49403709173202515,
-      "rms": 0.021931055933237076,
-      "method": "Direct sample correlation of decoded mono 8000 Hz final excerpt and its captured source, with recorded gain. No retiming."
+      "correlation": 0.9999671707613895,
+      "peak": 0.48881107568740845,
+      "rms": 0.02871313877403736,
+      "method": "Direct correlation with the approved complete delivery mix. Native label preservation checked independently below.",
+      "nativeLabelRangeSeconds": [
+        35.2,
+        36.5
+      ],
+      "nativeLabelToCapturedSourceCorrelation": 0.9978562006751546
     }
   ],
   "timeline": [
@@ -140,7 +145,7 @@
     {
       "index": 16,
       "start": 165,
-      "end": 180,
+      "end": 179.91666666666666,
       "title": "Try the lesson yourself",
       "frame": "dist\\_video_work\\frames\\touchmap-demo\\scene-16.png"
     }

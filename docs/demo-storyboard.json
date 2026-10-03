@@ -1,15 +1,15 @@
 {
-  "version": 2,
+  "version": 3,
   "title": "TouchMap: explore diagrams through touch and sound",
   "approved": true,
   "approval": {
-    "actor": "agent:/root/pitch_video",
-    "recordedAtUtc": "2026-10-03T21:16:32.406323+00:00",
-    "planSha256": "2201ed82e5c890d60809a0b06f94be3609a1ddd47b959010b61b6a7ee211f26e",
-    "authorization": "Explicit user request USER_REQUEST_PITCH_AUDIO_2026-10-03.md and chat: update the existing film with energetic English narration and quiet music, retain good native audio, publish reviewed materials. No new story direction or fabricated app footage."
+    "actor": "agent:/root/pitch_video integration of independently reviewed repair",
+    "recordedAtUtc": "2026-10-03T22:48:46.140144+00:00",
+    "planSha256": "37c592106b10388a220571577e8a93f097fc977976414b8c6edc1a7a69eb9953",
+    "authorization": "Explicit user priority request in USER_REQUEST_SONG_VIDEO_2026-10-04.md to repair the narrated film audio gap, plus parent instruction to adopt the independently reviewed copy as the main v1.0.1 film. No new audio generation or changes to the song variant."
   },
-  "targetSeconds": 180,
-  "authorization": "Explicit user request USER_REQUEST_PITCH_AUDIO_2026-10-03.md and chat: update the existing film with energetic English narration and quiet music, retain good native audio, publish reviewed materials. No new story direction or fabricated app footage.",
+  "targetSeconds": 179.91666666666666,
+  "authorization": "Explicit user priority request in USER_REQUEST_SONG_VIDEO_2026-10-04.md to repair the narrated film audio gap, plus parent instruction to adopt the independently reviewed copy as the main v1.0.1 film. No new audio generation or changes to the song variant.",
   "sourceBuilds": {
     "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54": "Primary offline, touch, resumed lesson, new AI request and already-published ready revision captures. Historical development build; not the final source snapshot.",
     "ce00562d8321872cea88c02253d609942e03f8d82fbdc9715cd30c5ddf2065ae": "Historical successful speech preparation and publication session. Earlier geometry-review footage began on a preceding build whose exact hash is not asserted here.",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "duration": 15,
+      "duration": 14.916666666666666,
       "title": "Try the lesson yourself",
       "body": "Import. Explore. Answer. Resume.\n\nDownload TouchMap and the sample lessons.\n\ngithub.com/Defozo/TouchMap",
       "annotation": "DEFOZO SOFTWARE HOUSE | Michał Kiełtyka",
@@ -406,11 +406,41 @@
       "origin": "Original instrumental composed and synthesized locally for this film; no sampled recordings.",
       "license": "Project-created composition and recording, released with the project under MIT."
     },
-    "mix": "Narration has foreground priority. The original 15-second application-audio scene has no narration and no added music. Music is quiet beneath speech, with a 4-second final fade.",
-    "mixAsset": "dist/_video_work/audio/pitch-v2/narration-and-music.wav",
-    "mixSha256": "c7b245c345c3aa0dbbf9e391f6d168e810dbec7a73b3c4363441c8b4407ff83b",
-    "musicAsset": "dist/_video_work/audio/pitch-v2/music-original.wav",
-    "musicSha256": "316bbc262fb890c11ae40354695409b8b7b0be5f86aba9bc57c352f73413e7c7"
+    "mix": "Complete delivery soundtrack retains all sixteen narration clips and captured Evaporation. Continuous original score fills32.3-48.7seconds and is ducked12dB around the actual label. A200ms final music fade ends after the complete narration. Original audio must not be added again.",
+    "musicAsset": "dist/_video_work/audio/pitch-repair-v3/music-continuous.wav",
+    "musicSha256": "812af7e3e23242bcc9911340eb951b8b3e0439833a5a6f57efaa795370163ebc",
+    "deliveryAsset": "dist/_video_work/audio/pitch-repair-v3/delivery.wav",
+    "deliverySha256": "4649bfbca4b54e2de531a61f1ee8261d783138e8c083f57528bf641ea0b90b3f",
+    "originalMutedMusicAsset": "dist/_video_work/audio/pitch-v2/music-original.wav",
+    "originalMutedMusicSha256": "316bbc262fb890c11ae40354695409b8b7b0be5f86aba9bc57c352f73413e7c7",
+    "nativeLabelRangeSeconds": [
+      35.2,
+      36.5
+    ],
+    "musicDucking": {
+      "attack": [
+        34.7,
+        35.1
+      ],
+      "release": [
+        36.5,
+        36.9
+      ],
+      "linearGain": 0.251
+    },
+    "repairEvidence": "docs/evidence/demo-repair/TOUCHMAP_NARRATION_REPAIR.json"
   },
-  "revisionReview": "dist/_video_work/review/pitch-v2/correction-ledger.json"
+  "revisionReview": "docs/evidence/demo-repair/independent-review.json",
+  "expectedVideoFrames": 4318,
+  "durationLimitExclusiveSeconds": 180,
+  "sourceMaster": {
+    "path": "dist/_video_work/history/pitch-v2-520b/touchmap-demo.mp4",
+    "sha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "storyboard": "dist/_video_work/history/pitch-v2-520b/demo-storyboard.json",
+    "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
+    "manifest": "dist/_video_work/history/pitch-v2-520b/demo-manifest.json",
+    "manifestSha256": "2878e1483dbbeaea1bcc269e9f7c008aa816adfea5d1f9c05bfd8a0f05b5c764",
+    "trimFinalFrames": 2,
+    "reason": "User-observed soundtrack gap repaired on a separate copy, independently reviewed before adoption."
+  }
 }

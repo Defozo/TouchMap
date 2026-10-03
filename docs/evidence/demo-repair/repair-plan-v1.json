@@ -1,0 +1,48 @@
+{
+  "plan_id": "touchmap-narration-repair-v1",
+  "approved": true,
+  "approval": {
+    "actor": "agent:/root/narration_repair delegated correction",
+    "planSha256": "6c28e0af8557c3492f6fcbd4539fcd9261d96ff0bfe291f511f3100edfe9ebbd",
+    "atUtc": "2026-10-03T22:34:14.976970+00:00",
+    "authorization": "Explicit USER_REQUEST_SONG_VIDEO_2026-10-04.md priority repair; parent confirms bounded repair and duration correction."
+  },
+  "source": "C:\\Users\\defoz\\Documents\\Projects\\hackyeah2026-tasks\\imagine-what-s-next\\dist\\touchmap-demo.mp4",
+  "sourceSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "exactFrames": 4318,
+  "frameRate": "24/1",
+  "durationSeconds": 179.91666666666666,
+  "deliveryAudio": "C:\\Users\\defoz\\Documents\\Projects\\hackyeah2026-tasks\\imagine-what-s-next\\_video_work\\song-pitch-2026-10-04\\narration-repair\\narration-repaired-mix.wav",
+  "deliveryAudioSha256": "4649bfbca4b54e2de531a61f1ee8261d783138e8c083f57528bf641ea0b90b3f",
+  "changes": [
+    {
+      "range": [
+        32.3,
+        48.7
+      ],
+      "change": "Restore existing deterministic score muted by original edit; duck 12dB around existing 35.2-36.5s app label."
+    },
+    {
+      "range": [
+        179.71666666666667,
+        180
+      ],
+      "change": "Retain full final narration; fade remaining music over 200ms, remove only last two picture frames to satisfy strict <180s."
+    }
+  ],
+  "preserved": "All original image frames before last two frames, scene positions, caption wording, narration timing and native speech.",
+  "authorization": "Explicit USER_REQUEST_SONG_VIDEO_2026-10-04.md priority repair; parent confirms bounded repair and duration correction.",
+  "method": "Project-local FFmpeg repair because existing render-demo.py writes shared canonical manifests and cannot isolate all outputs.",
+  "musicSource": "C:\\Users\\defoz\\Documents\\Projects\\hackyeah2026-tasks\\imagine-what-s-next\\scripts\\compose-demo-music.py",
+  "musicSourceSha256": "54bda89626aba2d6fb399df30ff1048183a1ebf6bb91327d162a11fc4a2ab566",
+  "musicLicense": "Existing project-created composition and recording under MIT; no new paid media.",
+  "validation": {
+    "sourceExists": true,
+    "sourceHashMatches": true,
+    "audioDurationMatches": true,
+    "nativeLabelEndsBeforeChangeTail": true,
+    "lastNarrationEnd": 178.76537414965986,
+    "lessThan180": true,
+    "peakBelowClipping": true
+  }
+}

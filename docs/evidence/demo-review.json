@@ -1,48 +1,20 @@
 {
-  "recordedAtUtc": "2026-10-03T21:29:14.991294+00:00",
-  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
-  "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
-  "reviewer": "Codex video editor with separate root final-cut review and fresh model media perception",
+  "recordedAtUtc": "2026-10-03T22:55:23.637397+00:00",
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "storyboardSha256": "3082ce30f4a56bd50d126a20332feb1f37e02fd2970aec5abcf92db0e344012b",
+  "reviewer": "Integration editor, separate fresh-context final-cut reviewer, and whole-audio automated perception",
   "status": "accepted_with_stated_review_coverage",
   "technicalEvidence": "docs/evidence/demo-qc.json",
   "independentReview": "docs/evidence/demo-independent-review.json",
-  "independentAvEvidence": "docs/evidence/demo-independent-av-review.json",
   "audioEvidence": "docs/evidence/demo-audio-transcript.json",
   "actualAudioPerception": "docs/evidence/demo-pitch-audio-review.json",
   "audioProvenance": "docs/evidence/demo-pitch-audio-provenance.json",
+  "integrationEvidence": "docs/evidence/demo-repair-integration.json",
+  "repairEvidence": "docs/evidence/demo-repair/TOUCHMAP_NARRATION_REPAIR.json",
   "reviewedSamples": {
-    "allSceneMidpoints": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16
-    ],
-    "criticalFullResolutionBoundaries": [
-      "03-in",
-      "03-out",
-      "08-out",
-      "16-out"
-    ],
-    "revisedFullResolutionScenes": [
-      0,
-      4,
-      5,
-      9
-    ],
-    "sourceReview": "Retained native sources and build identity. The selected AI-request range now visibly shows permission and request controls from the same recorded request."
+    "independent": "All 23 sampled frames in contact-1.jpg through contact-3.jpg, at output seconds 0, 10, 25, 33, 35.8, 38, 42, 46, 48.3, 55, 67, 76, 83, 92, 103, 115, 125, 133, 142, 151, 160, 171 and 179.85. Also inspected full-resolution PNGs at 46 and 179.85 seconds.",
+    "integrationEditor": "Current canonical contact-1.jpg and contact-5.jpg; full-resolution boundary-16-out.png. Entry and closing text remain legible and complete.",
+    "motion": "No new continuous motion playback claimed. All 4318 frames decoded; external whole-picture SSIM against the retained master is 0.999660."
   },
   "publicContactSheets": [
     "docs/evidence/demo-review/contact-1.jpg",
@@ -53,24 +25,31 @@
   ],
   "findings": [],
   "acceptedDecisions": [
-    "Use concrete English product copy and action-led narration, without a technical gap list in the pitch.",
-    "Preserve the existing real native workflow recordings, with a fresh actual Library intro and complete build provenance in the storyboard.",
-    "Use premade Alice narration and an original locally composed instrumental score. No user voice was cloned.",
-    "Keep the original native audio at output33-48seconds, with no added narration or music; no second spoken label is claimed.",
-    "Keep author permission, source review, separate historical authoring sessions and offline transfer visible.",
-    "Finish on a complete call to try the sample lesson, with a natural score resolution and fade."
+    "Restore the existing original score through the reported gap and duck it around the preserved Evaporation label.",
+    "Keep all 16 narration passages, original native speech, scene sequence and caption wording.",
+    "Trim only the last two static frames. The complete final narration ends more than one second before the film.",
+    "Preserve the previous master and its evidence with their original hashes; no new generated audio."
   ],
   "limits": [
-    "Root and editor inspected rendered visual samples; fresh full-MP4 model perception samples the video. Strict decoding checks every frame separately.",
-    "Actual whole-audio automated perception is distinct from human listening. No physical-device acoustic evidence is inferred.",
-    "Inaccurate model observations about Android, a second spoken label, and music inside the protected audio window are explicitly rejected in the corresponding reports.",
-    "Native frame capture can hold the last received framebuffer between updates. Caption readability does not establish accessibility certification."
+    "Static samples do not establish motion, transitions, full caption timing or audiovisual synchronization.",
+    "The secondary model's interval anchors are not reliable timestamps: some quoted phrases fall outside their stated 30-second bins. Use storyboard and signal timing for exact ranges.",
+    "Restored accompaniment repairs film soundtrack continuity; it does not establish repair of the application's native player or additional spoken labels.",
+    "No physical-device, vibration, screen-reader, public hosting or HackTribe submission verification was performed.",
+    "Whole-audio perception is automated. No human audition is claimed.",
+    "Historical full-MP4 model review covers the retained 520b master. It is not presented as a new full-MP4 review of this repair."
   ],
-  "automaticCorrectionRounds": 2,
-  "scopeChangesAfterInitialAssembly": [
-    "Fresh intro from pitch-library-raw.mp4; AI-request select changed to show permission and request controls.",
-    "Two generic narration openings replaced with concrete actions; the lesson-question caption made explicit."
-  ],
-  "previousCandidateSha256": "12b11d63bc149fb13246ea59af457bf3866281de622b0c3625b4dc47e5394b71",
+  "repairCorrectionRounds": 1,
+  "previousPitchCorrectionRounds": 2,
+  "authorization": "Explicit user priority request in USER_REQUEST_SONG_VIDEO_2026-10-04.md to repair the narrated film audio gap, plus parent instruction to adopt the independently reviewed copy as the main v1.0.1 film. No new audio generation or changes to the song variant.",
+  "previousMaster": {
+    "path": "dist/_video_work/history/pitch-v2-520b/touchmap-demo.mp4",
+    "sha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "storyboard": "dist/_video_work/history/pitch-v2-520b/demo-storyboard.json",
+    "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
+    "manifest": "dist/_video_work/history/pitch-v2-520b/demo-manifest.json",
+    "manifestSha256": "2878e1483dbbeaea1bcc269e9f7c008aa816adfea5d1f9c05bfd8a0f05b5c764",
+    "trimFinalFrames": 2,
+    "reason": "User-observed soundtrack gap repaired on a separate copy, independently reviewed before adoption."
+  },
   "previousReleaseVideoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1"
 }

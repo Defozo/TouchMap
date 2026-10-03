@@ -250,31 +250,23 @@
     "sampleRate": 44100,
     "channels": 2,
     "bpm": 90,
-    "sha256": "316bbc262fb890c11ae40354695409b8b7b0be5f86aba9bc57c352f73413e7c7",
+    "sha256": "812af7e3e23242bcc9911340eb951b8b3e0439833a5a6f57efaa795370163ebc",
     "compositionScriptSha256": "0397d57e19e7473eb561722460ac54a06902148a72cf35b4ff9e1a5731139434",
-    "nativeAudioProtectedRangeSeconds": [
-      33,
-      48
-    ],
+    "nativeAudioProtectedRangeSeconds": null,
     "fadeOutRangeSeconds": [
       176,
       180
     ],
-    "finalRmsDbfs": -37.487130691416326,
-    "peakDbfs": -25.167860702464164,
     "publicReproductionScript": "scripts/compose-demo-music.py",
-    "publicReproductionScriptSha256": "54bda89626aba2d6fb399df30ff1048183a1ebf6bb91327d162a11fc4a2ab566"
+    "publicReproductionScriptSha256": "54bda89626aba2d6fb399df30ff1048183a1ebf6bb91327d162a11fc4a2ab566",
+    "componentRole": "Continuous original score before per-label ducking and final delivery fade.",
+    "reconstruction": "Existing public composition script regenerated without its original 33-48 second blanket mute; ducking applied in the complete delivery mix. The public script hash records the unchanged original composition source.",
+    "reconstructionPlan": "docs/evidence/demo-repair/repair-plan-v1.json"
   },
-  "narrationMusicSha256": "c7b245c345c3aa0dbbf9e391f6d168e810dbec7a73b3c4363441c8b4407ff83b",
-  "durationSeconds": 180.0,
-  "peakDbfs": -1.7396043740204046,
+  "durationSeconds": 179.91666666666666,
   "foregroundIntegratedLoudnessTargetLufs": -17,
-  "musicRmsDbfs": -37.48713069367865,
-  "protectedNativeAudioRangeSeconds": [
-    33,
-    48
-  ],
-  "scope": "Generated narration and original music only. Original native audio is added unchanged from the preserved video scenes by the renderer. Perceptual final-cut review is separate.",
+  "protectedNativeAudioRangeSeconds": null,
+  "scope": "All existing narration assets and native speech retained. Previously muted original score restored with ducking. No new generated media.",
   "narrationRights": {
     "provider": "ElevenLabs",
     "voiceName": "Alice - Clear, Engaging Educator",
@@ -286,5 +278,39 @@
     "scope": "Public competition pitch and project demonstration; provider publishing guidance permits commercial use of paid non-beta generation. No voice cloning.",
     "requestsExecuted": 18,
     "retainedSceneTakes": 16
+  },
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "deliverySha256": "4649bfbca4b54e2de531a61f1ee8261d783138e8c083f57528bf641ea0b90b3f",
+  "previousVideoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "repairEvidence": "docs/evidence/demo-repair/TOUCHMAP_NARRATION_REPAIR.json",
+  "nativeLabelRangeSeconds": [
+    35.2,
+    36.5
+  ],
+  "musicDucking": {
+    "attack": [
+      34.7,
+      35.1
+    ],
+    "release": [
+      36.5,
+      36.9
+    ],
+    "linearGain": 0.251
+  },
+  "updatedAtUtc": "2026-10-03T22:55:23.637397+00:00",
+  "historicalMixMeasurements": {
+    "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "peakDbfs": -1.7396043740204046,
+    "musicRmsDbfs": -37.48713069367865,
+    "musicFinalRmsDbfs": -37.487130691416326,
+    "musicPeakDbfs": -25.167860702464164
+  },
+  "currentDeliveryMeasurements": {
+    "decodedStereoPeak": 0.8180994987487793,
+    "decodedStereoPeakDbfs": -1.7438774686347058,
+    "integratedLoudnessLufs": -17.3,
+    "truePeakDbfs": -1.7,
+    "evidence": "docs/evidence/demo-repair/technical-qc.json"
   }
 }

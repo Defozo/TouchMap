@@ -19,9 +19,13 @@ probe = json.loads(subprocess.check_output(['ffprobe','-v','error','-threads','1
 video = next(item for item in probe['streams'] if item['codec_type']=='video')
 sound = next(item for item in probe['streams'] if item['codec_type']=='audio')
 expected = manifest['expectedVideoFrames']
+assert expected == round(sum(float(scene['duration']) for scene in manifest['scenes']) * 24)
 assert int(video['nb_read_frames']) == expected, (video['nb_read_frames'],expected)
 assert (video['width'],video['height'],video['avg_frame_rate'],video['pix_fmt']) == (1920,1080,'24/1','yuv420p')
-assert abs(float(video['duration'])-180)<1/24
+assert abs(float(video['duration'])-expected/24)<1/24000
+assert 0 < float(probe['format']['duration']) <= 180
+if manifest.get('sourceMaster'):
+    assert float(probe['format']['duration']) < 180
 assert abs(float(sound['duration'])-float(video['duration']))<1/24
 subprocess.run(['ffmpeg','-v','error','-xerror','-err_detect','explode','-threads','1',
                 '-i',str(VIDEO),'-map','0:v:0','-map','0:a:0','-f','null','-'],check=True)
@@ -45,13 +49,27 @@ for index,scene in enumerate(manifest['scenes']):
     if scene.get('audio'):
         final=pcm(VIDEO,offset,duration)
         source=pcm(ROOT/scene['clip'],scene['start'],duration)*scene.get('audioGain',1)
+        complete_mix=manifest.get('audio',{}).get('deliveryAsset')
+        if complete_mix:
+            mix_path=ROOT/complete_mix
+            assert hashlib.sha256(mix_path.read_bytes()).hexdigest()==manifest['audio']['deliverySha256']
+            source=pcm(mix_path,offset,duration)
         size=min(len(final),len(source));final=final[:size];source=source[:size]
         correlation=float(np.corrcoef(final,source)[0,1])
         check={'scene':index,'outputStart':offset,'sourceStart':scene['start'],'duration':duration,
                'correlation':correlation,'peak':float(np.max(np.abs(final))),'rms':float(np.sqrt(np.mean(final**2))),
-               'method':'Direct sample correlation of decoded mono 8000 Hz final excerpt and its captured source, with recorded gain. No retiming.'}
+               'method':('Direct correlation with the approved complete delivery mix. Native label preservation checked independently below.' if complete_mix else 'Direct sample correlation of decoded mono 8000 Hz final excerpt and its captured source, with recorded gain. No retiming.')}
         assert correlation>0.98,check
         assert check['peak']<0.98 and check['rms']>0.0001,check
+        if complete_mix:
+            lo,hi=manifest['audio']['nativeLabelRangeSeconds']
+            captured=pcm(ROOT/scene['clip'],scene['start']+lo-offset,hi-lo)*scene.get('audioGain',1)
+            actual=pcm(VIDEO,lo,hi-lo)
+            size=min(len(captured),len(actual))
+            label_correlation=float(np.corrcoef(captured[:size],actual[:size])[0,1])
+            assert label_correlation>.98, label_correlation
+            check['nativeLabelRangeSeconds']=[lo,hi]
+            check['nativeLabelToCapturedSourceCorrelation']=label_correlation
         audio_checks.append(check)
     timeline.append({'index':index,'start':offset,'end':offset+duration,'title':scene['title'],'frame':str(still.relative_to(ROOT))})
     offset+=duration
@@ -63,7 +81,7 @@ for page in range(math.ceil(len(timeline)/4)):
         x=(cell%2)*960;y=(cell//2)*570
         picture=Image.open(ROOT/item['frame']).resize((960,540))
         contact.paste(picture,(x,y+30))
-        draw.text((x+12,y+4),f"Scene {item['index']:02d}: {item['start']:03d}-{item['end']:03d}s",font=font,fill='white')
+        draw.text((x+12,y+4),f"Scene {item['index']:02d}: {item['start']:06.2f}-{item['end']:06.2f}s",font=font,fill='white')
     contact.save(frames/f'contact-{page+1}.jpg',quality=94)
 
 report={'videoSha256':hashlib.sha256(VIDEO.read_bytes()).hexdigest(),'technicalPassed':True,'durationSeconds':float(probe['format']['duration']),

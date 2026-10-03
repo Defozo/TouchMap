@@ -1,0 +1,177 @@
+{
+  "status": "ready_for_publication",
+  "recordedAtUtc": "2026-10-03T22:45:01.656456+00:00",
+  "scope": "Repair a separate narrated-film copy. No change to original MP4, application, shared release artifacts or HackTribe.",
+  "source": {
+    "path": "dist/touchmap-demo.mp4",
+    "sha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "durationSeconds": 180.0,
+    "untouchedAfterRepair": true
+  },
+  "output": {
+    "path": "_video_work/song-pitch-2026-10-04/narration-repair/touchmap-narration-repaired-2026-10-04.mp4",
+    "absolutePath": "C:\\Users\\defoz\\Documents\\Projects\\hackyeah2026-tasks\\imagine-what-s-next\\_video_work\\song-pitch-2026-10-04\\narration-repair\\touchmap-narration-repaired-2026-10-04.mp4",
+    "sha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+    "durationSeconds": 179.916667,
+    "sizeBytes": 7568817,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "frameRate": "24/1",
+    "decodedFrames": 4318,
+    "audioSampleRate": 44100,
+    "audioChannels": 2
+  },
+  "diagnosis": {
+    "cause": "Original edit deliberately muted score from 33 to 48 seconds although only one native label was audible. AAC decodes normally; this was a long editorial soundtrack gap, not truncated narration or corrupt stream.",
+    "measuredOriginalSilenceSeconds": [
+      {
+        "start": 33.0,
+        "end": 35.2,
+        "duration": 2.200000000000003
+      },
+      {
+        "start": 36.5,
+        "end": 48.0,
+        "duration": 11.5
+      }
+    ],
+    "nativeLabel": {
+      "text": "Evaporation",
+      "rangeSeconds": [
+        35.2,
+        36.5
+      ]
+    },
+    "applicationBoundary": "At approximately 46 seconds the native capture selects Precipitation without a second captured label. This film repair restores soundtrack continuity and preserves authentic app audio; it does not repair or verify native player behavior, physical vibration or screen reader."
+  },
+  "changes": [
+    {
+      "range": [
+        32.3,
+        48.7
+      ],
+      "change": "Restore existing deterministic score muted by original edit; duck 12dB around existing 35.2-36.5s app label."
+    },
+    {
+      "range": [
+        179.71666666666667,
+        180
+      ],
+      "change": "Retain full final narration; fade remaining music over 200ms, remove only last two picture frames to satisfy strict <180s."
+    }
+  ],
+  "preserved": {
+    "narrationScenes": 16,
+    "allNarrationTextAndTiming": true,
+    "nativeCapturedSpeech": true,
+    "allScenePositions": true,
+    "captionWording": true,
+    "originalVideoUnmodified": true,
+    "lastNarrationEndSeconds": 178.76537414965986,
+    "closingCardRetainedAfterNarrationSeconds": 1.151292850340127
+  },
+  "sources": [
+    {
+      "path": "dist/touchmap-demo.mp4",
+      "role": "All picture and decoded narration/native audio",
+      "sha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b"
+    },
+    {
+      "path": "scripts/compose-demo-music.py",
+      "role": "Existing deterministic original score reconstructed locally without original blanket mute",
+      "sha256": "54bda89626aba2d6fb399df30ff1048183a1ebf6bb91327d162a11fc4a2ab566"
+    },
+    {
+      "path": "dist/_video_work/audio/pitch-v2/music-original.wav",
+      "role": "Original muted score subtracted only inside correction window",
+      "sha256": "316bbc262fb890c11ae40354695409b8b7b0be5f86aba9bc57c352f73413e7c7"
+    },
+    {
+      "path": "docs/demo-storyboard.json",
+      "role": "Existing source/timeline and narration mapping",
+      "sha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c"
+    },
+    {
+      "path": "docs/evidence/demo-manifest.json",
+      "role": "Source capture/build lineage, including emulator limits"
+    }
+  ],
+  "rights": "Existing narration asset permissions retained. Existing locally composed/synthesized music is project-created under MIT, without third-party samples. No new paid audio generated.",
+  "qc": {
+    "technicalPassed": true,
+    "fullDecodePassed": true,
+    "strictDurationLessThan180": true,
+    "audioVideoDeltaSeconds": -0.0006579999999871688,
+    "decodedPeak": 0.8180994987487793,
+    "truePeakDbfs": -1.7,
+    "integratedLoudnessLufs": -17.3,
+    "musicDoesNotMaskNativeLabelDb": 23.67186963591056,
+    "silenceLongerThan400msBelowMinus65Dbfs": [],
+    "allNarrationMatchesSource": true,
+    "minimumNarrationCorrelation": 0.9999058793807213,
+    "allFrameSsimToOriginal": 0.99966,
+    "transcriptWordAgreement": 1.0,
+    "evidence": [
+      "_video_work/song-pitch-2026-10-04/narration-repair/source.audio-analysis.json",
+      "_video_work/song-pitch-2026-10-04/narration-repair/technical-qc.json",
+      "_video_work/song-pitch-2026-10-04/narration-repair/final.ffprobe.json",
+      "_video_work/song-pitch-2026-10-04/narration-repair/final.full-decode.log",
+      "_video_work/song-pitch-2026-10-04/narration-repair/final-loudness.log",
+      "_video_work/song-pitch-2026-10-04/narration-repair/final-picture-ssim.log",
+      "_video_work/song-pitch-2026-10-04/narration-repair/transcript-verification.json"
+    ]
+  },
+  "perceptualReview": {
+    "status": "pass",
+    "method": "One fresh Gemini 3.8 Flash multimodal request receives actual complete rendered audio bytes, no supplied script or earlier verdict. Automated model perception; not human listening.",
+    "durationSeconds": 179.916667,
+    "inputAudioPath": "_video_work/song-pitch-2026-10-04/narration-repair/review-full-actual-audio.mp3",
+    "inputAudioSha256": "441c6a3bbec4f748804a5b3b2ae3f5d73f538e5cccd3fc53aee87a5275bbc3ab",
+    "reportedCoverage": "Complete audio, six consecutive ~30s ranges, specific 35-70s and ending checks",
+    "finding": "Continuous music across 45-47s; clear single Evaporation label; full closing CTA; no material issues.",
+    "report": "_video_work/song-pitch-2026-10-04/narration-repair/perceptual-review.json",
+    "limits": "Model timestamps are approximate; objective sample timing and source checks take precedence. No video/physical-device inference."
+  },
+  "visualReview": {
+    "method": "Editor inspected 23 output frames across all scenes, targeted native interval and final frame; full 4318-frame decode and SSIM comparison against original.",
+    "contactSheets": [
+      "_video_work/song-pitch-2026-10-04/narration-repair/frames/contact-1.jpg",
+      "_video_work/song-pitch-2026-10-04/narration-repair/frames/contact-2.jpg",
+      "_video_work/song-pitch-2026-10-04/narration-repair/frames/contact-3.jpg"
+    ],
+    "findings": "Captions and final card legible and preserved. Native scene shows genuine original app states.",
+    "limits": "Sampled visual inspection is not continuous motion playback."
+  },
+  "independentReview": {
+    "report": "_video_work/song-pitch-2026-10-04/narration-repair/independent-review.json",
+    "status": "acceptable_with_stated_perceptual_coverage_limits"
+  },
+  "publication": {
+    "status": "not_published_by_this_agent",
+    "publicUrl": null,
+    "anonymousVerification": null,
+    "coordinatorSource": "C:\\Users\\defoz\\Documents\\Projects\\hackyeah2026-tasks\\imagine-what-s-next\\_video_work\\song-pitch-2026-10-04\\narration-repair\\touchmap-narration-repaired-2026-10-04.mp4",
+    "destinationName": "touchmap-narration-repaired-2026-10-04.mp4",
+    "checkedExistingRelease": "v1.0.0",
+    "unavailableReleaseReferencedInCurrentDocs": "v1.0.1",
+    "safeAdditiveCommand": "gh release upload v1.0.0 \"C:\\Users\\defoz\\Documents\\Projects\\hackyeah2026-tasks\\imagine-what-s-next\\_video_work\\song-pitch-2026-10-04\\narration-repair\\touchmap-narration-repaired-2026-10-04.mp4\" --repo Defozo/TouchMap",
+    "doNotClobberExistingAssets": true,
+    "afterUpload": "Anonymous GET final URL, compare downloaded SHA256 and ffprobe duration. A local file is not jury-accessible."
+  },
+  "youtube": {
+    "title": "TouchMap | Explore diagrams through touch and sound | Narrated demo",
+    "description": "TouchMap helps blind and low-vision learners explore educational diagrams, follow connections and answer reviewed lesson questions. Prepared lessons work offline. This native emulator demonstration shows the learner and author workflows.\n\nDEFOZO SOFTWARE HOUSE\nMichał Kiełtyka\nhttps://github.com/Defozo/TouchMap\n\nNarrated version with repaired soundtrack continuity."
+  },
+  "paletteAssessment": "The dark navy and mint palette supports a calm educational accessibility product. Existing explanatory white text is clear on the dark background. No concrete benefit justified changing shared application colors during this audio repair.",
+  "reviewPage": "_video_work/song-pitch-2026-10-04/narration-repair/review.html",
+  "correctionRounds": 1,
+  "remainingLimitations": [
+    "No human audition or physical-device testing is claimed.",
+    "The native demonstration contains only its original one audible app label.",
+    "Public publication and anonymous URL verification are coordinated separately."
+  ]
+}

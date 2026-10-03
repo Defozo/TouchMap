@@ -1,0 +1,36 @@
+{
+  "reviewer": "agent:/root/narration_repair/repair_review",
+  "context": "Independent, read-only review; fresh fork none; initial visual assessment preceded plan and QC inspection.",
+  "candidate": "_video_work/song-pitch-2026-10-04/narration-repair/touchmap-narration-repaired-2026-10-04.mp4",
+  "sha256_verified": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "readiness": "acceptable_with_stated_perceptual_coverage_limits",
+  "verdict": "No supported critical or material defect remains within the narration-repair scope. Suitable for coordinator delivery with the perceptual coverage limits below.",
+  "coverage": {
+    "watched_motion": "None; no full audiovisual playback claimed.",
+    "viewed": "All 23 sampled frames in contact-1.jpg through contact-3.jpg, at output seconds 0, 10, 25, 33, 35.8, 38, 42, 46, 48.3, 55, 67, 76, 83, 92, 103, 115, 125, 133, 142, 151, 160, 171 and 179.85. Also inspected full-resolution PNGs at 46 and 179.85 seconds.",
+    "heard_directly": "None. I did not independently audition the audio.",
+    "secondary_audio_evidence": "Read the complete existing automated actual-audio review and its request, checked its transcript against the storyboard and transcript-verification.json, and independently verified the supplied MP3 hash. That review reports complete audio coverage, audible accompaniment near 46 seconds, clear narration and an intact ending.",
+    "read": "Full USER_REQUEST_SONG_VIDEO_2026-10-04.md; reusable-video-editing skill and final-cut-review reference; storyboard narration and timeline; source manifest and capture limits; repair plan; technical QC; ffprobe; source/final audio-analysis summaries and targeted bins; verification script; SSIM report; loudness summary; transcript verification.",
+    "independent_identity_checks": "Candidate and review-audio hashes match their reports. Original dist/touchmap-demo.mp4 still hashes to 520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b."
+  },
+  "findings": {"critical": [], "material": [], "required_candidate_fixes": []},
+  "evidence_for_repair": [
+    {"output_seconds": [36.5,48.0], "assessment": "Original analysis records an 11.5-second soundtrack silence. Candidate analysis records no silence longer than 400 ms below -65 dBFS anywhere. At 45.5-46.5 seconds, measured RMS is approximately -35.6 to -37.4 dBFS. Secondary perceptual review independently reports continuous audible music here.", "confidence": "High for removal of total soundtrack silence; direct listening was not performed by this reviewer."},
+    {"output_seconds": [48.3,178.765374], "assessment": "All later narration sections retain their original timing and waveform correlation above 0.999. The automated whole-audio transcript matches the approved narration words, and reports no material clarity or dropout issue.", "confidence": "High for retention; perceptual judgement remains attributed to the automated audio reviewer."},
+    {"output_seconds": [165.0,179.916667], "assessment": "Complete closing card remains visible at 179.85 seconds. Last narration ends at 178.765374 seconds, leaving approximately 1.15 seconds before file end. Reported full decode passes for 4318 frames; duration is strictly below 180 seconds. Integrated loudness is -17.3 LUFS and measured true peak is -1.7 dBFS.", "confidence": "High."}
+  ],
+  "preserve": [
+    "Existing English narration, scene order, factual product story and native emulator annotations.",
+    "Native application label at approximately 35.2-36.5 seconds; its reported level remains 23.7 dB above accompaniment.",
+    "Original picture timing and complete closing invitation. Recorded SSIM of 0.999660 supports negligible re-encode change.",
+    "Current navy and mint palette, clear explanatory typography and source footage. No visual redesign is justified by this repair."
+  ],
+  "limits": [
+    "Static samples do not establish motion, transitions, full caption timing or audiovisual synchronization.",
+    "The secondary model's interval anchors are not reliable timestamps: some quoted phrases fall outside their stated 30-second bins. Use storyboard and signal timing for exact ranges.",
+    "Restored accompaniment repairs film soundtrack continuity; it does not establish repair of the application's native player or additional spoken labels.",
+    "No physical-device, vibration, screen-reader, public hosting or HackTribe submission verification was performed.",
+    "No edits, renders, paid calls or asset generation were performed by this reviewer."
+  ],
+  "next_action": "Retain this candidate. No further render correction is supported by the inspected evidence. Carry the partial independent perceptual coverage into the delivery report."
+}

@@ -1,0 +1,97 @@
+{
+  "recordedAtUtc": "2026-10-03T22:55:23.637397+00:00",
+  "status": "verified",
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "canonicalVideo": "dist/touchmap-demo.mp4",
+  "sizeBytes": 7568817,
+  "durationSeconds": 179.916667,
+  "decodedFrames": 4318,
+  "storyboardSha256": "3082ce30f4a56bd50d126a20332feb1f37e02fd2970aec5abcf92db0e344012b",
+  "previousMaster": {
+    "path": "dist/_video_work/history/pitch-v2-520b/touchmap-demo.mp4",
+    "sha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "storyboard": "dist/_video_work/history/pitch-v2-520b/demo-storyboard.json",
+    "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
+    "manifest": "dist/_video_work/history/pitch-v2-520b/demo-manifest.json",
+    "manifestSha256": "2878e1483dbbeaea1bcc269e9f7c008aa816adfea5d1f9c05bfd8a0f05b5c764",
+    "trimFinalFrames": 2,
+    "reason": "User-observed soundtrack gap repaired on a separate copy, independently reviewed before adoption."
+  },
+  "reproduction": {
+    "command": "python scripts/render-demo.py docs/demo-storyboard.json --output dist/_video_work/reproduced-repair.mp4 --manifest dist/_video_work/reproduced-repair.json",
+    "exitCode": 0,
+    "sha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+    "byteIdentical": true,
+    "rendererSha256": "7b88a15de68345623df84e36c38519a9b96fa914a960f4a9d0ac7808ea9c37df",
+    "log": "dist/_video_work/repair-v3-reproduction.log",
+    "logSha256": "45d4d8b178c464ff11d221b7ada481a307a401262643da05543fb128fb832532"
+  },
+  "validation": {
+    "strictMediaDecode": "docs/evidence/demo-qc.json",
+    "completeMixAndNarration": "docs/evidence/demo-audio-transcript.json",
+    "independentFinalCut": "docs/evidence/demo-independent-review.json",
+    "wholeActualAudio": "docs/evidence/demo-pitch-audio-review.json",
+    "rendererNegativePreflight": [
+      {
+        "case": "stale plan approval",
+        "rejected": true,
+        "reason": "The storyboard changed after its delegated approval record."
+      },
+      {
+        "case": "changed source master",
+        "rejected": true,
+        "reason": "Source-master dependency changed: path"
+      },
+      {
+        "case": "changed full soundtrack",
+        "rejected": true,
+        "reason": "The complete delivery soundtrack differs from the approved plan."
+      },
+      {
+        "case": "changed scene caption",
+        "rejected": true,
+        "reason": "A soundtrack derivative must preserve all scene contents and timings except the declared final frame trim."
+      },
+      {
+        "case": "changed frame count",
+        "rejected": true,
+        "reason": "The bounded pitch delivery must have its exact approved frame count and remain below 180 seconds."
+      }
+    ],
+    "packageInspectDemo": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "format": {
+        "duration": "179.916667"
+      }
+    },
+    "packagingTests": {
+      "command": "/home/test123/.cache/touchmap-backend-venv/bin/python -m pytest backend/tests/test_release_packaging.py -q",
+      "environment": "WSL project workspace",
+      "passed": 26,
+      "failed": 0,
+      "log": "dist/_video_work/repair-v3-packaging-tests.log",
+      "logSha256": "38dcd4e9fbc16205f533bdb368a54c1c000ce6cc31c703686bb5b2975ce79e5f"
+    }
+  },
+  "copiedEvidence": "docs/evidence/demo-repair contains immutable reports from the independent repair. Paths and source hashes in those reports describe their original observation time. The old canonical source is now preserved under previousMaster.",
+  "publication": {
+    "performed": false,
+    "targetRelease": "v1.0.1",
+    "destinationAsset": "touchmap-demo.mp4",
+    "instruction": "Root coordinates publication and anonymous download verification. Historical additive v1.0.0 upload suggestions in the copied external repair report are superseded by this integration. Existing v1.0.0 remains unchanged."
+  },
+  "fullReleasePackage": "Root must commit the revised storyboard, manifest and evidence before packaging. The packager still requires the committed reviewed manifest and exact demo/storyboard hashes; no check was relaxed."
+}

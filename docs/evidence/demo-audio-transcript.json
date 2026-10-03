@@ -1,8 +1,8 @@
 {
-  "recordedAtUtc": "2026-10-03T21:23:46.642184+00:00",
-  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
-  "durationSeconds": 180.0,
-  "decodedAudioDurationSeconds": 179.977875,
+  "recordedAtUtc": "2026-10-03T22:49:30.199881+00:00",
+  "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+  "durationSeconds": 179.916667,
+  "decodedAudioDurationSeconds": 179.916625,
   "aacFrameDurationToleranceSeconds": 0.023219954648526078,
   "narrationScenesChecked": 16,
   "checks": [
@@ -10,122 +10,123 @@
       "scene": 0,
       "outputStartSeconds": 0.3,
       "outputEndSeconds": 5.446349206349207,
-      "finalToNarrationMusicCorrelation": 0.999977561911849,
-      "foregroundAboveMusicRmsDb": 16.695124410076115
+      "finalToNarrationMusicCorrelation": 0.999985803693973,
+      "foregroundAboveMusicRmsDb": 16.68769781102217
     },
     {
       "scene": 1,
       "outputStartSeconds": 7.3,
       "outputEndSeconds": 19.694897959183674,
-      "finalToNarrationMusicCorrelation": 0.9999820704186682,
-      "foregroundAboveMusicRmsDb": 16.09400599394187
+      "finalToNarrationMusicCorrelation": 0.999992611191353,
+      "foregroundAboveMusicRmsDb": 16.08835922712434
     },
     {
       "scene": 2,
       "outputStartSeconds": 21.3,
       "outputEndSeconds": 30.444988662131518,
-      "finalToNarrationMusicCorrelation": 0.9999851603753799,
-      "foregroundAboveMusicRmsDb": 16.408491621193356
+      "finalToNarrationMusicCorrelation": 0.9999944983296454,
+      "foregroundAboveMusicRmsDb": 16.403983656162485
     },
     {
       "scene": 4,
       "outputStartSeconds": 48.3,
       "outputEndSeconds": 55.67671201814059,
-      "finalToNarrationMusicCorrelation": 0.9999813325674627,
-      "foregroundAboveMusicRmsDb": 16.408618640839745
+      "finalToNarrationMusicCorrelation": 0.9999938372676705,
+      "foregroundAboveMusicRmsDb": 16.266818781134713
     },
     {
       "scene": 5,
       "outputStartSeconds": 62.3,
       "outputEndSeconds": 70.79369614512471,
-      "finalToNarrationMusicCorrelation": 0.9999829855409298,
-      "foregroundAboveMusicRmsDb": 16.22151918301881
+      "finalToNarrationMusicCorrelation": 0.9999943247096338,
+      "foregroundAboveMusicRmsDb": 16.214676115596347
     },
     {
       "scene": 6,
       "outputStartSeconds": 72.3,
       "outputEndSeconds": 78.51891156462585,
-      "finalToNarrationMusicCorrelation": 0.9999881568282011,
-      "foregroundAboveMusicRmsDb": 16.652502466452837
+      "finalToNarrationMusicCorrelation": 0.9999959163039966,
+      "foregroundAboveMusicRmsDb": 16.647428780581404
     },
     {
       "scene": 7,
       "outputStartSeconds": 81.3,
       "outputEndSeconds": 84.59557823129252,
-      "finalToNarrationMusicCorrelation": 0.9999907631829204,
-      "foregroundAboveMusicRmsDb": 16.824378071747155
+      "finalToNarrationMusicCorrelation": 0.9999942097657788,
+      "foregroundAboveMusicRmsDb": 16.820376510258793
     },
     {
       "scene": 8,
       "outputStartSeconds": 87.3,
       "outputEndSeconds": 95.88426303854875,
-      "finalToNarrationMusicCorrelation": 0.9999847436643732,
-      "foregroundAboveMusicRmsDb": 16.008715135252285
+      "finalToNarrationMusicCorrelation": 0.9999946831214145,
+      "foregroundAboveMusicRmsDb": 16.00377066563234
     },
     {
       "scene": 9,
       "outputStartSeconds": 97.3,
       "outputEndSeconds": 107.74102040816327,
-      "finalToNarrationMusicCorrelation": 0.9999838685615059,
-      "foregroundAboveMusicRmsDb": 16.51589477519059
+      "finalToNarrationMusicCorrelation": 0.9999937111926269,
+      "foregroundAboveMusicRmsDb": 16.510472061081508
     },
     {
       "scene": 10,
       "outputStartSeconds": 111.3,
       "outputEndSeconds": 116.45204081632653,
-      "finalToNarrationMusicCorrelation": 0.9999817390061215,
-      "foregroundAboveMusicRmsDb": 16.01666558432722
+      "finalToNarrationMusicCorrelation": 0.9999937268446868,
+      "foregroundAboveMusicRmsDb": 16.012184713072923
     },
     {
       "scene": 11,
       "outputStartSeconds": 118.3,
       "outputEndSeconds": 128.32666666666665,
-      "finalToNarrationMusicCorrelation": 0.9999856102901488,
-      "foregroundAboveMusicRmsDb": 16.703926815169858
+      "finalToNarrationMusicCorrelation": 0.999995747486496,
+      "foregroundAboveMusicRmsDb": 16.699736896450755
     },
     {
       "scene": 12,
       "outputStartSeconds": 130.3,
       "outputEndSeconds": 136.40396825396826,
-      "finalToNarrationMusicCorrelation": 0.9999782585637159,
-      "foregroundAboveMusicRmsDb": 16.183149203523
+      "finalToNarrationMusicCorrelation": 0.9999959102954452,
+      "foregroundAboveMusicRmsDb": 16.176202839130585
     },
     {
       "scene": 13,
       "outputStartSeconds": 137.3,
       "outputEndSeconds": 146.395873015873,
-      "finalToNarrationMusicCorrelation": 0.999981646942436,
-      "foregroundAboveMusicRmsDb": 16.84967771877097
+      "finalToNarrationMusicCorrelation": 0.9999908751642235,
+      "foregroundAboveMusicRmsDb": 16.84444343909837
     },
     {
       "scene": 14,
       "outputStartSeconds": 147.3,
       "outputEndSeconds": 153.89045351473922,
-      "finalToNarrationMusicCorrelation": 0.9999772370643396,
-      "foregroundAboveMusicRmsDb": 16.74529330856901
+      "finalToNarrationMusicCorrelation": 0.9999949610059845,
+      "foregroundAboveMusicRmsDb": 16.739671130904817
     },
     {
       "scene": 15,
       "outputStartSeconds": 155.3,
       "outputEndSeconds": 164.41160997732428,
-      "finalToNarrationMusicCorrelation": 0.9999819765328831,
-      "foregroundAboveMusicRmsDb": 16.696305325871283
+      "finalToNarrationMusicCorrelation": 0.9999915018456743,
+      "foregroundAboveMusicRmsDb": 16.69135550996872
     },
     {
       "scene": 16,
       "outputStartSeconds": 165.3,
       "outputEndSeconds": 178.76537414965986,
-      "finalToNarrationMusicCorrelation": 0.9999804440191132,
-      "foregroundAboveMusicRmsDb": 17.08376084702792
+      "finalToNarrationMusicCorrelation": 0.9999942277322594,
+      "foregroundAboveMusicRmsDb": 17.076941798204576
     }
   ],
-  "decodedNativeStereoPeak": 0.8186644315719604,
-  "endingLast50msRms": 1.3367863175517414e-05,
-  "nativeApplicationAudio": "Separately verified in demo-qc.json; original 33-48second captured audio remains unmixed.",
+  "decodedNativeStereoPeak": 0.8180994987487793,
+  "endingLast50msRms": 1.0666592061170377e-05,
+  "nativeApplicationAudio": "Original captured Evaporation label retained with quiet ducked music; separately verified against captured source in demo-qc.json.",
+  "unexpectedDropoutsLongerThan400msBelowMinus65Dbfs": [],
   "actualAudioPerceptionReview": "docs/evidence/demo-pitch-audio-review.json",
   "perceptionReviewer": "Gemini 3.8 Flash multimodal audio model",
-  "completeAudioInputSha256": "827c32a02b4ff0a3df5f0b1f1ec574bed745b7e3672abc318b52f2f9360d9218",
-  "narrationTranscript": "Touch an object, hear its name, follow its connections. This is TouchMap. For a blind or low-vision learner, a diagram can be the hardest part of a lesson. TouchMap brings the picture, spoken labels, relationships, and questions into one offline package. Start with the source and the author declaration. Check what the material contains, then accept it locally. The learner stays in control. [App Audio: Evaporation.] Select a connection to move from one object to the next, follow the process, or return to the part you want to explore. Choose an answer and submit it. TouchMap checks the reviewed diagram facts, so each result follows the lesson the author approved. Need a break? Your next selection is saved separately from your completed answers. Come back when you are ready. Even after the app stops, the lesson is still there. Reopen the material. Your earlier answer remains, and the new selection is waiting for you. There is no need to start the lesson again. For educators, preparation starts with an image. With permission, AI proposes the objects and connections. The author gets a draft to inspect and improve. The source stays visible, so every proposed object can be checked against the picture. Adjust the regions, correct the wording, and confirm the relationships. Separate checks for geometry and meaning put the author in charge of the published lesson. Add recorded speech or generate spoken labels. Listen to the important words before publishing. The reviewed revision brings the diagram, connections, questions, and recordings together. TouchMap checks the required files before marking it ready offline. Export the package and open it on another installation. The teaching material travels with its audio. The package carries the lesson, while learning history stays private. Reimport the material, and keep the progress already saved on that device. TouchMap gives learners a way to explore diagrams, and educators a way to prepare them. Download the app and sample lessons. Import a diagram, follow a connection, and try the lesson yourself.",
+  "completeAudioInputSha256": "441c6a3bbec4f748804a5b3b2ae3f5d73f538e5cccd3fc53aee87a5275bbc3ab",
+  "narrationTranscript": "Touch an object, hear its name, follow its connections. This is TouchMap. For a blind or low-vision learner, a diagram can be the hardest part of a lesson. TouchMap brings the picture, spoken labels, relationships, and questions into one offline package. Start with the source and the author declaration, check what the material contains, then accept it locally. The learner stays in control. [App audio: 'Evaporation'] Select a connection to move from one object to the next, follow the process, or return to the part you want to explore. Choose an answer and submit it. TouchMap checks the reviewed diagram facts, so each result follows the lesson the author approved. Need a break? Your next selection is saved separately from your completed answers. Come back when you are ready. Even after the app stops, the lesson is still there. Reopen the material, your earlier answer remains, and the new selection is waiting for you. There is no need to start the lesson again. For educators, preparation starts with an image. With permission, AI proposes the objects and connections. The author gets a draft to inspect and improve. The source stays visible, so every proposed object can be checked against the picture. Adjust the regions, correct the wording, and confirm the relationships. Separate checks for geometry and meaning put the author in charge of the published lesson. Add recorded speech or generate spoken labels. Listen to the important words before publishing. The reviewed revision brings the diagram, connections, questions, and recordings together. TouchMap checks the required files before marking it ready offline. Export the package and open it on another installation. The teaching material travels with its audio. The package carries the lesson, while learning history stays private. Re-import the material and keep the progress already saved on that device. TouchMap gives learners a way to explore diagrams, and educators a way to prepare them. Download the app and sample lessons. Import a diagram, follow a connection, and try the lesson yourself.",
   "scriptTranscriptWordAgreement": 1.0,
   "transcriptDifferences": [],
   "passed": true,
