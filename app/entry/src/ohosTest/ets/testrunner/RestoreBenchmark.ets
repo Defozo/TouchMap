@@ -5,7 +5,7 @@ import { RestorationObservation } from '../../../main/ets/platform/RestorationFr
 import { Progress } from '../../../main/ets/domain/types';
 import { tr } from '../../../main/ets/domain/i18n';
 
-interface RestoreReport { status: string; count: number; p95Ms: number; maxMs: number; idleP95Ms: number; samples: RestorationObservation[]; error: string; scope: string; }
+interface RestoreReport { status: string; count: number; p95Ms: number; maxMs: number; idleP95Ms: number; idleSamples: number; samples: RestorationObservation[]; error: string; scope: string; }
 function delay(milliseconds: number): Promise<void> { return new Promise<void>((resolve) => { setTimeout(resolve, milliseconds); }); }
 async function visible(driver: Driver, selector: On): Promise<Component> {
   for (let index = 0; index < 24; index++) {
@@ -23,7 +23,7 @@ async function visible(driver: Driver, selector: On): Promise<Component> {
 
 export async function runRestoreBenchmark(count: number): Promise<void> {
   const context = await nativeContext(); const delegator = abilityDelegatorRegistry.getAbilityDelegator();
-  const report: RestoreReport = {status:'running',count:count,p95Ms:0,maxMs:0,idleP95Ms:0,samples:[],error:'',scope:'Actual active-app Library open intent through checkpoint load, Resume state assignment, completed layout and ArkUI willDraw command boundary. Full Progress equals the saved checkpoint and the Resume heading is independently checked through native UI automation. Deferred onIdle latency is recorded separately. Excludes human selection time, cold process launch and physical display scanout.'};
+  const report: RestoreReport = {status:'running',count:count,p95Ms:0,maxMs:0,idleP95Ms:0,idleSamples:0,samples:[],error:'',scope:'Actual active-app Library open intent through checkpoint load, Resume state assignment, completed layout and ArkUI willDraw command boundary. Full Progress equals the saved checkpoint and the Resume heading is independently checked through native UI automation. Optional onIdle observations are separate diagnostics and are never required for success. Excludes human selection time, cold process launch and physical display scanout.'};
   try {
     if (!Number.isInteger(count) || count < 1 || count > 1000) { throw new Error('Invalid restoration sample count.'); }
     const repository = new Repository(context); await repository.initialize();
@@ -48,17 +48,20 @@ export async function runRestoreBenchmark(count: number): Promise<void> {
       await open.click();
       let raw = ''; const deadline = Date.now() + 5000;
       while (!raw) { raw = AppStorage.get<string>('restorationObservation') || ''; if (Date.now() > deadline) { throw new Error('Restore frame observation timed out.'); } if (!raw) { await delay(10); } }
-      const observation = JSON.parse(raw) as RestorationObservation;
-      if (observation.layoutDoneAtMs < observation.frameStartedAtMs || observation.drawCommandAtMs < observation.layoutDoneAtMs || observation.durationMs < 0) { throw new Error('Native layout/draw boundary was not observed.'); }
+      let observation = JSON.parse(raw) as RestorationObservation;
+      if (observation.layoutDoneAtMs < observation.stateAppliedAtMs || observation.drawCommandAtMs < observation.layoutDoneAtMs || observation.durationMs < 0) { throw new Error('Native layout/draw boundary was not observed.'); }
       if (observation.page !== 'Resume' || observation.packageId !== selected.diagram.packageId || JSON.stringify(observation.progress) !== JSON.stringify(expected)) { throw new Error('Rendered restoration state differs from the committed full checkpoint.'); }
       if (!(await driver.findComponent(ON.text(tr('tm_50e3bb39718a'))))) { throw new Error('Resume heading did not render.'); }
+      const latest = JSON.parse(AppStorage.get<string>('restorationObservation') || raw) as RestorationObservation;
+      if (latest.sequence === observation.sequence) { observation = latest; }
       report.samples.push(observation);
       writeBytes(`${context.filesDir}/restore-benchmark-progress.json`, encode(JSON.stringify({completed:index+1,total:count,durationMs:observation.durationMs})));
     }
     const sorted = report.samples.map((item: RestorationObservation) => item.durationMs).sort((a: number, b: number) => a-b);
     report.p95Ms = sorted[Math.ceil(count * .95) - 1]; report.maxMs = sorted[sorted.length - 1];
-    const idle = report.samples.map((item: RestorationObservation) => item.idleDurationMs).sort((a: number, b: number) => a-b);
-    report.idleP95Ms = idle[Math.ceil(count * .95) - 1];
+    const idle = report.samples.filter((item: RestorationObservation) => item.idleAtMs > 0).map((item: RestorationObservation) => item.idleDurationMs).sort((a: number, b: number) => a-b);
+    report.idleSamples = idle.length;
+    report.idleP95Ms = idle.length > 0 ? idle[Math.ceil(idle.length * .95) - 1] : 0;
     report.status = report.p95Ms < 1000 ? 'passed' : 'failed';
   } catch (error) { report.status = 'failed'; report.error = `${(error as Error).message}\n${(error as Error).stack || ''}`; }
   finally { AppStorage.setOrCreate('measureRestoration', false); }

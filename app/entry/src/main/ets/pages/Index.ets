@@ -121,12 +121,12 @@ struct Index {
         const frameQueuedAtMs = Date.now();
         this.getUIContext().postFrameCallback(new RestorationFrame(this.getUIContext(), (phases: RestorationFramePhases) => {
           if (sequence !== this.restorationSequence || this.active?.key !== material.key || this.page !== expectedPage || !this.progress) { return; }
-          const idleAtMs = Date.now();
+          const idleAtMs = phases.idleAtMs;
           const report: RestorationObservation = { sequence: sequence, intentAtMs: intentAtMs, idleAtMs: idleAtMs,
             checkpointLoadedAtMs: checkpointLoadedAtMs, stateAppliedAtMs: stateAppliedAtMs,
             frameQueuedAtMs: frameQueuedAtMs, frameStartedAtMs: phases.frameStartedAtMs,
             layoutDoneAtMs: phases.layoutDoneAtMs, drawCommandAtMs: phases.drawCommandAtMs,
-            idleDurationMs: idleAtMs - intentAtMs,
+            idleDurationMs: idleAtMs > 0 ? idleAtMs - intentAtMs : 0,
             durationMs: phases.drawCommandAtMs - intentAtMs, page: this.page, packageId: material.diagram.packageId,
             contentRevision: material.diagram.revision, stateRevision: this.progress.stateRevision, lastRegionId: this.progress.lastRegionId,
             activeQuestionId: this.progress.activeQuestionId, selectedAnswers: this.progress.selectedAnswers.slice(),
