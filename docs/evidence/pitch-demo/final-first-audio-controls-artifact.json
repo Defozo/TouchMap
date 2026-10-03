@@ -1,0 +1,18 @@
+{
+  "device": "127.0.0.1:55555",
+  "mode": "all",
+  "startedUtc": "2026-10-03T21:43:11.817540+00:00",
+  "productionHapSha256": "7789ed86a3e666c738f9b520e48cc190b462926bc24d0b0be553580282ec618b",
+  "testHapSha256": "74ae8cd3e1cccd72c85632102668da94073046197fddfe90d0da82635e45c562",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "1b4a0945dae5f36c364c0f991aa039bbb7c8731a61e00f15656468549d21f5f2",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7345049,
+    "gitHeadAtBuild": "cba7464aaf16b9d242eccdd4644c2b1ea711469a",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "finishedUtc": "2026-10-03T21:43:27.764096+00:00",
+  "status": "failed"
+}

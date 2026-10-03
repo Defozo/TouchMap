@@ -1,0 +1,205 @@
+{
+  "status": "environment_isolation_verified",
+  "recordedUtc": "2026-10-04T01:07:40.385914+02:00",
+  "finding": "The shared WSLg PulseAudio output pipeline stalled intermittently. The first unpaused run failed; its retry passed before read-only Pulse queries later timed out. The same diagnostic application and unchanged recording passed unpaused and all five controls after restarting only the selected emulator on a separate clocked audio server.",
+  "runtime": "Oniro OpenHarmony 6.1.0.31, API23 emulator; API20 application",
+  "diagnosticArtifact": {
+    "mode": "unpaused",
+    "startedUtc": "2026-10-04T00:21:44.688674+02:00",
+    "sourceFingerprint": {
+      "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+      "appSourceSha256": "32065275ff9e7e4bb4a5ba5b19583b0559ddf9fde9446155ab7ee79bd421f3cc",
+      "appSourceFileCount": 122,
+      "appSourceBytes": 7347524,
+      "gitHeadAtBuild": "74d189168515a8c647926b1dadd68f930dbaa495",
+      "workingTreeDirty": true,
+      "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+    },
+    "entrySha256": "44b2552f0d6e47d2926f4e44e33a1a4fe9501b01a9f270bda56237232e3ae8ea",
+    "entry_testSha256": "32514e4dadb4d1626dc3811d5a2b2595c83c6b3bf03d120615a97587d97fff77",
+    "finishedUtc": "2026-10-04T00:21:53.126698+02:00",
+    "status": "passed"
+  },
+  "sourceRecording": {
+    "key": "water-cycle@1",
+    "revision": 1,
+    "asset": {
+      "id": "audio-collection-description",
+      "targetId": "collection",
+      "kind": "description",
+      "path": "audio/collection-description.wav",
+      "textHash": "21569c05de6c2d2c7834c1eea6c78126807b6e7c279b4a3655d4c2e140938752",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b",
+      "durationMs": 3297
+    },
+    "actualSha256": "3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b",
+    "pcm": {
+      "sampleRate": 24000,
+      "channels": 1,
+      "bitsPerSample": 16,
+      "blockAlign": 2,
+      "byteRate": 48000,
+      "dataOffset": 44,
+      "dataLength": 158268,
+      "durationMs": 3297
+    }
+  },
+  "sharedOutput": {
+    "server": "WSLg PulseAudio16.1 RDPSink",
+    "unpausedReport": "shared-sink-unpaused.json",
+    "status": "failed",
+    "acceptedPcmBytesBeforeDeadline": 108480,
+    "subsequentNativeWriteBytes": 7680,
+    "subsequentPcmDurationMs": 160,
+    "writeElapsedMs": [
+      1,
+      486,
+      585,
+      625,
+      617,
+      602,
+      610,
+      596,
+      628,
+      598,
+      620,
+      613,
+      589,
+      605
+    ],
+    "passingRetryReport": "shared-sink-unpaused-retry.json",
+    "passingRetryDrainEndMs": 3706,
+    "captureDuringPassingRetry": {
+      "device": "127.0.0.1:55555",
+      "startedUtc": "2026-10-04T00:15:05.964467+02:00",
+      "wallSeconds": 20.017283414985286,
+      "seconds": 11.677959183673469,
+      "channels": 2,
+      "sampleRate": 44100,
+      "peakPcm16": 4371,
+      "rmsPcm16": 293.54556859002014,
+      "scope": "Host monitor of this emulator output stream only; not a microphone recording or physical acoustic latency measurement."
+    },
+    "nativeSinkEvidence": "native-sink-overrun-excerpt.txt",
+    "pauseResumeEvidence": "eight-buffer-transport-audio-controls.json",
+    "pulseReadOnlyTimeouts": 2,
+    "pulseLogFinding": "Repeated rdp-source asyncq q overrun bursts. No shared server restart or routing mutation was performed."
+  },
+  "isolatedOutput": {
+    "server": "Separate PulseAudio16.1 clocked null sink touchmap_pcm,44100Hz stereo",
+    "privateUnixSocket": "/mnt/wslg/runtime-dir/touchmap-pitch-audio/native",
+    "unpausedReport": "private-sink-unpaused.json",
+    "status": "passed",
+    "acceptedPcmBytes": 158268,
+    "drain": [
+      {
+        "kind": "drain_begin",
+        "target": "collection",
+        "requestedBytes": 0,
+        "acceptedBytes": 0,
+        "offsetBytes": 158268,
+        "totalBytes": 158268,
+        "elapsedMs": 3545,
+        "rendererState": 2,
+        "active": true,
+        "paused": false
+      },
+      {
+        "kind": "drain_end",
+        "target": "collection",
+        "requestedBytes": 0,
+        "acceptedBytes": 0,
+        "offsetBytes": 158268,
+        "totalBytes": 158268,
+        "elapsedMs": 3764,
+        "rendererState": 2,
+        "active": true,
+        "paused": false
+      }
+    ],
+    "capture": {
+      "device": "127.0.0.1:55555",
+      "startedUtc": "2026-10-04T00:21:44.704393+02:00",
+      "wallSeconds": 18.00576625499525,
+      "seconds": 17.998526077097505,
+      "channels": 2,
+      "sampleRate": 44100,
+      "peakPcm16": 4371,
+      "rmsPcm16": 268.56255872210255,
+      "scope": "Host monitor of this emulator output stream only; not a microphone recording or physical acoustic latency measurement."
+    },
+    "controlsReport": "private-sink-audio-controls.json",
+    "controlsPassed": 5,
+    "controlCount": 5,
+    "controlsCapture": {
+      "device": "127.0.0.1:55555",
+      "startedUtc": "2026-10-04T00:22:46.231211+02:00",
+      "wallSeconds": 18.016485297004692,
+      "seconds": 18.009478458049887,
+      "channels": 2,
+      "sampleRate": 44100,
+      "peakPcm16": 4371,
+      "rmsPcm16": 310.32285822344477,
+      "scope": "Host monitor of this emulator output stream only; not a microphone recording or physical acoustic latency measurement."
+    }
+  },
+  "environmentChange": {
+    "selectedDevice": "127.0.0.1:55555",
+    "oldQemuPidUbuntu": 63018,
+    "newQemuPidUbuntu": 187836,
+    "privatePulsePidSystemDistribution": 187889,
+    "guestStoppedAndSyncedBeforeRestart": true,
+    "existingUserdataInodeAndSizePreserved": true,
+    "otherEmulatorUntouched": true,
+    "sharedWslgServerUntouched": true,
+    "privateServerLeftRunningForFinalVerification": true,
+    "reproductionAndRestore": "../../EMULATOR_AUDIO.md"
+  },
+  "diagnosticCleanup": "Temporary per-write trace and unpaused diagnostic mode were removed before release builds. The audio implementation and benchmark match74d189168515a8c647926b1dadd68f930dbaa495; the final app also contains the two reviewed footer/counter copy changes.",
+  "finalArtifact": {
+    "recordedAt": "2026-10-04T01:06:13.194728+02:00",
+    "device": "127.0.0.1:55555",
+    "status": "passed",
+    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+    "testHapSha256": "46b55fb6e64508c484cb14058a41764e7b6d95fa2706bb225a3bc67822fd22d3",
+    "tests": {
+      "run": 18,
+      "failed": 0,
+      "errors": 0,
+      "passed": 18
+    },
+    "sourceFingerprint": {
+      "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+      "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+      "appSourceFileCount": 122,
+      "appSourceBytes": 7346167,
+      "gitHeadAtBuild": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+      "workingTreeDirty": true,
+      "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+    }
+  },
+  "finalAudioControls": {
+    "report": "../native-audio-controls.json",
+    "artifact": "../native-audio-controls-artifact.json",
+    "passed": 5,
+    "count": 5
+  },
+  "capturedEmulatorPcm": [
+    {
+      "path": "private-sink-unpaused.wav",
+      "sha256": "048fd86d827a73154ca03eb8bdba6a35f69db4baec680354391045b3a34eaa2a",
+      "bytes": 3174984
+    },
+    {
+      "path": "private-sink-audio-controls.wav",
+      "sha256": "f76957a91bd7b322a584b5483b4e1726623b995924145dcaaf0ab89918be096d",
+      "bytes": 3176916
+    }
+  ],
+  "limits": "Captures contain only the selected emulator output. This proves actual PCM output and its host clock pace, not physical speaker latency, physical device compatibility, or a microphone observation. Restarting the selected emulator and replacing its output server were performed together; the exact internal WSLg defect was not identified.",
+  "finalSourceNote": "Final17b51 app additionally contains only the reviewed footer/counter copy changes and the test-only large export fixture responsiveness repair relative to the measured audio build. See ../pitch-copy-source-binding.json; the100-onset measurement remains bound to d1ad rather than the final e0a binary.",
+  "sourceWaveformComparison": "captured-source-comparison.json: complete3.29725s source matched at correlation0.9975267699 without time stretching; four interior segments have0ms relative alignment drift."
+}

@@ -1,0 +1,75 @@
+{
+  "startedUtc": "2026-10-03T23:07:12.794122+00:00",
+  "status": "passed",
+  "requestedCommit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+  "device": "127.0.0.1:55556",
+  "expectedReleaseHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+  "expectedAppSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+  "historicalCleanFiles": {
+    "clean-audio-controls-results.txt": "25d80be64aadc790341a5ca8b1dde2fcf6068fe20be91893d0f727a3b7070abd",
+    "clean-audio-controls.json": "25d80be64aadc790341a5ca8b1dde2fcf6068fe20be91893d0f727a3b7070abd",
+    "clean-build-invocation.txt": "e3c869a9f9f9a0157340c3b77136256b37f0fc951bc0049db4bba327c96de5bb",
+    "clean-checkout.json": "dd4a8638b6f4b51ecea8d6308bc637c7739c5c44ee9131fb177661c34daa49d0",
+    "clean-install-results.txt": "c35b6fa0a10cd34d83bbf3c5584505c74aec7fa257c25bd16563ad3c2e050955",
+    "clean-installation.json": "6c5349afccd0721b41e11f5c7288b8cbc6fd87670d86719929751bde0d659931",
+    "clean-installed-library.jpeg": "371f347d7adf626d9ea34821fed0fdc0722ed9cac6bda649821cd8a159e03119",
+    "clean-installed-library.json": "55bb7ff28c27c088b184b946f8a40deda7ea49639f72abab09cb117edc0085f8",
+    "clean-native-invocation.txt": "e8b25a802e2828a62eeb4f730a1b44b6b6083e131d36d024bfa793950e63500f",
+    "clean-native-test-artifact.json": "cbf232f21fbe7ba02f60a2f8f13ce85ec00b933e06b44c69a89f3d2c96b6b23c",
+    "clean-native-test-build.log": "09b854d4ae3bec637a0fd8df7a7fc7ad4d2f6043815f47a3c6ad59c1495b64b0",
+    "clean-native-test-results.txt": "ba0a5519cfbe05d6983c0e14cea1f28e35a74c802a0fd8d632e35b22fadd7721",
+    "clean-npm.txt": "edcd4e57ae94000ce0dcaa10617bc3d9d0db4165bf23190f878af76f72176ea0",
+    "clean-pytest.txt": "56d855833b25f23606c206049297e287c49d4137faec8bd060c62dcb12c7a9d1",
+    "clean-stage-input-fingerprint.json": "6b2f8704560691eb83c02b07948036ab75bc939da07ac4bfd39eaf30d398727b"
+  },
+  "scope": "Fresh local --no-local checkout, lockfile dependencies, host and backend tests, native build and signature verification; independent HAP installed over existing secondary emulator installation, data retained. No physical-device or human-operator claim.",
+  "audioEnvironment": {
+    "server": "unix:/mnt/wslg/runtime-dir/touchmap-pitch-audio/native",
+    "sink": "touchmap_pcm",
+    "kind": "Private clocked null sink, no live speaker output; emulator PCM/runtime behavior only."
+  },
+  "checkout": "/tmp/touchmap-checkout-8rY4TjKx",
+  "independentHapSha256": "b523156d6746db760ca34285744d27e08e8b3332f6ac7d0c4c7133e928e3ccc2",
+  "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+  "sourceMatchesRelease": true,
+  "nativeTests": {
+    "run": 18,
+    "failed": 0,
+    "errors": 0,
+    "passed": 18
+  },
+  "audioControls": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "stop_before_dwell",
+        "passed": true,
+        "detail": "Observed 0 native onset callbacks after cancellation."
+      },
+      {
+        "name": "rapid_replacement_only_latest_target",
+        "passed": true,
+        "detail": "Native PCM targets: evaporation"
+      },
+      {
+        "name": "pause_resume_finishes_same_recording",
+        "passed": true,
+        "detail": "Playing local PCM recording | Recording paused. Resume keeps your place. | Recording resumed at the saved position. | Recording finished"
+      },
+      {
+        "name": "replace_pending_batched_write_finishes_latest_only",
+        "passed": true,
+        "detail": "Replaced actual pending 7680-byte native write after 960-byte onset; targets: collection,evaporation; Playing local PCM recording | Playing local PCM recording | Recording finished"
+      },
+      {
+        "name": "four_byte_final_pcm_tail_finishes",
+        "passed": true,
+        "detail": "964 PCM bytes: Playing local PCM recording | Recording finished; failures: "
+      }
+    ]
+  },
+  "ordinaryLibraryVisible": true,
+  "historicalCleanEvidenceRestoredExactly": true,
+  "rootReleaseHapUnchanged": true,
+  "finishedUtc": "2026-10-03T23:09:39.965453+00:00"
+}

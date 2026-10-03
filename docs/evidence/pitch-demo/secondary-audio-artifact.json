@@ -1,0 +1,25 @@
+{
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T21:20:46.836571+00:00",
+  "reason": "Compare existing independently built runtime after primary pause/resume timeout.",
+  "entrySha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e",
+  "entry_testSha256": "e9ccb129f77bb3b336ddb9ef5e9470ff39446823402c7edad9b5cad23604ade2",
+  "finishedUtc": "2026-10-03T21:21:02.326394+00:00",
+  "result": {
+    "status": "failed",
+    "checks": [
+      {
+        "name": "stop_before_dwell",
+        "passed": true,
+        "detail": "Observed 0 native onset callbacks after cancellation."
+      },
+      {
+        "name": "rapid_replacement_only_latest_target",
+        "passed": true,
+        "detail": "Native PCM targets: evaporation"
+      }
+    ],
+    "error": "Native audio control timed out.\n    at until entry (entry/src/ohosTest/ets/testrunner/AudioControls.ets:12:61)\n",
+    "scope": "Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-03T23:08:28.554631+00:00",
+  "commit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+  "method": "Fresh local git clone --no-local; dependencies installed from lockfiles; no credentials copied",
+  "checks": {
+    "npmCi": true,
+    "domainTests": true,
+    "typescript": true,
+    "pytest": true,
+    "nativeCleanBuild": true,
+    "signatureVerification": true
+  },
+  "signedHapSha256": "b523156d6746db760ca34285744d27e08e8b3332f6ac7d0c4c7133e928e3ccc2",
+  "signedHapBytes": 8526626,
+  "signingNote": "Independent development signing can change the HAP hash. This verifies source reproduction, not byte-identical signatures.",
+  "installation": "Separate runtime evidence is required; this script does not modify a device.",
+  "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7346167,
+    "gitHeadAtBuild": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  }
+}
+Clean checkout retained at: /tmp/touchmap-checkout-8rY4TjKx

@@ -1,0 +1,163 @@
+{
+  "status": "diagnostic_improvement_verified",
+  "scope": "Native PCM write throughput investigation before the final release build. Final 5-control and 100-onset results are recorded separately.",
+  "fixture": {
+    "sampleRate": 24000,
+    "channels": 1,
+    "bitsPerSample": 16,
+    "pcmBytes": 158268,
+    "durationMs": 3297,
+    "nativeBufferBytes": 960,
+    "nativeBufferDurationMs": 20
+  },
+  "observedProblem": "The original serialized 20 ms writes advanced slowly. Pause and resume returned the expected statuses, then writing continued; the original completion wait expired before the recording finished. The untouched independently built release reproduced the failure on the second emulator.",
+  "hostObservation": "Windows aggregate CPU was 97 percent after this project's heavy jobs had finished. Native audio service restart did not resolve the failure. CPU load is context, not proof of an exclusive cause.",
+  "change": "The first write remains one native buffer. Later writes contain four native buffers. Verified source PCM, byte cursor accounting, pause/resume and cancellation use the existing renderer.",
+  "before": {
+    "productionHapSha256": "9b1789d5a614b5eb66d3266cfe3db286ecb77afc42a13aaac2d579bda428ad2f",
+    "appSourceSha256": "4254dfc7653985c015b9b01f137023a4fbffea2a7ca217fc118bd5045066d545",
+    "elapsedToDrainEndMs": 12891,
+    "drainMs": 306,
+    "originalCompletionDeadlineMs": 8297,
+    "status": "failed",
+    "nativeTrace": [
+      {
+        "event": "PROGRESS",
+        "offset": "24000",
+        "total": "158268",
+        "elapsed": "2033",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "PROGRESS",
+        "offset": "48000",
+        "total": "158268",
+        "elapsed": "3956",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "PROGRESS",
+        "offset": "72000",
+        "total": "158268",
+        "elapsed": "5857",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "PROGRESS",
+        "offset": "96000",
+        "total": "158268",
+        "elapsed": "7754",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "PROGRESS",
+        "offset": "120000",
+        "total": "158268",
+        "elapsed": "9622",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "PROGRESS",
+        "offset": "144000",
+        "total": "158268",
+        "elapsed": "11479",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "DRAIN_BEGIN",
+        "elapsed": "12585"
+      },
+      {
+        "event": "DRAIN_END",
+        "elapsed": "12891"
+      },
+      {
+        "event": "DRAIN_BEGIN",
+        "elapsed": "20"
+      },
+      {
+        "event": "DRAIN_END",
+        "elapsed": "202"
+      }
+    ]
+  },
+  "afterDiagnostic": {
+    "productionHapSha256": "be5e971c22bcb3ef1d5cc655c318f6cc72bfbc48e9fe13aab10372e9376d7ed9",
+    "appSourceSha256": "f570397f8f6e27022d6482ad3d2bc93d865dd7255e52352c4699305ecebe7ad6",
+    "elapsedToDrainEndMs": 7404,
+    "drainMs": 118,
+    "originalCompletionDeadlineMs": 8297,
+    "status": "4_of_4_controls_passed",
+    "nativeTrace": [
+      {
+        "event": "PROGRESS",
+        "offset": "24000",
+        "total": "158268",
+        "elapsed": "4068",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "PROGRESS",
+        "offset": "120000",
+        "total": "158268",
+        "elapsed": "6272",
+        "state": "2",
+        "paused": "false"
+      },
+      {
+        "event": "DRAIN_BEGIN",
+        "elapsed": "7286"
+      },
+      {
+        "event": "DRAIN_END",
+        "elapsed": "7404"
+      },
+      {
+        "event": "DRAIN_BEGIN",
+        "elapsed": "21"
+      },
+      {
+        "event": "DRAIN_END",
+        "elapsed": "27"
+      }
+    ]
+  },
+  "deadlineHandling": "A temporary extra observation window retained the original deadline as a failing condition. It established eventual completion in the failing run. The extra window and temporary production logs were removed before final source freeze.",
+  "evidence": [
+    {
+      "path": "docs/evidence/pitch-demo/primary-audio-trace-before-batching.json",
+      "sha256": "f511b6f1fb830eba8075adfa86441782464a5c24456ee419d1825c3e5e61a9a6"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/primary-audio-trace-before-batching-artifact.json",
+      "sha256": "cd3103c0259544e23b98e7d343050f3ef214aa7a494a52645cefc59d0a76daa0"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/primary-audio-batched-diagnostic.json",
+      "sha256": "36837a2565fcc8d70d2bf53cb833c5fbd7b8b0c1b78fc3240d3568f66d4682c6"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/primary-audio-batched-diagnostic-artifact.json",
+      "sha256": "c8e91dc8557e99b207016df9c99318002389b511ce40926175b6f1d3ba58dcb8"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/secondary-audio-controls.json",
+      "sha256": "8544cce527fe6023908320638a00dd93f2f3f4cafc7aa9edcb9895ea060b5084"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/secondary-audio-artifact.json",
+      "sha256": "081bb78e5a75770147874a5d08648183aa051a806d55fbf38d80662c98730046"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/audio-host-load.json",
+      "sha256": "79e3a367d78c3e2b103792eab6cd3e0f4f8b2118b70eec483c85893598b68e94"
+    }
+  ]
+}

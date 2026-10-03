@@ -1,0 +1,3 @@
+TestFinished-ResultCode: -1
+TestFinished-ResultMsg: Native audio controls failed
+user test finished.

@@ -1,0 +1,204 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "stop_before_dwell",
+      "passed": true,
+      "detail": "Observed 0 native onset callbacks after cancellation."
+    },
+    {
+      "name": "rapid_replacement_only_latest_target",
+      "passed": true,
+      "detail": "Native PCM targets: evaporation"
+    },
+    {
+      "name": "unpaused_long_recording",
+      "passed": true,
+      "detail": "Playing local PCM recording | Recording finished"
+    }
+  ],
+  "error": "",
+  "scope": "Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics.",
+  "observations": [
+    {
+      "elapsedMs": 1,
+      "kind": "phase",
+      "value": "initialize"
+    },
+    {
+      "elapsedMs": 522,
+      "kind": "phase",
+      "value": "stop_before_dwell"
+    },
+    {
+      "elapsedMs": 1147,
+      "kind": "phase",
+      "value": "rapid_replacement"
+    },
+    {
+      "elapsedMs": 1509,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"evaporation\",\"requestedBytes\":960,\"acceptedBytes\":960,\"offsetBytes\":0,\"totalBytes\":51270,\"elapsedMs\":6,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1509,
+      "kind": "started",
+      "value": "evaporation"
+    },
+    {
+      "elapsedMs": 1510,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 1514,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"evaporation\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":960,\"totalBytes\":51270,\"elapsedMs\":4,\"rendererState\":2,\"active\":false,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1626,
+      "kind": "source",
+      "value": "{\"key\":\"water-cycle@1\",\"revision\":1,\"asset\":{\"id\":\"audio-collection-description\",\"targetId\":\"collection\",\"kind\":\"description\",\"path\":\"audio/collection-description.wav\",\"textHash\":\"21569c05de6c2d2c7834c1eea6c78126807b6e7c279b4a3655d4c2e140938752\",\"language\":\"en\",\"provider\":\"ElevenLabs eleven_flash_v2_5\",\"voice\":\"hpp4J3VqNfWAUOO0d1Us\",\"sha256\":\"3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b\",\"durationMs\":3297},\"actualSha256\":\"3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b\",\"pcm\":{\"sampleRate\":24000,\"channels\":1,\"bitsPerSample\":16,\"blockAlign\":2,\"byteRate\":48000,\"dataOffset\":44,\"dataLength\":158268,\"durationMs\":3297}}"
+    },
+    {
+      "elapsedMs": 1626,
+      "kind": "phase",
+      "value": "unpaused_long_recording"
+    },
+    {
+      "elapsedMs": 1650,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":960,\"acceptedBytes\":960,\"offsetBytes\":0,\"totalBytes\":158268,\"elapsedMs\":1,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1650,
+      "kind": "started",
+      "value": "collection"
+    },
+    {
+      "elapsedMs": 1650,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 1651,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":960,\"totalBytes\":158268,\"elapsedMs\":1,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1795,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":8640,\"totalBytes\":158268,\"elapsedMs\":144,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 2037,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":16320,\"totalBytes\":158268,\"elapsedMs\":242,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 2154,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":24000,\"totalBytes\":158268,\"elapsedMs\":116,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 2376,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":31680,\"totalBytes\":158268,\"elapsedMs\":222,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 2503,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":39360,\"totalBytes\":158268,\"elapsedMs\":126,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 2742,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":47040,\"totalBytes\":158268,\"elapsedMs\":238,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 2892,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":54720,\"totalBytes\":158268,\"elapsedMs\":148,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3128,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":62400,\"totalBytes\":158268,\"elapsedMs\":235,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3246,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":70080,\"totalBytes\":158268,\"elapsedMs\":118,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3477,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":77760,\"totalBytes\":158268,\"elapsedMs\":230,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3604,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":85440,\"totalBytes\":158268,\"elapsedMs\":127,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3833,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":93120,\"totalBytes\":158268,\"elapsedMs\":228,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3962,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":100800,\"totalBytes\":158268,\"elapsedMs\":129,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 4203,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":108480,\"totalBytes\":158268,\"elapsedMs\":240,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 4327,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":116160,\"totalBytes\":158268,\"elapsedMs\":123,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 4551,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":123840,\"totalBytes\":158268,\"elapsedMs\":223,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 4691,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":131520,\"totalBytes\":158268,\"elapsedMs\":139,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 4826,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":139200,\"totalBytes\":158268,\"elapsedMs\":134,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 5069,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":146880,\"totalBytes\":158268,\"elapsedMs\":243,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 5227,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":3708,\"acceptedBytes\":3708,\"offsetBytes\":154560,\"totalBytes\":158268,\"elapsedMs\":157,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 5227,
+      "kind": "transport",
+      "value": "{\"kind\":\"drain_begin\",\"target\":\"collection\",\"requestedBytes\":0,\"acceptedBytes\":0,\"offsetBytes\":158268,\"totalBytes\":158268,\"elapsedMs\":3585,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 5348,
+      "kind": "transport",
+      "value": "{\"kind\":\"drain_end\",\"target\":\"collection\",\"requestedBytes\":0,\"acceptedBytes\":0,\"offsetBytes\":158268,\"totalBytes\":158268,\"elapsedMs\":3706,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 5349,
+      "kind": "status",
+      "value": "Recording finished"
+    }
+  ]
+}

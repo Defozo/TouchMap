@@ -1,0 +1,441 @@
+Result:dump normal stack success.
+Reason:success
+Timestamp:2026-10-04 06:34:03.477
+Pid:2591
+Uid:20010040
+Process name:org.touchmap.app
+Tid:2591, Name:rg.touchmap.app
+state=S, utime=581, stime=229, priority=10, nice=-10, clk=100
+#00 pc 00000000000ad9bf /system/lib/ld-musl-x86_64.so.1(epoll_wait+31)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 000000000001e80e /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EpollIoWaiter::WaitFor(OHOS::AppExecFwk::UniqueLockBase&, long, bool)+318)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#02 pc 0000000000026e62 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueue::WaitUntilLocked(std::__h::chrono::time_point<std::__h::chrono::steady_clock, std::__h::chrono::duration<long long, std::__h::ratio<1l, 1000000000l>>> const&, OHOS::AppExecFwk::UniqueLockBase&, bool)+146)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#03 pc 000000000002a3b8 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueueBase::GetEvent()+344)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#04 pc 000000000003658b /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::Run()+1019)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#05 pc 0000000000039f5c /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventRunner::Run()+428)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#06 pc 0000000000135add /system/lib64/platformsdk/libappkit_native.z.so(OHOS::AppExecFwk::MainThread::Start()+369)(a7932a964046b7c70e6c091301eb8439)
+#07 pc 0000000000007218 /system/lib64/appspawn/appspawn/libappspawn_ace.z.so(RunChildProcessor(AppSpawnContent*, AppSpawnClient*)+952)(02ff1a6e28e3bc184325f65244450cb2)
+#08 pc 000000000000e606 /system/bin/appspawn(AppSpawnChild+598)(ca4b53ebc781eac2e0243ede8d4384a0)
+#09 pc 0000000000018546 /system/bin/appspawn(ProcessSpawnReqMsg+3494)(ca4b53ebc781eac2e0243ede8d4384a0)
+#10 pc 0000000000016456 /system/bin/appspawn(OnReceiveRequest+662)(ca4b53ebc781eac2e0243ede8d4384a0)
+#11 pc 0000000000018601 /system/lib64/chipset-sdk-sp/libbegetutil.z.so(HandleRecvMsg_+241)(3c2d311dbe6d37cd60f6f1fa45f60533)
+#12 pc 00000000000180e8 /system/lib64/chipset-sdk-sp/libbegetutil.z.so(HandleStreamEvent_+136)(3c2d311dbe6d37cd60f6f1fa45f60533)
+#13 pc 00000000000157dd /system/lib64/chipset-sdk-sp/libbegetutil.z.so(ProcessEvent+77)(3c2d311dbe6d37cd60f6f1fa45f60533)
+#14 pc 0000000000015330 /system/lib64/chipset-sdk-sp/libbegetutil.z.so(RunLoop_+400)(3c2d311dbe6d37cd60f6f1fa45f60533)
+#15 pc 000000000001416b /system/bin/appspawn(AppSpawnRun+379)(ca4b53ebc781eac2e0243ede8d4384a0)
+#16 pc 0000000000011843 /system/bin/appspawn(main+1283)(ca4b53ebc781eac2e0243ede8d4384a0)
+#17 pc 0000000000089177 /system/lib/ld-musl-x86_64.so.1(libc_start_main_stage2+71)(67dded15738a818b53a7d744b7aa0c28)
+#18 pc 000000000000e307 /system/bin/appspawn(_start_c+71)(ca4b53ebc781eac2e0243ede8d4384a0)
+#19 pc 000000000000e2b5 /system/bin/appspawn(ca4b53ebc781eac2e0243ede8d4384a0)
+Tid:2728, Name:OS_IPC_0_2728
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000d0406 /system/lib/ld-musl-x86_64.so.1(ioctl+246)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 00000000000100a7 /system/lib64/platformsdk/libipc_common.z.so(OHOS::BinderConnector::WriteBinder(unsigned long, void*)+55)(101a402dc2b8fcb82c8222d3bd984a8b)
+#02 pc 000000000006473f /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::TransactWithDriver(bool)+255)(559fa27fe7a3a9b076b28265de71aec4)
+#03 pc 0000000000064afa /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::StartWorkLoop()+122)(559fa27fe7a3a9b076b28265de71aec4)
+#04 pc 0000000000066955 /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::JoinThread(bool)+53)(559fa27fe7a3a9b076b28265de71aec4)
+#05 pc 000000000005c9be /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::JoinThread(int, int)+158)(559fa27fe7a3a9b076b28265de71aec4)
+#06 pc 000000000005ce01 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::ThreadHandler(void*)+977)(559fa27fe7a3a9b076b28265de71aec4)
+#07 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#08 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2729, Name:OS_IPC_1_2729
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000d0406 /system/lib/ld-musl-x86_64.so.1(ioctl+246)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 00000000000100a7 /system/lib64/platformsdk/libipc_common.z.so(OHOS::BinderConnector::WriteBinder(unsigned long, void*)+55)(101a402dc2b8fcb82c8222d3bd984a8b)
+#02 pc 000000000006473f /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::TransactWithDriver(bool)+255)(559fa27fe7a3a9b076b28265de71aec4)
+#03 pc 0000000000064afa /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::StartWorkLoop()+122)(559fa27fe7a3a9b076b28265de71aec4)
+#04 pc 0000000000066955 /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::JoinThread(bool)+53)(559fa27fe7a3a9b076b28265de71aec4)
+#05 pc 000000000005c960 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::JoinThread(int, int)+64)(559fa27fe7a3a9b076b28265de71aec4)
+#06 pc 000000000005ce01 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::ThreadHandler(void*)+977)(559fa27fe7a3a9b076b28265de71aec4)
+#07 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#08 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2730, Name:OS_DfxWatchdog
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 000000000001b1b6 /system/lib64/chipset-sdk-sp/libhicollie.z.so(std::__h::cv_status std::__h::condition_variable::wait_for<long long, std::__h::ratio<1l, 1000l>>(std::__h::unique_lock<std::__h::mutex>&, std::__h::chrono::duration<long long, std::__h::ratio<1l, 1000l>> const&)+262)(d6ffdf297dc2e957d152d8d05d7ec619)
+#03 pc 000000000001af88 /system/lib64/chipset-sdk-sp/libhicollie.z.so(OHOS::HiviewDFX::WatchdogInner::Start()+792)(d6ffdf297dc2e957d152d8d05d7ec619)
+#04 pc 0000000000025594 /system/lib64/chipset-sdk-sp/libhicollie.z.so(void* std::__h::__thread_proxy[abi:v15004]<std::__h::tuple<std::__h::unique_ptr<std::__h::__thread_struct, std::__h::default_delete<std::__h::__thread_struct>>, bool (OHOS::HiviewDFX::WatchdogInner::*)(), OHOS::HiviewDFX::WatchdogInner*>>(void*)+68)(d6ffdf297dc2e957d152d8d05d7ec619)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2732, Name:OS_FFRT_5_0
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 00000000000a1935 /system/lib64/ndk/libffrt.so(ffrt::SExecuteUnit::WorkerIdleAction(ffrt::CPUWorker*)+661)(f53f606d5010fffd03750551ee6140a4)
+#04 pc 00000000000910ea /system/lib64/ndk/libffrt.so(f53f606d5010fffd03750551ee6140a4)
+#05 pc 000000000008b4f9 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WorkerLooper(ffrt::CPUWorker*)+361)(f53f606d5010fffd03750551ee6140a4)
+#06 pc 000000000008b1b2 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::Dispatch(ffrt::CPUWorker*)+146)(f53f606d5010fffd03750551ee6140a4)
+#07 pc 000000000008af48 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WrapDispatch(void*)+56)(f53f606d5010fffd03750551ee6140a4)
+#08 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#09 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2735, Name:OS_FFRT_2_0
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 00000000000a1935 /system/lib64/ndk/libffrt.so(ffrt::SExecuteUnit::WorkerIdleAction(ffrt::CPUWorker*)+661)(f53f606d5010fffd03750551ee6140a4)
+#04 pc 00000000000910ea /system/lib64/ndk/libffrt.so(f53f606d5010fffd03750551ee6140a4)
+#05 pc 000000000008b4f9 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WorkerLooper(ffrt::CPUWorker*)+361)(f53f606d5010fffd03750551ee6140a4)
+#06 pc 000000000008b1b2 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::Dispatch(ffrt::CPUWorker*)+146)(f53f606d5010fffd03750551ee6140a4)
+#07 pc 000000000008af48 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WrapDispatch(void*)+56)(f53f606d5010fffd03750551ee6140a4)
+#08 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#09 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2736, Name:OS_GC_Thread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000000ae8462 /system/lib64/platformsdk/libark_jsruntime.so(panda::ecmascript::ConditionVariable::Wait(panda::ecmascript::Mutex*)+18)(28a4eb4231151f86d2950da0201e75ed)
+#03 pc 00000000009f2695 /system/lib64/platformsdk/libark_jsruntime.so(panda::ecmascript::DaemonThread::PopTask()+85)(28a4eb4231151f86d2950da0201e75ed)
+#04 pc 00000000009f25f3 /system/lib64/platformsdk/libark_jsruntime.so(panda::ecmascript::DaemonThread::Run()+131)(28a4eb4231151f86d2950da0201e75ed)
+#05 pc 00000000009f2bdb /system/lib64/platformsdk/libark_jsruntime.so(void* std::__h::__thread_proxy[abi:v15004]<std::__h::tuple<std::__h::unique_ptr<std::__h::__thread_struct, std::__h::default_delete<std::__h::__thread_struct>>, panda::ecmascript::DaemonThread::StartRunning()::$_0>>(void*)+59)(28a4eb4231151f86d2950da0201e75ed)
+#06 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#07 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2737, Name:OS_GC_Thread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000000a4ea4a /system/lib64/platformsdk/libark_jsruntime.so(common::TaskQueue::PopTask()+106)(28a4eb4231151f86d2950da0201e75ed)
+#04 pc 0000000000a4e4a5 /system/lib64/platformsdk/libark_jsruntime.so(common::Runner::Run(unsigned int)+133)(28a4eb4231151f86d2950da0201e75ed)
+#05 pc 0000000000a4e5c0 /system/lib64/platformsdk/libark_jsruntime.so(28a4eb4231151f86d2950da0201e75ed)
+#06 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#07 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2738, Name:OS_GC_Thread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000000a4ea4a /system/lib64/platformsdk/libark_jsruntime.so(common::TaskQueue::PopTask()+106)(28a4eb4231151f86d2950da0201e75ed)
+#04 pc 0000000000a4e4a5 /system/lib64/platformsdk/libark_jsruntime.so(common::Runner::Run(unsigned int)+133)(28a4eb4231151f86d2950da0201e75ed)
+#05 pc 0000000000a4e5c0 /system/lib64/platformsdk/libark_jsruntime.so(28a4eb4231151f86d2950da0201e75ed)
+#06 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#07 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2739, Name:OS_GC_Thread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000000a4ea4a /system/lib64/platformsdk/libark_jsruntime.so(common::TaskQueue::PopTask()+106)(28a4eb4231151f86d2950da0201e75ed)
+#04 pc 0000000000a4e4a5 /system/lib64/platformsdk/libark_jsruntime.so(common::Runner::Run(unsigned int)+133)(28a4eb4231151f86d2950da0201e75ed)
+#05 pc 0000000000a4e5c0 /system/lib64/platformsdk/libark_jsruntime.so(28a4eb4231151f86d2950da0201e75ed)
+#06 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#07 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2740, Name:OS_FFRT_3_0
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 00000000000a1935 /system/lib64/ndk/libffrt.so(ffrt::SExecuteUnit::WorkerIdleAction(ffrt::CPUWorker*)+661)(f53f606d5010fffd03750551ee6140a4)
+#04 pc 00000000000910ea /system/lib64/ndk/libffrt.so(f53f606d5010fffd03750551ee6140a4)
+#05 pc 000000000008b4f9 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WorkerLooper(ffrt::CPUWorker*)+361)(f53f606d5010fffd03750551ee6140a4)
+#06 pc 000000000008b1b2 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::Dispatch(ffrt::CPUWorker*)+146)(f53f606d5010fffd03750551ee6140a4)
+#07 pc 000000000008af48 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WrapDispatch(void*)+56)(f53f606d5010fffd03750551ee6140a4)
+#08 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#09 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2741, Name:OS_hdcRegister
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000ad9bf /system/lib/ld-musl-x86_64.so.1(epoll_wait+31)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 00000000000059c5 /system/lib64/platformsdk/libhdc_register.z.so(Hdc::HdcJdwpSimulator::ReadFromJdwp()+373)(8e8e37d31e78944ad75dcb6758b71afe)
+#02 pc 0000000000005f17 /system/lib64/platformsdk/libhdc_register.z.so(Hdc::HdcJdwpSimulator::Connect()+87)(8e8e37d31e78944ad75dcb6758b71afe)
+#03 pc 00000000000048fc /system/lib64/platformsdk/libhdc_register.z.so(Hdc::HdcConnectRun(void*)+572)(8e8e37d31e78944ad75dcb6758b71afe)
+#04 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#05 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2743, Name:OS_TaskWorker
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000ad94c /system/lib/ld-musl-x86_64.so.1(epoll_pwait+28)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 000000000002f82a /system/lib64/platformsdk/libuv.so(uv__io_poll+842)(2acc10bf8b9de1495e3a80de60621c6e)
+#02 pc 000000000001be68 /system/lib64/platformsdk/libuv.so(uv_run+760)(2acc10bf8b9de1495e3a80de60621c6e)
+#03 pc 0000000000057f48 /system/lib64/module/libtaskpool.z.so(Commonlibrary::Concurrent::TaskPoolModule::Worker::ExecuteInThread(void const*) (.cfi)+728)(d655b5971befa0a77d0ab9979e2caf3f)
+#04 pc 00000000000580a8 /system/lib64/module/libtaskpool.z.so(std::__h::__function::__func<void (*)(void const*), std::__h::allocator<void (*)(void const*)>, void (void*)>::operator()(void*&&)+40)(d655b5971befa0a77d0ab9979e2caf3f)
+#05 pc 00000000000521d7 /system/lib64/module/libtaskpool.z.so(Commonlibrary::Concurrent::TaskPoolModule::TaskRunner::TaskInnerRunner::Run()+55)(d655b5971befa0a77d0ab9979e2caf3f)
+#06 pc 00000000000574ae /system/lib64/module/libtaskpool.z.so(Commonlibrary::Concurrent::TaskPoolModule::Thread::Start()::$_1::__invoke(void*) (.cfi)+110)(d655b5971befa0a77d0ab9979e2caf3f)
+#07 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#08 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2744, Name:OS_TaskManager
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000ad94c /system/lib/ld-musl-x86_64.so.1(epoll_pwait+28)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 000000000002f82a /system/lib64/platformsdk/libuv.so(uv__io_poll+842)(2acc10bf8b9de1495e3a80de60621c6e)
+#02 pc 000000000001be68 /system/lib64/platformsdk/libuv.so(uv_run+760)(2acc10bf8b9de1495e3a80de60621c6e)
+#03 pc 0000000000043cca /system/lib64/module/libtaskpool.z.so(Commonlibrary::Concurrent::TaskPoolModule::TaskManager::RunTaskManager()+330)(d655b5971befa0a77d0ab9979e2caf3f)
+#04 pc 000000000004644b /system/lib64/module/libtaskpool.z.so(d655b5971befa0a77d0ab9979e2caf3f)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2745, Name:OS_FFRT_3_1
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000a17f6 /system/lib64/ndk/libffrt.so(ffrt::SExecuteUnit::WorkerIdleAction(ffrt::CPUWorker*)+342)(f53f606d5010fffd03750551ee6140a4)
+#03 pc 00000000000910ea /system/lib64/ndk/libffrt.so(f53f606d5010fffd03750551ee6140a4)
+#04 pc 000000000008b4f9 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WorkerLooper(ffrt::CPUWorker*)+361)(f53f606d5010fffd03750551ee6140a4)
+#05 pc 000000000008b1b2 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::Dispatch(ffrt::CPUWorker*)+146)(f53f606d5010fffd03750551ee6140a4)
+#06 pc 000000000008af48 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WrapDispatch(void*)+56)(f53f606d5010fffd03750551ee6140a4)
+#07 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#08 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2746, Name:OS_FFRT_Delay
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000ad9bf /system/lib/ld-musl-x86_64.so.1(epoll_wait+31)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 00000000000cbc5c /system/lib64/ndk/libffrt.so(void* std::__h::__thread_proxy[abi:v15004]<std::__h::tuple<std::__h::unique_ptr<std::__h::__thread_struct, std::__h::default_delete<std::__h::__thread_struct>>, ffrt::DelayedWorker::ThreadInit()::$_0>>(void*)+908)(f53f606d5010fffd03750551ee6140a4)
+#02 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#03 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2747, Name:OS_FFRT_0_0
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 00000000000a1935 /system/lib64/ndk/libffrt.so(ffrt::SExecuteUnit::WorkerIdleAction(ffrt::CPUWorker*)+661)(f53f606d5010fffd03750551ee6140a4)
+#04 pc 00000000000910ea /system/lib64/ndk/libffrt.so(f53f606d5010fffd03750551ee6140a4)
+#05 pc 000000000008b4f9 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WorkerLooper(ffrt::CPUWorker*)+361)(f53f606d5010fffd03750551ee6140a4)
+#06 pc 000000000008b1b2 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::Dispatch(ffrt::CPUWorker*)+146)(f53f606d5010fffd03750551ee6140a4)
+#07 pc 000000000008af48 /system/lib64/ndk/libffrt.so(ffrt::CPUWorker::WrapDispatch(void*)+56)(f53f606d5010fffd03750551ee6140a4)
+#08 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#09 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2751, Name:OS_mmi_EventHdr
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 000000000003f501 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#03 pc 000000000003f32e /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::NoneIoWaiter::WaitFor(OHOS::AppExecFwk::UniqueLockBase&, long, bool)+222)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#04 pc 0000000000026e62 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueue::WaitUntilLocked(std::__h::chrono::time_point<std::__h::chrono::steady_clock, std::__h::chrono::duration<long long, std::__h::ratio<1l, 1000000000l>>> const&, OHOS::AppExecFwk::UniqueLockBase&, bool)+146)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#05 pc 000000000002a3b8 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueueBase::GetEvent()+344)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#06 pc 000000000003658b /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::Run()+1019)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#07 pc 0000000000037fba /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::ThreadMain(std::__h::weak_ptr<OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl> const&) (.cfi)+586)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#08 pc 000000000003827f /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#09 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#10 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2753, Name:OS_IPC_2_2753
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000d0406 /system/lib/ld-musl-x86_64.so.1(ioctl+246)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 00000000000100a7 /system/lib64/platformsdk/libipc_common.z.so(OHOS::BinderConnector::WriteBinder(unsigned long, void*)+55)(101a402dc2b8fcb82c8222d3bd984a8b)
+#02 pc 000000000006473f /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::TransactWithDriver(bool)+255)(559fa27fe7a3a9b076b28265de71aec4)
+#03 pc 0000000000064afa /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::StartWorkLoop()+122)(559fa27fe7a3a9b076b28265de71aec4)
+#04 pc 0000000000066955 /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::JoinThread(bool)+53)(559fa27fe7a3a9b076b28265de71aec4)
+#05 pc 000000000005c960 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::JoinThread(int, int)+64)(559fa27fe7a3a9b076b28265de71aec4)
+#06 pc 000000000005ce01 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::ThreadHandler(void*)+977)(559fa27fe7a3a9b076b28265de71aec4)
+#07 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#08 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2754, Name:ace.bg.1
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2755, Name:ace.bg.2
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2756, Name:ace.bg.3
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2757, Name:ace.bg.4
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2758, Name:ace.bg.5
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2759, Name:ace.bg.6
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2760, Name:ace.bg.7
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2761, Name:ace.bg.8
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000001af26f4 /system/lib64/platformsdk/libace_compatible.z.so(OHOS::Ace::BackgroundTaskExecutor::ThreadLoop(unsigned int)+540)(b22ef9cb58b73ba7a93fab54f6b36d73)
+#04 pc 0000000001af2a5c /system/lib64/platformsdk/libace_compatible.z.so(b22ef9cb58b73ba7a93fab54f6b36d73)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2763, Name:RSRenderThread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000ad9bf /system/lib/ld-musl-x86_64.so.1(epoll_wait+31)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 000000000001e80e /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EpollIoWaiter::WaitFor(OHOS::AppExecFwk::UniqueLockBase&, long, bool)+318)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#02 pc 0000000000026e62 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueue::WaitUntilLocked(std::__h::chrono::time_point<std::__h::chrono::steady_clock, std::__h::chrono::duration<long long, std::__h::ratio<1l, 1000000000l>>> const&, OHOS::AppExecFwk::UniqueLockBase&, bool)+146)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#03 pc 000000000002a3b8 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueueBase::GetEvent()+344)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#04 pc 000000000003658b /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::Run()+1019)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#05 pc 0000000000039f5c /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventRunner::Run()+428)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#06 pc 00000000001d83c2 /system/lib64/platformsdk/librender_service_client.z.so(OHOS::Rosen::RSRenderThread::RenderLoop()+1618)(693e563f13ca5de69d733c734b18d695)
+#07 pc 00000000001dcbdb /system/lib64/platformsdk/librender_service_client.z.so(void* std::__h::__thread_proxy[abi:v15004]<std::__h::tuple<std::__h::unique_ptr<std::__h::__thread_struct, std::__h::default_delete<std::__h::__thread_struct>>, OHOS::Rosen::RSRenderThread::Start()::$_6>>(void*)+59)(693e563f13ca5de69d733c734b18d695)
+#08 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#09 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2764, Name:llvmpipe-0
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2765, Name:llvmpipe-1
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2766, Name:llvmpipe-2
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2767, Name:llvmpipe-3
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2768, Name:llvmpipe-4
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2769, Name:llvmpipe-5
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2770, Name:RSRenderThread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2771, Name:RSRenderThread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2772, Name:RSRenderThread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2773, Name:RSRenderThread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2774, Name:RSRenderThread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2775, Name:RSRenderThread
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 0000000001e3dd3e /vendor/lib64/chipsetsdk/libgallium_dri.so(cnd_wait+30)(6cbd73d86f9a3655ed66c7adda15fbf5714fdf36)
+Tid:2778, Name:OS_Recreate
+state=S, utime=581, stime=229, priority=10, nice=-10, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000000041e8a /system/lib64/platformsdk/libaudio_renderer.z.so(OHOS::AudioStandard::AudioTaskLoop::Loop()+106)(f7a40ea3b0d48960bd3e97efb82eadd4)
+#04 pc 0000000000041db5 /system/lib64/platformsdk/libaudio_renderer.z.so(f7a40ea3b0d48960bd3e97efb82eadd4)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2780, Name:OS_AudioStateCB
+state=S, utime=581, stime=229, priority=10, nice=-10, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 000000000003f501 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#03 pc 000000000003f32e /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::NoneIoWaiter::WaitFor(OHOS::AppExecFwk::UniqueLockBase&, long, bool)+222)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#04 pc 0000000000026e62 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueue::WaitUntilLocked(std::__h::chrono::time_point<std::__h::chrono::steady_clock, std::__h::chrono::duration<long long, std::__h::ratio<1l, 1000000000l>>> const&, OHOS::AppExecFwk::UniqueLockBase&, bool)+146)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#05 pc 000000000002a3b8 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueueBase::GetEvent()+344)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#06 pc 000000000003658b /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::Run()+1019)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#07 pc 0000000000037fba /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::ThreadMain(std::__h::weak_ptr<OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl> const&) (.cfi)+586)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#08 pc 000000000003827f /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#09 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#10 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2781, Name:OS_Recreate
+state=S, utime=581, stime=229, priority=10, nice=-10, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 00000000000c8e01 /system/lib64/chipset-sdk-sp/libc++.so(std::__h::condition_variable::wait(std::__h::unique_lock<std::__h::mutex>&)+17)(4915d8b5e183869a5c32a7cc1babef9d7a96e839)
+#03 pc 0000000000041e8a /system/lib64/platformsdk/libaudio_renderer.z.so(OHOS::AudioStandard::AudioTaskLoop::Loop()+106)(f7a40ea3b0d48960bd3e97efb82eadd4)
+#04 pc 0000000000041db5 /system/lib64/platformsdk/libaudio_renderer.z.so(f7a40ea3b0d48960bd3e97efb82eadd4)
+#05 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#06 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2784, Name:OS_AudioStateCB
+state=S, utime=581, stime=229, priority=10, nice=-10, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 000000000003f501 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#03 pc 000000000003f32e /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::NoneIoWaiter::WaitFor(OHOS::AppExecFwk::UniqueLockBase&, long, bool)+222)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#04 pc 0000000000026e62 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueue::WaitUntilLocked(std::__h::chrono::time_point<std::__h::chrono::steady_clock, std::__h::chrono::duration<long long, std::__h::ratio<1l, 1000000000l>>> const&, OHOS::AppExecFwk::UniqueLockBase&, bool)+146)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#05 pc 000000000002a3b8 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueueBase::GetEvent()+344)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#06 pc 000000000003658b /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::Run()+1019)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#07 pc 0000000000037fba /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::ThreadMain(std::__h::weak_ptr<OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl> const&) (.cfi)+586)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#08 pc 000000000003827f /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#09 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#10 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2786, Name:OS_IPC_3_2786
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000d0406 /system/lib/ld-musl-x86_64.so.1(ioctl+246)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 00000000000100a7 /system/lib64/platformsdk/libipc_common.z.so(OHOS::BinderConnector::WriteBinder(unsigned long, void*)+55)(101a402dc2b8fcb82c8222d3bd984a8b)
+#02 pc 000000000006473f /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::TransactWithDriver(bool)+255)(559fa27fe7a3a9b076b28265de71aec4)
+#03 pc 0000000000064afa /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::StartWorkLoop()+122)(559fa27fe7a3a9b076b28265de71aec4)
+#04 pc 0000000000066955 /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::JoinThread(bool)+53)(559fa27fe7a3a9b076b28265de71aec4)
+#05 pc 000000000005c960 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::JoinThread(int, int)+64)(559fa27fe7a3a9b076b28265de71aec4)
+#06 pc 000000000005ce01 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::ThreadHandler(void*)+977)(559fa27fe7a3a9b076b28265de71aec4)
+#07 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#08 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2790, Name:Acquire Fence
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000001135fa /system/lib/ld-musl-x86_64.so.1(__timedwait_cp+170)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 0000000000114b83 /system/lib/ld-musl-x86_64.so.1(pthread_cond_timedwait+451)(67dded15738a818b53a7d744b7aa0c28)
+#02 pc 000000000003f501 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#03 pc 000000000003f32e /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::NoneIoWaiter::WaitFor(OHOS::AppExecFwk::UniqueLockBase&, long, bool)+222)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#04 pc 0000000000026e62 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueue::WaitUntilLocked(std::__h::chrono::time_point<std::__h::chrono::steady_clock, std::__h::chrono::duration<long long, std::__h::ratio<1l, 1000000000l>>> const&, OHOS::AppExecFwk::UniqueLockBase&, bool)+146)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#05 pc 000000000002a3b8 /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::EventQueueBase::GetEvent()+344)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#06 pc 000000000003658b /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::Run()+1019)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#07 pc 0000000000037fba /system/lib64/chipset-sdk-sp/libeventhandler.z.so(OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl::ThreadMain(std::__h::weak_ptr<OHOS::AppExecFwk::(anonymous namespace)::EventRunnerImpl> const&) (.cfi)+586)(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#08 pc 000000000003827f /system/lib64/chipset-sdk-sp/libeventhandler.z.so(d1edf5a6c18aa65d6e4837a5a5827ab7)
+#09 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#10 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+Tid:2956, Name:OS_IPC_4_2956
+state=S, utime=581, stime=229, priority=0, nice=-20, clk=100
+#00 pc 00000000000d0406 /system/lib/ld-musl-x86_64.so.1(ioctl+246)(67dded15738a818b53a7d744b7aa0c28)
+#01 pc 00000000000100a7 /system/lib64/platformsdk/libipc_common.z.so(OHOS::BinderConnector::WriteBinder(unsigned long, void*)+55)(101a402dc2b8fcb82c8222d3bd984a8b)
+#02 pc 000000000006473f /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::TransactWithDriver(bool)+255)(559fa27fe7a3a9b076b28265de71aec4)
+#03 pc 0000000000064afa /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::StartWorkLoop()+122)(559fa27fe7a3a9b076b28265de71aec4)
+#04 pc 0000000000066955 /system/lib64/platformsdk/libipc_single.z.so(OHOS::BinderInvoker::JoinThread(bool)+53)(559fa27fe7a3a9b076b28265de71aec4)
+#05 pc 000000000005c960 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::JoinThread(int, int)+64)(559fa27fe7a3a9b076b28265de71aec4)
+#06 pc 000000000005ce01 /system/lib64/platformsdk/libipc_single.z.so(OHOS::IPCWorkThread::ThreadHandler(void*)+977)(559fa27fe7a3a9b076b28265de71aec4)
+#07 pc 0000000000116b7d /system/lib/ld-musl-x86_64.so.1(start+173)(67dded15738a818b53a7d744b7aa0c28)
+#08 pc 00000000000897ba /system/lib/ld-musl-x86_64.so.1(67dded15738a818b53a7d744b7aa0c28)
+
+total cost:(590)ms

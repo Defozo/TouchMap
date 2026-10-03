@@ -1,0 +1,451 @@
+{
+  "display": {
+    "width": 360,
+    "height": 720
+  },
+  "tree": {
+    "children": [
+      {
+        "b": [
+          0,
+          0.05,
+          1,
+          0.95
+        ],
+        "c": [
+          0.5,
+          0.5
+        ],
+        "type": "root",
+        "bundle": "org.touchmap.app",
+        "focus": true,
+        "children": [
+          {
+            "b": [
+              0.061,
+              0.078,
+              0.144,
+              0.138
+            ],
+            "c": [
+              0.103,
+              0.108
+            ],
+            "type": "Text",
+            "text": "\u25c9"
+          },
+          {
+            "b": [
+              0.172,
+              0.082,
+              0.486,
+              0.119
+            ],
+            "c": [
+              0.329,
+              0.101
+            ],
+            "type": "Text",
+            "text": "TouchMap"
+          },
+          {
+            "b": [
+              0.172,
+              0.121,
+              0.625,
+              0.133
+            ],
+            "c": [
+              0.399,
+              0.127
+            ],
+            "type": "Text",
+            "text": "DIAGRAMS WITH SPOKEN LABELS"
+          },
+          {
+            "b": [
+              0.7,
+              0.075,
+              0.939,
+              0.139
+            ],
+            "c": [
+              0.819,
+              0.107
+            ],
+            "type": "Button",
+            "text": "Stop audio",
+            "id": "stop-audio",
+            "click": true
+          },
+          {
+            "b": [
+              0.056,
+              0.158,
+              0.353,
+              0.222
+            ],
+            "c": [
+              0.204,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Library",
+            "id": "nav-library",
+            "click": true
+          },
+          {
+            "b": [
+              0.353,
+              0.158,
+              0.65,
+              0.222
+            ],
+            "c": [
+              0.501,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Import",
+            "click": true
+          },
+          {
+            "b": [
+              0.647,
+              0.158,
+              0.944,
+              0.222
+            ],
+            "c": [
+              0.796,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Settings",
+            "id": "nav-settings",
+            "click": true
+          },
+          {
+            "b": [
+              0,
+              0.236,
+              1,
+              0.95
+            ],
+            "c": [
+              0.5,
+              0.593
+            ],
+            "id": "main-scroll",
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.061,
+                  0.253,
+                  0.939,
+                  0.35
+                ],
+                "c": [
+                  0.5,
+                  0.301
+                ],
+                "type": "Text",
+                "text": "Explore diagrams by touch and sound."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.361,
+                  0.939,
+                  0.414
+                ],
+                "c": [
+                  0.5,
+                  0.388
+                ],
+                "type": "Text",
+                "text": "Hear object names and follow connections. Choose touch, a list or scanning."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.447,
+                  0.372,
+                  0.465
+                ],
+                "c": [
+                  0.217,
+                  0.456
+                ],
+                "type": "Text",
+                "text": "WORKS OFFLINE"
+              },
+              {
+                "b": [
+                  0.4,
+                  0.447,
+                  0.769,
+                  0.465
+                ],
+                "c": [
+                  0.585,
+                  0.456
+                ],
+                "type": "Text",
+                "text": "PRIVATE PROGRESS"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.501,
+                  0.939,
+                  0.576
+                ],
+                "c": [
+                  0.5,
+                  0.539
+                ],
+                "type": "Button",
+                "text": "Import a material or source",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.601,
+                  0.939,
+                  0.674
+                ],
+                "c": [
+                  0.5,
+                  0.637
+                ],
+                "type": "TextInput",
+                "text": "water",
+                "id": "library-search",
+                "click": true,
+                "scroll": true,
+                "longClick": true
+              },
+              {
+                "b": [
+                  0.117,
+                  0.726,
+                  0.778,
+                  0.744
+                ],
+                "c": [
+                  0.447,
+                  0.735
+                ],
+                "type": "Text",
+                "text": "READY OFFLINE"
+              },
+              {
+                "b": [
+                  0.8,
+                  0.726,
+                  0.883,
+                  0.744
+                ],
+                "c": [
+                  0.842,
+                  0.735
+                ],
+                "type": "Text",
+                "text": "REV 1"
+              },
+              {
+                "b": [
+                  0.117,
+                  0.761,
+                  0.883,
+                  0.799
+                ],
+                "c": [
+                  0.5,
+                  0.78
+                ],
+                "type": "Text",
+                "text": "The water cycle"
+              },
+              {
+                "b": [
+                  0.117,
+                  0.815,
+                  0.883,
+                  0.89
+                ],
+                "c": [
+                  0.5,
+                  0.853
+                ],
+                "type": "Text",
+                "text": "Water moves through a cycle: collection, evaporation, condensation, precipitation, and back to collection. Explore four stages and the directed connections."
+              },
+              {
+                "b": [
+                  0.117,
+                  0.907,
+                  0.883,
+                  0.928
+                ],
+                "c": [
+                  0.5,
+                  0.917
+                ],
+                "type": "Text",
+                "text": "4 objects  \u00b7  4 connections  \u00b7  2 questions"
+              },
+              {
+                "b": [
+                  0.117,
+                  0.944,
+                  0.883,
+                  0.95
+                ],
+                "c": [
+                  0.5,
+                  0.947
+                ],
+                "type": "Button",
+                "text": "Open material",
+                "id": "open-material-water-cycle@1",
+                "click": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.95,
+          1,
+          1
+        ],
+        "c": [
+          0.5,
+          0.975
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.178,
+              0.95,
+              0.822,
+              1
+            ],
+            "c": [
+              0.5,
+              0.975
+            ],
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.269,
+                  0.967,
+                  0.303,
+                  0.983
+                ],
+                "c": [
+                  0.286,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.483,
+                  0.967,
+                  0.517,
+                  0.983
+                ],
+                "c": [
+                  0.5,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.7,
+                  0.967,
+                  0.733,
+                  0.983
+                ],
+                "c": [
+                  0.717,
+                  0.975
+                ],
+                "type": "Image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0,
+          1,
+          0.044
+        ],
+        "c": [
+          0.5,
+          0.022
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.883,
+              0.004,
+              0.9,
+              0.013
+            ],
+            "c": [
+              0.892,
+              0.008
+            ],
+            "type": "Text"
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.044,
+          1,
+          0.05
+        ],
+        "c": [
+          0.5,
+          0.047
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0,
+              0.044,
+              1,
+              0.05
+            ],
+            "c": [
+              0.5,
+              0.047
+            ],
+            "click": true
+          }
+        ]
+      }
+    ]
+  }
+}

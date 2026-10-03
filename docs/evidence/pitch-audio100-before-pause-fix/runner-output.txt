@@ -1,0 +1,19 @@
+force stop process successfully.
+your 131072x1 screen size is bogus. expect trouble
+TestFinished-ResultCode: 0
+TestFinished-ResultMsg: Audio benchmark 100/100, p95 20 ms
+user test finished.
+FileTransfer finish, Size:42438, File count = 1, time:11ms rate:3858.00kB/s
+{
+  "status": "complete",
+  "requested": 100,
+  "succeeded": 100,
+  "failed": 0,
+  "dwellMs": 250,
+  "onsetP95Ms": 20,
+  "scheduledLabelToPlayingP95Ms": 305,
+  "onsetTargetMs": 150,
+  "targetMet": true,
+  "scope": "Actual AudioRenderer first accepted PCM writes for local recordings on this runtime. Onset starts at playback scheduler decision. The renderer is prewarmed during normal Feedback initialization and reused. First use verifies file integrity; later uses may use the bounded immutable PCM cache. Initialization time is excluded. Total starts at Feedback.speak and includes configured dwell; this is not a measured physical finger or speaker acoustic latency."
+}
+your 131072x1 screen size is bogus. expect trouble

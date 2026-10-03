@@ -1,0 +1,20 @@
+{
+  "startedUtc": "2026-10-03T22:58:35.857079+00:00",
+  "purpose": "Only test17 phase timestamps added; production626HAP unchanged. Original18MiB per-byte fixture loop and original assertions retained.",
+  "productionHapSha256": "626b03b110f279d3af09cae23ac141226365d5d4d5035b0ee63037c997cbb5f0",
+  "testHapSha256": "135d8cf01dfd5a64fdeba87f893e9b832383d42b18b1052483421edbb3469e39",
+  "baselineSourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "c8dabf95d87bafa24b1339e5411c42317c01bda08991d00728ed177e0e240d66",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7345246,
+    "gitHeadAtBuild": "eb27a5cf33e6e261b37a7d3a5e3808441c8d0387",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "diagnosticTestSourceSha256": "4f337be430c647747a7a20d4871a6201c46477412b5e43123e6d95bf967af745",
+  "overriddenStagePath": "entry/src/ohosTest/ets/test/PackageExporter.test.ets",
+  "previousStageTestSourceSha256": "9a5c5768089ed5398640d38f644cb74c1271ac03a76ab9a729be8f4f2e091b2e",
+  "finishedUtc": "2026-10-03T22:58:53.338110+00:00",
+  "resultSummary": "\nOHOS_REPORT_SUM: 1\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\n\n\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\nOHOS_REPORT_STATUS: current=1\nOHOS_REPORT_STATUS: id=JS\nOHOS_REPORT_STATUS: numtests=1\nOHOS_REPORT_STATUS: stream=\nOHOS_REPORT_STATUS: test=native_export_handles_more_than_50MiB_expanded_with_portable_ratio\nOHOS_REPORT_STATUS_CODE: 1\n\n\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\nOHOS_REPORT_STATUS: current=1\nOHOS_REPORT_STATUS: id=JS\nOHOS_REPORT_STATUS: numtests=1\nOHOS_REPORT_STATUS: stream=\nOHOS_REPORT_STATUS: test=native_export_handles_more_than_50MiB_expanded_with_portable_ratio\nOHOS_REPORT_STATUS_CODE: 0\nOHOS_REPORT_STATUS: consuming=8591\n\n\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\nOHOS_REPORT_STATUS: suiteconsuming=8591\n\n\nOHOS_REPORT_RESULT: stream=Tests run: 1, Failure: 0, Error: 0, Pass: 1, Ignore: 0\nOHOS_REPORT_CODE: 0\nOHOS_REPORT_STATUS: taskconsuming=8591\n\nTestFinished-ResultCode: 0\nTestFinished-ResultMsg: your test finished!!!\nuser test finished.\n"
+}

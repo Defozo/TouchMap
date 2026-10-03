@@ -1,0 +1,319 @@
+{
+  "display": {
+    "width": 360,
+    "height": 720
+  },
+  "tree": {
+    "children": [
+      {
+        "b": [
+          0,
+          0.05,
+          1,
+          0.95
+        ],
+        "c": [
+          0.5,
+          0.5
+        ],
+        "type": "root",
+        "bundle": "org.touchmap.app",
+        "focus": true,
+        "children": [
+          {
+            "b": [
+              0.061,
+              0.083,
+              0.144,
+              0.143
+            ],
+            "c": [
+              0.103,
+              0.113
+            ],
+            "type": "Text",
+            "text": "\u25c9"
+          },
+          {
+            "b": [
+              0.172,
+              0.075,
+              0.486,
+              0.113
+            ],
+            "c": [
+              0.329,
+              0.094
+            ],
+            "type": "Text",
+            "text": "TouchMap"
+          },
+          {
+            "b": [
+              0.172,
+              0.114,
+              0.367,
+              0.151
+            ],
+            "c": [
+              0.269,
+              0.133
+            ],
+            "type": "Text",
+            "text": "UNDERSTAND THROUGH EXPLORATION"
+          },
+          {
+            "b": [
+              0.519,
+              0.079,
+              0.939,
+              0.149
+            ],
+            "c": [
+              0.729,
+              0.114
+            ],
+            "type": "Button",
+            "text": "Stop audio",
+            "id": "stop-audio",
+            "click": true
+          },
+          {
+            "b": [
+              0.056,
+              0.171,
+              0.5,
+              0.239
+            ],
+            "c": [
+              0.278,
+              0.205
+            ],
+            "type": "Button",
+            "text": "Library",
+            "id": "nav-library",
+            "click": true
+          },
+          {
+            "b": [
+              0.5,
+              0.171,
+              0.944,
+              0.239
+            ],
+            "c": [
+              0.722,
+              0.205
+            ],
+            "type": "Button",
+            "text": "Import",
+            "click": true
+          },
+          {
+            "b": [
+              0.056,
+              0.239,
+              0.5,
+              0.307
+            ],
+            "c": [
+              0.278,
+              0.273
+            ],
+            "type": "Button",
+            "text": "Settings",
+            "id": "nav-settings",
+            "click": true
+          },
+          {
+            "b": [
+              0,
+              0.321,
+              1,
+              0.95
+            ],
+            "c": [
+              0.5,
+              0.635
+            ],
+            "id": "main-scroll",
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.061,
+                  0.338,
+                  0.939,
+                  0.629
+                ],
+                "c": [
+                  0.5,
+                  0.483
+                ],
+                "type": "Text",
+                "text": "Make the connection."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.64,
+                  0.939,
+                  0.851
+                ],
+                "c": [
+                  0.5,
+                  0.746
+                ],
+                "type": "Text",
+                "text": "Explore the material, choose an answer, then explicitly submit it."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.876,
+                  0.939,
+                  0.95
+                ],
+                "c": [
+                  0.5,
+                  0.913
+                ],
+                "type": "Button",
+                "text": "Which stage follows evaporation?",
+                "click": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.95,
+          1,
+          1
+        ],
+        "c": [
+          0.5,
+          0.975
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.178,
+              0.95,
+              0.822,
+              1
+            ],
+            "c": [
+              0.5,
+              0.975
+            ],
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.269,
+                  0.967,
+                  0.303,
+                  0.983
+                ],
+                "c": [
+                  0.286,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.483,
+                  0.967,
+                  0.517,
+                  0.983
+                ],
+                "c": [
+                  0.5,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.7,
+                  0.967,
+                  0.733,
+                  0.983
+                ],
+                "c": [
+                  0.717,
+                  0.975
+                ],
+                "type": "Image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0,
+          1,
+          0.044
+        ],
+        "c": [
+          0.5,
+          0.022
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.883,
+              0.004,
+              0.9,
+              0.013
+            ],
+            "c": [
+              0.892,
+              0.008
+            ],
+            "type": "Text"
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.044,
+          1,
+          0.05
+        ],
+        "c": [
+          0.5,
+          0.047
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0,
+              0.044,
+              1,
+              0.05
+            ],
+            "c": [
+              0.5,
+              0.047
+            ],
+            "click": true
+          }
+        ]
+      }
+    ]
+  }
+}

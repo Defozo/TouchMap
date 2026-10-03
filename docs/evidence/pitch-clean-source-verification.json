@@ -1,0 +1,23 @@
+{
+  "verifiedUtc": "2026-10-03T23:10:10.436263+00:00",
+  "status": "passed",
+  "commit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+  "appFilesUnmodifiedFromCommittedCheckout": true,
+  "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+  "independentHapSha256": "b523156d6746db760ca34285744d27e08e8b3332f6ac7d0c4c7133e928e3ccc2",
+  "canonicalRootHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+  "tests": {
+    "hostPassed": 51,
+    "backendPassed": 93,
+    "nativePassed": 18,
+    "audioControlsPassed": 5
+  },
+  "ordinaryLibraryVisible": true,
+  "historicalCleanEvidenceRestoredExactly": true,
+  "earlierSupersededAttempts": [
+    "pitch-clean-0092b9c-attempt/attempt-context.json",
+    "pitch-clean-eb27a5c-attempt/attempt-context.json"
+  ],
+  "sourceNote": "The clean build source fingerprint records workingTreeDirty because verification changes evidence logs. git diff HEAD -- app is empty. Independent development signing can change HAP bytes.",
+  "audioNote": "SECOND emulator used a private clocked PulseAudio null sink. These checks do not verify a physical speaker, physical device or human operator."
+}

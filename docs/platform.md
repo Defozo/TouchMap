@@ -74,7 +74,7 @@ This measures the first actual AudioRenderer write accepting PCM samples, includ
 
 Audio measurement uses prepared, non-draft recordings. Per-onset traces separate integrity/cache work, waiting for serialized controls, renderer preparation/start and first write dispatch/resolution; buffer byte counts and PCM duration identify possible buffering delays. The write promise reports bytes accepted by the native stream, not first sound at the speaker. `native-audio-host.json` records host CPU count, load averages and compiler processes before and after the run. See `audio-api-semantics.json` for the inspected official API and implementation references.
 
-`python3 scripts/test-audio-controls.py --device 127.0.0.1:55556` runs inside WSL and checks actual Stop-before-dwell, replacement by the latest target, Pause/Resume through natural recording completion, and a four-byte final PCM fragment. It requires the same installed native test HAP and a working audio adapter. Tiny final transport writes are padded with frame-aligned digital silence because the pinned native writer rejects buffers of four bytes or fewer. Stored WAV bytes and their hashes are preserved.
+`python3 scripts/test-audio-controls.py --device 127.0.0.1:55556` runs inside WSL and checks actual Stop-before-dwell, replacement by the latest target, Pause/Resume through natural recording completion, a four-byte final PCM fragment, and replacement while a larger native write is still pending. It requires the same installed native test HAP and a working audio adapter. Tiny final transport writes are padded with frame-aligned digital silence because the pinned native writer rejects buffers of four bytes or fewer. Stored WAV bytes and their hashes are preserved.
 
 With matching production and test HAPs installed, additional development-target checks run inside WSL:
 
@@ -123,6 +123,22 @@ python3 scripts/configure-emulator-audio.py --device 127.0.0.1:55555 restore
 The original JSON and per-target applied configuration are saved in `docs/evidence/emulator-audio-*.json`. This is a repair to the development image, separate from TouchMap installation. Do not apply it to other hardware.
 
 For evidence of emitted audio, `scripts/record-emulator-audio.py --device 127.0.0.1:55555 --seconds 20 --output docs/evidence/primary-playback.wav` records only that QEMU process's PulseAudio output while you trigger a recording in the app. It never records a microphone or another application's output. The adjacent JSON reports waveform peak/RMS, capture start in UTC, elapsed wall time and capture scope; a nonzero first-write callback alone does not prove emitted sound.
+
+If the shared WSLg audio server stalls, use the optional [isolated emulator audio setup and restore procedure](EMULATOR_AUDIO.md). Its clocked null sink can also feed a Windows output without changing the emulator route. This optional helper was checked with Windows Python's `sounddevice==0.5.2`; it also needs `parec`, `pactl`, `timeout` and Python 3 in the selected WSL distribution. If these optional dependencies are missing, install them from Windows PowerShell:
+
+```powershell
+python -m pip install sounddevice==0.5.2
+wsl --distribution Ubuntu --exec sudo apt-get install pulseaudio-utils coreutils python3
+```
+
+Then, from Windows PowerShell:
+
+```powershell
+python scripts/play-emulator-audio.py --list-output-devices
+python scripts/play-emulator-audio.py --device 127.0.0.1:55555 --pulse-server unix:/mnt/wslg/runtime-dir/touchmap-pitch-audio/native --seconds 20 --report .local/windows-audio.json
+```
+
+The helper defaults to the current Windows output; add `--output-device INDEX` to choose an entry from the list, or `--distribution NAME` for another WSL distribution. It forwards only the selected QEMU sink-input monitor through a binary pipe, opens an output-only Windows stream and saves no audio file. Ctrl+C or the duration limit stops its own capture and playback. Control/read timeouts and a 200 ms queue limit prevent indefinite waiting and report dropped PCM, underflows and silence inserted for missing data. The JSON records PCM copied into Windows output callbacks, including its peak level; it does not confirm human hearing or acoustic latency. The relay is an optional presentation aid and adds buffering, so use the native test results for application timing.
 
 ## Primary references
 

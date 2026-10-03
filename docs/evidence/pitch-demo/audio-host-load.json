@@ -1,0 +1,46 @@
+{
+  "recordedUtc": "2026-10-03T21:26:29.2471222Z",
+  "totalCpuPercent": 97,
+  "busiestProcesses": [
+    {
+      "Name": "vmmemWSL",
+      "PercentProcessorTime": 1041
+    },
+    {
+      "Name": "node#199",
+      "PercentProcessorTime": 206
+    },
+    {
+      "Name": "qemu-system-x86_64-headless",
+      "PercentProcessorTime": 204
+    },
+    {
+      "Name": "node#198",
+      "PercentProcessorTime": 192
+    },
+    {
+      "Name": "WmiPrvSE",
+      "PercentProcessorTime": 106
+    },
+    {
+      "Name": "LogiPluginService",
+      "PercentProcessorTime": 99
+    },
+    {
+      "Name": "svchost#83",
+      "PercentProcessorTime": 99
+    },
+    {
+      "Name": "node#202",
+      "PercentProcessorTime": 95
+    },
+    {
+      "Name": "node#204",
+      "PercentProcessorTime": 64
+    },
+    {
+      "Name": "WmiPrvSE#2",
+      "PercentProcessorTime": 62
+    }
+  ]
+}

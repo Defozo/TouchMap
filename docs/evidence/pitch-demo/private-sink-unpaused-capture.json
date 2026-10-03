@@ -1,0 +1,11 @@
+{
+  "device": "127.0.0.1:55555",
+  "startedUtc": "2026-10-03T22:21:44.704393+00:00",
+  "wallSeconds": 18.00576625499525,
+  "seconds": 17.998526077097505,
+  "channels": 2,
+  "sampleRate": 44100,
+  "peakPcm16": 4371,
+  "rmsPcm16": 268.56255872210255,
+  "scope": "Host monitor of this emulator output stream only; not a microphone recording or physical acoustic latency measurement."
+}

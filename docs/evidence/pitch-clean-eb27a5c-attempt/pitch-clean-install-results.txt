@@ -1,0 +1,9 @@
+[Info]Target is connected, repeat operation
+Installing app from /tmp/touchmap-checkout-0WGuD1WA/app...
+[hdc] [Info]App install path:/tmp/touchmap-checkout-0WGuD1WA/dist/touchmap-signed.hap msg:install bundle successfully. 
+AppMod finish
+App installed.
+Launching app from /tmp/touchmap-checkout-0WGuD1WA/app...
+[hdc] start ability successfully.
+App launched.
+Bundle org.touchmap.app is running.

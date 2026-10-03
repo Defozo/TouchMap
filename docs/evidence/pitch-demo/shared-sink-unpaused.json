@@ -1,0 +1,154 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "name": "stop_before_dwell",
+      "passed": true,
+      "detail": "Observed 0 native onset callbacks after cancellation."
+    },
+    {
+      "name": "rapid_replacement_only_latest_target",
+      "passed": true,
+      "detail": "Native PCM targets: evaporation"
+    }
+  ],
+  "error": "Native audio control timed out.\n    at until entry (entry/src/ohosTest/ets/testrunner/AudioControls.ets:14:61)\n",
+  "scope": "Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics.",
+  "observations": [
+    {
+      "elapsedMs": 1,
+      "kind": "phase",
+      "value": "initialize"
+    },
+    {
+      "elapsedMs": 473,
+      "kind": "phase",
+      "value": "stop_before_dwell"
+    },
+    {
+      "elapsedMs": 1094,
+      "kind": "phase",
+      "value": "rapid_replacement"
+    },
+    {
+      "elapsedMs": 1445,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"evaporation\",\"requestedBytes\":960,\"acceptedBytes\":960,\"offsetBytes\":0,\"totalBytes\":51270,\"elapsedMs\":5,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1445,
+      "kind": "started",
+      "value": "evaporation"
+    },
+    {
+      "elapsedMs": 1446,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 1453,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"evaporation\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":960,\"totalBytes\":51270,\"elapsedMs\":7,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1575,
+      "kind": "source",
+      "value": "{\"key\":\"water-cycle@1\",\"revision\":1,\"asset\":{\"id\":\"audio-collection-description\",\"targetId\":\"collection\",\"kind\":\"description\",\"path\":\"audio/collection-description.wav\",\"textHash\":\"21569c05de6c2d2c7834c1eea6c78126807b6e7c279b4a3655d4c2e140938752\",\"language\":\"en\",\"provider\":\"ElevenLabs eleven_flash_v2_5\",\"voice\":\"hpp4J3VqNfWAUOO0d1Us\",\"sha256\":\"3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b\",\"durationMs\":3297},\"actualSha256\":\"3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b\",\"pcm\":{\"sampleRate\":24000,\"channels\":1,\"bitsPerSample\":16,\"blockAlign\":2,\"byteRate\":48000,\"dataOffset\":44,\"dataLength\":158268,\"durationMs\":3297}}"
+    },
+    {
+      "elapsedMs": 1575,
+      "kind": "phase",
+      "value": "unpaused_long_recording"
+    },
+    {
+      "elapsedMs": 1947,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"evaporation\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":8640,\"totalBytes\":51270,\"elapsedMs\":493,\"rendererState\":2,\"active\":false,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1998,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":960,\"acceptedBytes\":960,\"offsetBytes\":0,\"totalBytes\":158268,\"elapsedMs\":2,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 1998,
+      "kind": "started",
+      "value": "collection"
+    },
+    {
+      "elapsedMs": 1998,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 1999,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":960,\"totalBytes\":158268,\"elapsedMs\":1,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 2486,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":8640,\"totalBytes\":158268,\"elapsedMs\":486,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3072,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":16320,\"totalBytes\":158268,\"elapsedMs\":585,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 3697,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":24000,\"totalBytes\":158268,\"elapsedMs\":625,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 4314,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":31680,\"totalBytes\":158268,\"elapsedMs\":617,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 4917,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":39360,\"totalBytes\":158268,\"elapsedMs\":602,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 5528,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":47040,\"totalBytes\":158268,\"elapsedMs\":610,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 6125,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":54720,\"totalBytes\":158268,\"elapsedMs\":596,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 6753,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":62400,\"totalBytes\":158268,\"elapsedMs\":628,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 7353,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":70080,\"totalBytes\":158268,\"elapsedMs\":598,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 7973,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":77760,\"totalBytes\":158268,\"elapsedMs\":620,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 8586,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":85440,\"totalBytes\":158268,\"elapsedMs\":613,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 9177,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":93120,\"totalBytes\":158268,\"elapsedMs\":589,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    },
+    {
+      "elapsedMs": 9782,
+      "kind": "transport",
+      "value": "{\"kind\":\"write\",\"target\":\"collection\",\"requestedBytes\":7680,\"acceptedBytes\":7680,\"offsetBytes\":100800,\"totalBytes\":158268,\"elapsedMs\":605,\"rendererState\":2,\"active\":true,\"paused\":false}"
+    }
+  ]
+}

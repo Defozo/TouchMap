@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "startedUtc": "2026-10-03T23:06:50.645865+00:00",
+  "device": "127.0.0.1:55555",
+  "installedProductionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7346167,
+    "gitHeadAtBuild": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "checks": [
+    {
+      "name": "new_library_hero",
+      "passed": true,
+      "evidence": [
+        "01-library.json",
+        "02-library.jpeg"
+      ]
+    },
+    {
+      "name": "restart_keeps_saved_context",
+      "passed": true,
+      "evidence": [
+        "04-saved-context.json",
+        "05-saved-context.jpeg"
+      ]
+    },
+    {
+      "name": "unfinished_selection_and_count_preserved",
+      "passed": true,
+      "evidence": [
+        "06-resume.json",
+        "07-restored-answer.json",
+        "08-restored-answer.jpeg"
+      ],
+      "result": "Collection remains selected; one submitted attempt and explicitSubmit control remain."
+    },
+    {
+      "name": "reviewed_footer_visible",
+      "passed": true,
+      "evidence": [
+        "09-footer.json",
+        "10-footer.jpeg"
+      ]
+    }
+  ],
+  "scope": "Ordinary native UI after actual process restart, using existing saved lesson and unchanged answer history. No test-mode UI or new answer submission.",
+  "finishedUtc": "2026-10-03T23:07:43.729321+00:00",
+  "files": [
+    {
+      "path": "01-library.json",
+      "bytes": 8963,
+      "sha256": "f5c9d4002ec5933c5a69e41dfcef90702ecf76d3a0a15ac306b4fdc110738c9a"
+    },
+    {
+      "path": "02-library.jpeg",
+      "bytes": 39748,
+      "sha256": "dbf1d1d6f41f944e5cb88c693e425dd61a9626336c1118692ad74e4c92310c36"
+    },
+    {
+      "path": "03-water-search.json",
+      "bytes": 9772,
+      "sha256": "d7d0006080110ee7d284ee9976203f559b8f7635bf9edbd1a31d96f625f5e877"
+    },
+    {
+      "path": "04-saved-context.json",
+      "bytes": 7923,
+      "sha256": "ebd493e5803e785d320d658fe5f860328d4c6c3cc96b58926f5ca33a91635add"
+    },
+    {
+      "path": "05-saved-context.jpeg",
+      "bytes": 34422,
+      "sha256": "c7b4de6494a6ef4bce094c068ecae5d15b7f10de11c800fe276dde850f1997a1"
+    },
+    {
+      "path": "06-resume.json",
+      "bytes": 7906,
+      "sha256": "50c6079ac71d124e2b69b4473cf6e0d9ca5d8e21c301a04b9bc6d3015b2dcfc3"
+    },
+    {
+      "path": "07-restored-answer.json",
+      "bytes": 8528,
+      "sha256": "ad1abd6234f485ffbd4c230474d066542335a52e21e601d86c8fa08e7cbd7c3a"
+    },
+    {
+      "path": "08-restored-answer.jpeg",
+      "bytes": 25222,
+      "sha256": "bc7b3e6c45511d9605b9bf196180d56d1cd370d7f0286500008ea91e8233e3a4"
+    },
+    {
+      "path": "09-footer.json",
+      "bytes": 7985,
+      "sha256": "ceb59c1d2a03ba32db455314ed15df5f11d5da58311db00f4725055bae2eecd2"
+    },
+    {
+      "path": "10-footer.jpeg",
+      "bytes": 33841,
+      "sha256": "d7f00d1599034b8828540f4901c3a7e6dca5a4d1218c5fc87287fe4a22c327f7"
+    },
+    {
+      "path": "11-returned-library.json",
+      "bytes": 8963,
+      "sha256": "f5c9d4002ec5933c5a69e41dfcef90702ecf76d3a0a15ac306b4fdc110738c9a"
+    }
+  ]
+}

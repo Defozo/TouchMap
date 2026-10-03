@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "requested": 100,
+  "succeeded": 100,
+  "failed": 0,
+  "productionHapSha256": "d1ad20df4d310c6c707ff82e3458ddf20583e062ac18d4ad7506b4da886514f3",
+  "testHapSha256": "e0949d2275278318c72420990b2bf7b0eb2ef49b22e38d57342d7165f0f3778e",
+  "appSourceSha256": "e4ece7ceb4b8dc64910e4745d23805af544cf53604a9cf2ff65c41e1c6fc64b7",
+  "gitHeadAtBuild": "0092b9cc2c0f5accc5f754d74940ba1c06003230",
+  "onsetMs": {
+    "count": 100,
+    "median": 4.0,
+    "p95": 49,
+    "max": 148
+  },
+  "totalWithDwellMs": {
+    "count": 100,
+    "median": 264.0,
+    "p95": 318,
+    "max": 501
+  },
+  "targetMs": 150,
+  "targetMet": true,
+  "dwellMs": 250,
+  "phaseMilliseconds": {
+    "integrityMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 20,
+      "max": 123
+    },
+    "controlWaitMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 1,
+      "max": 18
+    },
+    "prepareMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 1,
+      "max": 20
+    },
+    "volumeMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 0,
+      "max": 2
+    },
+    "startMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 1,
+      "max": 36
+    },
+    "firstWriteDispatchMs": {
+      "count": 100,
+      "median": 1.0,
+      "p95": 47,
+      "max": 127
+    },
+    "firstWriteResolveMs": {
+      "count": 100,
+      "median": 3.0,
+      "p95": 18,
+      "max": 57
+    }
+  },
+  "allFirstWritesAccepted": true,
+  "bufferBytes": [
+    960
+  ],
+  "bufferDurationMs": [
+    20
+  ],
+  "hostLoad": {
+    "device": "127.0.0.1:55555",
+    "scope": "Linux build host snapshots before and after the native audio run. Load averages are not per-emulator CPU measurements.",
+    "before": {
+      "at": "2026-10-04T00:34:53.254723+02:00",
+      "logicalCpuCount": 32,
+      "loadAverage": [
+        4.6240234375,
+        7.63525390625,
+        8.45947265625
+      ],
+      "buildProcesses": {
+        "java": 0,
+        "hvigorw": 0,
+        "clang": 0,
+        "ninja": 0
+      }
+    },
+    "after": {
+      "at": "2026-10-04T00:35:31.216616+02:00",
+      "logicalCpuCount": 32,
+      "loadAverage": [
+        4.47802734375,
+        7.2763671875,
+        8.30859375
+      ],
+      "buildProcesses": {
+        "java": 0,
+        "hvigorw": 0,
+        "clang": 0,
+        "ninja": 0
+      }
+    }
+  },
+  "scope": "Actual AudioRenderer first accepted PCM writes for local recordings on this runtime. Onset starts at playback scheduler decision. The renderer is prewarmed during normal Feedback initialization and reused. First use verifies file integrity; later uses may use the bounded immutable PCM cache. Initialization time is excluded. Total starts at Feedback.speak and includes configured dwell; this is not a measured physical finger or speaker acoustic latency.",
+  "interpretation": "Fresh final-release measurement after batching subsequent PCM writes. The first write remains one native buffer. All observations, including slow samples, are retained. These results are separate from the historical 100-onset measurement and do not establish speaker acoustic latency.",
+  "audioEnvironment": "Separate PulseAudio16.1 clocked null sink touchmap_pcm, 44100Hz stereo; selected emulator actual PCM verified separately. See ../pitch-demo/audio-environment-investigation.json.",
+  "previousIncompleteAttempt": "../pitch-audio100-incomplete: five accepted samples, then native test stalled at scheduled index5 without its JS watchdog firing. App remained foreground with main thread waiting in the event loop. The run was stopped and retained; no samples were merged into this complete fresh retry.",
+  "windowsHostSnapshots": "windows-host-before.json belongs to the retained first attempt; windows-host-during.json and windows-host-after.json record the complete retry. Linux before/after snapshots are captured by the runner for the complete retry."
+}

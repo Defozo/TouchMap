@@ -1,0 +1,16 @@
+{
+  "status": "passed_with_copy_findings",
+  "productionHapSha256": "d1ad20df4d310c6c707ff82e3458ddf20583e062ac18d4ad7506b4da886514f3",
+  "appSourceSha256": "e4ece7ceb4b8dc64910e4745d23805af544cf53604a9cf2ff65c41e1c6fc64b7",
+  "verified": [
+    "New Library hero visible",
+    "Search water finds ready revision1",
+    "Process restart retains previous correct answer and unfinished ordered selection",
+    "Resume restores Collection and current order collection with explicitSubmit available"
+  ],
+  "copyFindings": [
+    "Footer slogan replaced in finalcopy commit",
+    "Singular submitted attempts grammar replaced in finalcopy commit"
+  ],
+  "learnerData": "Existing prepared material and saved progress retained; no new answer submitted."
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "Temporarily suspend only the dedicated secondary TouchMap emulator, retaining its memory and disk; no unrelated process changes.",
+  "startedUtc": "2026-10-03T23:47:57.075717+02:00",
+  "primary": "127.0.0.1:55555",
+  "secondary": "127.0.0.1:55556",
+  "verifiedForwardingAndSerialIdentity": true,
+  "secondaryStateWhileTesting": "R (running)",
+  "returnCode": 1,
+  "secondaryResumed": true,
+  "finishedUtc": "2026-10-03T23:48:17.40659+02:00",
+  "secondaryResumedStateReadback": "S (sleeping), verified after SIGCONT; not stopped",
+  "isolationVerification": "The immediate state readback after SIGSTOP was R; do not treat this run as confirmed stopped-emulator isolation."
+}

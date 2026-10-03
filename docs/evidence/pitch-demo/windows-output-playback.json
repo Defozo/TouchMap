@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "device": "127.0.0.1:55555",
+  "pulseServer": "unix:/mnt/wslg/runtime-dir/touchmap-pitch-audio/native",
+  "distribution": "Ubuntu",
+  "requestedSeconds": 30,
+  "startedUtc": "2026-10-03T22:36:23.271826+00:00",
+  "sampleRate": 44100,
+  "channels": 2,
+  "format": "s16le",
+  "sourcePcmBytesRead": 4804736,
+  "windowsCallbackPcmBytes": 4769856,
+  "windowsCallbackPcmPeak": 4112,
+  "windowsCallbackSilencePaddingBytes": 515088,
+  "queueDroppedPcmBytes": 0,
+  "outputUnderflows": 0,
+  "scope": "Selected QEMU sink-input output monitor only. PCM copied into Windows PortAudio output callbacks; no microphone, audio file, human listening confirmation or physical speaker latency measurement.",
+  "selection": {
+    "qemuPid": 187836,
+    "sinkInput": 0,
+    "sink": "touchmap_pcm",
+    "monitor": "touchmap_pcm.monitor"
+  },
+  "windowsOutput": {
+    "name": "Headphones (B10)",
+    "index": 9,
+    "hostApi": "MME"
+  },
+  "outputWallSeconds": 30.01500000001397,
+  "captureStopRequested": true,
+  "captureWrapperExitCode": 0,
+  "captureReaderEnded": true,
+  "windowsCallbackPcmSeconds": 27.04,
+  "nonzeroPcmSubmitted": true,
+  "finishedUtc": "2026-10-03T22:36:54.798303+00:00",
+  "verificationContext": {
+    "helperSourceSha256": "c534f3b4647c5f14307306d759938cb8344790e20857bdc8ed53e1bb52ba9574",
+    "windowsCallbackSilencePaddingSeconds": 2.92,
+    "nativeSuiteReportedBy": "demo_access",
+    "nativeSuiteStartedUtc": "2026-10-03T22:36:46.914+00:00",
+    "nativeSuiteFinishedUtc": "2026-10-03T22:36:59.636+00:00",
+    "nativeSuiteReportedResult": "5/5 passed",
+    "coverage": "The relay ended before the overlapping native suite finished. Nonzero Windows output callback PCM is verified; full-suite playback and an uncut final utterance are not verified.",
+    "paddingInterpretation": "The helper inserted digital silence when monitor PCM was unavailable to its callback. The reason for those gaps was not established.",
+    "postRunOwnedWindowsProcessRemaining": false,
+    "postRunOwnedLinuxTimeoutOrParecProcessesRemaining": 0,
+    "postRunProcessCheckMethod": "Read-only Windows process lookup for launched PID 108296 and Linux /proc checks for timeout/parec with the relay-specific client-name prefix."
+  }
+}

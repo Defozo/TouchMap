@@ -1,0 +1,47 @@
+{
+  "checkedAtUtc": "2026-10-03T23:07:18.999161+00:00",
+  "status": "passed",
+  "measuredCommit": "0092b9cc2c0f5accc5f754d74940ba1c06003230",
+  "finalAppCommit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+  "measuredHapSha256": "d1ad20df4d310c6c707ff82e3458ddf20583e062ac18d4ad7506b4da886514f3",
+  "measuredAppSourceSha256": "e4ece7ceb4b8dc64910e4745d23805af544cf53604a9cf2ff65c41e1c6fc64b7",
+  "finalHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+  "finalAppSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+  "appFilesCompared": 122,
+  "byteIdenticalAppFiles": 119,
+  "copyReplacements": {
+    "Built for curiosity. Your pace, your path.": "TouchMap · Offline diagram lessons",
+    "{0} submitted attempts. Hearing a label never completes a question.": "Submitted attempts: {0}."
+  },
+  "changedFiles": [
+    {
+      "path": "entry/src/main/ets/domain/EnglishStrings.ts",
+      "beforeSha256": "d17934dbbc4dcfe101056a3a4a889a3a6b65500f60c843a62c793465ea380efd",
+      "afterSha256": "9a2af5c18cb13a9f208b258728ef5f0e26a38e7d35fdac5c76a558a29387c66a",
+      "onlyDeclaredCopyReplacements": true
+    },
+    {
+      "path": "entry/src/main/resources/base/element/string.json",
+      "beforeSha256": "5f0832140df205c16a2405d5fbd708f2412b762af32c5cdd3e77e635e2ff001e",
+      "afterSha256": "aa6d746bce19cd2abe29420d8d51c8a7ee8a153c5aa65e20a4908605ca899828",
+      "onlyDeclaredCopyReplacements": true
+    },
+    {
+      "path": "entry/src/ohosTest/ets/test/PackageExporter.test.ets",
+      "beforeSha256": "9a5c5768089ed5398640d38f644cb74c1271ac03a76ab9a729be8f4f2e091b2e",
+      "afterSha256": "7fbcdca66dbd65043ac58ab0f14ede9ad262876075537b3321f6cb206cfd4817",
+      "testOnlyChange": "Replace the synchronous18MiB byte loop with a256-byte pattern,1MiB block copying and event-loop yields; retain all original export assertions, add independent expected SHA256 and phase timing logs. Production exporter is unchanged."
+    }
+  ],
+  "unchangedCriticalFiles": [
+    "entry/src/main/ets/domain/i18n.ts",
+    "entry/src/main/ets/domain/media.ts",
+    "entry/src/main/ets/platform/Feedback.ets",
+    "entry/src/main/ets/platform/PackageExporter.ets",
+    "entry/src/main/ets/platform/Repository.ets",
+    "entry/src/ohosTest/ets/testrunner/AudioBenchmark.ets",
+    "entry/src/ohosTest/ets/testrunner/AudioControls.ets"
+  ],
+  "measurementEvidence": "docs/evidence/pitch-audio100/summary.json",
+  "scope": "Every copied app input is compared against its measured fingerprint and both committed source revisions. Production changes are exactly two English copy values in the string mapping and resource table. One test fixture now generates the identical18MiB pattern without blocking the main thread. All production audio implementation, audio benchmark, exporter, storage, lesson and PCM inputs are byte-identical. This does not relabel the measured binary: the100-onset result remains attached to the earlier HAP. Final HAP native18/audio5/UI acceptance is recorded separately."
+}

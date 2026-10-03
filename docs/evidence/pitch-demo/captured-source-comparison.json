@@ -1,0 +1,34 @@
+{
+  "status": "matched",
+  "sourceSha256": "3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b",
+  "captureSha256": "048fd86d827a73154ca03eb8bdba6a35f69db4baec680354391045b3a34eaa2a",
+  "sourceSeconds": 3.29725,
+  "captureSeconds": 17.998526077097505,
+  "matchedCaptureStartSeconds": 4.688140589569161,
+  "matchedCaptureEndSeconds": 7.985396825396825,
+  "normalizedWaveformCorrelation": 0.997526769912338,
+  "segmentAlignment": [
+    {
+      "sourceStartSeconds": 0.3,
+      "capturedStartSeconds": 4.988140589569161,
+      "offsetFromExpectedMs": 0.0
+    },
+    {
+      "sourceStartSeconds": 1.0,
+      "capturedStartSeconds": 5.688140589569161,
+      "offsetFromExpectedMs": 0.0
+    },
+    {
+      "sourceStartSeconds": 1.7,
+      "capturedStartSeconds": 6.388140589569161,
+      "offsetFromExpectedMs": 0.0
+    },
+    {
+      "sourceStartSeconds": 2.4,
+      "capturedStartSeconds": 7.088140589569161,
+      "offsetFromExpectedMs": 0.0
+    }
+  ],
+  "method": "Linear resampling of original mono24kHz PCM to captured44100Hz channel mean, normalized full-recording correlation and four400ms interior segment alignments within100ms of predicted positions. No time stretching applied.",
+  "scope": "Comparison of the complete prepared source waveform with the selected emulator output monitor recording, not microphone or physical acoustic latency."
+}

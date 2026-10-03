@@ -2,41 +2,101 @@
   "backendAutomated": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/backend-pytest.xml"
+      "docs/evidence/pitch-clean-pytest.txt",
+      "docs/evidence/pitch-clean-checkout.json",
+      "docs/evidence/pitch-backend-pytest.xml",
+      "docs/evidence/pitch-host-verification.json",
+      "docs/evidence/demo-repair-integration.json"
     ],
-    "result": "93 tests, 0 failures, 0 errors; JUnit 7.791 s, including 26 presentation/demo release-packaging checks."
+    "result": "Final app-checkpoint 17b51cb fresh-clone backend suite: 93 passed in 9.62 s. Earlier local JUnit run: 93 tests, 0 failures/errors/skips, 49.624 s, with exact sources retained. After soundtrack-repair integration, all 26 release-packaging tests passed separately. Each run retains its own source and artifact scope."
   },
   "hostAutomated": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/native-audit-host-tests.txt",
-      "docs/evidence/native-audit-typecheck.txt"
+      "docs/evidence/pitch-clean-npm.txt",
+      "docs/evidence/pitch-clean-checkout.json",
+      "docs/evidence/pitch-host-tests.txt",
+      "docs/evidence/pitch-typecheck.txt",
+      "docs/evidence/pitch-host-verification.json"
     ],
-    "result": "51 tests passed in1.158s and TypeScript checking passed after app-source freeze, including localization and boundary hysteresis."
+    "result": "Final app-checkpoint 17b51cb fresh-clone shared TypeScript suite: 51 passed in 0.92177397 s; typecheck passed. Earlier local 51-test and typecheck results retain exact tested inputs. These host checks do not replace native adapter or emulator-audio verification."
   },
   "nativeIntegrationObserved": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/native-test-artifact.json"
+      "docs/evidence/native-test-artifact.json",
+      "docs/evidence/native-test-results.txt",
+      "docs/evidence/pitch-export-diagnostic/comparison.json"
     ],
-    "result": "18 native tests passed on signed HAP1209 bound to source checkpoint2642 and app fingerprinta332.",
-    "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd"
+    "result": "Final HAP e0a62c9b passed 18/18 native integration tests in 14.313 s, with 0 failures and 0 errors. The large-export regression retains all original assertions and independently checks the exact 18 MiB fixture hash; only its test-data generation was changed to yield.",
+    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+    "testHapSha256": "46b55fb6e64508c484cb14058a41764e7b6d95fa2706bb225a3bc67822fd22d3",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "releaseVersion": "v1.0.1"
   },
   "nativeAudioObserved": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/native-audio-phase-analysis.json",
-      "docs/evidence/native-audio-controls.json"
+      "docs/evidence/native-audio-controls.json",
+      "docs/evidence/native-audio-controls-artifact.json",
+      "docs/evidence/pitch-audio100/summary.json",
+      "docs/evidence/pitch-audio100/artifact.json",
+      "docs/evidence/pitch-audio100-incomplete/artifact.json",
+      "docs/evidence/pitch-audio100-incomplete/native-progress.json",
+      "docs/evidence/pitch-copy-source-binding.json",
+      "docs/evidence/pitch-demo/audio-environment-investigation.json",
+      "docs/EMULATOR_AUDIO.md"
     ],
-    "result": "100/100 accepted writes after PCM-tail repair; scheduler onset p95 25 ms, total with intentional dwell p95 303 ms. Prewarmed renderer; no physical acoustic claim.",
-    "productionHapSha256": "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725"
+    "result": "Final HAP e0a62c9b passed all five native audio controls under the original deadlines on the isolated clocked sink. A separate complete 100/100 first-PCM-write retry on HAP d1ad20df measured scheduler onset median 4 ms, p95 49 ms, maximum 148 ms; including 250 ms dwell, p95 318 ms and maximum 501 ms. Its first attempt stalled after five accepted samples and remains separately retained, with no merged observations or established stall cause. All production audio, benchmark and PCM inputs are byte-identical between the measured and final revisions; the source comparison records two English-copy files and one test-fixture change. The measurement is not relabelled as the final binary. Renderer initialization is excluded and no physical acoustic latency is claimed.",
+    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+    "testHapSha256": "46b55fb6e64508c484cb14058a41764e7b6d95fa2706bb225a3bc67822fd22d3",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "releaseVersion": "v1.0.1",
+    "previousReleaseVerification": {
+      "status": "passed",
+      "evidence": [
+        "docs/evidence/native-audio-phase-analysis.json",
+        "docs/evidence/native-audio-test-artifact.json",
+        "docs/evidence/audio-source-equivalence.json"
+      ],
+      "result": "Historical HAPa40c:100/100 accepted writes after PCM-tail repair; scheduler onset p95 25 ms, total with intentional dwell p95 303 ms. Prewarmed renderer and accepted-write boundary, no physical acoustic claim. The source-equivalence record compares historical a40c and1209 inputs, not the later v1.0.1 build.",
+      "productionHapSha256": "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725",
+      "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+      "certifiesCurrentRelease": false
+    },
+    "onsetMeasurement": {
+      "accepted": 100,
+      "failed": 0,
+      "onsetMs": {
+        "count": 100,
+        "median": 4.0,
+        "p95": 49,
+        "max": 148
+      },
+      "totalWithDwellMs": {
+        "count": 100,
+        "median": 264.0,
+        "p95": 318,
+        "max": 501
+      },
+      "dwellMs": 250,
+      "previousAttemptStatus": "incomplete_retained_separately",
+      "previousAttemptAcceptedSamples": 5,
+      "samplesMerged": false,
+      "productionHapSha256": "d1ad20df4d310c6c707ff82e3458ddf20583e062ac18d4ad7506b4da886514f3",
+      "appSourceSha256": "e4ece7ceb4b8dc64910e4745d23805af544cf53604a9cf2ff65c41e1c6fc64b7",
+      "sourceComparison": "docs/evidence/pitch-copy-source-binding.json"
+    },
+    "scope": "Five controls are measured on the final release HAP. The separate 100-onset measurement remains bound to the earlier d1ad20df HAP, with exact source differences recorded."
   },
   "nativePostCommitRecovery": {
     "status": "passed",
     "evidence": [
       "docs/evidence/native-recovery.json"
     ],
-    "result": "100 actual forced restarts after durable acknowledgements. Mid-transaction failure is not covered."
+    "result": "100 actual forced restarts after durable acknowledgements. Mid-transaction failure is not covered.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "offlineCliAuthoring": {
     "status": "passed",
@@ -53,7 +113,9 @@
       "docs/evidence/native-authored.touchmap"
     ],
     "result": "Actual AI, source correction/review, deterministic question, separately consented TTS, playback, publication and native export. Developer verification, not human participant review.",
-    "productionHapSha256": "ce00562d8321872cea88c02253d609942e03f8d82fbdc9715cd30c5ddf2065ae"
+    "productionHapSha256": "ce00562d8321872cea88c02253d609942e03f8d82fbdc9715cd30c5ddf2065ae",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "offlineTransferObserved": {
     "status": "passed",
@@ -63,7 +125,9 @@
       "docs/evidence/second-offline-resume.json",
       "docs/evidence/native-ui-observations.json"
     ],
-    "result": "Second emulator imported exact native export under IPv4/IPv6 block, matched all 11 asset hashes, accepted declaration, scanned, explicitly answered correctly, exported private history and resumed after process death."
+    "result": "Second emulator imported exact native export under IPv4/IPv6 block, matched all 11 asset hashes, accepted declaration, scanned, explicitly answered correctly, exported private history and resumed after process death.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "nativeSharedOpenObserved": {
     "status": "passed",
@@ -73,7 +137,9 @@
       "docs/evidence/native-share-cold-result.json",
       "docs/evidence/native-share-warm-context.json"
     ],
-    "result": "Separate ordinary-permission app granted temporary URI read access; cold viewData and existing-ability sendData both restored saved material."
+    "result": "Separate ordinary-permission app granted temporary URI read access; cold viewData and existing-ability sendData both restored saved material.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "providerEvaluationExecuted": {
     "status": "passed",
@@ -88,7 +154,7 @@
   "sourceSamplesAndContracts": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/backend-pytest.xml",
+      "docs/evidence/pitch-backend-pytest.xml",
       "samples/LICENSE.md",
       "contracts/CONTRACT.md"
     ],
@@ -111,43 +177,71 @@
       "docs/evidence/secret-scan.json",
       "docs/evidence/documentation-links.json"
     ],
-    "result": "Earlier working-tree vault snapshot:474 scanner-selected text files,537 reviewed public-algorithm matches,0 unresolved. Current documentation audit:163 relative targets,0 failures. Final staged changes and Git history are separately recorded."
+    "result": "Earlier working-tree vault snapshot: 474 scanner-selected text files, 537 reviewed public-algorithm matches, 0 unresolved. The relative documentation-target audit records its own timestamp and zero failures. Final staged changes and Git history are separately recorded; neither snapshot certifies later edits."
   },
   "finalSourceFreeze": {
     "status": "passed",
     "evidence": [
       "docs/evidence/hap-metadata.json",
-      "docs/evidence/native-test-artifact.json"
+      "docs/evidence/stage-input-fingerprint.json",
+      "docs/evidence/native-test-artifact.json",
+      "docs/evidence/native-audio-controls-artifact.json",
+      "docs/evidence/pitch-copy-source-binding.json"
     ],
-    "result": "Signed production HAP1209 was built from committed app checkpoint2642 with exact app fingerprint. Earlier builds retain separate evidence identities.",
-    "commit": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
-    "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b"
+    "commit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+    "result": "Final signed production HAP e0a62c9b and passing native integration/audio controls share exact committed app inputs from 17b51cb. Of 122 app inputs, 119 match the d1ad20df measurement checkpoint; two contain declared English-copy changes and one is the independently hashed test-fixture generator. Production audio and exporter code are unchanged. Later media/documentation commits do not relabel the original build HEAD."
   },
   "finalCleanBuildAndSignature": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/clean-checkout.json",
-      "docs/evidence/clean-stage-input-fingerprint.json",
-      "docs/evidence/clean-installation.json",
-      "docs/evidence/clean-native-test-artifact.json",
-      "docs/evidence/clean-audio-controls.json"
+      "docs/evidence/pitch-clean-reproduction.json",
+      "docs/evidence/pitch-clean-checkout.json",
+      "docs/evidence/pitch-clean-stage-input-fingerprint.json",
+      "docs/evidence/pitch-clean-signature-verification.log",
+      "docs/evidence/pitch-clean-installation.json",
+      "docs/evidence/pitch-clean-native-test-artifact.json",
+      "docs/evidence/pitch-clean-audio-controls.json"
     ],
-    "commit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
-    "result": "Fresh git clone --no-local, locked dependencies, backend90/host51/typecheck, native build and signature verification passed. Independently signed HAP145b installed over the second emulator with data retained; native18/audio4 and ordinary Library passed. App fingerprint a332 matches release1209; different signatures are not claimed byte-identical.",
-    "productionHapSha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e"
+    "commit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+    "productionHapSha256": "b523156d6746db760ca34285744d27e08e8b3332f6ac7d0c4c7133e928e3ccc2",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "result": "Fresh local git clone --no-local at 17b51cb, locked dependencies, backend 93, host 51, typecheck, clean native build and signature verification passed. Independently signed HAP b523156d was installed on the second emulator with existing data retained; native 18/18, audio 5/5 and ordinary Library launch passed. Its app fingerprint c4f22e84 matches the release HAP e0a62c9b. Independent signing changes archive bytes; byte-identical HAP reproduction is not claimed.",
+    "previousReleaseVerification": {
+      "status": "passed",
+      "evidence": [
+        "docs/evidence/clean-checkout.json",
+        "docs/evidence/clean-stage-input-fingerprint.json",
+        "docs/evidence/clean-installation.json",
+        "docs/evidence/clean-native-test-artifact.json",
+        "docs/evidence/clean-audio-controls.json"
+      ],
+      "commit": "12eea57919b80426d30103d2ff3c60ddc8e2843f",
+      "result": "Historical v1.0.0 reproduction: fresh git clone --no-local, locked dependencies, backend90/host51/typecheck, native build and signature verification passed. Independently signed HAP145b installed over the second emulator with data retained; native18/audio4 and ordinary Library passed. App fingerprint a332 matches release1209. This does not establish a clean rebuild of v1.0.1.",
+      "productionHapSha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e",
+      "scope": "Historical independent reproduction of v1.0.0 app inputs a3325237 at source commit 12eea579.",
+      "certifiesCurrentRelease": false
+    }
   },
   "finalNativeAndHostAcceptance": {
-    "result": "Latest local backend 93 passed, including three additional package-root PPTX regressions. Independent clean checkout at12eea57 passed backend90, host51, typecheck, build/signature and actual independent install/native18/audio4/ordinary Library. App inputs remain identical to release HAP1209.",
+    "status": "passed",
     "evidence": [
-      "docs/evidence/backend-pytest.xml",
-      "docs/evidence/native-audit-host-tests.txt",
-      "docs/evidence/native-audit-typecheck.txt",
+      "docs/evidence/pitch-clean-checkout.json",
+      "docs/evidence/pitch-clean-reproduction.json",
+      "docs/evidence/pitch-clean-installation.json",
       "docs/evidence/native-test-artifact.json",
-      "docs/evidence/native-preparation-checks.json",
       "docs/evidence/native-audio-controls.json",
-      "docs/evidence/native-audio-controls-artifact.json"
+      "docs/evidence/native-audio-controls-artifact.json",
+      "docs/evidence/pitch-final-ui/verification.json",
+      "docs/evidence/pitch-audio100/summary.json",
+      "docs/evidence/pitch-audio100-incomplete/artifact.json",
+      "docs/evidence/pitch-copy-source-binding.json",
+      "docs/evidence/demo-repair-integration.json"
     ],
-    "status": "passed"
+    "result": "Final app checkpoint 17b51cb passed primary native 18/18, audio 5/5 and ordinary UI 4/4 on HAP e0a62c9b. Independent fresh clone passed backend 93, host 51, typecheck, build/signature and second-installation native 18/18, audio 5/5 and Library on HAP b523156d with identical app inputs. The separate 100-onset measurement remains attached to d1ad20df with source comparison and the incomplete prior attempt retained. Repaired-film packaging passed 26 tests separately. No physical acoustic or representative-user acceptance is inferred.",
+    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee"
   },
   "finalOfflineLearnerFlow": {
     "status": "passed",
@@ -156,14 +250,18 @@
       "docs/evidence/offline-export-verification.json"
     ],
     "result": "Ten primary checks passed with network blocked: acceptance, list, directed connection, submission, restart/context, unfinished selection, two ordinary Canvas touches and native export. All19 exported entries match source bytes; actual QEMU audio captured. Later source changes need final acceptance.",
-    "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54"
+    "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "nativeFailureInjection": {
     "status": "passed",
     "evidence": [
       "docs/evidence/native-failure-checks.json"
     ],
-    "result": "Five actual deleted-URI/full-staging checks passed: no false success/new material, exact existing checkpoint retained, failed staging removed.64KiB tmpfs confined to selected app process staging namespace, then removed. This is not mid-transaction DB termination."
+    "result": "Five actual deleted-URI/full-staging checks passed: no false success/new material, exact existing checkpoint retained, failed staging removed.64KiB tmpfs confined to selected app process staging namespace, then removed. This is not mid-transaction DB termination.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "fullContextRestoreTiming": {
     "status": "passed",
@@ -172,20 +270,33 @@
       "docs/evidence/native-restore-artifact.json"
     ],
     "result": "100 acknowledged full Progress/Resume-heading checks, p95 130 ms and maximum 453 ms from Library open intent through ArkUI willDraw after layout. Two runs contributed 92 + 8 samples after a UiTest RPC stall; the unacknowledged 93rd observation remains retained and excluded. Excludes physical display scanout, human selection and cold process launch.",
-    "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd"
+    "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "finalEnglishDemo": {
-    "durationSeconds": 180.0,
+    "durationSeconds": 179.916667,
     "status": "passed",
     "evidence": [
       "docs/evidence/demo-manifest.json",
       "docs/evidence/demo-qc.json",
       "docs/evidence/demo-review.json",
       "docs/evidence/demo-independent-review.json",
-      "docs/evidence/demo-audio-transcript.json"
+      "docs/evidence/demo-pitch-audio-provenance.json",
+      "docs/evidence/demo-pitch-audio-review.json",
+      "docs/evidence/demo-audio-transcript.json",
+      "docs/evidence/demo-repair-integration.json"
     ],
-    "videoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1",
-    "result": "Final1209 intro and explicitly identified historical native flow excerpts.4320frames decoded; manifest reviewed. Technical checks, factual continuity and sampled visual reviews passed within recorded coverage. One Evaporation recording is supported; prior two-label ASR expectation remains a non-passing diagnostic. No continuous perceptual video or independent human listening claim."
+    "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
+    "result": "Reviewed soundtrack repair: 179.916667 s, 4,318 decoded frames, 16 retained narration intervals and the original Evaporation label at 35.2 to 36.5 s. Existing music restored across 32.3 to 48.7 s with ducking around native speech; no new TTS or composition. Two final static frames removed. Fresh complete actual-audio review passed, including the reported gap near 46 s. Independent review covered 23 sampled frames and source/audio evidence; no full-motion or direct human-listening claim. Renderer reproduced exact video bytes, rejected five negative preflight cases and passed all 26 packaging tests.",
+    "releaseVersion": "v1.0.1",
+    "decodedFrames": 4318,
+    "sizeBytes": 7568817,
+    "historicalFullAvReview": {
+      "masterSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+      "scope": "The prior full-MP4 model review applies only to the retained earlier master, not current video bytes.",
+      "record": "docs/evidence/demo-independent-av-review.json"
+    }
   },
   "finalReleaseArchive": {
     "status": "pending",
@@ -194,10 +305,23 @@
   "finalReleaseSecretScan": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/final-staged-secret-scan.json",
+      "docs/evidence/pitch-final-secret-scan.json",
+      "docs/evidence/pitch-repaired-media-secret-scan.json",
+      "docs/evidence/pitch-media-secret-scan.json",
       "docs/evidence/history-secret-scan.json"
     ],
-    "result": "Final staged changes reviewed together with the previously scanned source history and checkpoint. Matches are public algorithm literals or the public repository owner within project URLs;0 unresolved. Private task intake, local credentials, signing material and redundant raw playback are excluded."
+    "result": "Staged release source and curated evidence were scanned against vault values, and every reported match was reviewed against indexed Git bytes. No unresolved match remains; allowed matches are public algorithm literals and this project's public repository references. The repaired-media commit e4fc0386 has a separate retained staged review. Exact counts, index-path identities and timestamps are recorded in each report. This is bounded snapshot review, not a guarantee about unknown secrets or uninspected binary contents.",
+    "scope": "The staged snapshots named by the linked reports; each excludes its own subsequent report addition. Later restaging requires its own recorded scan.",
+    "previousReleaseVerification": {
+      "status": "passed",
+      "evidence": [
+        "docs/evidence/final-staged-secret-scan.json",
+        "docs/evidence/history-secret-scan.json"
+      ],
+      "result": "Final staged changes reviewed together with the previously scanned source history and checkpoint. Matches are public algorithm literals or the public repository owner within project URLs;0 unresolved. Private task intake, local credentials, signing material and redundant raw playback are excluded.",
+      "scope": "Historical staged scan before the v1.0.1 source and media revision.",
+      "certifiesCurrentRelease": false
+    }
   },
   "genuineScreenReader": {
     "status": "blocked_environment",
@@ -245,14 +369,18 @@
     "evidence": [
       "docs/evidence/native-manual-audio-import.json"
     ],
-    "result": "Actual native Speech target/provenance/SystemPicker import, durable byte readback and playback. Licensed local WAV1115ms53542bytes matched exactly; isolated QEMU audio captured, no new TTS."
+    "result": "Actual native Speech target/provenance/SystemPicker import, durable byte readback and playback. Licensed local WAV1115ms53542bytes matched exactly; isolated QEMU audio captured, no new TTS.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "nativeMidTransactionFault": {
     "status": "passed",
     "evidence": [
       "docs/evidence/native-transaction-interruption.json"
     ],
-    "result": "Three actual process deaths after native uncommitted writes; complete prior checkpoint, no implicit submission, absent uncommitted event, and exactly-once explicit retry all passed. Test-only SQL barriers use production tables; not arbitrary production-dispatch fault injection."
+    "result": "Three actual process deaths after native uncommitted writes; complete prior checkpoint, no implicit submission, absent uncommitted event, and exactly-once explicit retry all passed. Test-only SQL barriers use production tables; not arbitrary production-dispatch fault injection.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "nativePreparationRevisionSafety": {
     "status": "passed",
@@ -260,7 +388,9 @@
       "docs/evidence/native-preparation-checks.json",
       "docs/evidence/native-preparation-ui.json"
     ],
-    "result": "Final HAP native HTTP/adoption checks passed for delayed and cancelled results. Separate historical actual Editor UI cancelled pending request, saved a newer revision and retained exact expected content after server release/restart. Controlled loopback fixture, no provider inference."
+    "result": "Historical HAP6bac native HTTP/adoption checks passed for delayed and cancelled results. Separate historical actual Editor UI cancelled a pending request, saved a newer revision and retained exact expected content after server release/restart. Controlled loopback fixture, no provider inference.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "nativeCandidateUiRegression": {
     "evidence": [
@@ -268,7 +398,9 @@
     ],
     "result": "Nine actual offline UI checks passed including persisted context, cleared stale guidance, unknown source route and semantic follow. The test network block was removed.",
     "productionHapSha256": "6bac1571c32d0fa3ea6e5bcd9d2596c767194c0db3b06b648d6fe51c877e00fa",
-    "status": "passed"
+    "status": "passed",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "sourceHistorySecretAudit": {
     "evidence": [
@@ -279,11 +411,22 @@
   },
   "currentProductionUi": {
     "status": "passed",
-    "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
-    "result": "Five checks: actual installation/launch and Library, preserved saved focus/correct result/unfinished selection with outboundIPv4/IPv6 blocked, and isolation cleanup. Does not relabel earlier complete flows as current-build recordings.",
     "evidence": [
-      "docs/evidence/release-ui-verification.json"
-    ]
+      "docs/evidence/pitch-final-ui/verification.json"
+    ],
+    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "result": "Four ordinary UI checks passed after actual process restart: revised Library hero, restored saved correct result, unfinished Collection selection with one submitted attempt and explicit Submit, and reviewed footer. Actual installed HAP e0a62c9b and 11 evidence-file hashes are bound. No new answer was submitted and no fresh network-blocked flow is claimed by this UI check.",
+    "previousReleaseVerification": {
+      "status": "passed",
+      "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+      "result": "Five checks: actual installation/launch and Library, preserved saved focus/correct result/unfinished selection with outboundIPv4/IPv6 blocked, and isolation cleanup. Does not relabel earlier complete flows as current-build recordings.",
+      "evidence": [
+        "docs/evidence/release-ui-verification.json"
+      ],
+      "scope": "Historical v1.0.0 production UI verification on HAP 1209c871.",
+      "certifiesCurrentRelease": false
+    }
   },
   "publicSourceAccess": {
     "status": "passed",
@@ -291,14 +434,17 @@
       "docs/evidence/public-source-access.json"
     ],
     "repositoryUrl": "https://github.com/Defozo/TouchMap",
-    "result": "Anonymous readback verified public metadata, main commit12eea57 and four exact source files with no authorization, cookies or environment credentials. Human reproduction and release asset publication remain separate."
+    "result": "Anonymous readback verified public metadata, main commit12eea57 and four exact source files with no authorization, cookies or environment credentials. Human reproduction and release asset publication remain separate.",
+    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
+    "certifiesCurrentRelease": false
   },
   "competitionMaterialDraftSave": {
     "status": "pending",
     "evidence": [
       "docs/SUBMISSION_REQUIREMENTS.md"
     ],
-    "reason": "Prepared material updates have not yet been saved and read back from the existing HackTribe project. New Idea and current visibility are preserved."
+    "reason": "Chronological pre-publication snapshot. The user explicitly authorized saving the existing TouchMap project while preserving New Idea and current visibility. Public assets must be published before the form is saved and read back. The separate post-publication HackTribe result resolves this snapshot after execution; no finalization action is implied.",
+    "scope": "Before external release publication and authorized form save."
   },
   "finalEnglishPresentation": {
     "status": "passed",
@@ -308,18 +454,32 @@
       "docs/evidence/presentation-review.json",
       "docs/evidence/presentation-independent-review.json"
     ],
-    "result": "Reviewed English PDF10 pages and editable PPTX10 slides,10 speaker scripts,2 native tables and33 existing local citations. Actual PDF links verified. All final rendered pixels remain unchanged after metadata/link corrections. Both files are below10 MB. Artifact review is separate from external release publication.",
-    "pdfSha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
-    "pptxSha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf"
+    "result": "Reviewed English pitch: 10 PDF pages, 10 editable PPTX slides, 10 speaker scripts, 2 native tables and 33 existing local citations. The author inspected all slide/page positions, including changed final slides 1 and 4 and the 8 byte-identical remaining renders. Independent coordinating review covered all 10 rendered slides. Exact PDF links target the repository and v1.0.1. Both files are below 10 MB. External delivery is separate.",
+    "pdfSha256": "c65b68135ee4916b0edc8b4f67aa537db5b99941f1574d5f1659b5554e385ca9",
+    "pptxSha256": "197ae9f3746ca1235f8f8d3bfa54b88cb77b43dc40dac0f6967be7ee3a19741e",
+    "releaseVersion": "v1.0.1"
   },
   "independentSourceReproduction": {
     "status": "passed",
     "evidence": [
-      "docs/evidence/public-source-access.json",
-      "docs/evidence/public-clean-clone.json",
-      "docs/evidence/clean-checkout.json",
-      "docs/evidence/clean-installation.json"
+      "docs/evidence/pitch-clean-checkout.json",
+      "docs/evidence/pitch-clean-reproduction.json",
+      "docs/evidence/pitch-clean-installation.json"
     ],
-    "result": "Public12eea57 was freshly cloned anonymously with credential helpers and auth configurations disabled; its complete pristine Git tree and122 app files match the independently built/signed/installed145b and release1209 inputs. Automated reproduction passed backend90/host51/typecheck/native18/audio4/Library. This is a separate automated checkout and execution on the verification host, with no assertion of a second human operator."
+    "commit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+    "result": "Automated reproduction from a fresh local --no-local clone on the verification host passed locked dependency installation, backend 93, host 51, typecheck, native build/signature and second-emulator native 18/audio 5/ordinary Library. Exact app inputs match final release e0a62c9b. This is a separate checkout and independently signed installation, without claiming an anonymous public clone, second human operator or physical device.",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "previousReleaseVerification": {
+      "status": "passed",
+      "evidence": [
+        "docs/evidence/public-source-access.json",
+        "docs/evidence/public-clean-clone.json",
+        "docs/evidence/clean-checkout.json",
+        "docs/evidence/clean-installation.json"
+      ],
+      "result": "Historical public12eea57 was freshly cloned anonymously with credential helpers and auth configurations disabled. Its complete pristine Git tree and122 app files match the independently built/signed/installed145b and v1.0.0 release1209 inputs. Automated reproduction passed backend90/host51/typecheck/native18/audio4/Library. This is a separate checkout and execution on the verification host, with no assertion of a second human operator or a v1.0.1 reproduction.",
+      "scope": "Historical independent reproduction of v1.0.0 app inputs a3325237 at source commit 12eea579.",
+      "certifiesCurrentRelease": false
+    }
   }
 }

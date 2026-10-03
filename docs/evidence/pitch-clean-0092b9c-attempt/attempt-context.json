@@ -1,0 +1,13 @@
+{
+  "status": "superseded-interrupted",
+  "reason": "Root requested HOLD after finding footer wording requiring a new app source revision. Automatic runner had already completed build and installation when its own process group was stopped. Native test HAP compilation was interrupted before native 18/audio 5 execution.",
+  "originalReport": "pitch-clean-reproduction.json",
+  "commit": "0092b9cc2c0f5accc5f754d74940ba1c06003230",
+  "independentlyInstalledHapSha256": "72642dc2092c8bf878b5936b8250cac068f53e4a6f67e79caaf99d13a270293f",
+  "hostTests": 51,
+  "backendTests": 93,
+  "nativeTestsExecuted": false,
+  "audioControlsExecuted": false,
+  "rootHapUnchanged": true,
+  "historicalCleanEvidenceRestoredExactly": true
+}

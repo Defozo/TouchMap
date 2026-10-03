@@ -1,0 +1,12 @@
+{
+  "status": "incomplete",
+  "acceptedSamples": 5,
+  "scheduledIndex": 5,
+  "requested": 100,
+  "termination": "Stopped explicitly after several minutes without JS watchdog or progress",
+  "mainThread": "epoll_wait / EventQueue::GetEvent; foreground app with responsive native layout dump",
+  "audioFailureFilePresent": false,
+  "result": "Retained evidence; no completed100 result and no samples merged into the fresh successful retry.",
+  "sourceFingerprint": "e4ece7ceb4b8dc64910e4745d23805af544cf53604a9cf2ff65c41e1c6fc64b7",
+  "productionHapSha256": "d1ad20df4d310c6c707ff82e3458ddf20583e062ac18d4ad7506b4da886514f3"
+}

@@ -1,0 +1,164 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "stop_before_dwell",
+      "passed": true,
+      "detail": "Observed 0 native onset callbacks after cancellation."
+    },
+    {
+      "name": "rapid_replacement_only_latest_target",
+      "passed": true,
+      "detail": "Native PCM targets: evaporation"
+    },
+    {
+      "name": "pause_resume_finishes_same_recording",
+      "passed": true,
+      "detail": "Playing local PCM recording | Recording paused. Resume keeps your place. | Recording resumed at the saved position. | Recording finished"
+    },
+    {
+      "name": "replace_pending_batched_write_finishes_latest_only",
+      "passed": true,
+      "detail": "Replaced actual pending 7680-byte native write after 960-byte onset; targets: collection,evaporation; Playing local PCM recording | Playing local PCM recording | Recording finished"
+    },
+    {
+      "name": "four_byte_final_pcm_tail_finishes",
+      "passed": true,
+      "detail": "964 PCM bytes: Playing local PCM recording | Recording finished; failures: "
+    }
+  ],
+  "error": "",
+  "scope": "Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics.",
+  "observations": [
+    {
+      "elapsedMs": 0,
+      "kind": "phase",
+      "value": "initialize"
+    },
+    {
+      "elapsedMs": 306,
+      "kind": "phase",
+      "value": "stop_before_dwell"
+    },
+    {
+      "elapsedMs": 924,
+      "kind": "phase",
+      "value": "rapid_replacement"
+    },
+    {
+      "elapsedMs": 1249,
+      "kind": "started",
+      "value": "evaporation"
+    },
+    {
+      "elapsedMs": 1249,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 1437,
+      "kind": "started",
+      "value": "collection"
+    },
+    {
+      "elapsedMs": 1437,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 1449,
+      "kind": "phase",
+      "value": "pause_call"
+    },
+    {
+      "elapsedMs": 1683,
+      "kind": "status",
+      "value": "Recording paused. Resume keeps your place."
+    },
+    {
+      "elapsedMs": 1683,
+      "kind": "phase",
+      "value": "pause_complete"
+    },
+    {
+      "elapsedMs": 2011,
+      "kind": "phase",
+      "value": "resume_call"
+    },
+    {
+      "elapsedMs": 2071,
+      "kind": "status",
+      "value": "Recording resumed at the saved position."
+    },
+    {
+      "elapsedMs": 2072,
+      "kind": "phase",
+      "value": "resume_complete"
+    },
+    {
+      "elapsedMs": 5601,
+      "kind": "status",
+      "value": "Recording finished"
+    },
+    {
+      "elapsedMs": 5619,
+      "kind": "phase",
+      "value": "replace_pending_batched_write"
+    },
+    {
+      "elapsedMs": 5643,
+      "kind": "started",
+      "value": "collection"
+    },
+    {
+      "elapsedMs": 5644,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 5648,
+      "kind": "replaceNativeWritePending",
+      "value": "7680"
+    },
+    {
+      "elapsedMs": 5664,
+      "kind": "started",
+      "value": "evaporation"
+    },
+    {
+      "elapsedMs": 5664,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 6793,
+      "kind": "status",
+      "value": "Recording finished"
+    },
+    {
+      "elapsedMs": 6811,
+      "kind": "phase",
+      "value": "four_byte_tail"
+    },
+    {
+      "elapsedMs": 6876,
+      "kind": "started",
+      "value": "collection"
+    },
+    {
+      "elapsedMs": 6876,
+      "kind": "status",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "elapsedMs": 6993,
+      "kind": "status",
+      "value": "Recording finished"
+    },
+    {
+      "elapsedMs": 7012,
+      "kind": "phase",
+      "value": "checks_complete"
+    }
+  ]
+}

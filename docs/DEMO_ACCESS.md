@@ -38,7 +38,7 @@ if ((Get-FileHash dist/touchmap-signed.hap -Algorithm SHA256).Hash -ne $releaseM
 ./scripts/install.ps1 -Target 127.0.0.1:55555
 ```
 
-Connect a local VNC viewer to `127.0.0.1:5900` to control the emulator. Lesson audio plays through the host sound service. The install command launches TouchMap with the bundled materials ready to explore.
+Connect a local VNC viewer to `127.0.0.1:5900` to control the emulator. Lesson audio plays through the host sound service; [audio setup and Windows playback](platform.md#audio-configuration-of-the-pinned-emulator) also cover the isolated emulator route used for final verification. The install command launches TouchMap with the bundled materials ready to explore.
 
 Prepared lessons need no preparation server or provider credentials. To create your own material, follow [the authoring guide](../README.md#prepare-and-review-a-material). For runtime details and measured results, see [the test report](TEST_REPORT.md).
 

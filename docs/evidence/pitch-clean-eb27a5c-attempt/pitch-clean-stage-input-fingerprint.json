@@ -1,0 +1,621 @@
+{
+  "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+  "appSourceSha256": "c8dabf95d87bafa24b1339e5411c42317c01bda08991d00728ed177e0e240d66",
+  "appSourceFileCount": 122,
+  "appSourceBytes": 7345246,
+  "files": [
+    {
+      "path": "AppScope/app.json5",
+      "bytes": 207,
+      "sha256": "a9cdf99ec11b790eff49c9fd267fb42d825dc671acdd9b769fa64bf448cf14d8"
+    },
+    {
+      "path": "AppScope/resources/base/element/string.json",
+      "bytes": 52,
+      "sha256": "fa7fa98d50843ca851bf05d944308240f196d00e20ca5e7b9f79c9b3204995bb"
+    },
+    {
+      "path": "AppScope/resources/base/media/background.png",
+      "bytes": 2135,
+      "sha256": "d9ce54d23554e6469dc4b43a6a83f6398fe45a78d206cd21e6d9849b998a78c2"
+    },
+    {
+      "path": "AppScope/resources/base/media/foreground.png",
+      "bytes": 11585,
+      "sha256": "0cc3838350b615b0fcd5886fb3b3bdea4bc4b680ef1fe7ab2bbb6c5cc7487589"
+    },
+    {
+      "path": "AppScope/resources/base/media/layered_image.json",
+      "bytes": 109,
+      "sha256": "3d18dcd7ed9e7d3d2c54c20cb80a44eb4877c661131c68a46e20b6e19d0bb476"
+    },
+    {
+      "path": "build-profile.json5",
+      "bytes": 787,
+      "sha256": "c2bd2f14f6ae0758e3066c6b78f0b2269f3c2aa91bf09d4fedf7fb80a7fcb3d6"
+    },
+    {
+      "path": "entry/build-profile.json5",
+      "bytes": 507,
+      "sha256": "822d2a78e05b7bf69f3717babcf4857dcdc2f524b0bb4600d46219bbea1f6496"
+    },
+    {
+      "path": "entry/hvigorfile.ts",
+      "bytes": 227,
+      "sha256": "67cc02aa9ccf2f3a2c58e7fee4b6e3a00ffb6128c11f76b7fec5f00ad2d63581"
+    },
+    {
+      "path": "entry/obfuscation-rules.txt",
+      "bytes": 1008,
+      "sha256": "0091c5622ede377a9ae1260f2499815afc3bcc5d1ab79a3d910ff7b456c98518"
+    },
+    {
+      "path": "entry/oh-package.json5",
+      "bytes": 193,
+      "sha256": "1dbbb95a5eed8620813da0c4b91eec7da150b216b9a21629e57c667bf57d92e5"
+    },
+    {
+      "path": "entry/src/main/ets/components/EditorPanel.ets",
+      "bytes": 77888,
+      "sha256": "97877cc346a0ae2fad38a29693e39c70be40465846622badddc692b327d21fff"
+    },
+    {
+      "path": "entry/src/main/ets/domain/EnglishStrings.ts",
+      "bytes": 96286,
+      "sha256": "9a2af5c18cb13a9f208b258728ef5f0e26a38e7d35fdac5c76a558a29387c66a"
+    },
+    {
+      "path": "entry/src/main/ets/domain/editor.ts",
+      "bytes": 7492,
+      "sha256": "ac2acf3a67d8b0f45f110a696f69f72c2fcbe3473c6a3ed5a21d3f12b72f488a"
+    },
+    {
+      "path": "entry/src/main/ets/domain/engine.ts",
+      "bytes": 6697,
+      "sha256": "489a39693c9c2fddfa0dd631a069fc7cbafc12033e479eec62318a4c12550dbf"
+    },
+    {
+      "path": "entry/src/main/ets/domain/geometry.ts",
+      "bytes": 5945,
+      "sha256": "982a52b005a6ea40895cd917939dae5060b1b2cb35a6b2af853a6dc3d1a52bb6"
+    },
+    {
+      "path": "entry/src/main/ets/domain/i18n.ts",
+      "bytes": 885,
+      "sha256": "cb6872de5b5966ceabd4626510e7d605147e0bb4b3f07be56cfee0ced2b622ff"
+    },
+    {
+      "path": "entry/src/main/ets/domain/jsonSafety.ts",
+      "bytes": 3484,
+      "sha256": "7199673b89e47562e7bdda62b0aeeec34645e6359c67ee174a32f98b1eb92cd4"
+    },
+    {
+      "path": "entry/src/main/ets/domain/media.ts",
+      "bytes": 7699,
+      "sha256": "ed34bf74b5a8d9a10322611e5470daadf95242855b1cc0c870fa3bdea96fdb76"
+    },
+    {
+      "path": "entry/src/main/ets/domain/types.ts",
+      "bytes": 4069,
+      "sha256": "5df9bdf6f815999fc1d5d75432d817f21ebf807a1e43e0800424c4ebd5927521"
+    },
+    {
+      "path": "entry/src/main/ets/domain/validate.ts",
+      "bytes": 11013,
+      "sha256": "6fd514b5bbbe8cc0fd5a9d23f07085246ed3e124239b1f7f9f5fa1526be7f232"
+    },
+    {
+      "path": "entry/src/main/ets/domain/validationShape.ts",
+      "bytes": 10886,
+      "sha256": "4e59bf41ac92cfa3cbff443e94c5fe229d0031063d0218f98c7be3f670574f03"
+    },
+    {
+      "path": "entry/src/main/ets/domain/zip.ts",
+      "bytes": 5091,
+      "sha256": "0639b9e6386f5d1a3e6858fe2419a9d531d29530fa8ca715a2dd5c7bd64a2b53"
+    },
+    {
+      "path": "entry/src/main/ets/entryability/EntryAbility.ets",
+      "bytes": 1164,
+      "sha256": "08bb17cd7e8a92c4f3ed91ed0a162428112e02d91bb7eb23b37bf469b5ca522c"
+    },
+    {
+      "path": "entry/src/main/ets/pages/Index.ets",
+      "bytes": 73742,
+      "sha256": "15e3c68854a5c0996b91963081320357a89d050709dfefe3eb4bdbc99aaf2e7e"
+    },
+    {
+      "path": "entry/src/main/ets/platform/ArchiveWorker.ets",
+      "bytes": 752,
+      "sha256": "1c186df910363cd1625205bc2da0eb2dddc180cd3675b4316a4667bdb5269ab8"
+    },
+    {
+      "path": "entry/src/main/ets/platform/Feedback.ets",
+      "bytes": 15569,
+      "sha256": "065817574ce443d326e5d0de300b1dce9b95d0ac554271992505e575bc18bdd0"
+    },
+    {
+      "path": "entry/src/main/ets/platform/I18n.ets",
+      "bytes": 622,
+      "sha256": "1e1b5dd821f58bcd9cc4674e8f213d491d241f59ccacdc83d8370566ce8d36ef"
+    },
+    {
+      "path": "entry/src/main/ets/platform/PackageExporter.ets",
+      "bytes": 7132,
+      "sha256": "09efd19537dbe76104f32bc6e2741995bc651fbc57704021f102f4e88be6324e"
+    },
+    {
+      "path": "entry/src/main/ets/platform/Preparation.ets",
+      "bytes": 9366,
+      "sha256": "e2a07c0b0b07e9fc0161c6b7ca1fc956ac3dd5647dab0413d7796c857c8269da"
+    },
+    {
+      "path": "entry/src/main/ets/platform/Repository.ets",
+      "bytes": 29944,
+      "sha256": "76f6aae552d846e235b1627ff1c19d330e43cd8ea1906d70b574aba2dd4a2313"
+    },
+    {
+      "path": "entry/src/main/ets/platform/RestorationFrame.ets",
+      "bytes": 2721,
+      "sha256": "d194da290d7565779eb1b96d6a7a16f3018b8668ada00dc4ec5190cfd018cb52"
+    },
+    {
+      "path": "entry/src/main/ets/platform/SystemPicker.ets",
+      "bytes": 1936,
+      "sha256": "d4284dffc4d66785da627f76d330370385bca1982dbe1be85d98e1d8e4b58876"
+    },
+    {
+      "path": "entry/src/main/ets/platform/WantReceiver.ets",
+      "bytes": 673,
+      "sha256": "acc3351166d2e0f82ddc472363afe171ee18fe484c2823b3aa245db6f11c0478"
+    },
+    {
+      "path": "entry/src/main/module.json5",
+      "bytes": 1262,
+      "sha256": "eb372f01f4f41e249b923d5a81d86b0a91898e796b10f6aaf79f0388324b08e0"
+    },
+    {
+      "path": "entry/src/main/resources/base/element/color.json",
+      "bytes": 99,
+      "sha256": "236243ab905c6d5859aab518bc817c13caf8f0b903479dee882dde0fe8d37377"
+    },
+    {
+      "path": "entry/src/main/resources/base/element/string.json",
+      "bytes": 64579,
+      "sha256": "aa6d746bce19cd2abe29420d8d51c8a7ee8a153c5aa65e20a4908605ca899828"
+    },
+    {
+      "path": "entry/src/main/resources/base/media/background.png",
+      "bytes": 2135,
+      "sha256": "d9ce54d23554e6469dc4b43a6a83f6398fe45a78d206cd21e6d9849b998a78c2"
+    },
+    {
+      "path": "entry/src/main/resources/base/media/foreground.png",
+      "bytes": 11585,
+      "sha256": "0cc3838350b615b0fcd5886fb3b3bdea4bc4b680ef1fe7ab2bbb6c5cc7487589"
+    },
+    {
+      "path": "entry/src/main/resources/base/media/layered_image.json",
+      "bytes": 109,
+      "sha256": "3d18dcd7ed9e7d3d2c54c20cb80a44eb4877c661131c68a46e20b6e19d0bb476"
+    },
+    {
+      "path": "entry/src/main/resources/base/media/startIcon.png",
+      "bytes": 3917,
+      "sha256": "b2cac5a3b3f3c4bb44aad8c74d5b4e88533ad0f7b453e3bb40968053a7202267"
+    },
+    {
+      "path": "entry/src/main/resources/base/profile/main_pages.json",
+      "bytes": 37,
+      "sha256": "f21984fb1d5096f0db41314da0bb94c573e7ad018e5afae3044f8d5ff71b0bfc"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/loom-description.wav",
+      "bytes": 142708,
+      "sha256": "725aecfb9d1366e58541d5af3714ddf16300dd3c3b946f374aee13fb503a21f8"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/loom-label.wav",
+      "bytes": 26794,
+      "sha256": "47110705bbb62b7b9dc6a593769444075f734eece0e19d3d246ae40fc497e29e"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/loom-ribbon-label.wav",
+      "bytes": 55772,
+      "sha256": "c1459f9af6470069c202623721cd8c8d9415640cd4d3f2899f65244171f173c6"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/lumina-process-overview.wav",
+      "bytes": 552864,
+      "sha256": "d18c22919e7064e6c1d55d18448e03da1b5371be16cf758ca06ed8cd6e0d6dbb"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/prism-description.wav",
+      "bytes": 182832,
+      "sha256": "0d6e60ba187079bd756c925aa7b418398d16bb5e61d8e5834c4e25ab5f814041"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/prism-label.wav",
+      "bytes": 29022,
+      "sha256": "2e15413918c3d830b91bbeab39186fdcfc759ad235d2cf80935f6c48e2e4c738"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/prism-loom-label.wav",
+      "bytes": 64688,
+      "sha256": "e0e98555d56c4158ca552f43b782e89cb8bff74fd09d2e511cd86a076c7ac34e"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/prism-store-label.wav",
+      "bytes": 86980,
+      "sha256": "a07e49329050e09920f8b6fe377eddae01754ee1cc8e25a3773a0d67c826e579"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/q-branches-question.wav",
+      "bytes": 169456,
+      "sha256": "cda33382dd1268cd44f12ded68856ce31260e1bd5c39237f462813359b6e1bb1"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/q-inference-question.wav",
+      "bytes": 202894,
+      "sha256": "9200504d7250ed9171e22459afba9494e3b15a0f084a8a0afaf4f82aa32ac493"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/ribbon-description.wav",
+      "bytes": 102584,
+      "sha256": "25ac673b493bdf2250ecf7d87c79a44e0a8375376efeb37dc36026bbfb71bebc"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/ribbon-label.wav",
+      "bytes": 26794,
+      "sha256": "103818cec8f6ac14fa0c944565a5556c1e93dabfc055ab166257099c849372b9"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/seed-description.wav",
+      "bytes": 127104,
+      "sha256": "487fcda94f52fbe2e721417a79981561afdf3732839dcbb64f161f7a7158675b"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/seed-label.wav",
+      "bytes": 33480,
+      "sha256": "3db22f39b22eb6eb9651faa79f4dc98d56bb4f44f39b0e9323b10026e4e86a7f"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/seed-prism-label.wav",
+      "bytes": 62460,
+      "sha256": "3d7f37128978678a3844a504a49fb67758d75c21f2811e86e104137d4f8709dc"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/store-description.wav",
+      "bytes": 238560,
+      "sha256": "71cc4297a14d895d18974aacd993567678544481eda8af9c2c01a643d6491f1c"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/audio/store-label.wav",
+      "bytes": 29022,
+      "sha256": "9f72c8f5b60ebdd0144ba79d738921ac46b9c567a0ccfdc79db5320a360ac889"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/diagram.json",
+      "bytes": 18684,
+      "sha256": "351e15ebf2336212455141ee01c52707210adfa3b8f2b8791c294c26dcfc5029"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/manifest.json",
+      "bytes": 4324,
+      "sha256": "a7afd8acb86c6a5ecba097222aeafc73cfc394b0c2f4d087cd8fa6d513e0c369"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/source-preview.png",
+      "bytes": 9802,
+      "sha256": "9b5fc28cee379c7e6e82b8cde8789fdfe7bd364496da440ac461a4b935b9527f"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/lumina-process/source.svg",
+      "bytes": 2769,
+      "sha256": "feee77284b819aabd42fa82404acadc5380dccf1d0614ae80d7ff7868084d525"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/april-description.wav",
+      "bytes": 111500,
+      "sha256": "8f80512d46261e111ca04e231ea5d30d16e67a5e4a6456c26651787b2bbb3436"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/april-label.wav",
+      "bytes": 95896,
+      "sha256": "77cc05c1864d8a1574efe2afd0db4bca7575c0c12b6da9acb6a9aa280133d775"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/june-description.wav",
+      "bytes": 207352,
+      "sha256": "c2d0b106ba16c21128ff6f78a74214c5d18a64613cbd7ddc66cfc81119328926"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/june-label.wav",
+      "bytes": 64688,
+      "sha256": "15ba3fabc3b0fd5c389d6296246a9391d8ead6e4f0079d4c91aeeb1eb1564704"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/may-description.wav",
+      "bytes": 109270,
+      "sha256": "6367fdc0f5ab75a05672311dc365cc9a670c570fd7bbb9f5bc3c9e9874e0452f"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/may-label.wav",
+      "bytes": 86980,
+      "sha256": "51af6771b763fc4e117b13c4700cae278a374efde33a11bb8fbaf2fe0ecb9f57"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/q-more-question.wav",
+      "bytes": 100354,
+      "sha256": "7a9986a5985a9eba07e1ba61fe9382bac6fedd692e8ebc82628b4888285be239"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/q-value-question.wav",
+      "bytes": 107042,
+      "sha256": "77dea31e05e9a028d963c4b01fbf3b9b905dae0df108369dbf1d01feb413cd81"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/audio/rainfall-chart-overview.wav",
+      "bytes": 711132,
+      "sha256": "7818c5e7318ec710067a7226f83e24a139676fad852b5d6e0cd96959504b5096"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/diagram.json",
+      "bytes": 12199,
+      "sha256": "056eca7f224ecf4cfa3c849040434a749e9aa6d6878dc8a9db0764a3b422785c"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/manifest.json",
+      "bytes": 2770,
+      "sha256": "523e5b8d62b7328e6d3b4af14bd5f7d0bde118724068a93d056710801d0fbbd7"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/source-preview.png",
+      "bytes": 11483,
+      "sha256": "5f86f3e18ca2af737835a5e11913f9380e4bce3155279b687e584ba66bf6b606"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/rainfall-chart/source.svg",
+      "bytes": 2308,
+      "sha256": "8d3d9cb36f17f43e5301477ffa9d4e7b7b71b5aca9ea7024a3b9dc7ef2ab3cb3"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/audio/circle-description.wav",
+      "bytes": 80292,
+      "sha256": "9b7ad6cca1f235daa1714cabec9161968ae2bb8b3f098e08110b0fa2308b6708"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/audio/circle-label.wav",
+      "bytes": 29022,
+      "sha256": "a7b466ee5b10fa8d8dd4a35382044f72f02d4beb55b50ccd30bbdb9a11a7a52e"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/audio/square-description.wav",
+      "bytes": 98126,
+      "sha256": "ab1bad465984f3222a11a5e0e055917903d20a98d9e08fca740f3de65590e30c"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/audio/square-label.wav",
+      "bytes": 31252,
+      "sha256": "2a32955005cda2dc5a81abe5606d15fa079acd6d159aa1083585767affba74cf"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/audio/triangle-description.wav",
+      "bytes": 95896,
+      "sha256": "6463f1a27c44fa5f18d1315e178e6feeb0b8fa99d06c5c1df2983e9b97014899"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/audio/triangle-label.wav",
+      "bytes": 42398,
+      "sha256": "708609eced1e34e48ac0a4840cb3eb7594b9eddfae805ff3ab76cbcdfc911d7a"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/audio/tutorial-overview.wav",
+      "bytes": 552864,
+      "sha256": "66fd4c36025f99bb2565ddf7a81649ba5c9b00290f435efd4675a85c7ed5ffcb"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/diagram.json",
+      "bytes": 13532,
+      "sha256": "604b77225ebc68cf5ec14b030d63f10b88ecfebdda0fd808001c2012823267aa"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/manifest.json",
+      "bytes": 2374,
+      "sha256": "3903829c791b37a3dc3928df0ad632e9302e4101fa7a075915b9c11fa9ae54a8"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/source-preview.png",
+      "bytes": 12004,
+      "sha256": "431d36840134132c02317fa0919e5e62b3d1b835d33f35d4287e8f39639b01fa"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/tutorial/source.svg",
+      "bytes": 3650,
+      "sha256": "be3b06fe2953584672241e24880e62fe04acdaae943f94505749715acad2a271"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/collection-description.wav",
+      "bytes": 158312,
+      "sha256": "3deb7a1986b562c7972003ea0b162240190983787b16e4d81507de840d182e8b"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/collection-label.wav",
+      "bytes": 37938,
+      "sha256": "09827d53d6ebfe9acf6aa66d27906985d2f7a3ad9a464715bec1a8daf06ab47a"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/collects-label.wav",
+      "bytes": 60230,
+      "sha256": "770853581ce764f0f1480fd6bdb36afe66c0cd1b2e4f4edeb750c0a6c1b6a8ac"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/condensation-description.wav",
+      "bytes": 187290,
+      "sha256": "b2c1ae652fff05ce9a8306ada8e71a569626f5f0994d2d829e2c79e686334cbb"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/condensation-label.wav",
+      "bytes": 53542,
+      "sha256": "f9c6fede18bd47117acb70eac4c3a1bf574badf119427b7c774bec9bf5c36b07"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/condenses-label.wav",
+      "bytes": 84750,
+      "sha256": "ee2b006556b220987bd73f9b28e2b82f0c2ddedbf10f75774dc3fad724c3cd39"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/evaporates-label.wav",
+      "bytes": 89208,
+      "sha256": "f84ab7364f98fccb0942e577b0fdcaaf75c61c93e7a625bfdd472d24641e6f55"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/evaporation-description.wav",
+      "bytes": 138250,
+      "sha256": "13809f805f8a55a4d4f940d15adbc59028f94d42744d7781145f8e71288f9455"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/evaporation-label.wav",
+      "bytes": 51314,
+      "sha256": "b0d6dd1907556c324d72fa34469ca66c609f009501da4f46a5171f528f9036eb"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/falls-label.wav",
+      "bytes": 53542,
+      "sha256": "1f14eb5594e5f2d5ac2d6410da4338d8810441fbaf1ed1e43ee1aaa32140390e"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/precipitation-description.wav",
+      "bytes": 211810,
+      "sha256": "77b2783515f8960791274069da87da10a74627d49fd2acc8bfcd76d7083885fe"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/precipitation-label.wav",
+      "bytes": 51314,
+      "sha256": "f98378d4c9c1b6e4c7766cd26ddcf3943a291097648e75caa9d3f1bf7b1fd8f9"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/q-after-evaporation-question.wav",
+      "bytes": 102584,
+      "sha256": "fd24bea44dbed867e29e2286cfa6f7ee5c881a21f88abd6925edce16fffc3ba2"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/q-two-steps-question.wav",
+      "bytes": 176144,
+      "sha256": "698d429a939181b20fc571986028e6ace3bd4567506ad4ab7dd17a02bbdd1fbf"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/audio/water-cycle-overview.wav",
+      "bytes": 548406,
+      "sha256": "bc7abe8a5a0bb518b60c067393ff6a666772b8b142354a1cea930d3d5dffc183"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/diagram.json",
+      "bytes": 16582,
+      "sha256": "83092f12df8635fd15c9e8dc8d1578d7896b73d45b828a9a06c52e220e6e1801"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/manifest.json",
+      "bytes": 3983,
+      "sha256": "582672442c6d76adba531bdbed66fd5321c6b867e9fd2648fccffa456c4b0057"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/source-preview.png",
+      "bytes": 11018,
+      "sha256": "ece8dac5232a1aba587e9835c2549777577d63d306d22dab35d5a2b24f0f085e"
+    },
+    {
+      "path": "entry/src/main/resources/rawfile/samples/water-cycle/source.svg",
+      "bytes": 2493,
+      "sha256": "111d60536b14d49285fafa57e66c8f80261c46fa26a5f170002df8732f50a0f3"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/test/List.test.ets",
+      "bytes": 185,
+      "sha256": "229d9724b576740a3956d59c1c31759a7bb7c99cf60c441755fa254fe38d44be"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/test/Native.test.ets",
+      "bytes": 15126,
+      "sha256": "ae05e2c8e21f0d64b75368e4d2fae931dcc63a89098db2dc876e52ef5303ae8b"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/test/PackageExporter.test.ets",
+      "bytes": 3937,
+      "sha256": "9a5c5768089ed5398640d38f644cb74c1271ac03a76ab9a729be8f4f2e091b2e"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/AudioBenchmark.ets",
+      "bytes": 6892,
+      "sha256": "de3a966cb385e055e7ccd157f8ce10f4fa69a308732679c5e206e3b48997c1f9"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/AudioControls.ets",
+      "bytes": 8658,
+      "sha256": "c47dcc36c3ad36c61b388303e873e8ed8075c5b58d272849f4a2393a026e7138"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/FailureRunner.ets",
+      "bytes": 4404,
+      "sha256": "25c25f5f92f09f45866f1cc9049067ee8fad7936a1b403d7641defbc3e9b2a34"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/NativeContext.ets",
+      "bytes": 818,
+      "sha256": "8923f98f2a9511207e5a844f64e970a7e1685857ca885804cd86a655d6785bc6"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ets",
+      "bytes": 2410,
+      "sha256": "890bf2f7c17ea9f09d2c877ba036e9573d161827ebad5d53ae1893027272d8db"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/PreparationRunner.ets",
+      "bytes": 6460,
+      "sha256": "223dcd5d6c71b74b4af77739094ab9571d9e7df6769134018154e6ae38693021"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/RecoveryRunner.ets",
+      "bytes": 8261,
+      "sha256": "44a0ce425615c0b25d295fb2b9064d11f1c9cdd62db400ea6bddab1092f05df9"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/RestoreBenchmark.ets",
+      "bytes": 6149,
+      "sha256": "f6277cf12d1a484822e26dc102ccb75913b8536f15cc01f5b02ff9bca60578ae"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/TransactionFailureRunner.ets",
+      "bytes": 5979,
+      "sha256": "220fadd3e3af7fd2cd35007b6d0a61ef00642ba3d61baf7e3716cacea33151fd"
+    },
+    {
+      "path": "entry/src/ohosTest/module.json5",
+      "bytes": 137,
+      "sha256": "be8c3e962f0a5afa3bd016eef08d59f2e244cd689443aa2250c5e5c376ffa805"
+    },
+    {
+      "path": "hvigor/hvigor-config.json5",
+      "bytes": 128,
+      "sha256": "35a786bd2ff9830eee25d5e2349dcd57c92a5d27789874c0f8f680c553ff0a89"
+    },
+    {
+      "path": "hvigorfile.ts",
+      "bytes": 227,
+      "sha256": "383227660c07fa9335caf3e65b8975c65fcbcc8b910ba84d0bc67b22afcd56cd"
+    },
+    {
+      "path": "oh-package-lock.json5",
+      "bytes": 975,
+      "sha256": "6a4eb402fbc7c2a5b63e6a73b5ea6cdc5e1c1d60eaa022ffb6778020ee81f5a5"
+    },
+    {
+      "path": "oh-package.json5",
+      "bytes": 224,
+      "sha256": "978c6a59a1a75c179c163a8fb17c7a20a0b2b48ee22e2a345d989d139ff0330a"
+    }
+  ],
+  "gitHeadAtBuild": "eb27a5cf33e6e261b37a7d3a5e3808441c8d0387",
+  "workingTreeDirty": true,
+  "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+}

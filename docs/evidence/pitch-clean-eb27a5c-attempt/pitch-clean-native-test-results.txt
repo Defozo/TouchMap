@@ -1,0 +1,366 @@
+
+OHOS_REPORT_SUM: 15
+OHOS_REPORT_STATUS: class=TouchMapNative
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=1
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_hash_uses_platform_SHA256
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=1
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_hash_uses_platform_SHA256
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=29
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=2
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=bundled_geometry_and_questions_pass_contract
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=2
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=bundled_geometry_and_questions_pass_contract
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=124
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=3
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=hole_boundaries_and_viewport_roundtrip
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=3
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=hole_boundaries_and_viewport_roundtrip
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=7
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=4
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=boundary_hysteresis_retains_jitter_but_releases_clear_crossing
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=4
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=boundary_hysteresis_retains_jitter_but_releases_clear_crossing
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=9
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=5
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_English_resources_resolve_and_keep_dynamic_values_literal
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=5
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_English_resources_resolve_and_keep_dynamic_values_literal
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=8
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=6
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=touch_and_pause_never_submit_and_checkpoint_reloads
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=6
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=touch_and_pause_never_submit_and_checkpoint_reloads
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=135
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=7
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=duplicate_submission_is_idempotent_and_stale_update_rolls_back
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=7
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=duplicate_submission_is_idempotent_and_stale_update_rolls_back
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=158
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=8
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=changed_relation_invalidates_question_and_late_result
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=8
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=changed_relation_invalidates_question_and_late_result
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=38
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=9
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=undo_to_published_content_preserves_the_accepted_revision
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=9
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=undo_to_published_content_preserves_the_accepted_revision
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=1693
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=10
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=failed_draft_asset_restore_keeps_saved_material_and_cleans_staging
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=10
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=failed_draft_asset_restore_keeps_saved_material_and_cleans_staging
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=542
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=11
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=portable_paths_reject_traversal_and_reserved_names
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=11
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=portable_paths_reject_traversal_and_reserved_names
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=25
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=12
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=shared_file_wants_accept_one_local_uri_and_reject_remote_or_multiple_streams
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=12
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=shared_file_wants_accept_one_local_uri_and_reject_remote_or_multiple_streams
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=39
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=13
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_controls_open_settings_and_return_to_library
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=13
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_controls_open_settings_and_return_to_library
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=9587
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=14
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=tutorial_labels_react_to_each_step
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=14
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=tutorial_labels_react_to_each_step
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=19122
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=15
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=local_deletion_removes_assets_progress_and_events
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: current=15
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=local_deletion_removes_assets_progress_and_events
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=173
+
+
+OHOS_REPORT_STATUS: class=TouchMapNative
+OHOS_REPORT_STATUS: suiteconsuming=31689
+
+
+OHOS_REPORT_SUM: 3
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+
+
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+OHOS_REPORT_STATUS: current=16
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_compression_roundtrips_root_paths_crc_and_repetitive_content
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+OHOS_REPORT_STATUS: current=16
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_compression_roundtrips_root_paths_crc_and_repetitive_content
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=3332
+
+
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+OHOS_REPORT_STATUS: current=17
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_export_handles_more_than_50MiB_expanded_with_portable_ratio
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+OHOS_REPORT_STATUS: current=17
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_export_handles_more_than_50MiB_expanded_with_portable_ratio
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=6313
+
+
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+OHOS_REPORT_STATUS: current=18
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_export_rejects_unsafe_duplicate_and_noncanonical_required_paths
+OHOS_REPORT_STATUS_CODE: 1
+
+
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+OHOS_REPORT_STATUS: current=18
+OHOS_REPORT_STATUS: id=JS
+OHOS_REPORT_STATUS: numtests=18
+OHOS_REPORT_STATUS: stream=
+OHOS_REPORT_STATUS: test=native_export_rejects_unsafe_duplicate_and_noncanonical_required_paths
+OHOS_REPORT_STATUS_CODE: 0
+OHOS_REPORT_STATUS: consuming=54
+
+
+OHOS_REPORT_STATUS: class=TouchMapPackageExporter
+OHOS_REPORT_STATUS: suiteconsuming=9699
+
+
+OHOS_REPORT_RESULT: stream=Tests run: 18, Failure: 0, Error: 0, Pass: 18, Ignore: 0
+OHOS_REPORT_CODE: 0
+OHOS_REPORT_STATUS: taskconsuming=41388
+
+TestFinished-ResultCode: 0
+TestFinished-ResultMsg: your test finished!!!
+user test finished.

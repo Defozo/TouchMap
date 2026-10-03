@@ -1,0 +1,3 @@
+TestFinished-ResultCode: 0
+TestFinished-ResultMsg: Audio benchmark 100/100, p95 20 ms
+user test finished.

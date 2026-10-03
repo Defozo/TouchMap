@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "beforeFixtureSynchronousMs": 4179,
+  "afterFixtureTotalMsWithYields": 110,
+  "beforeExportMs": 4335,
+  "afterExportMs": 1291,
+  "fixtureBytes": 18874368,
+  "fixturePattern": "byte[i] = i & 255",
+  "expectedFixtureSha256": "0b90571decc49a1bd765fcb126a0f2d945c20cf82b3bab6ec796e697bf269dbe",
+  "diagnosticProductionHapSha256": "626b03b110f279d3af09cae23ac141226365d5d4d5035b0ee63037c997cbb5f0",
+  "interpretation": "The synthetic fixture previously blocked the app main thread for4.179seconds before calling the exporter. TypedArray block copies with event-loop yields reduce fixture preparation to110ms. Both isolated runs passed original export assertions. This repairs test fixture responsiveness; it does not claim a production export defect was fixed.",
+  "caveat": "Original THREAD_BLOCK_6S run had no usable stack; exact instruction at that termination is not established.",
+  "finalSuite": {
+    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
+    "testHapSha256": "46b55fb6e64508c484cb14058a41764e7b6d95fa2706bb225a3bc67822fd22d3",
+    "nativeTestsPassed": 18,
+    "exactFixtureDigestAssertionPassed": true,
+    "fixtureWithYieldsMs": 32,
+    "digestAndPreparationUntilPackMs": 35,
+    "packMs": 845,
+    "evidence": "final-suite-phases.txt"
+  }
+}

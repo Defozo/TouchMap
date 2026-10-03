@@ -1,0 +1,20 @@
+{
+  "startedUtc": "2026-10-04T01:00:27.773318+02:00",
+  "purpose": "Test17 uses deterministic1MiB pattern blocks and event-loop yields; production626HAP unchanged. Same18MiB i&255 fixture, three audioentries and original export assertions. The independently computed SHA256 fixture assertion was added afterward for the final suite.",
+  "productionHapSha256": "626b03b110f279d3af09cae23ac141226365d5d4d5035b0ee63037c997cbb5f0",
+  "testHapSha256": "1838c0edd13604944d3fdace5969535be581f43aaf34e17142d5b92711aa3ac2",
+  "baselineSourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "c8dabf95d87bafa24b1339e5411c42317c01bda08991d00728ed177e0e240d66",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7345246,
+    "gitHeadAtBuild": "eb27a5cf33e6e261b37a7d3a5e3808441c8d0387",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "diagnosticTestSourceSha256": "467948cc2e3a815bc23fd215ad4373d2e2bd9cff9477e5b3b7bec0dd0da10f77",
+  "overriddenStagePath": "entry/src/ohosTest/ets/test/PackageExporter.test.ets",
+  "previousStageTestSourceSha256": "4f337be430c647747a7a20d4871a6201c46477412b5e43123e6d95bf967af745",
+  "finishedUtc": "2026-10-04T01:00:32.704241+02:00",
+  "resultSummary": "\nOHOS_REPORT_SUM: 1\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\n\n\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\nOHOS_REPORT_STATUS: current=1\nOHOS_REPORT_STATUS: id=JS\nOHOS_REPORT_STATUS: numtests=1\nOHOS_REPORT_STATUS: stream=\nOHOS_REPORT_STATUS: test=native_export_handles_more_than_50MiB_expanded_with_portable_ratio\nOHOS_REPORT_STATUS_CODE: 1\n\n\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\nOHOS_REPORT_STATUS: current=1\nOHOS_REPORT_STATUS: id=JS\nOHOS_REPORT_STATUS: numtests=1\nOHOS_REPORT_STATUS: stream=\nOHOS_REPORT_STATUS: test=native_export_handles_more_than_50MiB_expanded_with_portable_ratio\nOHOS_REPORT_STATUS_CODE: 0\nOHOS_REPORT_STATUS: consuming=1409\n\n\nOHOS_REPORT_STATUS: class=TouchMapPackageExporter\nOHOS_REPORT_STATUS: suiteconsuming=1409\n\n\nOHOS_REPORT_RESULT: stream=Tests run: 1, Failure: 0, Error: 0, Pass: 1, Ignore: 0\nOHOS_REPORT_CODE: 0\nOHOS_REPORT_STATUS: taskconsuming=1409\n\nTestFinished-ResultCode: 0\nTestFinished-ResultMsg: your test finished!!!\nuser test finished.\n"
+}

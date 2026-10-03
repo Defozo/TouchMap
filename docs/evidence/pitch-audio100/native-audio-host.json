@@ -1,0 +1,34 @@
+{
+  "device": "127.0.0.1:55555",
+  "scope": "Linux build host snapshots before and after the native audio run. Load averages are not per-emulator CPU measurements.",
+  "before": {
+    "at": "2026-10-03T22:34:53.254723+00:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [
+      4.6240234375,
+      7.63525390625,
+      8.45947265625
+    ],
+    "buildProcesses": {
+      "java": 0,
+      "hvigorw": 0,
+      "clang": 0,
+      "ninja": 0
+    }
+  },
+  "after": {
+    "at": "2026-10-03T22:35:31.216616+00:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [
+      4.47802734375,
+      7.2763671875,
+      8.30859375
+    ],
+    "buildProcesses": {
+      "java": 0,
+      "hvigorw": 0,
+      "clang": 0,
+      "ninja": 0
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "recordedUtc": "2026-10-03T23:01:22.982326+00:00",
+  "status": "superseded-interrupted-after-native-pass",
+  "reason": "Root requested replacing the synchronous large-export test fixture after a separate PRIMARY watchdog diagnostic. This SECOND clean build passed all 18 native tests. Only its host orchestrator was paused, then terminated at root request before audio5. No app or guest process was killed.",
+  "commit": "eb27a5cf33e6e261b37a7d3a5e3808441c8d0387",
+  "appSourceSha256": "c8dabf95d87bafa24b1339e5411c42317c01bda08991d00728ed177e0e240d66",
+  "independentHapSha256": "38698be7e4d0be7b5d1ce708d392f8236ca7e76c6ed6b2f76a4bbb77b40d4cb5",
+  "hostPassed": 51,
+  "backendPassed": 93,
+  "typecheckPassed": true,
+  "buildAndSignaturePassed": true,
+  "nativeTests": {
+    "run": 18,
+    "failed": 0,
+    "errors": 0,
+    "passed": 18
+  },
+  "audioControlsExecuted": false,
+  "ordinaryLibraryCheckExecuted": false,
+  "appFilesUnmodifiedFromCommittedCheckout": true,
+  "historicalCleanEvidenceRestoredExactly": true,
+  "rootHapUnchanged": true
+}

@@ -10,6 +10,13 @@ import subprocess
 import time
 import wave
 
+def read_pulse(kind):
+    try:
+        return json.loads(subprocess.check_output(
+            ['pactl', '-f', 'json', 'list', kind], timeout=10))
+    except subprocess.TimeoutExpired:
+        raise SystemExit('PulseAudio did not respond within 10 seconds. Check the selected PULSE_SERVER and emulator output before recording.')
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', required=True)
@@ -22,12 +29,12 @@ def main():
     pids = [row.strip().split(None, 1)[0] for row in rows
             if row.strip().split(None, 1)[1].startswith('qemu-system-')
             and f'hostfwd=tcp:{args.device}-:' in row]
-    streams = json.loads(subprocess.check_output(['pactl', '-f', 'json', 'list', 'sink-inputs']))
+    streams = read_pulse('sink-inputs')
     matches = [stream for stream in streams if stream.get('properties', {}).get('application.process.id') in pids]
     if len(matches) != 1:
         raise SystemExit('Expected exactly one PulseAudio output stream for the selected emulator.')
     selected = matches[0]
-    sinks = json.loads(subprocess.check_output(['pactl', '-f', 'json', 'list', 'sinks']))
+    sinks = read_pulse('sinks')
     sink = next(item for item in sinks if item['index'] == selected['sink'])
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,23 @@
+{
+  "startedUtc": "2026-10-03T22:34:52.398027+00:00",
+  "device": "127.0.0.1:55555",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "e4ece7ceb4b8dc64910e4745d23805af544cf53604a9cf2ff65c41e1c6fc64b7",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7345396,
+    "gitHeadAtBuild": "0092b9cc2c0f5accc5f754d74940ba1c06003230",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "runner": "scripts/test-audio.sh",
+  "runnerSha256": "38a36d097b723cc05f11c37f10aca3f706c35cab5a8609352b6301adc580b86a",
+  "count": 100,
+  "outputIsolation": "Byte-identical standard runner copied under an ignored private root so historical canonical reports remain unchanged.",
+  "productionHapSha256": "d1ad20df4d310c6c707ff82e3458ddf20583e062ac18d4ad7506b4da886514f3",
+  "testHapSha256": "e0949d2275278318c72420990b2bf7b0eb2ef49b22e38d57342d7165f0f3778e",
+  "installedArtifactHashesMatched": true,
+  "finishedUtc": "2026-10-03T22:35:31.501208+00:00",
+  "runnerExitCode": 0,
+  "status": "passed"
+}

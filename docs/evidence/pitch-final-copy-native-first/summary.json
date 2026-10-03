@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "reason": "THREAD_BLOCK_6S",
+  "case": "native_export_handles_more_than_50MiB_expanded_with_portable_ratio",
+  "previousCase": "native_compression_roundtrips_root_paths_crc_and_repetitive_content passed in5651ms",
+  "guestMemoryAvailableKiB": 3142060,
+  "stackCapture": "Failed: process is dumping",
+  "interpretation": "Framework main-thread watchdog terminated app during test17. No out-of-memory cause or exact blocked product function established. The test begins by synchronously filling an18MiB synthetic fixture. Retained before unchanged-artifact retry."
+}

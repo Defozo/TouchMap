@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T23:08:28.767893+00:00",
+  "commit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+  "productionHapSha256": "b523156d6746db760ca34285744d27e08e8b3332f6ac7d0c4c7133e928e3ccc2",
+  "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7346167,
+    "gitHeadAtBuild": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "scope": "Independent clean-checkout HAP installed over the existing second installation with data retained. Native Hypium, actual audio controls and ordinary Library launch are executed against these independently built bytes.",
+  "nativeTests": {
+    "run": 18,
+    "failed": 0,
+    "errors": 0,
+    "passed": 18
+  },
+  "testHapSha256": "67000f9521bef464005897bba0e41a059227132786e9a0251438d1fcb027b552",
+  "audioControls": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "stop_before_dwell",
+        "passed": true,
+        "detail": "Observed 0 native onset callbacks after cancellation."
+      },
+      {
+        "name": "rapid_replacement_only_latest_target",
+        "passed": true,
+        "detail": "Native PCM targets: evaporation"
+      },
+      {
+        "name": "pause_resume_finishes_same_recording",
+        "passed": true,
+        "detail": "Playing local PCM recording | Recording paused. Resume keeps your place. | Recording resumed at the saved position. | Recording finished"
+      },
+      {
+        "name": "replace_pending_batched_write_finishes_latest_only",
+        "passed": true,
+        "detail": "Replaced actual pending 7680-byte native write after 960-byte onset; targets: collection,evaporation; Playing local PCM recording | Playing local PCM recording | Recording finished"
+      },
+      {
+        "name": "four_byte_final_pcm_tail_finishes",
+        "passed": true,
+        "detail": "964 PCM bytes: Playing local PCM recording | Recording finished; failures: "
+      }
+    ]
+  },
+  "ordinaryLibraryVisible": true,
+  "finishedUtc": "2026-10-03T23:09:39.047776+00:00"
+}

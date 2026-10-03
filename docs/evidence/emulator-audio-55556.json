@@ -11,7 +11,7 @@
       }
     ]
   },
-  "controlNode": "crw-rw---- 1 system audio 116,   0 2026-10-03 20:17 /dev/snd/controlC0",
+  "controlNode": "crw-rw---- 1 system audio 116,   0 2026-10-04 06:39 /dev/snd/controlC0",
   "scope": "Development emulator image configuration; no application privilege changes; audio services restarted, app not stopped.",
   "restore": "python3 scripts/configure-emulator-audio.py --device 127.0.0.1:55556 restore"
 }

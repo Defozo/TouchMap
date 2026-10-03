@@ -1,0 +1,324 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-10-03T21:25:37.605709+00:00",
+  "scope": "Real native learner flow on the existing independent-build emulator installation; public v1.0.1 publication is verified separately.",
+  "device": "127.0.0.1:55556",
+  "installedProductionHapSha256": "145b9166cf022889322833c0e85d8db9dd2f94997cc942061c930fe689a8219e",
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+  "interfaceTextScalePercent": 200,
+  "checks": [
+    {
+      "name": "open_ready_material_and_accept_declaration",
+      "passed": true,
+      "evidence": [
+        "04-review.json",
+        "05-accepted.json"
+      ]
+    },
+    {
+      "name": "list_and_directed_connection",
+      "passed": true,
+      "evidence": [
+        "08-evaporation.json",
+        "11-connections.json",
+        "15-follow.json",
+        "connection.jpeg",
+        "condensation.jpeg"
+      ]
+    },
+    {
+      "name": "explicit_answer_submission",
+      "passed": true,
+      "evidence": [
+        "25-selected.json",
+        "27-correct.json",
+        "28-correct.json",
+        "correct-answer.jpeg"
+      ],
+      "result": "Condensation explicitly submitted; correct feedback and one submitted attempt."
+    },
+    {
+      "name": "restart_retains_completed_and_unsubmitted_context_offline",
+      "passed": true,
+      "evidence": [
+        "35-unsubmitted.json",
+        "36-restarted.json",
+        "44-resume.json",
+        "46-resume.json",
+        "50-resumed.json",
+        "saved-context.jpeg",
+        "restored-selection.jpeg"
+      ],
+      "result": "After actual force-stop/relaunch, saved context showed the first answer correct and the second question unfinished. Resume restored Selected: Precipitation and Current order: precipitation with Submit selected answer still available."
+    },
+    {
+      "name": "network_restored",
+      "passed": true,
+      "evidence": [
+        "offline-on.json",
+        "offline-off.json"
+      ]
+    },
+    {
+      "name": "existing_profile_preserved",
+      "passed": true,
+      "evidence": [
+        "53-settings.json",
+        "54-library.json"
+      ],
+      "result": "Text size200%, dwell1500ms and scan interval5000ms were read, not changed; app returned to Library."
+    }
+  ],
+  "dataHandling": "No uninstall, wipe, replacement package or existing draft modification. Changes were limited to local acceptance and learning progress for the bundled ready water-cycle lesson.",
+  "setupRecovery": "An initial test transport exception incorrectly used the host-forwarded port55556 instead of guest55555. The dedicated secondary serial console removed only TM_OFFLINE; subsequent correctly scoped isolation and final cleanup were read back. No app data or host firewall changed.",
+  "evidence": [
+    {
+      "path": "docs/evidence/pitch-demo/01-review.json",
+      "sha256": "0b30ba9afaa25ed10a4243175f8eb1e9c934fc4fa724f88af6329b32aa7df09c"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/02-review.json",
+      "sha256": "ef872ad9fe7bf96f00fd43ca836d82130c6b84b8d921f0d8115a8f42f1c15060"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/03-review.json",
+      "sha256": "bad50d7601dc9aca0be121d80fcf1fd21d124048a0c4aa7a02d0b8f657364a88"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/04-review.json",
+      "sha256": "b4d1b5d6a1a80ecb06cdf004e3743b103c0bc4c5b5153fc6e0759c8262d6009a"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/05-accepted.json",
+      "sha256": "c3d2f79029c94354f10b2d7b1ed9a22c23675421a7ae5ee4feeaf4ed0ff54636"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/06-list.json",
+      "sha256": "34f1ac2db2fc8c1736ad88fec76accf7127ce54fe50a457d7a8cdd5686cbbac0"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/07-list.json",
+      "sha256": "5cb385921fc62dfe78f0ff65b2fd466c72e3eafe870c9c85ebef47fdf703bece"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/08-evaporation.json",
+      "sha256": "ff1b8b9f329811ccfced770b68c91907fe2eb9441b3b3437edc11045ec3aed70"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/09-connections.json",
+      "sha256": "ff1b8b9f329811ccfced770b68c91907fe2eb9441b3b3437edc11045ec3aed70"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/10-connections.json",
+      "sha256": "35f03b140d96e517c2df9e30abfa6f274ea58bc83319ab6394b80c3167c7bc79"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/11-connections.json",
+      "sha256": "47d3014e6d60c1994975b9aa1bcfb7230457ba08a413e789679188b5436eae6a"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/12-follow.json",
+      "sha256": "b7d34e3fbfb9e06c58e8a15aaafba2bc5c6928b58c91af8c9a7df8c88de663c0"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/13-follow.json",
+      "sha256": "e05615a68f92697c2321701e3e6d0cfdcfb777e54a6e686b84f928f6ed14679e"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/14-follow.json",
+      "sha256": "ef6fc3a1ba252853e882b3c89e01615d7249ae468f3f63af32f1963286fd803f"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/15-follow.json",
+      "sha256": "b0c2322c77b9632fd7f80ab7262f5574c196a38dcb3f321083cb19c671d4732c"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/16-lesson.json",
+      "sha256": "f3444037f7ae57af49f8c3549fb6fa98423fc9adc130553a4c26531dda0d98c2"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/17-lesson.json",
+      "sha256": "6452ec5a0a88d521f679872aeea0cb3e6b5e860054a49c609ab0bfdd99b24bcd"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/18-lesson.json",
+      "sha256": "747b444b94a26b61f6e92c71ba4ac5f83cb98dd4bddd559e1403be263823adfe"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/19-lesson.json",
+      "sha256": "47dca11bcc4f4718548c8b3bf8ac14e4676b9c466e571c5f06fa59326c8ec0f3"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/20-lesson.json",
+      "sha256": "00d6ccf6259522dc4e870695c8b80c6bd18917712bc7aa939862277b1b0a47dd"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/21-questions.json",
+      "sha256": "2d0f4f62c0122149324d7a2227a260c8f8e2e41ccd81712a01b9abe8a5fa1de9"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/22-question-options.json",
+      "sha256": "f5115d5951e9cb1dc10f0706720c1aab7cac978bb5f76b3bd9bca87583dcac66"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/23-first-question.json",
+      "sha256": "cbed925095d88ebe3d5a2a98f9f0feecd71bb024e78101a600d3bb44134a105a"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/24-first-options.json",
+      "sha256": "9f6f26cf32cf27bfb8406ea5c040299c198d3ae989d73659fa229aa14ee1f87d"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/25-selected.json",
+      "sha256": "4d246c96ccb24cfb0aee0f86d67dbac3d6eeaf44991ca3244f2edde6c37b4676"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/26-submit.json",
+      "sha256": "59f2225fbdf3fdab47762bee907b4d109ff57eff2e553ca95ac242e2a17ecec8"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/27-correct.json",
+      "sha256": "3f48da60556a737914110aa5c14b8ea24c4cf02344cb472652f0a715571b9718"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/28-correct.json",
+      "sha256": "bb8e9d2b012099dbd52014a2bf04704bd8df7398124a43e0dd89c6003cc0280a"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/29-correct.json",
+      "sha256": "be8fd37ea7b106422f8bb451d25ebd170f8f7e2222a4b6af615eb6d951530f9a"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/30-second.json",
+      "sha256": "0e6de743c0dc7d433590795bb72b93c0546030a6a773cc149281c1097270cd68"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/31-second.json",
+      "sha256": "cb0ad05f37937677af39c73fc617a4521b58b2667b734b7ac11046276bdb208a"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/32-second-question.json",
+      "sha256": "911765e253d32036cd9ace6b59a0e58a674c8040697223dedc358607d4537d96"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/33-second-options.json",
+      "sha256": "09b58ca0ad4a8926f2a9ff08eebfdeb2a880b28e98dcd31d777b36bdfbe3fbfc"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/34-second-options.json",
+      "sha256": "4234c9bd63be2cd31667bd4d2fbf66b3e2a6e299d3a640f93864b5d22f0ca70e"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/35-unsubmitted.json",
+      "sha256": "ce6693864b7a527729f45c7f2d214b33c07da1ee738fbfca546e2124333e4391"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/36-restarted.json",
+      "sha256": "bb74b394d1dae1addc383e02dd3e5e1de62e53de05abfec5fce38a28710783d6"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/37-library.json",
+      "sha256": "7761dc826c0d20a6b5a64aad8606ae11b4a8ef9b6dc8b0c9b46d12f39c53af1e"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/38-filter.json",
+      "sha256": "c35a9cb6b7cb0509f6b9bac5ede9a8662bafde18d2144543b2efe29b44d6bed9"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/39-filter.json",
+      "sha256": "2f27077634be41dfde69978f10bc73e156767ddf27b0117a834a921126500167"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/40-filter.json",
+      "sha256": "0eecd9e46eb688431454f006603bd3120594b9bf1e6db55559b2be3d6828cbb3"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/41-library.json",
+      "sha256": "7195d8d00ec22f42338e49dc6ddb5a44d669b51737ab18399c6701a89dbc802b"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/42-library.json",
+      "sha256": "83674afe4ba209ee496de378073ce446c0c3e1bb6c70f953e7b386191e4faf32"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/43-ready.json",
+      "sha256": "182e2c9910dd6f623fea16d07829991a007e1aa52c3e4889f1bc3c8dc94ba1bc"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/44-resume.json",
+      "sha256": "4ea91f14d21237e52736b7257f8e29868c27f3090b032a29882730ea9d10ad9e"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/45-resume.json",
+      "sha256": "9dcf3aa668484652843f498a9971c3dbc1357c27a10748cdc767559a063869fe"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/46-resume.json",
+      "sha256": "41173a6aab6a9693e82d8e1ae3c0ce01f17a8190b710014974803cbee3e5d822"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/47-resumed.json",
+      "sha256": "2d0f4f62c0122149324d7a2227a260c8f8e2e41ccd81712a01b9abe8a5fa1de9"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/48-resumed.json",
+      "sha256": "de7220f5864fc6dc9b9458097cadcd741d8222fc076dbd215a09ce229da95861"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/49-resumed.json",
+      "sha256": "9d38c87f6da40ebbec0da148020e8a6df4b7b5f3298b9ce26a3c6480ce9b5230"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/50-resumed.json",
+      "sha256": "d5dc0d729df3ab7968d21421fd4e4d048af35516e256fd342cc196ea4bd15435"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/51-library.json",
+      "sha256": "bb74b394d1dae1addc383e02dd3e5e1de62e53de05abfec5fce38a28710783d6"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/52-settings.json",
+      "sha256": "686457f984055e0d3b831503bedcebfddaacaf22d88721f0115e823fce161e28"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/53-settings.json",
+      "sha256": "9f64635aa1462c0bc235ddd8fbc89b0a4011af313cdbb3adab7a9bb26964c2d4"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/54-library.json",
+      "sha256": "bb74b394d1dae1addc383e02dd3e5e1de62e53de05abfec5fce38a28710783d6"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/condensation.jpeg",
+      "sha256": "588b5ad3656778bacb0016cd7b052ce9419d62a9182ba152e0ddab0581db0e53"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/connection.jpeg",
+      "sha256": "82388173316d8710a3c5e47ad5d1e0899ae98f0cfc7c0e9e8c6d3c878e85fbec"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/correct-answer.jpeg",
+      "sha256": "a28639dc11f07c9a0875a5f6ab8e4f2f7b570064fac48e0eb41598a384e7ab17"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/offline-off.json",
+      "sha256": "8955559f671d6ba07683e7e105a6bf97e49015e0a23392888939a986adfe0769"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/offline-on.json",
+      "sha256": "f908e4f7511fbd50b40b963658b15c22ad250e89128f52046b78cfdd571cd3a5"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/offline-recovery.json",
+      "sha256": "eb0fb00ba5eabc4100564f8c7127b5410a3e30af07fba4fc6531f6c2681a9dac"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/restored-selection.jpeg",
+      "sha256": "be516b01260dfee5c44033e3b9cf8accda20331f43dbec1445d5185b68e108ca"
+    },
+    {
+      "path": "docs/evidence/pitch-demo/saved-context.jpeg",
+      "sha256": "d0c5d276c76bdc79b0ea11893973b3a101c2175517ad61b107855a9c5f5c24f7"
+    }
+  ]
+}

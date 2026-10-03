@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "device": "127.0.0.1:55555",
+  "requested": 100,
+  "error": "Host runner exited 1 before receiving a native final report."
+}
