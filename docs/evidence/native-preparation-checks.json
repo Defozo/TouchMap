@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T17:54:21.486241+00:00",
+  "productionHapSha256": "6bac1571c32d0fa3ea6e5bcd9d2596c767194c0db3b06b648d6fe51c877e00fa",
+  "testHapSha256": "3b91372d317895c0e5dfe8576691fd3a4d09fe3bedaac75559a00d3584562e1d",
+  "fixture": "tests/native-preparation/server.py on host127.0.0.1:8089; no provider calls",
+  "nativeReport": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "late_response_cannot_replace_new_revision",
+        "passed": true,
+        "detail": "Original revision 1; committed revision 2; late response adopted=false."
+      },
+      {
+        "name": "cancelled_native_request_does_not_deliver_adoptable_result",
+        "passed": true,
+        "detail": "Native request rejected=true; fixture completed=1; remote cancellation observed=1."
+      }
+    ],
+    "error": "",
+    "scope": "Actual native HTTP transport, native revision guard and durable repository readback against a deliberately delayed loopback response. No provider inference; separate from full Editor UI testing."
+  },
+  "finishedUtc": "2026-10-03T17:54:27.548526+00:00"
+}

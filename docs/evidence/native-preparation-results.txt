@@ -1,0 +1,3 @@
+TestFinished-ResultCode: 0
+TestFinished-ResultMsg: {"status":"passed","checks":[{"name":"late_response_cannot_replace_new_revision","passed":true,"detail":"Original revision 1; committed revision 2; late response adopted=false."},{"name":"cancelled_native_request_does_not_deliver_adoptable_result","passed":true,"detail":"Native request rejected=true; fixture completed=1; remote cancellation observed=1."}],"error":"","scope":"Actual native HTTP transport, native revision guard and durable repository readback against a deliberately delayed loopback response. No provider inference; separate from full Editor UI testing."}
+user test finished.

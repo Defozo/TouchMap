@@ -1,0 +1,50 @@
+{
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T19:31:39.340629+02:00",
+  "productionHapSha256": "2cd71aa6ae39d202adb06d57c355a67c65bdd22c0eb85355418381b26fbc8d57",
+  "testHapSha256": "169115370528be52d396332f626488d6744d81ec1980dbe987f99a79ff01203b",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "7799bde9d2b6c450c258d5df95a6aa4df0557a028317ecfa8679ddb048a0e31a",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7340036,
+    "gitHeadAtBuild": "e79fee8783c446985abe911fdb975f5bcb7996e2",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "hostBefore": {
+    "at": "2026-10-03T19:31:39.961486+02:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [
+      5.85400390625,
+      6.8671875,
+      7.6982421875
+    ],
+    "buildProcesses": {
+      "java": 0,
+      "hvigorw": 0,
+      "clang": 0,
+      "ninja": 0,
+      "ffmpeg": 0
+    }
+  },
+  "status": "diagnostic_interrupted",
+  "hostAfter": {
+    "at": "2026-10-03T19:43:44.730776+02:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [
+      4.47216796875,
+      6.306640625,
+      7.294921875
+    ],
+    "buildProcesses": {
+      "java": 0,
+      "hvigorw": 0,
+      "clang": 0,
+      "ninja": 0,
+      "ffmpeg": 0
+    }
+  },
+  "finishedUtc": "2026-10-03T19:43:44.730882+02:00",
+  "interpretation": "Interrupted after API inspection showed onIdle is deferred idle readiness. 44 complete observations preserved; 43 UI checks acknowledged. This is not a100-sample completion or render-latency acceptance."
+}

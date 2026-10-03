@@ -110,3 +110,104 @@ def test_release_requires_review_of_exact_demo(candidate,change,expected):
     result,files=release.prepare(root,commit,hap,demo,verification)
     assert result['status']=='failed' and files=={}
     assert expected in result['failures'][0]
+
+
+def presentation_pptx(with_notes=True):
+    """Minimal one-slide OOXML package with real slide and notes relationships."""
+    p=release._PRESENTATION.PRESENTATION_NS;a=release._PRESENTATION.DRAWING_NS
+    r=release._PRESENTATION.OFFICE_REL_NS;rels=release._PRESENTATION.REL_NS
+    parts={
+        '[Content_Types].xml':'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"/>',
+        '_rels/.rels':f'<Relationships xmlns="{rels}"/>',
+        'ppt/presentation.xml':f'<p:presentation xmlns:p="{p}" xmlns:r="{r}"><p:sldIdLst><p:sldId id="256" r:id="rId1"/></p:sldIdLst></p:presentation>',
+        'ppt/_rels/presentation.xml.rels':f'<Relationships xmlns="{rels}"><Relationship Id="rId1" Type="{r}/slide" Target="slides/slide1.xml"/></Relationships>',
+        'ppt/slides/slide1.xml':f'<p:sld xmlns:p="{p}"/>',
+        'ppt/slides/_rels/slide1.xml.rels':f'<Relationships xmlns="{rels}"><Relationship Id="rId1" Type="{r}/notesSlide" Target="../notesSlides/notesSlide1.xml"/></Relationships>',
+        'ppt/notesSlides/notesSlide1.xml':f'<p:notes xmlns:p="{p}" xmlns:a="{a}"><p:cSld><p:spTree><p:sp><p:nvSpPr><p:nvPr><p:ph type="body"/></p:nvPr></p:nvSpPr><p:txBody><a:p><a:r><a:t>{"Explain this fixture slide." if with_notes else ""}</a:t></a:r></a:p></p:txBody></p:sp></p:spTree></p:cSld></p:notes>'}
+    return release.deterministic_zip({name:value.encode() for name,value in parts.items()})
+
+
+@pytest.fixture
+def presentation_candidate(candidate,monkeypatch):
+    root,commit,hap,demo,verification=candidate
+    pdf=root/'dist/deck.pdf';pdf.write_bytes(b'%PDF-1.7\nsynthetic page metadata fixture')
+    pptx=root/'dist/deck.pptx';pptx.write_bytes(presentation_pptx())
+    manifest={'reviewed':True,'language':'en','slideCount':1,
+        'pdf':{'path':'dist/deck.pdf','sha256':release.sha256(pdf.read_bytes())},
+        'pptx':{'path':'dist/deck.pptx','sha256':release.sha256(pptx.read_bytes())}}
+    (root/release._PRESENTATION.MANIFEST).write_text(json.dumps(manifest))
+    release.git(root,'add','docs');release.git(root,'commit','-m','Reviewed presentation fixture')
+    commit=release.git(root,'rev-parse','HEAD').decode().strip()
+    monkeypatch.setattr(release._PRESENTATION,'inspect_pdf',lambda path:1)
+    report=json.loads(verification.read_text());report['sourceCommit']=commit
+    report['presentation']=release._PRESENTATION.reviewed_presentation(root,release.source_files(root,commit))[0]
+    report['gates']['finalEnglishPresentation']={'status':'passed'}
+    verification.write_text(json.dumps(report))
+    return root,commit,hap,demo,verification
+
+
+def test_release_includes_exact_reviewed_pdf_editable_slides_and_notes(presentation_candidate):
+    root,commit,hap,demo,verification=presentation_candidate
+    result,files=release.prepare(*presentation_candidate)
+    assert result['status']=='ready'
+    details=json.loads(files['release-manifest.json'])['presentation']
+    assert details['pdf']['pages']==details['pptx']['slides']==details['pptx']['notes']==1
+    assert files['presentation/deck.pdf']==(root/'dist/deck.pdf').read_bytes()
+    assert files['presentation/deck.pptx']==(root/'dist/deck.pptx').read_bytes()
+    assert details['manifestSha256']==release.sha256(release.source_files(root,commit)[release._PRESENTATION.MANIFEST])
+    for row in files['SHA256SUMS'].decode().splitlines():
+        digest,path=row.split('  ',1);assert release.sha256(files[path])==digest
+
+
+@pytest.mark.parametrize('change,expected',[
+    ('pdf_hash','PDF hash'),('pptx_hash','PPTX hash'),('missing','Missing or empty'),
+    ('review','completed committed review'),('language','English with 1 to 10'),
+    ('pages','PDF page count'),('slides','PPTX slide count'),('notes','nonempty speaker notes'),
+    ('escape','safe dist-relative'),('size','10 MB upload limit'),
+    ('verification','differs from release verification')])
+def test_release_rejects_unreviewed_or_unusable_presentation(presentation_candidate,monkeypatch,change,expected):
+    root,commit,hap,demo,verification=presentation_candidate
+    path=root/release._PRESENTATION.MANIFEST;manifest=json.loads(path.read_text())
+    if change=='pdf_hash':(root/'dist/deck.pdf').write_bytes(b'%PDF-different')
+    elif change=='pptx_hash':(root/'dist/deck.pptx').write_bytes(presentation_pptx(False))
+    elif change=='missing':(root/'dist/deck.pdf').unlink()
+    elif change=='review':manifest['reviewed']=False
+    elif change=='language':manifest['language']='pl'
+    elif change=='pages':monkeypatch.setattr(release._PRESENTATION,'inspect_pdf',lambda path:2)
+    elif change=='slides':
+        manifest['slideCount']=2;monkeypatch.setattr(release._PRESENTATION,'inspect_pdf',lambda path:2)
+    elif change=='notes':
+        value=presentation_pptx(False);(root/'dist/deck.pptx').write_bytes(value)
+        manifest['pptx']['sha256']=release.sha256(value)
+    elif change=='escape':manifest['pdf']['path']='dist/../deck.pdf'
+    elif change=='size':
+        with (root/'dist/deck.pdf').open('r+b') as handle:handle.truncate(10_000_001)
+    else:
+        report=json.loads(verification.read_text());report['presentation']['pdf']['bytes']+=1
+        verification.write_text(json.dumps(report))
+    original=path.read_text();path.write_text(json.dumps(manifest))
+    if path.read_text()!=original:
+        release.git(root,'add','docs');release.git(root,'commit','-m','Invalid presentation fixture')
+        commit=release.git(root,'rev-parse','HEAD').decode().strip()
+        report=json.loads(verification.read_text());report['sourceCommit']=commit
+        verification.write_text(json.dumps(report))
+    result,files=release.prepare(root,commit,hap,demo,verification)
+    assert result['status']=='failed' and files=={}
+    assert expected in result['failures'][0]
+
+
+@pytest.mark.parametrize('uncommitted',[False,True])
+def test_declared_presentation_cannot_be_silently_omitted(candidate,uncommitted):
+    root,commit,hap,demo,verification=candidate
+    report=json.loads(verification.read_text());report['gates']['finalEnglishPresentation']={'status':'passed'}
+    verification.write_text(json.dumps(report))
+    if uncommitted:(root/release._PRESENTATION.MANIFEST).write_text('{}')
+    result,files=release.prepare(*candidate)
+    assert result['status']=='failed' and files=={}
+    assert ('not committed' if uncommitted else 'requires a committed') in result['failures'][0]
+
+
+def test_pdf_page_verification_explains_missing_dependency(tmp_path,monkeypatch):
+    monkeypatch.setattr(release._PRESENTATION.shutil,'which',lambda name:None)
+    with pytest.raises(ValueError,match='install Poppler'):
+        release._PRESENTATION.inspect_pdf(tmp_path/'deck.pdf')

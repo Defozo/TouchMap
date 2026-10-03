@@ -1,0 +1,5 @@
+{
+  "status": "diagnostic",
+  "scope": "Real native45s HTTP read timeout followed by later edit and released server response; does not prove explicit cancellation.",
+  "timeoutBeforeLibrary": true
+}

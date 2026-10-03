@@ -1,0 +1,149 @@
+{
+  "videoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1",
+  "technicalPassed": true,
+  "durationSeconds": 180.0,
+  "decodedFrames": 4320,
+  "expectedFrames": 4320,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "frameRate": "24/1",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "audioVideoDeltaSeconds": 0.0,
+  "audioChecks": [
+    {
+      "scene": 3,
+      "outputStart": 33,
+      "sourceStart": 8,
+      "duration": 15,
+      "correlation": 0.9999963013922444,
+      "peak": 0.49403709173202515,
+      "rms": 0.021931082010269165,
+      "method": "Direct sample correlation of decoded mono 8000 Hz final excerpt and its captured source, with recorded gain. No retiming."
+    }
+  ],
+  "timeline": [
+    {
+      "index": 0,
+      "start": 0,
+      "end": 7,
+      "title": "TouchMap",
+      "frame": "dist\\_video_work\\frames\\final\\scene-00.png"
+    },
+    {
+      "index": 1,
+      "start": 7,
+      "end": 21,
+      "title": "Import a portable lesson",
+      "frame": "dist\\_video_work\\frames\\final\\scene-01.png"
+    },
+    {
+      "index": 2,
+      "start": 21,
+      "end": 33,
+      "title": "Know your material",
+      "frame": "dist\\_video_work\\frames\\final\\scene-02.png"
+    },
+    {
+      "index": 3,
+      "start": 33,
+      "end": 48,
+      "title": "Touch, then hear",
+      "frame": "dist\\_video_work\\frames\\final\\scene-03.png"
+    },
+    {
+      "index": 4,
+      "start": 48,
+      "end": 62,
+      "title": "Follow the relationship",
+      "frame": "dist\\_video_work\\frames\\final\\scene-04.png"
+    },
+    {
+      "index": 5,
+      "start": 62,
+      "end": 72,
+      "title": "Choose, then submit",
+      "frame": "dist\\_video_work\\frames\\final\\scene-05.png"
+    },
+    {
+      "index": 6,
+      "start": 72,
+      "end": 81,
+      "title": "Selection is not completion",
+      "frame": "dist\\_video_work\\frames\\final\\scene-06.png"
+    },
+    {
+      "index": 7,
+      "start": 81,
+      "end": 87,
+      "title": "Stop and restart the app",
+      "frame": "dist\\_video_work\\frames\\final\\scene-07.png"
+    },
+    {
+      "index": 8,
+      "start": 87,
+      "end": 97,
+      "title": "Pick up your thread",
+      "frame": "dist\\_video_work\\frames\\final\\scene-08.png"
+    },
+    {
+      "index": 9,
+      "start": 97,
+      "end": 111,
+      "title": "AI proposes. Authors decide.",
+      "frame": "dist\\_video_work\\frames\\final\\scene-09.png"
+    },
+    {
+      "index": 10,
+      "start": 111,
+      "end": 118,
+      "title": "Keep the source visible",
+      "frame": "dist\\_video_work\\frames\\final\\scene-10.png"
+    },
+    {
+      "index": 11,
+      "start": 118,
+      "end": 130,
+      "title": "Review geometry and meaning",
+      "frame": "dist\\_video_work\\frames\\final\\scene-11.png"
+    },
+    {
+      "index": 12,
+      "start": 130,
+      "end": 137,
+      "title": "Prepare recorded speech",
+      "frame": "dist\\_video_work\\frames\\final\\scene-12.png"
+    },
+    {
+      "index": 13,
+      "start": 137,
+      "end": 147,
+      "title": "A reviewed revision, ready offline",
+      "frame": "dist\\_video_work\\frames\\final\\scene-13.png"
+    },
+    {
+      "index": 14,
+      "start": 147,
+      "end": 155,
+      "title": "Transfer the lesson",
+      "frame": "dist\\_video_work\\frames\\final\\scene-14.png"
+    },
+    {
+      "index": 15,
+      "start": 155,
+      "end": 165,
+      "title": "Preserve private progress",
+      "frame": "dist\\_video_work\\frames\\final\\scene-15.png"
+    },
+    {
+      "index": 16,
+      "start": 165,
+      "end": 180,
+      "title": "Verified scope. Honest limits.",
+      "frame": "dist\\_video_work\\frames\\final\\scene-16.png"
+    }
+  ],
+  "reviewLimits": "Strict technical decoding and sample correlation support integrity. Visual contact and boundary review and independent factual review are recorded separately; no full human audiovisual perception is inferred."
+}

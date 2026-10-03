@@ -1,0 +1,60 @@
+{
+  "checkedAtUtc": "2026-10-03T18:39:22.439339+00:00",
+  "status": "passed",
+  "productionHapSha256": "6bac1571c32d0fa3ea6e5bcd9d2596c767194c0db3b06b648d6fe51c877e00fa",
+  "appSourceSha256": "c748b4b79ffb34a1fb0a5c8327aea49a581c9505885b01cf3b7a626c695700d5",
+  "device": "127.0.0.1:55555",
+  "sourceCommit": "1d07dbb611ea20414f274aa59c1f3a5cc41314e5",
+  "checks": [
+    {
+      "name": "saved_correct_answer_and_unsubmitted_selection",
+      "passed": true
+    },
+    {
+      "name": "selected_collection_restored",
+      "passed": true
+    },
+    {
+      "name": "ordinary_canvas_touch_selects_collection",
+      "passed": true
+    },
+    {
+      "name": "touch_release_clears_path_guidance",
+      "passed": true
+    },
+    {
+      "name": "material_switch_has_no_previous_diagram_guidance",
+      "passed": true
+    },
+    {
+      "name": "unknown_picture_route_explicit",
+      "passed": true
+    },
+    {
+      "name": "directed_semantic_follow_selects_output",
+      "passed": true
+    },
+    {
+      "name": "ipv4_ipv6_blocked_during_flow",
+      "passed": true
+    },
+    {
+      "name": "test_network_block_removed",
+      "passed": true
+    }
+  ],
+  "evidence": [
+    "final-candidate-resume.json",
+    "final-candidate-unsubmitted.json",
+    "final-candidate-canvas.png",
+    "final-candidate-after-touch.json",
+    "final-candidate-material-switch.json",
+    "final-candidate-guide-cleared.json",
+    "final-candidate-unknown-route.json",
+    "final-candidate-followed-unknown.json",
+    "final-candidate-new-destination.json",
+    "final-candidate-offline-on.json",
+    "final-candidate-offline-off.json"
+  ],
+  "scope": "Actual native UI regression on the identified candidate with outbound IPv4/IPv6 blocked. Canvas coordinates came from the inspected screenshot. Earlier complete import/answer/restart/export flow is recorded separately. This does not establish genuine screen-reader or physical-device behavior."
+}

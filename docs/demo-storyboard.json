@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "title": "TouchMap: reviewed diagrams, independent exploration",
+  "approved": true,
+  "approval": {
+    "actor": "agent:/root/native_resume",
+    "recordedAtUtc": "2026-10-03T18:47:26.278041+00:00",
+    "planSha256": "a81d2fea120e21b1a05e6a6279d81ae80e8951f3d36e0f3675d3f8a63923741f",
+    "authorization": "Existing user instruction to implement the complete official PLAN and root delegation to assemble the approximately180-second English demo from actual native clips. This is delegated execution approval, not a claim of personal user review of these cuts."
+  },
+  "targetSeconds": 180,
+  "authorization": "Complete PLAN implementation includes the approximately three-minute English demonstration. Assembly uses the explicit root-agent brief and local recorded evidence, with no external upload or generated application footage.",
+  "sourceBuilds": {
+    "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54": "Primary offline, touch, resumed lesson, new AI request and already-published ready revision captures. Historical development build; not the final source snapshot.",
+    "ce00562d8321872cea88c02253d609942e03f8d82fbdc9715cd30c5ddf2065ae": "Historical successful speech preparation and publication session. Earlier geometry-review footage began on a preceding build whose exact hash is not asserted here.",
+    "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725": "18 native tests and 100 local-audio starts passed. Measurements are tied to this artifact; subsequent release fixes need their own verification.",
+    "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd": "Final release candidate built from committed source 2642efe. The first 7 seconds show this installed artifact; all other flow excerpts retain their own historical build labels."
+  },
+  "scenes": [
+    {
+      "clip": "dist/demo-final-hap-v2-raw.mp4",
+      "start": 0,
+      "duration": 7,
+      "title": "TouchMap",
+      "body": "Reviewed diagrams. Independent exploration. Offline learning.\n\nFor blind and low-vision learners.\n\nDEFOZO SOFTWARE HOUSE\nMichał Kiełtyka, sole team member",
+      "annotation": "Final release HAP 1209c8712549 | Actual Library on the emulator",
+      "sourceHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+      "captureMetadata": "dist/demo-final-hap-v2-raw.capture.json",
+      "installationEvidence": "docs/evidence/installation-127.0.0.1_55555.json"
+    },
+    {
+      "clip": "dist/demo-offline-raw.mp4",
+      "start": 56,
+      "duration": 14,
+      "title": "Import a portable lesson",
+      "body": "A teaching package contains its source, objects, connections, questions and local recordings.\n\nThis import runs with outbound network access blocked.",
+      "annotation": "Actual native build 2616f496 | Edited offline verification excerpt"
+    },
+    {
+      "clip": "dist/demo-offline-raw.mp4",
+      "start": 89,
+      "duration": 12,
+      "title": "Know your material",
+      "body": "Read the source and author declaration, then accept locally.\n\nIntegrity checks detect changed bytes. They do not certify the author.",
+      "annotation": "Actual native build 2616f496 | Developer verification"
+    },
+    {
+      "clip": "dist/demo-touch-raw.mp4",
+      "start": 8,
+      "duration": 15,
+      "audio": true,
+      "audioGain": 3,
+      "title": "Touch, then hear",
+      "body": "Touching an object selects its reviewed label. Hear the actual local recording.\n\nLarge buttons and a structured list offer the same actions.",
+      "annotation": "Actual emulator touch and captured QEMU audio | Build 2616f496"
+    },
+    {
+      "clip": "dist/demo-offline-raw.mp4",
+      "start": 196,
+      "duration": 14,
+      "title": "Follow the relationship",
+      "body": "The list and connection controls expose the reviewed graph.\n\nFollow a known direction. Unknown routes in the picture remain explicitly unspecified.",
+      "annotation": "Actual native build 2616f496 | Edited offline verification excerpt"
+    },
+    {
+      "clip": "dist/demo-offline-resume-raw.mp4",
+      "start": 10,
+      "duration": 10,
+      "title": "Choose, then submit",
+      "body": "An explicit submission checks the answer against reviewed graph facts.\n\nAn AI model does not grade this lesson.",
+      "annotation": "Actual native build 2616f496 | Developer verification, offline"
+    },
+    {
+      "clip": "dist/demo-offline-resume-raw.mp4",
+      "start": 54,
+      "duration": 9,
+      "title": "Selection is not completion",
+      "body": "Start another question and select an answer.\n\nThe saved checkpoint distinguishes this unfinished choice from the earlier submitted result.",
+      "annotation": "Actual native build 2616f496 | No automatic submission"
+    },
+    {
+      "clip": "dist/demo-offline-resume-raw.mp4",
+      "start": 61,
+      "duration": 6,
+      "title": "Stop and restart the app",
+      "body": "The actual application process is force-stopped and relaunched.\n\nNetwork access remains blocked.",
+      "annotation": "Actual native build 2616f496 | Process restart excerpt"
+    },
+    {
+      "clip": "dist/demo-offline-resume-raw.mp4",
+      "start": 126,
+      "duration": 10,
+      "title": "Pick up your thread",
+      "body": "The earlier correct answer remains.\n\nThe new selection is saved, but still needs an explicit submission.",
+      "annotation": "Actual native build 2616f496 | Search/navigation wait omitted"
+    },
+    {
+      "clip": "dist/demo-ai-request-raw.mp4",
+      "start": 20,
+      "duration": 14,
+      "title": "AI proposes. Authors decide.",
+      "body": "Separate consent authorizes this real Gemini request for the selected owned source.\n\nProposed objects and connections all require source review.",
+      "annotation": "Actual native build 2616f496 | New live draft, edited request excerpt"
+    },
+    {
+      "clip": "dist/demo-ai-request-raw.mp4",
+      "start": 136,
+      "duration": 7,
+      "title": "Keep the source visible",
+      "body": "Inspect the retained source and proposed regions.\n\nA model draft cannot publish itself.",
+      "annotation": "Same live AI request | Navigation and waiting omitted"
+    },
+    {
+      "clip": "dist/demo-author-raw.mp4",
+      "start": 128,
+      "duration": 12,
+      "title": "Review geometry and meaning",
+      "body": "Correct coordinates, labels and source evidence through forms. Confirm geometry and meaning separately.\n\nAn earlier review of the same owned source is shown here.",
+      "annotation": "Earlier development build | Condensed developer authoring excerpt"
+    },
+    {
+      "clip": "dist/demo-tts-success-raw.mp4",
+      "start": 168,
+      "duration": 7,
+      "title": "Prepare recorded speech",
+      "body": "Import licensed WAVs or request speech with separate consent.\n\nListen to critical labels before publication.",
+      "annotation": "Earlier successful speech session, build ce00562d | Edited UI excerpt"
+    },
+    {
+      "clip": "dist/demo-ready-raw.mp4",
+      "start": 0,
+      "duration": 10,
+      "title": "A reviewed revision, ready offline",
+      "body": "This published revision has three objects, two connections and one question.\n\nReady offline additionally requires all source and audio assets to pass integrity checks.",
+      "annotation": "Previously published revision 6 | Viewed on build 2616f496"
+    },
+    {
+      "clip": "dist/demo-transfer-raw.mp4",
+      "start": 80,
+      "duration": 8,
+      "title": "Transfer the lesson",
+      "body": "A second installation selects the same exported package through the system picker.\n\nOutbound networking is blocked.",
+      "annotation": "Build a40c63d2 | Offline reimport on second installation at 200% text"
+    },
+    {
+      "clip": "dist/demo-transfer-raw.mp4",
+      "start": 134,
+      "duration": 10,
+      "title": "Preserve private progress",
+      "body": "Existing acceptance, Input 1 and the earlier correct answer survive reimport.\n\nTeaching packages exclude private learning history.",
+      "annotation": "Same second-installation reimport | Validation and navigation wait omitted"
+    },
+    {
+      "duration": 15,
+      "title": "Verified scope. Honest limits.",
+      "body": "Native ArkTS/ArkUI: API 20 target, API 23 runtime.\n\n18 native tests; 100 restart cycles.\n100 audio starts: p95 25 ms to accepted PCM.\n\nGenuine reader, physical vibration and representative-user studies remain unverified.",
+      "annotation": "Developer verification across identified builds | Evidence and build guide in the repository"
+    }
+  ]
+}

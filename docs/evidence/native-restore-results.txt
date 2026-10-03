@@ -1,0 +1,3 @@
+TestFinished-ResultCode: 0
+TestFinished-ResultMsg: Native restore benchmark passed
+user test finished.

@@ -37,9 +37,20 @@ raster, or a supported SVG. Start preparation, wait for `/test/status` to show a
 received request, cancel or leave the editor, save a later edit and POST
 `/test/release`. Read back the real native material and confirm its newer content
 and review state. The marker `DELAYED FIXTURE PROPOSAL` must not overwrite it.
+Leave the editor promptly: the production HTTP read timeout is 45 seconds.
+An automatic timeout does not prove explicit cancellation. The fixture holds a
+response for at most 300 seconds and records `completionReason` so that a hold
+timeout cannot be mistaken for a deliberately released late response.
 Use POST `/test/reset` between runs only after the previous response completed.
 This manual UI result is separate from the native runner and must be recorded
 only after actual execution.
+
+Executed results are recorded separately for the
+[final-HAP native transport/adoption checks](../../docs/evidence/native-preparation-checks.json)
+and the [actual Editor lifecycle flow](../../docs/evidence/native-preparation-ui.json).
+The latter retains diagnostic attempts whose fixture or native read timeout
+expired before the intended sequence; these are not counted as cancellation
+proof.
 
 Stop the fixture and remove only its `tcp:8089 tcp:8089` reverse mapping after
 verification. Record both installed HAP checksums with the resulting evidence.

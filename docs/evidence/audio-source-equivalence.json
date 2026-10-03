@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "scope": "Exact Feedback source and recursively resolved relative source dependencies. Only CRLF to LF is normalized; no whitespace, token or behavior differences are ignored. SDK dependencies are pinned separately in toolchain lock.",
+  "measuredHapSha256": "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725",
+  "measuredAppSourceSha256": "0c3b1b298382c00b365162e2dc994846cf169ec3961085148062f8a43f125feb",
+  "currentGitHead": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+  "files": [
+    {
+      "path": "entry/src/main/ets/domain/EnglishStrings.ts",
+      "measuredRawSha256": "982b51c5c8ea3293603f8a5f526d52fe4583994061555ebbcb161fd2b2766d29",
+      "currentRawSha256": "982b51c5c8ea3293603f8a5f526d52fe4583994061555ebbcb161fd2b2766d29",
+      "normalizedMeasuredSha256": "982b51c5c8ea3293603f8a5f526d52fe4583994061555ebbcb161fd2b2766d29",
+      "normalizedCurrentSha256": "982b51c5c8ea3293603f8a5f526d52fe4583994061555ebbcb161fd2b2766d29",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/engine.ts",
+      "measuredRawSha256": "489a39693c9c2fddfa0dd631a069fc7cbafc12033e479eec62318a4c12550dbf",
+      "currentRawSha256": "489a39693c9c2fddfa0dd631a069fc7cbafc12033e479eec62318a4c12550dbf",
+      "normalizedMeasuredSha256": "489a39693c9c2fddfa0dd631a069fc7cbafc12033e479eec62318a4c12550dbf",
+      "normalizedCurrentSha256": "489a39693c9c2fddfa0dd631a069fc7cbafc12033e479eec62318a4c12550dbf",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/i18n.ts",
+      "measuredRawSha256": "cb6872de5b5966ceabd4626510e7d605147e0bb4b3f07be56cfee0ced2b622ff",
+      "currentRawSha256": "cb6872de5b5966ceabd4626510e7d605147e0bb4b3f07be56cfee0ced2b622ff",
+      "normalizedMeasuredSha256": "cb6872de5b5966ceabd4626510e7d605147e0bb4b3f07be56cfee0ced2b622ff",
+      "normalizedCurrentSha256": "cb6872de5b5966ceabd4626510e7d605147e0bb4b3f07be56cfee0ced2b622ff",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/jsonSafety.ts",
+      "measuredRawSha256": "7199673b89e47562e7bdda62b0aeeec34645e6359c67ee174a32f98b1eb92cd4",
+      "currentRawSha256": "7199673b89e47562e7bdda62b0aeeec34645e6359c67ee174a32f98b1eb92cd4",
+      "normalizedMeasuredSha256": "7199673b89e47562e7bdda62b0aeeec34645e6359c67ee174a32f98b1eb92cd4",
+      "normalizedCurrentSha256": "7199673b89e47562e7bdda62b0aeeec34645e6359c67ee174a32f98b1eb92cd4",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/media.ts",
+      "measuredRawSha256": "440e8eff2e87d004545bcdb5d0efc86e52be21e3a5fb2513eaa036c1c0099ac6",
+      "currentRawSha256": "ed34bf74b5a8d9a10322611e5470daadf95242855b1cc0c870fa3bdea96fdb76",
+      "normalizedMeasuredSha256": "ed34bf74b5a8d9a10322611e5470daadf95242855b1cc0c870fa3bdea96fdb76",
+      "normalizedCurrentSha256": "ed34bf74b5a8d9a10322611e5470daadf95242855b1cc0c870fa3bdea96fdb76",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/types.ts",
+      "measuredRawSha256": "5df9bdf6f815999fc1d5d75432d817f21ebf807a1e43e0800424c4ebd5927521",
+      "currentRawSha256": "5df9bdf6f815999fc1d5d75432d817f21ebf807a1e43e0800424c4ebd5927521",
+      "normalizedMeasuredSha256": "5df9bdf6f815999fc1d5d75432d817f21ebf807a1e43e0800424c4ebd5927521",
+      "normalizedCurrentSha256": "5df9bdf6f815999fc1d5d75432d817f21ebf807a1e43e0800424c4ebd5927521",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/validate.ts",
+      "measuredRawSha256": "6fd514b5bbbe8cc0fd5a9d23f07085246ed3e124239b1f7f9f5fa1526be7f232",
+      "currentRawSha256": "6fd514b5bbbe8cc0fd5a9d23f07085246ed3e124239b1f7f9f5fa1526be7f232",
+      "normalizedMeasuredSha256": "6fd514b5bbbe8cc0fd5a9d23f07085246ed3e124239b1f7f9f5fa1526be7f232",
+      "normalizedCurrentSha256": "6fd514b5bbbe8cc0fd5a9d23f07085246ed3e124239b1f7f9f5fa1526be7f232",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/validationShape.ts",
+      "measuredRawSha256": "4e59bf41ac92cfa3cbff443e94c5fe229d0031063d0218f98c7be3f670574f03",
+      "currentRawSha256": "4e59bf41ac92cfa3cbff443e94c5fe229d0031063d0218f98c7be3f670574f03",
+      "normalizedMeasuredSha256": "4e59bf41ac92cfa3cbff443e94c5fe229d0031063d0218f98c7be3f670574f03",
+      "normalizedCurrentSha256": "4e59bf41ac92cfa3cbff443e94c5fe229d0031063d0218f98c7be3f670574f03",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/domain/zip.ts",
+      "measuredRawSha256": "0639b9e6386f5d1a3e6858fe2419a9d531d29530fa8ca715a2dd5c7bd64a2b53",
+      "currentRawSha256": "0639b9e6386f5d1a3e6858fe2419a9d531d29530fa8ca715a2dd5c7bd64a2b53",
+      "normalizedMeasuredSha256": "0639b9e6386f5d1a3e6858fe2419a9d531d29530fa8ca715a2dd5c7bd64a2b53",
+      "normalizedCurrentSha256": "0639b9e6386f5d1a3e6858fe2419a9d531d29530fa8ca715a2dd5c7bd64a2b53",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/platform/ArchiveWorker.ets",
+      "measuredRawSha256": "1c186df910363cd1625205bc2da0eb2dddc180cd3675b4316a4667bdb5269ab8",
+      "currentRawSha256": "1c186df910363cd1625205bc2da0eb2dddc180cd3675b4316a4667bdb5269ab8",
+      "normalizedMeasuredSha256": "1c186df910363cd1625205bc2da0eb2dddc180cd3675b4316a4667bdb5269ab8",
+      "normalizedCurrentSha256": "1c186df910363cd1625205bc2da0eb2dddc180cd3675b4316a4667bdb5269ab8",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/platform/Feedback.ets",
+      "measuredRawSha256": "bcd6107eb6bb5c2a0dd09ba26da8bab3730a772f55f1dcef7bbbe3578cfc0674",
+      "currentRawSha256": "5f1283b79b0b32a961614853f4d4a4c03814836f923d9befd0b86219e7e3ddfe",
+      "normalizedMeasuredSha256": "5f1283b79b0b32a961614853f4d4a4c03814836f923d9befd0b86219e7e3ddfe",
+      "normalizedCurrentSha256": "5f1283b79b0b32a961614853f4d4a4c03814836f923d9befd0b86219e7e3ddfe",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/platform/PackageExporter.ets",
+      "measuredRawSha256": "a9c5d9e360f04ede2a2617d450e124d4788814fa28c2b9f16f76c56682879230",
+      "currentRawSha256": "09efd19537dbe76104f32bc6e2741995bc651fbc57704021f102f4e88be6324e",
+      "normalizedMeasuredSha256": "09efd19537dbe76104f32bc6e2741995bc651fbc57704021f102f4e88be6324e",
+      "normalizedCurrentSha256": "09efd19537dbe76104f32bc6e2741995bc651fbc57704021f102f4e88be6324e",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/platform/Repository.ets",
+      "measuredRawSha256": "76f6aae552d846e235b1627ff1c19d330e43cd8ea1906d70b574aba2dd4a2313",
+      "currentRawSha256": "76f6aae552d846e235b1627ff1c19d330e43cd8ea1906d70b574aba2dd4a2313",
+      "normalizedMeasuredSha256": "76f6aae552d846e235b1627ff1c19d330e43cd8ea1906d70b574aba2dd4a2313",
+      "normalizedCurrentSha256": "76f6aae552d846e235b1627ff1c19d330e43cd8ea1906d70b574aba2dd4a2313",
+      "equalAfterCrLfToLf": true
+    },
+    {
+      "path": "entry/src/main/ets/platform/SystemPicker.ets",
+      "measuredRawSha256": "d4284dffc4d66785da627f76d330370385bca1982dbe1be85d98e1d8e4b58876",
+      "currentRawSha256": "d4284dffc4d66785da627f76d330370385bca1982dbe1be85d98e1d8e4b58876",
+      "normalizedMeasuredSha256": "d4284dffc4d66785da627f76d330370385bca1982dbe1be85d98e1d8e4b58876",
+      "normalizedCurrentSha256": "d4284dffc4d66785da627f76d330370385bca1982dbe1be85d98e1d8e4b58876",
+      "equalAfterCrLfToLf": true
+    }
+  ]
+}

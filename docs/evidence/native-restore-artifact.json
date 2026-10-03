@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T18:50:04.294671+00:00",
+  "finishedUtc": "2026-10-03T19:05:35.471645+00:00",
+  "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+  "testHapSha256": "e9391b30cfa0c840c18c0c40e147fa5a3703db41f85fa5cda67b1207643c1b50",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7342792,
+    "gitHeadAtBuild": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "runs": [
+    {
+      "device": "127.0.0.1:55556",
+      "startedUtc": "2026-10-03T18:50:04.294671+00:00",
+      "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+      "testHapSha256": "e9391b30cfa0c840c18c0c40e147fa5a3703db41f85fa5cda67b1207643c1b50",
+      "sourceFingerprint": {
+        "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+        "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+        "appSourceFileCount": 122,
+        "appSourceBytes": 7342792,
+        "gitHeadAtBuild": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+        "workingTreeDirty": true,
+        "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+      },
+      "hostBefore": {
+        "at": "2026-10-03T18:50:04.953778+00:00",
+        "logicalCpuCount": 32,
+        "loadAverage": [
+          4.63427734375,
+          5.63720703125,
+          5.4931640625
+        ],
+        "buildProcesses": {
+          "java": 0,
+          "hvigorw": 0,
+          "clang": 0,
+          "ninja": 0,
+          "ffmpeg": 0
+        }
+      },
+      "status": "failed",
+      "error": "Native rendered restoration target was not met.",
+      "hostAfter": {
+        "at": "2026-10-03T19:03:27.755534+00:00",
+        "logicalCpuCount": 32,
+        "loadAverage": [
+          5.9384765625,
+          5.90869140625,
+          5.67333984375
+        ],
+        "buildProcesses": {
+          "java": 0,
+          "hvigorw": 0,
+          "clang": 0,
+          "ninja": 0,
+          "ffmpeg": 0
+        }
+      },
+      "finishedUtc": "2026-10-03T19:03:27.755685+00:00"
+    },
+    {
+      "device": "127.0.0.1:55556",
+      "startedUtc": "2026-10-03T19:04:39.439122+00:00",
+      "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+      "testHapSha256": "e9391b30cfa0c840c18c0c40e147fa5a3703db41f85fa5cda67b1207643c1b50",
+      "sourceFingerprint": {
+        "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+        "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+        "appSourceFileCount": 122,
+        "appSourceBytes": 7342792,
+        "gitHeadAtBuild": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+        "workingTreeDirty": true,
+        "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+      },
+      "hostBefore": {
+        "at": "2026-10-03T19:04:40.111815+00:00",
+        "logicalCpuCount": 32,
+        "loadAverage": [
+          6.04736328125,
+          5.95458984375,
+          5.70703125
+        ],
+        "buildProcesses": {
+          "java": 0,
+          "hvigorw": 0,
+          "clang": 0,
+          "ninja": 0,
+          "ffmpeg": 0
+        }
+      },
+      "status": "passed",
+      "hostAfter": {
+        "at": "2026-10-03T19:05:35.471556+00:00",
+        "logicalCpuCount": 32,
+        "loadAverage": [
+          5.19384765625,
+          5.73095703125,
+          5.642578125
+        ],
+        "buildProcesses": {
+          "java": 0,
+          "hvigorw": 0,
+          "clang": 0,
+          "ninja": 0,
+          "ffmpeg": 0
+        }
+      },
+      "finishedUtc": "2026-10-03T19:05:35.471645+00:00"
+    }
+  ],
+  "evidenceSha256": {
+    "native-restore-run1.json": "a8a57486a9634a8d7f3008e95f02189946306a986a8aeb9cfa19b1e53dc2692d",
+    "native-restore-run1-progress.json": "dc59baa7a850a59b89114d7279adbfa5abfbf93416fd4d30558ab86fb36a1b8e",
+    "native-restore-run1-hilog.txt": "a10da9587eca92e976f8eceac20a5897ca814470f0305beff430b924727cc191",
+    "native-restore-run1-artifact.json": "fb824f21fc33be2f829f71e579ec97ec697edccbc1a2cca68c3eda55bf1230fe",
+    "native-restore-run1-host-vmstat.txt": "35c5564c01ebe815a1e4cb09f95dd62df8e69774af20a203c028d693a91b7d16",
+    "native-restore-run2.json": "d9d9f8ec797c892efeaa4b8d9e32ed21daeb14e8b6bd18d86a9952edcb34b668",
+    "native-restore-run2-artifact.json": "ef4ab6bc501bf5bfebfebd6076fe6cd3b9bf54f1cdbd4fbb2abe02a976d36cad",
+    "native-restore-run2-host-vmstat.txt": "85169c2dfdc9cfd2db59555de1b503dedddd7ef8782e4e15bf5f5c5b93c96cbb"
+  }
+}

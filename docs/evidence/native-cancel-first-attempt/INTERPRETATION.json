@@ -1,0 +1,7 @@
+{
+  "status": "diagnostic",
+  "clientCancellationObserved": true,
+  "newerRevisionSaved": 3,
+  "lateResponseAdoptionProof": false,
+  "reason": "More than120seconds elapsed before explicit release; first fixture hold expired. Retained firstattempt does not prove delivery of a late successful result. Secondattempt uses300seconds and records explicit completionReason/timestamps."
+}

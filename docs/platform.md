@@ -71,7 +71,19 @@ This measures the first actual AudioRenderer write accepting PCM samples, includ
 
 Audio measurement uses prepared, non-draft recordings. Per-onset traces separate integrity/cache work, waiting for serialized controls, renderer preparation/start and first write dispatch/resolution; buffer byte counts and PCM duration identify possible buffering delays. The write promise reports bytes accepted by the native stream, not first sound at the speaker. `native-audio-host.json` records host CPU count, load averages and compiler processes before and after the run. See `audio-api-semantics.json` for the inspected official API and implementation references.
 
-`python3 scripts/test-audio-controls.py --device 127.0.0.1:55556` runs inside WSL and checks actual Stop-before-dwell, replacement by the latest target, and Pause/Resume through natural recording completion. It requires the same installed native test HAP and a working audio adapter.
+`python3 scripts/test-audio-controls.py --device 127.0.0.1:55556` runs inside WSL and checks actual Stop-before-dwell, replacement by the latest target, Pause/Resume through natural recording completion, and a four-byte final PCM fragment. It requires the same installed native test HAP and a working audio adapter. Tiny final transport writes are padded with frame-aligned digital silence because the pinned native writer rejects buffers of four bytes or fewer. Stored WAV bytes and their hashes are preserved.
+
+With matching production and test HAPs installed, additional development-target checks run inside WSL:
+
+```sh
+python3 scripts/test-native-failures.py --device 127.0.0.1:55556
+python3 scripts/test-native-transaction.py --device 127.0.0.1:55556
+python3 scripts/test-native-restore.py --device 127.0.0.1:55556 --count 100
+```
+
+The first command mounts a 64 KiB test filesystem only over the selected app's empty staging directory, verifies actual storage exhaustion and deleted-file handling, and removes the mount in cleanup. The second uses an isolated synthetic material to interrupt real database transactions after event writes, checkpoint writes and partial deletion. It verifies rollback in a new process, then explicitly submits once through the production action method. This test barrier is separate from the 100 post-commit restart checks. The restoration command measures Library open through the complete restored checkpoint, completed layout and the ArkUI `willDraw` command boundary, with independent native Resume-heading validation. This is not a physical display presentation measurement. The optional `onIdle` diagnostic never gates success. The retained final run contains 92 acknowledged samples and 8 additional samples after a UiTest RPC stall; `scripts/summarize-restore-runs.py` reconstructs the documented 100-sample result from retained evidence, excluding the unacknowledged observation. Exact coverage, results and artifact identities are recorded in [the test report](TEST_REPORT.md).
+
+`python3 scripts/test-native-cold-start.py --device 127.0.0.1:55556 --count 5` separately observes ordinary process launches. Its elapsed times include HDC and UI-tree polling overhead, so they are upper bounds rather than intrinsic startup latency. The delayed/cancelled HTTP checks use `scripts/test-native-preparation.py` with the deliberately controlled local fixture described in [tests/native-preparation/README.md](../tests/native-preparation/README.md).
 
 To verify a committed revision from a fresh local clone, with separate dependency installation and signing, run:
 
@@ -80,6 +92,14 @@ To verify a committed revision from a fresh local clone, with separate dependenc
 ```
 
 This requires `uv` for Python 3.12 dependency resolution in addition to the native toolchain. It runs the host tests, type checker, Python tests and signed native build in the new clone, preserving logs and the source commit in `docs/evidence/clean-checkout.json`. Uncommitted changes are deliberately excluded. Independent development signing can change the HAP bytes; the report records its own artifact hash.
+
+The command prints the retained clean checkout path. To install those independently built bytes on a selected development target and run that checkout's native tests, audio controls and ordinary Library launch, run inside WSL:
+
+```sh
+python3 scripts/verify-clean-install.py --checkout /tmp/touchmap-checkout-PRINTED_ID --device 127.0.0.1:55556
+```
+
+The verifier requires the clean app source fingerprint to match the release app, preserves existing device data, and writes separate `clean-installation.json` and native runtime evidence. It does not replace the release HAP in the original project's `dist` directory.
 
 The tested Oniro image fails to display the standard modal `DocumentViewPicker` UIExtension. `SystemPicker.ets` uses the system FilePicker's full-page `OPEN_FILE` and `CREATE_FILE` abilities through the normal `startAbilityForResult` API. The system grants temporary access to the user-selected file. TouchMap copies imports immediately and flushes exports before reporting success. It requests no broad filesystem or system privilege. The result contract is implemented by the official [FilePicker application](https://github.com/openharmony/applications_filepicker).
 

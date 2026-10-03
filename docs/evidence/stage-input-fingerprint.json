@@ -1,18 +1,18 @@
 {
   "algorithm": "sha256-path-nul-content-sha256-newline-v1",
-  "appSourceSha256": "0c3b1b298382c00b365162e2dc994846cf169ec3961085148062f8a43f125feb",
-  "appSourceFileCount": 121,
-  "appSourceBytes": 7334712,
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+  "appSourceFileCount": 122,
+  "appSourceBytes": 7342792,
   "files": [
     {
       "path": "AppScope/app.json5",
-      "bytes": 217,
-      "sha256": "3e877118199c1210dfbd4f04bbcd98bb6378539efc7fd4de67d0867857fdff53"
+      "bytes": 207,
+      "sha256": "a92b552ec6f7fde8dc6d1733f111d95499566b84b1af952b376a583fbf35c744"
     },
     {
       "path": "AppScope/resources/base/element/string.json",
-      "bytes": 53,
-      "sha256": "11c71dcb2a85c5313adf08a9b2399ed1ddca4cf2c17c33655fdb2570adc32ab6"
+      "bytes": 52,
+      "sha256": "fa7fa98d50843ca851bf05d944308240f196d00e20ca5e7b9f79c9b3204995bb"
     },
     {
       "path": "AppScope/resources/base/media/background.png",
@@ -31,8 +31,8 @@
     },
     {
       "path": "build-profile.json5",
-      "bytes": 830,
-      "sha256": "3f69ec1640ca99fdb9fc468217d28ce8b34e13000157627ff3cd1a5c7d3ee589"
+      "bytes": 787,
+      "sha256": "c2bd2f14f6ae0758e3066c6b78f0b2269f3c2aa91bf09d4fedf7fb80a7fcb3d6"
     },
     {
       "path": "entry/build-profile.json5",
@@ -56,8 +56,8 @@
     },
     {
       "path": "entry/src/main/ets/components/EditorPanel.ets",
-      "bytes": 78397,
-      "sha256": "9d438649ebfe978a5cc334118c895276c25bbb99a936d8d1dec9606bcb0991a9"
+      "bytes": 77888,
+      "sha256": "97877cc346a0ae2fad38a29693e39c70be40465846622badddc692b327d21fff"
     },
     {
       "path": "entry/src/main/ets/domain/EnglishStrings.ts",
@@ -91,8 +91,8 @@
     },
     {
       "path": "entry/src/main/ets/domain/media.ts",
-      "bytes": 7733,
-      "sha256": "440e8eff2e87d004545bcdb5d0efc86e52be21e3a5fb2513eaa036c1c0099ac6"
+      "bytes": 7699,
+      "sha256": "ed34bf74b5a8d9a10322611e5470daadf95242855b1cc0c870fa3bdea96fdb76"
     },
     {
       "path": "entry/src/main/ets/domain/types.ts",
@@ -121,8 +121,8 @@
     },
     {
       "path": "entry/src/main/ets/pages/Index.ets",
-      "bytes": 73515,
-      "sha256": "46955b2e26d5f0395cb70cb204aa76d121cc2f925f624bb236b3ffb1d99c8a1d"
+      "bytes": 73742,
+      "sha256": "15e3c68854a5c0996b91963081320357a89d050709dfefe3eb4bdbc99aaf2e7e"
     },
     {
       "path": "entry/src/main/ets/platform/ArchiveWorker.ets",
@@ -131,8 +131,8 @@
     },
     {
       "path": "entry/src/main/ets/platform/Feedback.ets",
-      "bytes": 15084,
-      "sha256": "bcd6107eb6bb5c2a0dd09ba26da8bab3730a772f55f1dcef7bbbe3578cfc0674"
+      "bytes": 14869,
+      "sha256": "5f1283b79b0b32a961614853f4d4a4c03814836f923d9befd0b86219e7e3ddfe"
     },
     {
       "path": "entry/src/main/ets/platform/I18n.ets",
@@ -141,13 +141,13 @@
     },
     {
       "path": "entry/src/main/ets/platform/PackageExporter.ets",
-      "bytes": 7190,
-      "sha256": "a9c5d9e360f04ede2a2617d450e124d4788814fa28c2b9f16f76c56682879230"
+      "bytes": 7132,
+      "sha256": "09efd19537dbe76104f32bc6e2741995bc651fbc57704021f102f4e88be6324e"
     },
     {
       "path": "entry/src/main/ets/platform/Preparation.ets",
-      "bytes": 9485,
-      "sha256": "028a71f8c512539401b63c30b9686f8128cd8d674a607a66a85179f5cc073d23"
+      "bytes": 9366,
+      "sha256": "e2a07c0b0b07e9fc0161c6b7ca1fc956ac3dd5647dab0413d7796c857c8269da"
     },
     {
       "path": "entry/src/main/ets/platform/Repository.ets",
@@ -156,8 +156,8 @@
     },
     {
       "path": "entry/src/main/ets/platform/RestorationFrame.ets",
-      "bytes": 904,
-      "sha256": "01c6af752a01c301dcbb8947130f1756196ab3edc65b34cbed6520f23c5e0523"
+      "bytes": 2721,
+      "sha256": "d194da290d7565779eb1b96d6a7a16f3018b8668ada00dc4ec5190cfd018cb52"
     },
     {
       "path": "entry/src/main/ets/platform/SystemPicker.ets",
@@ -176,8 +176,8 @@
     },
     {
       "path": "entry/src/main/resources/base/element/color.json",
-      "bytes": 105,
-      "sha256": "69432eb781993b60808d7977e5570e602578d19371eac3975b50c90e543a8be7"
+      "bytes": 99,
+      "sha256": "236243ab905c6d5859aab518bc817c13caf8f0b903479dee882dde0fe8d37377"
     },
     {
       "path": "entry/src/main/resources/base/element/string.json",
@@ -536,8 +536,8 @@
     },
     {
       "path": "entry/src/ohosTest/ets/test/Native.test.ets",
-      "bytes": 15217,
-      "sha256": "f9f467ddf8d4e3f4f03afb7ede781dce8b21a88796fa81dee36d0cf11e027a78"
+      "bytes": 15114,
+      "sha256": "91862f3c3c843bfef2680e54b1e8f50088f2750a2f5ff73ae391c20895b2444b"
     },
     {
       "path": "entry/src/ohosTest/ets/test/PackageExporter.test.ets",
@@ -546,13 +546,13 @@
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/AudioBenchmark.ets",
-      "bytes": 6955,
-      "sha256": "37470b496ef6cfd4d573c660f043cb3bc7b8d70e11d8626673eec05dd27d064a"
+      "bytes": 6892,
+      "sha256": "de3a966cb385e055e7ccd157f8ce10f4fa69a308732679c5e206e3b48997c1f9"
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/AudioControls.ets",
-      "bytes": 6860,
-      "sha256": "41dbea70e5585d519300bfecf375b226013003f1de98c491b56176b7019e30d9"
+      "bytes": 6781,
+      "sha256": "c5f4c10dc5c5c165ece81fe16fdb44259feb5627460216a6a8ad03eaec5cf958"
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/FailureRunner.ets",
@@ -561,13 +561,13 @@
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/NativeContext.ets",
-      "bytes": 827,
-      "sha256": "a175df1ace8b71f66a726a8224708f83613d7210ce3e537aa54fbe4d5983319f"
+      "bytes": 818,
+      "sha256": "8923f98f2a9511207e5a844f64e970a7e1685857ca885804cd86a655d6785bc6"
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ets",
-      "bytes": 2145,
-      "sha256": "575aebb2b06fda63c50c6a3aa31839687baf8259b5a375cfe0a96681bd9e7e89"
+      "bytes": 2410,
+      "sha256": "890bf2f7c17ea9f09d2c877ba036e9573d161827ebad5d53ae1893027272d8db"
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/PreparationRunner.ets",
@@ -576,18 +576,23 @@
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/RecoveryRunner.ets",
-      "bytes": 8360,
-      "sha256": "639b1dbf974b8da46ee41f467e57747ec795c633b773cf5d62c0f5b07f0d6c43"
+      "bytes": 8261,
+      "sha256": "44a0ce425615c0b25d295fb2b9064d11f1c9cdd62db400ea6bddab1092f05df9"
     },
     {
       "path": "entry/src/ohosTest/ets/testrunner/RestoreBenchmark.ets",
-      "bytes": 5008,
-      "sha256": "8bb340d61126018c9cc1f78a32f94b6a327d376dad9aa25d77aa40b56bab5a56"
+      "bytes": 6149,
+      "sha256": "f6277cf12d1a484822e26dc102ccb75913b8536f15cc01f5b02ff9bca60578ae"
+    },
+    {
+      "path": "entry/src/ohosTest/ets/testrunner/TransactionFailureRunner.ets",
+      "bytes": 5979,
+      "sha256": "220fadd3e3af7fd2cd35007b6d0a61ef00642ba3d61baf7e3716cacea33151fd"
     },
     {
       "path": "entry/src/ohosTest/module.json5",
-      "bytes": 138,
-      "sha256": "6a745362cf87c2dcc772dc994994cae3fb2b0893a9589bfe175c13d8c0e8ac77"
+      "bytes": 137,
+      "sha256": "be8c3e962f0a5afa3bd016eef08d59f2e244cd689443aa2250c5e5c376ffa805"
     },
     {
       "path": "hvigor/hvigor-config.json5",
@@ -610,7 +615,7 @@
       "sha256": "978c6a59a1a75c179c163a8fb17c7a20a0b2b48ee22e2a345d989d139ff0330a"
     }
   ],
-  "gitHeadAtBuild": "ebc1dc20af8e2d818edf3d3174fb014428faaca8",
+  "gitHeadAtBuild": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
   "workingTreeDirty": true,
   "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
 }

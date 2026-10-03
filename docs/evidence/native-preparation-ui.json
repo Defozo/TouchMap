@@ -1,0 +1,77 @@
+{
+  "recordedAt": "2026-10-03T17:53:06.930306+00:00",
+  "status": "passed",
+  "device": "127.0.0.1:55555",
+  "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54",
+  "appSourceSha256": "a5467e3eafae0f2638f3e16465e0397d31f92bc3e98e63b830f7637b3c1cbefe",
+  "scope": "Actual Editor UI request, Library navigation triggering lifecycle cancellation, reopen, title edit/save, controlled server response release, force-stop/restart and reopen. Loopback fixture used no provider request. This is cancellation/lifecycle safety, not delivery of a successful late envelope to the same live editor; the separate native PreparationRunner covers revision adoption.",
+  "request": {
+    "requestId": "1791049417077-828994841",
+    "draftRevision": 4,
+    "sourceHash": "2aa77e7e43702c7038051c5a25c60d210a3eae4268f340f37b0fac7d28ec7617",
+    "receivedAt": "2026-10-03T17:43:35.395596+00:00",
+    "completed": true,
+    "cancelled": true,
+    "completionReason": "response_released",
+    "completedAt": "2026-10-03T17:46:14.792386+00:00"
+  },
+  "savedRevisionBeforeRelease": 5,
+  "checks": [
+    {
+      "name": "actual_request_for_revision4",
+      "passed": true
+    },
+    {
+      "name": "native_lifecycle_cancel_reached_server",
+      "passed": true
+    },
+    {
+      "name": "response_still_pending_after_saved_revision5",
+      "passed": true
+    },
+    {
+      "name": "server_completed_only_after_explicit_release",
+      "passed": true
+    },
+    {
+      "name": "newer_title_revision_and_expected_review_invalidation_only",
+      "passed": true
+    },
+    {
+      "name": "no_delayed_proposal_label_adopted",
+      "passed": true
+    },
+    {
+      "name": "persisted_bytes_survive_actual_restart",
+      "passed": true
+    }
+  ],
+  "serviceRestored": "http://127.0.0.1:8080 was restored through Settings and Save preferences before restart. Pairing token is memory-only and restart clears it.",
+  "evidence": [
+    "native-cancel-before.json",
+    "native-cancel-request-ui.json",
+    "native-cancel-pending-ui.json",
+    "native-cancel-server-held.json",
+    "native-cancel-after-edit-ui.json",
+    "native-cancel-server-released.json",
+    "native-cancel-after.json",
+    "native-cancel-restarted.json",
+    "native-cancel-reopened-ui.json"
+  ],
+  "diagnosticsRetained": {
+    "native-cancel-first-attempt": "120-second fixture hold expired before response release; does not prove successful late completion.",
+    "native-cancel-second-attempt": "300-second hold expired during navigation/context interruption; status retained.",
+    "native-cancel-timeout-attempt": "Native 45-second read timeout preceded Library navigation; newer edit remained unchanged after eventual server release, but no explicit cancel was recorded."
+  },
+  "evidenceSha256": {
+    "native-cancel-before.json": "0ee8df6e1449befd2384e70f7a75f4bf8926e34842a60b639a7e9934f0576a2c",
+    "native-cancel-request-ui.json": "3d2e51f08fc81ef72b5f50b19a510d3c2dcad95d902c0dc02131020a1e6716ff",
+    "native-cancel-pending-ui.json": "5d996ce28cfc17cfb6b0770b11384b8b2e9ab0cdc59872203fe821b9e302bd39",
+    "native-cancel-server-held.json": "c06f28133333c2c4f4ae7bc9552bf469337c650412d95bb8f584ae28ee4dc89c",
+    "native-cancel-after-edit-ui.json": "6ead33f6ea92fb2f6e2263a0d4eddd6d0acc1fea2841515f67703b889f1f47b1",
+    "native-cancel-server-released.json": "9769412da5d784f68e2429759133eaaa50566af6b19f73ca3cdd8a2d6803e923",
+    "native-cancel-after.json": "53255f0ab61b02f897c0a6f0a49181c8d984a8e7b4edcc01ca31f0ff092cf899",
+    "native-cancel-restarted.json": "53255f0ab61b02f897c0a6f0a49181c8d984a8e7b4edcc01ca31f0ff092cf899",
+    "native-cancel-reopened-ui.json": "6af0fd837ff902b066310ab202c8f32081888a1603334d2918600de2ba7c1793"
+  }
+}

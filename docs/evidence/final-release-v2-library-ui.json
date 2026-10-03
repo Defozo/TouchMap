@@ -1,0 +1,420 @@
+{
+  "display": {
+    "width": 360,
+    "height": 720
+  },
+  "tree": {
+    "children": [
+      {
+        "b": [
+          0,
+          0.05,
+          1,
+          0.95
+        ],
+        "c": [
+          0.5,
+          0.5
+        ],
+        "type": "root",
+        "bundle": "org.touchmap.app",
+        "focus": true,
+        "children": [
+          {
+            "b": [
+              0.061,
+              0.078,
+              0.144,
+              0.138
+            ],
+            "c": [
+              0.103,
+              0.108
+            ],
+            "type": "Text",
+            "text": "\u25c9"
+          },
+          {
+            "b": [
+              0.172,
+              0.075,
+              0.486,
+              0.113
+            ],
+            "c": [
+              0.329,
+              0.094
+            ],
+            "type": "Text",
+            "text": "TouchMap"
+          },
+          {
+            "b": [
+              0.172,
+              0.114,
+              0.508,
+              0.139
+            ],
+            "c": [
+              0.34,
+              0.126
+            ],
+            "type": "Text",
+            "text": "UNDERSTAND THROUGH EXPLORATION"
+          },
+          {
+            "b": [
+              0.7,
+              0.075,
+              0.939,
+              0.139
+            ],
+            "c": [
+              0.819,
+              0.107
+            ],
+            "type": "Button",
+            "text": "Stop audio",
+            "id": "stop-audio",
+            "click": true
+          },
+          {
+            "b": [
+              0.056,
+              0.158,
+              0.353,
+              0.222
+            ],
+            "c": [
+              0.204,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Library",
+            "id": "nav-library",
+            "click": true
+          },
+          {
+            "b": [
+              0.353,
+              0.158,
+              0.65,
+              0.222
+            ],
+            "c": [
+              0.501,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Import",
+            "click": true
+          },
+          {
+            "b": [
+              0.647,
+              0.158,
+              0.944,
+              0.222
+            ],
+            "c": [
+              0.796,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Settings",
+            "id": "nav-settings",
+            "click": true
+          },
+          {
+            "b": [
+              0,
+              0.236,
+              1,
+              0.95
+            ],
+            "c": [
+              0.5,
+              0.593
+            ],
+            "id": "main-scroll",
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.061,
+                  0.253,
+                  0.939,
+                  0.35
+                ],
+                "c": [
+                  0.5,
+                  0.301
+                ],
+                "type": "Text",
+                "text": "A world you can explore."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.361,
+                  0.939,
+                  0.414
+                ],
+                "c": [
+                  0.5,
+                  0.388
+                ],
+                "type": "Text",
+                "text": "Touch a diagram. Hear what matters. Follow the connections at your own pace."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.447,
+                  0.436,
+                  0.465
+                ],
+                "c": [
+                  0.249,
+                  0.456
+                ],
+                "type": "Text",
+                "text": "OFFLINE BY DESIGN"
+              },
+              {
+                "b": [
+                  0.464,
+                  0.447,
+                  0.833,
+                  0.465
+                ],
+                "c": [
+                  0.649,
+                  0.456
+                ],
+                "type": "Text",
+                "text": "PRIVATE PROGRESS"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.501,
+                  0.939,
+                  0.576
+                ],
+                "c": [
+                  0.5,
+                  0.539
+                ],
+                "type": "Button",
+                "text": "Import a material or source",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.601,
+                  0.939,
+                  0.674
+                ],
+                "c": [
+                  0.5,
+                  0.637
+                ],
+                "type": "TextInput",
+                "id": "library-search",
+                "click": true,
+                "scroll": true,
+                "longClick": true
+              },
+              {
+                "b": [
+                  0.117,
+                  0.726,
+                  0.778,
+                  0.744
+                ],
+                "c": [
+                  0.447,
+                  0.735
+                ],
+                "type": "Text",
+                "text": "READY OFFLINE"
+              },
+              {
+                "b": [
+                  0.8,
+                  0.726,
+                  0.883,
+                  0.744
+                ],
+                "c": [
+                  0.842,
+                  0.735
+                ],
+                "type": "Text",
+                "text": "REV 6"
+              },
+              {
+                "b": [
+                  0.117,
+                  0.761,
+                  0.883,
+                  0.874
+                ],
+                "c": [
+                  0.5,
+                  0.817
+                ],
+                "type": "Text",
+                "text": "Block diagram of a single-input single-output gate pipeline"
+              },
+              {
+                "b": [
+                  0.117,
+                  0.89,
+                  0.883,
+                  0.95
+                ],
+                "c": [
+                  0.5,
+                  0.92
+                ],
+                "type": "Text",
+                "text": "A linear sequence of three rectangular blocks showing a flow from Input 1 through Gate 1 to Output 1 via directed horizontal arrows."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.95,
+          1,
+          1
+        ],
+        "c": [
+          0.5,
+          0.975
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.178,
+              0.95,
+              0.822,
+              1
+            ],
+            "c": [
+              0.5,
+              0.975
+            ],
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.269,
+                  0.967,
+                  0.303,
+                  0.983
+                ],
+                "c": [
+                  0.286,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.483,
+                  0.967,
+                  0.517,
+                  0.983
+                ],
+                "c": [
+                  0.5,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.7,
+                  0.967,
+                  0.733,
+                  0.983
+                ],
+                "c": [
+                  0.717,
+                  0.975
+                ],
+                "type": "Image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0,
+          1,
+          0.044
+        ],
+        "c": [
+          0.5,
+          0.022
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.883,
+              0.004,
+              0.9,
+              0.013
+            ],
+            "c": [
+              0.892,
+              0.008
+            ],
+            "type": "Text"
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.044,
+          1,
+          0.05
+        ],
+        "c": [
+          0.5,
+          0.047
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0,
+              0.044,
+              1,
+              0.05
+            ],
+            "c": [
+              0.5,
+              0.047
+            ],
+            "click": true
+          }
+        ]
+      }
+    ]
+  }
+}

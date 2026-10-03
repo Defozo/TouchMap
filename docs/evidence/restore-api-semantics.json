@@ -1,0 +1,11 @@
+{
+  "scope": "API20 SDK declarations and official OpenHarmony6.0 framework source used to interpret callbacks on the tested OpenHarmony6.1.0.31 image. Source ordering is not a physical display measurement.",
+  "references": [
+    "https://github.com/openharmony/arkui_ace_engine/blob/OpenHarmony-6.0-Release/frameworks/core/pipeline_ng/pipeline_context.cpp",
+    "https://github.com/openharmony/interface_sdk-js/blob/OpenHarmony-6.0-Release/api/@ohos.arkui.UIContext.d.ts",
+    "https://github.com/openharmony/interface_sdk-js/blob/OpenHarmony-6.0-Release/api/@ohos.arkui.observer.d.ts"
+  ],
+  "idleFinding": "FrameCallback.onIdle can be deferred beyond the updated frame. TriggerIdleCallback keeps callbacks pending and requests another frame when the remaining idle budget is insufficient. OnIdle also returns during window animation. Intent-to-onIdle is an idle-readiness metric, not same-frame rendering latency.",
+  "drawFinding": "FlushVsync calls frame callbacks, flushes building and layout, emits didLayout, then flushes render messages before HandleDrawCommandSendCallBack. The public willDraw observer identifies the draw-command boundary, not physical display scanout.",
+  "instrumentation": "Measurement is disabled in ordinary use. Native tests enable it, capture first onFrame, didLayout, willDraw and eventual onIdle timestamps after a Library open, compare the complete restored checkpoint, and independently verify the native Resume heading. Raw idle diagnostics remain separate from the draw-command measurement."
+}

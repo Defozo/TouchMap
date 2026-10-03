@@ -1,0 +1,200 @@
+{
+  "startedUtc": "2026-10-03T17:30:56.574179+00:00",
+  "device": "127.0.0.1:55556",
+  "status": "passed",
+  "runs": [
+    {
+      "preCommitMarker": {
+        "status": "uncommitted-writes-complete",
+        "mode": "event-only",
+        "key": "native-uncommitted-check@1",
+        "before": {
+          "packageId": "native-uncommitted-check",
+          "revision": 1,
+          "stateRevision": 2,
+          "status": "answering",
+          "paused": false,
+          "lastRegionId": "",
+          "activeRelationId": "",
+          "activeQuestionId": "q-after-evaporation",
+          "selectedAnswers": [
+            "condensation"
+          ],
+          "submissions": [],
+          "viewport": {
+            "scale": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotation": 0
+          },
+          "bookmarks": [],
+          "appliedEvents": [
+            "event-only-open",
+            "event-only-select"
+          ],
+          "updatedAt": 1791048662432
+        },
+        "pending": {
+          "eventId": "event-only-submit",
+          "expectedRevision": 2,
+          "type": "submitAnswer"
+        },
+        "error": ""
+      },
+      "verification": {
+        "status": "passed",
+        "mode": "event-only",
+        "checks": [
+          {
+            "name": "complete_checkpoint_restored",
+            "passed": true
+          },
+          {
+            "name": "unfinished_selection_not_submitted",
+            "passed": true
+          },
+          {
+            "name": "uncommitted_event_absent",
+            "passed": true
+          },
+          {
+            "name": "explicit_retry_commits_once",
+            "passed": true
+          }
+        ],
+        "error": "",
+        "scope": "Real native RDB transaction interrupted after partial event/progress writes or partial deletion. A test-only SQL barrier uses the production tables; production dispatch is separately exercised before and after process death."
+      }
+    },
+    {
+      "preCommitMarker": {
+        "status": "uncommitted-writes-complete",
+        "mode": "progress-written",
+        "key": "native-uncommitted-check@1",
+        "before": {
+          "packageId": "native-uncommitted-check",
+          "revision": 1,
+          "stateRevision": 2,
+          "status": "answering",
+          "paused": false,
+          "lastRegionId": "",
+          "activeRelationId": "",
+          "activeQuestionId": "q-after-evaporation",
+          "selectedAnswers": [
+            "condensation"
+          ],
+          "submissions": [],
+          "viewport": {
+            "scale": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotation": 0
+          },
+          "bookmarks": [],
+          "appliedEvents": [
+            "progress-written-open",
+            "progress-written-select"
+          ],
+          "updatedAt": 1791048669505
+        },
+        "pending": {
+          "eventId": "progress-written-submit",
+          "expectedRevision": 2,
+          "type": "submitAnswer"
+        },
+        "error": ""
+      },
+      "verification": {
+        "status": "passed",
+        "mode": "progress-written",
+        "checks": [
+          {
+            "name": "complete_checkpoint_restored",
+            "passed": true
+          },
+          {
+            "name": "unfinished_selection_not_submitted",
+            "passed": true
+          },
+          {
+            "name": "uncommitted_event_absent",
+            "passed": true
+          },
+          {
+            "name": "explicit_retry_commits_once",
+            "passed": true
+          }
+        ],
+        "error": "",
+        "scope": "Real native RDB transaction interrupted after partial event/progress writes or partial deletion. A test-only SQL barrier uses the production tables; production dispatch is separately exercised before and after process death."
+      }
+    },
+    {
+      "preCommitMarker": {
+        "status": "uncommitted-writes-complete",
+        "mode": "delete-partial",
+        "key": "native-uncommitted-check@1",
+        "before": {
+          "packageId": "native-uncommitted-check",
+          "revision": 1,
+          "stateRevision": 2,
+          "status": "answering",
+          "paused": false,
+          "lastRegionId": "",
+          "activeRelationId": "",
+          "activeQuestionId": "q-after-evaporation",
+          "selectedAnswers": [
+            "condensation"
+          ],
+          "submissions": [],
+          "viewport": {
+            "scale": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "rotation": 0
+          },
+          "bookmarks": [],
+          "appliedEvents": [
+            "delete-partial-open",
+            "delete-partial-select"
+          ],
+          "updatedAt": 1791048677412
+        },
+        "pending": {
+          "eventId": "delete-partial-submit",
+          "expectedRevision": 2,
+          "type": "submitAnswer"
+        },
+        "error": ""
+      },
+      "verification": {
+        "status": "passed",
+        "mode": "delete-partial",
+        "checks": [
+          {
+            "name": "complete_checkpoint_restored",
+            "passed": true
+          },
+          {
+            "name": "unfinished_selection_not_submitted",
+            "passed": true
+          },
+          {
+            "name": "uncommitted_event_absent",
+            "passed": true
+          },
+          {
+            "name": "explicit_retry_commits_once",
+            "passed": true
+          }
+        ],
+        "error": "",
+        "scope": "Real native RDB transaction interrupted after partial event/progress writes or partial deletion. A test-only SQL barrier uses the production tables; production dispatch is separately exercised before and after process death."
+      }
+    }
+  ],
+  "productionHapSha256": "2cd71aa6ae39d202adb06d57c355a67c65bdd22c0eb85355418381b26fbc8d57",
+  "testHapSha256": "169115370528be52d396332f626488d6744d81ec1980dbe987f99a79ff01203b",
+  "scope": "Three actual process deaths after native SQL writes and before commit. Tests use isolated synthetic material in the production RDB tables. Not an injected production-dispatch callback.",
+  "finishedUtc": "2026-10-03T17:31:21.782295+00:00"
+}

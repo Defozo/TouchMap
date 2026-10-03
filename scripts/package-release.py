@@ -21,6 +21,9 @@ ROOT = Path(__file__).resolve().parents[1]
 _FINGERPRINT_SPEC = importlib.util.spec_from_file_location('release_app_fingerprint', ROOT/'scripts/app_source_fingerprint.py')
 _FINGERPRINT = importlib.util.module_from_spec(_FINGERPRINT_SPEC)
 _FINGERPRINT_SPEC.loader.exec_module(_FINGERPRINT)
+_PRESENTATION_SPEC = importlib.util.spec_from_file_location('release_presentation', ROOT/'scripts/presentation_artifacts.py')
+_PRESENTATION = importlib.util.module_from_spec(_PRESENTATION_SPEC)
+_PRESENTATION_SPEC.loader.exec_module(_PRESENTATION)
 REQUIRED = [
     'README.md', 'ARCHITECTURE.md', 'AI_WORKFLOW.md', 'AI_INTEGRATION.md',
     'THIRD_PARTY.md', 'LICENSE', 'TEAM.json', 'SUBMISSION.md', 'toolchain.lock.json',
@@ -175,8 +178,14 @@ def prepare(root: Path, commit: str, hap: Path, demo: Path, verification: Path,
             raise ValueError('Committed storyboard differs from the reviewed demonstration')
         if abs(float(demo_review.get('durationSeconds', 0)) - float(demo_metadata['format']['duration'])) > 0.1:
             raise ValueError('Demonstration duration differs from the reviewed committed manifest')
+        presentation, presentation_files = _PRESENTATION.reviewed_presentation(root, files)
+        if presentation is None and 'finalEnglishPresentation' in report['gates']:
+            raise ValueError('Declared presentation gate requires a committed reviewed presentation manifest')
+        if report.get('presentation') != presentation:
+            raise ValueError('Presentation differs from release verification; verify the reviewed artifacts again')
         bundle = {'source.zip': deterministic_zip(files), 'touchmap-signed.hap': hap_bytes,
                   'demo/touchmap-demo.mp4': demo_bytes, 'release-verification.json': canonical_json(report)}
+        bundle.update(presentation_files)
         for name, data in files.items():
             if (name in TOP_DOCS or name.startswith(('docs/', 'licenses/', 'assets/brand/', 'contracts/'))
                     or name == 'backend/touchmap/assets/DejaVu-LICENSE.txt'
@@ -192,7 +201,7 @@ def prepare(root: Path, commit: str, hap: Path, demo: Path, verification: Path,
                        'sourcePolicy': 'Every source byte comes from git archive of sourceCommit; local untracked files are excluded'}
         bundle['environment-manifest.json'] = canonical_json(environment)
         manifest = {'formatVersion': 1, 'project': 'TouchMap', 'challenge': "IMAGINE WHAT'S NEXT",
-                    'sourceCommit': resolved, 'team': team, 'demo': demo_metadata,
+                    'sourceCommit': resolved, 'team': team, 'demo': demo_metadata, 'presentation': presentation,
                     'publicRepositoryUrl': report.get('publicRepositoryUrl'),
                     'publicReleaseUrl': report.get('publicReleaseUrl'),
                     'officialSubmission': report.get('officialSubmission'),

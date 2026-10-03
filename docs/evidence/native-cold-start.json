@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T17:54:50.677387+00:00",
+  "installedHap": {
+    "at": "2026-10-03T17:48:09.205994+00:00",
+    "device": "127.0.0.1:55556",
+    "status": "installed-and-launched",
+    "bundleName": "org.touchmap.app",
+    "hapSha256": "6bac1571c32d0fa3ea6e5bcd9d2596c767194c0db3b06b648d6fe51c877e00fa",
+    "appSourceSha256": "c748b4b79ffb34a1fb0a5c8327aea49a581c9505885b01cf3b7a626c695700d5",
+    "verification": "Oniro app install, EntryAbility launch and process wait each succeeded. The hash identifies the HAP passed to installation."
+  },
+  "requested": 5,
+  "scope": "Ordinary aa start launches after force-stop of an already provisioned installation. Times include HDC transport, host process startup and UI-tree polling. They are upper-bound observations, not intrinsic startup latency, first-install seeding or a performance-threshold claim.",
+  "runs": [
+    {
+      "index": 0,
+      "pid": "5424",
+      "aaStartReturnMs": 255.93,
+      "libraryObservedMs": 4812.06,
+      "pollDurationsMs": [
+        4556.0
+      ],
+      "launchResult": "start ability successfully."
+    },
+    {
+      "index": 1,
+      "pid": "5509",
+      "aaStartReturnMs": 380.0,
+      "libraryObservedMs": 4136.34,
+      "pollDurationsMs": [
+        3756.29
+      ],
+      "launchResult": "start ability successfully."
+    },
+    {
+      "index": 2,
+      "pid": "5613",
+      "aaStartReturnMs": 404.56,
+      "libraryObservedMs": 4210.94,
+      "pollDurationsMs": [
+        3806.32
+      ],
+      "launchResult": "start ability successfully."
+    },
+    {
+      "index": 3,
+      "pid": "5699",
+      "aaStartReturnMs": 544.49,
+      "libraryObservedMs": 4793.35,
+      "pollDurationsMs": [
+        4248.81
+      ],
+      "launchResult": "start ability successfully."
+    },
+    {
+      "index": 4,
+      "pid": "5787",
+      "aaStartReturnMs": 240.17,
+      "libraryObservedMs": 5014.89,
+      "pollDurationsMs": [
+        4774.67
+      ],
+      "launchResult": "start ability successfully."
+    }
+  ],
+  "finishedUtc": "2026-10-03T17:55:20.122701+00:00"
+}

@@ -13,6 +13,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument('mode',choices=['on','off','status'])
 parser.add_argument('--device',default='127.0.0.1:55555')
 parser.add_argument('--hdc-device-port',type=int,default=55555)
+parser.add_argument('--output',type=Path,help='Explicit evidence path; defaults to docs/evidence/offline-MODE.json')
 args=parser.parse_args()
 if not 1<=args.hdc_device_port<=65535:raise SystemExit('Invalid HDC port')
 hdc=Path.home()/'command-line-tools/sdk/default/openharmony/toolchains/hdc'
@@ -50,5 +51,7 @@ report={'time':datetime.now(timezone.utc).isoformat(),'device':args.device,'oper
         'scope':'Dedicated emulator IPv4/IPv6 outbound blocked except HDC replies; includes application loopback and WAN.',
         'ipv4':shell('iptables','-S'),'ipv6':shell('ip6tables','-S')}
 root=Path(__file__).resolve().parents[1]
-(root/'docs/evidence'/f'offline-{args.mode}.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+output=args.output or root/'docs/evidence'/f'offline-{args.mode}.json'
+output.parent.mkdir(parents=True,exist_ok=True)
+output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,indent=2))

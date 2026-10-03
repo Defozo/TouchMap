@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-10-03T19:18:14.073705+00:00",
+  "backend": {
+    "passed": 90,
+    "failures": 0,
+    "errors": 0,
+    "junitSeconds": 12.415,
+    "gitHeadAtRun": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+    "workingTreeIncludedUncommittedPresentationChanges": true,
+    "sourceSha256": {
+      "backend/tests/crash_worker.py": "86c0428a5de36e08fba3e31dae3c264140140f45cc673d85e05887328b368246",
+      "backend/tests/diagnose_provider.py": "6a720f9dfc4ef9f44ade1bb2977818d29b14663834e1d7fd687539eb8dea7dea",
+      "backend/tests/run_cli_checks.py": "cab20d27d35d9eb940138ad54a6bd511b1d729e52888366114b77feb299d60ad",
+      "backend/tests/test_api.py": "45eeda07bd2fc4221959f4e75be9501cf97425c5e2ba4fa669df25734059f6c0",
+      "backend/tests/test_archive.py": "cc8f8413a5fe106c4cf99da91c26ecab8873424ca4b0b7ee45616bd53a3360bb",
+      "backend/tests/test_core.py": "0e8f946735af3c7c3e0bc28c0d9f28cbf6f7bfa1e9a3436830b2d46d2abba16c",
+      "backend/tests/test_release_packaging.py": "b8bbcd183fff73807d452541d8cf585ff78167a1ff1fa857cf45cfed5c44f5e1",
+      "backend/touchmap/__init__.py": "808aa1bb780a0cc600b2efe3538090ad80b01fee222274a993f0eb7b0447477f",
+      "backend/touchmap/api.py": "ae177791d69d0fb13410be1dfd40f0e8b4d2c91e9b1f9e75b514c2dda1ed3cba",
+      "backend/touchmap/audio.py": "7735d54311db0adc925742854f5e180396f3810e1b8dfa897a3487b20f50a3db",
+      "backend/touchmap/cli.py": "2e4b2d12aa32e202220f3c7e5f505876440a7306481460006bfc500d03e1ac80",
+      "backend/touchmap/errors.py": "0b17ddda82e348bd98413570c288429456e8d6b1a5091d845b3a590f24683f79",
+      "backend/touchmap/images.py": "16ecc4d8e573cf29ca75fb1f7fe50691d52b09fcebe1a0962102bdf29cf823c4",
+      "backend/touchmap/models.py": "6398617d71db1a64c4a4228ff2b8571cc93ae6e9059928a5406711f2e618c427",
+      "backend/touchmap/packages.py": "5d15989598407bab4c604bc37e3d6ed5d0ea9486716d8355e829cbb575c88c0a",
+      "backend/touchmap/providers.py": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+      "backend/touchmap/settings.py": "dfb0eb2887d5641968dbc5c37374e04b3d34f2725ff8f22b6fb3bce906570a62",
+      "backend/touchmap/store.py": "1f9505e528dff6578130f4443292341886ae005d734861135a598dbf47a8266f",
+      "backend/touchmap/svg.py": "8c8f8afbcdcdb0c81004108907f58630d5b847b1a0e0df0b49d9b9008dc0eec1",
+      "scripts/app_source_fingerprint.py": "c7bbcd55b712f5cf51ee53da2be69eeeb6a1f427f4a44fb82c70617cd6b6d6c4",
+      "scripts/package-release.py": "4c026fd8339856e7a6248a23c0ed0b36a1bea7e358b803e4d3e734558ef3b682",
+      "scripts/presentation_artifacts.py": "7a8eeca1ab168083905bf2f191a51c5d3a08835986260d202c8508a73e238c4d",
+      "scripts/verify-release.py": "0f86d3d08fe0080c1a232a250547e42e91ff02b4fd8851a0b1d71bde20a5c687"
+    }
+  },
+  "host": {
+    "failures": 0,
+    "durationMs": 1158.4211,
+    "passed": 51,
+    "sourceCommit": "1d07dbb611ea20414f274aa59c1f3a5cc41314e5",
+    "appSourceSha256": "c748b4b79ffb34a1fb0a5c8327aea49a581c9505885b01cf3b7a626c695700d5"
+  },
+  "typecheck": {
+    "exit": 0,
+    "sourceCommit": "1d07dbb611ea20414f274aa59c1f3a5cc41314e5",
+    "appSourceSha256": "c748b4b79ffb34a1fb0a5c8327aea49a581c9505885b01cf3b7a626c695700d5"
+  },
+  "evidenceSha256": {
+    "docs/evidence/backend-pytest.xml": "cbf52c77e5bf7c2d0be75194a0911b31be1897a684f748933cf346798bf60aaf",
+    "docs/evidence/native-audit-host-tests.txt": "676d5e6588e826fb5aaf0a4707332b77fd3aeeea944349334b22061d9178abe4",
+    "docs/evidence/native-audit-typecheck.txt": "8542d4a8147a5f75a2f1b80e5edf3ab478a9bc3f3c3154463b55edac98ed78a0"
+  },
+  "scope": "Local host executions with separate source identities. Backend 90 includes the presentation packaging changes recorded by exact source hashes. Host 51 and typecheck were executed at the earlier frozen app checkpoint; the subsequent app changes are native measurement hooks, not shared pure TypeScript. Independent clean-clone reproduction and native execution are separate evidence."
+}

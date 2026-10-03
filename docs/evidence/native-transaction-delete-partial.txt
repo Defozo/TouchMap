@@ -1,0 +1,3 @@
+TestFinished-ResultCode: 0
+TestFinished-ResultMsg: Native transaction interruption passed
+user test finished.

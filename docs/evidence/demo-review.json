@@ -1,0 +1,68 @@
+{
+  "recordedAtUtc": "2026-10-03T18:53:53.747638+00:00",
+  "videoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1",
+  "storyboardSha256": "b516c3ad3a364494b83be7ac8c7a7f5f31ea41b588f737e05ba194beb097787c",
+  "reviewer": "Codex delegated native/demo reviewer",
+  "status": "accepted_with_stated_review_coverage",
+  "technicalEvidence": "docs/evidence/demo-qc.json",
+  "independentReview": "docs/evidence/demo-independent-review.json",
+  "reviewedSamples": {
+    "allSceneMidpoints": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "criticalFullResolutionBoundaries": [
+      "01-in",
+      "02-in",
+      "02-out",
+      "07-in",
+      "07-out",
+      "08-out"
+    ],
+    "sourceReview": "Targeted source contact sheets covered the selected picker, acceptance, touch, submit, unfinished selection, restart, restoration, AI request/preview, earlier review/speech, published-ready and second-reimport scenes."
+  },
+  "publicContactSheets": [
+    "docs/evidence/demo-review/contact-1.jpg",
+    "docs/evidence/demo-review/contact-2.jpg",
+    "docs/evidence/demo-review/contact-3.jpg",
+    "docs/evidence/demo-review/contact-4.jpg",
+    "docs/evidence/demo-review/contact-5.jpg"
+  ],
+  "findings": [],
+  "acceptedDecisions": [
+    "First seven seconds show the final installed release HAP; all other flow excerpts retain historical artifact annotations.",
+    "The new AI request is not falsely joined to publication of the earlier reviewed revision.",
+    "The developer review is not attributed to the sole human team member or to a blind user.",
+    "The second installation demonstrates offline idempotent reimport with private progress preserved.",
+    "Only captured QEMU touch audio is retained; source waveform alignment and gain are verified.",
+    "The earlier frame-driven authoring excerpt is explicitly labelled condensed."
+  ],
+  "limits": [
+    "Visual review used every scene midpoint and selected important boundaries, not continuous human viewing of all motion.",
+    "No independent human listening claim is made. Cached local machine transcription and exact decoded PCM identity support one audible label only.",
+    "Frame capture can hold the last actual VNC frame between updates. Caption readability does not establish accessibility certification."
+  ],
+  "automaticCorrectionRounds": 0,
+  "scopeChangesAfterInitialAssembly": [
+    "Replace opening information card with actual final release Library recording under the same introduction, preserving total180 seconds.",
+    "Refresh only the opening capture/provenance after the final measurement-hook fix. All16 non-intro scene definitions and contact pages2–5 remain unchanged."
+  ],
+  "previousCandidateSha256": "09cd2efa9656ae1f98c891d32311ee5b4d7fc9bf62fef91b15efeb0199b168fa",
+  "audioEvidence": "docs/evidence/demo-audio-transcript.json",
+  "nonBlockingCoverageLimit": "Machine recognition supports Evaporation only. The initial two-label expectation did not pass and is preserved. The film does not claim both visual selections were heard."
+}

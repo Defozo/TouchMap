@@ -4,7 +4,7 @@
     "evidence": [
       "docs/evidence/backend-pytest.xml"
     ],
-    "result": "71 tests, 0 failures, 0 errors; current backend snapshot."
+    "result": "90 tests, 0 failures, 0 errors; JUnit 12.415 s, including 23 presentation/demo release-packaging checks."
   },
   "hostAutomated": {
     "status": "passed",
@@ -12,15 +12,15 @@
       "docs/evidence/native-audit-host-tests.txt",
       "docs/evidence/native-audit-typecheck.txt"
     ],
-    "result": "51 tests and TypeScript checking passed, including localization and boundary hysteresis; final frozen-source rerun remains separate."
+    "result": "51 tests passed in1.158s and TypeScript checking passed after app-source freeze, including localization and boundary hysteresis."
   },
   "nativeIntegrationObserved": {
     "status": "passed",
     "evidence": [
       "docs/evidence/native-test-artifact.json"
     ],
-    "result": "16 native tests passed on the bound historical build. Does not certify later edits.",
-    "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54"
+    "result": "18 native tests passed on signed HAP1209 bound to source checkpoint2642 and app fingerprinta332.",
+    "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd"
   },
   "nativeAudioObserved": {
     "status": "passed",
@@ -28,8 +28,8 @@
       "docs/evidence/native-audio-phase-analysis.json",
       "docs/evidence/native-audio-controls.json"
     ],
-    "result": "100/100 accepted writes; scheduler onset p95 20 ms, total with intentional dwell p95 289 ms. Prewarmed renderer; no physical acoustic claim.",
-    "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54"
+    "result": "100/100 accepted writes after PCM-tail repair; scheduler onset p95 25 ms, total with intentional dwell p95 303 ms. Prewarmed renderer; no physical acoustic claim.",
+    "productionHapSha256": "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725"
   },
   "nativePostCommitRecovery": {
     "status": "passed",
@@ -111,11 +111,17 @@
       "docs/evidence/secret-scan.json",
       "docs/evidence/documentation-links.json"
     ],
-    "result": "474 scanner-selected text files,537 reviewed algorithm-literal false positives,0 unresolved matches;77 relative document targets resolve. Final staged inputs need a fresh scan."
+    "result": "Working-tree snapshot:474 scanner-selected text files,537 reviewed algorithm-literal false positives,0 unresolved. Link snapshot:138 checked relative targets,0 failures. Final staged inputs need a fresh scan."
   },
   "finalSourceFreeze": {
-    "status": "pending",
-    "reason": "App source is still changing; commit and app-source fingerprint must be frozen and recorded."
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/hap-metadata.json",
+      "docs/evidence/native-test-artifact.json"
+    ],
+    "result": "Signed production HAP1209 was built from committed app checkpoint2642 with exact app fingerprint. Earlier builds retain separate evidence identities.",
+    "commit": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+    "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b"
   },
   "finalCleanBuildAndSignature": {
     "status": "pending",
@@ -126,8 +132,17 @@
     "reason": "Earlier clean checkout succeeded, but it predates current fixes. Final committed app bytes, clean rebuild, signature and release HAP must match."
   },
   "finalNativeAndHostAcceptance": {
-    "status": "pending",
-    "reason": "Run suites on frozen app inputs, including the new short PCM-tail regression and current source changes; bind production/test HAP hashes and app fingerprint."
+    "result": "90 backend and 51 host tests passed; typecheck exit 0. Current HAP1209 passed 18 native tests and four audio controls. The 15 added backend tests cover presentation packaging; app and pure TypeScript sources are unchanged. Independent clean-clone rerun remains separately gated.",
+    "evidence": [
+      "docs/evidence/backend-pytest.xml",
+      "docs/evidence/native-audit-host-tests.txt",
+      "docs/evidence/native-audit-typecheck.txt",
+      "docs/evidence/native-test-artifact.json",
+      "docs/evidence/native-preparation-checks.json",
+      "docs/evidence/native-audio-controls.json",
+      "docs/evidence/native-audio-controls-artifact.json"
+    ],
+    "status": "passed"
   },
   "finalOfflineLearnerFlow": {
     "status": "passed",
@@ -146,15 +161,26 @@
     "result": "Five actual deleted-URI/full-staging checks passed: no false success/new material, exact existing checkpoint retained, failed staging removed.64KiB tmpfs confined to selected app process staging namespace, then removed. This is not mid-transaction DB termination."
   },
   "fullContextRestoreTiming": {
-    "status": "pending",
-    "reason": "Warm committed checkpoint reads measured p95 2 ms, but complete active-app context restoration and cold launch have not been independently timed."
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-restore-benchmark.json",
+      "docs/evidence/native-restore-artifact.json"
+    ],
+    "result": "100 acknowledged full Progress/Resume-heading checks, p95 130 ms and maximum 453 ms from Library open intent through ArkUI willDraw after layout. Two runs contributed 92 + 8 samples after a UiTest RPC stall; the unacknowledged 93rd observation remains retained and excluded. Excludes physical display scanout, human selection and cold process launch.",
+    "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd"
   },
   "finalEnglishDemo": {
-    "status": "pending",
+    "durationSeconds": 180.0,
+    "status": "passed",
     "evidence": [
-      "docs/evidence/demo-manifest.json"
+      "docs/evidence/demo-manifest.json",
+      "docs/evidence/demo-qc.json",
+      "docs/evidence/demo-review.json",
+      "docs/evidence/demo-independent-review.json",
+      "docs/evidence/demo-audio-transcript.json"
     ],
-    "reason": "Actual native source recordings exist; final approximately three-minute English edit and visual/audio review are not yet complete."
+    "videoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1",
+    "result": "Final1209 intro and explicitly identified historical native flow excerpts.4320frames decoded; manifest reviewed. Technical checks, factual continuity and sampled visual reviews passed within recorded coverage. One Evaporation recording is supported; prior two-label ASR expectation remains a non-passing diagnostic. No continuous perceptual video or independent human listening claim."
   },
   "finalReleaseArchive": {
     "status": "pending",
@@ -177,7 +203,7 @@
     "evidence": [
       "docs/ACCESSIBILITY.md"
     ],
-    "reason": "User explicitly confirmed no HarmonyOS/OpenHarmony device is available on2026-10-03 at16:50:50UTC and requested continued emulator tests. Do not ask again. Physical vibration, assistive switches, headphone removal and audio routes remain unverified."
+    "reason": "No HarmonyOS/OpenHarmony physical target is available, as confirmed by the user on2026-10-03. Physical vibration, assistive switches, headphone removal and audio routes remain unverified."
   },
   "representativeLearnerStudy": {
     "status": "pending_external",
@@ -193,21 +219,17 @@
     ],
     "reason": "No teacher comparison of manual and AI-assisted preparation through source review, residual error, transfer and setup has been conducted."
   },
-  "publicSourceAndIndependentReproduction": {
-    "status": "pending_external",
-    "reason": "Local clean-clone evidence exists for an earlier commit. Public repository publication and independent second-developer reproduction of final sources are not yet verified."
-  },
   "competitionProjectCreated": {
     "status": "passed",
-    "provenance": "Direct user answer relayed by the HackYeah coordinator, recorded2026-10-03T16:33:02.860604+00:00.",
-    "result": "TouchMap already exists in HackTribe; do not request registration again. This is user-confirmed status, not a browser-submitted action."
+    "provenance": "User-confirmed on2026-10-03.",
+    "result": "TouchMap already exists in HackTribe. This confirms project creation only; final material submission remains unconfirmed."
   },
   "competitionFinalSubmission": {
     "status": "unconfirmed",
     "evidence": [
       "docs/SUBMISSION_REQUIREMENTS.md"
     ],
-    "reason": "User confirmed project creation but did not confirm final material submission. No external upload or final submission is claimed."
+    "reason": "The existing project is confirmed; no separate irreversible final-submission action or finalization is claimed. Material draft save is tracked separately."
   },
   "nativeManualRecordingImport": {
     "status": "passed",
@@ -217,7 +239,60 @@
     "result": "Actual native Speech target/provenance/SystemPicker import, durable byte readback and playback. Licensed local WAV1115ms53542bytes matched exactly; isolated QEMU audio captured, no new TTS."
   },
   "nativeMidTransactionFault": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-transaction-interruption.json"
+    ],
+    "result": "Three actual process deaths after native uncommitted writes; complete prior checkpoint, no implicit submission, absent uncommitted event, and exactly-once explicit retry all passed. Test-only SQL barriers use production tables; not arbitrary production-dispatch fault injection."
+  },
+  "nativePreparationRevisionSafety": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-preparation-checks.json",
+      "docs/evidence/native-preparation-ui.json"
+    ],
+    "result": "Final HAP native HTTP/adoption checks passed for delayed and cancelled results. Separate historical actual Editor UI cancelled pending request, saved a newer revision and retained exact expected content after server release/restart. Controlled loopback fixture, no provider inference."
+  },
+  "nativeCandidateUiRegression": {
+    "evidence": [
+      "docs/evidence/final-candidate-ui-verification.json"
+    ],
+    "result": "Nine actual offline UI checks passed including persisted context, cleared stale guidance, unknown source route and semantic follow. The test network block was removed.",
+    "productionHapSha256": "6bac1571c32d0fa3ea6e5bcd9d2596c767194c0db3b06b648d6fe51c877e00fa",
+    "status": "passed"
+  },
+  "sourceHistorySecretAudit": {
+    "evidence": [
+      "docs/evidence/history-secret-scan.json"
+    ],
+    "result": "All505 distinct UTF-8 text blobs reachable from four commits,506 files with index, were scanned.897 matches were reviewed as public sha256 literals;0 unresolved.118 binary blobs excluded. Later hook commit and final staged release scan are separate.",
+    "status": "passed"
+  },
+  "currentProductionUi": {
+    "status": "passed",
+    "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+    "result": "Five checks: actual installation/launch and Library, preserved saved focus/correct result/unfinished selection with outboundIPv4/IPv6 blocked, and isolation cleanup. Does not relabel earlier complete flows as current-build recordings.",
+    "evidence": [
+      "docs/evidence/release-ui-verification.json"
+    ]
+  },
+  "publicSourceAccess": {
     "status": "pending",
-    "reason": "100 native restart boundaries cover durable post-commit acknowledgements. Arbitrary termination inside database transactions remains unverified; it is not established by the separate ENOSPC import test."
+    "reason": "Public source publication and anonymous repository readback are not yet verified."
+  },
+  "independentDeveloperReproduction": {
+    "status": "pending_external",
+    "reason": "A second human developer has not independently reproduced the final sources. Automated clean checkout is verified separately."
+  },
+  "competitionMaterialDraftSave": {
+    "status": "pending",
+    "evidence": [
+      "docs/SUBMISSION_REQUIREMENTS.md"
+    ],
+    "reason": "Prepared material updates have not yet been saved and read back from the existing HackTribe project. New Idea and current visibility are preserved."
+  },
+  "finalEnglishPresentation": {
+    "status": "pending",
+    "reason": "The user requested an English PDF of at most ten slides and editable PPTX with speaker notes. Generated files, visual review, exact committed hash manifest and release preflight remain to be completed."
   }
 }

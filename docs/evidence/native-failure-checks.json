@@ -1,11 +1,14 @@
 {
-  "startedUtc": "2026-10-03T17:06:30.245269+00:00",
+  "startedUtc": "2026-10-03T17:18:50.179991+00:00",
   "device": "127.0.0.1:55556",
   "mountTarget": "/data/app/el2/100/base/org.touchmap.app/haps/entry/files/staging",
   "filesystem": "tmpfs",
   "sizeBytes": 65536,
   "scope": "Host fault injection confined to an empty app staging directory. Existing materials, database and progress remain on their original filesystem.",
-  "appPid": 1865,
+  "productionHapSha256": "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725",
+  "testHapSha256": "d5b5e40af9fcc2b1fc5688f859d0b89d8b46f8a7c7ee40245bc79b43e9186d70",
+  "artifactBinding": "Requires matching production and test HAPs installed before this script; the script itself does not install them.",
+  "appPid": 2702,
   "mountNamespace": "Selected app process only; host namespace mounts do not propagate into the sandbox.",
   "mountedEntry": "touchmap-test-enospc /data/storage/el2/base/haps/entry/files/staging tmpfs rw,relatime,size=64k,mode=770,uid=20010042,gid=20010042 0 0",
   "nativeReport": {
@@ -42,5 +45,5 @@
   },
   "status": "passed",
   "mountRemoved": true,
-  "finishedUtc": "2026-10-03T17:06:39.106679+00:00"
+  "finishedUtc": "2026-10-03T17:19:00.813045+00:00"
 }

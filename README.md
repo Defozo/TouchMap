@@ -61,7 +61,7 @@ uv sync --frozen
 uv run pytest
 ```
 
-Run `scripts/verify-release.ps1` for package integrity, schemas, native metadata, documentation and evidence checks. It reports unfulfilled platform/research gates rather than treating a build as full verification. [Test results](docs/TEST_REPORT.md) distinguishes host unit tests, real provider inference, native device tests and research gaps.
+Run `scripts/verify-release.ps1` for package integrity, schemas, native metadata, documentation and evidence checks. It reports unfulfilled platform/research gates rather than treating a build as full verification. [Test results](docs/TEST_REPORT.md) distinguish host unit tests, real provider inference, native device tests and research gaps. [Release packaging](docs/RELEASE.md) explains how the committed sources, signed HAP, reviewed English demo, examples and checksums form one traceable local bundle.
 
 Host JavaScript tests exercise the same pure modules imported by the native app. They are not a substitute for native file, database, screen-reader, audio or lifecycle tests. The 100 host state roundtrips are explicitly not 100 forced native process restarts.
 

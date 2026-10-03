@@ -11,6 +11,15 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'backend'))
 from touchmap.packages import validate_package
 from app_source_fingerprint import fingerprint_app
+from presentation_artifacts import MANIFEST, reviewed_presentation
+
+
+def verify_presentation(root, commit, gates):
+    committed = subprocess.run(['git', 'show', f'{commit}:{MANIFEST}'], cwd=root, capture_output=True)
+    metadata, _ = reviewed_presentation(root, {MANIFEST: committed.stdout} if committed.returncode == 0 else {})
+    if metadata is None and 'finalEnglishPresentation' in gates:
+        raise ValueError('Declared presentation gate requires a committed reviewed presentation manifest')
+    return metadata
 
 def main():
     parser = argparse.ArgumentParser()
@@ -61,7 +70,13 @@ def main():
     gates_path = ROOT / 'docs/evidence/release-gates.json'
     gates = json.loads(gates_path.read_text(encoding='utf-8')) if gates_path.exists() else {'evidenceManifest': {'status': 'pending'}}
     outstanding = [key for key, value in gates.items() if value.get('status') != 'passed']
-    result = {'team': team, 'sourceCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+    commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    presentation = None
+    try:
+        presentation = verify_presentation(ROOT, commit, gates)
+    except (ValueError, KeyError, TypeError, OSError, zipfile.BadZipFile, subprocess.TimeoutExpired) as error:
+        failures.append(f'Presentation: {error}')
+    result = {'team': team, 'sourceCommit': commit, 'presentation': presentation,
               'hap': hap_info, 'samples': samples, 'artifactFailures': failures, 'gates': gates,
               'outstandingGates': outstanding, 'competitionSubmitted': False}
     (ROOT / 'dist').mkdir(exist_ok=True)

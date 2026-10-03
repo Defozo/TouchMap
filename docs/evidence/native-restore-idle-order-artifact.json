@@ -1,0 +1,50 @@
+{
+  "device": "127.0.0.1:55556",
+  "startedUtc": "2026-10-03T18:16:54.644448+00:00",
+  "productionHapSha256": "6bac1571c32d0fa3ea6e5bcd9d2596c767194c0db3b06b648d6fe51c877e00fa",
+  "testHapSha256": "3b91372d317895c0e5dfe8576691fd3a4d09fe3bedaac75559a00d3584562e1d",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "c748b4b79ffb34a1fb0a5c8327aea49a581c9505885b01cf3b7a626c695700d5",
+    "appSourceFileCount": 122,
+    "appSourceBytes": 7341911,
+    "gitHeadAtBuild": "1d07dbb611ea20414f274aa59c1f3a5cc41314e5",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "hostBefore": {
+    "at": "2026-10-03T18:16:55.182198+00:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [
+      3.20703125,
+      3.07666015625,
+      4.01953125
+    ],
+    "buildProcesses": {
+      "java": 0,
+      "hvigorw": 0,
+      "clang": 0,
+      "ninja": 0,
+      "ffmpeg": 0
+    }
+  },
+  "status": "failed",
+  "error": "Native rendered restoration target was not met.",
+  "hostAfter": {
+    "at": "2026-10-03T18:17:32.830063+00:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [
+      3.47900390625,
+      3.17431640625,
+      4.01708984375
+    ],
+    "buildProcesses": {
+      "java": 0,
+      "hvigorw": 0,
+      "clang": 0,
+      "ninja": 0,
+      "ffmpeg": 0
+    }
+  },
+  "finishedUtc": "2026-10-03T18:17:32.830140+00:00"
+}

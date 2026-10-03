@@ -23,3 +23,22 @@ signing-config.json
 .state/
 *.log
 *.sqlite*
+
+# Local task intake and coordinator records are not release source.
+.plans/
+AGENTS.md
+MATERIALS.md
+PLAN.md
+PLANNING_STATUS.md
+SERVICES.md
+TASK.json
+USER_UPDATES.json
+USER_REQUEST_*.md
+HACKTRIBE_UPDATE_RESULT.json
+WYBOR.md
+materials/
+official-2026-10-03/
+proposals/
+
+# The selected lossless recording and speech excerpt are already retained.
+docs/evidence/native-authored-playback.wav

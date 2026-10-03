@@ -1,5 +1,7 @@
 # Optional AI and speech preparation
 
+Team: **DEFOZO SOFTWARE HOUSE**. Sole human member: **Michał Kiełtyka**.
+
 TouchMap's offline learner path makes no inference request. The model assists a teacher in producing a draft from one selected image. It does not grade learner answers, publish material or control a device.
 
 ## Providers and payloads

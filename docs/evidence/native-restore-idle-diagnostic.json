@@ -1,0 +1,2721 @@
+{
+  "status": "diagnostic_interrupted",
+  "recordedAt": "2026-10-03T17:43:43.568147+00:00",
+  "requested": 100,
+  "actualRecoveredSamples": 44,
+  "lastProgress": {
+    "completed": 43,
+    "total": 100,
+    "durationMs": 363
+  },
+  "pid": "4596",
+  "reason": "Official API and framework source show onIdle may defer across frames. This measures idle readiness rather than the intended layout/draw-command endpoint. Stopped after preserving actual observations, without claiming100 completed.",
+  "artifact": {
+    "recordedAt": "2026-10-03T17:28:12.661473+00:00",
+    "device": "127.0.0.1:55556",
+    "status": "passed",
+    "productionHapSha256": "2cd71aa6ae39d202adb06d57c355a67c65bdd22c0eb85355418381b26fbc8d57",
+    "testHapSha256": "169115370528be52d396332f626488d6744d81ec1980dbe987f99a79ff01203b",
+    "tests": {
+      "run": 18,
+      "failed": 0,
+      "errors": 0,
+      "passed": 18
+    },
+    "sourceFingerprint": {
+      "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+      "appSourceSha256": "7799bde9d2b6c450c258d5df95a6aa4df0557a028317ecfa8679ddb048a0e31a",
+      "appSourceFileCount": 122,
+      "appSourceBytes": 7340036,
+      "gitHeadAtBuild": "e79fee8783c446985abe911fdb975f5bcb7996e2",
+      "workingTreeDirty": true,
+      "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+    }
+  },
+  "samples": [
+    {
+      "sequence": 1,
+      "intentAtMs": 1791048721818,
+      "frameEndedAtMs": 1791048722179,
+      "checkpointLoadedAtMs": 1791048721926,
+      "stateAppliedAtMs": 1791048722036,
+      "frameQueuedAtMs": 1791048722036,
+      "frameStartedAtMs": 1791048722057,
+      "durationMs": 361,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 2,
+      "intentAtMs": 1791048727358,
+      "frameEndedAtMs": 1791048727456,
+      "checkpointLoadedAtMs": 1791048727364,
+      "stateAppliedAtMs": 1791048727367,
+      "frameQueuedAtMs": 1791048727367,
+      "frameStartedAtMs": 1791048727375,
+      "durationMs": 98,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 3,
+      "intentAtMs": 1791048732879,
+      "frameEndedAtMs": 1791048732982,
+      "checkpointLoadedAtMs": 1791048732893,
+      "stateAppliedAtMs": 1791048732899,
+      "frameQueuedAtMs": 1791048732899,
+      "frameStartedAtMs": 1791048732904,
+      "durationMs": 103,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 4,
+      "intentAtMs": 1791048738643,
+      "frameEndedAtMs": 1791048738749,
+      "checkpointLoadedAtMs": 1791048738660,
+      "stateAppliedAtMs": 1791048738668,
+      "frameQueuedAtMs": 1791048738668,
+      "frameStartedAtMs": 1791048738677,
+      "durationMs": 106,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 5,
+      "intentAtMs": 1791048743985,
+      "frameEndedAtMs": 1791048744013,
+      "checkpointLoadedAtMs": 1791048743991,
+      "stateAppliedAtMs": 1791048743994,
+      "frameQueuedAtMs": 1791048743994,
+      "frameStartedAtMs": 1791048743996,
+      "durationMs": 28,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 6,
+      "intentAtMs": 1791048749357,
+      "frameEndedAtMs": 1791048749487,
+      "checkpointLoadedAtMs": 1791048749363,
+      "stateAppliedAtMs": 1791048749365,
+      "frameQueuedAtMs": 1791048749365,
+      "frameStartedAtMs": 1791048749371,
+      "durationMs": 130,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 7,
+      "intentAtMs": 1791048754813,
+      "frameEndedAtMs": 1791048754869,
+      "checkpointLoadedAtMs": 1791048754820,
+      "stateAppliedAtMs": 1791048754825,
+      "frameQueuedAtMs": 1791048754825,
+      "frameStartedAtMs": 1791048754827,
+      "durationMs": 56,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 8,
+      "intentAtMs": 1791048760822,
+      "frameEndedAtMs": 1791048761006,
+      "checkpointLoadedAtMs": 1791048760861,
+      "stateAppliedAtMs": 1791048760892,
+      "frameQueuedAtMs": 1791048760892,
+      "frameStartedAtMs": 1791048760897,
+      "durationMs": 184,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 9,
+      "intentAtMs": 1791048773214,
+      "frameEndedAtMs": 1791048774344,
+      "checkpointLoadedAtMs": 1791048773269,
+      "stateAppliedAtMs": 1791048773308,
+      "frameQueuedAtMs": 1791048773308,
+      "frameStartedAtMs": 1791048773364,
+      "durationMs": 1130,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 10,
+      "intentAtMs": 1791048782711,
+      "frameEndedAtMs": 1791048782915,
+      "checkpointLoadedAtMs": 1791048782785,
+      "stateAppliedAtMs": 1791048782805,
+      "frameQueuedAtMs": 1791048782805,
+      "frameStartedAtMs": 1791048782845,
+      "durationMs": 204,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 11,
+      "intentAtMs": 1791048790761,
+      "frameEndedAtMs": 1791048790845,
+      "checkpointLoadedAtMs": 1791048790775,
+      "stateAppliedAtMs": 1791048790785,
+      "frameQueuedAtMs": 1791048790785,
+      "frameStartedAtMs": 1791048790789,
+      "durationMs": 84,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 12,
+      "intentAtMs": 1791048796816,
+      "frameEndedAtMs": 1791048796894,
+      "checkpointLoadedAtMs": 1791048796821,
+      "stateAppliedAtMs": 1791048796826,
+      "frameQueuedAtMs": 1791048796826,
+      "frameStartedAtMs": 1791048796828,
+      "durationMs": 78,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 13,
+      "intentAtMs": 1791048802036,
+      "frameEndedAtMs": 1791048802121,
+      "checkpointLoadedAtMs": 1791048802042,
+      "stateAppliedAtMs": 1791048802050,
+      "frameQueuedAtMs": 1791048802050,
+      "frameStartedAtMs": 1791048802055,
+      "durationMs": 85,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 14,
+      "intentAtMs": 1791048807740,
+      "frameEndedAtMs": 1791048808144,
+      "checkpointLoadedAtMs": 1791048807775,
+      "stateAppliedAtMs": 1791048807808,
+      "frameQueuedAtMs": 1791048807808,
+      "frameStartedAtMs": 1791048807814,
+      "durationMs": 404,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 15,
+      "intentAtMs": 1791048824017,
+      "frameEndedAtMs": 1791048824267,
+      "checkpointLoadedAtMs": 1791048824042,
+      "stateAppliedAtMs": 1791048824046,
+      "frameQueuedAtMs": 1791048824046,
+      "frameStartedAtMs": 1791048824064,
+      "durationMs": 250,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 16,
+      "intentAtMs": 1791048832301,
+      "frameEndedAtMs": 1791048832498,
+      "checkpointLoadedAtMs": 1791048832320,
+      "stateAppliedAtMs": 1791048832327,
+      "frameQueuedAtMs": 1791048832327,
+      "frameStartedAtMs": 1791048832338,
+      "durationMs": 197,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 17,
+      "intentAtMs": 1791048838826,
+      "frameEndedAtMs": 1791048839056,
+      "checkpointLoadedAtMs": 1791048838854,
+      "stateAppliedAtMs": 1791048838884,
+      "frameQueuedAtMs": 1791048838884,
+      "frameStartedAtMs": 1791048838932,
+      "durationMs": 230,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 18,
+      "intentAtMs": 1791048846345,
+      "frameEndedAtMs": 1791048846691,
+      "checkpointLoadedAtMs": 1791048846436,
+      "stateAppliedAtMs": 1791048846459,
+      "frameQueuedAtMs": 1791048846459,
+      "frameStartedAtMs": 1791048846464,
+      "durationMs": 346,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 19,
+      "intentAtMs": 1791048860494,
+      "frameEndedAtMs": 1791048860843,
+      "checkpointLoadedAtMs": 1791048860525,
+      "stateAppliedAtMs": 1791048860564,
+      "frameQueuedAtMs": 1791048860564,
+      "frameStartedAtMs": 1791048860581,
+      "durationMs": 349,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 20,
+      "intentAtMs": 1791048868663,
+      "frameEndedAtMs": 1791048869698,
+      "checkpointLoadedAtMs": 1791048868698,
+      "stateAppliedAtMs": 1791048868730,
+      "frameQueuedAtMs": 1791048868730,
+      "frameStartedAtMs": 1791048868773,
+      "durationMs": 1035,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 21,
+      "intentAtMs": 1791048877859,
+      "frameEndedAtMs": 1791048878022,
+      "checkpointLoadedAtMs": 1791048877881,
+      "stateAppliedAtMs": 1791048877892,
+      "frameQueuedAtMs": 1791048877892,
+      "frameStartedAtMs": 1791048877936,
+      "durationMs": 163,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 22,
+      "intentAtMs": 1791048884212,
+      "frameEndedAtMs": 1791048885572,
+      "checkpointLoadedAtMs": 1791048884251,
+      "stateAppliedAtMs": 1791048884278,
+      "frameQueuedAtMs": 1791048884278,
+      "frameStartedAtMs": 1791048884316,
+      "durationMs": 1360,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 23,
+      "intentAtMs": 1791048896665,
+      "frameEndedAtMs": 1791048896819,
+      "checkpointLoadedAtMs": 1791048896679,
+      "stateAppliedAtMs": 1791048896698,
+      "frameQueuedAtMs": 1791048896698,
+      "frameStartedAtMs": 1791048896712,
+      "durationMs": 154,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 24,
+      "intentAtMs": 1791048903228,
+      "frameEndedAtMs": 1791048903316,
+      "checkpointLoadedAtMs": 1791048903241,
+      "stateAppliedAtMs": 1791048903250,
+      "frameQueuedAtMs": 1791048903250,
+      "frameStartedAtMs": 1791048903256,
+      "durationMs": 88,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 25,
+      "intentAtMs": 1791048909763,
+      "frameEndedAtMs": 1791048909875,
+      "checkpointLoadedAtMs": 1791048909777,
+      "stateAppliedAtMs": 1791048909786,
+      "frameQueuedAtMs": 1791048909786,
+      "frameStartedAtMs": 1791048909792,
+      "durationMs": 112,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 26,
+      "intentAtMs": 1791048916068,
+      "frameEndedAtMs": 1791048916210,
+      "checkpointLoadedAtMs": 1791048916093,
+      "stateAppliedAtMs": 1791048916098,
+      "frameQueuedAtMs": 1791048916098,
+      "frameStartedAtMs": 1791048916104,
+      "durationMs": 142,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 27,
+      "intentAtMs": 1791048921503,
+      "frameEndedAtMs": 1791048921631,
+      "checkpointLoadedAtMs": 1791048921517,
+      "stateAppliedAtMs": 1791048921545,
+      "frameQueuedAtMs": 1791048921545,
+      "frameStartedAtMs": 1791048921553,
+      "durationMs": 128,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 28,
+      "intentAtMs": 1791048926866,
+      "frameEndedAtMs": 1791048926970,
+      "checkpointLoadedAtMs": 1791048926880,
+      "stateAppliedAtMs": 1791048926892,
+      "frameQueuedAtMs": 1791048926892,
+      "frameStartedAtMs": 1791048926895,
+      "durationMs": 104,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 29,
+      "intentAtMs": 1791048933706,
+      "frameEndedAtMs": 1791048934722,
+      "checkpointLoadedAtMs": 1791048933797,
+      "stateAppliedAtMs": 1791048933975,
+      "frameQueuedAtMs": 1791048933975,
+      "frameStartedAtMs": 1791048933987,
+      "durationMs": 1016,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 30,
+      "intentAtMs": 1791048943137,
+      "frameEndedAtMs": 1791048943266,
+      "checkpointLoadedAtMs": 1791048943150,
+      "stateAppliedAtMs": 1791048943156,
+      "frameQueuedAtMs": 1791048943156,
+      "frameStartedAtMs": 1791048943171,
+      "durationMs": 129,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 31,
+      "intentAtMs": 1791048949476,
+      "frameEndedAtMs": 1791048950577,
+      "checkpointLoadedAtMs": 1791048949591,
+      "stateAppliedAtMs": 1791048949631,
+      "frameQueuedAtMs": 1791048949631,
+      "frameStartedAtMs": 1791048949670,
+      "durationMs": 1101,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 32,
+      "intentAtMs": 1791048957623,
+      "frameEndedAtMs": 1791048957815,
+      "checkpointLoadedAtMs": 1791048957647,
+      "stateAppliedAtMs": 1791048957654,
+      "frameQueuedAtMs": 1791048957654,
+      "frameStartedAtMs": 1791048957656,
+      "durationMs": 192,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 33,
+      "intentAtMs": 1791048963386,
+      "frameEndedAtMs": 1791048963424,
+      "checkpointLoadedAtMs": 1791048963391,
+      "stateAppliedAtMs": 1791048963393,
+      "frameQueuedAtMs": 1791048963393,
+      "frameStartedAtMs": 1791048963395,
+      "durationMs": 38,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 34,
+      "intentAtMs": 1791048968685,
+      "frameEndedAtMs": 1791048968742,
+      "checkpointLoadedAtMs": 1791048968694,
+      "stateAppliedAtMs": 1791048968696,
+      "frameQueuedAtMs": 1791048968696,
+      "frameStartedAtMs": 1791048968698,
+      "durationMs": 57,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 35,
+      "intentAtMs": 1791048973929,
+      "frameEndedAtMs": 1791048974020,
+      "checkpointLoadedAtMs": 1791048973948,
+      "stateAppliedAtMs": 1791048973969,
+      "frameQueuedAtMs": 1791048973969,
+      "frameStartedAtMs": 1791048973974,
+      "durationMs": 91,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 36,
+      "intentAtMs": 1791048979382,
+      "frameEndedAtMs": 1791048979477,
+      "checkpointLoadedAtMs": 1791048979395,
+      "stateAppliedAtMs": 1791048979397,
+      "frameQueuedAtMs": 1791048979397,
+      "frameStartedAtMs": 1791048979399,
+      "durationMs": 95,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 37,
+      "intentAtMs": 1791048985270,
+      "frameEndedAtMs": 1791048985480,
+      "checkpointLoadedAtMs": 1791048985307,
+      "stateAppliedAtMs": 1791048985312,
+      "frameQueuedAtMs": 1791048985312,
+      "frameStartedAtMs": 1791048985315,
+      "durationMs": 210,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 38,
+      "intentAtMs": 1791048992397,
+      "frameEndedAtMs": 1791048993833,
+      "checkpointLoadedAtMs": 1791048992516,
+      "stateAppliedAtMs": 1791048992640,
+      "frameQueuedAtMs": 1791048992640,
+      "frameStartedAtMs": 1791048992760,
+      "durationMs": 1436,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 39,
+      "intentAtMs": 1791049001933,
+      "frameEndedAtMs": 1791049002201,
+      "checkpointLoadedAtMs": 1791049001957,
+      "stateAppliedAtMs": 1791049001998,
+      "frameQueuedAtMs": 1791049001998,
+      "frameStartedAtMs": 1791049002015,
+      "durationMs": 268,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 40,
+      "intentAtMs": 1791049008771,
+      "frameEndedAtMs": 1791049009070,
+      "checkpointLoadedAtMs": 1791049008804,
+      "stateAppliedAtMs": 1791049008838,
+      "frameQueuedAtMs": 1791049008838,
+      "frameStartedAtMs": 1791049008857,
+      "durationMs": 299,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 41,
+      "intentAtMs": 1791049015953,
+      "frameEndedAtMs": 1791049016126,
+      "checkpointLoadedAtMs": 1791049015968,
+      "stateAppliedAtMs": 1791049015976,
+      "frameQueuedAtMs": 1791049015976,
+      "frameStartedAtMs": 1791049015981,
+      "durationMs": 173,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 42,
+      "intentAtMs": 1791049022332,
+      "frameEndedAtMs": 1791049022510,
+      "checkpointLoadedAtMs": 1791049022380,
+      "stateAppliedAtMs": 1791049022393,
+      "frameQueuedAtMs": 1791049022393,
+      "frameStartedAtMs": 1791049022404,
+      "durationMs": 178,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 43,
+      "intentAtMs": 1791049032809,
+      "frameEndedAtMs": 1791049033172,
+      "checkpointLoadedAtMs": 1791049032831,
+      "stateAppliedAtMs": 1791049032857,
+      "frameQueuedAtMs": 1791049032857,
+      "frameStartedAtMs": 1791049032861,
+      "durationMs": 363,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    },
+    {
+      "sequence": 44,
+      "intentAtMs": 1791049039038,
+      "frameEndedAtMs": 1791049039246,
+      "checkpointLoadedAtMs": 1791049039060,
+      "stateAppliedAtMs": 1791049039065,
+      "frameQueuedAtMs": 1791049039065,
+      "frameStartedAtMs": 1791049039075,
+      "durationMs": 208,
+      "page": "Resume",
+      "packageId": "material-1791040101332-95996328",
+      "contentRevision": 6,
+      "stateRevision": 6,
+      "lastRegionId": "box_input_1",
+      "activeQuestionId": "question-1791041874438-517314111",
+      "selectedAnswers": [
+        "box_gate_1"
+      ],
+      "submittedCount": 1,
+      "paused": false,
+      "progress": {
+        "packageId": "material-1791040101332-95996328",
+        "revision": 6,
+        "stateRevision": 6,
+        "status": "submitted",
+        "paused": false,
+        "lastRegionId": "box_input_1",
+        "activeRelationId": "",
+        "activeQuestionId": "question-1791041874438-517314111",
+        "selectedAnswers": [
+          "box_gate_1"
+        ],
+        "submissions": [
+          {
+            "questionId": "question-1791041874438-517314111",
+            "answers": [
+              "box_gate_1"
+            ],
+            "correct": true,
+            "eventId": "1791044385929-812593485",
+            "timestamp": 1791044385941
+          }
+        ],
+        "viewport": {
+          "scale": 1,
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0
+        },
+        "bookmarks": [],
+        "appliedEvents": [
+          "1791044277126-515775116",
+          "1791044355946-93193938",
+          "1791044379601-132693237",
+          "1791044385929-812593485",
+          "1791044431782-178755681",
+          "1791048304392-224113777"
+        ],
+        "updatedAt": 1791048304402
+      }
+    }
+  ]
+}

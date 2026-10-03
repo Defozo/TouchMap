@@ -1,0 +1,23 @@
+{
+  "checkedAtUtc": "2026-10-03T18:50:58.867549+00:00",
+  "status": "passed",
+  "device": "127.0.0.1:55555",
+  "productionHapSha256": "1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd",
+  "appSourceSha256": "a3325237a84e1ba700954c5fe50a0ee0b1944a8b561315923ea687ecd8b0971b",
+  "appCommit": "2642efe225c7394d7bddd4c30b35ad146aaa477a",
+  "checks": {
+    "installedAndLaunched": true,
+    "libraryVisibleAfterUpdate": true,
+    "savedContextRestored": true,
+    "offlineIpv4Ipv6": true,
+    "testIsolationRemoved": true
+  },
+  "evidence": [
+    "installation-127.0.0.1_55555.json",
+    "final-release-v2-library-ui.json",
+    "release-resume-ui.json",
+    "release-offline-on.json",
+    "release-offline-off.json"
+  ],
+  "scope": "Ordinary production HAP installed and launched, actual Library captured, previously committed focus/correct result/unfinished answer restored with outbound IPv4/IPv6 blocked. Prior complete authoring, import/export and guide regression flows are separately tied to their actual historical builds."
+}

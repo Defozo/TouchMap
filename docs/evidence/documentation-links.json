@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03T16:33:54.944997+00:00",
+  "checkedAt": "2026-10-03T19:18:02.512645+00:00",
   "scope": "Relative Markdown and image targets in public documentation; original untracked planning materials excluded. URL liveness and heading fragments are outside this local-file audit.",
   "documents": [
     "AI_INTEGRATION.md",
@@ -11,6 +11,7 @@
     "contracts/CONTRACT.md",
     "docs/ACCESSIBILITY.md",
     "docs/DEMO_SCRIPT.md",
+    "docs/LOCALIZATION.md",
     "docs/PRIVACY.md",
     "docs/RELEASE.md",
     "docs/STUDY_PROTOCOL.md",
@@ -22,8 +23,720 @@
     "samples/LICENSE.md",
     "tests/evaluation/charts/README.md",
     "tests/native-accessibility-probe/README.md",
+    "tests/native-preparation/README.md",
     "tests/native-share-sender/README.md"
   ],
-  "localLinksChecked": 77,
-  "missing": []
+  "checks": [
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/backend.md",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/ai-evaluation/summary.json",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/ai-chart-evaluation/summary.json",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/ai-chart-evaluation/INTERPRETATION.md",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/native-authoring-flow.json",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/native-authored.touchmap",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/second-import-integrity.json",
+      "exists": true
+    },
+    {
+      "document": "AI_INTEGRATION.md",
+      "target": "docs/evidence/provider-cost-estimates.json",
+      "exists": true
+    },
+    {
+      "document": "AI_WORKFLOW.md",
+      "target": "docs/evidence/ai-chart-evaluation/INTERPRETATION.md",
+      "exists": true
+    },
+    {
+      "document": "AI_WORKFLOW.md",
+      "target": "docs/evidence/native-audio-phase-analysis.json",
+      "exists": true
+    },
+    {
+      "document": "AI_WORKFLOW.md",
+      "target": "docs/evidence/native-authoring-flow.json",
+      "exists": true
+    },
+    {
+      "document": "AI_WORKFLOW.md",
+      "target": "docs/TEST_REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "AI_WORKFLOW.md",
+      "target": "AI_INTEGRATION.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/platform.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/platform.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/backend.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/TEST_REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/RELEASE.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "ARCHITECTURE.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "AI_WORKFLOW.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "AI_INTEGRATION.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "THIRD_PARTY.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "samples/LICENSE.md",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "docs/evidence/ai-chart-evaluation/INTERPRETATION.md",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "docs/evidence/native-authoring-flow.json",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "docs/evidence/second-import-integrity.json",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "docs/TEST_REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "docs/SUBMISSION_REQUIREMENTS.md",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY.md",
+      "target": "licenses/ONIRO-LICENSE.txt",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY.md",
+      "target": "licenses/ONIRO-NOTICE.txt",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY.md",
+      "target": "backend/touchmap/assets/DejaVu-LICENSE.txt",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY.md",
+      "target": "samples/LICENSE.md",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-ui-observations.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-settings-200.jpeg",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-test-results.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-manual-undo-state.jsonl",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-manual-redo-200.jpeg",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-library-freeze.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-ui-observations.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/second-scanning-selected.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/second-private-history.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/second-import-integrity.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/second-offline-on.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/second-correct-answer-200.jpeg",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/second-offline-resume.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-share-cold-result.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-share-warm-context.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-share-sender-log.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-audio-controls.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "evidence/native-audio-benchmark.json",
+      "exists": true
+    },
+    {
+      "document": "docs/ACCESSIBILITY.md",
+      "target": "TEST_REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "docs/DEMO_SCRIPT.md",
+      "target": "demo-storyboard.json",
+      "exists": true
+    },
+    {
+      "document": "docs/DEMO_SCRIPT.md",
+      "target": "evidence/demo-manifest.json",
+      "exists": true
+    },
+    {
+      "document": "docs/DEMO_SCRIPT.md",
+      "target": "evidence/native-ui-observations.json",
+      "exists": true
+    },
+    {
+      "document": "docs/DEMO_SCRIPT.md",
+      "target": "evidence/second-import-integrity.json",
+      "exists": true
+    },
+    {
+      "document": "docs/SUBMISSION_REQUIREMENTS.md",
+      "target": "evidence/submission-requirements.json",
+      "exists": true
+    },
+    {
+      "document": "docs/SUBMISSION_REQUIREMENTS.md",
+      "target": "evidence/submission-requirements.json",
+      "exists": true
+    },
+    {
+      "document": "docs/SUBMISSION_REQUIREMENTS.md",
+      "target": "evidence/hacktribe-form-inspection.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/release-gates.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/backend-pytest.xml",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audit-host-tests.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audit-typecheck.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "backend-checks.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/backend-cli/new-material.touchmap",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/backend-cli/second-installation/diagram.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "backend-checks.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-recovery.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-build.log",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/signature-verification.log",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/hap-metadata.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-install-primary.log",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/second-clean-target-before.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-install-second.log",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-test-artifact.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-test-results.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audio-controls-artifact.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "gemini-smoke.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/ai-evaluation/summary.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/ai-chart-evaluation/summary.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/ai-chart-evaluation/INTERPRETATION.md",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-authoring-flow.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-authored.touchmap",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/second-import-integrity.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audio-phase-analysis.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audio-controls.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audio-controls-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-share-helper-build.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-share-sender-log.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-share-cold-result.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-share-warm-context.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-ui-observations.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-failure-checks.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-transaction-interruption.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-cold-start.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/final-candidate-ui-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/release-ui-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-restore-benchmark.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-restore-artifact.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/localization-extraction.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "LOCALIZATION.md",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "sample-generation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/secret-scan.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/documentation-links.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/history-secret-scan.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "../toolchain.lock.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "platform.md",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audio-test-artifact.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/audio-source-equivalence.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/clean-checkout.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/hap-metadata.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/demo-qc.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/demo-manifest.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/demo-review.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/demo-independent-review.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-ui-observations.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/final-offline-flow.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-unknown-path-followed.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/second-private-history.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/final-offline-flow.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-recovery.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-transaction-interruption.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/final-offline-flow.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/offline-export-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-ui-observations.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-preparation-ui.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-preparation-checks.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-manual-audio-import.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/second-private-history.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/second-offline-resume.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-failure-checks.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/screen-reader-investigation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "ACCESSIBILITY.md",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/provider-cost-estimates.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/audio-before-idle-renderer.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/native-audio-phase-analysis.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "evidence/demo-audio-transcript.json",
+      "exists": true
+    },
+    {
+      "document": "docs/TEST_REPORT.md",
+      "target": "STUDY_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "docs/platform.md",
+      "target": "TEST_REPORT.md",
+      "exists": true
+    },
+    {
+      "document": "docs/platform.md",
+      "target": "../tests/native-preparation/README.md",
+      "exists": true
+    },
+    {
+      "document": "tests/evaluation/charts/README.md",
+      "target": "../../../samples/LICENSE.md",
+      "exists": true
+    },
+    {
+      "document": "tests/native-preparation/README.md",
+      "target": "../../docs/evidence/native-preparation-checks.json",
+      "exists": true
+    },
+    {
+      "document": "tests/native-preparation/README.md",
+      "target": "../../docs/evidence/native-preparation-ui.json",
+      "exists": true
+    }
+  ],
+  "failureCount": 0
 }

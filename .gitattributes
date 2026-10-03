@@ -1,4 +1,8 @@
 * text=auto eol=lf
+
+# Keep captured evidence bytes exact for hash-based verification across hosts.
+docs/evidence/** -text
+docs/demo-storyboard.json -text
 *.bat text eol=crlf
 *.cmd text eol=crlf
 *.wav binary

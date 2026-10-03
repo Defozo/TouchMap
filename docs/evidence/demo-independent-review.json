@@ -1,0 +1,42 @@
+{
+  "reviewer": "Codex delegated backend reviewer",
+  "videoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1",
+  "result": "acceptable_with_stated_review_scope",
+  "blockingFindings": [],
+  "reviewedVisuals": [
+    "contact-1.jpg through contact-5.jpg: all17 scene midpoint samples and captions",
+    "boundary-09-in.png and boundary-09-out.png: real request consent and draft-review state",
+    "boundary-11-in.png and boundary-11-out.png: earlier geometry/meaning review",
+    "boundary-12-out.png: earlier speech controls and actual playback completion status",
+    "scene-16.png: full-resolution measured-results and limits card"
+  ],
+  "reviewedDocuments": [
+    "docs/DEMO_SCRIPT.md",
+    "docs/evidence/demo-manifest.json",
+    "docs/evidence/demo-qc.json",
+    "docs/evidence/installation-127.0.0.1_55555.json",
+    "docs/evidence/demo-audio-transcript.json"
+  ],
+  "observations": [
+    "Captions fit the rendered composition and are legible. Smaller build-provenance footers remain readable in full-resolution frames.",
+    "The new AI request and earlier review/publication are explicitly separated; the edit does not assert immediate publication of the new draft.",
+    "Second-installation transfer is labelled offline reimport, preserving existing acceptance and progress.",
+    "Team attribution correctly names DEFOZO SOFTWARE HOUSE and sole human member Michał Kiełtyka. Developer review is not attributed to him.",
+    "Final HAP opening and historical flow builds are identified separately.",
+    "Measured25ms refers to accepted PCM software onset. Genuine reader, physical vibration and representative-user studies remain unverified."
+  ],
+  "limits": [
+    "This independent review inspected saved rendered samples and factual evidence; it did not watch every frame continuously.",
+    "No independent perceptual listening claim is made. Audio-source correlation and complete decoding are technical checks reported by the separate demo verifier.",
+    "This file does not itself set the demo manifest reviewed flag or authorize external publication."
+  ],
+  "previousReviewedVideoSha256": "09cd2efa9656ae1f98c891d32311ee5b4d7fc9bf62fef91b15efeb0199b168fa",
+  "finalIntroReview": {
+    "result": "accepted",
+    "visual": "Updated full-resolution scene-00.png inspected; layout and team attribution fit and remain readable.",
+    "provenance": "Current manifest source scene0 and actual primary installation bind HAP1209c871 to committed source2642efe and fingerprinta3325237. Historical scene build labels remain separate.",
+    "audioScope": "Supporting ASR recognizes Evaporation only. Earlier expectation of two labels is retained as a non-passing diagnostic. The caption claims one actual selected recording and does not assert that Precipitation was heard. No independent perceptual listening claim by this reviewer.",
+    "continuity": "Remaining16 rendered scene cache identities are unchanged according to assembler verification; current manifest retains the previously reviewed scene/source identities. This follow-up reviewed only the changed intro and provenance, without re-decoding video.",
+    "recordedAtUtc": "2026-10-03T18:51:56.3724129Z"
+  }
+}

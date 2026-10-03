@@ -1,0 +1,27 @@
+{
+  "recordedAtUtc": "2026-10-03T18:45:34.252817+00:00",
+  "videoSha256": "09cd2efa9656ae1f98c891d32311ee5b4d7fc9bf62fef91b15efeb0199b168fa",
+  "sceneIndex": 3,
+  "outputStartSeconds": 33,
+  "durationSeconds": 15,
+  "audioSha256": "87646a9d845287ec7b22175e0786e38879b24f28d0f1d89881491603322da72e",
+  "method": "Local faster-whisper small, CPU int8, two threads, cached model only, English, beam5 and VAD. No vocabulary prompt.",
+  "segments": [
+    {
+      "start": 1.87,
+      "end": 3.87,
+      "text": " evaporation.",
+      "averageLogProbability": -0.539891174861363
+    }
+  ],
+  "expectedLabels": [
+    "Evaporation",
+    "Precipitation"
+  ],
+  "matchedLabels": {
+    "Evaporation": true,
+    "Precipitation": false
+  },
+  "expectedLabelsRecognized": false,
+  "limits": "Machine transcription is supporting evidence. It is not human listening, physical acoustic timing, intelligibility certification or a user study."
+}

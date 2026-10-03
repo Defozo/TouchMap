@@ -1,5 +1,7 @@
 """Run actual native cancellation, latest-only playback and pause/resume checks."""
 import argparse
+from datetime import datetime, timezone
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -15,6 +17,10 @@ def main():
     hdc = Path(os.getenv('ONIRO_CMD_TOOLS_PATH', str(Path.home() / 'command-line-tools'))) / 'sdk/default/openharmony/toolchains/hdc'
     remote = '/data/app/el2/100/base/org.touchmap.app/haps/entry/files/audio-controls.json'
     output = ROOT / 'docs/evidence/native-audio-controls.json'
+    artifact = {'device':args.device,'mode':args.mode,'startedUtc':datetime.now(timezone.utc).isoformat(),
+                'productionHapSha256':hashlib.sha256((ROOT/'dist/touchmap-signed.hap').read_bytes()).hexdigest(),
+                'testHapSha256':hashlib.sha256((ROOT/'dist/touchmap-tests-signed.hap').read_bytes()).hexdigest(),
+                'sourceFingerprint':json.loads((ROOT/'docs/evidence/hap-metadata.json').read_text())['sourceFingerprint']}
     def run(*command, timeout=15):
         return subprocess.run([str(hdc), '-t', args.device, *command], capture_output=True, text=True, timeout=timeout, check=True).stdout
     output.write_text(json.dumps({'status':'running','device':args.device})+'\n')
@@ -36,6 +42,9 @@ def main():
             output.write_text(json.dumps({'status':'failed','device':args.device,'error':str(error)},indent=2)+'\n')
         raise
     finally:
+        artifact['finishedUtc'] = datetime.now(timezone.utc).isoformat()
+        artifact['status'] = json.loads(output.read_text()).get('status','failed')
+        (ROOT/'docs/evidence/native-audio-controls-artifact.json').write_text(json.dumps(artifact,indent=2)+'\n')
         run('shell', 'aa', 'force-stop', 'org.touchmap.app')
 
 if __name__ == '__main__':

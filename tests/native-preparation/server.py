@@ -10,6 +10,7 @@ import asyncio
 import hashlib
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -84,14 +85,19 @@ async def draft(file: UploadFile = File(), requestId: str = Form(),
         result = {"diagram": diagram, "report": {"unsupported": [], "unresolved": []}}
     result["diagram"]["regions"][0]["label"] = "DELAYED FIXTURE PROPOSAL"
     record = {"requestId": requestId, "draftRevision": draftRevision, "sourceHash": sourceHash,
-              "completed": False, "cancelled": False}
+              "receivedAt": datetime.now(timezone.utc).isoformat(),
+              "completed": False, "cancelled": False, "completionReason": "pending"}
     records.append(record)
     try:
-        await asyncio.wait_for(release.wait(), timeout=120)
+        await asyncio.wait_for(release.wait(), timeout=300)
     except TimeoutError:
         record["completed"] = True
+        record["completionReason"] = "hold_timeout"
+        record["completedAt"] = datetime.now(timezone.utc).isoformat()
         raise HTTPException(504, "Controlled fixture was not released")
     record["completed"] = True
+    record["completionReason"] = "response_released"
+    record["completedAt"] = datetime.now(timezone.utc).isoformat()
     return {"requestId": requestId, "contractVersion": 1, "sourceHash": sourceHash,
             "draftRevision": draftRevision, "provider": "controlled-local-fixture", "model": "no-inference",
             "result": result}
