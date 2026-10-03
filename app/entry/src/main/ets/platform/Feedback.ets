@@ -194,7 +194,7 @@ export class Feedback {
       if (this.paused) { await new Promise<void>((resolve) => { this.resumeWaiter = resolve; }); if (token !== this.generation) { return; } }
       // Keep the first native buffer small for onset. Batch following buffers so
       // scheduling one promise per 20 ms cannot starve playback on a busy host.
-      const writeSize = onsetLogged ? chunkSize * 4 : chunkSize;
+      const writeSize = onsetLogged ? chunkSize * 8 : chunkSize;
       const sourceChunk = bytes.slice(offset, Math.min(end, offset + writeSize));
       // OpenHarmony's legacy write bridge ignores a remaining buffer of <=4 bytes.
       // Pad only the transport buffer with complete silent frames, never the verified WAV.

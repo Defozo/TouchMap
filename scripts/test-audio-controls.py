@@ -33,7 +33,6 @@ def main():
         (ROOT / 'docs/evidence/native-audio-controls-results.txt').write_text(text)
         run('file', 'recv', remote, str(output))
         report = json.loads(output.read_text())
-        print(json.dumps(report, indent=2))
         expected = {'four_byte_final_pcm_tail_finishes'}
         if args.mode == 'all':
             expected.update({'stop_before_dwell', 'rapid_replacement_only_latest_target',
@@ -43,7 +42,12 @@ def main():
         if (report.get('status') != 'passed' or len(checks) != len(expected)
                 or {item.get('name') for item in checks} != expected
                 or not all(item['passed'] for item in checks)):
+            report['status'] = 'failed'
+            report['runnerValidationError'] = 'Results do not match the complete expected native audio suite.'
+            output.write_text(json.dumps(report, indent=2) + '\n')
+            print(json.dumps(report, indent=2))
             raise RuntimeError('Native audio controls did not all pass.')
+        print(json.dumps(report, indent=2))
     except Exception as error:
         report = json.loads(output.read_text())
         if report.get('status') == 'running':
