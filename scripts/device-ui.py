@@ -34,8 +34,9 @@ def main():
         run('input','--type','inputText','--text',args.text or '')
         run('input','--type','keyEvent','--key','Back')
     elif args.action=='click':
-        data,nodes=dump();matches=[n for n in nodes if n.get('text')==args.value and n.get('click')]
-        if not matches: matches=[n for n in nodes if n.get('text')==args.value]
+        data,nodes=dump();visible=[n for n in nodes if 0<n.get('c',[0,0])[0]<1 and 0<n.get('c',[0,0])[1]<1]
+        matches=[n for n in visible if n.get('text')==args.value and n.get('click')]
+        if not matches: matches=[n for n in visible if n.get('text')==args.value]
         if len(matches)<=args.index:raise SystemExit('Visible button not found: '+args.value+'\n'+json.dumps(nodes))
         n=matches[args.index];run('input','--type','click','--x',str(round(n['c'][0]*data['display']['width'])),'--y',str(round(n['c'][1]*data['display']['height'])))
     elif args.action=='tap':run('input','--type','click','--x',str(args.x),'--y',str(args.y))

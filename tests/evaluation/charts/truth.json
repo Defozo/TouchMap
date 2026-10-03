@@ -1,0 +1,656 @@
+[
+  {
+    "id": "chart-01",
+    "title": "Illustrative rainfall",
+    "kind": "bar",
+    "variant": "clear-unknown",
+    "split": "development",
+    "xLabel": "Month",
+    "yLabel": "Rainfall",
+    "unit": "mm",
+    "labels": [
+      "April",
+      "May",
+      "June"
+    ],
+    "values": [
+      40,
+      65,
+      null
+    ],
+    "domain": [
+      0,
+      80
+    ],
+    "ticks": [
+      0,
+      20,
+      40,
+      60,
+      80
+    ],
+    "precision": 0,
+    "width": 960,
+    "height": 640,
+    "imageFile": "chart-01.png",
+    "imageSha256": "3434e886db07e5673db44a5679160931c1de1b49441a5ee749964eaef04d97ae",
+    "regions": [
+      {
+        "id": "value-1",
+        "label": "April",
+        "bounds": [
+          173.33333333333331,
+          235.0,
+          293.3333333333333,
+          498
+        ],
+        "value": 40,
+        "unit": "mm",
+        "sourceText": "April: 40 mm"
+      },
+      {
+        "id": "value-2",
+        "label": "May",
+        "bounds": [
+          410.0,
+          135.0,
+          530.0,
+          498
+        ],
+        "value": 65,
+        "unit": "mm",
+        "sourceText": "May: 65 mm"
+      },
+      {
+        "id": "value-3",
+        "label": "June",
+        "bounds": [
+          646.6666666666666,
+          325,
+          766.6666666666666,
+          498
+        ],
+        "value": null,
+        "unit": "mm",
+        "sourceText": "June: Unknown"
+      }
+    ],
+    "xAxis": {
+      "scale": "category",
+      "label": "Month",
+      "unit": "",
+      "ticks": [
+        {
+          "value": 0,
+          "label": "April"
+        },
+        {
+          "value": 1,
+          "label": "May"
+        },
+        {
+          "value": 2,
+          "label": "June"
+        }
+      ]
+    },
+    "yAxis": {
+      "scale": "linear",
+      "label": "Rainfall",
+      "unit": "mm",
+      "domain": [
+        0,
+        80
+      ],
+      "ticks": [
+        {
+          "value": 0,
+          "label": "0"
+        },
+        {
+          "value": 20,
+          "label": "20"
+        },
+        {
+          "value": 40,
+          "label": "40"
+        },
+        {
+          "value": 60,
+          "label": "60"
+        },
+        {
+          "value": 80,
+          "label": "80"
+        }
+      ]
+    },
+    "relations": [],
+    "license": "CC BY 4.0",
+    "attribution": "TouchMap contributors",
+    "truthOrigin": "Owned explicit teaching data authored before provider evaluation; not measurements of real-world subjects"
+  },
+  {
+    "id": "chart-02",
+    "title": "Illustrative energy use",
+    "kind": "bar",
+    "variant": "low-contrast-decimal",
+    "split": "development",
+    "xLabel": "Station",
+    "yLabel": "Energy",
+    "unit": "kWh",
+    "labels": [
+      "Aster",
+      "Birch",
+      "Cedar"
+    ],
+    "values": [
+      12.5,
+      17,
+      9.5
+    ],
+    "domain": [
+      0,
+      20
+    ],
+    "ticks": [
+      0,
+      5,
+      10,
+      15,
+      20
+    ],
+    "precision": 1,
+    "width": 960,
+    "height": 640,
+    "imageFile": "chart-02.png",
+    "imageSha256": "b97abc0442a74e5c4990e0917049544f8928051996fef31152869271f285ff4f",
+    "regions": [
+      {
+        "id": "value-1",
+        "label": "Aster",
+        "bounds": [
+          173.33333333333331,
+          195.0,
+          293.3333333333333,
+          498
+        ],
+        "value": 12.5,
+        "unit": "kWh",
+        "sourceText": "Aster: 12.5 kWh"
+      },
+      {
+        "id": "value-2",
+        "label": "Birch",
+        "bounds": [
+          410.0,
+          123.0,
+          530.0,
+          498
+        ],
+        "value": 17,
+        "unit": "kWh",
+        "sourceText": "Birch: 17 kWh"
+      },
+      {
+        "id": "value-3",
+        "label": "Cedar",
+        "bounds": [
+          646.6666666666666,
+          243.0,
+          766.6666666666666,
+          498
+        ],
+        "value": 9.5,
+        "unit": "kWh",
+        "sourceText": "Cedar: 9.5 kWh"
+      }
+    ],
+    "xAxis": {
+      "scale": "category",
+      "label": "Station",
+      "unit": "",
+      "ticks": [
+        {
+          "value": 0,
+          "label": "Aster"
+        },
+        {
+          "value": 1,
+          "label": "Birch"
+        },
+        {
+          "value": 2,
+          "label": "Cedar"
+        }
+      ]
+    },
+    "yAxis": {
+      "scale": "linear",
+      "label": "Energy",
+      "unit": "kWh",
+      "domain": [
+        0,
+        20
+      ],
+      "ticks": [
+        {
+          "value": 0,
+          "label": "0"
+        },
+        {
+          "value": 5,
+          "label": "5"
+        },
+        {
+          "value": 10,
+          "label": "10"
+        },
+        {
+          "value": 15,
+          "label": "15"
+        },
+        {
+          "value": 20,
+          "label": "20"
+        }
+      ]
+    },
+    "relations": [],
+    "license": "CC BY 4.0",
+    "attribution": "TouchMap contributors",
+    "truthOrigin": "Owned explicit teaching data authored before provider evaluation; not measurements of real-world subjects"
+  },
+  {
+    "id": "chart-03",
+    "title": "Illustrative temperature",
+    "kind": "line",
+    "variant": "negative-and-unknown",
+    "split": "development",
+    "xLabel": "Day",
+    "yLabel": "Temperature",
+    "unit": "°C",
+    "labels": [
+      "Day 1",
+      "Day 2",
+      "Day 3",
+      "Day 4"
+    ],
+    "values": [
+      -2,
+      1,
+      null,
+      4
+    ],
+    "domain": [
+      -5,
+      5
+    ],
+    "ticks": [
+      -5,
+      0,
+      5
+    ],
+    "precision": 0,
+    "width": 960,
+    "height": 640,
+    "imageFile": "chart-03.png",
+    "imageSha256": "8485cbd66e5e0f4c3b5b6b951a4f676c2696ce12add6efe9fb25c8eaa68ec761",
+    "regions": [
+      {
+        "id": "value-1",
+        "label": "Day 1",
+        "bounds": [
+          143.75,
+          299.0,
+          263.75,
+          498
+        ],
+        "value": -2,
+        "unit": "°C",
+        "sourceText": "Day 1: -2 °C"
+      },
+      {
+        "id": "value-2",
+        "label": "Day 2",
+        "bounds": [
+          321.25,
+          203.0,
+          441.25,
+          498
+        ],
+        "value": 1,
+        "unit": "°C",
+        "sourceText": "Day 2: 1 °C"
+      },
+      {
+        "id": "value-3",
+        "label": "Day 3",
+        "bounds": [
+          498.75,
+          325,
+          618.75,
+          498
+        ],
+        "value": null,
+        "unit": "°C",
+        "sourceText": "Day 3: Unknown"
+      },
+      {
+        "id": "value-4",
+        "label": "Day 4",
+        "bounds": [
+          676.25,
+          107.0,
+          796.25,
+          498
+        ],
+        "value": 4,
+        "unit": "°C",
+        "sourceText": "Day 4: 4 °C"
+      }
+    ],
+    "xAxis": {
+      "scale": "category",
+      "label": "Day",
+      "unit": "",
+      "ticks": [
+        {
+          "value": 0,
+          "label": "Day 1"
+        },
+        {
+          "value": 1,
+          "label": "Day 2"
+        },
+        {
+          "value": 2,
+          "label": "Day 3"
+        },
+        {
+          "value": 3,
+          "label": "Day 4"
+        }
+      ]
+    },
+    "yAxis": {
+      "scale": "linear",
+      "label": "Temperature",
+      "unit": "°C",
+      "domain": [
+        -5,
+        5
+      ],
+      "ticks": [
+        {
+          "value": -5,
+          "label": "-5"
+        },
+        {
+          "value": 0,
+          "label": "0"
+        },
+        {
+          "value": 5,
+          "label": "5"
+        }
+      ]
+    },
+    "relations": [],
+    "license": "CC BY 4.0",
+    "attribution": "TouchMap contributors",
+    "truthOrigin": "Owned explicit teaching data authored before provider evaluation; not measurements of real-world subjects"
+  },
+  {
+    "id": "chart-04",
+    "title": "Illustrative stored water",
+    "kind": "bar",
+    "variant": "rotated-labels",
+    "split": "held-out",
+    "xLabel": "Store",
+    "yLabel": "Volume",
+    "unit": "L",
+    "labels": [
+      "North",
+      "Southwest",
+      "East"
+    ],
+    "values": [
+      14,
+      9,
+      22
+    ],
+    "domain": [
+      0,
+      30
+    ],
+    "ticks": [
+      0,
+      10,
+      20,
+      30
+    ],
+    "precision": 0,
+    "width": 960,
+    "height": 640,
+    "imageFile": "chart-04.png",
+    "imageSha256": "0b8eb9ece9a00bd3b46da12699d1bd7283cc85c4e7d30de11e5674e6bce4da50",
+    "regions": [
+      {
+        "id": "value-1",
+        "label": "North",
+        "bounds": [
+          173.33333333333331,
+          245.66666666666663,
+          293.3333333333333,
+          498
+        ],
+        "value": 14,
+        "unit": "L",
+        "sourceText": "North: 14 L"
+      },
+      {
+        "id": "value-2",
+        "label": "Southwest",
+        "bounds": [
+          410.0,
+          299.0,
+          530.0,
+          498
+        ],
+        "value": 9,
+        "unit": "L",
+        "sourceText": "Southwest: 9 L"
+      },
+      {
+        "id": "value-3",
+        "label": "East",
+        "bounds": [
+          646.6666666666666,
+          160.33333333333334,
+          766.6666666666666,
+          498
+        ],
+        "value": 22,
+        "unit": "L",
+        "sourceText": "East: 22 L"
+      }
+    ],
+    "xAxis": {
+      "scale": "category",
+      "label": "Store",
+      "unit": "",
+      "ticks": [
+        {
+          "value": 0,
+          "label": "North"
+        },
+        {
+          "value": 1,
+          "label": "Southwest"
+        },
+        {
+          "value": 2,
+          "label": "East"
+        }
+      ]
+    },
+    "yAxis": {
+      "scale": "linear",
+      "label": "Volume",
+      "unit": "L",
+      "domain": [
+        0,
+        30
+      ],
+      "ticks": [
+        {
+          "value": 0,
+          "label": "0"
+        },
+        {
+          "value": 10,
+          "label": "10"
+        },
+        {
+          "value": 20,
+          "label": "20"
+        },
+        {
+          "value": 30,
+          "label": "30"
+        }
+      ]
+    },
+    "relations": [],
+    "license": "CC BY 4.0",
+    "attribution": "TouchMap contributors",
+    "truthOrigin": "Owned explicit teaching data authored before provider evaluation; not measurements of real-world subjects"
+  },
+  {
+    "id": "chart-05",
+    "title": "Illustrative distance",
+    "kind": "line",
+    "variant": "clear-decimal",
+    "split": "held-out",
+    "xLabel": "Time",
+    "yLabel": "Distance",
+    "unit": "km",
+    "labels": [
+      "08:00",
+      "09:00",
+      "10:00"
+    ],
+    "values": [
+      0,
+      1.25,
+      2.5
+    ],
+    "domain": [
+      0,
+      3
+    ],
+    "ticks": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "precision": 2,
+    "width": 960,
+    "height": 640,
+    "imageFile": "chart-05.png",
+    "imageSha256": "75c6eb1b1e488a00e61ae5d12d37c4c9806f374345e757c02545ef0c759dcf7b",
+    "regions": [
+      {
+        "id": "value-1",
+        "label": "08:00",
+        "bounds": [
+          173.33333333333331,
+          395.0,
+          293.3333333333333,
+          498
+        ],
+        "value": 0,
+        "unit": "km",
+        "sourceText": "08:00: 0 km"
+      },
+      {
+        "id": "value-2",
+        "label": "09:00",
+        "bounds": [
+          410.0,
+          261.66666666666663,
+          530.0,
+          498
+        ],
+        "value": 1.25,
+        "unit": "km",
+        "sourceText": "09:00: 1.25 km"
+      },
+      {
+        "id": "value-3",
+        "label": "10:00",
+        "bounds": [
+          646.6666666666666,
+          128.33333333333331,
+          766.6666666666666,
+          498
+        ],
+        "value": 2.5,
+        "unit": "km",
+        "sourceText": "10:00: 2.5 km"
+      }
+    ],
+    "xAxis": {
+      "scale": "category",
+      "label": "Time",
+      "unit": "",
+      "ticks": [
+        {
+          "value": 0,
+          "label": "08:00"
+        },
+        {
+          "value": 1,
+          "label": "09:00"
+        },
+        {
+          "value": 2,
+          "label": "10:00"
+        }
+      ]
+    },
+    "yAxis": {
+      "scale": "linear",
+      "label": "Distance",
+      "unit": "km",
+      "domain": [
+        0,
+        3
+      ],
+      "ticks": [
+        {
+          "value": 0,
+          "label": "0"
+        },
+        {
+          "value": 1,
+          "label": "1"
+        },
+        {
+          "value": 2,
+          "label": "2"
+        },
+        {
+          "value": 3,
+          "label": "3"
+        }
+      ]
+    },
+    "relations": [],
+    "license": "CC BY 4.0",
+    "attribution": "TouchMap contributors",
+    "truthOrigin": "Owned explicit teaching data authored before provider evaluation; not measurements of real-world subjects"
+  }
+]

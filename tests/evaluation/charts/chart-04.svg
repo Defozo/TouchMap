@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+<rect width="960" height="640" fill="white"/>
+<g fill="#183B34" font-family="DejaVu Sans" font-size="24">
+<text x="480" y="46" text-anchor="middle" font-size="30">Illustrative stored water</text>
+<text x="115" y="95">Volume (L)</text>
+<path d="M115 450.0H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="458.0" text-anchor="end">0</text>
+<path d="M115 343.33333333333337H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="351.33333333333337" text-anchor="end">10</text>
+<path d="M115 236.66666666666669H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="244.66666666666669" text-anchor="end">20</text>
+<path d="M115 130.0H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="138.0" text-anchor="end">30</text>
+<path d="M115 130V450H825" stroke="#183B34" stroke-width="2" fill="none"/>
+<text x="233.33333333333331" y="492" transform="rotate(-28 233.33333333333331 492)" text-anchor="end">North</text>
+<rect x="188.33333333333331" y="300.66666666666663" width="90" height="149.33333333333337" fill="#183B34" opacity="0.7"/>
+<text x="233.33333333333331" y="280.66666666666663" text-anchor="middle">14 L</text>
+<text x="470.0" y="492" transform="rotate(-28 470.0 492)" text-anchor="end">Southwest</text>
+<rect x="425.0" y="354.0" width="90" height="96.0" fill="#183B34" opacity="0.7"/>
+<text x="470.0" y="334.0" text-anchor="middle">9 L</text>
+<text x="706.6666666666666" y="492" transform="rotate(-28 706.6666666666666 492)" text-anchor="end">East</text>
+<rect x="661.6666666666666" y="215.33333333333334" width="90" height="234.66666666666666" fill="#183B34" opacity="0.7"/>
+<text x="706.6666666666666" y="195.33333333333334" text-anchor="middle">22 L</text>
+<text x="480" y="550" text-anchor="middle">Store</text>
+<text x="480" y="600" text-anchor="middle" font-size="19">Authored teaching values. Unknown means no recorded value.</text>
+</g></svg>

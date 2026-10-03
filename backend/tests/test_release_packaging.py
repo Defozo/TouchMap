@@ -26,7 +26,8 @@ def candidate(tmp_path,monkeypatch):
     with zipfile.ZipFile(hap,'w') as archive:archive.writestr('module.json',json.dumps({'app':{'bundleName':'org.touchmap.app','minAPIVersion':20}}))
     demo.write_bytes(b'synthetic media; never a release artifact')
     monkeypatch.setattr(release,'inspect_demo',lambda path:{'format':{'duration':'1'},'streams':[{'codec_type':'video'}]})
-    report={'sourceCommit':commit,'team':team,'artifactFailures':[],'hap':{'sha256':release.sha256(hap.read_bytes())},
+    report={'sourceCommit':commit,'team':team,'artifactFailures':[],'hap':{'sha256':release.sha256(hap.read_bytes()),
+            'appSourceSha256':release.committed_app_fingerprint(release.source_files(root,commit)),'buildInputGitHead':commit},
             'samples':[{'file':path.name,'sha256':release.sha256(path.read_bytes())} for path in (root/'samples').glob('*.touchmap')],
             'outstandingGates':['fixtureOnly'],'gates':{'fixtureOnly':{'status':'pending'}}}
     verification.write_text(json.dumps(report))
@@ -63,3 +64,22 @@ def test_release_rejects_mismatched_artifact_or_commit(candidate):
     assert 'HAP hash' in release.prepare(*candidate)[0]['failures'][0]
     report=json.loads(verification.read_text());report['sourceCommit']='0'*40;verification.write_text(json.dumps(report))
     assert 'different source commit' in release.prepare(*candidate)[0]['failures'][0]
+
+
+def test_release_binds_app_bytes_across_documentation_only_commits(candidate):
+    root,build_commit,hap,demo,verification=candidate
+    app_digest=release._FINGERPRINT.fingerprint_app(root/'app')['appSourceSha256']
+    report=json.loads(verification.read_text())
+    assert app_digest==report['hap']['appSourceSha256']
+    (root/'README.md').write_text('Fixture Team\nFixture Member\nFinal evidence documentation\n')
+    release.git(root,'add','README.md');release.git(root,'commit','-m','Documentation after build')
+    release_commit=release.git(root,'rev-parse','HEAD').decode().strip()
+    report['sourceCommit']=release_commit;verification.write_text(json.dumps(report))
+    result,files=release.prepare(root,release_commit,hap,demo,verification)
+    assert result['status']=='ready'
+    assert json.loads(files['environment-manifest.json'])['buildInputGitHead']==build_commit
+    (root/'app/oh-package-lock.json5').write_text('different application bytes')
+    release.git(root,'add','app');release.git(root,'commit','-m','App changed after build')
+    report['sourceCommit']=release.git(root,'rev-parse','HEAD').decode().strip();verification.write_text(json.dumps(report))
+    result,_=release.prepare(root,report['sourceCommit'],hap,demo,verification)
+    assert result['status']=='failed' and 'build inputs' in result['failures'][0]

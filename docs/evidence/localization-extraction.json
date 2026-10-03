@@ -1,0 +1,231 @@
+{
+  "scope": "Presentation-only extraction. Conditions, identifiers, persisted enum values and authored material content are preserved. Templates use numbered parameters; dynamic authored values are not translated.",
+  "languages": [
+    "base English"
+  ],
+  "resources": 650,
+  "sourceCoverage": [
+    {
+      "file": "pages/Index.ets",
+      "sourceSha256": "46955b2e26d5f0395cb70cb204aa76d121cc2f925f624bb236b3ffb1d99c8a1d",
+      "resourceCalls": 247,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "components/EditorPanel.ets",
+      "sourceSha256": "9d438649ebfe978a5cc334118c895276c25bbb99a936d8d1dec9606bcb0991a9",
+      "resourceCalls": 228,
+      "remainingEnglishLiterals": [
+        {
+          "line": 135,
+          "text": "Chart facts",
+          "classification": "Stable section identifier; rendered tab is localized separately"
+        },
+        {
+          "line": 201,
+          "text": "New chart",
+          "classification": "Default English-authored material content, separate from UI locale"
+        },
+        {
+          "line": 204,
+          "text": "Series 1",
+          "classification": "Default English-authored material content, separate from UI locale"
+        },
+        {
+          "line": 270,
+          "text": "I reviewed geometry, meaning, numerical facts and lesson answers against the stated source or an equivalent accessible reference.",
+          "classification": "Persisted English material author declaration, separate from UI locale"
+        },
+        {
+          "line": 412,
+          "text": "Chart facts",
+          "classification": "Stable section identifier; rendered tab is localized separately"
+        },
+        {
+          "line": 475,
+          "text": "Chart facts",
+          "classification": "Stable section identifier; rendered tab is localized separately"
+        }
+      ]
+    },
+    {
+      "file": "platform/Preparation.ets",
+      "sourceSha256": "028a71f8c512539401b63c30b9686f8128cd8d674a607a66a85179f5cc073d23",
+      "resourceCalls": 22,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "platform/Repository.ets",
+      "sourceSha256": "76f6aae552d846e235b1627ff1c19d330e43cd8ea1906d70b574aba2dd4a2313",
+      "resourceCalls": 39,
+      "remainingEnglishLiterals": [
+        {
+          "line": 146,
+          "text": "CREATE TABLE IF NOT EXISTS materials (id TEXT PRIMARY KEY, body TEXT NOT NULL)",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 147,
+          "text": "CREATE TABLE IF NOT EXISTS progress (id TEXT PRIMARY KEY, revision INTEGER NOT NULL, body TEXT NOT NULL)",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 148,
+          "text": "CREATE TABLE IF NOT EXISTS events (id TEXT PRIMARY KEY, material TEXT NOT NULL, body TEXT NOT NULL)",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 194,
+          "text": "SELECT body FROM materials ORDER BY id",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 202,
+          "text": "SELECT body FROM materials WHERE id=?",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 213,
+          "text": "INSERT OR REPLACE INTO materials(id,body) VALUES(?,?)",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 393,
+          "text": "Unreviewed source imported by the local author.",
+          "classification": "Persisted English material author declaration, separate from UI locale"
+        },
+        {
+          "line": 398,
+          "text": "SELECT body FROM progress WHERE id=?",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 406,
+          "text": "SELECT id FROM materials WHERE id=?",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 411,
+          "text": "INSERT INTO events(id,material,body) VALUES(?,?,?)",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 412,
+          "text": "INSERT OR REPLACE INTO progress(id,revision,body) VALUES(?,?,?)",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 423,
+          "text": "DELETE FROM events WHERE material=?",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 424,
+          "text": "DELETE FROM progress WHERE id=?",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 425,
+          "text": "DELETE FROM materials WHERE id=?",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 436,
+          "text": "DELETE FROM events WHERE material=?",
+          "classification": "SQL, not presentation"
+        },
+        {
+          "line": 437,
+          "text": "DELETE FROM progress WHERE id=?",
+          "classification": "SQL, not presentation"
+        }
+      ]
+    },
+    {
+      "file": "platform/PackageExporter.ets",
+      "sourceSha256": "a9c5d9e360f04ede2a2617d450e124d4788814fa28c2b9f16f76c56682879230",
+      "resourceCalls": 12,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "platform/SystemPicker.ets",
+      "sourceSha256": "d4284dffc4d66785da627f76d330370385bca1982dbe1be85d98e1d8e4b58876",
+      "resourceCalls": 2,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "platform/ArchiveWorker.ets",
+      "sourceSha256": "1c186df910363cd1625205bc2da0eb2dddc180cd3675b4316a4667bdb5269ab8",
+      "resourceCalls": 1,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "platform/Feedback.ets",
+      "sourceSha256": "bcd6107eb6bb5c2a0dd09ba26da8bab3730a772f55f1dcef7bbbe3578cfc0674",
+      "resourceCalls": 15,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "domain/engine.ts",
+      "sourceSha256": "489a39693c9c2fddfa0dd631a069fc7cbafc12033e479eec62318a4c12550dbf",
+      "resourceCalls": 43,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "domain/editor.ts",
+      "sourceSha256": "ac2acf3a67d8b0f45f110a696f69f72c2fcbe3473c6a3ed5a21d3f12b72f488a",
+      "resourceCalls": 10,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "domain/validate.ts",
+      "sourceSha256": "6fd514b5bbbe8cc0fd5a9d23f07085246ed3e124239b1f7f9f5fa1526be7f232",
+      "resourceCalls": 60,
+      "remainingEnglishLiterals": [
+        {
+          "line": 103,
+          "text": "Author must",
+          "classification": "Existing source-provenance sentinel, not generated UI copy"
+        }
+      ]
+    },
+    {
+      "file": "domain/jsonSafety.ts",
+      "sourceSha256": "7199673b89e47562e7bdda62b0aeeec34645e6359c67ee174a32f98b1eb92cd4",
+      "resourceCalls": 2,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "domain/media.ts",
+      "sourceSha256": "440e8eff2e87d004545bcdb5d0efc86e52be21e3a5fb2513eaa036c1c0099ac6",
+      "resourceCalls": 27,
+      "remainingEnglishLiterals": [
+        {
+          "line": 10,
+          "text": "fmt ",
+          "classification": "PCM WAV binary chunk identifier, not presentation"
+        },
+        {
+          "line": 98,
+          "text": "fmt ",
+          "classification": "PCM WAV binary chunk identifier, not presentation"
+        }
+      ]
+    },
+    {
+      "file": "domain/zip.ts",
+      "sourceSha256": "0639b9e6386f5d1a3e6858fe2419a9d531d29530fa8ca715a2dd5c7bd64a2b53",
+      "resourceCalls": 16,
+      "remainingEnglishLiterals": []
+    },
+    {
+      "file": "domain/geometry.ts",
+      "sourceSha256": "982a52b005a6ea40895cd917939dae5060b1b2cb35a6b2af853a6dc3d1a52bb6",
+      "resourceCalls": 2,
+      "remainingEnglishLiterals": []
+    }
+  ],
+  "remainingReviewCount": 0,
+  "excludedPendingOwnership": [],
+  "verification": "Run node scripts/extract-native-strings.cjs --check for idempotence; --audit refreshes this inventory without modifying source."
+}

@@ -39,6 +39,10 @@ oniro-app app launch app --ability EntryAbility --device 127.0.0.1:55555
 
 Oniro invokes OHPM and hvigor under the matching command-line tools. `scripts/build.ps1` stages the source in a private Linux build directory, resolves the pinned OHPM dependencies, generates normal-application development signing material there, builds a signed HAP, checks metadata from the resulting archive, and emits SHA-256. It copies only the HAP, dependency lock and non-secret evidence back to the project. The private staging path is recorded in ignored `.native-build-path` for troubleshooting. Signing configuration, keystore and provisioning files are never written into tracked application configuration.
 
+Before generated SDK paths or signing configuration are added, the build fingerprints the exact copied app inputs. `stage-input-fingerprint.json` records each source path and content hash; `hap-metadata.json` binds the resulting aggregate `appSourceSha256` to the signed HAP hash. Git HEAD and dirty state are recorded separately, because an artifact built from uncommitted changes must not be presented as a build of that earlier commit. The shared algorithm is implemented in `scripts/app_source_fingerprint.py` and excludes generated build directories and private signing files.
+
+After installation, launch and process wait succeed, the install wrapper writes a per-device `installation-*.json` report with the exact installed input HAP hash and source fingerprint. This is distinct from the clean checkout build report, which does not install on a device.
+
 ## Signing and portability
 
 OpenHarmony development signing uses the SDK development certificate offline. It is suitable for the emulator and compatible development targets and is not a commercial distribution certificate or an identity certification. A second developer generates their own local configuration by running the same build script. Normal application privileges are used; no system permission or operating-system modification is needed by TouchMap.
@@ -65,6 +69,10 @@ With that native test HAP installed, measure 100 local recording starts:
 
 This measures the first actual AudioRenderer write accepting PCM samples, including integrity checks and renderer preparation. The report separately records the configured exploration dwell. It does not measure acoustic speaker latency or physical finger input. The command fails if a playback fails or measured onset p95 misses the 150 ms target. `scripts/test-recovery.py --device 127.0.0.1:55556` runs inside WSL and checks 100 forced process restarts after fsynced save, unfinished-answer, submission and package-import acknowledgements. These checks are post-commit recovery evidence; they do not inject faults into a transaction in progress.
 
+Audio measurement uses prepared, non-draft recordings. Per-onset traces separate integrity/cache work, waiting for serialized controls, renderer preparation/start and first write dispatch/resolution; buffer byte counts and PCM duration identify possible buffering delays. The write promise reports bytes accepted by the native stream, not first sound at the speaker. `native-audio-host.json` records host CPU count, load averages and compiler processes before and after the run. See `audio-api-semantics.json` for the inspected official API and implementation references.
+
+`python3 scripts/test-audio-controls.py --device 127.0.0.1:55556` runs inside WSL and checks actual Stop-before-dwell, replacement by the latest target, and Pause/Resume through natural recording completion. It requires the same installed native test HAP and a working audio adapter.
+
 To verify a committed revision from a fresh local clone, with separate dependency installation and signing, run:
 
 ```powershell
@@ -90,6 +98,8 @@ python3 scripts/configure-emulator-audio.py --device 127.0.0.1:55555 restore
 ```
 
 The original JSON and per-target applied configuration are saved in `docs/evidence/emulator-audio-*.json`. This is a repair to the development image, separate from TouchMap installation. Do not apply it to other hardware.
+
+For evidence of emitted audio, `scripts/record-emulator-audio.py --device 127.0.0.1:55555 --seconds 20 --output docs/evidence/primary-playback.wav` records only that QEMU process's PulseAudio output while you trigger a recording in the app. It never records a microphone or another application's output. The adjacent JSON reports waveform peak/RMS, capture start in UTC, elapsed wall time and capture scope; a nonzero first-write callback alone does not prove emitted sound.
 
 ## Primary references
 

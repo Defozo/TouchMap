@@ -1,0 +1,12 @@
+{
+  "scope": "Official OpenHarmony 6.0 implementation and API 20 SDK reference inspected to interpret the benchmark. The tested image is OpenHarmony 6.1.0.31; this is source-based interpretation, not a runtime stack trace.",
+  "conclusion": "AudioRenderer.write resolves with bytes written to the native stream, after queued asynchronous work. Native ring-buffer writes may wait for writable frames. Resolution is neither first speaker output nor proof that the entire recording has played.",
+  "measurement": "The benchmark reports scheduler-decision to first accepted PCM write resolution. Dwell is separate. Emitted waveform capture is separate. Phase tracing records dispatch and resolution independently, plus actual buffer size and PCM duration.",
+  "references": [
+    "https://raw.githubusercontent.com/openharmony/docs/OpenHarmony-6.0-Release/en/application-dev/reference/apis-audio-kit/arkts-apis-audio-AudioRenderer.md",
+    "https://gitee.com/openharmony/multimedia_audio_framework/blob/OpenHarmony-6.0-Release/frameworks/js/napi/audiorenderer/napi_audio_renderer.cpp",
+    "https://gitee.com/openharmony/multimedia_audio_framework/blob/OpenHarmony-6.0-Release/services/audio_service/client/src/renderer_in_client.cpp"
+  ],
+  "nativeFunctions": ["NapiAudioRenderer::Write", "NapiAudioRenderer::WriteArrayBufferToNative", "RendererInClientInner::WriteInner", "RendererInClientInner::WriteCacheData"],
+  "compatibility": "The write API is available since API 8 and deprecated since API 11 in favor of writeData callbacks. Deprecation does not make the recorded successful PCM writes a speaker-onset measurement."
+}

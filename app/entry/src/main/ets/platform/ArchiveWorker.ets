@@ -1,10 +1,11 @@
+import { tr } from '../domain/i18n';
 import { taskpool } from '@kit.ArkTS';
 import { inflateRaw, crc32 } from '../domain/zip';
 
 @Concurrent
 function decodeEntry(input: Uint8Array, method: number, expectedSize: number, expectedCrc: number): Uint8Array {
   const output = method === 0 ? input : inflateRaw(input, expectedSize);
-  if (output.length !== expectedSize || crc32(output) !== expectedCrc) { throw new Error('Extracted package size or checksum mismatch.'); }
+  if (output.length !== expectedSize || crc32(output) !== expectedCrc) { throw new Error(tr('tm_69b78ae9e469')); }
   return output;
 }
 

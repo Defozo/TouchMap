@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-7c401bf7948e",
+  "revision": 1,
+  "title": "Illustrative rainfall",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "b5da539f06df3d647f4199c35e34282ec3ec2866a6f3e6e5bf985dc1aad30b7f",
+    "width": 960.0,
+    "height": 640.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      960.0,
+      640.0
+    ],
+    "previewPath": "",
+    "previewSha256": ""
+  },
+  "regions": [
+    {
+      "id": "region-title",
+      "label": "Title",
+      "description": "Chart title text 'Illustrative rainfall'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 344.64,
+              "y": 21.76
+            },
+            {
+              "x": 614.4,
+              "y": 21.76
+            },
+            {
+              "x": 614.4,
+              "y": 47.36
+            },
+            {
+              "x": 344.64,
+              "y": 47.36
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Illustrative rainfall",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-y-axis-label",
+      "label": "Y-axis label",
+      "description": "Label indicating rainfall unit in millimeters",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 117.12,
+              "y": 76.16
+            },
+            {
+              "x": 275.52,
+              "y": 76.16
+            },
+            {
+              "x": 275.52,
+              "y": 99.2
+            },
+            {
+              "x": 117.12,
+              "y": 99.2
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Rainfall (mm)",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-x-axis-label",
+      "label": "X-axis label",
+      "description": "Label indicating x-axis categories are months",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 442.56,
+              "y": 531.2
+            },
+            {
+              "x": 516.48,
+              "y": 531.2
+            },
+            {
+              "x": 516.48,
+              "y": 549.76
+            },
+            {
+              "x": 442.56,
+              "y": 549.76
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Month",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-bar-april",
+      "label": "April Bar",
+      "description": "Bar for April with printed label '40 mm'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 188.16,
+              "y": 255.36
+            },
+            {
+              "x": 278.4,
+              "y": 255.36
+            },
+            {
+              "x": 278.4,
+              "y": 449.92
+            },
+            {
+              "x": 188.16,
+              "y": 449.92
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 3,
+      "readingOrder": 3,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "40 mm\nApril",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-bar-may",
+      "label": "May Bar",
+      "description": "Bar for May with printed label '65 mm'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 424.32,
+              "y": 151.68
+            },
+            {
+              "x": 514.56,
+              "y": 151.68
+            },
+            {
+              "x": 514.56,
+              "y": 449.92
+            },
+            {
+              "x": 424.32,
+              "y": 449.92
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 4,
+      "readingOrder": 4,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "65 mm\nMay",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-bar-june",
+      "label": "June Data Point",
+      "description": "June column with label 'Unknown' and a dashed circle containing '?'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 650.88,
+              "y": 321.92
+            },
+            {
+              "x": 760.32,
+              "y": 321.92
+            },
+            {
+              "x": 760.32,
+              "y": 450.56
+            },
+            {
+              "x": 650.88,
+              "y": 450.56
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 5,
+      "readingOrder": 5,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Unknown\n?\nJune",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-footnote",
+      "label": "Footnote",
+      "description": "Explanatory footnote text",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 181.44,
+              "y": 584.96
+            },
+            {
+              "x": 778.56,
+              "y": 584.96
+            },
+            {
+              "x": 778.56,
+              "y": 603.52
+            },
+            {
+              "x": 181.44,
+              "y": 603.52
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 6,
+      "readingOrder": 6,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Authored teaching values. Unknown means no recorded value.",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart-rainfall",
+      "title": "Illustrative rainfall",
+      "kind": "bar",
+      "xAxis": {
+        "label": "Month",
+        "unit": "",
+        "scale": "category",
+        "domain": [
+          0.0,
+          2.0
+        ],
+        "ticks": [
+          {
+            "value": 0.0,
+            "label": "April"
+          },
+          {
+            "value": 1.0,
+            "label": "May"
+          },
+          {
+            "value": 2.0,
+            "label": "June"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Rainfall",
+        "unit": "mm",
+        "scale": "linear",
+        "domain": [
+          0.0,
+          80.0
+        ],
+        "ticks": [
+          {
+            "value": 0.0,
+            "label": "0"
+          },
+          {
+            "value": 20.0,
+            "label": "20"
+          },
+          {
+            "value": 40.0,
+            "label": "40"
+          },
+          {
+            "value": 60.0,
+            "label": "60"
+          },
+          {
+            "value": 80.0,
+            "label": "80"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series-rainfall",
+          "label": "Rainfall",
+          "values": [
+            {
+              "id": "val-april",
+              "regionId": "region-bar-april",
+              "x": "April",
+              "value": 40.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "Text directly above bar: '40 mm'",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-may",
+              "regionId": "region-bar-may",
+              "x": "May",
+              "value": 65.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "Text directly above bar: '65 mm'",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-june",
+              "regionId": "region-bar-june",
+              "x": "June",
+              "value": null,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "Text indicates 'Unknown' with '?' inside dashed circle; footnote states 'Unknown means no recorded value.'",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Primary chart diagram",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm all printed values, scale, domain and units"
+        ]
+      }
+    }
+  ],
+  "questions": [],
+  "audio": [],
+  "description": "Bar chart showing illustrative monthly rainfall amounts in millimeters for April, May, and June, with June marked as unknown."
+}

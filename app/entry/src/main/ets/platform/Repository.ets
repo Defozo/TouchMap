@@ -1,3 +1,4 @@
+import { tr } from '../domain/i18n';
 import { common } from '@kit.AbilityKit';
 import { fileIo as fs } from '@kit.CoreFileKit';
 import { SystemPicker } from './SystemPicker';
@@ -50,13 +51,13 @@ export function readBytes(path: string, limit: number = 50 * 1024 * 1024): Uint8
   const file = fs.openSync(path, fs.OpenMode.READ_ONLY);
   try {
     const size = fs.statSync(file.fd).size;
-    if (size > limit) { throw new Error('File exceeds the supported size limit.'); }
+    if (size > limit) { throw new Error(tr('tm_792ebef5e7f2')); }
     const bytes = new ArrayBuffer(size);
     let offset = 0;
     while (offset < size) {
       const part = new ArrayBuffer(size - offset);
       const got = fs.readSync(file.fd, part, { offset: offset });
-      if (got === 0) { throw new Error('File access expired or the file is truncated.'); }
+      if (got === 0) { throw new Error(tr('tm_fffaa3b383d1')); }
       new Uint8Array(bytes).set(new Uint8Array(part, 0, got), offset);
       offset += got;
     }
@@ -67,7 +68,7 @@ export function writeBytes(path: string, bytes: Uint8Array): void {
   const parent = path.substring(0, path.lastIndexOf('/'));
   if (!fs.accessSync(parent)) { fs.mkdirSync(parent, true); }
   const file = fs.openSync(path, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE | fs.OpenMode.TRUNC);
-  try { if (fs.writeSync(file.fd, bytes.slice().buffer) !== bytes.byteLength) { throw new Error('Storage could not complete the write.'); } fs.fsyncSync(file.fd); } finally { fs.closeSync(file); }
+  try { if (fs.writeSync(file.fd, bytes.slice().buffer) !== bytes.byteLength) { throw new Error(tr('tm_64a6f0a1d0d1')); } fs.fsyncSync(file.fd); } finally { fs.closeSync(file); }
 }
 export function safePath(path: string): boolean {
   return portablePath(path) && path.normalize('NFC') === path && !path.split('/').some((part: string) => /^(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(?:\.|$)/i.test(part));
@@ -75,22 +76,22 @@ export function safePath(path: string): boolean {
 interface ZipEntry { path: string; compressed: number; expanded: number; offset: number; method: number; crc: number; }
 // Inspect every central and local header before the platform decompressor sees an archive.
 export function inspectZip(bytes: Uint8Array): ZipEntry[] {
-  if (bytes.byteLength > 50 * 1024 * 1024 || bytes.length < 22) { throw new Error('Invalid package size.'); }
+  if (bytes.byteLength > 50 * 1024 * 1024 || bytes.length < 22) { throw new Error(tr('tm_c0e266a428fb')); }
   const view = new DataView(bytes.buffer);
   let end = -1;
   for (let i = bytes.length - 22; i >= Math.max(0, bytes.length - 65557); i--) {
     if (view.getUint32(i, true) === 0x06054b50 && i + 22 + view.getUint16(i + 20, true) === bytes.length) { end = i; break; }
   }
-  if (end < 0 || view.getUint16(end + 4, true) !== 0 || view.getUint16(end + 6, true) !== 0) { throw new Error('Multipart or malformed ZIP is unsupported.'); }
+  if (end < 0 || view.getUint16(end + 4, true) !== 0 || view.getUint16(end + 6, true) !== 0) { throw new Error(tr('tm_8b182d536aee')); }
   const count = view.getUint16(end + 10, true);
   let cursor = view.getUint32(end + 16, true);
   const directorySize = view.getUint32(end + 12, true);
-  if (count < 2 || count > 1000 || cursor + directorySize !== end) { throw new Error('ZIP entry limit or directory is invalid.'); }
+  if (count < 2 || count > 1000 || cursor + directorySize !== end) { throw new Error(tr('tm_d771be937497')); }
   const entries: ZipEntry[] = [];
   const names: string[] = [];
   let total = 0;
   for (let i = 0; i < count; i++) {
-    if (cursor + 46 > end || view.getUint32(cursor, true) !== 0x02014b50) { throw new Error('Invalid ZIP entry.'); }
+    if (cursor + 46 > end || view.getUint32(cursor, true) !== 0x02014b50) { throw new Error(tr('tm_430aae4ece46')); }
     const flags = view.getUint16(cursor + 8, true);
     const method = view.getUint16(cursor + 10, true);
     const compressed = view.getUint32(cursor + 20, true);
@@ -100,28 +101,28 @@ export function inspectZip(bytes: Uint8Array): ZipEntry[] {
     const comment = view.getUint16(cursor + 32, true);
     const offset = view.getUint32(cursor + 42, true);
     const attrs = view.getUint32(cursor + 38, true);
-    if (cursor + 46 + nameSize + extra + comment > end) { throw new Error('Truncated ZIP directory.'); }
+    if (cursor + 46 + nameSize + extra + comment > end) { throw new Error(tr('tm_c0dc1e470144')); }
     const path = decode(bytes.slice(cursor + 46, cursor + 46 + nameSize));
     const normalized = path;
     const fileType = attrs >>> 16 & 0xF000;
     if (!safePath(normalized) || names.includes(normalized.toLowerCase()) || (fileType !== 0 && fileType !== 0x8000) ||
       (flags & 1) !== 0 || (method !== 0 && method !== 8) || expanded === 0xFFFFFFFF || offset === 0xFFFFFFFF) {
-      throw new Error('Unsafe paths, links, duplicate names or unsupported ZIP entries.');
+      throw new Error(tr('tm_1d4c948595d9'));
     }
     names.push(normalized.toLowerCase());
     total += expanded;
-    if (total > 200 * 1024 * 1024 || expanded > 50 * 1024 * 1024 || expanded > Math.max(1024 * 1024, compressed * 200)) { throw new Error('Package expansion limit exceeded.'); }
-    if (offset + 30 > end || view.getUint32(offset, true) !== 0x04034b50 || view.getUint16(offset + 8, true) !== method) { throw new Error('ZIP local entry mismatch.'); }
+    if (total > 200 * 1024 * 1024 || expanded > 50 * 1024 * 1024 || expanded > Math.max(1024 * 1024, compressed * 200)) { throw new Error(tr('tm_ce0218d2bfb5')); }
+    if (offset + 30 > end || view.getUint32(offset, true) !== 0x04034b50 || view.getUint16(offset + 8, true) !== method) { throw new Error(tr('tm_fe8b69246bde')); }
     const localName = view.getUint16(offset + 26, true);
     const localExtra = view.getUint16(offset + 28, true);
-    if (decode(bytes.slice(offset + 30, offset + 30 + localName)) !== path || offset + 30 + localName + localExtra + compressed > view.getUint32(end + 16, true)) { throw new Error('ZIP local path or bounds mismatch.'); }
-    if (view.getUint16(offset + 6, true) !== flags) { throw new Error('ZIP flag mismatch.'); }
+    if (decode(bytes.slice(offset + 30, offset + 30 + localName)) !== path || offset + 30 + localName + localExtra + compressed > view.getUint32(end + 16, true)) { throw new Error(tr('tm_e027b54139cd')); }
+    if (view.getUint16(offset + 6, true) !== flags) { throw new Error(tr('tm_8748e89dba2f')); }
     const dataOffset = offset + 30 + localName + localExtra;
-    if (entries.some((entry: ZipEntry) => dataOffset < entry.offset + entry.compressed && dataOffset + compressed > entry.offset)) { throw new Error('Overlapping ZIP entries.'); }
+    if (entries.some((entry: ZipEntry) => dataOffset < entry.offset + entry.compressed && dataOffset + compressed > entry.offset)) { throw new Error(tr('tm_44469e348eb0')); }
     entries.push({ path: path, compressed: compressed, expanded: expanded, offset: dataOffset, method: method, crc: view.getUint32(cursor + 16, true) });
     cursor += 46 + nameSize + extra + comment;
   }
-  if (cursor !== end || !names.includes('manifest.json') || !names.includes('diagram.json')) { throw new Error('The package lacks its manifest or diagram.'); }
+  if (cursor !== end || !names.includes('manifest.json') || !names.includes('diagram.json')) { throw new Error(tr('tm_44d35d8dfb72')); }
   return entries;
 }
 const initializedStores: Map<string, Promise<void>> = new Map<string, Promise<void>>();
@@ -202,7 +203,11 @@ export class Repository {
     try {
       if (row.goToFirstRow()) {
         const old = JSON.parse(row.getString(0)) as Material;
-        if (!old.draft && JSON.stringify(old.diagram) !== JSON.stringify(material.diagram)) { throw new Error('Published revisions are immutable. Save a new revision.'); }
+        if (!old.draft && (material.draft || old.directory !== material.directory ||
+          JSON.stringify(old.diagram) !== JSON.stringify(material.diagram) ||
+          JSON.stringify(old.manifest) !== JSON.stringify(material.manifest))) {
+          throw new Error(tr('tm_6d03a4b37892'));
+        }
       }
     } finally { row.close(); }
     await this.db!.executeSql('INSERT OR REPLACE INTO materials(id,body) VALUES(?,?)', [material.key, JSON.stringify(material)]);
@@ -222,27 +227,27 @@ export class Repository {
     const diagram = JSON.parse(diagramText) as Diagram;
     const errors = validateDiagram(diagram);
     if (errors.length > 0) { throw new Error(errors.slice(0, 4).join('\n')); }
-    if (manifest.schemaVersion !== 1 || manifest.packageId !== diagram.packageId || manifest.revision !== diagram.revision || manifest.title !== diagram.title || manifest.language !== diagram.language || manifest.assets.length > 999) { throw new Error('Manifest and content revision do not match.'); }
+    if (manifest.schemaVersion !== 1 || manifest.packageId !== diagram.packageId || manifest.revision !== diagram.revision || manifest.title !== diagram.title || manifest.language !== diagram.language || manifest.assets.length > 999) { throw new Error(tr('tm_b9099ea1cb15')); }
     const available: string[] = [];
     for (const asset of manifest.assets) {
-      if (!safePath(asset.path) || available.map((p: string) => p.toLowerCase()).includes(asset.path.toLowerCase())) { throw new Error('Invalid manifest asset path.'); }
+      if (!safePath(asset.path) || available.map((p: string) => p.toLowerCase()).includes(asset.path.toLowerCase())) { throw new Error(tr('tm_9c5b3f1a74be')); }
       const bytes = readBytes(`${directory}/${asset.path}`);
-      if (bytes.length !== asset.bytes || await digest(bytes) !== asset.sha256) { throw new Error(`Integrity check failed: ${asset.path}`); }
+      if (bytes.length !== asset.bytes || await digest(bytes) !== asset.sha256) { throw new Error(tr('tm_dfbce2fa8348', [String(asset.path)])); }
       available.push(asset.path);
     }
-    if (!available.includes('diagram.json') || !available.includes(diagram.source.path)) { throw new Error('Source and diagram must be covered by integrity hashes.'); }
+    if (!available.includes('diagram.json') || !available.includes(diagram.source.path)) { throw new Error(tr('tm_d10193049c1a')); }
     const expected = ['diagram.json', diagram.source.path, ...diagram.audio.map((a) => a.path)];
     if (diagram.source.previewPath) { expected.push(diagram.source.previewPath); }
-    if (available.some((path: string) => !expected.includes(path)) || expected.some((path: string) => !available.includes(path))) { throw new Error('A teaching package may contain only declared source, diagram and audio.'); }
+    if (available.some((path: string) => !expected.includes(path)) || expected.some((path: string) => !available.includes(path))) { throw new Error(tr('tm_311a1ecda993')); }
     const sourceBytes = readBytes(`${directory}/${diagram.source.path}`, 10 * 1024 * 1024);
-    if (await digest(sourceBytes) !== diagram.source.sha256) { throw new Error('Source hash differs from the diagram.'); }
+    if (await digest(sourceBytes) !== diagram.source.sha256) { throw new Error(tr('tm_8bc97085b456')); }
     if (diagram.source.previewPath) {
       const preview = readBytes(`${directory}/${diagram.source.previewPath}`);
       const header = new DataView(preview.buffer);
       if (await digest(preview) !== diagram.source.previewSha256 || preview.length < 24 ||
         header.getUint32(0) !== 0x89504e47 || header.getUint32(4) !== 0x0d0a1a0a ||
         header.getUint32(16) !== Math.ceil(diagram.source.width) || header.getUint32(20) !== Math.ceil(diagram.source.height)) {
-        throw new Error('Source preview must be an intact PNG matching source dimensions.');
+        throw new Error(tr('tm_da6ddd90571f'));
       }
       await this.validateRaster(preview, diagram.source.width, diagram.source.height);
     }
@@ -250,12 +255,12 @@ export class Repository {
       if (diagram.source.previewPath) { assertPassiveSvg(decode(sourceBytes)); }
       else { assertSafeSvg(decode(sourceBytes)); }
     } else {
-      if (!Number.isInteger(diagram.source.width) || !Number.isInteger(diagram.source.height)) { throw new Error('Raster source dimensions must be exact pixel counts.'); }
+      if (!Number.isInteger(diagram.source.width) || !Number.isInteger(diagram.source.height)) { throw new Error(tr('tm_78d6e4da8b6d')); }
       await this.validateRaster(sourceBytes, diagram.source.width, diagram.source.height);
     }
     for (const audio of diagram.audio) {
       const asset = manifest.assets.find((a: Asset) => a.path === audio.path);
-      if (!asset || asset.sha256 !== audio.sha256) { throw new Error('Audio integrity metadata differs from its manifest.'); }
+      if (!asset || asset.sha256 !== audio.sha256) { throw new Error(tr('tm_fe793fdae59f')); }
       let text = '';
       const region = diagram.regions.find((r) => r.id === audio.targetId);
       const relation = diagram.relations.find((r) => r.id === audio.targetId);
@@ -265,12 +270,12 @@ export class Repository {
       else if (region && audio.kind === 'description') { text = region.description; }
       else if (relation && audio.kind === 'label') { text = relation.label; }
       else if (question && audio.kind === 'question') { text = question.prompt; }
-      if (!text || await digest(encode(text)) !== audio.textHash || audio.language !== diagram.language) { throw new Error('Recording does not match the current text or language.'); }
-      if (!audio.path.toLowerCase().endsWith('.wav') || Math.abs(wavDuration(readBytes(`${directory}/${audio.path}`, 10 * 1024 * 1024)) - audio.durationMs) > 50) { throw new Error('Recording format or duration does not match its metadata.'); }
+      if (!text || await digest(encode(text)) !== audio.textHash || audio.language !== diagram.language) { throw new Error(tr('tm_a067633a2e89')); }
+      if (!audio.path.toLowerCase().endsWith('.wav') || Math.abs(wavDuration(readBytes(`${directory}/${audio.path}`, 10 * 1024 * 1024)) - audio.durationMs) > 50) { throw new Error(tr('tm_4ccd73519ddb')); }
     }
     const existing = (await this.list()).find((m: Material) => m.key === `${diagram.packageId}@${diagram.revision}`);
     if (existing) {
-      if (JSON.stringify(existing.diagram) !== JSON.stringify(diagram)) { throw new Error('A different material already uses this package revision. Ask the author to export a new revision.'); }
+      if (JSON.stringify(existing.diagram) !== JSON.stringify(diagram)) { throw new Error(tr('tm_6cd35eba33e6')); }
       if (existing.directory !== directory && directory.startsWith(`${this.context.filesDir}/materials/`)) { fs.rmdirSync(directory); }
       return existing;
     }
@@ -279,12 +284,12 @@ export class Repository {
     await this.saveMaterial(material); return material;
   }
   private async validateRaster(bytes: Uint8Array, width: number, height: number): Promise<void> {
-    if (bytes.length > 10 * 1024 * 1024) { throw new Error('Source image exceeds 10 MiB.'); }
+    if (bytes.length > 10 * 1024 * 1024) { throw new Error(tr('tm_a2ac2eac6f9d')); }
     const source = image.createImageSource(bytes.slice().buffer);
     try {
       const info = await source.getImageInfo();
       if (info.size.width !== Math.ceil(width) || info.size.height !== Math.ceil(height) || info.size.width * info.size.height > 20000000) {
-        throw new Error('Decoded source dimensions differ from the declared geometry or exceed 20 megapixels.');
+        throw new Error(tr('tm_2fe42b577fc1'));
       }
       const pixels = await source.createPixelMap();
       await pixels.release();
@@ -299,13 +304,13 @@ export class Repository {
     const bytes = readBytes(uri);
     const entries = inspectZip(bytes);
     const manifestEntry = entries.find((entry: ZipEntry) => entry.path === 'manifest.json')!;
-    if (manifestEntry.expanded > 2 * 1024 * 1024) { throw new Error('Package manifest exceeds 2 MiB.'); }
+    if (manifestEntry.expanded > 2 * 1024 * 1024) { throw new Error(tr('tm_7518e0c3b1f9')); }
     const manifestBytes = await extractEntry(bytes.slice(manifestEntry.offset, manifestEntry.offset + manifestEntry.compressed), manifestEntry.method, manifestEntry.expanded, manifestEntry.crc);
     const manifestText = decode(manifestBytes); assertBoundedJson(manifestText);
     const manifest = JSON.parse(manifestText) as Manifest;
     const errors = validateManifest(manifest); if (errors.length) { throw new Error(errors[0]); }
     const expected = ['manifest.json', ...manifest.assets.map((asset: Asset) => asset.path)];
-    if (entries.length !== expected.length || entries.some((entry: ZipEntry) => !expected.includes(entry.path))) { throw new Error('Teaching packages cannot contain undeclared files or private learning history.'); }
+    if (entries.length !== expected.length || entries.some((entry: ZipEntry) => !expected.includes(entry.path))) { throw new Error(tr('tm_a5d1fd8bda3e')); }
     const id = uid(); const stage = `${this.context.filesDir}/staging/${id}`;
     fs.mkdirSync(stage, true);
     try {
@@ -320,10 +325,20 @@ export class Repository {
       try { return await this.adopt(target, false); } catch (error) { fs.rmdirSync(target); throw new Error((error as Error).message); }
     } finally { if (fs.accessSync(stage)) { fs.rmdirSync(stage); } }
   }
+  private async readDraftAsset(path: string, hash: string, candidates: Material[]): Promise<Uint8Array> {
+    if (!safePath(path)) { throw new Error(tr('tm_5e2df81ae947')); }
+    for (const candidate of candidates) {
+      const filename = `${candidate.directory}/${path}`;
+      if (!fs.accessSync(filename)) { continue; }
+      const bytes = readBytes(filename);
+      if (await digest(bytes) === hash) { return bytes; }
+    }
+    throw new Error(tr('tm_bdefdf1ea5a9'));
+  }
   async saveDraft(diagram: Diagram, previous: Material): Promise<Material> {
     const all = await this.list();
     const collision = all.find((m: Material) => m.key === `${diagram.packageId}@${diagram.revision}`);
-    if (collision && (!collision.draft || collision.key !== previous.key) && JSON.stringify(collision.diagram) !== JSON.stringify(diagram)) {
+    if (collision && (!collision.draft || (collision.key !== previous.key && JSON.stringify(collision.diagram) !== JSON.stringify(diagram)))) {
       diagram = JSON.parse(JSON.stringify(diagram)) as Diagram;
       diagram.revision = Math.max(...all.filter((m: Material) => m.diagram.packageId === diagram.packageId).map((m: Material) => m.diagram.revision)) + 1;
       diagram.regions.forEach((r) => { r.geometryReview.revision = diagram.revision; r.meaningReview.revision = diagram.revision; });
@@ -331,21 +346,22 @@ export class Repository {
       diagram.charts.forEach((c) => { c.review.revision = diagram.revision; });
       diagram.questions.forEach((q) => { q.requiredRevision = diagram.revision; q.review.revision = diagram.revision; });
     }
+    const candidates = [previous, ...all.filter((m: Material) => m.diagram.packageId === diagram.packageId && m.directory !== previous.directory)];
     const directory = `${this.context.filesDir}/materials/draft-${uid()}`; fs.mkdirSync(directory, true);
-    const sourceBytes = readBytes(`${previous.directory}/${previous.diagram.source.path}`);
+    try {
+    const sourceBytes = await this.readDraftAsset(diagram.source.path, diagram.source.sha256, candidates);
     writeBytes(`${directory}/${diagram.source.path}`, sourceBytes);
     const assets: Asset[] = [];
     if (diagram.source.previewPath) {
-      const preview = readBytes(`${previous.directory}/${diagram.source.previewPath}`);
-      if (await digest(preview) !== diagram.source.previewSha256) { throw new Error('Source preview integrity failed.'); }
+      const preview = await this.readDraftAsset(diagram.source.previewPath, diagram.source.previewSha256!, candidates);
       writeBytes(`${directory}/${diagram.source.previewPath}`, preview);
       assets.push({ path: diagram.source.previewPath, bytes: preview.length, sha256: diagram.source.previewSha256!, mediaType: 'image/png' });
     }
     for (const audio of diagram.audio) {
-      const bytes = readBytes(`${previous.directory}/${audio.path}`); writeBytes(`${directory}/${audio.path}`, bytes);
+      const bytes = await this.readDraftAsset(audio.path, audio.sha256, candidates); writeBytes(`${directory}/${audio.path}`, bytes);
       const hash = await digest(bytes);
       const existingAsset = assets.find((asset: Asset) => asset.path === audio.path);
-      if (existingAsset && (existingAsset.sha256 !== hash || existingAsset.mediaType !== 'audio/wav')) { throw new Error('Conflicting asset paths in the draft.'); }
+      if (existingAsset && (existingAsset.sha256 !== hash || existingAsset.mediaType !== 'audio/wav')) { throw new Error(tr('tm_66dd9d0a1575')); }
       if (!existingAsset) { assets.push({ path: audio.path, bytes: bytes.length, sha256: hash, mediaType: 'audio/wav' }); }
     }
     const diagramBytes = encode(JSON.stringify(diagram)); writeBytes(`${directory}/diagram.json`, diagramBytes);
@@ -358,12 +374,19 @@ export class Repository {
     await this.saveMaterial(material);
     if (previous.draft && previous.key === material.key && previous.directory !== directory && previous.directory.startsWith(`${this.context.filesDir}/materials/`) && fs.accessSync(previous.directory)) { fs.rmdirSync(previous.directory); }
     return material;
+    } catch (error) {
+      // Never remove adopted data after a successful commit. An incomplete
+      // draft is private staging and must not survive a failed save.
+      const saved = (await this.list()).some((m: Material) => m.directory === directory);
+      if (!saved && fs.accessSync(directory)) { fs.rmdirSync(directory); }
+      throw new Error((error as Error).message);
+    }
   }
   async createSource(diagram: Diagram, bytes: Uint8Array, preview?: Uint8Array): Promise<Material> {
     const directory = `${this.context.filesDir}/materials/source-${uid()}`; fs.mkdirSync(directory, true);
     writeBytes(`${directory}/${diagram.source.path}`, bytes);
     if (diagram.source.previewPath) {
-      if (!preview || await digest(preview) !== diagram.source.previewSha256) { throw new Error('An intact source preview is required.'); }
+      if (!preview || await digest(preview) !== diagram.source.previewSha256) { throw new Error(tr('tm_f29900ccabd6')); }
       writeBytes(`${directory}/${diagram.source.previewPath}`, preview);
     }
     const manifest: Manifest = { schemaVersion: 1, packageId: diagram.packageId, revision: diagram.revision, title: diagram.title, language: diagram.language,
@@ -381,7 +404,7 @@ export class Repository {
       this.db!.beginTransaction();
       try {
         const present = await this.db!.querySql('SELECT id FROM materials WHERE id=?', [material.key]);
-        try { if (!present.goToFirstRow()) { throw new Error('This material was deleted. Return to the library.'); } } finally { present.close(); }
+        try { if (!present.goToFirstRow()) { throw new Error(tr('tm_2e414a8ebbf9')); } } finally { present.close(); }
         const current = await this.progress(material);
         const result = applyAction(material.diagram, current, action);
         if (!result.duplicate) {
@@ -419,7 +442,7 @@ export class Repository {
     const destination = await new SystemPicker(this.context).save(name);
     if (!destination) { return false; }
     const file = fs.openSync(destination, fs.OpenMode.READ_WRITE | fs.OpenMode.TRUNC);
-    try { if (fs.writeSync(file.fd, bytes.slice().buffer) !== bytes.byteLength) { throw new Error('The export could not be written completely.'); } fs.fsyncSync(file.fd); } finally { fs.closeSync(file); }
+    try { if (fs.writeSync(file.fd, bytes.slice().buffer) !== bytes.byteLength) { throw new Error(tr('tm_fa20630813a5')); } fs.fsyncSync(file.fd); } finally { fs.closeSync(file); }
     return true;
   }
   async exportPackage(material: Material): Promise<boolean> {
@@ -428,7 +451,7 @@ export class Repository {
     const files: ArchiveFile[] = [{ name: 'manifest.json', bytes: encode(JSON.stringify(material.manifest)) }];
     for (const asset of material.manifest.assets) {
       const bytes = readBytes(`${material.directory}/${asset.path}`);
-      if (await digest(bytes) !== asset.sha256) { throw new Error('Cannot export changed or corrupt assets.'); }
+      if (await digest(bytes) !== asset.sha256) { throw new Error(tr('tm_59dcfc1a5874')); }
       files.push({ name: asset.path, bytes: bytes });
     }
     return this.saveAs(await packPortable(files, this.context.cacheDir), `${material.diagram.packageId}.touchmap`);

@@ -1,0 +1,164 @@
+{
+  "id": "chart-03",
+  "split": "development",
+  "variant": "negative-and-unknown",
+  "model": "gemini-3.8-flash",
+  "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+  "startedAt": "2026-10-03T16:14:01.820596+00:00",
+  "schemaSuccess": true,
+  "usableChartDraft": false,
+  "sourceSha256": "8485cbd66e5e0f4c3b5b6b951a4f676c2696ce12add6efe9fb25c8eaa68ec761",
+  "chartCount": 1,
+  "kindCorrect": true,
+  "xLabelsCorrect": true,
+  "yLabelCorrect": true,
+  "unitCorrect": true,
+  "domainCorrect": true,
+  "ticksCorrect": true,
+  "scaleCorrect": true,
+  "exactValuesCorrect": 4,
+  "expectedValues": 4,
+  "unknownsCorrect": 1,
+  "expectedUnknowns": 1,
+  "unsupportedValueAssertions": [],
+  "unexpectedRelations": 1,
+  "observed": {
+    "kind": "line",
+    "xAxis": {
+      "label": "Day",
+      "unit": "day",
+      "scale": "category",
+      "domain": [
+        1.0,
+        4.0
+      ],
+      "ticks": [
+        {
+          "value": 1.0,
+          "label": "Day 1"
+        },
+        {
+          "value": 2.0,
+          "label": "Day 2"
+        },
+        {
+          "value": 3.0,
+          "label": "Day 3"
+        },
+        {
+          "value": 4.0,
+          "label": "Day 4"
+        }
+      ]
+    },
+    "yAxis": {
+      "label": "Temperature",
+      "unit": "°C",
+      "scale": "linear",
+      "domain": [
+        -5.0,
+        5.0
+      ],
+      "ticks": [
+        {
+          "value": -5.0,
+          "label": "-5"
+        },
+        {
+          "value": 0.0,
+          "label": "0"
+        },
+        {
+          "value": 5.0,
+          "label": "5"
+        }
+      ]
+    },
+    "values": [
+      {
+        "x": "Day 1",
+        "value": -2.0,
+        "precision": 0
+      },
+      {
+        "x": "Day 2",
+        "value": 1.0,
+        "precision": 0
+      },
+      {
+        "x": "Day 3",
+        "value": null,
+        "precision": 0
+      },
+      {
+        "x": "Day 4",
+        "value": 4.0,
+        "precision": 0
+      }
+    ]
+  },
+  "report": {
+    "unsupported": [],
+    "unresolved": []
+  },
+  "usage": {
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 193
+      },
+      {
+        "modality": "image",
+        "tokens": 1080
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_input_tokens": 1273,
+    "total_output_tokens": 1759,
+    "total_thought_tokens": 0,
+    "total_tokens": 3032,
+    "total_tool_use_tokens": 0,
+    "raw_prompt_token": 3229,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1775
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1775
+          }
+        ]
+      }
+    ]
+  },
+  "durationMs": 8218
+}

@@ -1,3 +1,4 @@
+import { tr } from './i18n';
 import { Diagram, Point, Polygon, Region, Viewport } from './types';
 const EPS = 1e-7;
 export function distanceToSegment(p: Point, a: Point, b: Point): number {
@@ -27,8 +28,25 @@ export function pathDistance(p: Point, path: Point[]): number {
 export function contains(region: Region, point: Point): boolean {
   return region.polygons.some(p => pointInPolygon(point, p)) || pathDistance(point, region.line) <= region.lineWidth / 2 + EPS;
 }
+/** Keep an already focused object across small pointer jitter, without enlarging initial hit targets. */
+export function retainRegionNearBoundary(diagram: Diagram, point: Point, currentId: string, margin: number): Region | undefined {
+  if (!currentId || !Number.isFinite(point.x) || !Number.isFinite(point.y) || !Number.isFinite(margin) || margin < 0) return undefined;
+  const region = diagram.regions.find(item => item.id === currentId);
+  if (!region) return undefined;
+  if (contains(region, point)) return region;
+  if (margin === 0) return undefined;
+  if (region.line.length > 1 && pathDistance(point, region.line) <= region.lineWidth / 2 + margin) return region;
+  for (const polygon of region.polygons) {
+    for (const ring of [polygon.outer, ...polygon.holes]) {
+      for (let i = 0, previous = ring.length - 1; i < ring.length; previous = i++) {
+        if (distanceToSegment(point, ring[previous], ring[i]) <= margin) return region;
+      }
+    }
+  }
+  return undefined;
+}
 export function sourcePoint(p: Point, v: Viewport): Point {
-  if (!Number.isFinite(v.scale) || v.scale <= 0) throw new Error('Invalid viewport scale');
+  if (!Number.isFinite(v.scale) || v.scale <= 0) throw new Error(tr('tm_0a6c4a4c5aff'));
   const a = -v.rotation * Math.PI / 180, x = (p.x - v.offsetX) / v.scale, y = (p.y - v.offsetY) / v.scale;
   return { x: x * Math.cos(a) - y * Math.sin(a), y: x * Math.sin(a) + y * Math.cos(a) };
 }
@@ -48,7 +66,7 @@ export class SpatialGrid {
       for(const point of points){lowX=Math.min(lowX,point.x);highX=Math.max(highX,point.x);lowY=Math.min(lowY,point.y);highY=Math.max(highY,point.y);}
       const minX = Math.floor((lowX - pad) / cellSize), maxX = Math.floor((highX + pad) / cellSize);
       const minY = Math.floor((lowY - pad) / cellSize), maxY = Math.floor((highY + pad) / cellSize);
-      if ((maxX - minX + 1) * (maxY - minY + 1) > 200000) throw new Error('Geometry exceeds grid budget');
+      if ((maxX - minX + 1) * (maxY - minY + 1) > 200000) throw new Error(tr('tm_a9b99d6be867'));
       for (let x = minX; x <= maxX; x++) for (let y = minY; y <= maxY; y++) {
         const key = `${x}:${y}`, items = this.cells.get(key) || [];
         items.push(region); this.cells.set(key, items);

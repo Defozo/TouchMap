@@ -1,0 +1,159 @@
+{
+  "id": "chart-04",
+  "split": "held-out",
+  "variant": "rotated-labels",
+  "model": "gemini-3.8-flash",
+  "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+  "startedAt": "2026-10-03T16:14:10.049115+00:00",
+  "schemaSuccess": true,
+  "usableChartDraft": false,
+  "sourceSha256": "0b8eb9ece9a00bd3b46da12699d1bd7283cc85c4e7d30de11e5674e6bce4da50",
+  "chartCount": 1,
+  "kindCorrect": true,
+  "xLabelsCorrect": true,
+  "yLabelCorrect": false,
+  "unitCorrect": true,
+  "domainCorrect": true,
+  "ticksCorrect": true,
+  "scaleCorrect": true,
+  "exactValuesCorrect": 3,
+  "expectedValues": 3,
+  "unknownsCorrect": 0,
+  "expectedUnknowns": 0,
+  "unsupportedValueAssertions": [],
+  "unexpectedRelations": 0,
+  "observed": {
+    "kind": "bar",
+    "xAxis": {
+      "label": "Store",
+      "unit": "",
+      "scale": "category",
+      "domain": [
+        0.0,
+        3.0
+      ],
+      "ticks": [
+        {
+          "value": 1.0,
+          "label": "North"
+        },
+        {
+          "value": 2.0,
+          "label": "Southwest"
+        },
+        {
+          "value": 3.0,
+          "label": "East"
+        }
+      ]
+    },
+    "yAxis": {
+      "label": "Volume (L)",
+      "unit": "L",
+      "scale": "linear",
+      "domain": [
+        0.0,
+        30.0
+      ],
+      "ticks": [
+        {
+          "value": 0.0,
+          "label": "0"
+        },
+        {
+          "value": 10.0,
+          "label": "10"
+        },
+        {
+          "value": 20.0,
+          "label": "20"
+        },
+        {
+          "value": 30.0,
+          "label": "30"
+        }
+      ]
+    },
+    "values": [
+      {
+        "x": "North",
+        "value": 14.0,
+        "precision": 0
+      },
+      {
+        "x": "Southwest",
+        "value": 9.0,
+        "precision": 0
+      },
+      {
+        "x": "East",
+        "value": 22.0,
+        "precision": 0
+      }
+    ]
+  },
+  "report": {
+    "unsupported": [],
+    "unresolved": []
+  },
+  "usage": {
+    "input_tokens_by_modality": [
+      {
+        "modality": "image",
+        "tokens": 1080
+      },
+      {
+        "modality": "text",
+        "tokens": 193
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_input_tokens": 1273,
+    "total_output_tokens": 1405,
+    "total_thought_tokens": 0,
+    "total_tokens": 2678,
+    "total_tool_use_tokens": 0,
+    "raw_prompt_token": 3229,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1421
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1421
+          }
+        ]
+      }
+    ]
+  },
+  "durationMs": 7110
+}

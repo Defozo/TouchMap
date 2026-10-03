@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-7e4951c60146",
+  "revision": 1,
+  "title": "Illustrative stored water",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "f7f06b7c470fc5299432c40c7b32f36dbbf6f1a6abda2cf44dad35e9b03499be",
+    "width": 960.0,
+    "height": 640.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      960.0,
+      640.0
+    ],
+    "previewPath": "",
+    "previewSha256": ""
+  },
+  "regions": [
+    {
+      "id": "chart_title",
+      "label": "Chart Title",
+      "description": "Header text above the chart: 'Illustrative stored water'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 300.48,
+              "y": 23.04
+            },
+            {
+              "x": 659.52,
+              "y": 23.04
+            },
+            {
+              "x": 659.52,
+              "y": 46.72
+            },
+            {
+              "x": 300.48,
+              "y": 46.72
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Illustrative stored water",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "y_axis_label",
+      "label": "Y-Axis Label",
+      "description": "Label for the vertical axis showing 'Volume (L)'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 114.24,
+              "y": 76.8
+            },
+            {
+              "x": 242.88,
+              "y": 76.8
+            },
+            {
+              "x": 242.88,
+              "y": 98.56
+            },
+            {
+              "x": 114.24,
+              "y": 98.56
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Volume (L)",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "x_axis_label",
+      "label": "X-Axis Label",
+      "description": "Label for the horizontal axis showing 'Store'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 448.32,
+              "y": 531.2
+            },
+            {
+              "x": 510.72,
+              "y": 531.2
+            },
+            {
+              "x": 510.72,
+              "y": 550.4
+            },
+            {
+              "x": 448.32,
+              "y": 550.4
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Store",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "bar_north",
+      "label": "North Bar",
+      "description": "Vertical bar for 'North' category labeled with '14 L'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 187.2,
+              "y": 300.16
+            },
+            {
+              "x": 278.4,
+              "y": 300.16
+            },
+            {
+              "x": 278.4,
+              "y": 449.92
+            },
+            {
+              "x": 187.2,
+              "y": 449.92
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 3,
+      "readingOrder": 3,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "14 L",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "bar_southwest",
+      "label": "Southwest Bar",
+      "description": "Vertical bar for 'Southwest' category labeled with '9 L'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 424.32,
+              "y": 353.28
+            },
+            {
+              "x": 514.56,
+              "y": 353.28
+            },
+            {
+              "x": 514.56,
+              "y": 449.92
+            },
+            {
+              "x": 424.32,
+              "y": 449.92
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 4,
+      "readingOrder": 4,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "9 L",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "bar_east",
+      "label": "East Bar",
+      "description": "Vertical bar for 'East' category labeled with '22 L'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 660.48,
+              "y": 214.4
+            },
+            {
+              "x": 751.68,
+              "y": 214.4
+            },
+            {
+              "x": 751.68,
+              "y": 449.92
+            },
+            {
+              "x": 660.48,
+              "y": 449.92
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 5,
+      "readingOrder": 5,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "22 L",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "footer_note",
+      "label": "Footnote",
+      "description": "Footnote at the bottom stating: 'Authored teaching values. Unknown means no recorded value.'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 180.48,
+              "y": 584.96
+            },
+            {
+              "x": 778.56,
+              "y": 584.96
+            },
+            {
+              "x": 778.56,
+              "y": 603.52
+            },
+            {
+              "x": 180.48,
+              "y": 603.52
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 6,
+      "readingOrder": 6,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Authored teaching values. Unknown means no recorded value.",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart_stored_water",
+      "title": "Illustrative stored water",
+      "kind": "bar",
+      "xAxis": {
+        "label": "Store",
+        "unit": "",
+        "scale": "category",
+        "domain": [
+          0.0,
+          3.0
+        ],
+        "ticks": [
+          {
+            "value": 1.0,
+            "label": "North"
+          },
+          {
+            "value": 2.0,
+            "label": "Southwest"
+          },
+          {
+            "value": 3.0,
+            "label": "East"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Volume (L)",
+        "unit": "L",
+        "scale": "linear",
+        "domain": [
+          0.0,
+          30.0
+        ],
+        "ticks": [
+          {
+            "value": 0.0,
+            "label": "0"
+          },
+          {
+            "value": 10.0,
+            "label": "10"
+          },
+          {
+            "value": 20.0,
+            "label": "20"
+          },
+          {
+            "value": 30.0,
+            "label": "30"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series_stored_water",
+          "label": "Volume",
+          "values": [
+            {
+              "id": "val_north",
+              "regionId": "bar_north",
+              "x": "North",
+              "value": 14.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "bar_north",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val_southwest",
+              "regionId": "bar_southwest",
+              "x": "Southwest",
+              "value": 9.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "bar_southwest",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val_east",
+              "regionId": "bar_east",
+              "x": "East",
+              "value": 22.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "bar_east",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "entire image",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm all printed values, scale, domain and units"
+        ]
+      }
+    }
+  ],
+  "questions": [],
+  "audio": [],
+  "description": "A vertical bar chart titled 'Illustrative stored water' plotting stored water volume in liters across three stores: North, Southwest, and East."
+}

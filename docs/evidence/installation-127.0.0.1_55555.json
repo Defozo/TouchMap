@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-03T16:13:31.434439+00:00",
+  "device": "127.0.0.1:55555",
+  "status": "installed-and-launched",
+  "bundleName": "org.touchmap.app",
+  "hapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54",
+  "appSourceSha256": "a5467e3eafae0f2638f3e16465e0397d31f92bc3e98e63b830f7637b3c1cbefe",
+  "verification": "Oniro app install, EntryAbility launch and process wait each succeeded. The hash identifies the HAP passed to installation."
+}

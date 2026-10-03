@@ -1,0 +1,83 @@
+[
+  {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "stop_before_dwell",
+        "passed": true,
+        "detail": "Observed 0 native onset callbacks after cancellation."
+      },
+      {
+        "name": "rapid_replacement_only_latest_target",
+        "passed": true,
+        "detail": "Native PCM targets: evaporation"
+      },
+      {
+        "name": "pause_resume_finishes_same_recording",
+        "passed": true,
+        "detail": "Playing local PCM recording | Recording paused. Resume keeps your place. | Recording resumed at the saved position. | Recording finished"
+      },
+      {
+        "name": "four_byte_final_pcm_tail_finishes",
+        "passed": true,
+        "detail": "964 PCM bytes: Playing local PCM recording | Recording finished; failures: "
+      }
+    ],
+    "error": "",
+    "scope": "Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics."
+  },
+  {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "stop_before_dwell",
+        "passed": true,
+        "detail": "Observed 0 native onset callbacks after cancellation."
+      },
+      {
+        "name": "rapid_replacement_only_latest_target",
+        "passed": true,
+        "detail": "Native PCM targets: evaporation"
+      },
+      {
+        "name": "pause_resume_finishes_same_recording",
+        "passed": true,
+        "detail": "Playing local PCM recording | Recording paused. Resume keeps your place. | Recording resumed at the saved position. | Recording finished"
+      },
+      {
+        "name": "four_byte_final_pcm_tail_finishes",
+        "passed": true,
+        "detail": "964 PCM bytes: Playing local PCM recording | Recording finished; failures: "
+      }
+    ],
+    "error": "",
+    "scope": "Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics."
+  },
+  {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "stop_before_dwell",
+        "passed": true,
+        "detail": "Observed 0 native onset callbacks after cancellation."
+      },
+      {
+        "name": "rapid_replacement_only_latest_target",
+        "passed": true,
+        "detail": "Native PCM targets: evaporation"
+      },
+      {
+        "name": "pause_resume_finishes_same_recording",
+        "passed": true,
+        "detail": "Playing local PCM recording | Recording paused. Resume keeps your place. | Recording resumed at the saved position. | Recording finished"
+      },
+      {
+        "name": "four_byte_final_pcm_tail_finishes",
+        "passed": true,
+        "detail": "964 PCM bytes: Playing local PCM recording | Recording finished; failures: "
+      }
+    ],
+    "error": "",
+    "scope": "Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics."
+  }
+]

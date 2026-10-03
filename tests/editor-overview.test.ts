@@ -21,3 +21,30 @@ test('editing the material overview invalidates its recording while preserving r
   assert.equal(editor.redo(), true);
   assert.deepEqual(editor.diagram, next);
 });
+
+test('adopting a stored revision keeps undo and redo without changing another material', () => {
+  const original: Diagram = JSON.parse(readFileSync('samples/water-cycle/diagram.json', 'utf8'));
+  const editor = new DraftEditor(original);
+  editor.setDescription('Temporary overview');
+  assert.equal(editor.undo(), true);
+  const saved = editor.diagram; saved.revision = 3;
+  editor.adoptSaved(saved);
+  assert.equal(editor.diagram.revision, 3);
+  assert.equal(editor.canRedo, true);
+  assert.equal(editor.redo(), true);
+  assert.equal(editor.diagram.description, 'Temporary overview');
+  const unrelated = editor.diagram; unrelated.packageId = 'different-material';
+  assert.throws(() => editor.adoptSaved(unrelated), /identity/);
+});
+
+test('an editor rollback snapshot preserves both histories and isolates later mutations', () => {
+  const original: Diagram = JSON.parse(readFileSync('samples/water-cycle/diagram.json', 'utf8'));
+  const editor = new DraftEditor(original);
+  editor.setTitle('Saved title'); editor.setDescription('Saved overview'); editor.undo();
+  const checkpoint = editor.clone();
+  editor.setTitle('Rejected change');
+  assert.equal(checkpoint.diagram.title, 'Saved title');
+  assert.equal(checkpoint.canUndo, true); assert.equal(checkpoint.canRedo, true);
+  checkpoint.redo(); assert.equal(checkpoint.diagram.description, 'Saved overview');
+  checkpoint.undo(); checkpoint.undo(); assert.deepEqual(checkpoint.diagram, original);
+});

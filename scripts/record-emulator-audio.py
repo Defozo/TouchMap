@@ -1,11 +1,13 @@
 """Record only the selected QEMU emulator's PulseAudio output, never a microphone."""
 import argparse
 import array
+from datetime import datetime, timezone
 import json
 import math
 from pathlib import Path
 import signal
 import subprocess
+import time
 import wave
 
 def main():
@@ -31,6 +33,8 @@ def main():
     output.parent.mkdir(parents=True, exist_ok=True)
     print(f'Recording emulator {args.device} output only for {args.seconds}s: {output}', flush=True)
     monitor = sink.get('monitor_source_name', sink['monitor_source'])
+    started_utc = datetime.now(timezone.utc).isoformat()
+    started_monotonic = time.monotonic()
     process = subprocess.Popen(['parec', f'--device={monitor}',
                                 f'--monitor-stream={selected["index"]}', '--file-format=wav',
                                 '--rate=44100', '--channels=2', '--format=s16le', str(output)],
@@ -40,11 +44,13 @@ def main():
     except subprocess.TimeoutExpired:
         process.send_signal(signal.SIGINT)
         _, stderr = process.communicate(timeout=10)
+    wall_seconds = time.monotonic() - started_monotonic
     if not output.exists():
         raise SystemExit(stderr.decode(errors='replace'))
     with wave.open(str(output), 'rb') as recording:
         samples = array.array('h', recording.readframes(recording.getnframes()))
-        report = {'device': args.device, 'seconds': recording.getnframes() / recording.getframerate(),
+        report = {'device': args.device, 'startedUtc': started_utc, 'wallSeconds': wall_seconds,
+                  'seconds': recording.getnframes() / recording.getframerate(),
                   'channels': recording.getnchannels(), 'sampleRate': recording.getframerate(),
                   'peakPcm16': max((abs(value) for value in samples), default=0),
                   'rmsPcm16': math.sqrt(sum(value * value for value in samples) / max(1, len(samples))),

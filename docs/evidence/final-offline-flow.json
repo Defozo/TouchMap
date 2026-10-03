@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-10-03T16:41:40.454200+00:00",
+  "status": "passed",
+  "device": "127.0.0.1:55555",
+  "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54",
+  "appSourceSha256": "a5467e3eafae0f2638f3e16465e0397d31f92bc3e98e63b830f7637b3c1cbefe",
+  "network": {
+    "enabledEvidence": "offline-on.json",
+    "restoredEvidence": "offline-off.json",
+    "scope": "Dedicated emulator IPv4/IPv6 outbound blocked except HDC replies; includes application loopback and WAN."
+  },
+  "checks": {
+    "acceptedMaterial": "final-offline-accepted.json",
+    "listSelection": "final-offline-evaporation.json",
+    "directedConnection": "final-offline-connection.json",
+    "explicitSubmission": "final-offline-submitted.json",
+    "savedContextAfterForceStop": "final-offline-resume.json",
+    "unfinishedSelectionRestored": "final-offline-resumed-selection.json",
+    "ordinaryTouchFirstRegion": "final-offline-touch-evaporation.json",
+    "ordinaryTouchSecondRegion": "final-offline-touch-precipitation.json",
+    "systemPickerExport": "final-offline-export.json",
+    "independentPackageValidation": "offline-export-verification.json"
+  },
+  "touchMethod": "Actual uitest longClick at visually inspected region centers on native Canvas. Native selected labels changed from Condensation to Evaporation, then Precipitation. This is ordinary touch, not genuine screen-reader hover.",
+  "audioCapture": {
+    "videoCapture": {
+      "startedUtc": "2026-10-03T16:38:24.285849+00:00",
+      "wallSeconds": 90.85253716399893,
+      "videoSeconds": 90.0,
+      "encodedFrames": 720,
+      "actualCaptures": 84,
+      "policy": "Wall-clock recording with held last actual framebuffer for missed VNC deadlines",
+      "framebuffer": {
+        "width": 368,
+        "height": 720,
+        "serverTitle": "QEMU"
+      },
+      "audio": "No audio in this file"
+    },
+    "audioCapture": {
+      "device": "127.0.0.1:55555",
+      "startedUtc": "2026-10-03T16:38:24.310326+00:00",
+      "wallSeconds": 90.10573599598138,
+      "seconds": 90.11691609977325,
+      "channels": 2,
+      "sampleRate": 44100,
+      "peakPcm16": 4119,
+      "rmsPcm16": 69.95414860220893,
+      "scope": "Host monitor of this emulator output stream only; not a microphone recording or physical acoustic latency measurement."
+    },
+    "audioStartMinusVideoStartSeconds": 0.024477,
+    "outputSha256": "5d1a377341ebd1196ba71fea500c0577076d5cb1f3e5b1921138b9be98410dc4",
+    "policy": "Actual framebuffer and isolated QEMU audio aligned by capture start UTC. Capture alignment is approximate, not an acoustic latency measurement."
+  },
+  "limitations": [
+    "No physical speaker or headphone measurement.",
+    "No genuine screen reader available on this emulator.",
+    "Later source changes require their separately documented final-build verification."
+  ]
+}

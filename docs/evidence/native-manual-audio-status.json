@@ -1,0 +1,496 @@
+{
+  "display": {
+    "width": 360,
+    "height": 720
+  },
+  "tree": {
+    "children": [
+      {
+        "b": [
+          0,
+          0.05,
+          1,
+          0.95
+        ],
+        "c": [
+          0.5,
+          0.5
+        ],
+        "type": "root",
+        "bundle": "org.touchmap.app",
+        "focus": true,
+        "children": [
+          {
+            "b": [
+              0.061,
+              0.078,
+              0.144,
+              0.138
+            ],
+            "c": [
+              0.103,
+              0.108
+            ],
+            "type": "Text",
+            "text": "\u25c9"
+          },
+          {
+            "b": [
+              0.172,
+              0.075,
+              0.486,
+              0.113
+            ],
+            "c": [
+              0.329,
+              0.094
+            ],
+            "type": "Text",
+            "text": "TouchMap"
+          },
+          {
+            "b": [
+              0.172,
+              0.114,
+              0.508,
+              0.139
+            ],
+            "c": [
+              0.34,
+              0.126
+            ],
+            "type": "Text",
+            "text": "UNDERSTAND THROUGH EXPLORATION"
+          },
+          {
+            "b": [
+              0.7,
+              0.075,
+              0.939,
+              0.139
+            ],
+            "c": [
+              0.819,
+              0.107
+            ],
+            "type": "Button",
+            "text": "Stop audio",
+            "id": "stop-audio",
+            "click": true
+          },
+          {
+            "b": [
+              0.056,
+              0.158,
+              0.353,
+              0.222
+            ],
+            "c": [
+              0.204,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Library",
+            "id": "nav-library",
+            "click": true
+          },
+          {
+            "b": [
+              0.353,
+              0.158,
+              0.65,
+              0.222
+            ],
+            "c": [
+              0.501,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Import",
+            "click": true
+          },
+          {
+            "b": [
+              0.647,
+              0.158,
+              0.944,
+              0.222
+            ],
+            "c": [
+              0.796,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Settings",
+            "id": "nav-settings",
+            "click": true
+          },
+          {
+            "b": [
+              0,
+              0.236,
+              1,
+              0.95
+            ],
+            "c": [
+              0.5,
+              0.593
+            ],
+            "id": "main-scroll",
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "c": [
+                  0,
+                  0
+                ],
+                "type": "Text",
+                "text": "Live source draft"
+              },
+              {
+                "b": [
+                  0.069,
+                  0.236,
+                  0.283,
+                  0.272
+                ],
+                "c": [
+                  0.176,
+                  0.254
+                ],
+                "type": "Button",
+                "text": "Objects",
+                "click": true
+              },
+              {
+                "b": [
+                  0.3,
+                  0.236,
+                  0.614,
+                  0.272
+                ],
+                "c": [
+                  0.457,
+                  0.254
+                ],
+                "type": "Button",
+                "text": "Connections",
+                "click": true
+              },
+              {
+                "b": [
+                  0.631,
+                  0.236,
+                  0.894,
+                  0.272
+                ],
+                "c": [
+                  0.762,
+                  0.254
+                ],
+                "type": "Button",
+                "text": "Questions",
+                "click": true
+              },
+              {
+                "b": [
+                  0.069,
+                  0.281,
+                  0.353,
+                  0.344
+                ],
+                "c": [
+                  0.211,
+                  0.313
+                ],
+                "type": "Button",
+                "text": "Chart facts",
+                "click": true
+              },
+              {
+                "b": [
+                  0.369,
+                  0.281,
+                  0.578,
+                  0.344
+                ],
+                "c": [
+                  0.474,
+                  0.313
+                ],
+                "type": "Button",
+                "text": "Speech",
+                "click": true
+              },
+              {
+                "b": [
+                  0.594,
+                  0.281,
+                  0.8,
+                  0.344
+                ],
+                "c": [
+                  0.697,
+                  0.313
+                ],
+                "type": "Button",
+                "text": "Publish",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.368,
+                  0.939,
+                  0.421
+                ],
+                "c": [
+                  0.5,
+                  0.394
+                ],
+                "type": "Text",
+                "text": "Recording imported. Play it and verify names and units before publication."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.44,
+                  0.489,
+                  0.507
+                ],
+                "c": [
+                  0.275,
+                  0.474
+                ],
+                "type": "Button",
+                "text": "Undo"
+              },
+              {
+                "b": [
+                  0.511,
+                  0.44,
+                  0.939,
+                  0.507
+                ],
+                "c": [
+                  0.725,
+                  0.474
+                ],
+                "type": "Button",
+                "text": "Redo"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.526,
+                  0.936,
+                  0.606
+                ],
+                "c": [
+                  0.499,
+                  0.566
+                ],
+                "type": "Text",
+                "text": "Recordings stay with the material and play offline. Import licensed WAV files or explicitly consent to cloud speech."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.625,
+                  0.939,
+                  0.694
+                ],
+                "c": [
+                  0.5,
+                  0.66
+                ],
+                "type": "Button",
+                "text": "overview: Live source draft",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.714,
+                  0.939,
+                  0.783
+                ],
+                "c": [
+                  0.5,
+                  0.749
+                ],
+                "type": "Button",
+                "text": "label: Input 1",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.803,
+                  0.939,
+                  0.872
+                ],
+                "c": [
+                  0.5,
+                  0.838
+                ],
+                "type": "Button",
+                "text": "description: First block labeled 'Input 1'",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.892,
+                  0.939,
+                  0.95
+                ],
+                "c": [
+                  0.5,
+                  0.921
+                ],
+                "type": "Button",
+                "text": "label: Gate 1",
+                "click": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.95,
+          1,
+          1
+        ],
+        "c": [
+          0.5,
+          0.975
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.178,
+              0.95,
+              0.822,
+              1
+            ],
+            "c": [
+              0.5,
+              0.975
+            ],
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.269,
+                  0.967,
+                  0.303,
+                  0.983
+                ],
+                "c": [
+                  0.286,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.483,
+                  0.967,
+                  0.517,
+                  0.983
+                ],
+                "c": [
+                  0.5,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.7,
+                  0.967,
+                  0.733,
+                  0.983
+                ],
+                "c": [
+                  0.717,
+                  0.975
+                ],
+                "type": "Image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0,
+          1,
+          0.044
+        ],
+        "c": [
+          0.5,
+          0.022
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.883,
+              0.004,
+              0.9,
+              0.013
+            ],
+            "c": [
+              0.892,
+              0.008
+            ],
+            "type": "Text"
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.044,
+          1,
+          0.05
+        ],
+        "c": [
+          0.5,
+          0.047
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0,
+              0.044,
+              1,
+              0.05
+            ],
+            "c": [
+              0.5,
+              0.047
+            ],
+            "click": true
+          }
+        ]
+      }
+    ]
+  }
+}

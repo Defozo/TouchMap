@@ -1,0 +1,16 @@
+{
+  "device": "127.0.0.1:55556",
+  "scope": "Preserved host snapshots from the earlier invalid-fixture diagnostic run. Values were read from native-audio-host.json before the later valid run replaced that current-report file.",
+  "before": {
+    "at": "2026-10-03T15:51:32.850935+00:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [11.94287109375, 8.44873046875, 9.1240234375],
+    "buildProcesses": {"java": 0, "hvigorw": 0, "clang": 0, "ninja": 0}
+  },
+  "after": {
+    "at": "2026-10-03T15:52:29.876734+00:00",
+    "logicalCpuCount": 32,
+    "loadAverage": [13.1669921875, 9.60205078125, 9.4931640625],
+    "buildProcesses": {"java": 0, "hvigorw": 0, "clang": 0, "ninja": 0}
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-10-03T17:13:01.887404+00:00",
+  "device": "127.0.0.1:55556",
+  "status": "passed",
+  "productionHapSha256": "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725",
+  "testHapSha256": "d5b5e40af9fcc2b1fc5688f859d0b89d8b46f8a7c7ee40245bc79b43e9186d70",
+  "tests": {
+    "run": 18,
+    "failed": 0,
+    "errors": 0,
+    "passed": 18
+  },
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "0c3b1b298382c00b365162e2dc994846cf169ec3961085148062f8a43f125feb",
+    "appSourceFileCount": 121,
+    "appSourceBytes": 7334712,
+    "gitHeadAtBuild": "ebc1dc20af8e2d818edf3d3174fb014428faaca8",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  }
+}

@@ -9,6 +9,8 @@ import socket
 import struct
 import subprocess
 import time
+import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 parser = argparse.ArgumentParser()
@@ -57,9 +59,13 @@ with socket.create_connection((args.host, args.port), timeout=10) as remote:
     framebuffer = bytearray(width * height * 4)
     encoder = subprocess.Popen(command, stdin=subprocess.PIPE)
     started = time.monotonic()
+    started_utc = datetime.now(timezone.utc).isoformat()
     frames = 0
+    captures = 0
+    last_frame = None
+    frame_limit = round(args.seconds * args.fps)
     try:
-        while frames < round(args.seconds * args.fps):
+        while frames < frame_limit and time.monotonic() - started < args.seconds:
             remote.sendall(struct.pack(">BBHHHH", 3, 0, 0, 0, width, height))
             while True:
                 kind = receive(1)[0]
@@ -83,12 +89,34 @@ with socket.create_connection((args.host, args.port), timeout=10) as remote:
                     receive(struct.unpack(">I", receive(4))[0])
                     continue
                 raise RuntimeError(f"Unexpected VNC message {kind}.")
-            encoder.stdin.write(framebuffer)
-            frames += 1
+            captures += 1
+            # A slow VNC response must not turn real interaction into an
+            # unlabelled timelapse. Hold the previous actual frame for missed
+            # wall-clock slots; never synthesize application state.
+            target = min(frame_limit, int((time.monotonic() - started) * args.fps) + 1)
+            if last_frame is None:
+                last_frame = bytes(framebuffer)
+            while frames < max(frames, target - 1):
+                encoder.stdin.write(last_frame)
+                frames += 1
+            if frames < target:
+                encoder.stdin.write(framebuffer)
+                frames += 1
+            last_frame = bytes(framebuffer)
             time.sleep(max(0, started + frames / args.fps - time.monotonic()))
+        while frames < frame_limit and last_frame is not None:
+            encoder.stdin.write(last_frame)
+            frames += 1
     finally:
         encoder.stdin.close()
         result = encoder.wait(timeout=30)
     if result:
         raise SystemExit(result)
+    args.output.with_suffix('.capture.json').write_text(json.dumps({
+        'startedUtc': started_utc, 'wallSeconds': time.monotonic() - started,
+        'videoSeconds': frames / args.fps, 'encodedFrames': frames, 'actualCaptures': captures,
+        'policy': 'Wall-clock recording with held last actual framebuffer for missed VNC deadlines',
+        'framebuffer': {'width': width, 'height': height, 'serverTitle': title},
+        'audio': 'Entire default PulseAudio monitor' if args.pulse_audio else 'No audio in this file'
+    }, indent=2) + '\n')
     print(f"Recorded {frames} actual framebuffer frames from {title}, {width}x{height}, to {args.output}.")

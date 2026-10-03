@@ -1,0 +1,172 @@
+{
+  "title": "Illustrative distance",
+  "description": "A line chart showing distance in kilometers over time from 08:00 to 10:00 with explicit data points at 0 km, 1.25 km, and 2.5 km.",
+  "regions": [
+    {
+      "id": "region-title",
+      "label": "Chart Title",
+      "description": "Chart title text 'Illustrative distance'",
+      "box_2d": [36, 345, 83, 654],
+      "sourceText": "Illustrative distance"
+    },
+    {
+      "id": "region-y-axis-label",
+      "label": "Y-axis label",
+      "description": "Distance (km) axis label",
+      "box_2d": [117, 120, 156, 296],
+      "sourceText": "Distance (km)"
+    },
+    {
+      "id": "region-x-axis-label",
+      "label": "X-axis label",
+      "description": "Time axis label",
+      "box_2d": [830, 467, 861, 532],
+      "sourceText": "Time"
+    },
+    {
+      "id": "region-point-1",
+      "label": "Point 08:00",
+      "description": "Data point at 08:00 labeled 0 km",
+      "box_2d": [640, 211, 715, 274],
+      "sourceText": "0 km"
+    },
+    {
+      "id": "region-point-2",
+      "label": "Point 09:00",
+      "description": "Data point at 09:00 labeled 1.25 km",
+      "box_2d": [433, 439, 508, 540],
+      "sourceText": "1.25 km"
+    },
+    {
+      "id": "region-point-3",
+      "label": "Point 10:00",
+      "description": "Data point at 10:00 labeled 2.5 km",
+      "box_2d": [226, 693, 319, 779],
+      "sourceText": "2.5 km"
+    },
+    {
+      "id": "region-caption",
+      "label": "Footnote",
+      "description": "Footnote clarifying the authored values",
+      "box_2d": [912, 187, 946, 811],
+      "sourceText": "Authored teaching values. Unknown means no recorded value."
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart-illustrative-distance",
+      "title": "Illustrative distance",
+      "kind": "line",
+      "xAxis": {
+        "label": "Time",
+        "unit": "time",
+        "scale": "category",
+        "domain": [8, 10],
+        "ticks": [
+          {
+            "value": 8,
+            "label": "08:00"
+          },
+          {
+            "value": 9,
+            "label": "09:00"
+          },
+          {
+            "value": 10,
+            "label": "10:00"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Distance (km)",
+        "unit": "km",
+        "scale": "linear",
+        "domain": [0, 3],
+        "ticks": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 1,
+            "label": "1"
+          },
+          {
+            "value": 2,
+            "label": "2"
+          },
+          {
+            "value": 3,
+            "label": "3"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series-distance",
+          "label": "Distance",
+          "values": [
+            {
+              "id": "val-1",
+              "regionId": "region-point-1",
+              "x": "08:00",
+              "value": 0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "0 km",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-2",
+              "regionId": "region-point-2",
+              "x": "09:00",
+              "value": 1.25,
+              "precision": 2,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "1.25 km",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-3",
+              "regionId": "region-point-3",
+              "x": "10:00",
+              "value": 2.5,
+              "precision": 1,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "2.5 km",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Line plot with printed coordinates: 08:00: 0 km, 09:00: 1.25 km, 10:00: 2.5 km",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "revision": 1,
+        "issues": [],
+        "reviewer": "",
+        "status": "draft"
+      }
+    }
+  ],
+  "unresolved": [],
+  "unsupported": []
+}

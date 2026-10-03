@@ -1,0 +1,46 @@
+{
+  "verifiedAt": "2026-10-03T16:11:26.034881+00:00",
+  "scope": "Actual native developer verification on QEMU OpenHarmony; not a participant study or physical device test",
+  "reviewer": "TouchMap developer verification (Codex)",
+  "teamHumanMemberReviewed": false,
+  "package": {
+    "path": "docs/evidence/native-authored.touchmap",
+    "sha256": "6e838f33c1304427f469e685a3d35950220c7a6893c178020f6216fe2997c29a",
+    "bytes": 1115930,
+    "revision": 6,
+    "regions": 3,
+    "relations": 2,
+    "questions": 1,
+    "audioReferences": 10,
+    "audioFiles": 9
+  },
+  "nativeSteps": [
+    "Actual Gemini image draft from owned diagram-01",
+    "Input rectangle corrected to [30,100,185,185] with source evidence",
+    "Separate geometry and meaning review of all three regions",
+    "Evidence and direction review of two relations",
+    "Authored direction question, exact accepted answer Gate 1, reviewed against arrow",
+    "Separate ElevenLabs consent and actual TTS request",
+    "Local asset/hash/WAV verification accepted 10 recordings, nine unique files",
+    "Actual QEMU playback of Input 1, Gate 1, Output 1, question and overview",
+    "Developer publication through Author Studio",
+    "Export named native-authored.touchmap using SystemPicker"
+  ],
+  "backendArchiveValidation": {
+    "valid": true,
+    "publishable": true,
+    "readyOffline": true,
+    "issues": [],
+    "audioIssues": [],
+    "requiresLocalAcceptance": true
+  },
+  "audioAudit": {
+    "fullCapture": "native-authored-playback.flac",
+    "transcription": "native-authored-playback-asr.json",
+    "originalSpeechExcerpt": "native-authored-playback-speech.wav",
+    "note": "Local machine transcription supports label and overview verification. ASR rendered question point to as 1.2; source recording remains available for direct listening. No human participant listening claim."
+  },
+  "fixedIssue": "Old HAP rejected duplicate response audio path for identical relation text. Current HAP accepted two targets sharing one cached WAV; backend regression test preserves this behavior.",
+  "publicationHapSha256": "ce00562d8321872cea88c02253d609942e03f8d82fbdc9715cd30c5ddf2065ae",
+  "buildScope": "Geometry and fact review began on the prior HAP. Data-preserving upgrade installed this HAP before successful TTS, playback, publication and export. Later release builds require their own verification."
+}

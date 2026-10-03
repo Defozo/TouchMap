@@ -10,6 +10,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'backend'))
 from touchmap.packages import validate_package
+from app_source_fingerprint import fingerprint_app
 
 def main():
     parser = argparse.ArgumentParser()
@@ -49,8 +50,14 @@ def main():
         if native['bundleName'] != 'org.touchmap.app' or int(native['minAPIVersion']) != 20:
             failures.append('Unexpected HAP identity or minimum API')
         saved = ROOT / 'docs/evidence/hap-metadata.json'
-        if not saved.exists() or json.loads(saved.read_text())['sha256'] != hap_info['sha256']:
+        native_evidence = json.loads(saved.read_text()) if saved.exists() else {}
+        if native_evidence.get('sha256') != hap_info['sha256']:
             failures.append('HAP does not match verification evidence')
+        current_inputs = fingerprint_app(ROOT / 'app')
+        if native_evidence.get('appSourceSha256') != current_inputs['appSourceSha256']:
+            failures.append('HAP build inputs do not match the current app source fingerprint')
+        hap_info['appSourceSha256'] = native_evidence.get('appSourceSha256')
+        hap_info['buildInputGitHead'] = native_evidence.get('sourceFingerprint', {}).get('gitHeadAtBuild')
     gates_path = ROOT / 'docs/evidence/release-gates.json'
     gates = json.loads(gates_path.read_text(encoding='utf-8')) if gates_path.exists() else {'evidenceManifest': {'status': 'pending'}}
     outstanding = [key for key, value in gates.items() if value.get('status') != 'passed']

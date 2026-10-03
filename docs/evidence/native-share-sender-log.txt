@@ -1,0 +1,2 @@
+10-04 00:26:32.192 30238 30238 I A03d00/JSAPP: TOUCHMAP_SHARE_TEST action=ohos.want.action.viewData uri=file://org.touchmap.testshare/data/storage/el2/base/haps/entry/files/shared.touchmap readGrant=true
+10-04 00:27:58.528 30238 30238 I A03d00/JSAPP: TOUCHMAP_SHARE_TEST action=ohos.want.action.sendData uri=file://org.touchmap.testshare/data/storage/el2/base/haps/entry/files/shared.touchmap readGrant=true

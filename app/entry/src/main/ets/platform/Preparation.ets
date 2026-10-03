@@ -1,3 +1,4 @@
+import { tr } from '../domain/i18n';
 import { http } from '@kit.NetworkKit';
 import { image } from '@kit.ImageKit';
 import { util } from '@kit.ArkTS';
@@ -28,7 +29,7 @@ export class Preparation {
   requestId: string = '';
   private endpoint(path: string): string {
     const base = this.base.trim().replace(/\/$/, '');
-    if (!/^https:\/\/[a-zA-Z0-9.-]+(?::[0-9]+)?(?:\/[a-zA-Z0-9_/-]*)?$/.test(base) && !/^http:\/\/(127\.0\.0\.1|localhost)(:[0-9]+)?$/.test(base)) { throw new Error('Use an HTTPS preparation address. Only device-local loopback may use HTTP.'); }
+    if (!/^https:\/\/[a-zA-Z0-9.-]+(?::[0-9]+)?(?:\/[a-zA-Z0-9_/-]*)?$/.test(base) && !/^http:\/\/(127\.0\.0\.1|localhost)(:[0-9]+)?$/.test(base)) { throw new Error(tr('tm_a6f6605e8249')); }
     return base + path;
   }
   private async request(path: string, body: string | ArrayBuffer, contentType: string): Promise<string> {
@@ -37,12 +38,12 @@ export class Preparation {
       const response = await connection.request(this.endpoint(path), { method: http.RequestMethod.POST,
         header: { 'Content-Type': contentType, 'Authorization': sessionBase === this.base && sessionToken ? `Bearer ${sessionToken}` : '' }, extraData: body,
         connectTimeout: 10000, readTimeout: 45000, expectDataType: http.HttpDataType.STRING });
-      if (this.cancelled) { throw new Error('Cancelled. Any later provider output will not change this draft.'); }
+      if (this.cancelled) { throw new Error(tr('tm_96344a5615b4')); }
       if (response.responseCode !== 200) {
-        const labels: Map<number, string> = new Map([[401, 'Pairing expired. Pair again.'], [429, 'Request or spend limit reached.'], [413, 'Image exceeds the service limit.'], [503, 'Provider is not configured or unavailable.'], [504, 'Provider timeout. Outcome may be unknown.']]);
-        throw new Error(labels.get(response.responseCode) || `Preparation failed (${response.responseCode}). Your draft is unchanged.`);
+        const labels: Map<number, string> = new Map([[401, tr('tm_3858c76eb824')], [429, tr('tm_5f94c1859c63')], [413, tr('tm_e19af17e3aa2')], [503, tr('tm_554c4ef57e45')], [504, tr('tm_5d6d3d5bfe86')]]);
+        throw new Error(labels.get(response.responseCode) || tr('tm_11f6576e2eab', [String(response.responseCode)]));
       }
-      if (typeof response.result !== 'string' || response.result.length > 30 * 1024 * 1024) { throw new Error('Invalid or oversized service response.'); }
+      if (typeof response.result !== 'string' || response.result.length > 30 * 1024 * 1024) { throw new Error(tr('tm_bfdf95cf54c6')); }
       return response.result;
     } finally { connection.destroy(); if (this.connection === connection) { this.connection = undefined; } }
   }
@@ -50,7 +51,7 @@ export class Preparation {
     this.cancelled = false;
     const body: PairRequest = { code: code };
     const result = JSON.parse(await this.request('/v1/sessions/pair', JSON.stringify(body), 'application/json')) as PairResult;
-    if (!result.token || result.token.length > 8192) { throw new Error('Invalid pairing response.'); }
+    if (!result.token || result.token.length > 8192) { throw new Error(tr('tm_c0dbdcdbfb30')); }
     sessionToken = result.token; sessionBase = this.base;
   }
   cancel(): void {
@@ -65,11 +66,11 @@ export class Preparation {
     }
   }
   async draft(bytes: Uint8Array, diagram: Diagram, svg: boolean, consent: boolean): Promise<DraftEnvelope> {
-    if (!svg && !consent) { throw new Error('Consent is required before the selected image is uploaded to Gemini.'); }
-    if (bytes.length > 10 * 1024 * 1024) { throw new Error('Selected source exceeds 10 MiB.'); }
+    if (!svg && !consent) { throw new Error(tr('tm_3c4a2af806af')); }
+    if (bytes.length > 10 * 1024 * 1024) { throw new Error(tr('tm_1e2bc7a7e13e')); }
     this.cancelled = false; this.requestId = uid();
     const hash = await digest(bytes);
-    if (this.cancelled) { throw new Error('Preparation cancelled before upload.'); }
+    if (this.cancelled) { throw new Error(tr('tm_1611043bad34')); }
     const boundary = `TouchMap${uid()}`;
     const fields: Field[] = [{ name: 'draftRevision', value: String(diagram.revision) }, { name: 'language', value: diagram.language },
       { name: 'requestId', value: this.requestId }, { name: 'sourceHash', value: hash }, { name: 'consent', value: String(consent) }];
@@ -79,37 +80,37 @@ export class Preparation {
     const pre = encode(prefix); const post = encode(`\r\n--${boundary}--\r\n`);
     const data = new Uint8Array(pre.length + bytes.length + post.length); data.set(pre); data.set(bytes, pre.length); data.set(post, pre.length + bytes.length);
     const response = JSON.parse(await this.request(svg ? '/v1/import/svg' : '/v1/analyze/image', data.buffer, `multipart/form-data; boundary=${boundary}`)) as DraftEnvelope;
-    if (response.requestId !== this.requestId || response.contractVersion !== 1 || response.sourceHash !== hash || response.draftRevision !== diagram.revision) { throw new Error('Service returned a result for a different source or revision.'); }
+    if (response.requestId !== this.requestId || response.contractVersion !== 1 || response.sourceHash !== hash || response.draftRevision !== diagram.revision) { throw new Error(tr('tm_1638c2874499')); }
     if (!response.result || !response.result.report || !Array.isArray(response.result.report.unsupported) || !Array.isArray(response.result.report.unresolved) ||
       response.result.report.unsupported.some((item: string) => typeof item !== 'string') || response.result.report.unresolved.some((item: string) => typeof item !== 'string') ||
-      typeof response.provider !== 'string' || typeof response.model !== 'string') { throw new Error('Service returned an invalid preparation report.'); }
+      typeof response.provider !== 'string' || typeof response.model !== 'string') { throw new Error(tr('tm_894e8f35e387')); }
     const errors = validateDiagram(response.result.diagram);
-    if (errors.length > 0) { throw new Error(`Invalid preparation result: ${errors[0]}`); }
+    if (errors.length > 0) { throw new Error(tr('tm_1f30e3eba81e', [String(errors[0])])); }
     return response;
   }
   async speech(diagram: Diagram, labels: AudioLabel[], consent: boolean): Promise<AudioEnvelope> {
-    if (!consent) { throw new Error('Separate consent is required to send reviewed labels to ElevenLabs.'); }
+    if (!consent) { throw new Error(tr('tm_07c3f5bc0fb3')); }
     this.cancelled = false; this.requestId = uid();
     const request: AudioRequest = { requestId: this.requestId, sourceHash: diagram.source.sha256, draftRevision: diagram.revision, language: diagram.language, consent: true, labels: labels };
     const response = JSON.parse(await this.request('/v1/audio/labels', JSON.stringify(request), 'application/json')) as AudioEnvelope;
-    if (response.requestId !== this.requestId || response.contractVersion !== 1 || response.sourceHash !== diagram.source.sha256 || response.draftRevision !== diagram.revision) { throw new Error('Speech result revision mismatch.'); }
+    if (response.requestId !== this.requestId || response.contractVersion !== 1 || response.sourceHash !== diagram.source.sha256 || response.draftRevision !== diagram.revision) { throw new Error(tr('tm_89bca1b82d36')); }
     return response;
   }
 }
 export async function sanitizeImage(bytes: Uint8Array, crop?: Crop): Promise<SanitizedImage> {
   const source = image.createImageSource(bytes.buffer);
   const info = await source.getImageInfo();
-  if (info.size.width * info.size.height > 20000000) { source.release(); throw new Error('Image exceeds 20 megapixels.'); }
+  if (info.size.width * info.size.height > 20000000) { source.release(); throw new Error(tr('tm_f370838b58f2')); }
   const pixels = await source.createPixelMap({ editable: true });
   try {
     if (crop) {
-      if (![crop.x, crop.y, crop.width, crop.height].every(Number.isFinite) || crop.width < 1 || crop.height < 1 || crop.x < 0 || crop.y < 0 || crop.x + crop.width > info.size.width || crop.y + crop.height > info.size.height) { throw new Error('Crop is outside the source image.'); }
+      if (![crop.x, crop.y, crop.width, crop.height].every(Number.isFinite) || crop.width < 1 || crop.height < 1 || crop.x < 0 || crop.y < 0 || crop.x + crop.width > info.size.width || crop.y + crop.height > info.size.height) { throw new Error(tr('tm_29bb6bff4c36')); }
       await pixels.crop({ x: crop.x, y: crop.y, size: { width: crop.width, height: crop.height } });
     }
     const packer = image.createImagePacker();
     try {
       const packed = await packer.packing(pixels, { format: 'image/png', quality: 100 });
-      if (packed.byteLength > 10 * 1024 * 1024) { throw new Error('Sanitized image exceeds 10 MiB. Crop to a smaller area.'); }
+      if (packed.byteLength > 10 * 1024 * 1024) { throw new Error(tr('tm_b9d324ad619b')); }
       return { bytes: new Uint8Array(packed), width: crop ? crop.width : info.size.width, height: crop ? crop.height : info.size.height };
     } finally { packer.release(); }
   } finally { pixels.release(); source.release(); }
@@ -120,7 +121,7 @@ export async function verifySourcePreview(bytes: Uint8Array, width: number, heig
   const source = image.createImageSource(bytes.buffer);
   try {
     const info = await source.getImageInfo();
-    if (info.size.width !== Math.ceil(width) || info.size.height !== Math.ceil(height) || info.size.width * info.size.height > 20000000) { throw new Error('Prepared preview dimensions differ from the reviewed source.'); }
+    if (info.size.width !== Math.ceil(width) || info.size.height !== Math.ceil(height) || info.size.width * info.size.height > 20000000) { throw new Error(tr('tm_2838a0c29f22')); }
     const pixels = await source.createPixelMap(); pixels.release();
   } finally { source.release(); }
 }

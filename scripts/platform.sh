@@ -41,6 +41,7 @@ build)
   mkdir -p "$build_root" "$repository/dist" "$repository/docs/evidence"
   build_dir=$(mktemp -d "$build_root/build-XXXXXXXX")
   tar -C "$repository/app" --exclude=build --exclude=.hvigor --exclude=oh_modules --exclude=local.properties -cf - . | tar -C "$build_dir" -xf -
+  python3 "$repository/scripts/app_source_fingerprint.py" "$build_dir" "$repository" "$build_dir/stage-input-fingerprint.json"
   printf 'sdk.dir=%s/linux\n' "$ONIRO_SDK_ROOT_DIR" > "$build_dir/local.properties"
   "$oniro" sign "$build_dir" --bootstrap > "$build_dir/sign.log" 2>&1
   "$oniro" build "$build_dir" --product "$product" --mode "$build_mode" --json 2>&1 | tee "$repository/docs/evidence/native-build.log"
@@ -49,7 +50,8 @@ build)
   java -jar "$ONIRO_SDK_ROOT_DIR/linux/20/toolchains/lib/hap-sign-tool.jar" verify-app -inFile "$hap" -outCertChain "$build_dir/verified-certificate.cer" -outProfile "$build_dir/verified-profile.p7b" > "$repository/docs/evidence/signature-verification.log" 2>&1
   cp "$hap" "$repository/dist/touchmap-signed.hap"
   cp "$build_dir/oh-package-lock.json5" "$repository/app/oh-package-lock.json5"
-  python3 "$repository/scripts/verify-hap.py" "$repository/dist/touchmap-signed.hap" "$repository/docs/evidence/hap-metadata.json"
+  cp "$build_dir/stage-input-fingerprint.json" "$repository/docs/evidence/stage-input-fingerprint.json"
+  python3 "$repository/scripts/verify-hap.py" "$repository/dist/touchmap-signed.hap" "$repository/docs/evidence/hap-metadata.json" "$build_dir/stage-input-fingerprint.json"
   sha256sum "$repository/dist/touchmap-signed.hap" | sed "s|$repository/dist/||" > "$repository/dist/SHA256SUMS"
   printf '%s\n' "$build_dir" > "$repository/.native-build-path"
   echo "Signed HAP: $repository/dist/touchmap-signed.hap"
@@ -62,6 +64,21 @@ install)
   "$oniro" app install "$repository/app" --hap "$hap" --device "$target"
   "$oniro" app launch "$repository/app" --ability EntryAbility --device "$target"
   "$oniro" wait --bundle org.touchmap.app --device "$target" --timeout 30000
+  python3 - "$repository" "$target" <<'PY'
+import hashlib,json,re,sys
+from datetime import datetime,timezone
+from pathlib import Path
+repository=Path(sys.argv[1])
+hap=repository/'dist/touchmap-signed.hap'
+metadata=json.loads((repository/'docs/evidence/hap-metadata.json').read_text())
+report={'at':datetime.now(timezone.utc).isoformat(),'device':sys.argv[2],
+        'status':'installed-and-launched','bundleName':'org.touchmap.app',
+        'hapSha256':hashlib.sha256(hap.read_bytes()).hexdigest(),
+        'appSourceSha256':metadata.get('appSourceSha256'),
+        'verification':'Oniro app install, EntryAbility launch and process wait each succeeded. The hash identifies the HAP passed to installation.'}
+name=re.sub(r'[^A-Za-z0-9_.-]','_',sys.argv[2])
+(repository/f'docs/evidence/installation-{name}.json').write_text(json.dumps(report,indent=2)+'\n')
+PY
   ;;
 emulator)
   "$oniro" emulator start --headless --log "$repository/docs/evidence/emulator.log" --wait-for-hdc 60

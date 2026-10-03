@@ -1,14 +1,33 @@
 import { describe, it, expect, beforeAll, afterAll } from '@ohos/hypium';
-import { abilityDelegatorRegistry, Driver, ON } from '@kit.TestKit';
+import { abilityDelegatorRegistry, Driver, ON, On, Component } from '@kit.TestKit';
 import { common } from '@kit.AbilityKit';
 import { nativeContext } from '../testrunner/NativeContext';
 import { fileIo as fs } from '@kit.CoreFileKit';
-import { Repository, Material, decode, uid, digest, encode, safePath } from '../../../main/ets/platform/Repository';
+import { Repository, Material, decode, uid, digest, encode, safePath, writeBytes, readBytes } from '../../../main/ets/platform/Repository';
 import { Diagram, Action, Progress, Polygon, Viewport } from '../../../main/ets/domain/types';
 import { initialProgress, applyAction, resumeContext } from '../../../main/ets/domain/engine';
-import { sourcePoint, screenPoint, pointInPolygon, hitTest, guidePath } from '../../../main/ets/domain/geometry';
+import { sourcePoint, screenPoint, pointInPolygon, hitTest, guidePath, retainRegionNearBoundary } from '../../../main/ets/domain/geometry';
 import { DraftEditor } from '../../../main/ets/domain/editor';
 import { validateDiagram, publicationIssues, offlineReadiness } from '../../../main/ets/domain/validate';
+import { openedFileUri } from '../../../main/ets/platform/WantReceiver';
+import { initializeI18n, tr } from '../../../main/ets/platform/I18n';
+
+async function visibleAfterMarginScroll(driver: Driver, selector: On, phase: string): Promise<Component> {
+  for (let attempt = 0; attempt < 16; attempt++) {
+    const scroll = await driver.findComponent(ON.id('main-scroll'));
+    const area = await scroll.getBounds();
+    const candidate = await driver.findComponent(selector);
+    if (candidate) {
+      const bounds = await candidate.getBounds();
+      if (bounds.bottom - bounds.top >= 24 && bounds.top >= area.top && bounds.bottom <= area.bottom) {
+        console.info(`TOUCHMAP_TUTORIAL_TEST phase=${phase} scrolls=${attempt}`); return candidate;
+      }
+    }
+    // The content margin avoids changing Slider values while looking for a control.
+    await driver.swipe(area.right - 10, area.bottom - 35, area.right - 10, area.top + 35, 1600);
+  }
+  throw new Error(`Tutorial control was not reachable: ${phase}`);
+}
 
 export default function nativeSuite(): void {
   describe('TouchMapNative', () => {
@@ -43,6 +62,20 @@ export default function nativeSuite(): void {
       expect(Math.abs(restored.x - 18) < 0.000001 && Math.abs(restored.y - 43) < 0.000001).assertTrue();
       expect(hitTest(diagram, {x:NaN,y:0}).length).assertEqual(0);
       expect(guidePath({x:0,y:0}, null, 5, 'Destination').known).assertFalse();
+    });
+    it('boundary_hysteresis_retains_jitter_but_releases_clear_crossing', 0, () => {
+      const local = JSON.parse(JSON.stringify(diagram)) as Diagram;
+      const region = local.regions[0]; local.regions = [region]; region.line = []; region.lineWidth = 0;
+      region.polygons = [{ outer: [{x:0,y:0},{x:10,y:0},{x:10,y:10},{x:0,y:10}], holes: [] }];
+      expect(hitTest(local, {x:10.4,y:5}).length).assertEqual(0);
+      expect(retainRegionNearBoundary(local, {x:10.4,y:5}, region.id, 0.5)?.id).assertEqual(region.id);
+      expect(retainRegionNearBoundary(local, {x:10.6,y:5}, region.id, 0.5) === undefined).assertTrue();
+      expect(retainRegionNearBoundary(local, {x:10.4,y:5}, '', 0.5) === undefined).assertTrue();
+    });
+    it('native_English_resources_resolve_and_keep_dynamic_values_literal', 0, () => {
+      expect(context.resourceManager.getStringByNameSync('tm_16b98aa8bc32')).assertEqual('Start exploring');
+      initializeI18n(context.resourceManager);
+      expect(tr('tm_03072fec9bb5', ['12 {0} $&'])).assertEqual('Continue authoring revision 12 {0} $&');
     });
     it('touch_and_pause_never_submit_and_checkpoint_reloads', 0, async () => {
       await repository.clearHistory(material);
@@ -80,9 +113,65 @@ export default function nativeSuite(): void {
       expect(editor.undo()).assertTrue(); expect(editor.diagram.revision).assertEqual(diagram.revision);
       expect(editor.redo()).assertTrue(); expect(editor.diagram.revision).assertEqual(diagram.revision + 1);
     });
+    it('undo_to_published_content_preserves_the_accepted_revision', 0, async () => {
+      const sample = JSON.parse(decode(await context.resourceManager.getRawFileContent('samples/water-cycle/diagram.json'))) as Diagram;
+      const overview = sample.audio.find((item) => item.kind === 'overview')!;
+      overview.targetId = material.diagram.packageId;
+      writeBytes(`${material.directory}/${overview.path}`, await context.resourceManager.getRawFileContent(`samples/water-cycle/${overview.path}`));
+      const withAudio = JSON.parse(JSON.stringify(material.diagram)) as Diagram; withAudio.audio = [overview];
+      material = await repository.saveDraft(withAudio, material);
+      const published: Material = JSON.parse(JSON.stringify(material)) as Material;
+      published.draft = false; published.accepted = true;
+      await repository.saveMaterial(published);
+      let fork: Material | undefined = undefined;
+      let restored: Material | undefined = undefined;
+      try {
+        const editor = new DraftEditor(published.diagram);
+        editor.setDescription('A temporary edit to undo.');
+        fork = await repository.saveDraft(editor.diagram, published);
+        expect(editor.undo()).assertTrue();
+        restored = await repository.saveDraft(editor.diagram, fork);
+        editor.adoptSaved(restored.diagram);
+        expect(restored.key !== published.key).assertTrue();
+        expect(await digest(readBytes(`${restored.directory}/${overview.path}`))).assertEqual(overview.sha256);
+        expect(editor.canRedo).assertTrue(); expect(editor.redo()).assertTrue();
+        expect(editor.diagram.description).assertEqual('A temporary edit to undo.');
+        const original = (await repository.list()).find((item: Material) => item.key === published.key)!;
+        expect(original.draft).assertFalse(); expect(original.accepted).assertTrue();
+        expect(original.directory).assertEqual(published.directory);
+        expect(JSON.stringify(original.diagram)).assertEqual(JSON.stringify(published.diagram));
+        const overwrite: Material = JSON.parse(JSON.stringify(published)) as Material; overwrite.draft = true;
+        let rejected = false;
+        try { await repository.saveMaterial(overwrite); } catch (error) { rejected = true; }
+        expect(rejected).assertTrue();
+      } finally {
+        if (fork) { await repository.deleteMaterial(fork); }
+        if (restored) { await repository.deleteMaterial(restored); }
+      }
+    });
+    it('failed_draft_asset_restore_keeps_saved_material_and_cleans_staging', 0, async () => {
+      const root = `${context.filesDir}/materials`;
+      const before = fs.listFileSync(root).sort().join('|');
+      const allBefore = JSON.stringify(await repository.list());
+      const unavailable = JSON.parse(JSON.stringify(material.diagram)) as Diagram;
+      unavailable.source.sha256 = '0'.repeat(64);
+      let rejected = false;
+      try { await repository.saveDraft(unavailable, material); } catch (error) { rejected = true; }
+      expect(rejected).assertTrue();
+      expect(fs.listFileSync(root).sort().join('|')).assertEqual(before);
+      expect(JSON.stringify(await repository.list())).assertEqual(allBefore);
+    });
     it('portable_paths_reject_traversal_and_reserved_names', 0, () => {
       expect(safePath('../secret')).assertFalse(); expect(safePath('/absolute')).assertFalse();
       expect(safePath('audio/CON.wav')).assertFalse(); expect(safePath('audio/label.wav')).assertTrue();
+    });
+    it('shared_file_wants_accept_one_local_uri_and_reject_remote_or_multiple_streams', 0, () => {
+      expect(openedFileUri({ uri:'file://docs/lesson.touchmap' })).assertEqual('file://docs/lesson.touchmap');
+      expect(openedFileUri({ parameters:{'ability.params.stream':['file://docs/lesson.touchmap']} })).assertEqual('file://docs/lesson.touchmap');
+      expect(openedFileUri({ uri:'https://example.com/lesson.touchmap' })).assertEqual('');
+      expect(openedFileUri({ parameters:{'ability.params.stream':['file://docs/a','file://docs/b']} })).assertEqual('');
+      expect(openedFileUri({ parameters:{'ability.params.stream':'file://docs/a'} })).assertEqual('');
+      expect(openedFileUri({ uri:'file://docs/a\u0000b' })).assertEqual('');
     });
     it('native_controls_open_settings_and_return_to_library', 0, async () => {
       const delegator = abilityDelegatorRegistry.getAbilityDelegator();
@@ -99,11 +188,10 @@ export default function nativeSuite(): void {
     it('tutorial_labels_react_to_each_step', 0, async () => {
       const driver = Driver.create();
       const settings = await driver.findComponent(ON.id('nav-settings')); await settings.click(); await driver.delayMs(200);
-      const scroll = await driver.findComponent(ON.id('main-scroll'));
-      const repeat = await scroll.scrollSearch(ON.text('Repeat exploration tutorial')); await repeat.click(); await driver.delayMs(200);
-      let next = await driver.findComponent(ON.id('tutorial-next')); await next.click(); await driver.delayMs(200);
-      next = await driver.findComponent(ON.id('tutorial-next')); await next.click(); await driver.delayMs(200);
-      expect(await driver.findComponent(ON.text('Start exploring')) !== null).assertTrue();
+      const repeat = await visibleAfterMarginScroll(driver, ON.text('Repeat exploration tutorial'), 'repeat'); await repeat.click(); await driver.delayMs(200);
+      let next = await visibleAfterMarginScroll(driver, ON.id('tutorial-next'), 'step-one'); await next.click(); await driver.delayMs(200);
+      next = await visibleAfterMarginScroll(driver, ON.id('tutorial-next'), 'step-two'); await next.click(); await driver.delayMs(200);
+      expect(await visibleAfterMarginScroll(driver, ON.text('Start exploring'), 'step-three') !== null).assertTrue();
       const library = await driver.findComponent(ON.id('nav-library')); await library.click(); await driver.delayMs(200);
     });
     it('local_deletion_removes_assets_progress_and_events', 0, async () => {

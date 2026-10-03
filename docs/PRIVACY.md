@@ -2,7 +2,7 @@
 
 The learner does not need an account. Material files, accepted declarations, bookmarks, interaction profiles, attempts and recovery checkpoints are held in the application's private storage. Exporting a `.touchmap` package includes only teaching material, source and audio. Exporting personal learning history is a separate deliberate action.
 
-Deleting a material removes its selected local revision, assets and associated events/checkpoint. Superseded private drafts and abandoned import staging are cleaned independently. An immutable published revision is not silently updated when an author edits another revision.
+Deleting a material removes the selected local revision, its private assets and its associated events/checkpoint. Other retained draft and published revisions remain separately reachable in the library and must be deleted individually. Earlier draft revisions can support Undo and restoration of their source/audio assets. Cleanup removes abandoned staging and unreferenced directories, including the replaced directory after a successful save of the same revision; it does not silently delete every older draft. An immutable published revision is not silently updated when an author edits another revision.
 
 Manual authoring, prepared package import, learning and package export work locally. A service-based SVG conversion sends the selected SVG to that preparation service. Raster analysis additionally sends the sanitised selected image to Gemini after explicit consent. Speech preparation sends reviewed text to ElevenLabs after separate consent. No learner activity is part of either request.
 

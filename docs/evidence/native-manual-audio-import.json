@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55555",
+  "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54",
+  "method": "Actual native Speech target selection, rights entry, SystemPicker WAV selection, save and playback, followed by independent private-file readback.",
+  "recordings": [
+    {
+      "packageId": "material-1791046235553-247866615",
+      "revision": 2,
+      "recording": {
+        "id": "audio-1791046732723-493029984",
+        "targetId": "region_input_1",
+        "kind": "label",
+        "path": "audio/a221ba3573b1a3360a68fb747fd3b0a04ff0cf64192d76996745ae8531f836d2.wav",
+        "textHash": "d1449aa16349b3ea83f973bab0feae5af4e5f1b09451e001e857c63f99797b6c",
+        "language": "en",
+        "provider": "recording",
+        "voice": "Licensed TouchMap ElevenLabs Bella recording, original label Input 1",
+        "sha256": "a221ba3573b1a3360a68fb747fd3b0a04ff0cf64192d76996745ae8531f836d2",
+        "durationMs": 1115
+      },
+      "bytes": 53542
+    }
+  ],
+  "allImportedBytesMatchLicensedSource": true,
+  "nativePlayback": {
+    "device": "127.0.0.1:55555",
+    "startedUtc": "2026-10-03T16:59:51.854669+00:00",
+    "wallSeconds": 25.026283176994184,
+    "seconds": 25.020725623582766,
+    "channels": 2,
+    "sampleRate": 44100,
+    "peakPcm16": 4405,
+    "rmsPcm16": 161.21579386056956,
+    "scope": "Host monitor of this emulator output stream only; not a microphone recording or physical acoustic latency measurement."
+  },
+  "scope": "Developer verification on the actual emulator. No new TTS request; recording was retained from the previously licensed native authoring package."
+}

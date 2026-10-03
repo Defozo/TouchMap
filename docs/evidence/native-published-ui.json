@@ -1,0 +1,453 @@
+{
+  "display": {
+    "width": 360,
+    "height": 720
+  },
+  "tree": {
+    "children": [
+      {
+        "b": [
+          0,
+          0.05,
+          1,
+          0.95
+        ],
+        "c": [
+          0.5,
+          0.5
+        ],
+        "type": "root",
+        "bundle": "org.touchmap.app",
+        "focus": true,
+        "children": [
+          {
+            "b": [
+              0.061,
+              0.078,
+              0.144,
+              0.138
+            ],
+            "c": [
+              0.103,
+              0.108
+            ],
+            "type": "Text",
+            "text": "\u25c9"
+          },
+          {
+            "b": [
+              0.172,
+              0.075,
+              0.486,
+              0.113
+            ],
+            "c": [
+              0.329,
+              0.094
+            ],
+            "type": "Text",
+            "text": "TouchMap"
+          },
+          {
+            "b": [
+              0.172,
+              0.114,
+              0.508,
+              0.139
+            ],
+            "c": [
+              0.34,
+              0.126
+            ],
+            "type": "Text",
+            "text": "UNDERSTAND THROUGH EXPLORATION"
+          },
+          {
+            "b": [
+              0.7,
+              0.075,
+              0.939,
+              0.139
+            ],
+            "c": [
+              0.819,
+              0.107
+            ],
+            "type": "Button",
+            "text": "Stop audio",
+            "id": "stop-audio",
+            "click": true
+          },
+          {
+            "b": [
+              0.056,
+              0.158,
+              0.353,
+              0.222
+            ],
+            "c": [
+              0.204,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Library",
+            "id": "nav-library",
+            "click": true
+          },
+          {
+            "b": [
+              0.353,
+              0.158,
+              0.65,
+              0.222
+            ],
+            "c": [
+              0.501,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Import",
+            "click": true
+          },
+          {
+            "b": [
+              0.647,
+              0.158,
+              0.944,
+              0.222
+            ],
+            "c": [
+              0.796,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Settings",
+            "id": "nav-settings",
+            "click": true
+          },
+          {
+            "b": [
+              0,
+              0.236,
+              1,
+              0.95
+            ],
+            "c": [
+              0.5,
+              0.593
+            ],
+            "id": "main-scroll",
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "c": [
+                  0,
+                  0
+                ],
+                "type": "Text",
+                "text": "Block diagram of a single-input single-output gate pipeline"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.236,
+                  0.939,
+                  0.336
+                ],
+                "c": [
+                  0.5,
+                  0.286
+                ],
+                "type": "TextArea",
+                "text": "A linear sequence of three rectangular blocks showing a flow from Input 1 through Gate 1 to Output 1 via directed horizontal arrows.",
+                "click": true,
+                "longClick": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.356,
+                  0.939,
+                  0.425
+                ],
+                "c": [
+                  0.5,
+                  0.39
+                ],
+                "type": "Button",
+                "text": "Save material overview",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.444,
+                  0.939,
+                  0.467
+                ],
+                "c": [
+                  0.5,
+                  0.456
+                ],
+                "type": "Text",
+                "text": "Author and review declaration"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.474,
+                  0.939,
+                  0.543
+                ],
+                "c": [
+                  0.5,
+                  0.508
+                ],
+                "type": "TextInput",
+                "text": "TouchMap developer verification (Codex)",
+                "click": true,
+                "scroll": true,
+                "longClick": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.563,
+                  0.856,
+                  0.615
+                ],
+                "c": [
+                  0.458,
+                  0.589
+                ],
+                "type": "Text",
+                "text": "All geometry, facts and questions have been reviewed."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.635,
+                  0.844,
+                  0.661
+                ],
+                "c": [
+                  0.453,
+                  0.648
+                ],
+                "type": "Text",
+                "text": "All required assets are available locally."
+              },
+              {
+                "b": [
+                  0.1,
+                  0.707,
+                  0.156,
+                  0.735
+                ],
+                "c": [
+                  0.128,
+                  0.721
+                ],
+                "type": "Checkbox",
+                "click": true,
+                "check": true,
+                "checked": true
+              },
+              {
+                "b": [
+                  0.217,
+                  0.681,
+                  0.939,
+                  0.76
+                ],
+                "c": [
+                  0.578,
+                  0.72
+                ],
+                "type": "Text",
+                "text": "I listened to the recordings and checked critical labels, names and units."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.779,
+                  0.939,
+                  0.849
+                ],
+                "c": [
+                  0.5,
+                  0.814
+                ],
+                "type": "Button",
+                "text": "Publish reviewed revision",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.868,
+                  0.789,
+                  0.921
+                ],
+                "c": [
+                  0.425,
+                  0.894
+                ],
+                "type": "Text",
+                "text": "Optional preparation service: http://127.0.0.1:8080"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.94,
+                  0.939,
+                  0.95
+                ],
+                "c": [
+                  0.5,
+                  0.945
+                ],
+                "type": "Text",
+                "text": "The preview above is the exact local source sent to the preparation service. Raster analysis uses Gemini. Source text is untrusted input. Every proposed fact still requires author review."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.95,
+          1,
+          1
+        ],
+        "c": [
+          0.5,
+          0.975
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.178,
+              0.95,
+              0.822,
+              1
+            ],
+            "c": [
+              0.5,
+              0.975
+            ],
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.269,
+                  0.967,
+                  0.303,
+                  0.983
+                ],
+                "c": [
+                  0.286,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.483,
+                  0.967,
+                  0.517,
+                  0.983
+                ],
+                "c": [
+                  0.5,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.7,
+                  0.967,
+                  0.733,
+                  0.983
+                ],
+                "c": [
+                  0.717,
+                  0.975
+                ],
+                "type": "Image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0,
+          1,
+          0.044
+        ],
+        "c": [
+          0.5,
+          0.022
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.883,
+              0.004,
+              0.9,
+              0.013
+            ],
+            "c": [
+              0.892,
+              0.008
+            ],
+            "type": "Text"
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.044,
+          1,
+          0.05
+        ],
+        "c": [
+          0.5,
+          0.047
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0,
+              0.044,
+              1,
+              0.05
+            ],
+            "c": [
+              0.5,
+              0.047
+            ],
+            "click": true
+          }
+        ]
+      }
+    ]
+  }
+}

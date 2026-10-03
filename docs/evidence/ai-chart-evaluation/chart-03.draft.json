@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-21e3b9355824",
+  "revision": 1,
+  "title": "Illustrative temperature",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "3bd18f47bb5042582c6c28de5154ea3b70336494fa79b6ceb8341ed543d5f44b",
+    "width": 960.0,
+    "height": 640.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      960.0,
+      640.0
+    ],
+    "previewPath": "",
+    "previewSha256": ""
+  },
+  "regions": [
+    {
+      "id": "region_title",
+      "label": "Chart Title",
+      "description": "Title reading 'Illustrative temperature'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 303.36,
+              "y": 23.68
+            },
+            {
+              "x": 657.6,
+              "y": 23.68
+            },
+            {
+              "x": 657.6,
+              "y": 51.84
+            },
+            {
+              "x": 303.36,
+              "y": 51.84
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Illustrative temperature",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_y_axis_label",
+      "label": "Y Axis Label",
+      "description": "Label indicating temperature in degrees Celsius",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 115.2,
+              "y": 77.44
+            },
+            {
+              "x": 321.6,
+              "y": 77.44
+            },
+            {
+              "x": 321.6,
+              "y": 99.2
+            },
+            {
+              "x": 115.2,
+              "y": 99.2
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Temperature (°C)",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_x_axis_label",
+      "label": "X Axis Label",
+      "description": "Label indicating Day on the horizontal axis",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 457.92,
+              "y": 532.48
+            },
+            {
+              "x": 503.04,
+              "y": 532.48
+            },
+            {
+              "x": 503.04,
+              "y": 554.88
+            },
+            {
+              "x": 457.92,
+              "y": 554.88
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Day",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_day_1",
+      "label": "Day 1 Data Point",
+      "description": "Data point at -2 °C for Day 1",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 173.76,
+              "y": 314.88
+            },
+            {
+              "x": 233.28,
+              "y": 314.88
+            },
+            {
+              "x": 233.28,
+              "y": 357.12
+            },
+            {
+              "x": 173.76,
+              "y": 357.12
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 3,
+      "readingOrder": 3,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "-2 °C",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_day_2",
+      "label": "Day 2 Data Point",
+      "description": "Data point at 1 °C for Day 2",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 356.16,
+              "y": 219.52
+            },
+            {
+              "x": 407.04,
+              "y": 219.52
+            },
+            {
+              "x": 407.04,
+              "y": 266.24
+            },
+            {
+              "x": 356.16,
+              "y": 266.24
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 4,
+      "readingOrder": 4,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "1 °C",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_day_3",
+      "label": "Day 3 Unknown Marker",
+      "description": "Unknown value placeholder showing '?' inside a dashed circle",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 503.04,
+              "y": 321.92
+            },
+            {
+              "x": 613.44,
+              "y": 321.92
+            },
+            {
+              "x": 613.44,
+              "y": 403.84
+            },
+            {
+              "x": 503.04,
+              "y": 403.84
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 5,
+      "readingOrder": 5,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Unknown\n?",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_day_4",
+      "label": "Day 4 Data Point",
+      "description": "Data point at 4 °C for Day 4",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 710.4,
+              "y": 126.72
+            },
+            {
+              "x": 761.28,
+              "y": 126.72
+            },
+            {
+              "x": 761.28,
+              "y": 181.12
+            },
+            {
+              "x": 710.4,
+              "y": 181.12
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 6,
+      "readingOrder": 6,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "4 °C",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_note",
+      "label": "Footnote",
+      "description": "Explanatory text below chart",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 180.48,
+              "y": 585.6
+            },
+            {
+              "x": 777.6,
+              "y": 585.6
+            },
+            {
+              "x": 777.6,
+              "y": 603.52
+            },
+            {
+              "x": 180.48,
+              "y": 603.52
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 7,
+      "readingOrder": 7,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Authored teaching values. Unknown means no recorded value.",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_day1_to_day2",
+      "fromId": "region_day_1",
+      "toId": "region_day_2",
+      "label": "Trend line between Day 1 and Day 2",
+      "type": "connecting line",
+      "direction": "unknown",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Line connecting Day 1 (-2 °C) and Day 2 (1 °C)",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [
+    {
+      "id": "chart_temperature",
+      "title": "Illustrative temperature",
+      "kind": "line",
+      "xAxis": {
+        "label": "Day",
+        "unit": "day",
+        "scale": "category",
+        "domain": [
+          1.0,
+          4.0
+        ],
+        "ticks": [
+          {
+            "value": 1.0,
+            "label": "Day 1"
+          },
+          {
+            "value": 2.0,
+            "label": "Day 2"
+          },
+          {
+            "value": 3.0,
+            "label": "Day 3"
+          },
+          {
+            "value": 4.0,
+            "label": "Day 4"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Temperature",
+        "unit": "°C",
+        "scale": "linear",
+        "domain": [
+          -5.0,
+          5.0
+        ],
+        "ticks": [
+          {
+            "value": -5.0,
+            "label": "-5"
+          },
+          {
+            "value": 0.0,
+            "label": "0"
+          },
+          {
+            "value": 5.0,
+            "label": "5"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series_temperature",
+          "label": "Temperature",
+          "values": [
+            {
+              "id": "val_day1",
+              "regionId": "region_day_1",
+              "x": "Day 1",
+              "value": -2.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "-2 °C label on Day 1",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val_day2",
+              "regionId": "region_day_2",
+              "x": "Day 2",
+              "value": 1.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "1 °C label on Day 2",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val_day3",
+              "regionId": "region_day_3",
+              "x": "Day 3",
+              "value": null,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "Unknown label with dashed question mark on Day 3",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val_day4",
+              "regionId": "region_day_4",
+              "x": "Day 4",
+              "value": 4.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "4 °C label on Day 4",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Complete line graph labeled 'Illustrative temperature'",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm all printed values, scale, domain and units"
+        ]
+      }
+    }
+  ],
+  "questions": [],
+  "audio": [],
+  "description": "A line chart showing temperature across four days (Day 1 to Day 4). Day 1 is -2 °C, Day 2 is 1 °C with a line connecting them. Day 3 has an unknown value indicated by a dashed circle with a question mark. Day 4 has a plotted point at 4 °C."
+}

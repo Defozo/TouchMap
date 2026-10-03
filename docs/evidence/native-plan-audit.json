@@ -1,0 +1,53 @@
+{
+  "recordedAtUtc": "2026-10-03T17:07:06Z",
+  "plan": "official-2026-10-03/PLAN.md",
+  "scope": "Native implementation audit after real author, second-installation offline learner, shared-file and 200-percent UI checks. This report is not an assertion that every release gate has passed.",
+  "hostVerification": {
+    "testCommand": "npm test",
+    "passed": 51,
+    "failed": 0,
+    "durationMs": 3130.872,
+    "testLog": "native-audit-host-tests.txt",
+    "typecheckCommand": "npm run typecheck",
+    "typecheckExitCode": 0,
+    "typecheckLog": "native-audit-typecheck.txt",
+    "scopeNote": "Includes full domain suite, editor rollback/history changes, boundary hysteresis and final 650-entry locale-resource parity/interpolation. Native compilation and device execution are separate evidence."
+  },
+  "localGapsFoundAndAddressed": [
+    {
+      "requirement": "Stable focus and boundary hysteresis",
+      "implementation": "Retain only the currently focused region within two display pixels, scaled to source coordinates. Exact initial hit targets and overlap lists remain unchanged.",
+      "hostEvidence": "Three trajectory, hole/line and fit/zoom regressions pass; native regression added for final runtime suite."
+    },
+    {
+      "requirement": "Locale resources without changing data identifiers",
+      "implementation": "English resource catalog and generated pure-domain fallback; native ResourceManager lookup initialized by EntryAbility; numbered literal interpolation; enum labels map back to stable values by index.",
+      "hostEvidence": "Catalog parity, dynamic-value preservation and localized feedback with unchanged lesson state pass.",
+      "remainingAtAudit": "All 650 catalog entries extracted, including playback. Generator check reports zero changes and no unreviewed remaining literals. Native resource lookup test added for final runtime suite."
+    },
+    {
+      "requirement": "Full context restoration timing after the app is active",
+      "implementation": "Opt-in measurement begins on actual material-open intent and ends in ArkUI FrameCallback.onIdle after page/progress assignment. Reports the complete progress snapshot for independent comparison.",
+      "remainingAtAudit": "Platform agent owns 100 actual UI opens and final timing report; previous RDB read timing alone is not counted as full UI restoration."
+    }
+  ],
+  "remainingIndependentGates": [
+    "Complete import, acceptance, tutorial, hover exploration, list, answer, pause and restart flow with a genuine spoken reader on a compatible runtime.",
+    "Physical vibration, headphone-removal behavior and simultaneous reader/audio behavior on appropriate hardware.",
+    "Representative learner and teacher studies, or the explicitly permitted research-gap disclosure without usefulness percentages.",
+    "Final artifact build, native regressions, playback control repair retest and source-bound packaging after the current changes.",
+    "Publication and submission actions remain distinct from locally prepared artifacts."
+  ],
+  "userConfirmedAvailability": {
+    "recordedAt": "2026-10-03T16:50:50.975634+00:00",
+    "source": "USER_UPDATES.json, user-touchmap-no-harmony-device-20261003",
+    "userHasHarmonyDevice": false,
+    "instruction": "Continue emulator testing; keep genuine reader and physical vibration unverified. Do not repeat the device-availability question.",
+    "onSiteContext": "Mentor hardware at booth A11 was reported; remote access and reader availability are not confirmed."
+  },
+  "limits": [
+    "The measured audio API onset is first accepted PCM write, not physical acoustic onset.",
+    "Runtime evidence on API23 does not establish a separate execution test on the minimum API20 runtime.",
+    "The 100 recovery cycles verify acknowledged commits across actual forced process restarts; they do not claim every instruction-level mid-transaction kill point."
+  ]
+}

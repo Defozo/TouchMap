@@ -1,10 +1,20 @@
 {
-  "sha256": "ae7f46d80be15b123e65915eaef3553892098b0a4d19881c603e2c0aeb9b07bf",
-  "bytes": 8361198,
+  "sha256": "a40c63d2b0b63ae0a5ae5984f8cb585532e9b242cbd9e169a4e4dcd4e6f4d725",
+  "bytes": 8522372,
   "bundleName": "org.touchmap.app",
   "minAPIVersion": 20,
   "targetAPIVersion": 20,
   "apiReleaseType": "Beta1",
   "module": "entry",
-  "signatureVerification": "hap-sign-tool verify-app must pass before this script runs; installation recorded separately"
+  "signatureVerification": "hap-sign-tool verify-app must pass before this script runs; installation recorded separately",
+  "sourceFingerprint": {
+    "algorithm": "sha256-path-nul-content-sha256-newline-v1",
+    "appSourceSha256": "0c3b1b298382c00b365162e2dc994846cf169ec3961085148062f8a43f125feb",
+    "appSourceFileCount": 121,
+    "appSourceBytes": 7334712,
+    "gitHeadAtBuild": "ebc1dc20af8e2d818edf3d3174fb014428faaca8",
+    "workingTreeDirty": true,
+    "snapshot": "Exact copied app files before generated local SDK configuration and signing injection. Git HEAD is recorded separately and may predate uncommitted inputs."
+  },
+  "appSourceSha256": "0c3b1b298382c00b365162e2dc994846cf169ec3961085148062f8a43f125feb"
 }

@@ -1,0 +1,13 @@
+{
+  "bundleName": "org.touchmap.testshare",
+  "permissions": [],
+  "hapSha256": "3a216abf0c485fb13e35d5fc5ea9922f9c4aa52bacd32bb516a6f26b60ddfcf3",
+  "packageSha256": "6e838f33c1304427f469e685a3d35950220c7a6893c178020f6216fe2997c29a",
+  "packageBytes": 1115930,
+  "signatureVerified": true,
+  "sourceFiles": {
+    "EntryAbility.ets": "cd832f0130656dd88a74d22c60ec4a506427e2321ce3c7e926c0515737e074d1",
+    "Index.ets": "6a1b9cef265618776c576b30388d8ee53f421eb8ec7051d02dbd791487a8b4fe"
+  },
+  "scope": "Separate ordinary-permission helper. Runtime receipt/import must be verified separately."
+}

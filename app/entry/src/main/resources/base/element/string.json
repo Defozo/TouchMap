@@ -11,6 +11,2606 @@
     {
       "name": "EntryAbility_label",
       "value": "TouchMap"
+    },
+    {
+      "name": "tm_006977794ed4",
+      "value": "Pause and save context"
+    },
+    {
+      "name": "tm_00f7e90e48ad",
+      "value": "Vertical scale type"
+    },
+    {
+      "name": "tm_01662bf55ab8",
+      "value": "Deflate block lacks end code"
+    },
+    {
+      "name": "tm_0191964f327d",
+      "value": "Recording duration exceeds limits"
+    },
+    {
+      "name": "tm_0202a5b981d0",
+      "value": "Reserved distance code"
+    },
+    {
+      "name": "tm_03072fec9bb5",
+      "value": "Continue authoring revision {0}"
+    },
+    {
+      "name": "tm_0386c095d19f",
+      "value": "Forward direction."
+    },
+    {
+      "name": "tm_0393ab9eaed4",
+      "value": "Width in source coordinates"
+    },
+    {
+      "name": "tm_041777a52275",
+      "value": "Three steps to explore confidently."
+    },
+    {
+      "name": "tm_04e01846e2b9",
+      "value": "Matching region ID"
+    },
+    {
+      "name": "tm_052e8911351a",
+      "value": "Connection label"
+    },
+    {
+      "name": "tm_054579dc9272",
+      "value": "Reviewer declaration required"
+    },
+    {
+      "name": "tm_05b95ce36d35",
+      "value": "Know your material."
+    },
+    {
+      "name": "tm_0616375b11fb",
+      "value": "SVG complexity limit"
+    },
+    {
+      "name": "tm_06dc2b5ecd0e",
+      "value": "Invalid first repeat"
+    },
+    {
+      "name": "tm_0718a25ab9e2",
+      "value": "Stop all audio immediately"
+    },
+    {
+      "name": "tm_07c3f5bc0fb3",
+      "value": "Separate consent is required to send reviewed labels to ElevenLabs."
+    },
+    {
+      "name": "tm_089e57e38f93",
+      "value": "Save preferences"
+    },
+    {
+      "name": "tm_093ee4489f4a",
+      "value": "Scanning interval: {0} ms"
+    },
+    {
+      "name": "tm_0980e2c898d3",
+      "value": "Draft from {0} {1}. Review every geometry and meaning. {2} {3}"
+    },
+    {
+      "name": "tm_0a1b9d7e9aee",
+      "value": "Resume recording"
+    },
+    {
+      "name": "tm_0a6c4a4c5aff",
+      "value": "Invalid viewport scale"
+    },
+    {
+      "name": "tm_0acd6ced873a",
+      "value": "Line points, JSON source coordinates"
+    },
+    {
+      "name": "tm_0ad2f32d4985",
+      "value": "SVG exceeds the 10 MiB source limit."
+    },
+    {
+      "name": "tm_0be1cbc73551",
+      "value": "The draft changed. This speech result was not applied; generate speech for the current revision."
+    },
+    {
+      "name": "tm_0bfd2f600e48",
+      "value": "CDATA outside SVG root"
+    },
+    {
+      "name": "tm_0d3c8a892f75",
+      "value": "Exploration has not started. "
+    },
+    {
+      "name": "tm_0d785ded3b10",
+      "value": "Malformed diagram structure"
+    },
+    {
+      "name": "tm_0d7fd9c15f1d",
+      "value": "Circle, round shape on the left"
+    },
+    {
+      "name": "tm_0d81a3d0c66f",
+      "value": "Direction unknown."
+    },
+    {
+      "name": "tm_0d8d5dac77bd",
+      "value": "Delete this chart and invalidate dependent questions"
+    },
+    {
+      "name": "tm_0da021897d32",
+      "value": "No paused recording. Choose Replay or an overview."
+    },
+    {
+      "name": "tm_0ea48fd44136",
+      "value": "Source attribution and license require an author declaration"
+    },
+    {
+      "name": "tm_0ee6577bbbe5",
+      "value": "OPTIONAL PREPARATION SERVICE"
+    },
+    {
+      "name": "tm_0f7bbb4d122f",
+      "value": "Review and accept"
+    },
+    {
+      "name": "tm_0fe0ba4ba333",
+      "value": "Malformed, duplicate-key or unbounded JSON document."
+    },
+    {
+      "name": "tm_1013ae47de7e",
+      "value": "This is the author’s declaration, not independent certification. Accepting it is your local choice and does not change the package."
+    },
+    {
+      "name": "tm_10866a9df5f8",
+      "value": "{0} {1}"
+    },
+    {
+      "name": "tm_10992ed7982e",
+      "value": "Submit selected answer"
+    },
+    {
+      "name": "tm_10dc8a4ccfd1",
+      "value": "Find title, package or revision"
+    },
+    {
+      "name": "tm_113dd86c7f3a",
+      "value": "Select every correct answer."
+    },
+    {
+      "name": "tm_11781b75fdac",
+      "value": "Bidirectional"
+    },
+    {
+      "name": "tm_11f6576e2eab",
+      "value": "Preparation failed ({0}). Your draft is unchanged."
+    },
+    {
+      "name": "tm_120d4ba0a275",
+      "value": "Unsupported XML entity"
+    },
+    {
+      "name": "tm_121b587441f6",
+      "value": "Progress changed. Reload before applying this action."
+    },
+    {
+      "name": "tm_12e6c5f9b896",
+      "value": "TouchMap"
+    },
+    {
+      "name": "tm_1341cbe8d35b",
+      "value": "Both directions."
+    },
+    {
+      "name": "tm_13d802933193",
+      "value": "Progress saved."
+    },
+    {
+      "name": "tm_13fcc156b6de",
+      "value": "Bookmark target does not exist"
+    },
+    {
+      "name": "tm_140a526dc331",
+      "value": "Private history exported separately."
+    },
+    {
+      "name": "tm_151a02175b97",
+      "value": "Vertical ticks: numerical coordinate|label, one per line"
+    },
+    {
+      "name": "tm_155d2d5a8f2f",
+      "value": "Save the question first."
+    },
+    {
+      "name": "tm_15b4e487fba0",
+      "value": "Category or x value"
+    },
+    {
+      "name": "tm_1611043bad34",
+      "value": "Preparation cancelled before upload."
+    },
+    {
+      "name": "tm_16265fe9e149",
+      "value": "Known path points, or null when route is unspecified"
+    },
+    {
+      "name": "tm_1638c2874499",
+      "value": "Service returned a result for a different source or revision."
+    },
+    {
+      "name": "tm_16b98aa8bc32",
+      "value": "Start exploring"
+    },
+    {
+      "name": "tm_17241fe073a7",
+      "value": "Preferences saved on this device."
+    },
+    {
+      "name": "tm_195d983cb26f",
+      "value": "JSON exceeds the supported document size."
+    },
+    {
+      "name": "tm_19e7a3976a86",
+      "value": "A bounded event ID is required"
+    },
+    {
+      "name": "tm_1a1efe142c95",
+      "value": "Saved draft identity differs from the editor"
+    },
+    {
+      "name": "tm_1a54c2d4dc5c",
+      "value": "{0}: invalid audio"
+    },
+    {
+      "name": "tm_1ab9c8a8b1bc",
+      "value": "{0}: source-linked evidence needs review"
+    },
+    {
+      "name": "tm_1aca80e8b55c",
+      "value": "label"
+    },
+    {
+      "name": "tm_1bb63916aa36",
+      "value": "{0}: {1} {2}"
+    },
+    {
+      "name": "tm_1bbbe18c538c",
+      "value": "{0}. {1}{2}"
+    },
+    {
+      "name": "tm_1c4331f4276e",
+      "value": "No recording is currently playing."
+    },
+    {
+      "name": "tm_1c704bbd5483",
+      "value": "Review suggested."
+    },
+    {
+      "name": "tm_1ce6da8dbe41",
+      "value": "Try exploring this relationship again."
+    },
+    {
+      "name": "tm_1d1979df7a81",
+      "value": "Delete question"
+    },
+    {
+      "name": "tm_1d23255ff9d4",
+      "value": "Speech response must include every requested recording exactly once."
+    },
+    {
+      "name": "tm_1d437955c648",
+      "value": "{0} ({1} to {2})"
+    },
+    {
+      "name": "tm_1d4c948595d9",
+      "value": "Unsafe paths, links, duplicate names or unsupported ZIP entries."
+    },
+    {
+      "name": "tm_1dac3b2cd3db",
+      "value": "{0}: invalid path"
+    },
+    {
+      "name": "tm_1dbd8ae96c8e",
+      "value": "{0}: accepted answers must name options"
+    },
+    {
+      "name": "tm_1e2bc7a7e13e",
+      "value": "Selected source exceeds 10 MiB."
+    },
+    {
+      "name": "tm_1e36f7b05cce",
+      "value": "I listened to the recordings and checked critical labels, names and units."
+    },
+    {
+      "name": "tm_1e621d6ef824",
+      "value": "Malformed manifest, author declaration or asset metadata"
+    },
+    {
+      "name": "tm_1ec9bf3a2b3e",
+      "value": "SVG source exceeds 10 MiB"
+    },
+    {
+      "name": "tm_1ef25a109052",
+      "value": "Confirm meaning and evidence"
+    },
+    {
+      "name": "tm_1f153fd1824c",
+      "value": "Selected: "
+    },
+    {
+      "name": "tm_1f30e3eba81e",
+      "value": "Invalid preparation result: {0}"
+    },
+    {
+      "name": "tm_1f3fccace9c2",
+      "value": "Optional preparation service: {0}"
+    },
+    {
+      "name": "tm_1f5087db919c",
+      "value": "question"
+    },
+    {
+      "name": "tm_1faa45aefed0",
+      "value": "Compressed export is truncated."
+    },
+    {
+      "name": "tm_1fe108692ec5",
+      "value": "Source evidence for axes and units"
+    },
+    {
+      "name": "tm_1ff57a29d7c9",
+      "value": "Next"
+    },
+    {
+      "name": "tm_20d018a1dd44",
+      "value": "Malformed SVG text"
+    },
+    {
+      "name": "tm_218bdcebd04a",
+      "value": "Oversubscribed Huffman tree"
+    },
+    {
+      "name": "tm_22260806af30",
+      "value": "The draft changed. The late result is retained separately; current edits are unchanged."
+    },
+    {
+      "name": "tm_228572008a81",
+      "value": "Region not found"
+    },
+    {
+      "name": "tm_23184fe68aaa",
+      "value": "Recordings stay with the material and play offline. Import licensed WAV files or explicitly consent to cloud speech."
+    },
+    {
+      "name": "tm_237b84cf9888",
+      "value": "Deflate exceeds declared output size"
+    },
+    {
+      "name": "tm_240aca2051bf",
+      "value": "Question does not exist"
+    },
+    {
+      "name": "tm_24876d4d404d",
+      "value": "Speech integrity, target, language or path mismatch."
+    },
+    {
+      "name": "tm_24fb80d91f7c",
+      "value": "Current order: "
+    },
+    {
+      "name": "tm_25884fb4eb21",
+      "value": "Horizontal domain minimum and maximum, comma separated for numerical axes"
+    },
+    {
+      "name": "tm_25b953a5005d",
+      "value": "Question prompt"
+    },
+    {
+      "name": "tm_260f59cb0bbb",
+      "value": "Built for curiosity. Your pace, your path."
+    },
+    {
+      "name": "tm_263f36611134",
+      "value": "Zoom −"
+    },
+    {
+      "name": "tm_26abf7f1d651",
+      "value": "Vertical domain minimum"
+    },
+    {
+      "name": "tm_27020c7859b2",
+      "value": "Compressed output exceeds the portable 50 MiB limit."
+    },
+    {
+      "name": "tm_271d82208b52",
+      "value": "Active or escaped SVG styles are unsupported"
+    },
+    {
+      "name": "tm_27fa5d6f5d47",
+      "value": "2. Ask for detail. Longer descriptions play only when you press Describe. Connections announce their direction and destination. Stop audio is always available."
+    },
+    {
+      "name": "tm_2808c69c533d",
+      "value": "Some facts need review. Open the editor before using this as a lesson."
+    },
+    {
+      "name": "tm_2838a0c29f22",
+      "value": "Prepared preview dimensions differ from the reviewed source."
+    },
+    {
+      "name": "tm_2883907f7b76",
+      "value": "Crop is available for raster images."
+    },
+    {
+      "name": "tm_28d46a1b6b9a",
+      "value": "Send these reviewed texts to ElevenLabs for speech preparation."
+    },
+    {
+      "name": "tm_298a218c2f72",
+      "value": "Recording imported. Play it and verify names and units before publication."
+    },
+    {
+      "name": "tm_298a9207a732",
+      "value": "Next step"
+    },
+    {
+      "name": "tm_29bb6bff4c36",
+      "value": "Crop is outside the source image."
+    },
+    {
+      "name": "tm_29f56803784e",
+      "value": "Audio stopped."
+    },
+    {
+      "name": "tm_2a829bf60ab4",
+      "value": "Native compressed payload bounds mismatch."
+    },
+    {
+      "name": "tm_2b393958a4ea",
+      "value": "Import a WAV recording."
+    },
+    {
+      "name": "tm_2cff9baabf56",
+      "value": "Import"
+    },
+    {
+      "name": "tm_2d0c5bf8040d",
+      "value": "Accept this author declaration"
+    },
+    {
+      "name": "tm_2d2cdc4f4bc4",
+      "value": "Scan: {0}. Press Select to apply."
+    },
+    {
+      "name": "tm_2d88b0b248c3",
+      "value": "Object label"
+    },
+    {
+      "name": "tm_2e414a8ebbf9",
+      "value": "This material was deleted. Return to the library."
+    },
+    {
+      "name": "tm_2e93372b7567",
+      "value": "Recording could not be resumed. Replay when ready."
+    },
+    {
+      "name": "tm_2e96d1a0c368",
+      "value": "Off path"
+    },
+    {
+      "name": "tm_2f1b319822b4",
+      "value": "Each answer option requires ID|label."
+    },
+    {
+      "name": "tm_2f38e77fad1b",
+      "value": "Use one numerical value|tick label per line."
+    },
+    {
+      "name": "tm_2f4a35c7650c",
+      "value": "History export cancelled."
+    },
+    {
+      "name": "tm_2f7a4e95208c",
+      "value": "Source copied into private storage. Raster metadata is removed before any upload. Add provenance and review the preview."
+    },
+    {
+      "name": "tm_2faffce66200",
+      "value": "Confirm recordings reviewed"
+    },
+    {
+      "name": "tm_2fe42b577fc1",
+      "value": "Decoded source dimensions differ from the declared geometry or exceed 20 megapixels."
+    },
+    {
+      "name": "tm_3048b961ca0e",
+      "value": "Add a new object"
+    },
+    {
+      "name": "tm_3055a392d70a",
+      "value": "Speech prepared locally. Listen to critical labels, units and names before publication."
+    },
+    {
+      "name": "tm_30c9ebecc748",
+      "value": ". Route in the picture is unspecified."
+    },
+    {
+      "name": "tm_30e43125e8a0",
+      "value": "Chart type"
+    },
+    {
+      "name": "tm_311a1ecda993",
+      "value": "A teaching package may contain only declared source, diagram and audio."
+    },
+    {
+      "name": "tm_321f15782538",
+      "value": "Layer number"
+    },
+    {
+      "name": "tm_3223e544b119",
+      "value": "Portable package content limit exceeded."
+    },
+    {
+      "name": "tm_3239e788923d",
+      "value": "Selection cleared. Choose an answer when ready."
+    },
+    {
+      "name": "tm_3266b429f899",
+      "value": "Move through the picture or use the accessible object list."
+    },
+    {
+      "name": "tm_3288260dcee3",
+      "value": "Invalid source dimensions"
+    },
+    {
+      "name": "tm_32a93cdc9546",
+      "value": "Reviewer name and source-access declaration"
+    },
+    {
+      "name": "tm_32df77faab46",
+      "value": "Delete {0}, revision {1}"
+    },
+    {
+      "name": "tm_3305fde5b4bc",
+      "value": "Make the connection."
+    },
+    {
+      "name": "tm_336bcb612c43",
+      "value": "Choose one answer."
+    },
+    {
+      "name": "tm_33bacce6036c",
+      "value": "Save series name"
+    },
+    {
+      "name": "tm_33c2301284ff",
+      "value": "Rights not declared"
+    },
+    {
+      "name": "tm_33cba843f9c6",
+      "value": "Exploration stopped."
+    },
+    {
+      "name": "tm_3489dbd61fb8",
+      "value": "Try vibration"
+    },
+    {
+      "name": "tm_34a3df43a965",
+      "value": "Follow to destination"
+    },
+    {
+      "name": "tm_34caa1c368e7",
+      "value": "OBJECTS"
+    },
+    {
+      "name": "tm_3565fcc6c17d",
+      "value": "Speech"
+    },
+    {
+      "name": "tm_35880193055a",
+      "value": "Recording finished"
+    },
+    {
+      "name": "tm_35e786aa7fb8",
+      "value": "adjacency"
+    },
+    {
+      "name": "tm_3613c931274a",
+      "value": "Series name"
+    },
+    {
+      "name": "tm_3619cf0b9092",
+      "value": "Outgoing"
+    },
+    {
+      "name": "tm_3664895579f0",
+      "value": "Export"
+    },
+    {
+      "name": "tm_366734abe864",
+      "value": "Last submitted question: {0}. {1} "
+    },
+    {
+      "name": "tm_36760a833be5",
+      "value": "{0}: invalid value"
+    },
+    {
+      "name": "tm_36a944022749",
+      "value": "Chart not found"
+    },
+    {
+      "name": "tm_36c5f684ff7c",
+      "value": "Import WAV recording"
+    },
+    {
+      "name": "tm_371cd2fe3cf5",
+      "value": "Vertical domain maximum"
+    },
+    {
+      "name": "tm_37254c4dc292",
+      "value": "Add value to {0}"
+    },
+    {
+      "name": "tm_374b716806e6",
+      "value": "Horizontal axis unit"
+    },
+    {
+      "name": "tm_37bffddd8dfc",
+      "value": "Unfinished question: {0}. {1}"
+    },
+    {
+      "name": "tm_37c97921c5a7",
+      "value": "Listen to critical labels, names and units, then confirm the recording review before publishing."
+    },
+    {
+      "name": "tm_380358513dd3",
+      "value": "Save chart facts"
+    },
+    {
+      "name": "tm_3809adb386ba",
+      "value": "Destination object ID"
+    },
+    {
+      "name": "tm_380f41186ad7",
+      "value": "Decimal precision"
+    },
+    {
+      "name": "tm_38225c2dfbb8",
+      "value": "Screen reader accessibility is currently enabled. Explicit Replay still plays recordings."
+    },
+    {
+      "name": "tm_3858c76eb824",
+      "value": "Pairing expired. Pair again."
+    },
+    {
+      "name": "tm_38a9c1e72158",
+      "value": "line"
+    },
+    {
+      "name": "tm_39d324dc7f61",
+      "value": "Your interaction profile stays on this device and applies to every material."
+    },
+    {
+      "name": "tm_3add7f06d365",
+      "value": "Save source-backed value"
+    },
+    {
+      "name": "tm_3afc991dde4b",
+      "value": "Prepare the SVG in Publish before approving geometry or meaning. A faithful raster preview is required."
+    },
+    {
+      "name": "tm_3b058c486f12",
+      "value": "A supported haptic effect is reported by this device."
+    },
+    {
+      "name": "tm_3b0aad97dcdb",
+      "value": "Invalid Huffman symbol"
+    },
+    {
+      "name": "tm_3b3eb10961e0",
+      "value": "On path"
+    },
+    {
+      "name": "tm_3bd088fa88a7",
+      "value": "A learning material needs at least one region"
+    },
+    {
+      "name": "tm_3c0eb14c1cab",
+      "value": "Choose a valid axis domain. Logarithmic axes require positive values."
+    },
+    {
+      "name": "tm_3c4a2af806af",
+      "value": "Consent is required before the selected image is uploaded to Gemini."
+    },
+    {
+      "name": "tm_3d708d9044b4",
+      "value": "Text size, up to 200 percent"
+    },
+    {
+      "name": "tm_3df43576f612",
+      "value": "Preparation result identity mismatch"
+    },
+    {
+      "name": "tm_3e52aac3bcb4",
+      "value": "Invalid revision"
+    },
+    {
+      "name": "tm_3e95e8f3eebd",
+      "value": "Start scanning"
+    },
+    {
+      "name": "tm_3f4aa48e91b0",
+      "value": "Use finite coordinates and positive width and height."
+    },
+    {
+      "name": "tm_3f4f403ebf04",
+      "value": "{0}. {1}"
+    },
+    {
+      "name": "tm_400a5c7661ec",
+      "value": "Malformed SVG comment"
+    },
+    {
+      "name": "tm_40a05b04a075",
+      "value": "Your learning trail."
+    },
+    {
+      "name": "tm_40d6582fd8aa",
+      "value": "Source attribution"
+    },
+    {
+      "name": "tm_410d02d8aee8",
+      "value": "Referenced fact IDs, comma separated"
+    },
+    {
+      "name": "tm_415a8336713e",
+      "value": "High contrast"
+    },
+    {
+      "name": "tm_430aae4ece46",
+      "value": "Invalid ZIP entry."
+    },
+    {
+      "name": "tm_430f6896ab0a",
+      "value": "Invalid source path/hash"
+    },
+    {
+      "name": "tm_43797f284f73",
+      "value": "Save exact geometry"
+    },
+    {
+      "name": "tm_443e8d0d3236",
+      "value": "HTTPS service address"
+    },
+    {
+      "name": "tm_44469e348eb0",
+      "value": "Overlapping ZIP entries."
+    },
+    {
+      "name": "tm_44d35d8dfb72",
+      "value": "The package lacks its manifest or diagram."
+    },
+    {
+      "name": "tm_464c4ffd019e",
+      "value": "Edit"
+    },
+    {
+      "name": "tm_46abf34c16b1",
+      "value": "This question requires review on the current material revision"
+    },
+    {
+      "name": "tm_46eeb4d591e1",
+      "value": "Invalid WAV container"
+    },
+    {
+      "name": "tm_475931f0048b",
+      "value": "Invalid WAV audio data"
+    },
+    {
+      "name": "tm_47b8cfc543d7",
+      "value": "Choose options in the required order. Selecting an option again removes it."
+    },
+    {
+      "name": "tm_47c8e0cee4bd",
+      "value": "Export cancelled."
+    },
+    {
+      "name": "tm_47cada6bf598",
+      "value": "Source evidence: location, text or accessible reference"
+    },
+    {
+      "name": "tm_47f19350c9aa",
+      "value": "Edit axes, scale, domains, tick labels, units, source values and evidence. A null value is explicitly unknown. Never estimate an exact value from pixel height."
+    },
+    {
+      "name": "tm_482ce0caa75c",
+      "value": "Raster metadata removed."
+    },
+    {
+      "name": "tm_485918f135a4",
+      "value": "Importing and validating material"
+    },
+    {
+      "name": "tm_48619efed4d7",
+      "value": "Highlighted: {0}"
+    },
+    {
+      "name": "tm_488ba29b605b",
+      "value": "Chart data: axes, series, values and evidence"
+    },
+    {
+      "name": "tm_489e8f8a2411",
+      "value": "Choose a chart and enter a series name."
+    },
+    {
+      "name": "tm_4923f7d2f830",
+      "value": "Open lesson questions"
+    },
+    {
+      "name": "tm_49680943ba2c",
+      "value": "Huffman repeat exceeds alphabet"
+    },
+    {
+      "name": "tm_4a1668bca31c",
+      "value": "Choose or create a chart."
+    },
+    {
+      "name": "tm_4aace0fa58f1",
+      "value": "The export filename is invalid."
+    },
+    {
+      "name": "tm_4ab1408d52fb",
+      "value": "Touch a diagram. Hear what matters. Follow the connections at your own pace."
+    },
+    {
+      "name": "tm_4ab8f40b5319",
+      "value": "Visit the source of this incoming connection"
+    },
+    {
+      "name": "tm_4b330d8b0572",
+      "value": "Preparing a portable compressed package."
+    },
+    {
+      "name": "tm_4bdc35de4949",
+      "value": "Choose a connection first"
+    },
+    {
+      "name": "tm_4c08824d208a",
+      "value": "Triangle, three sided shape on the right"
+    },
+    {
+      "name": "tm_4ccd73519ddb",
+      "value": "Recording format or duration does not match its metadata."
+    },
+    {
+      "name": "tm_4ce61e8e8e02",
+      "value": "DEFOZO SOFTWARE HOUSE"
+    },
+    {
+      "name": "tm_4d964d496277",
+      "value": "Materials {0} to {1} of {2}"
+    },
+    {
+      "name": "tm_4dd95d968c9d",
+      "value": "Generate reviewed speech"
+    },
+    {
+      "name": "tm_4def603a0559",
+      "value": "Configure and pair in Settings"
+    },
+    {
+      "name": "tm_4eab2f444cce",
+      "value": "Read hint"
+    },
+    {
+      "name": "tm_4ee39cf3433c",
+      "value": "Manual authoring stays offline. Optional cloud preparation requires a separate consent in the editor."
+    },
+    {
+      "name": "tm_4ee918926f68",
+      "value": "PRIVATE PROGRESS"
+    },
+    {
+      "name": "tm_4f6a8fb5912c",
+      "value": "Authoring session paired. Image and speech uploads still require separate consent."
+    },
+    {
+      "name": "tm_4f7ef923b337",
+      "value": "Review target missing"
+    },
+    {
+      "name": "tm_50d33b6c8c20",
+      "value": "Answer options: one ID|label on each line"
+    },
+    {
+      "name": "tm_50e3bb39718a",
+      "value": "Pick up your thread."
+    },
+    {
+      "name": "tm_51375b3563ed",
+      "value": "Use an uncompressed PCM WAV recording"
+    },
+    {
+      "name": "tm_52bcdf071634",
+      "value": "Importing and validating your selected material. Large packages may take a moment."
+    },
+    {
+      "name": "tm_53a3b0b0d31c",
+      "value": "Connection does not exist"
+    },
+    {
+      "name": "tm_53dd5f4b25e5",
+      "value": "DRAFT"
+    },
+    {
+      "name": "tm_544ff00ac6df",
+      "value": "Unknown action: {0}"
+    },
+    {
+      "name": "tm_546f469fae01",
+      "value": "{0}: relation needs review for current revision"
+    },
+    {
+      "name": "tm_55490a4bf3a8",
+      "value": "Up"
+    },
+    {
+      "name": "tm_554c4ef57e45",
+      "value": "Provider is not configured or unavailable."
+    },
+    {
+      "name": "tm_55758aafc283",
+      "value": "Reserved length code"
+    },
+    {
+      "name": "tm_56883ea179dc",
+      "value": "Scanning speed"
+    },
+    {
+      "name": "tm_56f2c2277683",
+      "value": "Source evidence for meaning and direction"
+    },
+    {
+      "name": "tm_572fc65bbe00",
+      "value": "New series"
+    },
+    {
+      "name": "tm_575b012abe5a",
+      "value": "Vertical axis unit"
+    },
+    {
+      "name": "tm_58eb9032e3bb",
+      "value": "Left"
+    },
+    {
+      "name": "tm_59087d84a871",
+      "value": "Material overview and listening introduction"
+    },
+    {
+      "name": "tm_59299bc3e8b7",
+      "value": "Publish reviewed revision"
+    },
+    {
+      "name": "tm_593861333a1f",
+      "value": "Repeat exploration tutorial"
+    },
+    {
+      "name": "tm_59815d2189a9",
+      "value": "Text size: {0} percent"
+    },
+    {
+      "name": "tm_59dcfc1a5874",
+      "value": "Cannot export changed or corrupt assets."
+    },
+    {
+      "name": "tm_5a2a7c0c7067",
+      "value": "Region does not exist"
+    },
+    {
+      "name": "tm_5ad0f897690e",
+      "value": "not selected"
+    },
+    {
+      "name": "tm_5b0d37bd4b80",
+      "value": "Prepare this SVG to create a faithful preview. Create a local draft, then use Convert selected SVG in Publish, or prepare it with the computer converter. The original file is retained privately; geometry and meaning approval require the prepared preview."
+    },
+    {
+      "name": "tm_5b43ae9583fc",
+      "value": "Text outside SVG root"
+    },
+    {
+      "name": "tm_5bbf6f973f8f",
+      "value": "{0}: invalid audio target or kind"
+    },
+    {
+      "name": "tm_5c27058e76cb",
+      "value": "Turn a source into a lesson."
+    },
+    {
+      "name": "tm_5d4d8cc52be0",
+      "value": "Geometry exceeds point limit"
+    },
+    {
+      "name": "tm_5d6d3d5bfe86",
+      "value": "Provider timeout. Outcome may be unknown."
+    },
+    {
+      "name": "tm_5e2df81ae947",
+      "value": "Invalid draft asset path."
+    },
+    {
+      "name": "tm_5edccba90bf3",
+      "value": "Describe this object"
+    },
+    {
+      "name": "tm_5f94c1859c63",
+      "value": "Request or spend limit reached."
+    },
+    {
+      "name": "tm_6006592e34ef",
+      "value": "Requested description"
+    },
+    {
+      "name": "tm_616cb218a65b",
+      "value": "Material"
+    },
+    {
+      "name": "tm_62fea484541c",
+      "value": "Source evidence for this value"
+    },
+    {
+      "name": "tm_639a40e82b9a",
+      "value": "Connection"
+    },
+    {
+      "name": "tm_63ea0d656839",
+      "value": "Choose geometry or meaning review"
+    },
+    {
+      "name": "tm_64a6f0a1d0d1",
+      "value": "Storage could not complete the write."
+    },
+    {
+      "name": "tm_651879240ecc",
+      "value": "Truncated WAV chunk"
+    },
+    {
+      "name": "tm_6565943fb816",
+      "value": "Use overview for the complete description, or choose objects and Describe for section navigation. Pause, resume and replay keep the reading pace under your control."
+    },
+    {
+      "name": "tm_65eda82062f1",
+      "value": "Recording could not be paused."
+    },
+    {
+      "name": "tm_664ba280bbe5",
+      "value": "Recording resumed at the saved position."
+    },
+    {
+      "name": "tm_665b34529708",
+      "value": "Learning history deleted from this device."
+    },
+    {
+      "name": "tm_66dd9d0a1575",
+      "value": "Conflicting asset paths in the draft."
+    },
+    {
+      "name": "tm_688d6c612081",
+      "value": "Enter a title, source attribution and rights/license declaration."
+    },
+    {
+      "name": "tm_6903d2f80a02",
+      "value": "{0}: invalid polygon ring"
+    },
+    {
+      "name": "tm_693ce1c206ce",
+      "value": "Source: {0}"
+    },
+    {
+      "name": "tm_69b78ae9e469",
+      "value": "Extracted package size or checksum mismatch."
+    },
+    {
+      "name": "tm_69f0af3db9bc",
+      "value": "Horizontal scale type"
+    },
+    {
+      "name": "tm_69f689509987",
+      "value": "Touch"
+    },
+    {
+      "name": "tm_6bddbae40759",
+      "value": "{0}: invalid precision"
+    },
+    {
+      "name": "tm_6c25007b3429",
+      "value": "Explanation grounded in reviewed facts"
+    },
+    {
+      "name": "tm_6cd35eba33e6",
+      "value": "A different material already uses this package revision. Ask the author to export a new revision."
+    },
+    {
+      "name": "tm_6d03a4b37892",
+      "value": "Published revisions are immutable. Save a new revision."
+    },
+    {
+      "name": "tm_6d560311a68a",
+      "value": "My diagram"
+    },
+    {
+      "name": "tm_6e83af23c6cd",
+      "value": "{0}: answer options need labels"
+    },
+    {
+      "name": "tm_6f202f54a7b2",
+      "value": "List"
+    },
+    {
+      "name": "tm_70fab8c02082",
+      "value": "Exact polygons and holes, JSON source coordinates"
+    },
+    {
+      "name": "tm_71641220e3e8",
+      "value": "Height in source coordinates"
+    },
+    {
+      "name": "tm_71766e5d06f7",
+      "value": "Find a material by title, package ID or revision"
+    },
+    {
+      "name": "tm_71f9debfc349",
+      "value": "Make it feel right."
+    },
+    {
+      "name": "tm_721dbbb89329",
+      "value": "{0}: invalid axis"
+    },
+    {
+      "name": "tm_724d40e4bebb",
+      "value": "Convert selected SVG with service"
+    },
+    {
+      "name": "tm_726e701a83fe",
+      "value": "Invalid WAV format chunk"
+    },
+    {
+      "name": "tm_729bceeec816",
+      "value": "New connection"
+    },
+    {
+      "name": "tm_72ed767cd17d",
+      "value": "Source: {0} · {1}"
+    },
+    {
+      "name": "tm_73a3e7573256",
+      "value": "A world you can explore."
+    },
+    {
+      "name": "tm_74273989b096",
+      "value": "Redo"
+    },
+    {
+      "name": "tm_74532a87507f",
+      "value": "Listen to selected recording"
+    },
+    {
+      "name": "tm_747380d4bc83",
+      "value": "Geometry, meanings and lesson questions are marked reviewed by the author."
+    },
+    {
+      "name": "tm_748a428fafd8",
+      "value": "Already saved"
+    },
+    {
+      "name": "tm_74964c2142f8",
+      "value": "No supported haptic effect reported. Text and audio remain complete."
+    },
+    {
+      "name": "tm_74a883a037bc",
+      "value": "Settings"
+    },
+    {
+      "name": "tm_7518e0c3b1f9",
+      "value": "Package manifest exceeds 2 MiB."
+    },
+    {
+      "name": "tm_758710e903df",
+      "value": "{0}: missing relationship meaning"
+    },
+    {
+      "name": "tm_75cbf3dc417f",
+      "value": "Native compressor returned an unexpected archive."
+    },
+    {
+      "name": "tm_75ccfa3dbe81",
+      "value": "All required assets are available locally."
+    },
+    {
+      "name": "tm_76949438336d",
+      "value": "Explore this relationship again. "
+    },
+    {
+      "name": "tm_76ec3151dd66",
+      "value": "Selected: {0} {1}"
+    },
+    {
+      "name": "tm_7738b91a4a46",
+      "value": "Choose your first object"
+    },
+    {
+      "name": "tm_7743ce348d92",
+      "value": "draft"
+    },
+    {
+      "name": "tm_7792ab2f9b1f",
+      "value": "Malformed diagram or question structure"
+    },
+    {
+      "name": "tm_780e83c5e202",
+      "value": "Save late result as a separate material"
+    },
+    {
+      "name": "tm_78ac40b0c8c9",
+      "value": "{0}: missing region"
+    },
+    {
+      "name": "tm_78c1e0e0911e",
+      "value": "Invalid or duplicate ID: {0}"
+    },
+    {
+      "name": "tm_78d6e4da8b6d",
+      "value": "Raster source dimensions must be exact pixel counts."
+    },
+    {
+      "name": "tm_792ebef5e7f2",
+      "value": "File exceeds the supported size limit."
+    },
+    {
+      "name": "tm_794c953e76ae",
+      "value": "Optional vibration"
+    },
+    {
+      "name": "tm_797c1d4e2bc5",
+      "value": "Confirm this fact and evidence"
+    },
+    {
+      "name": "tm_7b28a86e5d97",
+      "value": "Explore source objects"
+    },
+    {
+      "name": "tm_7b9d712f906e",
+      "value": "Diagram exceeds object limit"
+    },
+    {
+      "name": "tm_7bb361017864",
+      "value": "Top coordinate"
+    },
+    {
+      "name": "tm_7c6be2c28c6c",
+      "value": "Export exceeds the portable 50 MiB compressed limit. Split the material into smaller packages."
+    },
+    {
+      "name": "tm_7cb3cb4b73f7",
+      "value": "Start with a package, SVG or image that you have permission to use."
+    },
+    {
+      "name": "tm_7d579750dd34",
+      "value": "Confirm against the original source or an equivalent accessible reference. An editable form does not independently describe the source. Unknown facts must be marked unknown."
+    },
+    {
+      "name": "tm_7de2aef289eb",
+      "value": "Next tutorial shape"
+    },
+    {
+      "name": "tm_7e0db4f03cfc",
+      "value": "Choose valid answer options"
+    },
+    {
+      "name": "tm_7f2fe580edb3",
+      "value": "linear"
+    },
+    {
+      "name": "tm_7f8ba3046443",
+      "value": "{0}: chart is unreviewed"
+    },
+    {
+      "name": "tm_7f94c0ba49b2",
+      "value": "Save question"
+    },
+    {
+      "name": "tm_7fa4317a4313",
+      "value": "Cancelled audio write did not settle."
+    },
+    {
+      "name": "tm_8049e42f47a6",
+      "value": "Playing local PCM recording"
+    },
+    {
+      "name": "tm_80d9d3a2b3d3",
+      "value": "1. Choose an object. In touch mode, move one finger over the diagram. Pause briefly for its local recording. The object list offers the same commands."
+    },
+    {
+      "name": "tm_818b4b91f139",
+      "value": "{0} {1}, revision {2}"
+    },
+    {
+      "name": "tm_81a0b4c37665",
+      "value": "Left coordinate"
+    },
+    {
+      "name": "tm_8295d8d1d05c",
+      "value": "Bookmark saved"
+    },
+    {
+      "name": "tm_82bef666fe34",
+      "value": "Choose an object or create a region. Every change is saved as a draft."
+    },
+    {
+      "name": "tm_82ca7565c4aa",
+      "value": "Prepared a normalized source revision with {0} {1}. Review all geometry and meaning."
+    },
+    {
+      "name": "tm_82ea0d40b405",
+      "value": "Manifest contains duplicate, colliding or reserved asset paths"
+    },
+    {
+      "name": "tm_836ff184e7b4",
+      "value": "log"
+    },
+    {
+      "name": "tm_8391da809dd9",
+      "value": "{0}{1}"
+    },
+    {
+      "name": "tm_8497303f673c",
+      "value": "AUDIO INCOMPLETE"
+    },
+    {
+      "name": "tm_8534ab72f196",
+      "value": "Return to library"
+    },
+    {
+      "name": "tm_8584e46bdad7",
+      "value": "Delete selected revision {0}, its private assets and its learning history from this device? Other revisions stay in the library."
+    },
+    {
+      "name": "tm_859390eb495b",
+      "value": "Publish"
+    },
+    {
+      "name": "tm_85a9713a4ba0",
+      "value": "Review the content and questions before preparing speech."
+    },
+    {
+      "name": "tm_866bedaaec19",
+      "value": "{0}. {1}{2}{3}"
+    },
+    {
+      "name": "tm_8685806c6ace",
+      "value": "SVG active content or external resources are unsupported"
+    },
+    {
+      "name": "tm_872695b262ce",
+      "value": "Accepted option IDs in order, comma separated"
+    },
+    {
+      "name": "tm_8748e89dba2f",
+      "value": "ZIP flag mismatch."
+    },
+    {
+      "name": "tm_874eafc16fe2",
+      "value": "Exit exploration"
+    },
+    {
+      "name": "tm_877c53adadcc",
+      "value": "Unbalanced SVG elements"
+    },
+    {
+      "name": "tm_879eac5e513b",
+      "value": "Explore the material, choose an answer, then explicitly submit it."
+    },
+    {
+      "name": "tm_8802ea90e287",
+      "value": "Review suggested"
+    },
+    {
+      "name": "tm_883361d5d682",
+      "value": "Right"
+    },
+    {
+      "name": "tm_88c0ad66a9f1",
+      "value": "Object IDs: "
+    },
+    {
+      "name": "tm_88ecd79788f9",
+      "value": "A numerical horizontal axis needs two increasing finite domain values."
+    },
+    {
+      "name": "tm_891f2fb7cc05",
+      "value": "SAVED ON THIS DEVICE"
+    },
+    {
+      "name": "tm_894e8f35e387",
+      "value": "Service returned an invalid preparation report."
+    },
+    {
+      "name": "tm_899c2327ecbb",
+      "value": "Route in the picture is unspecified."
+    },
+    {
+      "name": "tm_89bca1b82d36",
+      "value": "Speech result revision mismatch."
+    },
+    {
+      "name": "tm_8a5103c43803",
+      "value": "Crop top"
+    },
+    {
+      "name": "tm_8aefda887337",
+      "value": "Tutorial material is unavailable. Import the bundled tutorial package."
+    },
+    {
+      "name": "tm_8b182d536aee",
+      "value": "Multipart or malformed ZIP is unsupported."
+    },
+    {
+      "name": "tm_8b38125aa713",
+      "value": "Convert the SVG in Publish before publishing. A faithful raster preview is required."
+    },
+    {
+      "name": "tm_8bc97085b456",
+      "value": "Source hash differs from the diagram."
+    },
+    {
+      "name": "tm_8cc33b8309b8",
+      "value": "Team member: Michał Kiełtyka. Human-Centric Technology, IMAGINE WHAT’S NEXT, HackYeah 2026."
+    },
+    {
+      "name": "tm_8d3bc8b6da70",
+      "value": "Correct. "
+    },
+    {
+      "name": "tm_8d7b76167ded",
+      "value": "Malformed diagram structure, coordinate, field type or content limit"
+    },
+    {
+      "name": "tm_8facb43ce5a8",
+      "value": "Multiple WAV data chunks"
+    },
+    {
+      "name": "tm_9067d3d7df54",
+      "value": "No answer selected."
+    },
+    {
+      "name": "tm_912ea17c26bc",
+      "value": "Request image draft from Gemini"
+    },
+    {
+      "name": "tm_91f693ce2df6",
+      "value": "Layer {0}: {1}"
+    },
+    {
+      "name": "tm_9288e1863a98",
+      "value": "REV {0}"
+    },
+    {
+      "name": "tm_92ef241d29e9",
+      "value": "Delete selected revision and history"
+    },
+    {
+      "name": "tm_9389f6b8ec21",
+      "value": "{0}: duplicate audio target"
+    },
+    {
+      "name": "tm_93bd2aff4d63",
+      "value": "{0}, {1}. {2} scale."
+    },
+    {
+      "name": "tm_93c4abe27cf1",
+      "value": "direction"
+    },
+    {
+      "name": "tm_940938e8f655",
+      "value": "Portable package entry limit exceeded."
+    },
+    {
+      "name": "tm_943da120aeb5",
+      "value": "Duplicate region"
+    },
+    {
+      "name": "tm_949b9368f46f",
+      "value": "Verified recording duration, milliseconds"
+    },
+    {
+      "name": "tm_952bda65dd89",
+      "value": "Unsupported schema version"
+    },
+    {
+      "name": "tm_95cf48d80039",
+      "value": "Invalid portable export asset."
+    },
+    {
+      "name": "tm_95f2539f171d",
+      "value": "{0}: question needs prompt, explanation and referenced facts"
+    },
+    {
+      "name": "tm_96344a5615b4",
+      "value": "Cancelled. Any later provider output will not change this draft."
+    },
+    {
+      "name": "tm_965c92b43daa",
+      "value": "{0}\n{1} · {2} · {3}"
+    },
+    {
+      "name": "tm_9752b5741765",
+      "value": "Next materials"
+    },
+    {
+      "name": "tm_975d2775a80c",
+      "value": "Cancellation requested. Existing edits are retained."
+    },
+    {
+      "name": "tm_976524a24341",
+      "value": "Progress saved. Your unfinished answer has not been submitted."
+    },
+    {
+      "name": "tm_9770d687964e",
+      "value": "{0}: invalid direction"
+    },
+    {
+      "name": "tm_98019ed97e4f",
+      "value": "Reserved deflate block type"
+    },
+    {
+      "name": "tm_988a74152e6a",
+      "value": "Route is known."
+    },
+    {
+      "name": "tm_9a72221a2747",
+      "value": "Questions"
+    },
+    {
+      "name": "tm_9b692c57d1bb",
+      "value": "{0} × {1} source pixels. {2}"
+    },
+    {
+      "name": "tm_9befa54b44f7",
+      "value": "{0}: missing fact {1}"
+    },
+    {
+      "name": "tm_9c5b3f1a74be",
+      "value": "Invalid manifest asset path."
+    },
+    {
+      "name": "tm_9c8a9579abe5",
+      "value": "Direction"
+    },
+    {
+      "name": "tm_9c9fc0c81045",
+      "value": "Bookmark removed"
+    },
+    {
+      "name": "tm_9cd94e235c3b",
+      "value": "Bookmark this object"
+    },
+    {
+      "name": "tm_9d652931d454",
+      "value": "Invalid literal count"
+    },
+    {
+      "name": "tm_9d75285c3bf9",
+      "value": "Label delay: {0} ms"
+    },
+    {
+      "name": "tm_9d79c0988606",
+      "value": "This action could not be completed. Saved material is unchanged."
+    },
+    {
+      "name": "tm_9dc08e403382",
+      "value": "forward"
+    },
+    {
+      "name": "tm_9e03c1a35893",
+      "value": "Preparation result dimensions differ from the source"
+    },
+    {
+      "name": "tm_9f4cfe7361db",
+      "value": "License or rights declaration"
+    },
+    {
+      "name": "tm_9f74efb63257",
+      "value": "The preview above is the exact local source sent to the preparation service. Raster analysis uses Gemini. Source text is untrusted input. Every proposed fact still requires author review."
+    },
+    {
+      "name": "tm_9fa75bcd2677",
+      "value": "Audio integrity check failed."
+    },
+    {
+      "name": "tm_9feaddf0ded0",
+      "value": "Select an answer before submitting"
+    },
+    {
+      "name": "tm_a01c6d8c016f",
+      "value": "The source needs a prepared raster preview. Only region outlines are shown. Reviewed labels and connections remain available in the object list. Ask the author to export a version with a faithful preview."
+    },
+    {
+      "name": "tm_a0362561d1b4",
+      "value": "Import a material or source"
+    },
+    {
+      "name": "tm_a067633a2e89",
+      "value": "Recording does not match the current text or language."
+    },
+    {
+      "name": "tm_a14ac52cbf2e",
+      "value": "UNDERSTAND THROUGH EXPLORATION"
+    },
+    {
+      "name": "tm_a19403240930",
+      "value": "Optional hint"
+    },
+    {
+      "name": "tm_a1fcd5327c96",
+      "value": "Invalid speech result: {0}"
+    },
+    {
+      "name": "tm_a241984ca8f3",
+      "value": "Source object ID"
+    },
+    {
+      "name": "tm_a2ac2eac6f9d",
+      "value": "Source image exceeds 10 MiB."
+    },
+    {
+      "name": "tm_a2cf26482dbd",
+      "value": "Let screen reader handle automatic labels"
+    },
+    {
+      "name": "tm_a301c36f3686",
+      "value": "Your library is empty. Import a .touchmap package or prepare your own image."
+    },
+    {
+      "name": "tm_a35a386cd6e4",
+      "value": "Prepared source preview integrity mismatch."
+    },
+    {
+      "name": "tm_a3966d5d5b3c",
+      "value": "Invalid Huffman length"
+    },
+    {
+      "name": "tm_a3b18785fa1c",
+      "value": "{0}: distinct answer options required"
+    },
+    {
+      "name": "tm_a4354460c104",
+      "value": "{0}: invalid line"
+    },
+    {
+      "name": "tm_a48f13f6ef84",
+      "value": "View updated"
+    },
+    {
+      "name": "tm_a4ce824f7af5",
+      "value": "Export staging write incomplete."
+    },
+    {
+      "name": "tm_a4eef70108dd",
+      "value": "Draft revision {0} saved. Changed facts and recordings need review."
+    },
+    {
+      "name": "tm_a4f60b1acf54",
+      "value": "Choose source or .touchmap package"
+    },
+    {
+      "name": "tm_a53b76347f13",
+      "value": ". Please wait."
+    },
+    {
+      "name": "tm_a57b08a480b8",
+      "value": "Previous"
+    },
+    {
+      "name": "tm_a58e1ab05e2c",
+      "value": "Author and review declaration"
+    },
+    {
+      "name": "tm_a5d1fd8bda3e",
+      "value": "Teaching packages cannot contain undeclared files or private learning history."
+    },
+    {
+      "name": "tm_a69bfe8650bf",
+      "value": "Zoom +"
+    },
+    {
+      "name": "tm_a6b0a1a757c5",
+      "value": "Revision {0}, its private assets, checkpoints and attempts deleted. Other revisions remain in the library."
+    },
+    {
+      "name": "tm_a6df8294316e",
+      "value": "READY OFFLINE"
+    },
+    {
+      "name": "tm_a6e84cc9f405",
+      "value": "Start again, keep previous attempts"
+    },
+    {
+      "name": "tm_a6f4b10f5151",
+      "value": "Cancel preparation request"
+    },
+    {
+      "name": "tm_a6f6605e8249",
+      "value": "Use an HTTPS preparation address. Only device-local loopback may use HTTP."
+    },
+    {
+      "name": "tm_a7b56ce78078",
+      "value": "Native compression could not satisfy the portable expansion limit."
+    },
+    {
+      "name": "tm_a7dbfd58ee7b",
+      "value": "{0}, {1} source units from the route. Toward {2}."
+    },
+    {
+      "name": "tm_a8283ade3185",
+      "value": "Undo"
+    },
+    {
+      "name": "tm_a83949096d79",
+      "value": "The change could not be saved. Existing material is retained."
+    },
+    {
+      "name": "tm_a842dccfccc0",
+      "value": "A small start."
+    },
+    {
+      "name": "tm_a8ca67bbd79d",
+      "value": "3. Answer deliberately. Select an answer, then press Submit. Touching an object never submits an answer. Leaving keeps your unfinished selection available."
+    },
+    {
+      "name": "tm_a9b99d6be867",
+      "value": "Geometry exceeds grid budget"
+    },
+    {
+      "name": "tm_aa1efaf66b36",
+      "value": "needs_review"
+    },
+    {
+      "name": "tm_aac319f3bb78",
+      "value": "Crop width"
+    },
+    {
+      "name": "tm_ab7c554b2206",
+      "value": "Audio level: {0} percent"
+    },
+    {
+      "name": "tm_abdc1154056b",
+      "value": "Audio renderer is unavailable."
+    },
+    {
+      "name": "tm_abf8dc0900f9",
+      "value": "{0}: {1}. {2} {3}"
+    },
+    {
+      "name": "tm_ac75dc284f40",
+      "value": " · scan highlighted"
+    },
+    {
+      "name": "tm_aca01a1a3a27",
+      "value": "Correct"
+    },
+    {
+      "name": "tm_ad1d78617079",
+      "value": "audio:{0}:{1}"
+    },
+    {
+      "name": "tm_ad4df5185efc",
+      "value": "Repeat context"
+    },
+    {
+      "name": "tm_ae08f0af8840",
+      "value": "{0}: invalid polygon topology or topology complexity limit"
+    },
+    {
+      "name": "tm_af03c07560b7",
+      "value": "Invalid backwards deflate reference"
+    },
+    {
+      "name": "tm_b02b0252222f",
+      "value": "Invalid stored block"
+    },
+    {
+      "name": "tm_b094b1aeffa5",
+      "value": "Recording rights and speaker provenance"
+    },
+    {
+      "name": "tm_b0bc64c9ddbb",
+      "value": "One-use pairing code from the service operator"
+    },
+    {
+      "name": "tm_b21b24a53220",
+      "value": "License: {0}"
+    },
+    {
+      "name": "tm_b23a6a8439c0",
+      "value": "unknown"
+    },
+    {
+      "name": "tm_b24ec2941e99",
+      "value": "Reading order"
+    },
+    {
+      "name": "tm_b2701d74e733",
+      "value": "Audio ready"
+    },
+    {
+      "name": "tm_b28f3546cd5e",
+      "value": "Truncated deflate stream"
+    },
+    {
+      "name": "tm_b2a56b5857c1",
+      "value": "Select highlighted choice"
+    },
+    {
+      "name": "tm_b2b1982c346b",
+      "value": "Keep material"
+    },
+    {
+      "name": "tm_b33dcbb92fb0",
+      "value": "Choose an object first"
+    },
+    {
+      "name": "tm_b3de49f9fd14",
+      "value": "Audio renderer did not accept PCM samples."
+    },
+    {
+      "name": "tm_b435920322f2",
+      "value": "Material revision {0}. An unfinished selection is never treated as a submitted answer."
+    },
+    {
+      "name": "tm_b4836106f489",
+      "value": "Remove bookmark"
+    },
+    {
+      "name": "tm_b4ad93b6b54a",
+      "value": "Malformed or active SVG XML"
+    },
+    {
+      "name": "tm_b4aed33bb52c",
+      "value": "Add a new chart"
+    },
+    {
+      "name": "tm_b4ee1ee32878",
+      "value": "Listen to material overview"
+    },
+    {
+      "name": "tm_b58f558ec6b6",
+      "value": "Selected source preview. Add a description and review its objects in the author studio."
+    },
+    {
+      "name": "tm_b5e7ec28c3fb",
+      "value": "{0}, {1}"
+    },
+    {
+      "name": "tm_b6d82bff7898",
+      "value": "Crop height"
+    },
+    {
+      "name": "tm_b7754e14b7da",
+      "value": "Your selection is saved but not submitted."
+    },
+    {
+      "name": "tm_b8671a49e61d",
+      "value": "{0} · {1} / {2}"
+    },
+    {
+      "name": "tm_b86d11af7918",
+      "value": "Down"
+    },
+    {
+      "name": "tm_b8d648d59ab8",
+      "value": "Unsupported SVG effect or stylesheet"
+    },
+    {
+      "name": "tm_b8d7e6966be0",
+      "value": "Horizontal ticks: numerical coordinate|label, one per line"
+    },
+    {
+      "name": "tm_b8e928a361ea",
+      "value": "Create local authoring draft"
+    },
+    {
+      "name": "tm_b9099ea1cb15",
+      "value": "Manifest and content revision do not match."
+    },
+    {
+      "name": "tm_b9d324ad619b",
+      "value": "Sanitized image exceeds 10 MiB. Crop to a smaller area."
+    },
+    {
+      "name": "tm_b9d88913e7dd",
+      "value": "Unsupported SVG element: {0}. Use a safe raster rendering."
+    },
+    {
+      "name": "tm_ba32da0c32db",
+      "value": "Author: {0}"
+    },
+    {
+      "name": "tm_bad4cce25739",
+      "value": "About TouchMap"
+    },
+    {
+      "name": "tm_bb6591385f67",
+      "value": "Pause recording"
+    },
+    {
+      "name": "tm_bba180062158",
+      "value": "{0}: invalid evidence source"
+    },
+    {
+      "name": "tm_bcbdfa0bb33a",
+      "value": "Scanning highlights an object, Connections or Exit. One press selects it."
+    },
+    {
+      "name": "tm_bd445c462b7e",
+      "value": "overview"
+    },
+    {
+      "name": "tm_bd7f332ac0f1",
+      "value": "{0}: invalid coordinate"
+    },
+    {
+      "name": "tm_bdefdf1ea5a9",
+      "value": "An intact asset from this material is required to restore the draft."
+    },
+    {
+      "name": "tm_be8f46901c59",
+      "value": "Save rectangular region"
+    },
+    {
+      "name": "tm_be91bf9e8d5a",
+      "value": "SVG viewport dimensions must use pixels. Normalize other units with the computer converter."
+    },
+    {
+      "name": "tm_be91f9952bc3",
+      "value": "Speech response must contain recordings."
+    },
+    {
+      "name": "tm_beaa2b2db8bb",
+      "value": "OFFLINE BY DESIGN"
+    },
+    {
+      "name": "tm_bebf86f6c07b",
+      "value": "{0}: invalid geometry metadata"
+    },
+    {
+      "name": "tm_bee4ebaebc2c",
+      "value": "No material matches this search. Clear the search to see your library."
+    },
+    {
+      "name": "tm_bef593642651",
+      "value": "New question"
+    },
+    {
+      "name": "tm_bf37c7c20871",
+      "value": "sequence"
+    },
+    {
+      "name": "tm_bfdf95cf54c6",
+      "value": "Invalid or oversized service response."
+    },
+    {
+      "name": "tm_c072daa1cc0a",
+      "value": "Enter an overview of the source and its learning context."
+    },
+    {
+      "name": "tm_c0dbdcdbfb30",
+      "value": "Invalid pairing response."
+    },
+    {
+      "name": "tm_c0dc1e470144",
+      "value": "Truncated ZIP directory."
+    },
+    {
+      "name": "tm_c0e266a428fb",
+      "value": "Invalid package size."
+    },
+    {
+      "name": "tm_c0f0d2248b27",
+      "value": "Prepared source integrity mismatch."
+    },
+    {
+      "name": "tm_c10e39f5393c",
+      "value": "Save material overview"
+    },
+    {
+      "name": "tm_c15bc2e7108f",
+      "value": "SVG requires bounded finite viewport dimensions and a valid viewBox."
+    },
+    {
+      "name": "tm_c15c014fa0f3",
+      "value": "Started a new exploration. Previous submitted attempts remain in history."
+    },
+    {
+      "name": "tm_c271f2bb9318",
+      "value": "comparison"
+    },
+    {
+      "name": "tm_c2a5032d9206",
+      "value": "Provider keys stay on the preparation server. Learner activity is never sent. Pairing expires and is kept only in this running app session."
+    },
+    {
+      "name": "tm_c339728bd429",
+      "value": "{0}: dangling relationship"
+    },
+    {
+      "name": "tm_c33ea79bbca2",
+      "value": "Try all three shapes. Each selection plays a local recording and shows its description."
+    },
+    {
+      "name": "tm_c3421818a16b",
+      "value": "Source preview with region boundaries. All geometry can also be edited in the coordinate forms below."
+    },
+    {
+      "name": "tm_c3613b1704f5",
+      "value": "Rotate"
+    },
+    {
+      "name": "tm_c4bd04c5712c",
+      "value": "Native compressed entry is unsupported."
+    },
+    {
+      "name": "tm_c4ecfe02822e",
+      "value": "Save title"
+    },
+    {
+      "name": "tm_c575271cd9f7",
+      "value": "Choose a series first."
+    },
+    {
+      "name": "tm_c61ababd1eb8",
+      "value": "{0} overlapping objects. Choose a layer:"
+    },
+    {
+      "name": "tm_c6391baafa4e",
+      "value": "Last explored: {0}. "
+    },
+    {
+      "name": "tm_c67c9cb8ec87",
+      "value": "Exact source value, leave blank for unknown"
+    },
+    {
+      "name": "tm_c67f2a65967e",
+      "value": "Manifest expanded asset size exceeds limit"
+    },
+    {
+      "name": "tm_c74dc961ee67",
+      "value": "Delete learning history and bookmarks"
+    },
+    {
+      "name": "tm_c7b1eaaed7bc",
+      "value": "{0} submitted attempts. Hearing a label never completes a question."
+    },
+    {
+      "name": "tm_c821dead4cbe",
+      "value": "External SVG URL rejected"
+    },
+    {
+      "name": "tm_c8bfe9d7ec8f",
+      "value": "Invalid viewBox"
+    },
+    {
+      "name": "tm_c9046f7a37ad",
+      "value": "description"
+    },
+    {
+      "name": "tm_c94e6c3c0d9a",
+      "value": "Crop applied. The preview is the exact source that will be prepared."
+    },
+    {
+      "name": "tm_c96bc61756af",
+      "value": "Ready offline."
+    },
+    {
+      "name": "tm_ca06b4c0a8be",
+      "value": "Upload this selected image to the configured service and Gemini."
+    },
+    {
+      "name": "tm_ca24da6134f7",
+      "value": "Exit to library"
+    },
+    {
+      "name": "tm_ca5d8dbc0ae4",
+      "value": "Package integrity checked. Read the author declaration before accepting."
+    },
+    {
+      "name": "tm_cae059c8c263",
+      "value": "Add provenance"
+    },
+    {
+      "name": "tm_cb9002ea4db5",
+      "value": "Save axes and units"
+    },
+    {
+      "name": "tm_cc68b223546d",
+      "value": "Preparing recordings {0} to {1} of {2}."
+    },
+    {
+      "name": "tm_ccdbb90eafaa",
+      "value": "Previous materials"
+    },
+    {
+      "name": "tm_cd42404d52ad",
+      "value": "value"
+    },
+    {
+      "name": "tm_cd55a9d95751",
+      "value": "{0} · {1}"
+    },
+    {
+      "name": "tm_cd85425931b2",
+      "value": "Published and ready offline. Export from the library."
+    },
+    {
+      "name": "tm_ce0218d2bfb5",
+      "value": "Package expansion limit exceeded."
+    },
+    {
+      "name": "tm_ce0923cb334c",
+      "value": "{0} objects. {1} connections. {2}"
+    },
+    {
+      "name": "tm_ce517eefc158",
+      "value": "Replay label"
+    },
+    {
+      "name": "tm_ce58fe5c1b1f",
+      "value": "Confirm geometry"
+    },
+    {
+      "name": "tm_ce89ae822e8b",
+      "value": "Reset view"
+    },
+    {
+      "name": "tm_cf90ba16af2d",
+      "value": "Recording paused. Resume keeps your place."
+    },
+    {
+      "name": "tm_cfc1be58d9b7",
+      "value": "Pause scanning"
+    },
+    {
+      "name": "tm_cfdef3adfaaf",
+      "value": "Delete object and its connections"
+    },
+    {
+      "name": "tm_d10193049c1a",
+      "value": "Source and diagram must be covered by integrity hashes."
+    },
+    {
+      "name": "tm_d10674385e87",
+      "value": "View attempts and bookmarks"
+    },
+    {
+      "name": "tm_d23977611acd",
+      "value": "Pair this authoring session"
+    },
+    {
+      "name": "tm_d254d4785d5b",
+      "value": "Invalid viewport"
+    },
+    {
+      "name": "tm_d259ec91be56",
+      "value": "Expected one SVG root"
+    },
+    {
+      "name": "tm_d2762a8a845f",
+      "value": "AUTHOR STUDIO"
+    },
+    {
+      "name": "tm_d3d45ba508d2",
+      "value": "{0} objects  ·  {1} connections  ·  {2} questions"
+    },
+    {
+      "name": "tm_d457d5d1c986",
+      "value": "Delete this value"
+    },
+    {
+      "name": "tm_d5ff31d5eead",
+      "value": "No regions to explore"
+    },
+    {
+      "name": "tm_d640c7421da0",
+      "value": "Resume"
+    },
+    {
+      "name": "tm_d65d2f43e0cd",
+      "value": "Question no longer matches reviewed facts"
+    },
+    {
+      "name": "tm_d69657bc9d03",
+      "value": "Stop audio"
+    },
+    {
+      "name": "tm_d6eb4b9eaa69",
+      "value": "Vertical axis label"
+    },
+    {
+      "name": "tm_d771be937497",
+      "value": "ZIP entry limit or directory is invalid."
+    },
+    {
+      "name": "tm_d7cbbb688b2e",
+      "value": "selected"
+    },
+    {
+      "name": "tm_d7dea3934f8d",
+      "value": "Active or external SVG element rejected"
+    },
+    {
+      "name": "tm_d8885610a2ef",
+      "value": "Audio volume"
+    },
+    {
+      "name": "tm_d8af9734eeca",
+      "value": "{0}: duplicate accepted answer"
+    },
+    {
+      "name": "tm_d9f739c6a31c",
+      "value": "Answer selected. Submit when you are ready."
+    },
+    {
+      "name": "tm_da6cf3757586",
+      "value": "Invalid XML character reference"
+    },
+    {
+      "name": "tm_da6ddd90571f",
+      "value": "Source preview must be an intact PNG matching source dimensions."
+    },
+    {
+      "name": "tm_daae03881f7a",
+      "value": "Enter a material title."
+    },
+    {
+      "name": "tm_db34f714f639",
+      "value": "Continue authoring"
+    },
+    {
+      "name": "tm_db3c04ee0e8a",
+      "value": "Pause with selection unsubmitted"
+    },
+    {
+      "name": "tm_dbe54fbe4fc4",
+      "value": "{0}: wrong audio language"
+    },
+    {
+      "name": "tm_dc20b3d5d2cd",
+      "value": "Library"
+    },
+    {
+      "name": "tm_dc273117482b",
+      "value": "Connections"
+    },
+    {
+      "name": "tm_dc5c057bb74c",
+      "value": "Apply crop and update preview"
+    },
+    {
+      "name": "tm_dd2feab3c278",
+      "value": "Deflate output limit"
+    },
+    {
+      "name": "tm_de5236ee1561",
+      "value": "Objects"
+    },
+    {
+      "name": "tm_dec2840d4a5b",
+      "value": "Connection direction is unknown"
+    },
+    {
+      "name": "tm_dee8317a6682",
+      "value": "The system picker returned an invalid file selection."
+    },
+    {
+      "name": "tm_df24ef128adf",
+      "value": "Save connection"
+    },
+    {
+      "name": "tm_df475fec3a0f",
+      "value": "Native compressed entry metadata mismatch."
+    },
+    {
+      "name": "tm_df510917bf62",
+      "value": "A question needs a prompt and at least two ID|label options."
+    },
+    {
+      "name": "tm_df6246cbc9fb",
+      "value": "{0}: question revision is stale"
+    },
+    {
+      "name": "tm_dfbce2fa8348",
+      "value": "Integrity check failed: {0}"
+    },
+    {
+      "name": "tm_e027b54139cd",
+      "value": "ZIP local path or bounds mismatch."
+    },
+    {
+      "name": "tm_e19af17e3aa2",
+      "value": "Image exceeds the service limit."
+    },
+    {
+      "name": "tm_e1c6c0f162d6",
+      "value": "All geometry, facts and questions have been reviewed."
+    },
+    {
+      "name": "tm_e1d9614dc867",
+      "value": "Late result saved separately for review."
+    },
+    {
+      "name": "tm_e2435ca7facc",
+      "value": "Your materials stay on this device. No account is needed."
+    },
+    {
+      "name": "tm_e24d49070d9b",
+      "value": "{0}: question needs review for current revision"
+    },
+    {
+      "name": "tm_e2d0a54968ea",
+      "value": "Delete"
+    },
+    {
+      "name": "tm_e301820ac839",
+      "value": "Incoming"
+    },
+    {
+      "name": "tm_e3862530f6d2",
+      "value": "Exploration surface. The controls and object list below remain accessible."
+    },
+    {
+      "name": "tm_e3d348ad84a6",
+      "value": "Screen reader accessibility is currently disabled. Native recordings are available."
+    },
+    {
+      "name": "tm_e49c2811840e",
+      "value": "{0}: inconsistent answer options"
+    },
+    {
+      "name": "tm_e4c0d3ccf523",
+      "value": "{0}: log domain and ticks must be positive"
+    },
+    {
+      "name": "tm_e4f934f321eb",
+      "value": "reviewed"
+    },
+    {
+      "name": "tm_e70ac56176a9",
+      "value": "Choose an existing audio target and provide recording rights/provenance."
+    },
+    {
+      "name": "tm_e747d4df967b",
+      "value": "Only explicit submissions appear as attempts."
+    },
+    {
+      "name": "tm_e77bd9099eca",
+      "value": "Teaching package exported. Learning history and preferences are excluded."
+    },
+    {
+      "name": "tm_e8f4cfc5f18d",
+      "value": "Select this connection"
+    },
+    {
+      "name": "tm_e960651babb1",
+      "value": "Delete connection"
+    },
+    {
+      "name": "tm_ea1c510d1ddb",
+      "value": "Scan"
+    },
+    {
+      "name": "tm_ea34a32c0364",
+      "value": "Missing identity fields"
+    },
+    {
+      "name": "tm_eaa684aba094",
+      "value": "Opening your local library..."
+    },
+    {
+      "name": "tm_eb167fec2151",
+      "value": "Malformed or incomplete SVG source"
+    },
+    {
+      "name": "tm_ebb40772d136",
+      "value": "Chart facts"
+    },
+    {
+      "name": "tm_ed1bcdb8fdf5",
+      "value": "{0}: geometry and meaning need review for current revision"
+    },
+    {
+      "name": "tm_ed4efe89c160",
+      "value": "Speech duration does not match the WAV recording."
+    },
+    {
+      "name": "tm_ed6a9bff089b",
+      "value": "Duplicate, active or external SVG attribute"
+    },
+    {
+      "name": "tm_ed7a903c0ef3",
+      "value": "Choose a chart first."
+    },
+    {
+      "name": "tm_ed9057110dfa",
+      "value": "Prepare this SVG to create a faithful preview. Use Convert selected SVG in Publish before approving geometry or meaning. Only the editable region outlines are shown until preparation finishes."
+    },
+    {
+      "name": "tm_ed9595df3a04",
+      "value": "Square, four sided shape in the centre"
+    },
+    {
+      "name": "tm_edb2cd3b74c9",
+      "value": "category"
+    },
+    {
+      "name": "tm_efe8656fc7c2",
+      "value": "Question type"
+    },
+    {
+      "name": "tm_f02ab8e9ae41",
+      "value": "Follow the displayed path."
+    },
+    {
+      "name": "tm_f11cdc8d1a1d",
+      "value": "Chart title"
+    },
+    {
+      "name": "tm_f11fc7036e00",
+      "value": "{0}: invalid ticks"
+    },
+    {
+      "name": "tm_f1b430fcd8af",
+      "value": "Compressing and exporting material"
+    },
+    {
+      "name": "tm_f2627e1c1ae3",
+      "value": "{0}: missing label or geometry"
+    },
+    {
+      "name": "tm_f29900ccabd6",
+      "value": "An intact source preview is required."
+    },
+    {
+      "name": "tm_f2f99863fcb8",
+      "value": "{0}: unknown or unreviewed chart value cannot be an exact fact"
+    },
+    {
+      "name": "tm_f370838b58f2",
+      "value": "Image exceeds 20 megapixels."
+    },
+    {
+      "name": "tm_f4174a4c9ac4",
+      "value": "Open material"
+    },
+    {
+      "name": "tm_f579e0746646",
+      "value": "Recordings incomplete."
+    },
+    {
+      "name": "tm_f5e2ce5b03c3",
+      "value": "Material title"
+    },
+    {
+      "name": "tm_f5f7687e5903",
+      "value": "Horizontal axis label"
+    },
+    {
+      "name": "tm_f67b3ce7587c",
+      "value": "{0}: region meaning is unreviewed"
+    },
+    {
+      "name": "tm_f6884a2fed7e",
+      "value": "Crop left"
+    },
+    {
+      "name": "tm_f6c1472e9afb",
+      "value": "Correct."
+    },
+    {
+      "name": "tm_f73fa31ef678",
+      "value": "Export private learning history"
+    },
+    {
+      "name": "tm_f846ef468846",
+      "value": "Native audio playback failed."
+    },
+    {
+      "name": "tm_f8847e9dae6d",
+      "value": "Published. Required recordings are still missing, so this revision is not ready offline."
+    },
+    {
+      "name": "tm_f8f808bc8a95",
+      "value": "Deflate size or trailing data mismatch"
+    },
+    {
+      "name": "tm_f9056c045106",
+      "value": "{0}: relation is unreviewed or direction unknown"
+    },
+    {
+      "name": "tm_f99eb7d660c1",
+      "value": " · bookmarked"
+    },
+    {
+      "name": "tm_f9dd6ab1a25c",
+      "value": "Label dwell delay"
+    },
+    {
+      "name": "tm_fa20630813a5",
+      "value": "The export could not be written completely."
+    },
+    {
+      "name": "tm_fa7c5679324a",
+      "value": "Content revision changed. Accept it explicitly before starting a new attempt."
+    },
+    {
+      "name": "tm_fafddbe02e19",
+      "value": "Author declaration required"
+    },
+    {
+      "name": "tm_fb127c662d64",
+      "value": "Package integrity checked. Existing acceptance and learning progress restored."
+    },
+    {
+      "name": "tm_fb62fe2ae6b2",
+      "value": "{0}: {1}"
+    },
+    {
+      "name": "tm_fb68abc68c75",
+      "value": "Relationship type"
+    },
+    {
+      "name": "tm_fcde2b2edba5",
+      "value": "bar"
+    },
+    {
+      "name": "tm_fdaddd84b305",
+      "value": "{0}: chart needs review for current revision"
+    },
+    {
+      "name": "tm_fde940f55dc8",
+      "value": "Adjust interaction preferences"
+    },
+    {
+      "name": "tm_fe1159191d87",
+      "value": "Package integrity checked. Draft opened for author review."
+    },
+    {
+      "name": "tm_fe793fdae59f",
+      "value": "Audio integrity metadata differs from its manifest."
+    },
+    {
+      "name": "tm_fe8b69246bde",
+      "value": "ZIP local entry mismatch."
+    },
+    {
+      "name": "tm_fe90763018c1",
+      "value": "Route in the picture is unspecified. Graph destination: {0}."
+    },
+    {
+      "name": "tm_ff0bfbb8caef",
+      "value": "Recording unavailable. The full text remains available."
+    },
+    {
+      "name": "tm_ff745d267793",
+      "value": "Use an existing region ID, a number or blank unknown value, and precision 0 to 10."
+    },
+    {
+      "name": "tm_ff7772053abf",
+      "value": "both"
+    },
+    {
+      "name": "tm_ff9dae927123",
+      "value": "SVG preparation reports unsupported features explicitly."
+    },
+    {
+      "name": "tm_fffaa3b383d1",
+      "value": "File access expired or the file is truncated."
     }
   ]
 }

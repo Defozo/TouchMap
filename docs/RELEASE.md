@@ -4,7 +4,7 @@ Prepared for DEFOZO SOFTWARE HOUSE. Sole team member: Michał Kiełtyka.
 
 `scripts/package-release.py` builds a local review bundle from a frozen commit. It never publishes a repository, uploads files or submits a competition entry. Python, Git and FFmpeg's `ffprobe` must be available. The committed dependency locks and `toolchain.lock.json` remain the build reference.
 
-After final source changes, commit the reviewed tree, build and verify its signed HAP, complete the English demo, and run `scripts/verify-release.py` for that same commit. The expected inputs are `dist/touchmap-signed.hap`, `dist/touchmap-demo.mp4` and `dist/release-verification.json`. The verification must contain the committed team, matching HAP and sample hashes, explicit gates and the exact source commit.
+After final source changes, commit the reviewed tree, build and verify its signed HAP, complete the English demo, and run `scripts/verify-release.py` for the final release commit. The expected inputs are `dist/touchmap-signed.hap`, `dist/touchmap-demo.mp4` and `dist/release-verification.json`. The verification must contain the committed team, matching HAP and sample hashes, explicit gates and the exact release commit. The packager also compares `hap.appSourceSha256` with the committed `app/` bytes using the build's path/content fingerprint algorithm. Documentation and evidence may be committed after the HAP build if the app fingerprint still matches. `hap.buildInputGitHead` is retained separately; a documentation commit is never represented as having been used for an earlier build.
 
 ```sh
 # A preflight creates no release archive and returns JSON failures with exit code 1.

@@ -1,0 +1,5 @@
+This development-only helper is a separate normal-permission application, `org.touchmap.testshare`. It requests no permissions and embeds the exact supplied `.touchmap` package as a raw resource. Its two buttons copy the bytes into its own private files directory, construct a file URI with the platform API, and launch TouchMap with a temporary read grant using either `viewData` plus `uri` or `sendData` plus `ability.params.stream`.
+
+Inside WSL, run `python3 scripts/build-share-sender.py --package docs/evidence/native-authored.touchmap`. The pinned project toolchain builds and signs the helper in a private temporary directory. Only the signed helper HAP and non-secret hash report are copied back. Install `dist/touchmap-share-sender-signed.hap` on the second test device, launch the helper and press its buttons. Cold and existing-ability receipt must be observed in TouchMap; successfully sending a Want alone is not import evidence.
+
+This helper is excluded from the production TouchMap application. It does not use privileged shell file paths, broad storage permissions or a system signing profile.

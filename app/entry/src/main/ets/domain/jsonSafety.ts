@@ -1,3 +1,4 @@
+import { tr } from './i18n';
 // Inspect untrusted JSON before JSON.parse: duplicate decoded properties and
 // excessive nesting must be rejected instead of silently changing the contract.
 class JsonInspection {
@@ -5,7 +6,7 @@ class JsonInspection {
   private nodes: number = 0;
   constructor(private text: string) {}
   private whitespace(): void { while(this.position<this.text.length&&[9,10,13,32].includes(this.text.charCodeAt(this.position)))this.position++; }
-  private fail(): never { throw new Error('Malformed, duplicate-key or unbounded JSON document.'); }
+  private fail(): never { throw new Error(tr('tm_0fe0ba4ba333')); }
   private take(character: string): void { this.whitespace();if(this.text[this.position]!==character)this.fail();this.position++; }
   private string(): string {
     const start=this.position;this.position++;
@@ -49,6 +50,6 @@ class JsonInspection {
   inspect(): void { this.value(0);this.whitespace();if(this.position!==this.text.length)this.fail(); }
 }
 export function assertBoundedJson(text: string): void {
-  if(typeof text!=='string'||text.length>16*1024*1024)throw new Error('JSON exceeds the supported document size.');
+  if(typeof text!=='string'||text.length>16*1024*1024)throw new Error(tr('tm_195d983cb26f'));
   new JsonInspection(text).inspect();
 }

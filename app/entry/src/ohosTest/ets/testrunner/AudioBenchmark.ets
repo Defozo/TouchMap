@@ -1,8 +1,8 @@
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 import { nativeContext } from './NativeContext';
 import { Repository, Material, defaultProfile, encode, writeBytes } from '../../../main/ets/platform/Repository';
-import { Feedback } from '../../../main/ets/platform/Feedback';
-interface AudioMeasure { index: number; material: string; target: string; onsetMs: number; scheduledLabelToPlayingMs: number; error: string; }
+import { Feedback, AudioOnsetTrace } from '../../../main/ets/platform/Feedback';
+interface AudioMeasure { index: number; material: string; target: string; onsetMs: number; scheduledLabelToPlayingMs: number; error: string; trace?: AudioOnsetTrace; }
 interface AudioReport { status: string; requested: number; succeeded: number; failed: number; dwellMs: number; onsetP95Ms: number; scheduledLabelToPlayingP95Ms: number; onsetTargetMs: number; targetMet: boolean; scope: string; measurements: AudioMeasure[]; }
 interface AudioProgress { phase: string; index: number; requested: number; timestamp: number; error: string; measurements: AudioMeasure[]; }
 
@@ -23,12 +23,12 @@ async function measureAudio(count: number): Promise<void> {
   writeBytes(`${context.filesDir}/audio-benchmark-progress.json`, encode(JSON.stringify(progress)));
   const playback = new Feedback(); await playback.initialize();
   const profile = defaultProfile(); profile.readerSpeech = false; profile.vibration = false;
-  const materials = (await repository.list()).filter((material: Material) => ['water-cycle','lumina-process','rainfall-chart'].includes(material.diagram.packageId));
+  const materials = (await repository.list()).filter((material: Material) => !material.draft && material.ready && ['water-cycle','lumina-process','rainfall-chart'].includes(material.diagram.packageId) && material.diagram.regions.some((region) => material.diagram.audio.some((asset) => asset.targetId === region.id && asset.kind === 'label')));
   const measurements: AudioMeasure[] = [];
   if (!Number.isInteger(count) || count < 1 || count > 1000 || !materials.length) { await delegator.finishTest('Invalid audio benchmark count or missing sample materials', -1); return; }
   let consecutiveFailures = 0;
   for (let index = 0; index < count; index++) {
-    const material = materials[index % materials.length]; const regions = material.diagram.regions;
+    const material = materials[index % materials.length]; const regions = material.diagram.regions.filter((region) => material.diagram.audio.some((asset) => asset.targetId === region.id && asset.kind === 'label'));
     const region = regions[Math.floor(index / materials.length) % regions.length];
     const measured: AudioMeasure = {index:index,material:material.key,target:region.id,onsetMs:-1,scheduledLabelToPlayingMs:-1,error:''};
     progress.phase = 'scheduled'; progress.index = index; progress.timestamp = Date.now(); progress.measurements = measurements;
@@ -38,6 +38,7 @@ async function measureAudio(count: number): Promise<void> {
     await new Promise<void>((resolve) => {
       let done = false;
       const timeout = setTimeout(() => { if (!done) { done = true; measured.error = 'No accepted native PCM write within 5 seconds'; resolve(); } }, 5000);
+      playback.onPlaybackTrace = (trace: AudioOnsetTrace) => { measured.trace = trace; };
       playback.onPlaybackStarted = (onset: number) => {
         if (!done) { done = true; clearTimeout(timeout); measured.onsetMs = onset; measured.scheduledLabelToPlayingMs = Date.now() - begin; resolve(); }
       };

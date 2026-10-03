@@ -1,0 +1,88 @@
+{
+  "recordedAt": "2026-10-03T17:46:34.351342+02:00",
+  "device": "127.0.0.1:55556",
+  "productionHapSha256": "ae7f46d80be15b123e65915eaef3553892098b0a4d19881c603e2c0aeb9b07bf",
+  "scope": "Direct interaction with installed native ArkUI app and its actual accessibility tree. This is engineering verification, not a participant accessibility study.",
+  "passed": [
+    {
+      "flow": "200 percent text settings and navigation",
+      "observation": "Slider displayed200 percent, text and action labels reflowed, navigation remained reachable.",
+      "evidence": "native-settings-200.jpeg"
+    },
+    {
+      "flow": "200 percent material acceptance",
+      "observation": "The Lumina workshop source and author declaration rendered and Accept this author declaration opened tutorial."
+    },
+    {
+      "flow": "200 percent tutorial",
+      "observation": "Two Next step activations changed content and then displayed Start exploring; activation opened the material."
+    },
+    {
+      "flow": "Scanning controls",
+      "observation": "Start scanning changed the primary control to Select highlighted choice; Pause scanning was reachable and stopped the scan. Choice selection still requires verification after adding visible highlighted-label text."
+    },
+    {
+      "flow": "Manual region creation at200 percent",
+      "observation": "Created Manual rectangle check in the Lumina author editor using default rectangular coordinates and saved. New object appeared with geometry and meaning both needs_review and could be selected.",
+      "evidence": "native-manual-region-200.jpeg"
+    },
+    {
+      "flow": "Manual geometry Undo and Redo at 200 percent",
+      "observation": "Changed the manual rectangle left coordinate from 20 to 35 and saved revision 3. Undo saved revision 2 with x20; Redo saved revision 3 with x35. The native UI showed each committed revision and the persisted diagrams independently matched. Existing published revision1 stayed present.",
+      "evidence": "native-manual-undo-state.jsonl and native-manual-redo-200.jpeg"
+    },
+    {
+      "flow": "Paginated Library at 200 percent",
+      "observation": "Returned from the editor, scrolled all three cards and activated Next materials. The next page opened and reset scroll to the heading. No watchdog exit occurred during this retest."
+    },
+    {
+      "flow": "Actual cross-installation import and acceptance while offline",
+      "observation": "Selected the exact native-authored.touchmap exported on primary through the second installation SystemPicker. Accepted the stated developer author declaration. All11 imported manifest assets matched SHA256 and byte lengths. IPv4 and IPv6 outbound were blocked except HDC.",
+      "evidence": "second-import-integrity.json; second-offline-on.json"
+    },
+    {
+      "flow": "200 percent scanning selection and lesson",
+      "observation": "The near-button highlight displayed Input1. Select highlighted choice committed box_input_1; Pause scanning stopped scanning. Opened the direction question, selected Gate1 and explicitly submitted. Correct feedback displayed; no automatic answer was submitted by scanning.",
+      "evidence": "second-scanning-selected.json; second-correct-answer-200.jpeg; second-private-history.json"
+    },
+    {
+      "flow": "Separate private history export and offline restart",
+      "observation": "Exported private history using the real SystemPicker save location and checkmark. JSON contains exactly one correct submission, box_input_1 focus and paused=true. Forced the app process to stop, reopened imported material without network and saw Input1 and the prior correct answer in Resume.",
+      "evidence": "second-history-exported.json; second-private-history.json; second-offline-resume.json"
+    },
+    {
+      "flow": "Native audio controls and representative onset",
+      "observation": "Actual device tests passed cancellation before dwell, replacement retaining only latest target and native pause/resume to natural finish. Corrected prepared-material benchmark completed100 of100 onsets with p95=20ms; total with250ms dwell p95=289ms. Accepted PCM write timing, not physical acoustic latency.",
+      "evidence": "native-audio-controls.json; native-audio-benchmark.json"
+    },
+    {
+      "flow": "Normal-grant external shared open while offline",
+      "observation": "An ordinary-permission separate sender shared its own sandbox file with read-URI permission. Cold viewData opened Resume from no target process. After returning to Library, sendData with ability.params.stream reopened Resume in the same PID30703. Input1 and the correct Gate1 answer remained present.",
+      "evidence": "native-share-cold-result.json; native-share-warm-context.json; native-share-sender-log.txt"
+    }
+  ],
+  "failuresFound": [
+    {
+      "flow": "Return from scanning to Library",
+      "observation": "Foreground THREAD_BLOCK_6S watchdog; Library vSync took7040ms. Source fix adds three-card pages with complete-title filtering.",
+      "evidence": "native-library-freeze-before-fix.log",
+      "verification": "Passed rebuilt-device retest after editor and page transition; broader scanning roundtrip remains pending."
+    },
+    {
+      "flow": "200 percent remaining secondary controls",
+      "observation": "Library Edit/Export/Delete and exploration mode/viewport buttons used fixed font sizes. Source now scales them.",
+      "verification": "Scaled secondary buttons exercised in editor/library and imported learner flow at200 percent."
+    },
+    {
+      "flow": "Scanning choice visibility",
+      "observation": "Highlighted item could be outside the visible scroll area and audio status replaced scan status. Source now displays current highlighted choice beside Select.",
+      "verification": "Passed rebuilt-device scanning highlight and choice selection; exported progress identifies Input1."
+    }
+  ],
+  "pending": [
+    "New synthetic four-byte PCM tail completion regression pending platform execution"
+  ],
+  "retestHapSha256": "3b4a8921aae3e708c76afd227b6e3b2314b60d9db055c50b042e76863c7d06be",
+  "retestedAt": "2026-10-03T16:08:31.7968513Z",
+  "transferTestHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54"
+}

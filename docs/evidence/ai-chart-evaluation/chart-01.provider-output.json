@@ -1,0 +1,176 @@
+{
+  "title": "Illustrative rainfall",
+  "description": "Bar chart showing illustrative monthly rainfall amounts in millimeters for April, May, and June, with June marked as unknown.",
+  "regions": [
+    {
+      "id": "region-title",
+      "label": "Title",
+      "description": "Chart title text 'Illustrative rainfall'",
+      "box_2d": [34, 359, 74, 640],
+      "sourceText": "Illustrative rainfall"
+    },
+    {
+      "id": "region-y-axis-label",
+      "label": "Y-axis label",
+      "description": "Label indicating rainfall unit in millimeters",
+      "box_2d": [119, 122, 155, 287],
+      "sourceText": "Rainfall (mm)"
+    },
+    {
+      "id": "region-x-axis-label",
+      "label": "X-axis label",
+      "description": "Label indicating x-axis categories are months",
+      "box_2d": [830, 461, 859, 538],
+      "sourceText": "Month"
+    },
+    {
+      "id": "region-bar-april",
+      "label": "April Bar",
+      "description": "Bar for April with printed label '40 mm'",
+      "box_2d": [399, 196, 703, 290],
+      "sourceText": "40 mm\nApril"
+    },
+    {
+      "id": "region-bar-may",
+      "label": "May Bar",
+      "description": "Bar for May with printed label '65 mm'",
+      "box_2d": [237, 442, 703, 536],
+      "sourceText": "65 mm\nMay"
+    },
+    {
+      "id": "region-bar-june",
+      "label": "June Data Point",
+      "description": "June column with label 'Unknown' and a dashed circle containing '?'",
+      "box_2d": [503, 678, 704, 792],
+      "sourceText": "Unknown\n?\nJune"
+    },
+    {
+      "id": "region-footnote",
+      "label": "Footnote",
+      "description": "Explanatory footnote text",
+      "box_2d": [914, 189, 943, 811],
+      "sourceText": "Authored teaching values. Unknown means no recorded value."
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart-rainfall",
+      "title": "Illustrative rainfall",
+      "kind": "bar",
+      "xAxis": {
+        "label": "Month",
+        "unit": "",
+        "scale": "category",
+        "domain": [0, 2],
+        "ticks": [
+          {
+            "value": 0,
+            "label": "April"
+          },
+          {
+            "value": 1,
+            "label": "May"
+          },
+          {
+            "value": 2,
+            "label": "June"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Rainfall",
+        "unit": "mm",
+        "scale": "linear",
+        "domain": [0, 80],
+        "ticks": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 20,
+            "label": "20"
+          },
+          {
+            "value": 40,
+            "label": "40"
+          },
+          {
+            "value": 60,
+            "label": "60"
+          },
+          {
+            "value": 80,
+            "label": "80"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series-rainfall",
+          "label": "Rainfall",
+          "values": [
+            {
+              "id": "val-april",
+              "regionId": "region-bar-april",
+              "x": "April",
+              "value": 40,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "Text directly above bar: '40 mm'",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-may",
+              "regionId": "region-bar-may",
+              "x": "May",
+              "value": 65,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "Text directly above bar: '65 mm'",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-june",
+              "regionId": "region-bar-june",
+              "x": "June",
+              "value": null,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "Text indicates 'Unknown' with '?' inside dashed circle; footnote states 'Unknown means no recorded value.'",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Primary chart diagram",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "revision": 1,
+        "issues": [],
+        "reviewer": "",
+        "status": "draft"
+      }
+    }
+  ],
+  "unresolved": [],
+  "unsupported": []
+}

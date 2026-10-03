@@ -1,0 +1,163 @@
+{
+  "id": "chart-01",
+  "split": "development",
+  "variant": "clear-unknown",
+  "model": "gemini-3.8-flash",
+  "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+  "startedAt": "2026-10-03T16:13:44.782349+00:00",
+  "schemaSuccess": true,
+  "usableChartDraft": true,
+  "sourceSha256": "3434e886db07e5673db44a5679160931c1de1b49441a5ee749964eaef04d97ae",
+  "chartCount": 1,
+  "kindCorrect": true,
+  "xLabelsCorrect": true,
+  "yLabelCorrect": true,
+  "unitCorrect": true,
+  "domainCorrect": true,
+  "ticksCorrect": true,
+  "scaleCorrect": true,
+  "exactValuesCorrect": 3,
+  "expectedValues": 3,
+  "unknownsCorrect": 1,
+  "expectedUnknowns": 1,
+  "unsupportedValueAssertions": [],
+  "unexpectedRelations": 0,
+  "observed": {
+    "kind": "bar",
+    "xAxis": {
+      "label": "Month",
+      "unit": "",
+      "scale": "category",
+      "domain": [
+        0.0,
+        2.0
+      ],
+      "ticks": [
+        {
+          "value": 0.0,
+          "label": "April"
+        },
+        {
+          "value": 1.0,
+          "label": "May"
+        },
+        {
+          "value": 2.0,
+          "label": "June"
+        }
+      ]
+    },
+    "yAxis": {
+      "label": "Rainfall",
+      "unit": "mm",
+      "scale": "linear",
+      "domain": [
+        0.0,
+        80.0
+      ],
+      "ticks": [
+        {
+          "value": 0.0,
+          "label": "0"
+        },
+        {
+          "value": 20.0,
+          "label": "20"
+        },
+        {
+          "value": 40.0,
+          "label": "40"
+        },
+        {
+          "value": 60.0,
+          "label": "60"
+        },
+        {
+          "value": 80.0,
+          "label": "80"
+        }
+      ]
+    },
+    "values": [
+      {
+        "x": "April",
+        "value": 40.0,
+        "precision": 0
+      },
+      {
+        "x": "May",
+        "value": 65.0,
+        "precision": 0
+      },
+      {
+        "x": "June",
+        "value": null,
+        "precision": 0
+      }
+    ]
+  },
+  "report": {
+    "unsupported": [],
+    "unresolved": []
+  },
+  "usage": {
+    "input_tokens_by_modality": [
+      {
+        "modality": "image",
+        "tokens": 1080
+      },
+      {
+        "modality": "text",
+        "tokens": 193
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_input_tokens": 1273,
+    "total_output_tokens": 1441,
+    "total_thought_tokens": 0,
+    "total_tokens": 2714,
+    "total_tool_use_tokens": 0,
+    "raw_prompt_token": 3229,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1457
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1457
+          }
+        ]
+      }
+    ]
+  },
+  "durationMs": 9547
+}

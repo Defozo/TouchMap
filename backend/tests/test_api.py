@@ -122,3 +122,32 @@ def test_expired_result_is_removed_before_job_poll(tmp_path):
     with store.connection() as db:db.execute("UPDATE jobs SET expires=? WHERE id='expired'",(time.time()-1,))
     result=store.job("expired","session")
     assert result["state"]=="expired" and result["result"] is None
+
+
+def test_tts_identical_relation_text_shares_bytes_but_preserves_each_target(tmp_path):
+    import io
+    import wave
+    audio = io.BytesIO()
+    with wave.open(audio, 'wb') as wav:
+        wav.setnchannels(1); wav.setsampwidth(2); wav.setframerate(24000)
+        wav.writeframes(b'\0' * 4800)
+    class Provider:
+        calls = 0
+        async def speech(self, text, language):
+            self.calls += 1
+            return audio.getvalue(), 100
+    provider = Provider()
+    with TestClient(create_app(Settings(state_dir=tmp_path), provider)) as client:
+        response = client.post('/v1/audio/labels', json={
+            'requestId': 'same-relation-text', 'sourceHash': '0' * 64,
+            'draftRevision': 6, 'language': 'en', 'consent': True,
+            'labels': [{'targetId': target, 'kind': 'label', 'text': 'points to',
+                        'textHash': sha256(b'points to')} for target in ['input-to-gate', 'gate-to-output']]})
+    assert response.status_code == 200, response.text
+    recordings = response.json()['result']['audio']
+    assert [item['targetId'] for item in recordings] == ['input-to-gate', 'gate-to-output']
+    assert len({item['id'] for item in recordings}) == 2
+    assert recordings[0]['path'] == recordings[1]['path']
+    assert recordings[0]['dataBase64'] == recordings[1]['dataBase64']
+    assert all(item['sha256'] == sha256(audio.getvalue()) for item in recordings)
+    assert provider.calls == 1

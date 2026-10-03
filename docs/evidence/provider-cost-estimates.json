@@ -1,0 +1,303 @@
+{
+  "rates": {
+    "checkedOn": "2026-10-03",
+    "currency": "USD",
+    "geminiInputPerMillion": 0.75,
+    "geminiOutputPerMillion": 3.75,
+    "geminiSource": "https://ai.google.dev/gemini-api/docs/pricing",
+    "geminiRateValidity": "Introductory standard rate through 2026-12-31",
+    "elevenFlashPerThousandCharacters": 0.04,
+    "elevenSource": "https://elevenlabs.io/pricing/api",
+    "scope": "Public API rates read on the stated date; not an account invoice or historical charge."
+  },
+  "requests": 20,
+  "usableDraftsByConstrainedEvaluationRule": 20,
+  "scope": "Top-level request statistics retain the twenty process diagrams. The five charts are reported separately; combined totals sum both without conflating their scoring rules.",
+  "totalEstimateReportedUsageUsd": 0.06035625,
+  "totalEstimateWithRawInvocationUsageUsd": 0.09089625,
+  "meanPublicRateEstimatePerUsableRawDraftUsd": 0.00301781,
+  "providerRequestMedianMs": 6070.0,
+  "providerRequestP95Ms": 12579,
+  "authorReviewTime": null,
+  "costPerTeacherReviewedUsablePackage": null,
+  "limitations": [
+    "Raw SDK usage exposes differing summary and invocation token counts; both estimates are retained, billing reconciliation is not claimed.",
+    "Includes every saved request from the twenty process diagrams and five charts, with separate corpus totals. Does not include development smoke calls or the separate native authoring flow.",
+    "The constrained usable-draft criterion is not teacher-reviewed usability. Author effort and total cost through accepted publication were not measured in a representative study.",
+    "Speech figures estimate full regeneration at current public rates. Existing recordings are bundled and their reuse incurs no new generation. Taxes, discounts, free quotas and failed or unknown-outcome requests are excluded."
+  ],
+  "records": [
+    {
+      "id": "diagram-01",
+      "usableDraft": true,
+      "durationMs": 6672,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 500,
+      "estimateReportedUsageUsd": 0.0028305,
+      "estimateWithRawInvocationUsageUsd": 0.0043575
+    },
+    {
+      "id": "diagram-02",
+      "usableDraft": true,
+      "durationMs": 10172,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 529,
+      "estimateReportedUsageUsd": 0.00293925,
+      "estimateWithRawInvocationUsageUsd": 0.00446625
+    },
+    {
+      "id": "diagram-03",
+      "usableDraft": true,
+      "durationMs": 5984,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 517,
+      "estimateReportedUsageUsd": 0.00289425,
+      "estimateWithRawInvocationUsageUsd": 0.00442125
+    },
+    {
+      "id": "diagram-04",
+      "usableDraft": true,
+      "durationMs": 12579,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 550,
+      "estimateReportedUsageUsd": 0.003018,
+      "estimateWithRawInvocationUsageUsd": 0.004545
+    },
+    {
+      "id": "diagram-05",
+      "usableDraft": true,
+      "durationMs": 8546,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 600,
+      "estimateReportedUsageUsd": 0.0032055,
+      "estimateWithRawInvocationUsageUsd": 0.0047325
+    },
+    {
+      "id": "diagram-06",
+      "usableDraft": true,
+      "durationMs": 7454,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 502,
+      "estimateReportedUsageUsd": 0.002838,
+      "estimateWithRawInvocationUsageUsd": 0.004365
+    },
+    {
+      "id": "diagram-07",
+      "usableDraft": true,
+      "durationMs": 6593,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 521,
+      "estimateReportedUsageUsd": 0.00290925,
+      "estimateWithRawInvocationUsageUsd": 0.00443625
+    },
+    {
+      "id": "diagram-08",
+      "usableDraft": true,
+      "durationMs": 8141,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 502,
+      "estimateReportedUsageUsd": 0.002838,
+      "estimateWithRawInvocationUsageUsd": 0.004365
+    },
+    {
+      "id": "diagram-09",
+      "usableDraft": true,
+      "durationMs": 17000,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 539,
+      "estimateReportedUsageUsd": 0.00297675,
+      "estimateWithRawInvocationUsageUsd": 0.00450375
+    },
+    {
+      "id": "diagram-10",
+      "usableDraft": true,
+      "durationMs": 6875,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 660,
+      "estimateReportedUsageUsd": 0.0034305,
+      "estimateWithRawInvocationUsageUsd": 0.0049575
+    },
+    {
+      "id": "diagram-11",
+      "usableDraft": true,
+      "durationMs": 4719,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 532,
+      "estimateReportedUsageUsd": 0.0029505,
+      "estimateWithRawInvocationUsageUsd": 0.0044775
+    },
+    {
+      "id": "diagram-12",
+      "usableDraft": true,
+      "durationMs": 4625,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 503,
+      "estimateReportedUsageUsd": 0.00284175,
+      "estimateWithRawInvocationUsageUsd": 0.00436875
+    },
+    {
+      "id": "diagram-13",
+      "usableDraft": true,
+      "durationMs": 5093,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 535,
+      "estimateReportedUsageUsd": 0.00296175,
+      "estimateWithRawInvocationUsageUsd": 0.00448875
+    },
+    {
+      "id": "diagram-14",
+      "usableDraft": true,
+      "durationMs": 5438,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 552,
+      "estimateReportedUsageUsd": 0.0030255,
+      "estimateWithRawInvocationUsageUsd": 0.0045525
+    },
+    {
+      "id": "diagram-15",
+      "usableDraft": true,
+      "durationMs": 6156,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 629,
+      "estimateReportedUsageUsd": 0.00331425,
+      "estimateWithRawInvocationUsageUsd": 0.00484125
+    },
+    {
+      "id": "diagram-16",
+      "usableDraft": true,
+      "durationMs": 4969,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 541,
+      "estimateReportedUsageUsd": 0.00298425,
+      "estimateWithRawInvocationUsageUsd": 0.00451125
+    },
+    {
+      "id": "diagram-17",
+      "usableDraft": true,
+      "durationMs": 5672,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 527,
+      "estimateReportedUsageUsd": 0.00293175,
+      "estimateWithRawInvocationUsageUsd": 0.00445875
+    },
+    {
+      "id": "diagram-18",
+      "usableDraft": true,
+      "durationMs": 4453,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 561,
+      "estimateReportedUsageUsd": 0.00305925,
+      "estimateWithRawInvocationUsageUsd": 0.00458625
+    },
+    {
+      "id": "diagram-19",
+      "usableDraft": true,
+      "durationMs": 4609,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 553,
+      "estimateReportedUsageUsd": 0.00302925,
+      "estimateWithRawInvocationUsageUsd": 0.00455625
+    },
+    {
+      "id": "diagram-20",
+      "usableDraft": true,
+      "durationMs": 5516,
+      "reportedInputTokens": 1274,
+      "reportedOutputTokens": 646,
+      "estimateReportedUsageUsd": 0.003378,
+      "estimateWithRawInvocationUsageUsd": 0.004905
+    }
+  ],
+  "bundledSpeech": [
+    {
+      "packageId": "lumina-process",
+      "audioAssets": 17,
+      "characters": 671,
+      "fullRegenerationPublicRateEstimateUsd": 0.02684
+    },
+    {
+      "packageId": "rainfall-chart",
+      "audioAssets": 9,
+      "characters": 474,
+      "fullRegenerationPublicRateEstimateUsd": 0.01896
+    },
+    {
+      "packageId": "tutorial",
+      "audioAssets": 7,
+      "characters": 265,
+      "fullRegenerationPublicRateEstimateUsd": 0.0106
+    },
+    {
+      "packageId": "water-cycle",
+      "audioAssets": 15,
+      "characters": 588,
+      "fullRegenerationPublicRateEstimateUsd": 0.02352
+    }
+  ],
+  "chartEvaluation": {
+    "requests": 5,
+    "strictRepresentationMatches": 2,
+    "exactSourceValues": 16,
+    "expectedSourceValues": 16,
+    "unknownsCorrect": 2,
+    "expectedUnknowns": 2,
+    "totalEstimateReportedUsageUsd": 0.03302625,
+    "totalEstimateWithRawInvocationUsageUsd": 0.04066125,
+    "providerRequestMedianMs": 8078,
+    "providerRequestP95Ms": 9547,
+    "scoreMeaning": "Strict chart representation match, not teacher-reviewed usability. See ai-chart-evaluation/INTERPRETATION.md for all retained mismatches.",
+    "records": [
+      {
+        "id": "chart-01",
+        "strictRepresentationMatch": true,
+        "durationMs": 9547,
+        "reportedInputTokens": 1273,
+        "reportedOutputTokens": 1441,
+        "estimateReportedUsageUsd": 0.0063585,
+        "estimateWithRawInvocationUsageUsd": 0.0078855
+      },
+      {
+        "id": "chart-02",
+        "strictRepresentationMatch": true,
+        "durationMs": 7484,
+        "reportedInputTokens": 1273,
+        "reportedOutputTokens": 1438,
+        "estimateReportedUsageUsd": 0.00634725,
+        "estimateWithRawInvocationUsageUsd": 0.00787425
+      },
+      {
+        "id": "chart-03",
+        "strictRepresentationMatch": false,
+        "durationMs": 8218,
+        "reportedInputTokens": 1273,
+        "reportedOutputTokens": 1759,
+        "estimateReportedUsageUsd": 0.007551,
+        "estimateWithRawInvocationUsageUsd": 0.009078
+      },
+      {
+        "id": "chart-04",
+        "strictRepresentationMatch": false,
+        "durationMs": 7110,
+        "reportedInputTokens": 1273,
+        "reportedOutputTokens": 1405,
+        "estimateReportedUsageUsd": 0.0062235,
+        "estimateWithRawInvocationUsageUsd": 0.0077505
+      },
+      {
+        "id": "chart-05",
+        "strictRepresentationMatch": false,
+        "durationMs": 8078,
+        "reportedInputTokens": 1273,
+        "reportedOutputTokens": 1491,
+        "estimateReportedUsageUsd": 0.006546,
+        "estimateWithRawInvocationUsageUsd": 0.008073
+      }
+    ]
+  },
+  "combinedCorpus": {
+    "requests": 25,
+    "totalEstimateReportedUsageUsd": 0.0933825,
+    "totalEstimateWithRawInvocationUsageUsd": 0.1315575,
+    "costPerTeacherReviewedUsablePackage": null
+  }
+}

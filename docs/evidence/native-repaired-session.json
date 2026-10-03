@@ -1,0 +1,438 @@
+{
+  "display": {
+    "width": 360,
+    "height": 720
+  },
+  "tree": {
+    "children": [
+      {
+        "b": [
+          0,
+          0.05,
+          1,
+          0.95
+        ],
+        "c": [
+          0.5,
+          0.5
+        ],
+        "type": "root",
+        "bundle": "org.touchmap.app",
+        "focus": true,
+        "children": [
+          {
+            "b": [
+              0.061,
+              0.078,
+              0.144,
+              0.138
+            ],
+            "c": [
+              0.103,
+              0.108
+            ],
+            "type": "Text",
+            "text": "\u25c9"
+          },
+          {
+            "b": [
+              0.172,
+              0.075,
+              0.486,
+              0.113
+            ],
+            "c": [
+              0.329,
+              0.094
+            ],
+            "type": "Text",
+            "text": "TouchMap"
+          },
+          {
+            "b": [
+              0.172,
+              0.114,
+              0.508,
+              0.139
+            ],
+            "c": [
+              0.34,
+              0.126
+            ],
+            "type": "Text",
+            "text": "UNDERSTAND THROUGH EXPLORATION"
+          },
+          {
+            "b": [
+              0.7,
+              0.075,
+              0.939,
+              0.139
+            ],
+            "c": [
+              0.819,
+              0.107
+            ],
+            "type": "Button",
+            "text": "Stop audio",
+            "id": "stop-audio",
+            "click": true
+          },
+          {
+            "b": [
+              0.056,
+              0.158,
+              0.353,
+              0.222
+            ],
+            "c": [
+              0.204,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Library",
+            "id": "nav-library",
+            "click": true
+          },
+          {
+            "b": [
+              0.353,
+              0.158,
+              0.65,
+              0.222
+            ],
+            "c": [
+              0.501,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Import",
+            "click": true
+          },
+          {
+            "b": [
+              0.647,
+              0.158,
+              0.944,
+              0.222
+            ],
+            "c": [
+              0.796,
+              0.19
+            ],
+            "type": "Button",
+            "text": "Settings",
+            "id": "nav-settings",
+            "click": true
+          },
+          {
+            "b": [
+              0,
+              0.236,
+              1,
+              0.95
+            ],
+            "c": [
+              0.5,
+              0.593
+            ],
+            "id": "main-scroll",
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "c": [
+                  0,
+                  0
+                ],
+                "type": "Text",
+                "text": "Label delay: 250 ms"
+              },
+              {
+                "b": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "c": [
+                  0,
+                  0
+                ],
+                "type": "Slider",
+                "text": "250.000000",
+                "click": true,
+                "scroll": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.258,
+                  0.939,
+                  0.278
+                ],
+                "c": [
+                  0.5,
+                  0.268
+                ],
+                "type": "Text",
+                "text": "OPTIONAL PREPARATION SERVICE"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.303,
+                  0.939,
+                  0.325
+                ],
+                "c": [
+                  0.5,
+                  0.314
+                ],
+                "type": "Text",
+                "text": "HTTPS service address"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.332,
+                  0.939,
+                  0.404
+                ],
+                "c": [
+                  0.5,
+                  0.368
+                ],
+                "type": "TextInput",
+                "text": "http://127.0.0.1:8080",
+                "click": true,
+                "scroll": true,
+                "longClick": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.429,
+                  0.939,
+                  0.451
+                ],
+                "c": [
+                  0.5,
+                  0.44
+                ],
+                "type": "Text",
+                "text": "One-use pairing code from the service operator"
+              },
+              {
+                "b": [
+                  0.061,
+                  0.458,
+                  0.939,
+                  0.531
+                ],
+                "c": [
+                  0.5,
+                  0.494
+                ],
+                "type": "TextInput",
+                "click": true,
+                "scroll": true,
+                "longClick": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.556,
+                  0.939,
+                  0.625
+                ],
+                "c": [
+                  0.5,
+                  0.59
+                ],
+                "type": "Button",
+                "text": "Pair this authoring session",
+                "click": true
+              },
+              {
+                "b": [
+                  0.061,
+                  0.65,
+                  0.939,
+                  0.756
+                ],
+                "c": [
+                  0.5,
+                  0.703
+                ],
+                "type": "Text",
+                "text": "Provider keys stay on the preparation server. Learner activity is never sent. Pairing expires and is kept only in this running app session."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.781,
+                  0.939,
+                  0.864
+                ],
+                "c": [
+                  0.5,
+                  0.822
+                ],
+                "type": "Text",
+                "text": "Authoring session paired. Image and speech uploads still require separate consent."
+              },
+              {
+                "b": [
+                  0.061,
+                  0.889,
+                  0.656,
+                  0.95
+                ],
+                "c": [
+                  0.358,
+                  0.919
+                ],
+                "type": "Text",
+                "text": "Built for curiosity. Your pace, your path."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.95,
+          1,
+          1
+        ],
+        "c": [
+          0.5,
+          0.975
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.178,
+              0.95,
+              0.822,
+              1
+            ],
+            "c": [
+              0.5,
+              0.975
+            ],
+            "scroll": true,
+            "children": [
+              {
+                "b": [
+                  0.269,
+                  0.967,
+                  0.303,
+                  0.983
+                ],
+                "c": [
+                  0.286,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.483,
+                  0.967,
+                  0.517,
+                  0.983
+                ],
+                "c": [
+                  0.5,
+                  0.975
+                ],
+                "type": "Image"
+              },
+              {
+                "b": [
+                  0.7,
+                  0.967,
+                  0.733,
+                  0.983
+                ],
+                "c": [
+                  0.717,
+                  0.975
+                ],
+                "type": "Image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0,
+          1,
+          0.044
+        ],
+        "c": [
+          0.5,
+          0.022
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0.883,
+              0.004,
+              0.9,
+              0.013
+            ],
+            "c": [
+              0.892,
+              0.008
+            ],
+            "type": "Text"
+          }
+        ]
+      },
+      {
+        "b": [
+          0,
+          0.044,
+          1,
+          0.05
+        ],
+        "c": [
+          0.5,
+          0.047
+        ],
+        "type": "root",
+        "bundle": "com.ohos.systemui",
+        "children": [
+          {
+            "b": [
+              0,
+              0.044,
+              1,
+              0.05
+            ],
+            "c": [
+              0.5,
+              0.047
+            ],
+            "click": true
+          }
+        ]
+      }
+    ]
+  }
+}

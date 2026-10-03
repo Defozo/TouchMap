@@ -1,0 +1,846 @@
+{
+  "scope": "Five owned synthetic charts, separate from the 20 process diagrams. Exact printed values/nulls, units, categorical labels and numeric axes. Two held-out charts; no tuning on their results. All failed inputs retained. Not representative real-world accuracy or a participant study.",
+  "model": "gemini-3.8-flash",
+  "all": {
+    "inputs": 5,
+    "schemaSuccesses": 5,
+    "usableChartDrafts": 2,
+    "exactValuesCorrect": 16,
+    "expectedValues": 16,
+    "unknownsCorrect": 2,
+    "expectedUnknowns": 2,
+    "unsupportedValueAssertions": 0
+  },
+  "development": {
+    "inputs": 3,
+    "schemaSuccesses": 3,
+    "usableChartDrafts": 2,
+    "exactValuesCorrect": 10,
+    "expectedValues": 10,
+    "unknownsCorrect": 2,
+    "expectedUnknowns": 2,
+    "unsupportedValueAssertions": 0
+  },
+  "heldOut": {
+    "inputs": 2,
+    "schemaSuccesses": 2,
+    "usableChartDrafts": 0,
+    "exactValuesCorrect": 6,
+    "expectedValues": 6,
+    "unknownsCorrect": 0,
+    "expectedUnknowns": 0,
+    "unsupportedValueAssertions": 0
+  },
+  "records": [
+    {
+      "id": "chart-01",
+      "split": "development",
+      "variant": "clear-unknown",
+      "model": "gemini-3.8-flash",
+      "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+      "startedAt": "2026-10-03T16:13:44.782349+00:00",
+      "schemaSuccess": true,
+      "usableChartDraft": true,
+      "sourceSha256": "3434e886db07e5673db44a5679160931c1de1b49441a5ee749964eaef04d97ae",
+      "chartCount": 1,
+      "kindCorrect": true,
+      "xLabelsCorrect": true,
+      "yLabelCorrect": true,
+      "unitCorrect": true,
+      "domainCorrect": true,
+      "ticksCorrect": true,
+      "scaleCorrect": true,
+      "exactValuesCorrect": 3,
+      "expectedValues": 3,
+      "unknownsCorrect": 1,
+      "expectedUnknowns": 1,
+      "unsupportedValueAssertions": [],
+      "unexpectedRelations": 0,
+      "observed": {
+        "kind": "bar",
+        "xAxis": {
+          "label": "Month",
+          "unit": "",
+          "scale": "category",
+          "domain": [
+            0.0,
+            2.0
+          ],
+          "ticks": [
+            {
+              "value": 0.0,
+              "label": "April"
+            },
+            {
+              "value": 1.0,
+              "label": "May"
+            },
+            {
+              "value": 2.0,
+              "label": "June"
+            }
+          ]
+        },
+        "yAxis": {
+          "label": "Rainfall",
+          "unit": "mm",
+          "scale": "linear",
+          "domain": [
+            0.0,
+            80.0
+          ],
+          "ticks": [
+            {
+              "value": 0.0,
+              "label": "0"
+            },
+            {
+              "value": 20.0,
+              "label": "20"
+            },
+            {
+              "value": 40.0,
+              "label": "40"
+            },
+            {
+              "value": 60.0,
+              "label": "60"
+            },
+            {
+              "value": 80.0,
+              "label": "80"
+            }
+          ]
+        },
+        "values": [
+          {
+            "x": "April",
+            "value": 40.0,
+            "precision": 0
+          },
+          {
+            "x": "May",
+            "value": 65.0,
+            "precision": 0
+          },
+          {
+            "x": "June",
+            "value": null,
+            "precision": 0
+          }
+        ]
+      },
+      "report": {
+        "unsupported": [],
+        "unresolved": []
+      },
+      "usage": {
+        "input_tokens_by_modality": [
+          {
+            "modality": "image",
+            "tokens": 1080
+          },
+          {
+            "modality": "text",
+            "tokens": 193
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_input_tokens": 1273,
+        "total_output_tokens": 1441,
+        "total_thought_tokens": 0,
+        "total_tokens": 2714,
+        "total_tool_use_tokens": 0,
+        "raw_prompt_token": 3229,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1457
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1457
+              }
+            ]
+          }
+        ]
+      },
+      "durationMs": 9547
+    },
+    {
+      "id": "chart-02",
+      "split": "development",
+      "variant": "low-contrast-decimal",
+      "model": "gemini-3.8-flash",
+      "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+      "startedAt": "2026-10-03T16:13:54.334197+00:00",
+      "schemaSuccess": true,
+      "usableChartDraft": true,
+      "sourceSha256": "b97abc0442a74e5c4990e0917049544f8928051996fef31152869271f285ff4f",
+      "chartCount": 1,
+      "kindCorrect": true,
+      "xLabelsCorrect": true,
+      "yLabelCorrect": true,
+      "unitCorrect": true,
+      "domainCorrect": true,
+      "ticksCorrect": true,
+      "scaleCorrect": true,
+      "exactValuesCorrect": 3,
+      "expectedValues": 3,
+      "unknownsCorrect": 0,
+      "expectedUnknowns": 0,
+      "unsupportedValueAssertions": [],
+      "unexpectedRelations": 0,
+      "observed": {
+        "kind": "bar",
+        "xAxis": {
+          "label": "Station",
+          "unit": "",
+          "scale": "category",
+          "domain": [
+            0.0,
+            3.0
+          ],
+          "ticks": [
+            {
+              "value": 0.0,
+              "label": "Aster"
+            },
+            {
+              "value": 1.0,
+              "label": "Birch"
+            },
+            {
+              "value": 2.0,
+              "label": "Cedar"
+            }
+          ]
+        },
+        "yAxis": {
+          "label": "Energy",
+          "unit": "kWh",
+          "scale": "linear",
+          "domain": [
+            0.0,
+            20.0
+          ],
+          "ticks": [
+            {
+              "value": 0.0,
+              "label": "0"
+            },
+            {
+              "value": 5.0,
+              "label": "5"
+            },
+            {
+              "value": 10.0,
+              "label": "10"
+            },
+            {
+              "value": 15.0,
+              "label": "15"
+            },
+            {
+              "value": 20.0,
+              "label": "20"
+            }
+          ]
+        },
+        "values": [
+          {
+            "x": "Aster",
+            "value": 12.5,
+            "precision": 1
+          },
+          {
+            "x": "Birch",
+            "value": 17.0,
+            "precision": 0
+          },
+          {
+            "x": "Cedar",
+            "value": 9.5,
+            "precision": 1
+          }
+        ]
+      },
+      "report": {
+        "unsupported": [],
+        "unresolved": []
+      },
+      "usage": {
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 193
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_input_tokens": 1273,
+        "total_output_tokens": 1438,
+        "total_thought_tokens": 0,
+        "total_tokens": 2711,
+        "total_tool_use_tokens": 0,
+        "raw_prompt_token": 3229,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1454
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1454
+              }
+            ]
+          }
+        ]
+      },
+      "durationMs": 7484
+    },
+    {
+      "id": "chart-03",
+      "split": "development",
+      "variant": "negative-and-unknown",
+      "model": "gemini-3.8-flash",
+      "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+      "startedAt": "2026-10-03T16:14:01.820596+00:00",
+      "schemaSuccess": true,
+      "usableChartDraft": false,
+      "sourceSha256": "8485cbd66e5e0f4c3b5b6b951a4f676c2696ce12add6efe9fb25c8eaa68ec761",
+      "chartCount": 1,
+      "kindCorrect": true,
+      "xLabelsCorrect": true,
+      "yLabelCorrect": true,
+      "unitCorrect": true,
+      "domainCorrect": true,
+      "ticksCorrect": true,
+      "scaleCorrect": true,
+      "exactValuesCorrect": 4,
+      "expectedValues": 4,
+      "unknownsCorrect": 1,
+      "expectedUnknowns": 1,
+      "unsupportedValueAssertions": [],
+      "unexpectedRelations": 1,
+      "observed": {
+        "kind": "line",
+        "xAxis": {
+          "label": "Day",
+          "unit": "day",
+          "scale": "category",
+          "domain": [
+            1.0,
+            4.0
+          ],
+          "ticks": [
+            {
+              "value": 1.0,
+              "label": "Day 1"
+            },
+            {
+              "value": 2.0,
+              "label": "Day 2"
+            },
+            {
+              "value": 3.0,
+              "label": "Day 3"
+            },
+            {
+              "value": 4.0,
+              "label": "Day 4"
+            }
+          ]
+        },
+        "yAxis": {
+          "label": "Temperature",
+          "unit": "°C",
+          "scale": "linear",
+          "domain": [
+            -5.0,
+            5.0
+          ],
+          "ticks": [
+            {
+              "value": -5.0,
+              "label": "-5"
+            },
+            {
+              "value": 0.0,
+              "label": "0"
+            },
+            {
+              "value": 5.0,
+              "label": "5"
+            }
+          ]
+        },
+        "values": [
+          {
+            "x": "Day 1",
+            "value": -2.0,
+            "precision": 0
+          },
+          {
+            "x": "Day 2",
+            "value": 1.0,
+            "precision": 0
+          },
+          {
+            "x": "Day 3",
+            "value": null,
+            "precision": 0
+          },
+          {
+            "x": "Day 4",
+            "value": 4.0,
+            "precision": 0
+          }
+        ]
+      },
+      "report": {
+        "unsupported": [],
+        "unresolved": []
+      },
+      "usage": {
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 193
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_input_tokens": 1273,
+        "total_output_tokens": 1759,
+        "total_thought_tokens": 0,
+        "total_tokens": 3032,
+        "total_tool_use_tokens": 0,
+        "raw_prompt_token": 3229,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1775
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1775
+              }
+            ]
+          }
+        ]
+      },
+      "durationMs": 8218
+    },
+    {
+      "id": "chart-04",
+      "split": "held-out",
+      "variant": "rotated-labels",
+      "model": "gemini-3.8-flash",
+      "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+      "startedAt": "2026-10-03T16:14:10.049115+00:00",
+      "schemaSuccess": true,
+      "usableChartDraft": false,
+      "sourceSha256": "0b8eb9ece9a00bd3b46da12699d1bd7283cc85c4e7d30de11e5674e6bce4da50",
+      "chartCount": 1,
+      "kindCorrect": true,
+      "xLabelsCorrect": true,
+      "yLabelCorrect": false,
+      "unitCorrect": true,
+      "domainCorrect": true,
+      "ticksCorrect": true,
+      "scaleCorrect": true,
+      "exactValuesCorrect": 3,
+      "expectedValues": 3,
+      "unknownsCorrect": 0,
+      "expectedUnknowns": 0,
+      "unsupportedValueAssertions": [],
+      "unexpectedRelations": 0,
+      "observed": {
+        "kind": "bar",
+        "xAxis": {
+          "label": "Store",
+          "unit": "",
+          "scale": "category",
+          "domain": [
+            0.0,
+            3.0
+          ],
+          "ticks": [
+            {
+              "value": 1.0,
+              "label": "North"
+            },
+            {
+              "value": 2.0,
+              "label": "Southwest"
+            },
+            {
+              "value": 3.0,
+              "label": "East"
+            }
+          ]
+        },
+        "yAxis": {
+          "label": "Volume (L)",
+          "unit": "L",
+          "scale": "linear",
+          "domain": [
+            0.0,
+            30.0
+          ],
+          "ticks": [
+            {
+              "value": 0.0,
+              "label": "0"
+            },
+            {
+              "value": 10.0,
+              "label": "10"
+            },
+            {
+              "value": 20.0,
+              "label": "20"
+            },
+            {
+              "value": 30.0,
+              "label": "30"
+            }
+          ]
+        },
+        "values": [
+          {
+            "x": "North",
+            "value": 14.0,
+            "precision": 0
+          },
+          {
+            "x": "Southwest",
+            "value": 9.0,
+            "precision": 0
+          },
+          {
+            "x": "East",
+            "value": 22.0,
+            "precision": 0
+          }
+        ]
+      },
+      "report": {
+        "unsupported": [],
+        "unresolved": []
+      },
+      "usage": {
+        "input_tokens_by_modality": [
+          {
+            "modality": "image",
+            "tokens": 1080
+          },
+          {
+            "modality": "text",
+            "tokens": 193
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_input_tokens": 1273,
+        "total_output_tokens": 1405,
+        "total_thought_tokens": 0,
+        "total_tokens": 2678,
+        "total_tool_use_tokens": 0,
+        "raw_prompt_token": 3229,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1421
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1421
+              }
+            ]
+          }
+        ]
+      },
+      "durationMs": 7110
+    },
+    {
+      "id": "chart-05",
+      "split": "held-out",
+      "variant": "clear-decimal",
+      "model": "gemini-3.8-flash",
+      "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+      "startedAt": "2026-10-03T16:14:17.151040+00:00",
+      "schemaSuccess": true,
+      "usableChartDraft": false,
+      "sourceSha256": "75c6eb1b1e488a00e61ae5d12d37c4c9806f374345e757c02545ef0c759dcf7b",
+      "chartCount": 1,
+      "kindCorrect": true,
+      "xLabelsCorrect": true,
+      "yLabelCorrect": false,
+      "unitCorrect": true,
+      "domainCorrect": true,
+      "ticksCorrect": true,
+      "scaleCorrect": true,
+      "exactValuesCorrect": 3,
+      "expectedValues": 3,
+      "unknownsCorrect": 0,
+      "expectedUnknowns": 0,
+      "unsupportedValueAssertions": [],
+      "unexpectedRelations": 0,
+      "observed": {
+        "kind": "line",
+        "xAxis": {
+          "label": "Time",
+          "unit": "time",
+          "scale": "category",
+          "domain": [
+            8.0,
+            10.0
+          ],
+          "ticks": [
+            {
+              "value": 8.0,
+              "label": "08:00"
+            },
+            {
+              "value": 9.0,
+              "label": "09:00"
+            },
+            {
+              "value": 10.0,
+              "label": "10:00"
+            }
+          ]
+        },
+        "yAxis": {
+          "label": "Distance (km)",
+          "unit": "km",
+          "scale": "linear",
+          "domain": [
+            0.0,
+            3.0
+          ],
+          "ticks": [
+            {
+              "value": 0.0,
+              "label": "0"
+            },
+            {
+              "value": 1.0,
+              "label": "1"
+            },
+            {
+              "value": 2.0,
+              "label": "2"
+            },
+            {
+              "value": 3.0,
+              "label": "3"
+            }
+          ]
+        },
+        "values": [
+          {
+            "x": "08:00",
+            "value": 0.0,
+            "precision": 0
+          },
+          {
+            "x": "09:00",
+            "value": 1.25,
+            "precision": 2
+          },
+          {
+            "x": "10:00",
+            "value": 2.5,
+            "precision": 1
+          }
+        ]
+      },
+      "report": {
+        "unsupported": [],
+        "unresolved": []
+      },
+      "usage": {
+        "input_tokens_by_modality": [
+          {
+            "modality": "image",
+            "tokens": 1080
+          },
+          {
+            "modality": "text",
+            "tokens": 193
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_input_tokens": 1273,
+        "total_output_tokens": 1491,
+        "total_thought_tokens": 0,
+        "total_tokens": 2764,
+        "total_tool_use_tokens": 0,
+        "raw_prompt_token": 3229,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1507
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 2149
+              },
+              {
+                "modality": "image",
+                "tokens": 1080
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1507
+              }
+            ]
+          }
+        ]
+      },
+      "durationMs": 8078
+    }
+  ],
+  "actualProviderInvoiceCost": null,
+  "costNote": "Raw provider usage retained. Billed cost and human correction time were not measured."
+}

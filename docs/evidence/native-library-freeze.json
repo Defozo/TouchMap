@@ -1,0 +1,17 @@
+{
+  "device": "127.0.0.1:55556",
+  "runtime": "OpenHarmony 6.1.0.31 / x86_64 QEMU",
+  "installedHapSha256": "ae7f46d80be15b123e65915eaef3553892098b0a4d19881c603e2c0aeb9b07bf",
+  "status": "observed, regression verification pending",
+  "trigger": "At 200-percent text, pause scanning and navigate to Library.",
+  "reason": "THREAD_BLOCK_6S",
+  "pid": 23897,
+  "eventLocalTime": "2026-10-03 23:33:42",
+  "mainTask": "vSyncTask",
+  "mainTaskDurationMs": 7040,
+  "appRssKiB": 341512,
+  "deviceAvailableKiB": 3070336,
+  "stackLimit": "Runtime ThreadSampler initialization failed, and the fallback stack dump reported that the process was already dumping. The report proves the watchdog timeout but does not identify a source line.",
+  "automationContext": "Two scroll helpers briefly overlapped. Only host helpers were subsequently stopped; the application was terminated by its recorded watchdog, not an intentional app force-stop.",
+  "report": "native-library-freeze-before-fix.log"
+}

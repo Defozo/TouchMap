@@ -1,0 +1,139 @@
+{
+  "status": "complete",
+  "requested": 100,
+  "succeeded": 100,
+  "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54",
+  "testHapSha256": "b769aa4d06301b30c8a69c1d960b3017be94af55ec317803a512336ec1c637f8",
+  "appSourceSha256": "a5467e3eafae0f2638f3e16465e0397d31f92bc3e98e63b830f7637b3c1cbefe",
+  "audioImplementationInputs": [
+    {
+      "path": "entry/src/main/ets/domain/media.ts",
+      "bytes": 7970,
+      "sha256": "1f982020c3f29d84227bf0dac883a9140368031a71a4eedcc4ea59b967d1e9b7"
+    },
+    {
+      "path": "entry/src/main/ets/platform/Feedback.ets",
+      "bytes": 14694,
+      "sha256": "aabed96561fc28825ded95da1de6d81603f6c8e2090ba71681c9f4ccbdba409c"
+    }
+  ],
+  "onsetMs": {
+    "count": 100,
+    "median": 4.0,
+    "p95": 20,
+    "max": 36
+  },
+  "totalWithDwellMs": {
+    "count": 100,
+    "median": 266.5,
+    "p95": 289,
+    "max": 307
+  },
+  "phaseMilliseconds": {
+    "integrityMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 5,
+      "max": 9
+    },
+    "controlWaitMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 1,
+      "max": 11
+    },
+    "prepareMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 1,
+      "max": 1
+    },
+    "volumeMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 0,
+      "max": 2
+    },
+    "startMs": {
+      "count": 100,
+      "median": 0.0,
+      "p95": 0,
+      "max": 27
+    },
+    "firstWriteDispatchMs": {
+      "count": 100,
+      "median": 1.0,
+      "p95": 8,
+      "max": 35
+    },
+    "firstWriteResolveMs": {
+      "count": 100,
+      "median": 3.0,
+      "p95": 19,
+      "max": 31
+    }
+  },
+  "bufferBytes": [
+    960
+  ],
+  "bufferDurationMs": [
+    20
+  ],
+  "coldCacheReads": 12,
+  "allFirstWritesAccepted": true,
+  "firstPlayback": {
+    "index": 0,
+    "material": "lumina-process@1",
+    "target": "seed",
+    "onsetMs": 36,
+    "scheduledLabelToPlayingMs": 295,
+    "error": "",
+    "trace": {
+      "target": "seed",
+      "cacheHit": false,
+      "integrityMs": 6,
+      "controlWaitMs": 0,
+      "prepareMs": 0,
+      "volumeMs": 2,
+      "startMs": 27,
+      "firstWriteDispatchMs": 35,
+      "firstWriteResolveMs": 1,
+      "rendererState": 5,
+      "bufferBytes": 960,
+      "bufferDurationMs": 20,
+      "firstWriteBytes": 960,
+      "firstWriteDurationMs": 20,
+      "writeAttemptsBeforeOnset": 1
+    }
+  },
+  "hostWindow": {
+    "startUtc": "2026-10-03T16:11:04.720835+00:00",
+    "endUtc": "2026-10-03T16:11:40.786471+00:00",
+    "vmstatTimestampZone": "Europe/Warsaw (CEST header)",
+    "samples": 34,
+    "cpuIdlePercent": {
+      "count": 34,
+      "median": 87.0,
+      "p95": 89,
+      "max": 89
+    },
+    "cpuIoWaitPercent": {
+      "count": 34,
+      "median": 0.0,
+      "p95": 2,
+      "max": 2
+    },
+    "cpuStealPercent": {
+      "count": 34,
+      "median": 0.0,
+      "p95": 0,
+      "max": 0
+    }
+  },
+  "excludedPriorRun": {
+    "file": "audio-idle-with-draft-fixture.json",
+    "reason": "The earlier runner included an unfinished authored draft. Four target regions had no recording. Its measurements and higher host load remain preserved as diagnostic evidence, not an acceptance run."
+  },
+  "interpretation": "In the valid prepared-material run, all 100 writes succeeded and onset p95 was below 150 ms. The 960-byte native buffer represents 20 ms PCM. The first start took 27 ms, while warm playback generally reused a RUNNING renderer. No large-buffer workaround was applied. Host and fixture conditions differ from the earlier diagnostic run, so the entire improvement is not attributed to instrumentation or fixture filtering alone.",
+  "scope": "Actual AudioRenderer first accepted PCM writes for local recordings on this runtime. Onset starts at playback scheduler decision. The renderer is prewarmed during normal Feedback initialization and reused. First use verifies file integrity; later uses may use the bounded immutable PCM cache. Initialization time is excluded. Total starts at Feedback.speak and includes configured dwell; this is not a measured physical finger or speaker acoustic latency."
+}

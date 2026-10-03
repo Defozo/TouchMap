@@ -1,0 +1,87 @@
+{
+  "device": "127.0.0.1:55556",
+  "sourcePackage": "native-authored.touchmap",
+  "packageSha256": "6e838f33c1304427f469e685a3d35950220c7a6893c178020f6216fe2997c29a",
+  "importedDirectory": "/data/app/el2/100/base/org.touchmap.app/haps/entry/files/materials/1791044146551-312487846",
+  "checks": [
+    {
+      "path": "audio/4cfc543a03a289a831a0fa6788c3c25049f40080dd10e3636873555ec40b4eb4.wav",
+      "expected": "4cfc543a03a289a831a0fa6788c3c25049f40080dd10e3636873555ec40b4eb4",
+      "observed": "4cfc543a03a289a831a0fa6788c3c25049f40080dd10e3636873555ec40b4eb4",
+      "bytes": 436950,
+      "expectedBytes": 436950
+    },
+    {
+      "path": "audio/a221ba3573b1a3360a68fb747fd3b0a04ff0cf64192d76996745ae8531f836d2.wav",
+      "expected": "a221ba3573b1a3360a68fb747fd3b0a04ff0cf64192d76996745ae8531f836d2",
+      "observed": "a221ba3573b1a3360a68fb747fd3b0a04ff0cf64192d76996745ae8531f836d2",
+      "bytes": 53542,
+      "expectedBytes": 53542
+    },
+    {
+      "path": "audio/9adb4c8d2346aaa236838aac0c651a27a39ebba7718ec2f4abe9f7f504013752.wav",
+      "expected": "9adb4c8d2346aaa236838aac0c651a27a39ebba7718ec2f4abe9f7f504013752",
+      "observed": "9adb4c8d2346aaa236838aac0c651a27a39ebba7718ec2f4abe9f7f504013752",
+      "bytes": 136020,
+      "expectedBytes": 136020
+    },
+    {
+      "path": "audio/340d47266ca85b6a954c15c697acd1ee94c4de3840b69f9d2645e81d5be74fe5.wav",
+      "expected": "340d47266ca85b6a954c15c697acd1ee94c4de3840b69f9d2645e81d5be74fe5",
+      "observed": "340d47266ca85b6a954c15c697acd1ee94c4de3840b69f9d2645e81d5be74fe5",
+      "bytes": 37938,
+      "expectedBytes": 37938
+    },
+    {
+      "path": "audio/8bd36104af7d5fa5b007bed3becd713d901ba6e36ac4573e8e01efb2220a0506.wav",
+      "expected": "8bd36104af7d5fa5b007bed3becd713d901ba6e36ac4573e8e01efb2220a0506",
+      "observed": "8bd36104af7d5fa5b007bed3becd713d901ba6e36ac4573e8e01efb2220a0506",
+      "bytes": 182832,
+      "expectedBytes": 182832
+    },
+    {
+      "path": "audio/c1fd6521abdeb7f94e6968b9525a33658f32f2691ac67f551bd3d38e286f4731.wav",
+      "expected": "c1fd6521abdeb7f94e6968b9525a33658f32f2691ac67f551bd3d38e286f4731",
+      "observed": "c1fd6521abdeb7f94e6968b9525a33658f32f2691ac67f551bd3d38e286f4731",
+      "bytes": 37938,
+      "expectedBytes": 37938
+    },
+    {
+      "path": "audio/0f10bd9ef030f9e3ac4b75b233acd084f7b5037c22454ee50b4a99c49c4c5129.wav",
+      "expected": "0f10bd9ef030f9e3ac4b75b233acd084f7b5037c22454ee50b4a99c49c4c5129",
+      "observed": "0f10bd9ef030f9e3ac4b75b233acd084f7b5037c22454ee50b4a99c49c4c5129",
+      "bytes": 214040,
+      "expectedBytes": 214040
+    },
+    {
+      "path": "audio/de680ef7c188c7839b16e5c00889926b19482ba656343e440b73204dc1e5dede.wav",
+      "expected": "de680ef7c188c7839b16e5c00889926b19482ba656343e440b73204dc1e5dede",
+      "observed": "de680ef7c188c7839b16e5c00889926b19482ba656343e440b73204dc1e5dede",
+      "bytes": 35710,
+      "expectedBytes": 35710
+    },
+    {
+      "path": "audio/a6282cb218996d8e4c463f9d9afe02a8e03b1235834add4f94b5333aef6023ac.wav",
+      "expected": "a6282cb218996d8e4c463f9d9afe02a8e03b1235834add4f94b5333aef6023ac",
+      "observed": "a6282cb218996d8e4c463f9d9afe02a8e03b1235834add4f94b5333aef6023ac",
+      "bytes": 133790,
+      "expectedBytes": 133790
+    },
+    {
+      "path": "diagram.json",
+      "expected": "8996ba0de6abb6665fd0045e7515666033f57b5da37587a53c696151509bbf56",
+      "observed": "8996ba0de6abb6665fd0045e7515666033f57b5da37587a53c696151509bbf56",
+      "bytes": 8274,
+      "expectedBytes": 8274
+    },
+    {
+      "path": "source/source.png",
+      "expected": "2aa77e7e43702c7038051c5a25c60d210a3eae4268f340f37b0fac7d28ec7617",
+      "observed": "2aa77e7e43702c7038051c5a25c60d210a3eae4268f340f37b0fac7d28ec7617",
+      "bytes": 4617,
+      "expectedBytes": 4617
+    }
+  ],
+  "allAssetsMatch": true,
+  "scope": "Bytes copied read-only from actual native import directory after SystemPicker import and author acceptance; import ran with IPv4 and IPv6 outbound blocked except HDC."
+}

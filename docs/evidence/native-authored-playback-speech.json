@@ -1,0 +1,35 @@
+{
+  "sourceSha256": "0ef1894434e2281a104ec42f501d819ba14c64eded284ee1cceab7398ebe719d",
+  "method": "Copy original PCM intervals with audible signal and 200 ms padding; long silent navigation intervals omitted. No synthesized or replacement audio.",
+  "originalIntervalsSeconds": [
+    [
+      55.04,
+      56.68
+    ],
+    [
+      96.3,
+      97.48
+    ],
+    [
+      118.5,
+      119.84
+    ],
+    [
+      141.74,
+      144.9
+    ],
+    [
+      205.42,
+      211.64
+    ],
+    [
+      211.66,
+      213.16
+    ],
+    [
+      213.28,
+      216.04
+    ]
+  ],
+  "outputSha256": "35fcf695351dff7d39ad40694d5dff139f7809e96122951837fae4c15031eec7"
+}

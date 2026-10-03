@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-03T14:28:19.246562+00:00",
+  "time": "2026-10-03T16:14:13.097140+00:00",
   "device": "127.0.0.1:55555",
   "operation": "on",
   "scope": "Dedicated emulator IPv4/IPv6 outbound blocked except HDC replies; includes application loopback and WAN.",

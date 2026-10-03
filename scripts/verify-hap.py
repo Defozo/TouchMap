@@ -22,5 +22,9 @@ result = {
     "module": metadata["module"]["name"],
     "signatureVerification": "hap-sign-tool verify-app must pass before this script runs; installation recorded separately",
 }
+if len(sys.argv) > 3:
+    staged = json.loads(Path(sys.argv[3]).read_text(encoding='utf-8'))
+    result['sourceFingerprint'] = {key: value for key, value in staged.items() if key != 'files'}
+    result['appSourceSha256'] = staged['appSourceSha256']
 Path(sys.argv[2]).write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
 print(json.dumps(result, indent=2))

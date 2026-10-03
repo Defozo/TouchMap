@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-10d1c51e4bef",
+  "revision": 1,
+  "title": "Illustrative distance",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "f163f2c4ed6b9bb1d206ddec74226095c442f2509c12ede29d63ae26cbbb3b8f",
+    "width": 960.0,
+    "height": 640.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      960.0,
+      640.0
+    ],
+    "previewPath": "",
+    "previewSha256": ""
+  },
+  "regions": [
+    {
+      "id": "region-title",
+      "label": "Chart Title",
+      "description": "Chart title text 'Illustrative distance'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 331.2,
+              "y": 23.04
+            },
+            {
+              "x": 627.84,
+              "y": 23.04
+            },
+            {
+              "x": 627.84,
+              "y": 53.12
+            },
+            {
+              "x": 331.2,
+              "y": 53.12
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Illustrative distance",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-y-axis-label",
+      "label": "Y-axis label",
+      "description": "Distance (km) axis label",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 115.2,
+              "y": 74.88
+            },
+            {
+              "x": 284.16,
+              "y": 74.88
+            },
+            {
+              "x": 284.16,
+              "y": 99.84
+            },
+            {
+              "x": 115.2,
+              "y": 99.84
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Distance (km)",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-x-axis-label",
+      "label": "X-axis label",
+      "description": "Time axis label",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 448.32,
+              "y": 531.2
+            },
+            {
+              "x": 510.72,
+              "y": 531.2
+            },
+            {
+              "x": 510.72,
+              "y": 551.04
+            },
+            {
+              "x": 448.32,
+              "y": 551.04
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Time",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-point-1",
+      "label": "Point 08:00",
+      "description": "Data point at 08:00 labeled 0 km",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 202.56,
+              "y": 409.6
+            },
+            {
+              "x": 263.04,
+              "y": 409.6
+            },
+            {
+              "x": 263.04,
+              "y": 457.6
+            },
+            {
+              "x": 202.56,
+              "y": 457.6
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 3,
+      "readingOrder": 3,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "0 km",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-point-2",
+      "label": "Point 09:00",
+      "description": "Data point at 09:00 labeled 1.25 km",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 421.44,
+              "y": 277.12
+            },
+            {
+              "x": 518.4,
+              "y": 277.12
+            },
+            {
+              "x": 518.4,
+              "y": 325.12
+            },
+            {
+              "x": 421.44,
+              "y": 325.12
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 4,
+      "readingOrder": 4,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "1.25 km",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-point-3",
+      "label": "Point 10:00",
+      "description": "Data point at 10:00 labeled 2.5 km",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 665.28,
+              "y": 144.64
+            },
+            {
+              "x": 747.84,
+              "y": 144.64
+            },
+            {
+              "x": 747.84,
+              "y": 204.16
+            },
+            {
+              "x": 665.28,
+              "y": 204.16
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 5,
+      "readingOrder": 5,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "2.5 km",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-caption",
+      "label": "Footnote",
+      "description": "Footnote clarifying the authored values",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 179.52,
+              "y": 583.68
+            },
+            {
+              "x": 778.56,
+              "y": 583.68
+            },
+            {
+              "x": 778.56,
+              "y": 605.44
+            },
+            {
+              "x": 179.52,
+              "y": 605.44
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 6,
+      "readingOrder": 6,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Authored teaching values. Unknown means no recorded value.",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart-illustrative-distance",
+      "title": "Illustrative distance",
+      "kind": "line",
+      "xAxis": {
+        "label": "Time",
+        "unit": "time",
+        "scale": "category",
+        "domain": [
+          8.0,
+          10.0
+        ],
+        "ticks": [
+          {
+            "value": 8.0,
+            "label": "08:00"
+          },
+          {
+            "value": 9.0,
+            "label": "09:00"
+          },
+          {
+            "value": 10.0,
+            "label": "10:00"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Distance (km)",
+        "unit": "km",
+        "scale": "linear",
+        "domain": [
+          0.0,
+          3.0
+        ],
+        "ticks": [
+          {
+            "value": 0.0,
+            "label": "0"
+          },
+          {
+            "value": 1.0,
+            "label": "1"
+          },
+          {
+            "value": 2.0,
+            "label": "2"
+          },
+          {
+            "value": 3.0,
+            "label": "3"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series-distance",
+          "label": "Distance",
+          "values": [
+            {
+              "id": "val-1",
+              "regionId": "region-point-1",
+              "x": "08:00",
+              "value": 0.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "0 km",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-2",
+              "regionId": "region-point-2",
+              "x": "09:00",
+              "value": 1.25,
+              "precision": 2,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "1.25 km",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-3",
+              "regionId": "region-point-3",
+              "x": "10:00",
+              "value": 2.5,
+              "precision": 1,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "2.5 km",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Line plot with printed coordinates: 08:00: 0 km, 09:00: 1.25 km, 10:00: 2.5 km",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm all printed values, scale, domain and units"
+        ]
+      }
+    }
+  ],
+  "questions": [],
+  "audio": [],
+  "description": "A line chart showing distance in kilometers over time from 08:00 to 10:00 with explicit data points at 0 km, 1.25 km, and 2.5 km."
+}

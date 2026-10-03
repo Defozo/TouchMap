@@ -1,0 +1,26 @@
+{
+  "input": "docs/evidence/native-authored-playback.wav",
+  "sha256": "0ef1894434e2281a104ec42f501d819ba14c64eded284ee1cceab7398ebe719d",
+  "method": "Local faster-whisper small CPU int8, cached model, English, beam5, VAD. Supporting machine transcription, not a participant or human listening study.",
+  "duration": 300.1593125,
+  "segments": [
+    {
+      "start": 55.7,
+      "end": 206.7,
+      "text": " input 1, gate 1, output 1. Which block does the arrow from input 1.2? A linear sequence",
+      "avgLogprob": -0.24195617145818213
+    },
+    {
+      "start": 206.7,
+      "end": 213.94,
+      "text": " of three rectangular blocks showing a flow from input 1 through gate 1 to output 1 via",
+      "avgLogprob": -0.24195617145818213
+    },
+    {
+      "start": 213.94,
+      "end": 215.94,
+      "text": " directed horizontal arrows.",
+      "avgLogprob": -0.7735016175678798
+    }
+  ]
+}

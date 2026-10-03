@@ -1,0 +1,17 @@
+{
+  "source": "docs/evidence/native-authored.touchmap",
+  "label": "Input 1",
+  "recording": {
+    "id": "audio-box_input_1-label",
+    "targetId": "box_input_1",
+    "kind": "label",
+    "path": "audio/a221ba3573b1a3360a68fb747fd3b0a04ff0cf64192d76996745ae8531f836d2.wav",
+    "textHash": "d1449aa16349b3ea83f973bab0feae5af4e5f1b09451e001e857c63f99797b6c",
+    "language": "en",
+    "provider": "ElevenLabs",
+    "voice": "hpp4J3VqNfWAUOO0d1Us",
+    "sha256": "a221ba3573b1a3360a68fb747fd3b0a04ff0cf64192d76996745ae8531f836d2",
+    "durationMs": 1115
+  },
+  "purpose": "Actual native picker import of the same licensed label, not new synthesis."
+}

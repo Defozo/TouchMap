@@ -1,0 +1,241 @@
+
+added 8 packages, and audited 9 packages in 7s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+> touchmap-domain-verification@1.0.0 test
+> tsx --test tests/*.test.ts
+
+TAP version 13
+# Subtest: portable PCM recording validation shares malformed-header cases with backend
+ok 1 - portable PCM recording validation shares malformed-header cases with backend
+  ---
+  duration_ms: 12.084995
+  ...
+# {"measurement":"host-hit-test","events":1000,"regions":500,"p95Ms":0.01104299999997238,"runtime":"v20.19.5","deviceClaim":false}
+# Subtest: WAV content establishes duration and rejects forged headers
+ok 2 - WAV content establishes duration and rejects forged headers
+  ---
+  duration_ms: 5.479887
+  ...
+# Subtest: native SVG safety rejects namespaces, active elements and obfuscated CSS resources
+ok 3 - native SVG safety rejects namespaces, active elements and obfuscated CSS resources
+  ---
+  duration_ms: 1.485265
+  ...
+# Subtest: bounded native DEFLATE decodes stored, fixed, dynamic and overlapping backreferences
+ok 4 - bounded native DEFLATE decodes stored, fixed, dynamic and overlapping backreferences
+  ---
+  duration_ms: 40.630513
+  ...
+# Subtest: forged deflate sizes and invalid or truncated streams fail before exceeding allocation
+ok 5 - forged deflate sizes and invalid or truncated streams fail before exceeding allocation
+  ---
+  duration_ms: 10.844011
+  ...
+# Subtest: all examples preserve valid reviewed facts and graph-linked questions
+ok 6 - all examples preserve valid reviewed facts and graph-linked questions
+  ---
+  duration_ms: 17.38871
+  ...
+# Subtest: outer boundaries belong to polygon and holes exclude boundaries and interiors
+ok 7 - outer boundaries belong to polygon and holes exclude boundaries and interiors
+  ---
+  duration_ms: 0.628207
+  ...
+# Subtest: line distance handles endpoints and zero length safely
+ok 8 - line distance handles endpoints and zero length safely
+  ---
+  duration_ms: 0.219053
+  ...
+# Subtest: grid indexes the maximum point budget without argument-list overflow
+ok 9 - grid indexes the maximum point budget without argument-list overflow
+  ---
+  duration_ms: 113.944725
+  ...
+# Subtest: same inverse transform covers offset, scale and rotation
+ok 10 - same inverse transform covers offset, scale and rotation
+  ---
+  duration_ms: 1.432354
+  ...
+# Subtest: overlaps retain selected layer while exposing all matching objects
+ok 11 - overlaps retain selected layer while exposing all matching objects
+  ---
+  duration_ms: 1.199512
+  ...
+# Subtest: path guidance never invents routes for graph-only relations
+ok 12 - path guidance never invents routes for graph-only relations
+  ---
+  duration_ms: 0.532559
+  ...
+# Subtest: touch, list and scanning target the same input-independent transition
+ok 13 - touch, list and scanning target the same input-independent transition
+  ---
+  duration_ms: 1.198696
+  ...
+# Subtest: selected answer persists through serialisation and pause without submitting
+ok 14 - selected answer persists through serialisation and pause without submitting
+  ---
+  duration_ms: 1.910951
+  ...
+# Subtest: submission deduplicates retry event and rejects stale or repeated commands
+ok 15 - submission deduplicates retry event and rejects stale or repeated commands
+  ---
+  duration_ms: 1.551603
+  ...
+# Subtest: learning refuses content revision changes and missing IDs
+ok 16 - learning refuses content revision changes and missing IDs
+  ---
+  duration_ms: 0.61961
+  ...
+# Subtest: multi-answer question checks exact set without order bias
+ok 17 - multi-answer question checks exact set without order bias
+  ---
+  duration_ms: 10.0589
+  ...
+# Subtest: unknown chart values are never accepted as exact-value facts
+ok 18 - unknown chart values are never accepted as exact-value facts
+  ---
+  duration_ms: 0.753366
+  ...
+# Subtest: referential integrity, nonfinite geometry and geometry budgets fail
+ok 19 - referential integrity, nonfinite geometry and geometry budgets fail
+  ---
+  duration_ms: 1.228447
+  ...
+# Subtest: editing a relation invalidates dependent questions even if label stays identical
+ok 20 - editing a relation invalidates dependent questions even if label stays identical
+  ---
+  duration_ms: 2.797036
+  ...
+# Subtest: undo and redo restore entire consistent drafts
+ok 21 - undo and redo restore entire consistent drafts
+  ---
+  duration_ms: 3.525598
+  ...
+# Subtest: late AI result cannot replace later author edits
+ok 22 - late AI result cannot replace later author edits
+  ---
+  duration_ms: 1.539706
+  ...
+# Subtest: deleting region removes dangling links and invalidates affected questions
+ok 23 - deleting region removes dangling links and invalidates affected questions
+  ---
+  duration_ms: 1.724086
+  ...
+# Subtest: missing audio cannot be labelled ready offline
+ok 24 - missing audio cannot be labelled ready offline
+  ---
+  duration_ms: 5.289566
+  ...
+# Subtest: ZIP paths reject traversal, absolute names and Windows separator escapes
+ok 25 - ZIP paths reject traversal, absolute names and Windows separator escapes
+  ---
+  duration_ms: 1.628753
+  ...
+# Subtest: recovery across 100 acknowledged host state roundtrips never submits unfinished selection
+ok 26 - recovery across 100 acknowledged host state roundtrips never submits unfinished selection
+  ---
+  duration_ms: 18.097945
+  ...
+# Subtest: host geometry benchmark on 500 regions and 1000 events reports measurements
+ok 27 - host geometry benchmark on 500 regions and 1000 events reports measurements
+  ---
+  duration_ms: 31.34066
+  ...
+# Subtest: editing the material overview invalidates its recording while preserving reviewed source facts
+ok 28 - editing the material overview invalidates its recording while preserving reviewed source facts
+  ---
+  duration_ms: 15.475216
+  ...
+# Subtest: bounded JSON accepts actual package documents and escaped strings
+ok 29 - bounded JSON accepts actual package documents and escaped strings
+  ---
+  duration_ms: 17.544333
+  ...
+# Subtest: bounded JSON rejects duplicate decoded names, excessive depth and malformed tokens
+ok 30 - bounded JSON rejects duplicate decoded names, excessive depth and malformed tokens
+  ---
+  duration_ms: 10.89543
+  ...
+# Subtest: manifest rejects malformed authors/assets before native adoption
+ok 31 - manifest rejects malformed authors/assets before native adoption
+  ---
+  duration_ms: 3.179119
+  ...
+# Subtest: manifest rejects case collisions, self references and unbounded assets
+ok 32 - manifest rejects case collisions, self references and unbounded assets
+  ---
+  duration_ms: 0.733399
+  ...
+# Subtest: all bundled recordings expose complete aligned PCM samples for native AudioRenderer
+ok 33 - all bundled recordings expose complete aligned PCM samples for native AudioRenderer
+  ---
+  duration_ms: 25.347915
+  ...
+# Subtest: native PCM parser rejects compressed WAV and truncated sample payloads before playback
+ok 34 - native PCM parser rejects compressed WAV and truncated sample payloads before playback
+  ---
+  duration_ms: 1.699185
+  ...
+# Subtest: backend CSS fixture passes preview retention profile while local renderer profile rejects it
+ok 35 - backend CSS fixture passes preview retention profile while local renderer profile rejects it
+  ---
+  duration_ms: 12.846602
+  ...
+# Subtest: preview profile rejects active or external XML including entity-obscured styles
+ok 36 - preview profile rejects active or external XML including entity-obscured styles
+  ---
+  duration_ms: 13.278579
+  ...
+# Subtest: preview profile rejects incomplete, duplicate and unbounded XML structures
+ok 37 - preview profile rejects incomplete, duplicate and unbounded XML structures
+  ---
+  duration_ms: 0.53707
+  ...
+# Subtest: malformed nested wire objects are rejected without exceptions
+ok 38 - malformed nested wire objects are rejected without exceptions
+  ---
+  duration_ms: 13.047176
+  ...
+# Subtest: current revision and provenance are publication gates even when audio exists
+ok 39 - current revision and provenance are publication gates even when audio exists
+  ---
+  duration_ms: 7.180157
+  ...
+# Subtest: native validator rejects wrong audio kinds, duplicate targets and chart evidence
+ok 40 - native validator rejects wrong audio kinds, duplicate targets and chart evidence
+  ---
+  duration_ms: 8.525457
+  ...
+# Subtest: native and preparation validators use shared polygon acceptance fixtures
+ok 41 - native and preparation validators use shared polygon acceptance fixtures
+  ---
+  duration_ms: 15.271962
+  ...
+# Subtest: portable names exclude reserved Windows devices and non-NFC aliases
+ok 42 - portable names exclude reserved Windows devices and non-NFC aliases
+  ---
+  duration_ms: 0.552902
+  ...
+# Subtest: the actual offline CLI artifact passes native publication and preview readiness
+ok 43 - the actual offline CLI artifact passes native publication and preview readiness
+  ---
+  duration_ms: 1.842477
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2583.367569
+
+> touchmap-domain-verification@1.0.0 typecheck
+> tsc --noEmit
+

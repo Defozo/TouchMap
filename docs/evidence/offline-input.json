@@ -1,0 +1,30 @@
+{
+  "source": "samples/water-cycle.touchmap",
+  "packageId": "water-cycle-offline-verification",
+  "sha256": "c10c1da4e7af4a64bee4672bbd47c27f73c0dfd43bfd8e2dd12c69a0fd2918df",
+  "changes": [
+    "New test package identity",
+    "Test material title",
+    "Overview target bound to test identity"
+  ],
+  "unchanged": [
+    "geometry",
+    "source pixels",
+    "relationships",
+    "questions",
+    "audio bytes",
+    "source review declarations"
+  ],
+  "validation": {
+    "valid": true,
+    "publishable": true,
+    "readyOffline": true,
+    "issues": [],
+    "audioIssues": [],
+    "authorDeclaration": {
+      "name": "TouchMap example author",
+      "declaration": "Original illustration and explicitly authored facts. Reviewed against the source by the implementation team. This declaration is not independent accessibility certification."
+    },
+    "requiresLocalAcceptance": true
+  }
+}

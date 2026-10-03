@@ -1,0 +1,3 @@
+TestFinished-ResultCode: 0
+TestFinished-ResultMsg: Native failure checks passed
+user test finished.

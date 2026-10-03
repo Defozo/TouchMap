@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+<rect width="960" height="640" fill="white"/>
+<g fill="#183B34" font-family="DejaVu Sans" font-size="24">
+<text x="480" y="46" text-anchor="middle" font-size="30">Illustrative rainfall</text>
+<text x="115" y="95">Rainfall (mm)</text>
+<path d="M115 450.0H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="458.0" text-anchor="end">0</text>
+<path d="M115 370.0H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="378.0" text-anchor="end">20</text>
+<path d="M115 290.0H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="298.0" text-anchor="end">40</text>
+<path d="M115 210.0H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="218.0" text-anchor="end">60</text>
+<path d="M115 130.0H825" stroke="#183B34" stroke-width="1" opacity="0.35"/>
+<text x="98" y="138.0" text-anchor="end">80</text>
+<path d="M115 130V450H825" stroke="#183B34" stroke-width="2" fill="none"/>
+<text x="233.33333333333331" y="488" text-anchor="middle">April</text>
+<rect x="188.33333333333331" y="290.0" width="90" height="160.0" fill="#183B34" opacity="0.7"/>
+<text x="233.33333333333331" y="270.0" text-anchor="middle">40 mm</text>
+<text x="470.0" y="488" text-anchor="middle">May</text>
+<rect x="425.0" y="190.0" width="90" height="260.0" fill="#183B34" opacity="0.7"/>
+<text x="470.0" y="170.0" text-anchor="middle">65 mm</text>
+<text x="706.6666666666666" y="488" text-anchor="middle">June</text>
+<circle cx="706.6666666666666" cy="380" r="24" fill="white" stroke="#183B34" stroke-dasharray="5 5"/>
+<text x="706.6666666666666" y="388" text-anchor="middle">?</text>
+<text x="706.6666666666666" y="340" text-anchor="middle">Unknown</text>
+<text x="480" y="550" text-anchor="middle">Month</text>
+<text x="480" y="600" text-anchor="middle" font-size="19">Authored teaching values. Unknown means no recorded value.</text>
+</g></svg>

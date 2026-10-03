@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-ae0f25918bb0",
+  "revision": 1,
+  "title": "Illustrative energy use",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "81720fcae29112758f060fa2af75a7300867d5dabf2c69cf926803b4a74696fe",
+    "width": 960.0,
+    "height": 640.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      960.0,
+      640.0
+    ],
+    "previewPath": "",
+    "previewSha256": ""
+  },
+  "regions": [
+    {
+      "id": "region-title",
+      "label": "Chart Title",
+      "description": "Title label: Illustrative energy use",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 308.16,
+              "y": 21.12
+            },
+            {
+              "x": 648.96,
+              "y": 21.12
+            },
+            {
+              "x": 648.96,
+              "y": 53.76
+            },
+            {
+              "x": 308.16,
+              "y": 53.76
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Illustrative energy use",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-y-axis-label",
+      "label": "Y-axis Label",
+      "description": "Y-axis label specifying Energy (kWh)",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 112.32,
+              "y": 74.24
+            },
+            {
+              "x": 278.4,
+              "y": 74.24
+            },
+            {
+              "x": 278.4,
+              "y": 102.4
+            },
+            {
+              "x": 112.32,
+              "y": 102.4
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Energy (kWh)",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-x-axis-label",
+      "label": "X-axis Label",
+      "description": "X-axis label specifying Station",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 433.92,
+              "y": 529.92
+            },
+            {
+              "x": 523.2,
+              "y": 529.92
+            },
+            {
+              "x": 523.2,
+              "y": 551.68
+            },
+            {
+              "x": 433.92,
+              "y": 551.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Station",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-bar-aster",
+      "label": "Aster Bar",
+      "description": "Bar for station Aster with label 12.5 kWh",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 175.68,
+              "y": 200.96
+            },
+            {
+              "x": 290.88,
+              "y": 200.96
+            },
+            {
+              "x": 290.88,
+              "y": 451.2
+            },
+            {
+              "x": 175.68,
+              "y": 451.2
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 3,
+      "readingOrder": 3,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "12.5 kWh",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-bar-birch",
+      "label": "Birch Bar",
+      "description": "Bar for station Birch with label 17 kWh",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 421.44,
+              "y": 137.6
+            },
+            {
+              "x": 518.4,
+              "y": 137.6
+            },
+            {
+              "x": 518.4,
+              "y": 451.2
+            },
+            {
+              "x": 421.44,
+              "y": 451.2
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 4,
+      "readingOrder": 4,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "17 kWh",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-bar-cedar",
+      "label": "Cedar Bar",
+      "description": "Bar for station Cedar with label 9.5 kWh",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 655.68,
+              "y": 263.04
+            },
+            {
+              "x": 757.44,
+              "y": 263.04
+            },
+            {
+              "x": 757.44,
+              "y": 451.2
+            },
+            {
+              "x": 655.68,
+              "y": 451.2
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 5,
+      "readingOrder": 5,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "9.5 kWh",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-footnote",
+      "label": "Footnote",
+      "description": "Footnote clarifying authored teaching values",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 179.52,
+              "y": 583.68
+            },
+            {
+              "x": 778.56,
+              "y": 583.68
+            },
+            {
+              "x": 778.56,
+              "y": 605.44
+            },
+            {
+              "x": 179.52,
+              "y": 605.44
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 6,
+      "readingOrder": 6,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Authored teaching values. Unknown means no recorded value.",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart-energy-use",
+      "title": "Illustrative energy use",
+      "kind": "bar",
+      "xAxis": {
+        "label": "Station",
+        "unit": "",
+        "scale": "category",
+        "domain": [
+          0.0,
+          3.0
+        ],
+        "ticks": [
+          {
+            "value": 0.0,
+            "label": "Aster"
+          },
+          {
+            "value": 1.0,
+            "label": "Birch"
+          },
+          {
+            "value": 2.0,
+            "label": "Cedar"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Energy",
+        "unit": "kWh",
+        "scale": "linear",
+        "domain": [
+          0.0,
+          20.0
+        ],
+        "ticks": [
+          {
+            "value": 0.0,
+            "label": "0"
+          },
+          {
+            "value": 5.0,
+            "label": "5"
+          },
+          {
+            "value": 10.0,
+            "label": "10"
+          },
+          {
+            "value": 15.0,
+            "label": "15"
+          },
+          {
+            "value": 20.0,
+            "label": "20"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series-energy",
+          "label": "Energy use",
+          "values": [
+            {
+              "id": "val-aster",
+              "regionId": "region-bar-aster",
+              "x": "Aster",
+              "value": 12.5,
+              "precision": 1,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "12.5 kWh printed above Aster bar",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-birch",
+              "regionId": "region-bar-birch",
+              "x": "Birch",
+              "value": 17.0,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "17 kWh printed above Birch bar",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-cedar",
+              "regionId": "region-bar-cedar",
+              "x": "Cedar",
+              "value": 9.5,
+              "precision": 1,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "9.5 kWh printed above Cedar bar",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Entire bar graph and data labels",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm all printed values, scale, domain and units"
+        ]
+      }
+    }
+  ],
+  "questions": [],
+  "audio": [],
+  "description": "A bar chart showing illustrative energy consumption in kilowatt-hours (kWh) across three stations: Aster, Birch, and Cedar."
+}

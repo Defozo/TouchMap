@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "method": "Actual native system-picker export while dedicated IPv4 and IPv6 OUTPUT block included application loopback; host independently validates all package bytes",
+  "packageId": "water-cycle",
+  "revision": 1,
+  "readyOffline": true,
+  "publishable": true,
+  "assetBytesEqualReleasedSample": true,
+  "assets": 19,
+  "sha256": "d44c37308308a2189439f20384d46a6dd4c407b10c5c06bfd14a594c5d971ad2",
+  "teachingArchiveContainsPrivateHistory": false,
+  "limitations": [
+    "This export used earlier uncompressed writer; final compressed export and transfer are tested separately",
+    "This offline run preceded successful native audio; repeat complete offline audio flow on final HAP"
+  ],
+  "manifestSemanticallyEqual": true,
+  "manifestSerialization": "Native JSON serialization changes whitespace only; content assets remain byte-identical"
+}

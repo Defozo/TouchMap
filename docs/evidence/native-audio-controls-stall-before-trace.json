@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "device": "127.0.0.1:55556",
+  "error": "Command '['/home/test123/command-line-tools/sdk/default/openharmony/toolchains/hdc', '-t', '127.0.0.1:55556', 'shell', 'aa', 'test', '-b', 'org.touchmap.app', '-m', 'entry_test', '-s', 'unittest', 'OpenHarmonyTestRunner', '-s', 'audioControls', '1', '-w', '90000']' timed out after 90 seconds"
+}

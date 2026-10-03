@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-03T15:29:52.954167+00:00",
+  "team": {
+    "team_name": "DEFOZO SOFTWARE HOUSE",
+    "members": [
+      "Michał Kiełtyka"
+    ],
+    "human_member_count": 1,
+    "confirmed_by": "user",
+    "confirmed_at": "2026-10-03T13:25:07.108700+00:00"
+  },
+  "mode": "read-only public website and participant documents",
+  "platform": "HackTribe",
+  "timezone": "Europe/Warsaw",
+  "checkpoint": "2026-10-03T20:00:00+02:00",
+  "finalSubmission": "2026-10-04T11:00:00+02:00",
+  "checkpointMinimum": [
+    "project name",
+    "initial description"
+  ],
+  "newProjectsAfterCheckpoint": false,
+  "deadlineEvidence": [
+    "English guide page 13",
+    "Polish guide page 13",
+    "live official agenda"
+  ],
+  "exactAuthenticatedFormFields": "unverified",
+  "uploadLimits": "unverified",
+  "competitionSubmitted": false,
+  "websiteTextConflict": "Editable English guide text says 11:00 PM; current EN/PL downloadable PDFs and agenda agree on 11:00 AM.",
+  "sources": [
+    {
+      "id": "guide-en",
+      "url": "https://ljlzsnhvghokugfvdgxf.supabase.co/storage/v1/object/cms-assets/guide/documents/6dc8b2f2-66c0-45d5-9e3a-6888cccf3010.pdf",
+      "clientDownloadPath": "/storage/v1/object/cms-assets/guide/documents/6dc8b2f2-66c0-45d5-9e3a-6888cccf3010.pdf",
+      "sha256": "374dc79a7aa1fb4fb4ccc491e4a0ae06629898f678da551a578e8aa17059230c",
+      "bytes": 3015947,
+      "downloadVia": "official website public client, publishable API header; no authenticated user session"
+    },
+    {
+      "id": "guide-pl",
+      "url": "https://ljlzsnhvghokugfvdgxf.supabase.co/storage/v1/object/cms-assets/guide/documents/ce3a01ce-9074-436f-a892-8710fa7fd077.pdf",
+      "clientDownloadPath": "/storage/v1/object/cms-assets/guide/documents/ce3a01ce-9074-436f-a892-8710fa7fd077.pdf",
+      "sha256": "8fab251002c9f64f4c09f0f5343833c53278489c5da71195c00cd595033958cb",
+      "bytes": 3024862,
+      "downloadVia": "official website public client, publishable API header; no authenticated user session"
+    },
+    {
+      "id": "rules",
+      "url": "https://ljlzsnhvghokugfvdgxf.supabase.co/storage/v1/object/cms-assets/footer/documents/1785833849412-dnm85z.pdf",
+      "clientDownloadPath": "/storage/v1/object/cms-assets/footer/documents/1785833849412-dnm85z.pdf",
+      "sha256": "271a30f2ced75f49b6e335dfdcc9de0aefe33c83349c82b654e17bd9d6ddc417",
+      "bytes": 261756,
+      "downloadVia": "official website public client, publishable API header; no authenticated user session"
+    }
+  ],
+  "taskSources": [
+    {
+      "title": "Task evaluation criteria",
+      "url": "https://drive.google.com/file/d/1S5V-x4RW3NK3YgI4TLxIsmiS8LF7_-zN/view"
+    },
+    {
+      "title": "Task rules",
+      "url": "https://drive.google.com/file/d/10WcJMWOLPcJA4RqDeyyr3ZsMFfi1UJ3L/view"
+    }
+  ]
+}

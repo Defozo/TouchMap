@@ -1,0 +1,172 @@
+{
+  "title": "Illustrative stored water",
+  "description": "A vertical bar chart titled 'Illustrative stored water' plotting stored water volume in liters across three stores: North, Southwest, and East.",
+  "regions": [
+    {
+      "id": "chart_title",
+      "label": "Chart Title",
+      "description": "Header text above the chart: 'Illustrative stored water'",
+      "box_2d": [36, 313, 73, 687],
+      "sourceText": "Illustrative stored water"
+    },
+    {
+      "id": "y_axis_label",
+      "label": "Y-Axis Label",
+      "description": "Label for the vertical axis showing 'Volume (L)'",
+      "box_2d": [120, 119, 154, 253],
+      "sourceText": "Volume (L)"
+    },
+    {
+      "id": "x_axis_label",
+      "label": "X-Axis Label",
+      "description": "Label for the horizontal axis showing 'Store'",
+      "box_2d": [830, 467, 860, 532],
+      "sourceText": "Store"
+    },
+    {
+      "id": "bar_north",
+      "label": "North Bar",
+      "description": "Vertical bar for 'North' category labeled with '14 L'",
+      "box_2d": [469, 195, 703, 290],
+      "sourceText": "14 L"
+    },
+    {
+      "id": "bar_southwest",
+      "label": "Southwest Bar",
+      "description": "Vertical bar for 'Southwest' category labeled with '9 L'",
+      "box_2d": [552, 442, 703, 536],
+      "sourceText": "9 L"
+    },
+    {
+      "id": "bar_east",
+      "label": "East Bar",
+      "description": "Vertical bar for 'East' category labeled with '22 L'",
+      "box_2d": [335, 688, 703, 783],
+      "sourceText": "22 L"
+    },
+    {
+      "id": "footer_note",
+      "label": "Footnote",
+      "description": "Footnote at the bottom stating: 'Authored teaching values. Unknown means no recorded value.'",
+      "box_2d": [914, 188, 943, 811],
+      "sourceText": "Authored teaching values. Unknown means no recorded value."
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart_stored_water",
+      "title": "Illustrative stored water",
+      "kind": "bar",
+      "xAxis": {
+        "label": "Store",
+        "unit": "",
+        "scale": "category",
+        "domain": [0, 3],
+        "ticks": [
+          {
+            "value": 1,
+            "label": "North"
+          },
+          {
+            "value": 2,
+            "label": "Southwest"
+          },
+          {
+            "value": 3,
+            "label": "East"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Volume (L)",
+        "unit": "L",
+        "scale": "linear",
+        "domain": [0, 30],
+        "ticks": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 10,
+            "label": "10"
+          },
+          {
+            "value": 20,
+            "label": "20"
+          },
+          {
+            "value": 30,
+            "label": "30"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series_stored_water",
+          "label": "Volume",
+          "values": [
+            {
+              "id": "val_north",
+              "regionId": "bar_north",
+              "x": "North",
+              "value": 14,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "bar_north",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val_southwest",
+              "regionId": "bar_southwest",
+              "x": "Southwest",
+              "value": 9,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "bar_southwest",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val_east",
+              "regionId": "bar_east",
+              "x": "East",
+              "value": 22,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "bar_east",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "entire image",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "revision": 1,
+        "issues": [],
+        "reviewer": "",
+        "status": "draft"
+      }
+    }
+  ],
+  "unresolved": [],
+  "unsupported": []
+}

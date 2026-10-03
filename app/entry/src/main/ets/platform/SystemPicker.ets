@@ -1,3 +1,4 @@
+import { tr } from '../domain/i18n';
 import { common, Want } from '@kit.AbilityKit';
 
 /** OpenHarmony's full-page system picker, with its normal temporary URI grants.
@@ -16,7 +17,7 @@ export class SystemPicker {
     if (!streams || streams.length === 0) { return ''; }
     if (streams.length !== 1 || typeof streams[0] !== 'string' ||
       !streams[0].startsWith('file://') || streams[0].includes('\u0000')) {
-      throw new Error('The system picker returned an invalid file selection.');
+      throw new Error(tr('tm_dee8317a6682'));
     }
     return streams[0];
   }
@@ -32,7 +33,7 @@ export class SystemPicker {
 
   async save(name: string): Promise<string> {
     if (!name || /[/\\\u0000]/.test(name) || name.length > 180) {
-      throw new Error('The export filename is invalid.');
+      throw new Error(tr('tm_4aace0fa58f1'));
     }
     return this.request({
       bundleName: 'com.ohos.filepicker', abilityName: 'MainAbility',

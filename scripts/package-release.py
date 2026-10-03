@@ -5,6 +5,7 @@ No publication, repository mutation or competition submission is performed.
 from __future__ import annotations
 import argparse
 import hashlib
+import importlib.util
 import io
 import json
 import os
@@ -17,6 +18,9 @@ import zipfile
 import zlib
 
 ROOT = Path(__file__).resolve().parents[1]
+_FINGERPRINT_SPEC = importlib.util.spec_from_file_location('release_app_fingerprint', ROOT/'scripts/app_source_fingerprint.py')
+_FINGERPRINT = importlib.util.module_from_spec(_FINGERPRINT_SPEC)
+_FINGERPRINT_SPEC.loader.exec_module(_FINGERPRINT)
 REQUIRED = [
     'README.md', 'ARCHITECTURE.md', 'AI_WORKFLOW.md', 'AI_INTEGRATION.md',
     'THIRD_PARTY.md', 'LICENSE', 'TEAM.json', 'SUBMISSION.md', 'toolchain.lock.json',
@@ -37,6 +41,21 @@ def canonical_json(value) -> bytes:
 
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def committed_app_fingerprint(files: dict[str, bytes]) -> str:
+    """The same path/content algorithm as the build, over committed archive bytes."""
+    aggregate = hashlib.sha256()
+    for full_name, data in sorted(files.items()):
+        if not full_name.startswith('app/'):
+            continue
+        path = PurePosixPath(full_name[4:])
+        if any(part in _FINGERPRINT.GENERATED_DIRECTORIES for part in path.parts) or path.name in _FINGERPRINT.GENERATED_FILES:
+            continue
+        if path.suffix.lower() in _FINGERPRINT.PRIVATE_SIGNING_SUFFIXES and (len(path.parts) == 1 or path.parts[0] == 'signing'):
+            continue
+        aggregate.update(path.as_posix().encode('utf-8') + b'\0' + sha256(data).encode('ascii') + b'\n')
+    return aggregate.hexdigest()
 
 
 def git(root: Path, *arguments: str) -> bytes:
@@ -124,6 +143,9 @@ def prepare(root: Path, commit: str, hap: Path, demo: Path, verification: Path,
             raise ValueError('Release verification team differs from the committed TEAM.json')
         if report.get('hap', {}).get('sha256') != sha256(hap_bytes):
             raise ValueError('Signed HAP hash differs from release verification')
+        app_fingerprint = committed_app_fingerprint(files)
+        if report.get('hap', {}).get('appSourceSha256') != app_fingerprint:
+            raise ValueError('Signed HAP build inputs differ from the committed app source fingerprint')
         checked_samples = {sample['file']: sample['sha256'] for sample in report.get('samples', [])}
         for name, data in files.items():
             if name.startswith('samples/') and name.endswith('.touchmap') and checked_samples.get(PurePosixPath(name).name) != sha256(data):
@@ -146,10 +168,14 @@ def prepare(root: Path, commit: str, hap: Path, demo: Path, verification: Path,
         bundle = {'source.zip': deterministic_zip(files), 'touchmap-signed.hap': hap_bytes,
                   'demo/touchmap-demo.mp4': demo_bytes, 'release-verification.json': canonical_json(report)}
         for name, data in files.items():
-            if name in TOP_DOCS or name.startswith('docs/') or name.startswith('samples/') and (name.endswith('.touchmap') or name == 'samples/LICENSE.md'):
+            if (name in TOP_DOCS or name.startswith(('docs/', 'licenses/', 'assets/brand/', 'contracts/'))
+                    or name == 'backend/touchmap/assets/DejaVu-LICENSE.txt'
+                    or name.startswith('samples/') and (name.endswith('.touchmap') or name == 'samples/LICENSE.md')):
                 bundle[name] = data
         environment = {'sourceCommit': resolved, 'sourceTree': git(root, 'rev-parse', f'{resolved}^{{tree}}').decode().strip(),
                        'sourceCommitEpoch': int(git(root, 'show', '-s', '--format=%ct', resolved)),
+                       'appSourceSha256': app_fingerprint, 'appSourceFingerprintAlgorithm': _FINGERPRINT.ALGORITHM,
+                       'buildInputGitHead': report['hap'].get('buildInputGitHead'),
                        'toolchain': json.loads(files['toolchain.lock.json']),
                        'packagingRuntime': {'python': '.'.join(map(str, sys.version_info[:3])), 'zlib': zlib.ZLIB_RUNTIME_VERSION},
                        'archivePolicy': 'Sorted UTF-8 paths, fixed ZIP timestamp 1980-01-01, DEFLATE level 9',

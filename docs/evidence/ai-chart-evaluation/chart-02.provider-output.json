@@ -1,0 +1,176 @@
+{
+  "title": "Illustrative energy use",
+  "description": "A bar chart showing illustrative energy consumption in kilowatt-hours (kWh) across three stations: Aster, Birch, and Cedar.",
+  "regions": [
+    {
+      "id": "region-title",
+      "label": "Chart Title",
+      "description": "Title label: Illustrative energy use",
+      "box_2d": [33, 321, 84, 676],
+      "sourceText": "Illustrative energy use"
+    },
+    {
+      "id": "region-y-axis-label",
+      "label": "Y-axis Label",
+      "description": "Y-axis label specifying Energy (kWh)",
+      "box_2d": [116, 117, 160, 290],
+      "sourceText": "Energy (kWh)"
+    },
+    {
+      "id": "region-x-axis-label",
+      "label": "X-axis Label",
+      "description": "X-axis label specifying Station",
+      "box_2d": [828, 452, 862, 545],
+      "sourceText": "Station"
+    },
+    {
+      "id": "region-bar-aster",
+      "label": "Aster Bar",
+      "description": "Bar for station Aster with label 12.5 kWh",
+      "box_2d": [314, 183, 705, 303],
+      "sourceText": "12.5 kWh"
+    },
+    {
+      "id": "region-bar-birch",
+      "label": "Birch Bar",
+      "description": "Bar for station Birch with label 17 kWh",
+      "box_2d": [215, 439, 705, 540],
+      "sourceText": "17 kWh"
+    },
+    {
+      "id": "region-bar-cedar",
+      "label": "Cedar Bar",
+      "description": "Bar for station Cedar with label 9.5 kWh",
+      "box_2d": [411, 683, 705, 789],
+      "sourceText": "9.5 kWh"
+    },
+    {
+      "id": "region-footnote",
+      "label": "Footnote",
+      "description": "Footnote clarifying authored teaching values",
+      "box_2d": [912, 187, 946, 811],
+      "sourceText": "Authored teaching values. Unknown means no recorded value."
+    }
+  ],
+  "relations": [],
+  "charts": [
+    {
+      "id": "chart-energy-use",
+      "title": "Illustrative energy use",
+      "kind": "bar",
+      "xAxis": {
+        "label": "Station",
+        "unit": "",
+        "scale": "category",
+        "domain": [0, 3],
+        "ticks": [
+          {
+            "value": 0,
+            "label": "Aster"
+          },
+          {
+            "value": 1,
+            "label": "Birch"
+          },
+          {
+            "value": 2,
+            "label": "Cedar"
+          }
+        ]
+      },
+      "yAxis": {
+        "label": "Energy",
+        "unit": "kWh",
+        "scale": "linear",
+        "domain": [0, 20],
+        "ticks": [
+          {
+            "value": 0,
+            "label": "0"
+          },
+          {
+            "value": 5,
+            "label": "5"
+          },
+          {
+            "value": 10,
+            "label": "10"
+          },
+          {
+            "value": 15,
+            "label": "15"
+          },
+          {
+            "value": 20,
+            "label": "20"
+          }
+        ]
+      },
+      "series": [
+        {
+          "id": "series-energy",
+          "label": "Energy use",
+          "values": [
+            {
+              "id": "val-aster",
+              "regionId": "region-bar-aster",
+              "x": "Aster",
+              "value": 12.5,
+              "precision": 1,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "12.5 kWh printed above Aster bar",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-birch",
+              "regionId": "region-bar-birch",
+              "x": "Birch",
+              "value": 17,
+              "precision": 0,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "17 kWh printed above Birch bar",
+                  "origin": "AI-proposed"
+                }
+              ]
+            },
+            {
+              "id": "val-cedar",
+              "regionId": "region-bar-cedar",
+              "x": "Cedar",
+              "value": 9.5,
+              "precision": 1,
+              "evidence": [
+                {
+                  "sourceId": "source",
+                  "reference": "9.5 kWh printed above Cedar bar",
+                  "origin": "AI-proposed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Entire bar graph and data labels",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "revision": 1,
+        "issues": [],
+        "reviewer": "",
+        "status": "draft"
+      }
+    }
+  ],
+  "unresolved": [],
+  "unsupported": []
+}

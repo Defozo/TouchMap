@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-03T16:33:54.944997+00:00",
+  "scope": "Relative Markdown and image targets in public documentation; original untracked planning materials excluded. URL liveness and heading fragments are outside this local-file audit.",
+  "documents": [
+    "AI_INTEGRATION.md",
+    "AI_WORKFLOW.md",
+    "ARCHITECTURE.md",
+    "README.md",
+    "SUBMISSION.md",
+    "THIRD_PARTY.md",
+    "contracts/CONTRACT.md",
+    "docs/ACCESSIBILITY.md",
+    "docs/DEMO_SCRIPT.md",
+    "docs/PRIVACY.md",
+    "docs/RELEASE.md",
+    "docs/STUDY_PROTOCOL.md",
+    "docs/SUBMISSION_REQUIREMENTS.md",
+    "docs/TEST_REPORT.md",
+    "docs/backend.md",
+    "docs/evidence/ai-chart-evaluation/INTERPRETATION.md",
+    "docs/platform.md",
+    "samples/LICENSE.md",
+    "tests/evaluation/charts/README.md",
+    "tests/native-accessibility-probe/README.md",
+    "tests/native-share-sender/README.md"
+  ],
+  "localLinksChecked": 77,
+  "missing": []
+}

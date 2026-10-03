@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-03T15:22:12.776551+00:00",
+  "commit": "ebc1dc20af8e2d818edf3d3174fb014428faaca8",
+  "method": "Fresh local git clone --no-local; dependencies installed from lockfiles; no credentials copied",
+  "checks": {
+    "npmCi": true,
+    "domainTests": true,
+    "typescript": true,
+    "pytest": true,
+    "nativeCleanBuild": true,
+    "signatureVerification": true
+  },
+  "signedHapSha256": "ce0ad907fcb97ec1c45ccd7b803bd1ae9a2094b7af642c2cdf88bb6e515a9a12",
+  "signedHapBytes": 8361198,
+  "signingNote": "Independent development signing can change the HAP hash. This verifies source reproduction, not byte-identical signatures.",
+  "installation": "Separate runtime evidence is required; this script does not modify a device."
+}

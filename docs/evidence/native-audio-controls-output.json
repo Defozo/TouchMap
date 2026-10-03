@@ -1,0 +1,9 @@
+{
+  "device": "127.0.0.1:55556",
+  "seconds": 30.02671201814059,
+  "channels": 2,
+  "sampleRate": 44100,
+  "peakPcm16": 4370,
+  "rmsPcm16": 182.67739482411525,
+  "scope": "Host monitor of this emulator output stream only; not a microphone recording or physical acoustic latency measurement."
+}

@@ -1,0 +1,163 @@
+{
+  "id": "chart-02",
+  "split": "development",
+  "variant": "low-contrast-decimal",
+  "model": "gemini-3.8-flash",
+  "adapterSha256": "1d467257f479a6fa2da1c47f765b18a74db25937b82b29e029beb7e139ce69e1",
+  "startedAt": "2026-10-03T16:13:54.334197+00:00",
+  "schemaSuccess": true,
+  "usableChartDraft": true,
+  "sourceSha256": "b97abc0442a74e5c4990e0917049544f8928051996fef31152869271f285ff4f",
+  "chartCount": 1,
+  "kindCorrect": true,
+  "xLabelsCorrect": true,
+  "yLabelCorrect": true,
+  "unitCorrect": true,
+  "domainCorrect": true,
+  "ticksCorrect": true,
+  "scaleCorrect": true,
+  "exactValuesCorrect": 3,
+  "expectedValues": 3,
+  "unknownsCorrect": 0,
+  "expectedUnknowns": 0,
+  "unsupportedValueAssertions": [],
+  "unexpectedRelations": 0,
+  "observed": {
+    "kind": "bar",
+    "xAxis": {
+      "label": "Station",
+      "unit": "",
+      "scale": "category",
+      "domain": [
+        0.0,
+        3.0
+      ],
+      "ticks": [
+        {
+          "value": 0.0,
+          "label": "Aster"
+        },
+        {
+          "value": 1.0,
+          "label": "Birch"
+        },
+        {
+          "value": 2.0,
+          "label": "Cedar"
+        }
+      ]
+    },
+    "yAxis": {
+      "label": "Energy",
+      "unit": "kWh",
+      "scale": "linear",
+      "domain": [
+        0.0,
+        20.0
+      ],
+      "ticks": [
+        {
+          "value": 0.0,
+          "label": "0"
+        },
+        {
+          "value": 5.0,
+          "label": "5"
+        },
+        {
+          "value": 10.0,
+          "label": "10"
+        },
+        {
+          "value": 15.0,
+          "label": "15"
+        },
+        {
+          "value": 20.0,
+          "label": "20"
+        }
+      ]
+    },
+    "values": [
+      {
+        "x": "Aster",
+        "value": 12.5,
+        "precision": 1
+      },
+      {
+        "x": "Birch",
+        "value": 17.0,
+        "precision": 0
+      },
+      {
+        "x": "Cedar",
+        "value": 9.5,
+        "precision": 1
+      }
+    ]
+  },
+  "report": {
+    "unsupported": [],
+    "unresolved": []
+  },
+  "usage": {
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 193
+      },
+      {
+        "modality": "image",
+        "tokens": 1080
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_input_tokens": 1273,
+    "total_output_tokens": 1438,
+    "total_thought_tokens": 0,
+    "total_tokens": 2711,
+    "total_tool_use_tokens": 0,
+    "raw_prompt_token": 3229,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1454
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1080
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1454
+          }
+        ]
+      }
+    ]
+  },
+  "durationMs": 7484
+}

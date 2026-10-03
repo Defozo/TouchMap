@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55556",
+  "receiverBundle": "org.touchmap.app",
+  "receiverHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54",
+  "senderBundle": "org.touchmap.testshare",
+  "senderHapSha256": "3a216abf0c485fb13e35d5fc5ea9922f9c4aa52bacd32bb516a6f26b60ddfcf3",
+  "senderPrivilegeLevel": "normal",
+  "senderIsSystemApp": false,
+  "senderRequestedPermissions": [],
+  "packageSha256": "6e838f33c1304427f469e685a3d35950220c7a6893c178020f6216fe2997c29a",
+  "sourceUri": "file://org.touchmap.testshare/data/storage/el2/base/haps/entry/files/shared.touchmap",
+  "grant": "wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION",
+  "network": "TM_OFFLINE blocked all guest IPv4/IPv6 outbound except HDC replies throughout both cases. Rules were removed afterward and second-offline-off.json confirms restoration.",
+  "cases": [
+    {
+      "name": "cold_viewData_uri",
+      "receiverWasStopped": true,
+      "processBefore": null,
+      "processAfter": 30703,
+      "trigger": "Clicked Open package with viewData in the separately installed sender UI.",
+      "want": "viewData with uri and ordinary read grant",
+      "observed": "Importing and validating material, then Resume for the exact authored revision 6. Input 1 and the correct Gate 1 submission remained intact.",
+      "treeBeforeComplete": "native-share-cold-initial.json",
+      "treeAfter": "native-share-cold-result.json",
+      "screenshot": "native-share-cold.jpeg"
+    },
+    {
+      "name": "existing_ability_sendData_stream",
+      "receiverWasStopped": false,
+      "processBefore": 30703,
+      "processAfter": 30703,
+      "trigger": "First returned TouchMap to Library, then opened the sender and clicked Share package with stream.",
+      "want": "sendData with ability.params.stream array and ordinary read grant",
+      "observed": "The same process changed from Library through import validation to Resume for the exact authored revision 6, retaining Input 1 and the correct Gate 1 submission.",
+      "treeBefore": "native-share-warm-before.json",
+      "treeBeforeComplete": "native-share-warm-initial.json",
+      "treeAfter": "native-share-warm-result.json",
+      "contextTree": "native-share-warm-context.json",
+      "screenshot": "native-share-warm.jpeg"
+    }
+  ],
+  "supportingEvidence": ["native-share-helper-build.json", "native-share-helper-installed.json", "native-share-sender-log.txt", "second-offline-status.json", "second-offline-off.json", "second-private-history.json"],
+  "scope": "Real cross-application URI grants from an ordinary app's private sandbox. Shell commands installed/launched the helper and controlled the cold-start lifecycle; the file URI and grant were sent by the helper's normal startAbility call, not privileged aa URI injection. Existing material import was deliberately idempotent, preserving private learner history. Fresh package import through SystemPicker is evidenced separately."
+}

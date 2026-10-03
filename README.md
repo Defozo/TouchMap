@@ -13,13 +13,14 @@ Windows requires WSL2 Ubuntu; Linux can invoke the corresponding shell scripts d
 
 ```powershell
 ./scripts/setup-platform.ps1
-./scripts/doctor.ps1
 ./scripts/build.ps1 -Product openharmonyApi20
 ./scripts/start-emulator.ps1
+./scripts/configure-emulator-audio.ps1 -Target 127.0.0.1:55555 -Action apply
+./scripts/doctor.ps1
 ./scripts/install.ps1 -Target 127.0.0.1:55555
 ```
 
-The installable artifact is `dist/touchmap-signed.hap`, with checksums and packaged API metadata beside the evidence. The build creates development signing material in a private build directory. No provider key, account or backend is needed to use bundled lessons. A successful API 23 run does not establish API 20 runtime compatibility.
+The installable artifact is `dist/touchmap-signed.hap`, with checksums and packaged API metadata beside the evidence. The pinned QEMU image also needs the checked audio-configuration correction described in [platform setup](docs/platform.md); the application itself retains ordinary permissions. The build creates development signing material in a private build directory. No provider key, account or backend is needed to use bundled lessons. A successful API 23 run does not establish API 20 runtime compatibility.
 
 ## Try the complete learning flow
 
@@ -69,8 +70,8 @@ Host JavaScript tests exercise the same pure modules imported by the native app.
 - `app/`: native UI, OpenHarmony adapters and shared domain modules.
 - `backend/`: safe converter, package library, CLI, authenticated API and provider adapters.
 - `contracts/`: wire specification, JSON Schemas and interoperability fixtures.
-- `samples/`: three complete source/semantic/audio packages with provenance.
-- `tests/evaluation/`: owned annotated 20-diagram corpus, held-out split and evaluation tools.
+- `samples/`: three teaching packages and a tutorial, with source, semantics, audio and provenance.
+- `tests/evaluation/`: twenty owned process diagrams and five numeric charts, annotated truth, held-out splits and evaluation tools.
 - `scripts/`: setup, build, install, doctor, sample generation and release validation.
 - `docs/`: platform, accessibility, privacy, measurements, study protocol and demo script.
 

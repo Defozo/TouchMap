@@ -1,0 +1,13 @@
+# Submission requirements verified on 3 October 2026
+
+Team: **DEFOZO SOFTWARE HOUSE**. Sole human member: **Michał Kiełtyka**.
+
+The current official downloadable participant guides specify a project checkpoint on **3 October 2026 at 20:00** and final submission on **4 October 2026 at 11:00**, local event time in Kraków, Europe/Warsaw. The project must already exist in **HackTribe** at the checkpoint, with a name and initial description. New projects cannot be created after that checkpoint. Final materials must be saved in HackTribe under the correct task before the final deadline. The English guide states this on page 13; the Polish guide independently agrees. Use the English and Polish PDF download buttons on the [official guide page](https://hackyeah.pl/guide). Their exact CMS paths and retrieval hashes are recorded in the evidence below; the downloads use the website public client.
+
+The live website agenda agrees with 11:00. The website's editable English guide text contains an inconsistent 11:00 PM entry. The current downloadable English and Polish PDFs are consistent with the agenda. An older indexed rules URL and 2025 news entries were excluded. This review used read-only public requests; no project was created or submitted.
+
+For **IMAGINE WHAT'S NEXT**, the selected task materials require English submission materials, a public source repository, reproducible setup/build/install/launch instructions, a working native `.hap`, a brief recorded demonstration, concise architecture documentation, an AI workflow disclosure when AI assisted development, and documentation of included AI integrations. The task sources and checked observations are listed in [the submission evidence](evidence/submission-requirements.json). The [task evaluation criteria](https://drive.google.com/file/d/1S5V-x4RW3NK3YgI4TLxIsmiS8LF7_-zN/view) and [task rules](https://drive.google.com/file/d/10WcJMWOLPcJA4RqDeyyr3ZsMFfi1UJ3L/view) are the task-specific sources.
+
+The public guide, pages 17 and 19, says platform access is provided to participants and that every field required for the selected task must be completed. It does not enumerate this task's exact form fields, upload size limits or attachment count. Those details remain **unverified in the authenticated HackTribe form**. A local ZIP and a public repository are preparation artifacts, not proof of submission. Preserve the actual platform confirmation once an authorized submission is made.
+
+Source retrieval hashes and machine-readable observations are in [submission-requirements.json](evidence/submission-requirements.json). Public participant-guide downloads were fetched through the website's public CMS client; no private credentials, user records or submission state were accessed.

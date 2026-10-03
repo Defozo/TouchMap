@@ -1,0 +1,223 @@
+{
+  "backendAutomated": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/backend-pytest.xml"
+    ],
+    "result": "71 tests, 0 failures, 0 errors; current backend snapshot."
+  },
+  "hostAutomated": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-audit-host-tests.txt",
+      "docs/evidence/native-audit-typecheck.txt"
+    ],
+    "result": "51 tests and TypeScript checking passed, including localization and boundary hysteresis; final frozen-source rerun remains separate."
+  },
+  "nativeIntegrationObserved": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-test-artifact.json"
+    ],
+    "result": "16 native tests passed on the bound historical build. Does not certify later edits.",
+    "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54"
+  },
+  "nativeAudioObserved": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-audio-phase-analysis.json",
+      "docs/evidence/native-audio-controls.json"
+    ],
+    "result": "100/100 accepted writes; scheduler onset p95 20 ms, total with intentional dwell p95 289 ms. Prewarmed renderer; no physical acoustic claim.",
+    "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54"
+  },
+  "nativePostCommitRecovery": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-recovery.json"
+    ],
+    "result": "100 actual forced restarts after durable acknowledgements. Mid-transaction failure is not covered."
+  },
+  "offlineCliAuthoring": {
+    "status": "passed",
+    "evidence": [
+      "docs/backend-checks.json",
+      "docs/evidence/backend-cli/new-material.touchmap"
+    ],
+    "result": "New SVG conversion, revision edit, fact review, authorised recording import, pack and independent unpack executed without cloud calls."
+  },
+  "nativeAuthoringObserved": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-authoring-flow.json",
+      "docs/evidence/native-authored.touchmap"
+    ],
+    "result": "Actual AI, source correction/review, deterministic question, separately consented TTS, playback, publication and native export. Developer verification, not human participant review.",
+    "productionHapSha256": "ce00562d8321872cea88c02253d609942e03f8d82fbdc9715cd30c5ddf2065ae"
+  },
+  "offlineTransferObserved": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/second-import-integrity.json",
+      "docs/evidence/second-private-history.json",
+      "docs/evidence/second-offline-resume.json",
+      "docs/evidence/native-ui-observations.json"
+    ],
+    "result": "Second emulator imported exact native export under IPv4/IPv6 block, matched all 11 asset hashes, accepted declaration, scanned, explicitly answered correctly, exported private history and resumed after process death."
+  },
+  "nativeSharedOpenObserved": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-share-helper-build.json",
+      "docs/evidence/native-share-sender-log.txt",
+      "docs/evidence/native-share-cold-result.json",
+      "docs/evidence/native-share-warm-context.json"
+    ],
+    "result": "Separate ordinary-permission app granted temporary URI read access; cold viewData and existing-ability sendData both restored saved material."
+  },
+  "providerEvaluationExecuted": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/ai-evaluation/summary.json",
+      "docs/evidence/ai-chart-evaluation/summary.json",
+      "docs/evidence/ai-chart-evaluation/INTERPRETATION.md",
+      "docs/evidence/provider-cost-estimates.json"
+    ],
+    "result": "All 20 process and 5 chart first attempts retained. Process scorer20/20; chart schema5/5, values16/16, unknowns2/2, strict representation2/5 and held-out0/2. Execution complete; general draft usability is not established."
+  },
+  "sourceSamplesAndContracts": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/backend-pytest.xml",
+      "samples/LICENSE.md",
+      "contracts/CONTRACT.md"
+    ],
+    "result": "Four source-attributed local packages, integrity/semantic validation and native/backend contract parity fixtures pass."
+  },
+  "documentationAttribution": {
+    "status": "passed",
+    "evidence": [
+      "TEAM.json",
+      "SUBMISSION.md",
+      "AI_WORKFLOW.md",
+      "AI_INTEGRATION.md",
+      "THIRD_PARTY.md"
+    ],
+    "result": "DEFOZO SOFTWARE HOUSE; sole human team member Michał Kiełtyka. Developer attestations are separately labelled."
+  },
+  "secretAndLinksSnapshot": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/secret-scan.json",
+      "docs/evidence/documentation-links.json"
+    ],
+    "result": "474 scanner-selected text files,537 reviewed algorithm-literal false positives,0 unresolved matches;77 relative document targets resolve. Final staged inputs need a fresh scan."
+  },
+  "finalSourceFreeze": {
+    "status": "pending",
+    "reason": "App source is still changing; commit and app-source fingerprint must be frozen and recorded."
+  },
+  "finalCleanBuildAndSignature": {
+    "status": "pending",
+    "evidence": [
+      "docs/evidence/clean-checkout.json",
+      "docs/evidence/hap-metadata.json"
+    ],
+    "reason": "Earlier clean checkout succeeded, but it predates current fixes. Final committed app bytes, clean rebuild, signature and release HAP must match."
+  },
+  "finalNativeAndHostAcceptance": {
+    "status": "pending",
+    "reason": "Run suites on frozen app inputs, including the new short PCM-tail regression and current source changes; bind production/test HAP hashes and app fingerprint."
+  },
+  "finalOfflineLearnerFlow": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/final-offline-flow.json",
+      "docs/evidence/offline-export-verification.json"
+    ],
+    "result": "Ten primary checks passed with network blocked: acceptance, list, directed connection, submission, restart/context, unfinished selection, two ordinary Canvas touches and native export. All19 exported entries match source bytes; actual QEMU audio captured. Later source changes need final acceptance.",
+    "productionHapSha256": "2616f496c2c67ef58a688e494fc8eb8be2090199bc19fdecff63efff84484c54"
+  },
+  "nativeFailureInjection": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-failure-checks.json"
+    ],
+    "result": "Five actual deleted-URI/full-staging checks passed: no false success/new material, exact existing checkpoint retained, failed staging removed.64KiB tmpfs confined to selected app process staging namespace, then removed. This is not mid-transaction DB termination."
+  },
+  "fullContextRestoreTiming": {
+    "status": "pending",
+    "reason": "Warm committed checkpoint reads measured p95 2 ms, but complete active-app context restoration and cold launch have not been independently timed."
+  },
+  "finalEnglishDemo": {
+    "status": "pending",
+    "evidence": [
+      "docs/evidence/demo-manifest.json"
+    ],
+    "reason": "Actual native source recordings exist; final approximately three-minute English edit and visual/audio review are not yet complete."
+  },
+  "finalReleaseArchive": {
+    "status": "pending",
+    "reason": "Package frozen committed source, signed HAP, examples, demo, licences, environment manifest and checksums after preflight; no final archive claimed here."
+  },
+  "finalReleaseSecretScan": {
+    "status": "pending",
+    "reason": "Repeat secret/path review on final staged source and selected public evidence, excluding private/local/generated data and the redundant 53 MB raw playback WAV."
+  },
+  "genuineScreenReader": {
+    "status": "blocked_environment",
+    "evidence": [
+      "docs/evidence/screen-reader-investigation.json",
+      "docs/ACCESSIBILITY.md"
+    ],
+    "reason": "No genuine spoken reader is available on the pinned emulator. The hover probe is not a reader. Full reader-enabled learner/editor flows remain unverified."
+  },
+  "physicalHardware": {
+    "status": "pending_external",
+    "evidence": [
+      "docs/ACCESSIBILITY.md"
+    ],
+    "reason": "User explicitly confirmed no HarmonyOS/OpenHarmony device is available on2026-10-03 at16:50:50UTC and requested continued emulator tests. Do not ask again. Physical vibration, assistive switches, headphone removal and audio routes remain unverified."
+  },
+  "representativeLearnerStudy": {
+    "status": "pending_external",
+    "evidence": [
+      "docs/STUDY_PROTOCOL.md"
+    ],
+    "reason": "No consenting blind/low-vision participant study comparing linear audio, structured list and exploration has been conducted; usefulness remains a hypothesis."
+  },
+  "representativeAuthorStudy": {
+    "status": "pending_external",
+    "evidence": [
+      "docs/STUDY_PROTOCOL.md"
+    ],
+    "reason": "No teacher comparison of manual and AI-assisted preparation through source review, residual error, transfer and setup has been conducted."
+  },
+  "publicSourceAndIndependentReproduction": {
+    "status": "pending_external",
+    "reason": "Local clean-clone evidence exists for an earlier commit. Public repository publication and independent second-developer reproduction of final sources are not yet verified."
+  },
+  "competitionProjectCreated": {
+    "status": "passed",
+    "provenance": "Direct user answer relayed by the HackYeah coordinator, recorded2026-10-03T16:33:02.860604+00:00.",
+    "result": "TouchMap already exists in HackTribe; do not request registration again. This is user-confirmed status, not a browser-submitted action."
+  },
+  "competitionFinalSubmission": {
+    "status": "unconfirmed",
+    "evidence": [
+      "docs/SUBMISSION_REQUIREMENTS.md"
+    ],
+    "reason": "User confirmed project creation but did not confirm final material submission. No external upload or final submission is claimed."
+  },
+  "nativeManualRecordingImport": {
+    "status": "passed",
+    "evidence": [
+      "docs/evidence/native-manual-audio-import.json"
+    ],
+    "result": "Actual native Speech target/provenance/SystemPicker import, durable byte readback and playback. Licensed local WAV1115ms53542bytes matched exactly; isolated QEMU audio captured, no new TTS."
+  },
+  "nativeMidTransactionFault": {
+    "status": "pending",
+    "reason": "100 native restart boundaries cover durable post-commit acknowledgements. Arbitrary termination inside database transactions remains unverified; it is not established by the separate ENOSPC import test."
+  }
+}

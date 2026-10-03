@@ -30,8 +30,8 @@ The CLI works without network access for SVG conversion, manual image preparatio
 ```sh
 uv run touchmap convert-svg ../docs/evidence/backend-cli/fresh.svg work/draft1 --title Seed
 uv run touchmap edit work/draft1/diagram.json patch.json work/draft2/diagram.json
-uv run touchmap review work/draft2/diagram.json --reviewer "Michał Kiełtyka" --ids seed --aspect geometry
-uv run touchmap review work/draft2/diagram.json --reviewer "Michał Kiełtyka" --ids seed --aspect meaning
+uv run touchmap review work/draft2/diagram.json --reviewer "Actual reviewer name and source-access declaration" --ids seed --aspect geometry
+uv run touchmap review work/draft2/diagram.json --reviewer "Actual reviewer name and source-access declaration" --ids seed --aspect meaning
 uv run touchmap import-audio work/draft2/diagram.json ../samples/lumina-process/audio/seed-label.wav --target seed --kind label --provenance "Owned TouchMap Seed recording, licensed ElevenLabs account"
 ```
 

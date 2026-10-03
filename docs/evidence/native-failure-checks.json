@@ -1,0 +1,46 @@
+{
+  "startedUtc": "2026-10-03T17:06:30.245269+00:00",
+  "device": "127.0.0.1:55556",
+  "mountTarget": "/data/app/el2/100/base/org.touchmap.app/haps/entry/files/staging",
+  "filesystem": "tmpfs",
+  "sizeBytes": 65536,
+  "scope": "Host fault injection confined to an empty app staging directory. Existing materials, database and progress remain on their original filesystem.",
+  "appPid": 1865,
+  "mountNamespace": "Selected app process only; host namespace mounts do not propagate into the sandbox.",
+  "mountedEntry": "touchmap-test-enospc /data/storage/el2/base/haps/entry/files/staging tmpfs rw,relatime,size=64k,mode=770,uid=20010042,gid=20010042 0 0",
+  "nativeReport": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "deleted_file_uri_rejected",
+        "passed": true,
+        "detail": "No such file or directory"
+      },
+      {
+        "name": "full_staging_import_rejected",
+        "passed": true,
+        "detail": "Storage could not complete the write."
+      },
+      {
+        "name": "no_false_success_or_new_material",
+        "passed": true,
+        "detail": "Material IDs compared before and after both rejected imports."
+      },
+      {
+        "name": "existing_progress_unchanged",
+        "passed": true,
+        "detail": "Full saved checkpoint JSON compared byte for byte."
+      },
+      {
+        "name": "failed_staging_removed",
+        "passed": true,
+        "detail": "Native import finally cleanup left the injected staging filesystem empty."
+      }
+    ],
+    "error": "",
+    "scope": "Actual native Repository import against a deleted file URI and a host-mounted size-limited staging filesystem. The app performs ordinary sandbox I/O; the host mount only injects ENOSPC."
+  },
+  "status": "passed",
+  "mountRemoved": true,
+  "finishedUtc": "2026-10-03T17:06:39.106679+00:00"
+}

@@ -1,0 +1,43 @@
+{
+  "verifiedAt": "2026-10-03T16:36:50.920288+00:00",
+  "status": "passed",
+  "inputSha256": "c10c1da4e7af4a64bee4672bbd47c27f73c0dfd43bfd8e2dd12c69a0fd2918df",
+  "exportSha256": "7b82867f3a2a926e25c0f25a67be9080db43eef7857f5847f27eb5d9e6524c39",
+  "archiveBytesIdentical": false,
+  "allArchiveEntriesIdentical": true,
+  "entries": [
+    "audio/collection-description.wav",
+    "audio/collection-label.wav",
+    "audio/collects-label.wav",
+    "audio/condensation-description.wav",
+    "audio/condensation-label.wav",
+    "audio/condenses-label.wav",
+    "audio/evaporates-label.wav",
+    "audio/evaporation-description.wav",
+    "audio/evaporation-label.wav",
+    "audio/falls-label.wav",
+    "audio/precipitation-description.wav",
+    "audio/precipitation-label.wav",
+    "audio/q-after-evaporation-question.wav",
+    "audio/q-two-steps-question.wav",
+    "audio/water-cycle-overview.wav",
+    "diagram.json",
+    "manifest.json",
+    "source-preview.png",
+    "source.svg"
+  ],
+  "validation": {
+    "valid": true,
+    "publishable": true,
+    "readyOffline": true,
+    "issues": [],
+    "audioIssues": [],
+    "authorDeclaration": {
+      "name": "TouchMap example author",
+      "declaration": "Original illustration and explicitly authored facts. Reviewed against the source by the implementation team. This declaration is not independent accessibility certification."
+    },
+    "requiresLocalAcceptance": true
+  },
+  "privacy": "The exported archive contains only the original teaching package entries, no local answers, progress, profile or history.",
+  "method": "System picker export from native app with emulator IPv4/IPv6 outbound blocked. Independent backend validation and byte comparison of every unpacked entry."
+}
