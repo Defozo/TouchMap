@@ -39,7 +39,7 @@ function slide(title, narration, citations = []) {
   s.background.fill = C.bg;
   const number = p.slides.items.length;
   if (title) text(s, title, 64, 48, 1136, 70, 48, C.text, true);
-  text(s, 'TouchMap', 64, 679, 700, 22, 16, C.muted);
+  text(s, number === 1 ? 'Native OpenHarmony emulator demo' : 'TouchMap', 64, 679, 700, 22, 16, C.muted);
   text(s, String(number).padStart(2, '0'), 1164, 679, 50, 22, 16, C.muted);
   const full = narration + '\n\nSources and evidence:\n' + citations.join('\n');
   s.speakerNotes.textFrame.setText(full);
@@ -73,111 +73,110 @@ function table(s, values, top, rowHeights, widths) {
 
 {
   const s = slide('',
-    'TouchMap is a native OpenHarmony application for exploring reviewed diagrams. It is intended for blind and low-vision learners and for teachers who prepare accessible material. A learner can explore objects and their relationships, answer questions and resume a lesson offline. DEFOZO SOFTWARE HOUSE is the submitting team, with Michał Kiełtyka as its sole human member. The application and recordings demonstrate developer verification. We have not yet completed a study with the intended learners.',
-    ['TEAM.json', 'SUBMISSION.md', 'docs/ACCESSIBILITY.md', 'docs/evidence/final-release-v2-library-ui.json', 'docs/presentation-assets/final-library.png']);
+    'TouchMap turns a diagram into a lesson the learner can explore by touch and sound. A learner chooses an object, hears its description and follows its connections. Teachers prepare and review the material. The lesson then works offline, including questions and saved progress. This native OpenHarmony app is designed for blind and low-vision learners. DEFOZO SOFTWARE HOUSE presents TouchMap, created by Michał Kiełtyka. The screenshots show the running native app on an emulator.',
+    ['TEAM.json', 'SUBMISSION.md', 'docs/ACCESSIBILITY.md', 'docs/evidence/pitch-library-capture.json', 'docs/evidence/pitch-library.png']);
   text(s, 'TouchMap', 64, 150, 740, 118, 92, C.text, true);
-  text(s, 'Reviewed diagrams for\nindependent exploration', 68, 290, 700, 134, 42, C.mint);
+  text(s, 'Diagrams you can explore\nby touch and sound', 68, 290, 700, 134, 42, C.mint);
   text(s, 'DEFOZO SOFTWARE HOUSE', 68, 524, 725, 34, 27, C.text, true);
   text(s, 'Michał Kiełtyka', 68, 568, 700, 36, 28, C.muted);
-  await photo(s, 'docs/presentation-assets/final-library.png', 885, 40, 306, 612, 'Actual TouchMap Library captured from installed final HAP 1209c8712549.');
+  await photo(s, 'docs/evidence/pitch-library.png', 885, 40, 306, 612, 'Actual TouchMap Library captured from installed HAP 1cae6f5da819, built from source 943a5d8.');
 }
 {
-  const s = slide('Following relationships in a diagram',
-    'A diagram contains relationships as well as labels. Consider the water cycle: a learner may want to follow what comes after condensation, return to a previous object or check a connection. TouchMap represents objects, reviewed relationships and questions alongside the original image. Our hypothesis is that choosing an exploration order can help learners form and check a mental model. The project has implemented this interaction, but we do not claim a measured learning advantage. A planned comparative study will test that hypothesis.',
+  const s = slide('The next step in a diagram',
+    'Imagine studying the water cycle without seeing its arrows. Hearing each label still leaves a question: what comes next? TouchMap lets the learner choose condensation and follow the connection to precipitation. They can replay a description, return to an earlier object and check their understanding with a question. The original diagram stays attached to the lesson so the teacher can review each connection against its source.',
     ['SUBMISSION.md', 'docs/STUDY_PROTOCOL.md', 'app/entry/src/main/resources/rawfile/samples/water-cycle/diagram.json', 'app/entry/src/main/resources/rawfile/samples/water-cycle/source-preview.png']);
   text(s, '“What comes after\ncondensation?”', 64, 172, 530, 125, 43, C.mint, true);
-  text(s, 'The learner chooses where to explore\nand which connection to follow.', 64, 333, 530, 124, 30);
-  text(s, 'Intended users\nBlind and low-vision learners.\nTeachers prepare and review lessons.', 64, 507, 550, 119, 26, C.muted);
+  text(s, 'Hear the object you choose, then follow\nthe connection that answers\nyour question.', 64, 333, 530, 124, 30);
+  text(s, 'For blind and low-vision learners\nand the teachers preparing their lessons.', 64, 528, 550, 92, 26, C.muted);
   await photo(s, 'app/entry/src/main/resources/rawfile/samples/water-cycle/source-preview.png', 660, 169, 556, 402, 'Original water-cycle diagram with four labelled regions and directed connections.');
   text(s, 'Original lesson image', 660, 593, 550, 35, 23, C.muted);
 }
 {
-  const s = slide('Three ways to explore',
-    'The native application offers three ways to reach the same reviewed content. Touch exploration uses the diagram geometry and local recordings. List navigation exposes objects and their connections through standard controls. Scan navigation advances the focus automatically and lets the user activate the current item. The learner can zoom, pan, bookmark an object or follow a reviewed path. Unknown path geometry remains explicitly unknown. Text and controls remain available alongside audio. A genuine system screen-reader session still needs hardware validation.',
+  const s = slide('Exploration at the learner’s pace',
+    'The same lesson supports touch, list navigation and automatic scanning. Touch plays the recording for the selected object. List navigation makes objects and their connections available through native controls. Scanning moves the highlight automatically, and the learner activates the current choice. Zoom and pan preserve the original spatial arrangement. Bookmarks make it easy to return to an object.',
     ['docs/ACCESSIBILITY.md', 'docs/evidence/native-ui-observations.json', 'docs/evidence/final-candidate-canvas.png', 'app/entry/src/main/ets/pages/Index.ets']);
-  section(s, 'Touch', 'Explore the original diagram with local audio\nand reviewed geometry.', 158, 740);
-  section(s, 'List', 'Reach objects and connections through\nstandard native controls.', 328, 740);
-  section(s, 'Scan', 'Move focus automatically, then activate\nthe selected item.', 498, 740);
+  section(s, 'Touch', 'Hear the object under your finger.\nZoom in and follow its connections.', 158, 740);
+  section(s, 'List', 'Move between objects with labelled controls.\nReplay a description whenever you need it.', 328, 740);
+  section(s, 'Scan', 'Let the highlight move automatically.\nSelect the object you want to explore.', 498, 740);
   await photo(s, 'docs/evidence/final-candidate-canvas.png', 890, 126, 265, 530, 'Actual Canvas exploration showing selected Precipitation and native controls, with the diagram partly above the scrolled viewport.');
 }
 {
-  const s = slide('A lesson that survives interruption',
-    'TouchMap saves the learner’s current context locally. Reopening a lesson restores the object, viewport, question, bookmarks and the rest of the saved progress. Selecting an answer does not submit it. Only the explicit Submit action records an answer, and a restart does not submit an unfinished selection. The native restart tests checked acknowledged writes, replayed event identifiers and unfinished selections. A portable lesson contains reviewed teaching material and audio. The learner’s private history stays on the device unless they deliberately export it through the separate history action.',
+  const s = slide('The lesson resumes where you stopped',
+    'An interruption should not mean finding your place again. TouchMap saves the current object, zoom, question and bookmarks on the device. Reopen the lesson and Resume brings that context back. An unfinished answer stays available until the learner chooses Submit. When a teacher shares the lesson, the learner’s history stays private on their own device. They can export that history separately when they choose.',
     ['docs/evidence/native-recovery.json', 'docs/evidence/native-restore-benchmark.json', 'docs/PRIVACY.md', 'docs/presentation-assets/resume.png', 'docs/evidence/demo-manifest.json']);
-  section(s, 'Saved context', 'Return to the object, viewport and question\nwhere the lesson stopped.', 167, 740);
-  section(s, 'Explicit answers', 'An unfinished selection remains unfinished\nuntil the learner submits it.', 337, 740);
-  section(s, 'Private progress', 'Lesson packages travel between devices.\nLearning history uses a separate export.', 507, 740);
+  section(s, 'Your place stays saved', 'Return to the same object, zoom level\nand question after reopening the app.', 167, 740);
+  section(s, 'Answers wait for Submit', 'Keep a selection while you explore.\nSubmit it when you are ready.', 337, 740);
+  section(s, 'Your history stays private', 'Share the lesson with another learner.\nKeep personal progress on your device.', 507, 740);
   await photo(s, 'docs/presentation-assets/resume.png', 890, 126, 265, 530, 'Actual Resume screen showing restored water-cycle learning context after restart.');
 }
 {
-  const s = slide('Authors control publication',
-    'An author can import a source, edit regions and relationships manually, or request an AI proposal after explicit consent. AI output always returns as a draft. The author checks geometry and meaning, then reviews relations and each question against its supporting facts. Speech generation requires separate consent, and recordings must match the current text and language. Publication records the current revision’s review. Ready offline separately requires complete matching local assets and recordings. The declaration records who performed the review. A valid checksum establishes file integrity, while teaching quality still depends on source review. Demonstration materials identify the developer review accurately. This screenshot comes from the earlier authoring session.',
-    ['AI_WORKFLOW.md', 'contracts/CONTRACT.md', 'docs/evidence/native-author-tts-accepted.json', 'docs/evidence/native-authoring-flow.json', 'docs/presentation-assets/author-review.png']);
-  section(s, 'Source and proposal', 'Keep the original image. Treat AI output\nas a draft that needs review.', 158, 740);
-  section(s, 'Review the current revision', 'Confirm geometry, meaning, relations\nand question facts before publication.', 328, 740);
-  section(s, 'Publication and offline readiness', 'Publish reviewed content. Complete local\nrecordings for Ready offline.', 498, 740);
-  await photo(s, 'docs/presentation-assets/author-review.png', 890, 126, 265, 530, 'Actual author editor with separate geometry and meaning confirmation controls.');
+  const s = slide('Teachers prepare the lesson',
+    'A teacher starts with a diagram they have permission to use. They can mark objects manually or ask AI for a draft. The editor lets them correct the geometry and descriptions, review connections and check the facts behind each question. They choose when to generate speech and when to publish. Once matching recordings are complete, Ready offline tells the learner that the lesson is available locally. Here is the material created, reviewed and exported in the native authoring demo.',
+    ['AI_WORKFLOW.md', 'contracts/CONTRACT.md', 'docs/evidence/native-author-tts-accepted.json', 'docs/evidence/native-authoring-flow.json', 'docs/evidence/native-author-ready.png']);
+  section(s, 'Start with your diagram', 'Mark objects yourself or use an AI draft.\nKeep the source beside your edits.', 158, 740);
+  section(s, 'Keep control of the content', 'Correct descriptions and connections.\nCheck the facts behind each question.', 328, 740);
+  section(s, 'Publish a lesson learners can take away', 'Add matching audio and publish your review.\nReady offline confirms the local recordings.', 498, 740);
+  await photo(s, 'docs/evidence/native-author-ready.png', 890, 126, 265, 530, 'Actual Library showing the authored revision 6 lesson ready offline, with its objects, connections and question.');
 }
 {
-  const s = slide('Local learning, optional preparation',
-    'The learner path runs locally. ArkTS and ArkUI handle exploration and questions. Relational storage commits private progress, while verified immutable files hold source images and recordings. AudioRenderer plays local PCM recordings. Optional preparation runs in a separate service: Gemini proposes structured material, a controlled SVG renderer produces a faithful preview, and ElevenLabs creates speech after consent. Provider credentials stay on the service. A portable touchmap package includes its manifest, diagram, source, preview and matching audio. Its checksums allow another installation to verify the same assets without a backend connection.',
+  const s = slide('The lesson works offline',
+    'Once prepared, the lesson needs no network connection. Its image, reviewed structure and matching recordings travel together in one touchmap file. The native app plays audio and saves progress locally. Optional AI preparation and speech generation run separately and only after the author gives consent. Learners can open a bundled lesson immediately without creating an account.',
     ['ARCHITECTURE.md', 'AI_WORKFLOW.md', 'contracts/CONTRACT.md', 'docs/PRIVACY.md', 'docs/backend.md']);
   table(s, [
-    ['Layer', 'Responsibility', 'Network'],
-    ['ArkTS and ArkUI', 'Canvas, list, scan and questions', 'Offline'],
-    ['Local storage', 'Progress and verified lesson assets', 'Offline'],
-    ['AudioRenderer', 'PCM recordings and playback control', 'Offline'],
-    ['Preparation service', 'AI proposals, SVG preview and speech', 'Separate consent']
-  ], 157, [63, 82, 82, 82, 90], [284, 606, 262]);
-  text(s, 'Portable lesson: source, reviewed structure, matching audio and checksums.', 64, 595, 1140, 40, 25, C.mint);
-  text(s, 'Private learning history and provider credentials stay outside the package.', 64, 637, 1140, 32, 24, C.muted);
+    ['Activity', 'What the learner gets', 'Connection'],
+    ['Explore a diagram', 'Objects, descriptions and connections', 'Offline'],
+    ['Listen and replay', 'Recordings stored with the lesson', 'Offline'],
+    ['Answer and resume', 'Questions and progress on the device', 'Offline'],
+    ['Prepare with AI', 'An optional draft and generated speech', 'Online, by consent']
+  ], 157, [63, 82, 82, 82, 90], [284, 594, 274]);
+  text(s, 'One .touchmap file carries the reviewed lesson and its recordings.', 64, 595, 1140, 40, 27, C.mint);
+  text(s, 'Bundled lessons open without an account.', 64, 637, 1140, 32, 25, C.muted);
 }
 {
-  const s = slide('OpenHarmony integration',
-    'TouchMap uses native platform APIs for its core behaviour. ArkUI Canvas and standard controls provide exploration and editing. AudioRenderer handles PCM playback, including pause, resume and cancellation. Relational storage and file access protect durable progress. SystemPicker exports and imports packages through ordinary URI permissions. Tests also opened a package through cold viewData and warm sendData requests. The build targets API 20 and the emulator runtime reports API 23, OpenHarmony 6.1.0.31. This does not claim an independent runtime test on an API 20 device.',
+  const s = slide('Native on OpenHarmony',
+    'TouchMap uses the platform directly. ArkUI draws the exploration surface and provides the native controls. AudioRenderer plays local recordings with pause and replay. The relational store keeps progress across restarts. The system file picker lets authors export a lesson and learners import it on another installation. TouchMap also opens shared files through normal URI permissions. The app targets API 20 and the demonstration runs on the API 23 emulator.',
     ['docs/platform.md', 'ARCHITECTURE.md', 'docs/evidence/native-share-verification.json', 'docs/evidence/native-audio-controls.json', 'docs/evidence/native-export-dialog.png']);
-  section(s, 'Native interaction and storage', 'ArkUI Canvas, AudioRenderer and\ntransactional local progress.', 162, 740);
-  section(s, 'Native file exchange', 'SystemPicker and ordinary URI grants\nfor import, export and shared opening.', 332, 740);
-  section(s, 'Build and tested runtime', 'Target and minimum API 20.\nExecuted on the API 23 emulator.', 502, 740);
+  section(s, 'Touch and audio', 'ArkUI Canvas connects the diagram to\nlocal playback through AudioRenderer.', 162, 740);
+  section(s, 'Share through the system', 'Export a lesson with the native file picker.\nOpen it on another installation.', 332, 740);
+  section(s, 'Progress on the device', 'Native relational storage preserves\nwhere the learner stopped.', 502, 740);
   await photo(s, 'docs/evidence/native-export-dialog.png', 890, 126, 265, 530, 'Actual native SystemPicker Save dialog for a touchmap lesson package.');
 }
 {
-  const s = slide('Developer verification',
-    'These are observed developer tests, not a user study. Eighteen native regression tests passed on the final application build. One hundred restart cycles verified acknowledged commits, unfinished selections and duplicate event handling. Separately, one hundred local audio starts achieved a 25 millisecond 95th percentile from the playback scheduler decision to the first accepted PCM write. The 250 millisecond dwell is excluded from that number. Including dwell, the 95th percentile was 303 milliseconds. One hundred restoration observations achieved a 130 millisecond 95th percentile from the active-app open intent to the post-layout draw boundary. That run used 92 plus 8 samples after a UiTest harness stall. Every included sample passed full progress equality and a visible Resume-heading check. These are software boundaries, not physical speaker or panel measurements.',
-    ['docs/TEST_REPORT.md', 'docs/evidence/native-test-artifact.json', 'docs/evidence/native-audio-benchmark.json', 'docs/evidence/audio-source-equivalence.json', 'docs/evidence/native-restore-benchmark.json', 'docs/evidence/native-recovery.json']);
+  const s = slide('Four examples to explore today',
+    'The app includes four prepared examples. The tutorial introduces the controls through simple shapes. The water cycle lets learners follow a familiar sequence and answer questions about its connections. The invented Lumina process adds branches, so the learner has to trace a path. The rainfall chart presents labelled values and comparison questions. Its missing June value stays unknown. These examples are already packaged with local recordings.',
+    ['app/entry/src/main/resources/rawfile/samples/tutorial/diagram.json', 'app/entry/src/main/resources/rawfile/samples/water-cycle/diagram.json', 'app/entry/src/main/resources/rawfile/samples/lumina-process/diagram.json', 'app/entry/src/main/resources/rawfile/samples/rainfall-chart/diagram.json']);
   table(s, [
-    ['Check', 'Observed result', 'Measurement boundary'],
-    ['Native regressions', '18 passed', 'Final release HAP'],
-    ['Restart recovery', '100 cycles passed', 'Acknowledged commits'],
-    ['Local audio starts', '100 starts, p95 25 ms', 'First accepted PCM write'],
-    ['Context restoration', '100 opens, p95 130 ms', 'Active app, layout and draw']
-  ], 157, [63, 72, 72, 83, 83], [310, 355, 487]);
-  text(s, 'Audio includes 250 ms dwell: p95 303 ms. These are software timings.', 64, 554, 1152, 40, 24, C.mint);
-  text(s, 'Restoration: 92 + 8 samples after a test-harness restart. Maximum 453 ms.', 64, 603, 1152, 40, 24, C.muted);
+    ['Example', 'What to explore', 'What to practise'],
+    ['Shape tutorial', 'Simple shapes with spoken labels', 'Using the controls'],
+    ['Water cycle', 'Stages linked by directed arrows', 'Following a sequence'],
+    ['Lumina process', 'An invented process with branches', 'Tracing a path'],
+    ['Rainfall chart', 'Recorded values and missing data', 'Reading and comparing']
+  ], 157, [63, 82, 82, 82, 82], [264, 548, 340]);
+  text(s, 'Each example includes local audio. The lessons add questions with explanations.', 64, 591, 1152, 65, 27, C.mint);
 }
 {
-  const s = slide('Accessibility evidence and next checks',
-    'The emulator evidence covers 200 percent text, native controls, scanning, tutorial navigation and manual authoring. The application offers touch, list and scan routes, visible status and local audio. However, the user has no physical HarmonyOS or OpenHarmony device available for this work. We have not verified a complete lesson with a genuine screen reader, physical vibrations, headphone hardware or the intended learners. The next evaluation should involve blind and low-vision learners plus teachers, comparing touch exploration, list navigation and a linear audio overview. It should measure successful answers, assistance, workload and recovery after interruption. Those results may change the interface and preparation workflow.',
-    ['docs/ACCESSIBILITY.md', 'docs/STUDY_PROTOCOL.md', 'docs/evidence/native-settings-200.jpeg', 'docs/evidence/native-ui-observations.json']);
-  section(s, 'Verified on the emulator', '200% text and controls, scanning,\ntutorial and manual editing flows.', 155, 740);
-  section(s, 'Still unverified', 'A genuine reader, physical vibration,\nheadphone hardware and learner studies.', 325, 740);
-  section(s, 'Planned comparison', 'Touch exploration, list navigation\nand a linear audio overview.', 495, 740);
-  await photo(s, 'docs/evidence/native-settings-200.jpeg', 890, 126, 265, 530, 'Actual 200 percent Settings screen explicitly reporting that the system screen reader is disabled.');
+  const s = slide('Controls that adapt to the learner',
+    'Learners can enlarge text and controls to 200 percent and choose a comfortable scan interval. Spoken labels stay available with visible descriptions, and playback can be repeated or stopped. Questions give an explanation after an explicit submission. This capture shows the enlarged answer flow running on the emulator. The same lesson remains available through touch, list navigation or scanning.',
+    ['docs/ACCESSIBILITY.md', 'docs/evidence/second-correct-answer-200.jpeg', 'docs/evidence/native-ui-observations.json', 'app/entry/src/main/ets/pages/Index.ets']);
+  section(s, 'Larger text and controls', 'Increase the interface to 200%.\nKeep navigation and answers within reach.', 155, 740);
+  section(s, 'A pace you choose', 'Set the scan interval. Replay a description\nor stop the audio at any time.', 325, 740);
+  section(s, 'Feedback that explains', 'Choose an answer, then press Submit.\nRead the explanation tied to the diagram.', 495, 740);
+  await photo(s, 'docs/evidence/second-correct-answer-200.jpeg', 890, 126, 265, 530, 'Actual lesson at 200 percent text showing the selected Gate 1 answer and correct feedback.');
 }
 {
-  const s = slide('Source, install and demo',
-    'The submission supplies the source repository, signed HAP, portable sample lessons, an English three-minute demonstration and setup documentation. Download the release assets, follow the emulator setup in docs/platform.md and install the signed HAP with hdc. The documented emulator audio configuration is required for the pinned image. A bundled prepared lesson works without a backend or provider key. For authors who want cloud preparation, the documentation explains service deployment, pairing and separate consent. The repository is github.com/Defozo/TouchMap and the release tag is v1.0.0. The submitting team is DEFOZO SOFTWARE HOUSE, with Michał Kiełtyka as its sole human member.',
-    ['README.md', 'docs/platform.md', 'SUBMISSION.md', 'AI_WORKFLOW.md', 'https://github.com/Defozo/TouchMap', 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.0']);
+  const s = slide('TouchMap is ready to explore',
+    'Open the release to watch the English demo or download the signed application. Follow the emulator setup guide and open a bundled lesson. The learner can explore, answer a question and resume offline without an account. The public repository includes the source and reproducible build instructions. TouchMap is a native OpenHarmony application from DEFOZO SOFTWARE HOUSE, with Michał Kiełtyka as the sole team member.',
+    ['README.md', 'docs/DEMO_ACCESS.md', 'docs/platform.md', 'SUBMISSION.md', 'https://github.com/Defozo/TouchMap', 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.1']);
   text(s, 'Repository', 64, 166, 600, 42, 29, C.mint, true);
   const repo = text(s, 'github.com/Defozo/TouchMap', 64, 215, 1152, 55, 39);
   repo.text.get('github.com/Defozo/TouchMap').link = { uri: 'https://github.com/Defozo/TouchMap', isExternal: true };
   repo.text.get('github.com/Defozo/TouchMap').fill = C.mint;
-  text(s, 'Release assets and 3-minute demo', 64, 320, 1136, 42, 29, C.mint, true);
-  const release = text(s, 'github.com/Defozo/TouchMap/releases/tag/v1.0.0', 64, 369, 1152, 51, 31);
-  release.text.get('github.com/Defozo/TouchMap/releases/tag/v1.0.0').link = { uri: 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.0', isExternal: true };
-  release.text.get('github.com/Defozo/TouchMap/releases/tag/v1.0.0').fill = C.mint;
-  text(s, 'Download the HAP. Follow docs/platform.md. Open a bundled lesson offline.', 64, 495, 1140, 77, 29);
-  text(s, 'Bundled lessons require no account, backend or provider key.', 64, 601, 1136, 38, 24, C.muted);
+  text(s, 'Watch the demo or download the app', 64, 320, 1136, 42, 29, C.mint, true);
+  const release = text(s, 'github.com/Defozo/TouchMap/releases/tag/v1.0.1', 64, 369, 1152, 51, 31);
+  release.text.get('github.com/Defozo/TouchMap/releases/tag/v1.0.1').link = { uri: 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.1', isExternal: true };
+  release.text.get('github.com/Defozo/TouchMap/releases/tag/v1.0.1').fill = C.mint;
+  text(s, 'Install the signed HAP using the setup guide. Open the water cycle lesson.', 64, 495, 1140, 77, 29);
+  text(s, 'Your place stays saved, even when the app closes.', 64, 601, 1136, 38, 24, C.muted);
 }
 
 for (const entry of notes) {

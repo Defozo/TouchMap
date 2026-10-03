@@ -4,19 +4,19 @@
     "reviewed": true,
     "language": "en",
     "slideCount": 10,
-    "manifestSha256": "6b864c845cda2529bf3341d7971c28e21771e4157bbdf2cb5b925f2688c14a34",
+    "manifestSha256": "d3d91559e0326b8b10d8d378332869b8b8dff36483299e1545194c784a85ad12",
     "pdf": {
       "path": "dist/touchmap-presentation.pdf",
       "bundlePath": "presentation/touchmap-presentation.pdf",
-      "sha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
-      "bytes": 370329,
+      "sha256": "c65b68135ee4916b0edc8b4f67aa537db5b99941f1574d5f1659b5554e385ca9",
+      "bytes": 355464,
       "pages": 10
     },
     "pptx": {
       "path": "dist/touchmap-presentation.pptx",
       "bundlePath": "presentation/touchmap-presentation.pptx",
-      "sha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
-      "bytes": 471888,
+      "sha256": "197ae9f3746ca1235f8f8d3bfa54b88cb77b43dc40dac0f6967be7ee3a19741e",
+      "bytes": 290329,
       "slides": 10,
       "notes": 10
     }
@@ -31,55 +31,55 @@
     {
       "slide": 2,
       "notesMatchSource": true,
-      "narrationWords": 82,
+      "narrationWords": 66,
       "pdfTitlePresent": true
     },
     {
       "slide": 3,
       "notesMatchSource": true,
-      "narrationWords": 80,
+      "narrationWords": 58,
       "pdfTitlePresent": true
     },
     {
       "slide": 4,
       "notesMatchSource": true,
-      "narrationWords": 87,
+      "narrationWords": 64,
       "pdfTitlePresent": true
     },
     {
       "slide": 5,
       "notesMatchSource": true,
-      "narrationWords": 108,
+      "narrationWords": 79,
       "pdfTitlePresent": true
     },
     {
       "slide": 6,
       "notesMatchSource": true,
-      "narrationWords": 89,
+      "narrationWords": 56,
       "pdfTitlePresent": true
     },
     {
       "slide": 7,
       "notesMatchSource": true,
-      "narrationWords": 83,
+      "narrationWords": 69,
       "pdfTitlePresent": true
     },
     {
       "slide": 8,
       "notesMatchSource": true,
-      "narrationWords": 126,
+      "narrationWords": 66,
       "pdfTitlePresent": true
     },
     {
       "slide": 9,
       "notesMatchSource": true,
-      "narrationWords": 103,
+      "narrationWords": 59,
       "pdfTitlePresent": true
     },
     {
       "slide": 10,
       "notesMatchSource": true,
-      "narrationWords": 97,
+      "narrationWords": 64,
       "pdfTitlePresent": true
     }
   ],
@@ -90,7 +90,7 @@
   ],
   "pdfLinks": [
     "https://github.com/Defozo/TouchMap",
-    "https://github.com/Defozo/TouchMap/releases/tag/v1.0.0"
+    "https://github.com/Defozo/TouchMap/releases/tag/v1.0.1"
   ],
   "pdfAuthor": "DEFOZO SOFTWARE HOUSE / Michał Kiełtyka",
   "limits": "Structural and text checks do not replace the separately recorded visual review or anonymous public-link verification."

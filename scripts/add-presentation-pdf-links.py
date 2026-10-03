@@ -11,7 +11,7 @@ writer = PdfWriter()
 writer.clone_document_from_reader(reader)
 for rect, url in [
     ((48, 337.5, 912, 378.75), 'https://github.com/Defozo/TouchMap'),
-    ((48, 225, 912, 263.25), 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.0'),
+    ((48, 225, 912, 263.25), 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.1'),
 ]:
     writer.add_annotation(9, Link(rect=rect, url=url))
 temporary = path.with_suffix('.linked.pdf')

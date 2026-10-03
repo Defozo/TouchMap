@@ -1,0 +1,20 @@
+{
+  "recordedAtUtc": "2026-10-03T21:11:54.091475+00:00",
+  "device": "127.0.0.1:55555",
+  "productionHapSha256": "1cae6f5da819c826a76e524befa6780af8e848239f6f63216d5fe7b5fd6ef630",
+  "appSourceSha256": "5f8342e24d1692240ade3bdae3014fda2728909706e6ecd7865b51784b4e4bd7",
+  "sourceCommit": "943a5d855893bc4977a6a04bba24c6202cd2b545",
+  "scope": "Actual Library framebuffer after installing the revised English entry copy. Historical learner/authoring footage retains its own artifact identity.",
+  "artifacts": [
+    {
+      "path": "docs/evidence/pitch-library.png",
+      "sha256": "6c95654fef4e5673ab591ddd22ec842433abd7475d826aea461f5d5826f0f70d",
+      "bytes": 39709
+    },
+    {
+      "path": "dist/pitch-library-raw.mp4",
+      "sha256": "e7a321cac32b6672be5fa13089ac03cb15987f45b58076699a1dbbdb30b33cce",
+      "bytes": 32685
+    }
+  ]
+}

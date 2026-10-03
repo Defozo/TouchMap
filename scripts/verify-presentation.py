@@ -45,7 +45,7 @@ with zipfile.ZipFile(root / manifest['pptx']['path']) as archive:
 assert native_tables == [6, 8]
 links = [a.get_object().get('/A', {}).get('/URI') for a in pdf.pages[-1].get('/Annots', [])]
 assert 'https://github.com/Defozo/TouchMap' in links
-assert 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.0' in links
+assert 'https://github.com/Defozo/TouchMap/releases/tag/v1.0.1' in links
 report = {'status': 'passed', 'artifacts': details, 'slideChecks': checks,
           'localCitationsChecked': len(citations), 'nativeTableSlides': native_tables,
           'pdfLinks': links, 'pdfAuthor': pdf.metadata.author,

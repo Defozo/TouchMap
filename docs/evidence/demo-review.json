@@ -1,11 +1,15 @@
 {
-  "recordedAtUtc": "2026-10-03T18:53:53.747638+00:00",
-  "videoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1",
-  "storyboardSha256": "b516c3ad3a364494b83be7ac8c7a7f5f31ea41b588f737e05ba194beb097787c",
-  "reviewer": "Codex delegated native/demo reviewer",
+  "recordedAtUtc": "2026-10-03T21:29:14.991294+00:00",
+  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "storyboardSha256": "959fb7e04504da96c80216b9d6d5b03eb3ed9a75d4d95e231978014e192d6f0c",
+  "reviewer": "Codex video editor with separate root final-cut review and fresh model media perception",
   "status": "accepted_with_stated_review_coverage",
   "technicalEvidence": "docs/evidence/demo-qc.json",
   "independentReview": "docs/evidence/demo-independent-review.json",
+  "independentAvEvidence": "docs/evidence/demo-independent-av-review.json",
+  "audioEvidence": "docs/evidence/demo-audio-transcript.json",
+  "actualAudioPerception": "docs/evidence/demo-pitch-audio-review.json",
+  "audioProvenance": "docs/evidence/demo-pitch-audio-provenance.json",
   "reviewedSamples": {
     "allSceneMidpoints": [
       0,
@@ -27,14 +31,18 @@
       16
     ],
     "criticalFullResolutionBoundaries": [
-      "01-in",
-      "02-in",
-      "02-out",
-      "07-in",
-      "07-out",
-      "08-out"
+      "03-in",
+      "03-out",
+      "08-out",
+      "16-out"
     ],
-    "sourceReview": "Targeted source contact sheets covered the selected picker, acceptance, touch, submit, unfinished selection, restart, restoration, AI request/preview, earlier review/speech, published-ready and second-reimport scenes."
+    "revisedFullResolutionScenes": [
+      0,
+      4,
+      5,
+      9
+    ],
+    "sourceReview": "Retained native sources and build identity. The selected AI-request range now visibly shows permission and request controls from the same recorded request."
   },
   "publicContactSheets": [
     "docs/evidence/demo-review/contact-1.jpg",
@@ -45,24 +53,24 @@
   ],
   "findings": [],
   "acceptedDecisions": [
-    "First seven seconds show the final installed release HAP; all other flow excerpts retain historical artifact annotations.",
-    "The new AI request is not falsely joined to publication of the earlier reviewed revision.",
-    "The developer review is not attributed to the sole human team member or to a blind user.",
-    "The second installation demonstrates offline idempotent reimport with private progress preserved.",
-    "Only captured QEMU touch audio is retained; source waveform alignment and gain are verified.",
-    "The earlier frame-driven authoring excerpt is explicitly labelled condensed."
+    "Use concrete English product copy and action-led narration, without a technical gap list in the pitch.",
+    "Preserve the existing real native workflow recordings, with a fresh actual Library intro and complete build provenance in the storyboard.",
+    "Use premade Alice narration and an original locally composed instrumental score. No user voice was cloned.",
+    "Keep the original native audio at output33-48seconds, with no added narration or music; no second spoken label is claimed.",
+    "Keep author permission, source review, separate historical authoring sessions and offline transfer visible.",
+    "Finish on a complete call to try the sample lesson, with a natural score resolution and fade."
   ],
   "limits": [
-    "Visual review used every scene midpoint and selected important boundaries, not continuous human viewing of all motion.",
-    "No independent human listening claim is made. Cached local machine transcription and exact decoded PCM identity support one audible label only.",
-    "Frame capture can hold the last actual VNC frame between updates. Caption readability does not establish accessibility certification."
+    "Root and editor inspected rendered visual samples; fresh full-MP4 model perception samples the video. Strict decoding checks every frame separately.",
+    "Actual whole-audio automated perception is distinct from human listening. No physical-device acoustic evidence is inferred.",
+    "Inaccurate model observations about Android, a second spoken label, and music inside the protected audio window are explicitly rejected in the corresponding reports.",
+    "Native frame capture can hold the last received framebuffer between updates. Caption readability does not establish accessibility certification."
   ],
-  "automaticCorrectionRounds": 0,
+  "automaticCorrectionRounds": 2,
   "scopeChangesAfterInitialAssembly": [
-    "Replace opening information card with actual final release Library recording under the same introduction, preserving total180 seconds.",
-    "Refresh only the opening capture/provenance after the final measurement-hook fix. All16 non-intro scene definitions and contact pages2–5 remain unchanged."
+    "Fresh intro from pitch-library-raw.mp4; AI-request select changed to show permission and request controls.",
+    "Two generic narration openings replaced with concrete actions; the lesson-question caption made explicit."
   ],
-  "previousCandidateSha256": "09cd2efa9656ae1f98c891d32311ee5b4d7fc9bf62fef91b15efeb0199b168fa",
-  "audioEvidence": "docs/evidence/demo-audio-transcript.json",
-  "nonBlockingCoverageLimit": "Machine recognition supports Evaporation only. The initial two-label expectation did not pass and is preserved. The film does not claim both visual selections were heard."
+  "previousCandidateSha256": "12b11d63bc149fb13246ea59af457bf3866281de622b0c3625b4dc47e5394b71",
+  "previousReleaseVideoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1"
 }

@@ -1,0 +1,140 @@
+{
+  "reviewer": "Gemini 3.8 Flash multimodal audio model",
+  "context": "fresh request, complete actual audio; no supplied script or earlier review",
+  "recordedAtUtc": "2026-10-03T21:20:04.541309+00:00",
+  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "audioSha256": "827c32a02b4ff0a3df5f0b1f1ec574bed745b7e3672abc318b52f2f9360d9218",
+  "review": {
+    "coverage": {
+      "inputActuallyPerceived": "Rendered stereo audio mix containing English narration, soft background score, and retained application audio.",
+      "durationEstimate": "Approximately 179 seconds (02:59)",
+      "wholeAudioCovered": true
+    },
+    "intervalObservations": [
+      {
+        "startSeconds": 0,
+        "endSeconds": 30,
+        "heardSpeechAnchor": "Touch an object, hear its name, follow its connections. This is TouchMap.",
+        "observations": "Energetic and articulate female English narration introduces the app and its accessibility value for blind or low-vision learners. Quiet, light instrumental music accompanies the voice at a well-ducked level with zero masking."
+      },
+      {
+        "startSeconds": 30,
+        "endSeconds": 60,
+        "heardSpeechAnchor": "Evaporation.",
+        "observations": "Narration pauses at 00:30. Between 00:33 and 00:48, the demonstration slot features an audible synthesized app label 'Evaporation' at approximately 00:35, followed by quiet musical accompaniment without narration. Narration resumes smoothly at 00:48 ('Select a connection to move from one object to the next...')."
+      },
+      {
+        "startSeconds": 60,
+        "endSeconds": 90,
+        "heardSpeechAnchor": "Choose an answer and submit it. TouchMap checks the reviewed diagram facts...",
+        "observations": "Narration covers submitting answers, offline lesson checks, saving state, and resume capabilities. The acoustic level is consistent, diction is crisp, and background music remains subtle."
+      },
+      {
+        "startSeconds": 90,
+        "endSeconds": 120,
+        "heardSpeechAnchor": "For educators, preparation starts with an image.",
+        "observations": "Narration transitions seamlessly into the educator workflow, explaining AI-assisted drafting, verification against the original source image, and authorial review. Pacing is steady and unhurried."
+      },
+      {
+        "startSeconds": 120,
+        "endSeconds": 150,
+        "heardSpeechAnchor": "Adjust the regions, correct the wording, and confirm the relationships.",
+        "observations": "Narration continues explaining manual review, adding recorded speech or TTS labels, offline compilation, and portability across installations. Music maintains steady support without competing."
+      },
+      {
+        "startSeconds": 150,
+        "endSeconds": 180,
+        "heardSpeechAnchor": "TouchMap gives learners a way to explore diagrams, and educators a way to prepare them.",
+        "observations": "Narration highlights student privacy and device portability before delivering the final call to action to download and try the app. The vocal track concludes around 02:58, followed by a natural musical resolution and clean decay to 02:59 without any abrupt cutoff."
+      }
+    ],
+    "narrationClarity": "Excellent. The narrator speaks with clear enunciation, a warm, professional, and engaging tone, and a well-metered cadence. Syllables are crisp with no slurring, clipping, or harsh sibilance.",
+    "musicBalance": "Well balanced. The gentle instrumental music stays low in the mix, effectively creating positive ambience while sitting safely below the vocal frequencies, ensuring full speech intelligibility throughout.",
+    "originalApplicationAudio": "Between 00:33 and 00:48, the retained app audio is cleanly heard at approximately 00:35 with the spoken synthesized label 'Evaporation'. The music remains subdued during this demo section, and transitions into and out of the passage are smooth without clicks or jarring level jumps.",
+    "ending": "Natural and complete. The voiceover finishes its call to action cleanly at 02:58, and the background music resolves gracefully with a brief final decay ending around 02:59.",
+    "materialIssues": [],
+    "overall": "pass",
+    "limits": "Evaluation is based solely on acoustic analysis of the supplied audio file. Visual synchronisation, display state, and physical device acoustics cannot be verified from audio alone.",
+    "transcript": "Touch an object, hear its name, follow its connections. This is TouchMap. For a blind or low-vision learner, a diagram can be the hardest part of a lesson. TouchMap brings the picture, spoken labels, relationships, and questions into one offline package. Start with the source and the author declaration. Check what the material contains, then accept it locally. The learner stays in control. [App Audio: Evaporation.] Select a connection to move from one object to the next, follow the process, or return to the part you want to explore. Choose an answer and submit it. TouchMap checks the reviewed diagram facts, so each result follows the lesson the author approved. Need a break? Your next selection is saved separately from your completed answers. Come back when you are ready. Even after the app stops, the lesson is still there. Reopen the material. Your earlier answer remains, and the new selection is waiting for you. There is no need to start the lesson again. For educators, preparation starts with an image. With permission, AI proposes the objects and connections. The author gets a draft to inspect and improve. The source stays visible, so every proposed object can be checked against the picture. Adjust the regions, correct the wording, and confirm the relationships. Separate checks for geometry and meaning put the author in charge of the published lesson. Add recorded speech or generate spoken labels. Listen to the important words before publishing. The reviewed revision brings the diagram, connections, questions, and recordings together. TouchMap checks the required files before marking it ready offline. Export the package and open it on another installation. The teaching material travels with its audio. The package carries the lesson, while learning history stays private. Reimport the material, and keep the progress already saved on that device. TouchMap gives learners a way to explore diagrams, and educators a way to prepare them. Download the app and sample lessons. Import a diagram, follow a connection, and try the lesson yourself."
+  },
+  "methodLimits": "Automated audio perception, not human listening or proof of video synchronisation. Full audio bytes supplied once; timing estimated by model.",
+  "providerResponseId": null,
+  "usage": {
+    "total_tokens": 9610,
+    "total_input_tokens": 4837,
+    "input_tokens_by_modality": [
+      {
+        "modality": "audio",
+        "tokens": 4500
+      },
+      {
+        "modality": "text",
+        "tokens": 337
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 1347,
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 3426,
+    "raw_prompt_token": 6128,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 728
+          },
+          {
+            "modality": "audio",
+            "tokens": 4500
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1356
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 3426
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 728
+          },
+          {
+            "modality": "audio",
+            "tokens": 4500
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1356
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 3426
+          }
+        ]
+      }
+    ]
+  },
+  "verificationNotes": [
+    {
+      "claim": "Reviewer describes subdued music during 33-48 seconds.",
+      "assessment": "Not accepted as factual. The approved added narration/music stem contains exactly zero samples throughout this interval; the final output matches the original native recording with correlation 0.99999884.",
+      "effect": "Does not change the clear spoken label or clean transition findings; objective source provenance takes precedence over this imprecise model observation."
+    }
+  ]
+}

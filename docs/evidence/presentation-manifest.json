@@ -2,20 +2,24 @@
   "reviewed": true,
   "language": "en",
   "slideCount": 10,
+  "revision": "pitch-v2",
   "pdf": {
     "path": "dist/touchmap-presentation.pdf",
-    "sha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff"
+    "sha256": "c65b68135ee4916b0edc8b4f67aa537db5b99941f1574d5f1659b5554e385ca9",
+    "bytes": 355464
   },
   "pptx": {
     "path": "dist/touchmap-presentation.pptx",
-    "sha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
-    "bytes": 471888
+    "sha256": "197ae9f3746ca1235f8f8d3bfa54b88cb77b43dc40dac0f6967be7ee3a19741e",
+    "bytes": 290329
   },
   "team": "DEFOZO SOFTWARE HOUSE",
-  "members": ["Michał Kiełtyka"],
+  "members": [
+    "Michał Kiełtyka"
+  ],
   "source": {
     "path": "scripts/build-presentation.mjs",
-    "sha256": "dcecce6310d5ac16a92b90ade16a7fa96fce7f564061f057cff250014644674b",
+    "sha256": "e6033f585b9950d2cdc112397f6ed73103c9b179caf677f48e249851bac7d170",
     "artifactToolVersion": "2.8.59",
     "runtimeBundleVersion": "26.909.12148"
   },
@@ -24,5 +28,6 @@
   "review": "docs/evidence/presentation-review.json",
   "independentReview": "docs/evidence/presentation-independent-review.json",
   "qualityChecks": "docs/evidence/presentation-qc.json",
-  "publicAccessBoundary": "Artifact review does not establish release availability. The public repository has separate anonymous-access evidence. The release URL must be verified after publication without changing these reviewed artifact bytes."
+  "releaseUrl": "https://github.com/Defozo/TouchMap/releases/tag/v1.0.1",
+  "publicAccessBoundary": "Artifact review does not establish release availability. Anonymous release access is verified separately after publication."
 }

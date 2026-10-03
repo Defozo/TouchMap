@@ -1,9 +1,9 @@
 [
   {
     "slide": 1,
-    "path": "docs/presentation-assets/final-library.png",
-    "sha256": "ca38f931c673447df50997ff0af442abe2e48ce2881f40e8953c110f5682f444",
-    "alt": "Actual TouchMap Library captured from installed final HAP 1209c8712549."
+    "path": "docs/evidence/pitch-library.png",
+    "sha256": "6c95654fef4e5673ab591ddd22ec842433abd7475d826aea461f5d5826f0f70d",
+    "alt": "Actual TouchMap Library captured from installed HAP 1cae6f5da819, built from source 943a5d8."
   },
   {
     "slide": 2,
@@ -25,9 +25,9 @@
   },
   {
     "slide": 5,
-    "path": "docs/presentation-assets/author-review.png",
-    "sha256": "6b61aae7c0f61dbbd914e42250195fb4165d610f5df0207d76f06a48d72b8b11",
-    "alt": "Actual author editor with separate geometry and meaning confirmation controls."
+    "path": "docs/evidence/native-author-ready.png",
+    "sha256": "e8c508caa7c48f85ddad251022b94d8a4801d54634666ba44cec1e8431c7da51",
+    "alt": "Actual Library showing the authored revision 6 lesson ready offline, with its objects, connections and question."
   },
   {
     "slide": 7,
@@ -37,8 +37,8 @@
   },
   {
     "slide": 9,
-    "path": "docs/evidence/native-settings-200.jpeg",
-    "sha256": "776f12b796311a123a83fb4c3c6649ca222f8e13ec0819954bd3dbc74b2e7845",
-    "alt": "Actual 200 percent Settings screen explicitly reporting that the system screen reader is disabled."
+    "path": "docs/evidence/second-correct-answer-200.jpeg",
+    "sha256": "35818f36951d48b20b5fbdbc98ac54e82afba7243aaab27354f63a525d1b8113",
+    "alt": "Actual lesson at 200 percent text showing the selected Gate 1 answer and correct feedback."
   }
 ]

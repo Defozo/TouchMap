@@ -2,19 +2,19 @@
   {
     "slide": 1,
     "title": "TouchMap",
-    "narration": "TouchMap is a native OpenHarmony application for exploring reviewed diagrams. It is intended for blind and low-vision learners and for teachers who prepare accessible material. A learner can explore objects and their relationships, answer questions and resume a lesson offline. DEFOZO SOFTWARE HOUSE is the submitting team, with Michał Kiełtyka as its sole human member. The application and recordings demonstrate developer verification. We have not yet completed a study with the intended learners.",
+    "narration": "TouchMap turns a diagram into a lesson the learner can explore by touch and sound. A learner chooses an object, hears its description and follows its connections. Teachers prepare and review the material. The lesson then works offline, including questions and saved progress. This native OpenHarmony app is designed for blind and low-vision learners. DEFOZO SOFTWARE HOUSE presents TouchMap, created by Michał Kiełtyka. The screenshots show the running native app on an emulator.",
     "citations": [
       "TEAM.json",
       "SUBMISSION.md",
       "docs/ACCESSIBILITY.md",
-      "docs/evidence/final-release-v2-library-ui.json",
-      "docs/presentation-assets/final-library.png"
+      "docs/evidence/pitch-library-capture.json",
+      "docs/evidence/pitch-library.png"
     ]
   },
   {
     "slide": 2,
-    "title": "Following relationships in a diagram",
-    "narration": "A diagram contains relationships as well as labels. Consider the water cycle: a learner may want to follow what comes after condensation, return to a previous object or check a connection. TouchMap represents objects, reviewed relationships and questions alongside the original image. Our hypothesis is that choosing an exploration order can help learners form and check a mental model. The project has implemented this interaction, but we do not claim a measured learning advantage. A planned comparative study will test that hypothesis.",
+    "title": "The next step in a diagram",
+    "narration": "Imagine studying the water cycle without seeing its arrows. Hearing each label still leaves a question: what comes next? TouchMap lets the learner choose condensation and follow the connection to precipitation. They can replay a description, return to an earlier object and check their understanding with a question. The original diagram stays attached to the lesson so the teacher can review each connection against its source.",
     "citations": [
       "SUBMISSION.md",
       "docs/STUDY_PROTOCOL.md",
@@ -24,8 +24,8 @@
   },
   {
     "slide": 3,
-    "title": "Three ways to explore",
-    "narration": "The native application offers three ways to reach the same reviewed content. Touch exploration uses the diagram geometry and local recordings. List navigation exposes objects and their connections through standard controls. Scan navigation advances the focus automatically and lets the user activate the current item. The learner can zoom, pan, bookmark an object or follow a reviewed path. Unknown path geometry remains explicitly unknown. Text and controls remain available alongside audio. A genuine system screen-reader session still needs hardware validation.",
+    "title": "Exploration at the learner’s pace",
+    "narration": "The same lesson supports touch, list navigation and automatic scanning. Touch plays the recording for the selected object. List navigation makes objects and their connections available through native controls. Scanning moves the highlight automatically, and the learner activates the current choice. Zoom and pan preserve the original spatial arrangement. Bookmarks make it easy to return to an object.",
     "citations": [
       "docs/ACCESSIBILITY.md",
       "docs/evidence/native-ui-observations.json",
@@ -35,8 +35,8 @@
   },
   {
     "slide": 4,
-    "title": "A lesson that survives interruption",
-    "narration": "TouchMap saves the learner’s current context locally. Reopening a lesson restores the object, viewport, question, bookmarks and the rest of the saved progress. Selecting an answer does not submit it. Only the explicit Submit action records an answer, and a restart does not submit an unfinished selection. The native restart tests checked acknowledged writes, replayed event identifiers and unfinished selections. A portable lesson contains reviewed teaching material and audio. The learner’s private history stays on the device unless they deliberately export it through the separate history action.",
+    "title": "The lesson resumes where you stopped",
+    "narration": "An interruption should not mean finding your place again. TouchMap saves the current object, zoom, question and bookmarks on the device. Reopen the lesson and Resume brings that context back. An unfinished answer stays available until the learner chooses Submit. When a teacher shares the lesson, the learner’s history stays private on their own device. They can export that history separately when they choose.",
     "citations": [
       "docs/evidence/native-recovery.json",
       "docs/evidence/native-restore-benchmark.json",
@@ -47,20 +47,20 @@
   },
   {
     "slide": 5,
-    "title": "Authors control publication",
-    "narration": "An author can import a source, edit regions and relationships manually, or request an AI proposal after explicit consent. AI output always returns as a draft. The author checks geometry and meaning, then reviews relations and each question against its supporting facts. Speech generation requires separate consent, and recordings must match the current text and language. Publication records the current revision’s review. Ready offline separately requires complete matching local assets and recordings. The declaration records who performed the review. A valid checksum establishes file integrity, while teaching quality still depends on source review. Demonstration materials identify the developer review accurately. This screenshot comes from the earlier authoring session.",
+    "title": "Teachers prepare the lesson",
+    "narration": "A teacher starts with a diagram they have permission to use. They can mark objects manually or ask AI for a draft. The editor lets them correct the geometry and descriptions, review connections and check the facts behind each question. They choose when to generate speech and when to publish. Once matching recordings are complete, Ready offline tells the learner that the lesson is available locally. Here is the material created, reviewed and exported in the native authoring demo.",
     "citations": [
       "AI_WORKFLOW.md",
       "contracts/CONTRACT.md",
       "docs/evidence/native-author-tts-accepted.json",
       "docs/evidence/native-authoring-flow.json",
-      "docs/presentation-assets/author-review.png"
+      "docs/evidence/native-author-ready.png"
     ]
   },
   {
     "slide": 6,
-    "title": "Local learning, optional preparation",
-    "narration": "The learner path runs locally. ArkTS and ArkUI handle exploration and questions. Relational storage commits private progress, while verified immutable files hold source images and recordings. AudioRenderer plays local PCM recordings. Optional preparation runs in a separate service: Gemini proposes structured material, a controlled SVG renderer produces a faithful preview, and ElevenLabs creates speech after consent. Provider credentials stay on the service. A portable touchmap package includes its manifest, diagram, source, preview and matching audio. Its checksums allow another installation to verify the same assets without a backend connection.",
+    "title": "The lesson works offline",
+    "narration": "Once prepared, the lesson needs no network connection. Its image, reviewed structure and matching recordings travel together in one touchmap file. The native app plays audio and saves progress locally. Optional AI preparation and speech generation run separately and only after the author gives consent. Learners can open a bundled lesson immediately without creating an account.",
     "citations": [
       "ARCHITECTURE.md",
       "AI_WORKFLOW.md",
@@ -71,8 +71,8 @@
   },
   {
     "slide": 7,
-    "title": "OpenHarmony integration",
-    "narration": "TouchMap uses native platform APIs for its core behaviour. ArkUI Canvas and standard controls provide exploration and editing. AudioRenderer handles PCM playback, including pause, resume and cancellation. Relational storage and file access protect durable progress. SystemPicker exports and imports packages through ordinary URI permissions. Tests also opened a package through cold viewData and warm sendData requests. The build targets API 20 and the emulator runtime reports API 23, OpenHarmony 6.1.0.31. This does not claim an independent runtime test on an API 20 device.",
+    "title": "Native on OpenHarmony",
+    "narration": "TouchMap uses the platform directly. ArkUI draws the exploration surface and provides the native controls. AudioRenderer plays local recordings with pause and replay. The relational store keeps progress across restarts. The system file picker lets authors export a lesson and learners import it on another installation. TouchMap also opens shared files through normal URI permissions. The app targets API 20 and the demonstration runs on the API 23 emulator.",
     "citations": [
       "docs/platform.md",
       "ARCHITECTURE.md",
@@ -83,39 +83,37 @@
   },
   {
     "slide": 8,
-    "title": "Developer verification",
-    "narration": "These are observed developer tests, not a user study. Eighteen native regression tests passed on the final application build. One hundred restart cycles verified acknowledged commits, unfinished selections and duplicate event handling. Separately, one hundred local audio starts achieved a 25 millisecond 95th percentile from the playback scheduler decision to the first accepted PCM write. The 250 millisecond dwell is excluded from that number. Including dwell, the 95th percentile was 303 milliseconds. One hundred restoration observations achieved a 130 millisecond 95th percentile from the active-app open intent to the post-layout draw boundary. That run used 92 plus 8 samples after a UiTest harness stall. Every included sample passed full progress equality and a visible Resume-heading check. These are software boundaries, not physical speaker or panel measurements.",
+    "title": "Four examples to explore today",
+    "narration": "The app includes four prepared examples. The tutorial introduces the controls through simple shapes. The water cycle lets learners follow a familiar sequence and answer questions about its connections. The invented Lumina process adds branches, so the learner has to trace a path. The rainfall chart presents labelled values and comparison questions. Its missing June value stays unknown. These examples are already packaged with local recordings.",
     "citations": [
-      "docs/TEST_REPORT.md",
-      "docs/evidence/native-test-artifact.json",
-      "docs/evidence/native-audio-benchmark.json",
-      "docs/evidence/audio-source-equivalence.json",
-      "docs/evidence/native-restore-benchmark.json",
-      "docs/evidence/native-recovery.json"
+      "app/entry/src/main/resources/rawfile/samples/tutorial/diagram.json",
+      "app/entry/src/main/resources/rawfile/samples/water-cycle/diagram.json",
+      "app/entry/src/main/resources/rawfile/samples/lumina-process/diagram.json",
+      "app/entry/src/main/resources/rawfile/samples/rainfall-chart/diagram.json"
     ]
   },
   {
     "slide": 9,
-    "title": "Accessibility evidence and next checks",
-    "narration": "The emulator evidence covers 200 percent text, native controls, scanning, tutorial navigation and manual authoring. The application offers touch, list and scan routes, visible status and local audio. However, the user has no physical HarmonyOS or OpenHarmony device available for this work. We have not verified a complete lesson with a genuine screen reader, physical vibrations, headphone hardware or the intended learners. The next evaluation should involve blind and low-vision learners plus teachers, comparing touch exploration, list navigation and a linear audio overview. It should measure successful answers, assistance, workload and recovery after interruption. Those results may change the interface and preparation workflow.",
+    "title": "Controls that adapt to the learner",
+    "narration": "Learners can enlarge text and controls to 200 percent and choose a comfortable scan interval. Spoken labels stay available with visible descriptions, and playback can be repeated or stopped. Questions give an explanation after an explicit submission. This capture shows the enlarged answer flow running on the emulator. The same lesson remains available through touch, list navigation or scanning.",
     "citations": [
       "docs/ACCESSIBILITY.md",
-      "docs/STUDY_PROTOCOL.md",
-      "docs/evidence/native-settings-200.jpeg",
-      "docs/evidence/native-ui-observations.json"
+      "docs/evidence/second-correct-answer-200.jpeg",
+      "docs/evidence/native-ui-observations.json",
+      "app/entry/src/main/ets/pages/Index.ets"
     ]
   },
   {
     "slide": 10,
-    "title": "Source, install and demo",
-    "narration": "The submission supplies the source repository, signed HAP, portable sample lessons, an English three-minute demonstration and setup documentation. Download the release assets, follow the emulator setup in docs/platform.md and install the signed HAP with hdc. The documented emulator audio configuration is required for the pinned image. A bundled prepared lesson works without a backend or provider key. For authors who want cloud preparation, the documentation explains service deployment, pairing and separate consent. The repository is github.com/Defozo/TouchMap and the release tag is v1.0.0. The submitting team is DEFOZO SOFTWARE HOUSE, with Michał Kiełtyka as its sole human member.",
+    "title": "TouchMap is ready to explore",
+    "narration": "Open the release to watch the English demo or download the signed application. Follow the emulator setup guide and open a bundled lesson. The learner can explore, answer a question and resume offline without an account. The public repository includes the source and reproducible build instructions. TouchMap is a native OpenHarmony application from DEFOZO SOFTWARE HOUSE, with Michał Kiełtyka as the sole team member.",
     "citations": [
       "README.md",
+      "docs/DEMO_ACCESS.md",
       "docs/platform.md",
       "SUBMISSION.md",
-      "AI_WORKFLOW.md",
       "https://github.com/Defozo/TouchMap",
-      "https://github.com/Defozo/TouchMap/releases/tag/v1.0.0"
+      "https://github.com/Defozo/TouchMap/releases/tag/v1.0.1"
     ]
   }
 ]

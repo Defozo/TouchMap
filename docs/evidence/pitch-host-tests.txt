@@ -1,0 +1,64 @@
+
+> touchmap-domain-verification@1.0.0 test
+> tsx --test tests/*.test.ts
+
+✔ portable PCM recording validation shares malformed-header cases with backend (5.3145ms)
+{"measurement":"host-hit-test","events":1000,"regions":500,"p95Ms":0.006999999999834472,"runtime":"v24.13.0","deviceClaim":false}
+✔ WAV content establishes duration and rejects forged headers (4.3626ms)
+✔ native SVG safety rejects namespaces, active elements and obfuscated CSS resources (1.5245ms)
+✔ bounded native DEFLATE decodes stored, fixed, dynamic and overlapping backreferences (28.1464ms)
+✔ forged deflate sizes and invalid or truncated streams fail before exceeding allocation (4.0885ms)
+✔ all examples preserve valid reviewed facts and graph-linked questions (8.8797ms)
+✔ outer boundaries belong to polygon and holes exclude boundaries and interiors (0.4942ms)
+✔ line distance handles endpoints and zero length safely (0.196ms)
+✔ grid indexes the maximum point budget without argument-list overflow (67.3587ms)
+✔ same inverse transform covers offset, scale and rotation (0.8352ms)
+✔ overlaps retain selected layer while exposing all matching objects (1.3265ms)
+✔ path guidance never invents routes for graph-only relations (0.3535ms)
+✔ touch, list and scanning target the same input-independent transition (1.3882ms)
+✔ selected answer persists through serialisation and pause without submitting (1.8529ms)
+✔ submission deduplicates retry event and rejects stale or repeated commands (1.5364ms)
+✔ learning refuses content revision changes and missing IDs (0.89ms)
+✔ multi-answer question checks exact set without order bias (1.5307ms)
+✔ unknown chart values are never accepted as exact-value facts (1.1288ms)
+✔ referential integrity, nonfinite geometry and geometry budgets fail (1.1421ms)
+✔ editing a relation invalidates dependent questions even if label stays identical (2.6516ms)
+✔ undo and redo restore entire consistent drafts (2.1295ms)
+✔ late AI result cannot replace later author edits (1.6614ms)
+✔ deleting region removes dangling links and invalidates affected questions (1.3919ms)
+✔ missing audio cannot be labelled ready offline (1.5518ms)
+✔ ZIP paths reject traversal, absolute names and Windows separator escapes (0.2303ms)
+✔ recovery across 100 acknowledged host state roundtrips never submits unfinished selection (9.5477ms)
+✔ host geometry benchmark on 500 regions and 1000 events reports measurements (15.5415ms)
+✔ editing the material overview invalidates its recording while preserving reviewed source facts (24.9029ms)
+✔ adopting a stored revision keeps undo and redo without changing another material (3.3825ms)
+✔ an editor rollback snapshot preserves both histories and isolates later mutations (15.1456ms)
+✔ pointer jitter does not alternate neighbouring objects; deliberate crossing and exit do (21.185ms)
+✔ hole edges and line stroke edges retain only within the explicit margin (2.3394ms)
+✔ two display pixels stay constant across fit and zoom, with exact geometry unchanged (1.4198ms)
+✔ every English UI resource has the same pure-domain fallback and stable reverse key (10.4339ms)
+✔ locale resolver formats dynamic values once and safely falls back when unavailable (0.8884ms)
+✔ localized engine feedback cannot change stable content IDs, authored labels or lesson state (3.8798ms)
+✔ bounded JSON accepts actual package documents and escaped strings (27.1872ms)
+✔ bounded JSON rejects duplicate decoded names, excessive depth and malformed tokens (3.6077ms)
+✔ manifest rejects malformed authors/assets before native adoption (5.6584ms)
+✔ manifest rejects case collisions, self references and unbounded assets (1.13ms)
+✔ all bundled recordings expose complete aligned PCM samples for native AudioRenderer (25.8055ms)
+✔ native PCM parser rejects compressed WAV and truncated sample payloads before playback (3.7345ms)
+✔ backend CSS fixture passes preview retention profile while local renderer profile rejects it (12.9729ms)
+✔ preview profile rejects active or external XML including entity-obscured styles (2.5065ms)
+✔ preview profile rejects incomplete, duplicate and unbounded XML structures (0.6583ms)
+✔ malformed nested wire objects are rejected without exceptions (36.1245ms)
+✔ current revision and provenance are publication gates even when audio exists (8.5737ms)
+✔ native validator rejects wrong audio kinds, duplicate targets and chart evidence (5.8278ms)
+✔ native and preparation validators use shared polygon acceptance fixtures (17.3075ms)
+✔ portable names exclude reserved Windows devices and non-NFC aliases (0.4181ms)
+✔ the actual offline CLI artifact passes native publication and preview readiness (2.6015ms)
+ℹ tests 51
+ℹ suites 0
+ℹ pass 51
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1600.5153

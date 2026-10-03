@@ -1,28 +1,24 @@
 {
-  "reviewedAt": "2026-10-03T19:39:54.000295+00:00",
-  "reviewer": "Codex backend agent, independent of deck author; not a human participant review",
+  "reviewedAt": "2026-10-03T21:16:36.171474+00:00",
+  "reviewer": "Codex coordinating agent, independent of the delegated deck author",
   "status": "passed",
-  "version": "final-v6-pdf-links-v5-pptx",
+  "version": "v1.0.1-pitch-v2",
   "pdf": {
-    "sha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
-    "bytes": 370329,
-    "pages": 10,
-    "actualUriAnnotations": [
-      "https://github.com/Defozo/TouchMap",
-      "https://github.com/Defozo/TouchMap/releases/tag/v1.0.0"
-    ]
+    "path": "dist/touchmap-presentation.pdf",
+    "sha256": "c65b68135ee4916b0edc8b4f67aa537db5b99941f1574d5f1659b5554e385ca9",
+    "bytes": 355464,
+    "pages": 10
   },
   "pptx": {
-    "sha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
-    "bytes": 471888,
-    "slidesAndNotes": [
-      10,
-      10
-    ],
+    "path": "dist/touchmap-presentation.pptx",
+    "sha256": "197ae9f3746ca1235f8f8d3bfa54b88cb77b43dc40dac0f6967be7ee3a19741e",
+    "bytes": 290329,
+    "slides": 10,
+    "speakerNotes": 10,
     "editableTables": 2
   },
   "coverage": {
-    "v1RenderedSlidesIndividuallyViewed": [
+    "individuallyViewedPowerPointRenderedSlides": [
       1,
       2,
       3,
@@ -34,97 +30,131 @@
       9,
       10
     ],
-    "v3ChangedRenderedSlidesIndividuallyViewed": [
-      1,
+    "method": "Pitch-v1 slides2-10 were each visually inspected at1600x900. Finalpitch-v2 slides1 and4 were inspected separately. The other8 final PNGs and PDF page renders have exact SHA256 equality to the prior reviewed version.",
+    "unchangedFinalSlides": [
+      2,
       3,
       5,
+      6,
+      7,
+      8,
+      9,
       10
     ],
-    "remainingRenderedSlidesByteIdenticalToReviewedV1": {
-      "2": true,
-      "4": true,
-      "6": true,
-      "7": true,
-      "8": true,
-      "9": true
+    "renderHashes": {
+      "1": {
+        "pptx": {
+          "sha256": "2292df3bd4b69ca97a9904393ab32cd67dd107f246c366f576db4e57b1c6a12f",
+          "unchangedFromPitchV1": false
+        },
+        "pdf": {
+          "sha256": "f235310a81bb6daccb24df9fb46108e3cfed1b4b02a0d31013effd5291dd3fc3",
+          "unchangedFromPitchV1": false
+        }
+      },
+      "2": {
+        "pptx": {
+          "sha256": "4068e97fa817b65f3367190e957a7a80cd82292c06f7fc54bbf25c8189f73371",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "f0f2e9345d0d61d18756fb8f596a78e1e163f08b6a2798367b549c89a0e89114",
+          "unchangedFromPitchV1": true
+        }
+      },
+      "3": {
+        "pptx": {
+          "sha256": "f4430f81a0838cc66df763662e6de2e8e43de0e549342d36b32064105c27b9c3",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "9238223c813a02af890d975bacbe1b08b15143febad977e39d6ed450504d24c4",
+          "unchangedFromPitchV1": true
+        }
+      },
+      "4": {
+        "pptx": {
+          "sha256": "52736f67f337c99f99b4bfbfe5c062dcd7d1579dd8e4e370c902f76da0e14abe",
+          "unchangedFromPitchV1": false
+        },
+        "pdf": {
+          "sha256": "abb8d10e00704f5c67e68769361896e3008eab7935d421b5b9960412615fd7d0",
+          "unchangedFromPitchV1": false
+        }
+      },
+      "5": {
+        "pptx": {
+          "sha256": "7cf2fa8851d437c8b2201f512ef9d37cb266ad1f58621898374324b5c05f73b2",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "e346fe5bb669ca897952c20a2a48cfa814f7343600d228357b7f78e17e6a9748",
+          "unchangedFromPitchV1": true
+        }
+      },
+      "6": {
+        "pptx": {
+          "sha256": "872d01e4c97dc85a46248d6f7255d40095ac81831202a753a5ae0f7564f5f1c6",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "4f55cd981dc438d004f0715808107762062a7d0fa8db7d0bb2cb71d16569bbbb",
+          "unchangedFromPitchV1": true
+        }
+      },
+      "7": {
+        "pptx": {
+          "sha256": "5806b846058f1a7c6e74ae8fe775868c14d0bf15a1ed135cc343136fa8ab170f",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "c3c04832ab00c0837b8e164d9d0380a69c27cec74023417fa4e7218859d1b24f",
+          "unchangedFromPitchV1": true
+        }
+      },
+      "8": {
+        "pptx": {
+          "sha256": "52b1b73cfed322425363eb8795f7b9c4c6fd4dc51dbf51e450c94348eb610e06",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "d7c83d0db45ff84c4f308c78666518b0c7f7a70c29e4730eda554be69eb76e4d",
+          "unchangedFromPitchV1": true
+        }
+      },
+      "9": {
+        "pptx": {
+          "sha256": "046306b54cec0864dd23f57034ee4558c5df7b9787a32ea15c2a6cd0b5231dfc",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "7e8611b8960ce2097467e35f0d7a818b95c0fc043fb815d406c4d79127e3a23c",
+          "unchangedFromPitchV1": true
+        }
+      },
+      "10": {
+        "pptx": {
+          "sha256": "3aed2b95c345c1a3043a6b126cdced816000a8e67a2b8a6a3be7a6758f0ee023",
+          "unchangedFromPitchV1": true
+        },
+        "pdf": {
+          "sha256": "37eaf296f9d3401aa337ef18fcf968d0d1ded26e78ba76ce5e0b47a200e67877",
+          "unchangedFromPitchV1": true
+        }
+      }
     },
-    "allNarrationsReviewed": true,
-    "narrationTextPresentInActualPptx": [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true
-    ],
-    "localCitationFilesChecked": 33,
-    "missingCitationFiles": [],
-    "finalRenderedSlidesByteIdenticalToReviewedV3": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": true,
-      "6": true,
-      "7": true,
-      "8": true,
-      "9": true,
-      "10": true
-    },
-    "finalPdfPageRendersByteIdenticalBeforeAndAfterLinkAnnotations": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": true,
-      "6": true,
-      "7": true,
-      "8": true,
-      "9": true,
-      "10": true
-    }
+    "notesAndCitations": "Separate verify-presentation.py validates all10 actual PPTX speaker-note scripts,33 existing local citations, native tables and PDF titles/URIs."
   },
-  "resolvedFindings": [
-    "Replaced historical stale-guide exploration screenshot with fixed-candidate evidence.",
-    "Used current production Library on cover and kept historical flow provenance in notes.",
-    "Corrected publication versus separate Ready offline requirements.",
-    "Replaced nonexistent/private citations with existing public-source targets.",
-    "Corrected setup path to docs/platform.md and restored legible mint hyperlinks.",
-    "Added the two actual PDF URI annotations; independent pdfinfo inspection confirms both destinations and all ten PDF render pixels remain identical."
-  ],
-  "factualChecks": [
-    "Team and sole human member match TEAM.json.",
-    "Native18, audio100/p9525ms plus303ms including dwell, restore100/p95130ms and92+8 split match evidence.",
-    "API20 build versus API23 runtime and no genuine-reader/physical-hardware/participant-study claims remain explicit."
+  "findings": [],
+  "acceptedCorrections": [
+    "Concrete learner/teacher workflow replaces technical-results and gap-list slides.",
+    "Fresh actual Library capture shows the revised product copy; historical flow screenshots retain source attribution.",
+    "Slide4 uses the concrete heading Answers wait for Submit.",
+    "Final cover identifies the native OpenHarmony emulator demo and matches TEAM.json.",
+    "Visible content remains English, with legible hierarchy, text fit and actual v1.0.1 release hyperlink."
   ],
   "limits": [
-    "Visual inspection used PowerPoint-exported PNGs, not an interactive slideshow or a blind-reader session.",
-    "Public source access is verified separately; release asset URL publication and anonymous byte readback remain a separate external release check."
-  ],
-  "previousReviewedCandidate": {
-    "version": "v3",
-    "pdfSha256": "540a09f632f193800beafa46164458328d02172101e8590d0cc93d6ea372fd2c",
-    "pptxSha256": "920221f1e97d449c27639e2ba0ecec034d8cf44e7dc5ef6e508fddfe5d24ecfd"
-  },
-  "previousMetadataCandidate": {
-    "version": "v5",
-    "pdf": {
-      "sha256": "6f17bb912fc38d73c75f4cb0e1cd2dfae65d3fbbc5865ad24aa5212fc78b3696",
-      "bytes": 335999,
-      "pages": 10
-    },
-    "pptx": {
-      "sha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
-      "bytes": 471888,
-      "slidesAndNotes": [
-        10,
-        10
-      ],
-      "editableTables": 2
-    }
-  }
+    "Independent visual review used actual PowerPoint-exported images, not a human slide rehearsal or a screen-reader audit.",
+    "Public release link availability is checked after publication separately from this artifact review."
+  ]
 }

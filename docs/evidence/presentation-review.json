@@ -1,41 +1,220 @@
 {
   "status": "accepted",
-  "pdfSha256": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
-  "pptxSha256": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf",
-  "scope": "Developer visual and factual artifact review. No independent human presentation rehearsal or genuine screen-reader audit is claimed.",
-  "slidesInspectedIndividually": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "revision": "pitch-v2",
+  "reviewedAtUtc": "2026-10-03T21:15:28.104277+00:00",
+  "reviewer": "Codex presentation agent",
+  "pdfSha256": "c65b68135ee4916b0edc8b4f67aa537db5b99941f1574d5f1659b5554e385ca9",
+  "pptxSha256": "197ae9f3746ca1235f8f8d3bfa54b88cb77b43dc40dac0f6967be7ee3a19741e",
+  "scope": "Visual and factual artifact review against the running native application evidence and source. Not a participant study or genuine screen-reader audit.",
+  "slidesInspectedIndividually": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
   "powerPoint": {
     "version": "16.0",
     "openedFinalPptxSuccessfully": true,
     "exportedPdfAndEverySlide": true,
-    "renderSize": [1600, 900],
-    "finalMetadataOnlyRevisionImagesIdenticalToReviewedV3": 10
+    "renderSize": [
+      1600,
+      900
+    ],
+    "pitchV1SlidesInspectedIndividually": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "pitchV2ChangedSlidesInspectedIndividually": [
+      1,
+      4
+    ],
+    "unchangedPitchV2SlidesByteIdenticalToReviewedPitchV1": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
   },
   "pdf": {
     "renderEngine": "Poppler pdftoppm",
     "resolutionDpi": 120,
-    "pagesInspectedIndividually": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    "renderSize": [1600, 900],
-    "title": "TouchMap",
-    "author": "DEFOZO SOFTWARE HOUSE / Michał Kiełtyka",
-    "uriAnnotationsAddedAfterOfficeExport": 2,
-    "all10FinalPdfRendersByteIdenticalAfterUriAnnotations": true
+    "renderSize": [
+      1600,
+      900
+    ],
+    "pitchV1PagesInspectedIndividually": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "pitchV2ChangedPagesInspectedIndividually": [
+      1,
+      4
+    ],
+    "unchangedPitchV2PagesByteIdenticalToReviewedPitchV1": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "uriAnnotationsAddedAfterOfficeExport": 2
   },
+  "renderHashes": {
+    "1": {
+      "pptx": {
+        "sha256": "2292df3bd4b69ca97a9904393ab32cd67dd107f246c366f576db4e57b1c6a12f",
+        "unchangedFromPitchV1": false
+      },
+      "pdf": {
+        "sha256": "f235310a81bb6daccb24df9fb46108e3cfed1b4b02a0d31013effd5291dd3fc3",
+        "unchangedFromPitchV1": false
+      }
+    },
+    "2": {
+      "pptx": {
+        "sha256": "4068e97fa817b65f3367190e957a7a80cd82292c06f7fc54bbf25c8189f73371",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "f0f2e9345d0d61d18756fb8f596a78e1e163f08b6a2798367b549c89a0e89114",
+        "unchangedFromPitchV1": true
+      }
+    },
+    "3": {
+      "pptx": {
+        "sha256": "f4430f81a0838cc66df763662e6de2e8e43de0e549342d36b32064105c27b9c3",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "9238223c813a02af890d975bacbe1b08b15143febad977e39d6ed450504d24c4",
+        "unchangedFromPitchV1": true
+      }
+    },
+    "4": {
+      "pptx": {
+        "sha256": "52736f67f337c99f99b4bfbfe5c062dcd7d1579dd8e4e370c902f76da0e14abe",
+        "unchangedFromPitchV1": false
+      },
+      "pdf": {
+        "sha256": "abb8d10e00704f5c67e68769361896e3008eab7935d421b5b9960412615fd7d0",
+        "unchangedFromPitchV1": false
+      }
+    },
+    "5": {
+      "pptx": {
+        "sha256": "7cf2fa8851d437c8b2201f512ef9d37cb266ad1f58621898374324b5c05f73b2",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "e346fe5bb669ca897952c20a2a48cfa814f7343600d228357b7f78e17e6a9748",
+        "unchangedFromPitchV1": true
+      }
+    },
+    "6": {
+      "pptx": {
+        "sha256": "872d01e4c97dc85a46248d6f7255d40095ac81831202a753a5ae0f7564f5f1c6",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "4f55cd981dc438d004f0715808107762062a7d0fa8db7d0bb2cb71d16569bbbb",
+        "unchangedFromPitchV1": true
+      }
+    },
+    "7": {
+      "pptx": {
+        "sha256": "5806b846058f1a7c6e74ae8fe775868c14d0bf15a1ed135cc343136fa8ab170f",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "c3c04832ab00c0837b8e164d9d0380a69c27cec74023417fa4e7218859d1b24f",
+        "unchangedFromPitchV1": true
+      }
+    },
+    "8": {
+      "pptx": {
+        "sha256": "52b1b73cfed322425363eb8795f7b9c4c6fd4dc51dbf51e450c94348eb610e06",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "d7c83d0db45ff84c4f308c78666518b0c7f7a70c29e4730eda554be69eb76e4d",
+        "unchangedFromPitchV1": true
+      }
+    },
+    "9": {
+      "pptx": {
+        "sha256": "046306b54cec0864dd23f57034ee4558c5df7b9787a32ea15c2a6cd0b5231dfc",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "7e8611b8960ce2097467e35f0d7a818b95c0fc043fb815d406c4d79127e3a23c",
+        "unchangedFromPitchV1": true
+      }
+    },
+    "10": {
+      "pptx": {
+        "sha256": "3aed2b95c345c1a3043a6b126cdced816000a8e67a2b8a6a3be7a6758f0ee023",
+        "unchangedFromPitchV1": true
+      },
+      "pdf": {
+        "sha256": "37eaf296f9d3401aa337ef18fcf968d0d1ded26e78ba76ce5e0b47a200e67877",
+        "unchangedFromPitchV1": true
+      }
+    }
+  },
+  "contentChecks": [
+    "Team and sole human member match TEAM.json.",
+    "All visible pitch text and speaker scripts are English.",
+    "The presentation describes implemented capabilities without invented adoption or measured learning outcomes.",
+    "The four sample activities match their bundled diagram.json files. The tutorial has audio but no lesson questions.",
+    "Publication review and matching local recordings for Ready offline remain distinct.",
+    "The Library cover uses actual HAP 1cae6f5da819 from source 943a5d8, with its exact capture provenance.",
+    "Historical learner and authoring captures retain their original pixels and session identity.",
+    "Detailed measurements and remaining evaluation are retained in technical documentation, not the visible pitch.",
+    "The final-page repository and v1.0.1 release hyperlinks are active PDF annotations."
+  ],
   "resolvedFindings": [
-    "Replaced the historical stale-guide exploration image with a later corrected native Canvas capture.",
-    "Used the installed final HAP1209 Library capture on the cover.",
-    "Replaced missing document paths and private planning references with existing public sources.",
-    "Set explicit bright mint hyperlink theme colors and inspected their PowerPoint and PDF renders.",
-    "Separated reviewed publication from complete audio and offline readiness.",
-    "Set the document author and title to the confirmed team and TouchMap.",
-    "Added two PDF URI annotations after Office SaveAs omitted hyperlinks, preserving every rendered pixel."
+    "Replaced the technical-report narrative with concrete learner and teacher workflows.",
+    "Replaced the author reviewer-field screenshot with the actual published lesson.",
+    "Replaced the accessibility gap-list slide with the enlarged answer flow.",
+    "Replaced the initial Library screenshot with the revised native product copy."
   ],
   "blockingFindings": [],
+  "previousPublishedArtifacts": {
+    "pdf": "3ebb7bcadba5c4bf8db25e8e55d738b26f2ef37e797b76eb3945a542848476ff",
+    "pptx": "47f25474c51908be99c4759ada8719b353a8e5021cfe026783d7dc978ffe88cf"
+  },
   "retainedLimits": [
-    "Other screenshots retain their earlier native-session provenance and do not imply all flows ran on the final HAP.",
-    "Audio timing ends at an accepted PCM write, not physical speaker output.",
-    "Restore timing ends at active-app layout and draw, with 100 observations across explicit 92 + 8 batches.",
-    "Genuine reader use, physical vibration and representative-user research remain unverified.",
-    "External release publication and anonymous access checks are separate from this deck review."
+    "Native screenshots come from separate recorded emulator sessions.",
+    "A visual review does not establish screen-reader compatibility or participant outcomes.",
+    "Anonymous public delivery is checked separately."
   ]
 }

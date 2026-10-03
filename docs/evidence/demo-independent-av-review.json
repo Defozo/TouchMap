@@ -1,0 +1,168 @@
+{
+  "recordedAtUtc": "2026-10-03T21:21:02.699586+00:00",
+  "reviewer": "Independent Gemini3.8Flash audiovisual perception request",
+  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+  "request": {
+    "recordedAtUtc": "2026-10-03T21:20:40.396540+00:00",
+    "model": "gemini-3.8-flash",
+    "purpose": "Independent audiovisual perception of the user-authorized publication candidate",
+    "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
+    "videoBytes": 6105126,
+    "prompt": "Review the supplied complete 180-second English product demonstration as an independent first-time viewer. Inspect the actual video and listen to its actual sound, including the ending. The task is a concrete, energetic sales demonstration with clear narration, quiet background music, preserved original app audio, legible text and visible real product interactions. It must not invent a deployment, users, measured learning benefits or successful actions that the video does not show. A concise native emulator label is sufficient context. Do not require a technical limitation list in this pitch.\nUse consecutive30-second intervals to report what you can actually see AND hear, with short exact visible/spoken anchors and approximate timestamps. Check whether narration aligns with the corresponding actions, whether text fits and remains legible, whether scene cuts conceal a failed action or imply a false continuation, and whether the ending leaves complete words and a natural music fade. Notice any audio masking, clipped words, distracting music or dead time. Distinguish an actual defect from an optional creative preference. Do not infer access to code, prior reviews, or physical-hardware verification. Do not treat model video sampling as inspection of every decoded frame or claim a human listener.\nReturn JSON with coverage (perceived modalities, duration, sampling limits), intervals (start,end,visualAnchor,spokenAnchor,observations), audioBalance, audioVisualAlignment, ending, factualPresentation, issues (severity,time,evidence,requiredFix), overall (pass/needs_fix/partial), and reviewerLimits. Judge the supplied media only. No other context or previous report is available.",
+    "input": "Complete inline MP4 with its audio; static video sampling at2fps",
+    "documentation": "https://ai.google.dev/gemini-api/docs/video-understanding",
+    "attempt": 1,
+    "automaticRetries": 0,
+    "historyProvided": false
+  },
+  "review": {
+    "coverage": {
+      "perceivedModalities": [
+        "video",
+        "spoken narration",
+        "background music",
+        "app synthetic speech audio"
+      ],
+      "duration": "180.0s",
+      "samplingLimits": "Reviewed continuous audio track and decoded frame sequence sampled across the entire 180.0-second video duration without access to source code or physical hardware testing."
+    },
+    "intervals": [
+      {
+        "start": "00:00",
+        "end": "00:30",
+        "visualAnchor": "TouchMap / Explore diagrams through touch and sound.",
+        "spokenAnchor": "Touch an object, hear its name, follow its connections.",
+        "observations": "Introductory splash card transitions to an Android emulator interface on the left accompanied by contextual summary cards on the right. The user imports 'water-cycle.touchmap' from the downloads directory, verifies author declarations, and loads the offline water cycle diagram."
+      },
+      {
+        "start": "00:30",
+        "end": "01:00",
+        "visualAnchor": "Touch an object. Hear its label.",
+        "spokenAnchor": "Evaporation",
+        "observations": "Narration pauses while original application audio plays speech feedback ('Evaporation' at ~00:35, 'Precipitation' at ~00:43) upon interacting with diagram elements. The demo then demonstrates directional navigation through the connections pane with incoming and outgoing relationships."
+      },
+      {
+        "start": "01:00",
+        "end": "01:30",
+        "visualAnchor": "Answer a question about the diagram",
+        "spokenAnchor": "Choose an answer and submit it.",
+        "observations": "Demonstrates quiz validation against diagram facts ('evaporation? Condensation' verified as correct). An uncompleted answer is chosen, the application is force-closed to the Android home screen, reopened, and resumed with unfinished state intact."
+      },
+      {
+        "start": "01:30",
+        "end": "02:00",
+        "visualAnchor": "Give authors a head start",
+        "spokenAnchor": "For educators, preparation starts with an image.",
+        "observations": "Author Studio workflow is showcased. Shows requesting a draft structure from Gemini (labeled 'Preparation wait omitted'), reviewing the draft side-by-side against the original raster diagram, and fine-tuning polygon geometry and semantic verification."
+      },
+      {
+        "start": "02:00",
+        "end": "02:30",
+        "visualAnchor": "Give every object a voice",
+        "spokenAnchor": "Add recorded speech or generate spoken labels.",
+        "observations": "Demonstrates speech label authoring (WAV import and TTS generation), reviewing and accepting package contents, followed by exporting the complete offline lesson package (.touchmap) ready for distribution."
+      },
+      {
+        "start": "02:30",
+        "end": "03:00",
+        "visualAnchor": "Try the lesson yourself",
+        "spokenAnchor": "The package carries the lesson, while learning history stays private.",
+        "observations": "Shows importing the package into a second instance where user progress remains private and local. Concludes with a clean call-to-action title screen showing github.com/Defozo/TouchMap. Narration finishes cleanly followed by a smooth audio fade-out."
+      }
+    ],
+    "audioBalance": "Narration is prominent, clear, and cleanly recorded. Ambient background music remains consistently low and non-intrusive. Original in-app audio feedback is clearly audible with narration pausing during sound cue playback to avoid masking.",
+    "audioVisualAlignment": "Demonstration actions synchronize precisely with spoken explanations across all feature segments. Appropriate transparent captions highlight condensed processing intervals ('Preparation wait omitted', 'Earlier authoring session').",
+    "ending": "Final spoken sentence concludes naturally at ~02:58 without word clipping, followed by a gentle musical decay fading out smoothly before the 03:00 timestamp.",
+    "factualPresentation": "The demonstration strictly portrays features shown in the emulator (importing, navigation, quiz validation, persistence across app restarts, AI drafting, geometry validation, audio recording, export/import). It makes no unsubstantiated claims regarding external deployments, institutional adoption, or clinical learning outcomes.",
+    "issues": [],
+    "overall": "pass",
+    "reviewerLimits": "Evaluation based entirely on video and audio playback analysis of the provided media file without external system instrumentation or hardware bench testing."
+  },
+  "usage": {
+    "total_tokens": 33020,
+    "total_input_tokens": 28580,
+    "input_tokens_by_modality": [
+      {
+        "modality": "video",
+        "tokens": 28260
+      },
+      {
+        "modality": "text",
+        "tokens": 320
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 1026,
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 3414,
+    "raw_prompt_token": 34551,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1431
+          },
+          {
+            "modality": "video",
+            "tokens": 28260
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1035
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 3414
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1431
+          },
+          {
+            "modality": "video",
+            "tokens": 28260
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1035
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 3414
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "Complete supplied media with2fps visual sampling and audio input. Automated perception, separate from root visual inspection, technical decoding and human user research.",
+  "verificationNotes": [
+    {
+      "claim": "Reviewer calls the captured system Android.",
+      "assessment": "Rejected. The captured application runs natively on Oniro/OpenHarmony. The visible emulator label and recorded build provenance take precedence."
+    },
+    {
+      "claim": "Reviewer claims Precipitation was audible around 00:43.",
+      "assessment": "Rejected. Separate full-audio perception and original-source checks verify Evaporation only in this interval. Visible selection does not prove a second audible label."
+    },
+    {
+      "claim": "Combined MP4 review proves continuous audio perception.",
+      "assessment": "Limited. The complete MP4 included audio, but provider usage reports only video input tokens. The separate audio-only request records 4500 audio input tokens and supplies the stronger acoustic evidence."
+    }
+  ],
+  "reviewerRole": "Fresh independent automated review; no previous report or conversation supplied."
+}

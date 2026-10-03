@@ -1,42 +1,36 @@
 {
-  "reviewer": "Codex delegated backend reviewer",
-  "videoSha256": "978f25a3d9087de07cd73eb9c7e30d2a0b977b6e7ca47b90495246b94d456cb1",
+  "recordedAtUtc": "2026-10-03T21:27:15.337950+00:00",
+  "reviewer": "Codex root reviewer, separate from video editor",
+  "videoSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
   "result": "acceptable_with_stated_review_scope",
   "blockingFindings": [],
   "reviewedVisuals": [
-    "contact-1.jpg through contact-5.jpg: all17 scene midpoint samples and captions",
-    "boundary-09-in.png and boundary-09-out.png: real request consent and draft-review state",
-    "boundary-11-in.png and boundary-11-out.png: earlier geometry/meaning review",
-    "boundary-12-out.png: earlier speech controls and actual playback completion status",
-    "scene-16.png: full-resolution measured-results and limits card"
+    "contact-1.jpg through contact-5.jpg: all 17 scene midpoint samples and captions",
+    "boundary-03-in.png and boundary-03-out.png: actual native interaction and retained application-audio passage",
+    "boundary-08-out.png: restored lesson state",
+    "boundary-16-out.png: full-resolution closing call to action"
   ],
   "reviewedDocuments": [
-    "docs/DEMO_SCRIPT.md",
-    "docs/evidence/demo-manifest.json",
     "docs/evidence/demo-qc.json",
-    "docs/evidence/installation-127.0.0.1_55555.json",
-    "docs/evidence/demo-audio-transcript.json"
+    "docs/evidence/demo-pitch-audio-review.json",
+    "docs/evidence/pitch-library-capture.json",
+    "docs/evidence/demo-independent-av-review.json"
   ],
   "observations": [
-    "Captions fit the rendered composition and are legible. Smaller build-provenance footers remain readable in full-resolution frames.",
-    "The new AI request and earlier review/publication are explicitly separated; the edit does not assert immediate publication of the new draft.",
-    "Second-installation transfer is labelled offline reimport, preserving existing acceptance and progress.",
-    "Team attribution correctly names DEFOZO SOFTWARE HOUSE and sole human member Michał Kiełtyka. Developer review is not attributed to him.",
-    "Final HAP opening and historical flow builds are identified separately.",
-    "Measured25ms refers to accepted PCM software onset. Genuine reader, physical vibration and representative-user studies remain unverified."
+    "Rendered captions fit and remain legible. Native interaction is visibly separated from explanatory panels.",
+    "The opening and closing identify TouchMap, DEFOZO SOFTWARE HOUSE and sole human member Michał Kiełtyka.",
+    "The new AI request and earlier authoring session are labelled, without implying immediate publication of the newly requested draft.",
+    "The opening uses the recorded current pitch capture; historical native flow captures retain their own provenance.",
+    "Separate actual-audio perception finds clear narration, quiet accompaniment, intact Evaporation playback and a complete ending.",
+    "The objective zero added stem in seconds 33-48 and source correlation take precedence over imprecise model observations.",
+    "The presentation makes no deployment, user-study or physical-device claim."
   ],
   "limits": [
-    "This independent review inspected saved rendered samples and factual evidence; it did not watch every frame continuously.",
-    "No independent perceptual listening claim is made. Audio-source correlation and complete decoding are technical checks reported by the separate demo verifier.",
-    "This file does not itself set the demo manifest reviewed flag or authorize external publication."
+    "Root inspected saved visual samples, not every frame continuously.",
+    "Fresh full-MP4 model review sampled video at 2 fps. Its mistaken OS and second spoken-label observations are rejected explicitly in the companion report.",
+    "Full actual-audio automated perception is recorded separately; no human listening or physical-device acoustics is inferred.",
+    "Strict decoding verifies all 4320 frames. It complements rather than replaces perceptual review."
   ],
-  "previousReviewedVideoSha256": "09cd2efa9656ae1f98c891d32311ee5b4d7fc9bf62fef91b15efeb0199b168fa",
-  "finalIntroReview": {
-    "result": "accepted",
-    "visual": "Updated full-resolution scene-00.png inspected; layout and team attribution fit and remain readable.",
-    "provenance": "Current manifest source scene0 and actual primary installation bind HAP1209c871 to committed source2642efe and fingerprinta3325237. Historical scene build labels remain separate.",
-    "audioScope": "Supporting ASR recognizes Evaporation only. Earlier expectation of two labels is retained as a non-passing diagnostic. The caption claims one actual selected recording and does not assert that Precipitation was heard. No independent perceptual listening claim by this reviewer.",
-    "continuity": "Remaining16 rendered scene cache identities are unchanged according to assembler verification; current manifest retains the previously reviewed scene/source identities. This follow-up reviewed only the changed intro and provenance, without re-decoding video.",
-    "recordedAtUtc": "2026-10-03T18:51:56.3724129Z"
-  }
+  "audioEvidence": "docs/evidence/demo-pitch-audio-review.json",
+  "independentAvEvidence": "docs/evidence/demo-independent-av-review.json"
 }

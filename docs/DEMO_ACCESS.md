@@ -1,24 +1,35 @@
-# Try TouchMap without a project account
+# Try TouchMap
 
-The [public release](https://github.com/Defozo/TouchMap/releases/tag/v1.0.0) provides the signed native application, English demonstration, presentation and complete source-and-evidence bundle. No GitHub login is required to download public release assets. Prepared lessons run offline without a TouchMap account, provider credential or preparation server.
+Hear each stage of the water cycle, follow where it leads, and pick up your lesson after a restart. The native demo includes four teaching materials and runs offline without a TouchMap account.
 
-- [Three-minute MP4 demonstration](https://github.com/Defozo/TouchMap/releases/download/v1.0.0/touchmap-demo.mp4)
-- [Presentation PDF](https://github.com/Defozo/TouchMap/releases/download/v1.0.0/touchmap-presentation.pdf)
-- [Editable presentation with speaker notes](https://github.com/Defozo/TouchMap/releases/download/v1.0.0/touchmap-presentation.pptx)
-- [Signed native HAP](https://github.com/Defozo/TouchMap/releases/download/v1.0.0/touchmap-signed.hap)
+- [Watch the three-minute demonstration](https://github.com/Defozo/TouchMap/releases/download/v1.0.1/touchmap-demo.mp4)
+- [Open the presentation](https://github.com/Defozo/TouchMap/releases/download/v1.0.1/touchmap-presentation.pdf)
+- [Download the signed application](https://github.com/Defozo/TouchMap/releases/download/v1.0.1/touchmap-signed.hap)
+- [Get the source, editable slides and complete release](https://github.com/Defozo/TouchMap/releases/tag/v1.0.1)
 
-The working interactive demonstration is the native application on the compatible OpenHarmony emulator. The MP4 records real emulator interaction. It is not an interactive browser version of the application.
+All downloads are public. The interactive demo runs on the OpenHarmony emulator; the video shows the native app in action.
 
-## Install the release HAP
+## Your first three minutes
 
-Use [platform setup](platform.md) for the pinned Oniro/OpenHarmony tooling, prerequisites and development-signing limits. A commercial HarmonyOS device has separate signing requirements and has not been verified here. On Windows with WSL2 Ubuntu and the stated prerequisites:
+Start in **Library**. On a fresh installation, complete the short three-shape tutorial. Open **The water cycle**, marked **READY OFFLINE**, read its author declaration, and choose **Accept this author declaration**.
+
+1. **Find a stage.** Choose **List**, then **2. Evaporation**. Replay its label and describe the object. You can also explore the same diagram through **Touch** or **Scan**.
+2. **Follow the relationship.** Open **Connections**. Find the outgoing connection **Vapour cools into droplets** and press its **Follow to destination** button. You arrive at **Condensation** with its explanation.
+3. **Test your understanding.** Open a lesson question, choose an answer and press **Submit selected answer**. Your result appears immediately. Choosing an option alone does not submit it.
+4. **Continue after an interruption.** Select an option in the next question without submitting. Close and reopen TouchMap, then reopen the same material and use **Resume**. Your completed answer and unfinished selection are retained.
+
+Next, try **Lumina** to explore an unfamiliar process, or the rainfall chart to compare values. Export a teaching package from Library and import it on another installation to share the lesson. Your private learning history stays on your device.
+
+## Run the native demo
+
+Follow the prerequisites in [platform setup](platform.md). With the documented Windows/WSL2 environment ready, download and install the signed release:
 
 ```powershell
-git clone --branch v1.0.0 --depth 1 https://github.com/Defozo/TouchMap.git
+git clone --branch v1.0.1 --depth 1 https://github.com/Defozo/TouchMap.git
 cd TouchMap
 ./scripts/setup-platform.ps1
 New-Item -ItemType Directory -Force dist
-Invoke-WebRequest -Uri https://github.com/Defozo/TouchMap/releases/download/v1.0.0/touchmap-signed.hap -OutFile dist/touchmap-signed.hap
+Invoke-WebRequest -Uri https://github.com/Defozo/TouchMap/releases/download/v1.0.1/touchmap-signed.hap -OutFile dist/touchmap-signed.hap
 $releaseMetadata = Get-Content docs/evidence/hap-metadata.json -Raw | ConvertFrom-Json
 if ((Get-FileHash dist/touchmap-signed.hap -Algorithm SHA256).Hash -ne $releaseMetadata.sha256) { throw 'Downloaded HAP does not match this release.' }
 ./scripts/start-emulator.ps1
@@ -27,16 +38,8 @@ if ((Get-FileHash dist/touchmap-signed.hap -Algorithm SHA256).Hash -ne $releaseM
 ./scripts/install.ps1 -Target 127.0.0.1:55555
 ```
 
-The released HAP SHA-256 is `1209c87125492cd145ea06a0480d84cc16b5e37c5f6f8fe34908f8e76609c4bd`. Its application-source fingerprint is recorded in [the HAP metadata](evidence/hap-metadata.json). The release-tag checkout supplies the matching application identity and metadata used by the install script; no local build or signing step is required. The script launches `org.touchmap.app` / `EntryAbility`. Building from source is a separate route documented in the README; an independent development signature can produce a different HAP hash from the same application sources.
+Connect a local VNC viewer to `127.0.0.1:5900` to control the emulator. Lesson audio plays through the host sound service. The install command launches TouchMap with the bundled materials ready to explore.
 
-The emulator wrapper runs headless. Open a VNC viewer on the same computer and connect to `127.0.0.1:5900` (VNC display `:0`) to see and control it. Under WSL2, this uses localhost forwarding. Audio is played by QEMU through the host sound service, such as WSLg PulseAudio; VNC supplies the display and input, not audio transport. Keep the emulator ports local to the development computer.
+Prepared lessons need no preparation server or provider credentials. To create your own material, follow [the authoring guide](../README.md#prepare-and-review-a-material). For runtime details and measured results, see [the test report](TEST_REPORT.md).
 
-## Walk through a lesson
-
-1. Open **The water cycle** in Library and read the material declaration. Accept it locally.
-2. Complete the three-shape tutorial, then explore objects using touch, List or Scan. Use Connections to follow **Vapour cools into droplets** from Evaporation to Condensation.
-3. Open a question, choose an option and explicitly press **Submit selected answer**.
-4. Select an answer to the next question without submitting. Close and reopen the application, then reopen the material. Resume retains both the submitted result and unfinished selection.
-5. Export the teaching package and import it into another installation. Local acceptance and private learning history do not travel with the teaching material.
-
-The tutorial, unfamiliar Lumina process and rainfall chart are also bundled. The chart preserves its unknown June value. Optional AI authoring requires a separately configured preparation service and explicit consent. The complete [test report](TEST_REPORT.md) identifies measured builds and remaining reader, physical-hardware and representative-study gaps.
+DEFOZO SOFTWARE HOUSE · Michał Kiełtyka

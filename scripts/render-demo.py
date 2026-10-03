@@ -116,16 +116,27 @@ def main():
         raise ValueError('The storyboard changed after its delegated approval record.')
     concat = stage / 'concat.txt'
     concat.write_text(''.join(f"file '{path.name}'\n" for path in outputs))
-    run(['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', str(concat),
-         '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', str(args.output.resolve())])
+    assembly = ['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', str(concat)]
+    audio = story.get('audio', {})
+    if audio.get('mixAsset'):
+        mix = (ROOT / audio['mixAsset']).resolve()
+        if not mix.is_relative_to(work) or not mix.is_file():
+            raise ValueError('The reviewed narration/music mix must exist under the video work directory.')
+        if hashlib.sha256(mix.read_bytes()).hexdigest() != audio.get('mixSha256'):
+            raise ValueError('The narration/music mix differs from the approved storyboard.')
+        assembly += ['-i', str(mix), '-filter_complex',
+                     '[0:a][1:a]amix=inputs=2:duration=first:normalize=0[a]',
+                     '-map', '0:v:0', '-map', '[a]']
+    assembly += ['-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', str(args.output.resolve())]
+    run(assembly)
     probe = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_format', '-show_streams', '-of', 'json', str(args.output)]))
     report = {'createdAt': datetime.now(timezone.utc).isoformat(), 'team': json.loads((ROOT / 'TEAM.json').read_text()),
               'videoSha256': hashlib.sha256(args.output.read_bytes()).hexdigest(),
               'durationSeconds': float(probe['format']['duration']), 'scenes': evidence,
               'storyboard': str(args.storyboard.resolve().relative_to(ROOT)), 'storyboardSha256': hashlib.sha256(args.storyboard.read_bytes()).hexdigest(),
-              'approval': story['approval'], 'sourceBuilds': story.get('sourceBuilds', {}),
+              'approval': story['approval'], 'sourceBuilds': story.get('sourceBuilds', {}), 'audio': audio,
               'expectedVideoFrames': round(sum(float(scene['duration']) for scene in story['scenes']) * 24),
-              'sourceCaptureLimits': 'Actual framebuffer captures may hold the last received frame between VNC updates. Authoring excerpts are explicitly condensed. Audio is isolated QEMU output with approximate UTC start alignment, not physical acoustic timing.',
+              'sourceCaptureLimits': 'Actual framebuffer captures may hold the last received frame between VNC updates. Authoring excerpts are condensed. Native application audio is isolated QEMU output with approximate UTC start alignment, not physical acoustic timing. Added narration and original instrumental music have separate provenance and whole-audio review.',
               'policy': 'Captions beside actual native recordings. Cuts and accelerated author excerpts are labelled. No fabricated UI state.',
               'reviewed': False}
     (ROOT / 'docs/evidence/demo-manifest.json').write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')

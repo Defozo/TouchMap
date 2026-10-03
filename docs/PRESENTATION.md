@@ -1,25 +1,25 @@
 # TouchMap presentation
 
-The English presentation contains 10 slides, an editable PowerPoint file and a PDF. Every slide has a speaker script and source references in its PowerPoint notes. The cover and document metadata identify **DEFOZO SOFTWARE HOUSE** and its sole human member, **Michał Kiełtyka**.
+The English pitch contains 10 slides, an editable PowerPoint file and a PDF. It shows how a learner explores a diagram, follows connections and returns to a saved lesson. Every slide has a speaker script and source references in its PowerPoint notes. The cover and document metadata identify **DEFOZO SOFTWARE HOUSE** and its sole human member, **Michał Kiełtyka**.
 
-Release outputs are `dist/touchmap-presentation.pdf` and `dist/touchmap-presentation.pptx`. Both fit the HackTribe 10 MB attachment limit. Their exact hashes and review decision are in [the presentation manifest](evidence/presentation-manifest.json). The public release destination is [TouchMap v1.0.0](https://github.com/Defozo/TouchMap/releases/tag/v1.0.0). External publication and anonymous access verification are separate from the local artifact review.
+Release outputs are `dist/touchmap-presentation.pdf` and `dist/touchmap-presentation.pptx`. Both fit the HackTribe 10 MB attachment limit. Their exact hashes and review decision are in [the presentation manifest](evidence/presentation-manifest.json). The release destination is [TouchMap v1.0.1](https://github.com/Defozo/TouchMap/releases/tag/v1.0.1). External publication and anonymous access verification are separate from the local artifact review.
 
 | Slide | Purpose |
 | --- | --- |
 | 1 | Product, intended use and team attribution |
-| 2 | Diagram relationships and the learning hypothesis |
+| 2 | A concrete question about connections in the water cycle |
 | 3 | Equivalent touch, list and scanning routes |
 | 4 | Explicit answers, context restoration and private history |
 | 5 | Source review, publication and separate offline readiness |
-| 6 | Local architecture and optional preparation service |
-| 7 | Native OpenHarmony integration and tested API boundary |
-| 8 | Measured developer verification, with timing definitions |
-| 9 | Accessibility evidence, remaining hardware checks and planned study |
+| 6 | Offline learning and optional online preparation |
+| 7 | Native interaction, audio, file sharing and storage |
+| 8 | The four bundled examples and their learning activities |
+| 9 | Larger controls, scanning pace and explained answers |
 | 10 | Source, release assets and installation instructions |
 
-The screenshots show real native application captures. The cover uses the installed HAP `1209c8712549…`. Other screenshots document the specific earlier sessions recorded in their evidence. They do not imply that every flow ran on the same HAP. The original water-cycle source remains unchanged. [Image provenance](evidence/presentation-sources.json) binds the exact embedded image bytes. [Speaker notes](evidence/presentation-notes.json) contain the complete narration and citations.
+The screenshots show real native application captures. The cover identifies the demonstration as a native OpenHarmony emulator session and uses [the revised Library capture](evidence/pitch-library-capture.json), from HAP `1cae6f5da819…` at source commit `943a5d8`. Other screenshots document the specific earlier sessions recorded in their evidence. They do not imply that every flow ran on the same HAP. The original water-cycle source remains unchanged. [Image provenance](evidence/presentation-sources.json) binds the exact embedded image bytes. [Speaker notes](evidence/presentation-notes.json) contain the complete narration and citations.
 
-Publication and Ready offline are distinct. The deck does not claim a completed study with blind or low-vision learners, a successful genuine-reader flow, physical vibration perception or physical speaker timing. The audio p95 ends at the first accepted PCM write. The restoration p95 ends at the active-app layout/draw boundary and includes 100 observations across explicitly reported batches of 92 and 8. Native tests run on the API 23 emulator, with API 20 as the build target and minimum.
+Publication and Ready offline are distinct. The deck describes implemented interaction and intended users without claiming a measured learning advantage or a completed participant study. Detailed measurements and remaining validation belong in [the test report](TEST_REPORT.md), [accessibility documentation](ACCESSIBILITY.md) and [study protocol](STUDY_PROTOCOL.md). Native tests run on the API 23 emulator, with API 20 as the build target and minimum.
 
 ## Editing and reproduction
 
@@ -31,4 +31,4 @@ Edit the PPTX directly in PowerPoint, or rebuild it from [the JavaScript generat
 
 ## Review
 
-The final PPTX opened successfully in Microsoft PowerPoint 16.0. All 10 exported slides were inspected individually at 1600 × 900. All 10 PDF pages were also rendered with Poppler and inspected individually. Metadata attribution and invisible PDF link annotations were the only changes after the final content review. All 10 PowerPoint PNGs remained byte-identical after the metadata change, and all 10 final PDF renders remained byte-identical after adding links. [Quality checks](evidence/presentation-qc.json), [visual review](evidence/presentation-review.json) and [independent review](evidence/presentation-independent-review.json) record the actual coverage. This does not claim a genuine screen-reader audit of the deck itself.
+The current [visual review](evidence/presentation-review.json) records the exact PDF and PPTX hashes, PowerPoint rendering and individual slide inspection. [Quality checks](evidence/presentation-qc.json) verify the file structure, notes, citations and live hyperlink annotations. The [independent review](evidence/presentation-independent-review.json) identifies its reviewed version explicitly. A review of an earlier version does not certify later bytes. This does not claim a genuine screen-reader audit of the deck itself.

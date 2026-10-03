@@ -3,11 +3,11 @@
 **Team: DEFOZO SOFTWARE HOUSE**  
 **Sole team member: Michał Kiełtyka**
 
-Explore a diagram through touch, spoken labels and accessible controls. Teachers prepare and review regions, relationships, chart facts and deterministic questions. Learners import a portable `.touchmap` package, explicitly accept the author's declaration, explore without an account, answer questions and resume their exact unfinished state offline.
+An arrow on a worksheet can explain a whole process. TouchMap makes that connection something a learner can explore: touch an object, hear its label, then follow the relationship to the next object.
 
-The product is a native ArkTS/ArkUI application for OpenHarmony API 20 or later. The Python preparation service and CLI are optional authoring tools. A browser or desktop preview is not the mobile deliverable.
+Teachers turn diagrams into portable lessons with reviewed labels, relationships and questions. Learners choose touch, a list or single-button scanning, practise at their own pace and pick up an unfinished answer after a restart. Prepared lessons work offline without an account.
 
-[Download the native application and demonstration](https://github.com/Defozo/TouchMap/releases/tag/v1.0.0), or follow the [account-free demo and installation walkthrough](docs/DEMO_ACCESS.md). The release includes an English PDF, editable PPTX with notes, and a three-minute recording of actual native interaction.
+[Watch the narrated demo and download TouchMap](https://github.com/Defozo/TouchMap/releases/tag/v1.0.1), or follow the [guided native demo](docs/DEMO_ACCESS.md). The release includes the signed application, an English presentation and an editable PPTX with speaker notes. TouchMap runs as a native ArkTS/ArkUI application on OpenHarmony, with API 20 as its declared minimum. The Python preparation service and CLI support optional authoring workflows.
 
 ## Start the native application
 

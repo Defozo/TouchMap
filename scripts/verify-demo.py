@@ -1,16 +1,19 @@
 """Verify exact video frames, audio provenance and every captioned scene of the candidate."""
 from pathlib import Path
-import json, subprocess, hashlib, math
+import argparse, json, subprocess, hashlib, math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / 'dist/_video_work'
-VIDEO = ROOT / 'dist/touchmap-demo.mp4'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--video', type=Path, default=ROOT / 'dist/touchmap-demo.mp4')
+args = parser.parse_args()
+VIDEO = args.video.resolve()
 manifest = json.loads((ROOT/'docs/evidence/demo-manifest.json').read_text(encoding='utf-8'))
 assert hashlib.sha256(VIDEO.read_bytes()).hexdigest() == manifest['videoSha256'], 'Video differs from its manifest.'
 assert hashlib.sha256((ROOT/manifest['storyboard']).read_bytes()).hexdigest() == manifest['storyboardSha256'], 'Storyboard differs from its manifest.'
-frames = WORK/'frames/final'
+frames = WORK/'frames'/VIDEO.stem
 frames.mkdir(parents=True,exist_ok=True)
 probe = json.loads(subprocess.check_output(['ffprobe','-v','error','-threads','1','-count_frames','-show_streams','-show_format','-of','json',str(VIDEO)]))
 video = next(item for item in probe['streams'] if item['codec_type']=='video')

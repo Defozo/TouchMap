@@ -1,0 +1,28 @@
+{
+  "checkedAtUtc": "2026-10-03T21:54:03.6712606Z",
+  "url": "http://127.0.0.1:8080/health/ready",
+  "httpStatus": 200,
+  "response": {
+    "status": "ready",
+    "contractVersion": 1,
+    "svg": true,
+    "aiConfigured": true,
+    "ttsConfigured": true,
+    "remote": false,
+    "providerInferenceVerified": false,
+    "models": {
+      "image": "gemini-3.8-flash",
+      "speech": "eleven_flash_v2_5"
+    },
+    "limits": {
+      "imageBytes": 10485760,
+      "imagePixels": 20000000,
+      "packageBytes": 52428800,
+      "expandedBytes": 209715200,
+      "regions": 500,
+      "relations": 2000,
+      "geometryPoints": 100000
+    }
+  },
+  "scope": "Fresh read-only check of the running local preparation service. Provider configuration is reported by the service; this request performs no inference and establishes no public network reachability."
+}
