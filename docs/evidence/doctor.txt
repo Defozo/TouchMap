@@ -1,0 +1,69 @@
+0.11.0
+v20.19.5
+openjdk version "17.0.20.1" 2026-08-18
+OpenJDK Runtime Environment (build 17.0.20.1+1-1-22.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-22.04-Ubuntu, mixed mode, sharing)
+[
+  {
+    "version": "6.1",
+    "api": "23",
+    "installed": false
+  },
+  {
+    "version": "6.0",
+    "api": "20",
+    "installed": true
+  },
+  {
+    "version": "5.1.1",
+    "api": "19",
+    "installed": false
+  },
+  {
+    "version": "5.1.0",
+    "api": "18",
+    "installed": false
+  },
+  {
+    "version": "5.0.3",
+    "api": "15",
+    "installed": false
+  },
+  {
+    "version": "5.0.2",
+    "api": "14",
+    "installed": false
+  },
+  {
+    "version": "5.0.1",
+    "api": "13",
+    "installed": false
+  },
+  {
+    "version": "5.0.0",
+    "api": "12",
+    "installed": false
+  },
+  {
+    "version": "4.1",
+    "api": "11",
+    "installed": false
+  },
+  {
+    "version": "4.0",
+    "api": "10",
+    "installed": false
+  }
+]
+{
+  "installed": true,
+  "status": "Installed (5.1.0.840)"
+}
+QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31)
+[
+  {
+    "serial": "127.0.0.1:55555",
+    "status": "Connected",
+    "connection": "TCP"
+  }
+]

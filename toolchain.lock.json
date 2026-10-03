@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-10-03",
+  "buildHost": {
+    "os": "Ubuntu 22.04 on Windows WSL2 x86_64",
+    "kernel": "5.15.153.1-microsoft-standard-WSL2",
+    "ide": null,
+    "ideReason": "Official Oniro command-line build route",
+    "node": "20.19.5",
+    "jdk": "OpenJDK 17.0.20.1+1-1~22.04",
+    "platformScriptPython": "3.10.12"
+  },
+  "native": {
+    "oniroApp": "0.11.0",
+    "commandLineTools": "5.1.0.840",
+    "commandLineToolsBundledNode": "18.20.1",
+    "hvigor": "5.18.5",
+    "ohpm": "5.1.3",
+    "hdc": "3.1.0e",
+    "sdk": "6.0.0.47",
+    "sdkReleaseType": "Beta1",
+    "compileApi": 20,
+    "targetApi": 20,
+    "minimumApi": 20,
+    "runtimeOS": "OpenHarmony",
+    "product": "openharmonyApi20"
+  },
+  "emulator": {
+    "release": "v6.1",
+    "url": "https://github.com/eclipse-oniro4openharmony/device_board_oniro/releases/download/v6.1/oniro_emulator.zip",
+    "archiveSha256": "a30e01f1b161e0fdcd91263f30f29cc92bfa49c1776d5ee2c46caefef055b2da",
+    "kernelSha256": "d475f2a399365a5dbe308e7ac693fea703a556c9213e1dc5580a64bb6650edf2",
+    "qemu": "6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31)",
+    "acceleration": "KVM",
+    "runtime": "OpenHarmony-6.1.0.31",
+    "runtimeReleaseType": "Release",
+    "runtimeApi": 23,
+    "resolution": "360x720",
+    "target": "127.0.0.1:55555",
+    "api20RuntimeTested": false
+  },
+  "verification": {
+    "platformBaselineSignedHapBuilt": true,
+    "platformBaselineSignatureVerified": true,
+    "platformBaselineInstalledAndLaunched": true,
+    "emulatorAudioRepair": "The pinned image needs card0 AudioPCI mapping and audio group access to controlC0. scripts/configure-emulator-audio.py applies/restores this development-image correction; ordinary app permissions are unchanged. See docs/evidence/emulator-audio-55555.json and emulator-audio-55556.json.",
+    "touchmapReleaseVerification": "The complete native application has been built, signed, installed and launched on both independently provisioned API 23 targets. Exact release hashes, native test results and workflow evidence are recorded in docs/evidence and TEST_REPORT.md.",
+    "screenReader": "No screen reader bundle found on this emulator; acceptance gate pending",
+    "physicalVibration": "Not tested on a physical device"
+  }
+}

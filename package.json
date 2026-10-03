@@ -3,6 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "description": "Host verification for pure modules used by the native OpenHarmony application",
-  "scripts": { "test": "tsx --test tests/domain.test.ts", "typecheck": "tsc --noEmit" },
+  "scripts": { "test": "tsx --test tests/*.test.ts", "typecheck": "tsc --noEmit" },
   "devDependencies": { "@types/node": "22.15.30", "tsx": "4.20.5", "typescript": "5.8.3" }
 }

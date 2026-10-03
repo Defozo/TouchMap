@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import io
 import json
+import math
 import os
 from pathlib import Path
 import shutil
@@ -17,9 +18,12 @@ import wave
 import zipfile
 from concurrent.futures import ThreadPoolExecutor
 from html import escape
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'backend'))
+from touchmap.svg import render_preview
 
 ROOT = Path(__file__).resolve().parents[1]
-VOICE = '21m00Tcm4TlvDq8ikWAM'  # Overridden by --voice after inspecting the account.
+VOICE = 'hpp4J3VqNfWAUOO0d1Us'  # Premade Bella, verified in the account catalogue.
 def sha(data): return hashlib.sha256(data).hexdigest()
 def encoded(obj): return (json.dumps(obj, indent=2, ensure_ascii=False) + '\n').encode()
 def review(): return dict(status='reviewed', revision=1, reviewer='TouchMap example author', issues=[])
@@ -63,7 +67,13 @@ def diagrams():
     rain=base('rainfall-chart','Reading a rainfall chart','A simple bar chart. The horizontal axis shows April, May and June. The vertical axis shows rainfall in millimetres on a linear scale from zero to sixty. April has twenty millimetres, May forty, and June is unknown.',regions,[],[
         question('q-more','Which recorded month has more rainfall?',['april-value','may-value'],[('april','April'),('may','May')],['may'],'May has 40 millimetres and April has 20 millimetres. June is unknown.','comparison'),
         question('q-value','How much rainfall was recorded in April?',['april-value'],[('20','20 millimetres'),('40','40 millimetres'),('unknown','Unknown')],['20'],'The source explicitly labels April as 20 millimetres.','value')],[chart])
-    return [water,lumina,rain]
+    tutorial=base('tutorial','Learn to explore','Explore three shapes. Move onto a shape and pause to hear its name. Use Next object or the list for the same action. Use Stop speech or Back at any time.',[
+        region('circle','Circle','A round shape on the left.',40,170,150,150,0),
+        region('square','Square','A four-sided shape in the centre.',245,170,150,150,1),
+        region('triangle','Triangle','A three-sided shape on the right.',450,170,150,150,2)],[],[])
+    tutorial['regions'][0]['polygons'][0]['outer']=[point(115+75*math.cos(i*math.tau/64),245+75*math.sin(i*math.tau/64)) for i in range(64)]
+    tutorial['regions'][2]['polygons'][0]['outer']=[point(525,170),point(600,320),point(450,320)]
+    return [water,lumina,rain,tutorial]
 
 def svg(d):
     parts=['<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440">',f'<title>{escape(d["title"])}</title>',f'<desc>{escape(d["description"])}</desc>','<rect width="640" height="440" fill="#f4f5ef"/>','<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#24544c"/></marker></defs>',f'<text x="32" y="35" font-size="23" fill="#183b34">{escape(d["title"])}</text>']
@@ -75,8 +85,9 @@ def svg(d):
     for r in d['relations']:
         points=' '.join(f'{p["x"]},{p["y"]}' for p in r['path']);parts.append(f'<polyline id="{r["id"]}" points="{points}" fill="none" stroke="#24544c" stroke-width="4" marker-end="url(#arrow)"><title>{escape(r["label"])}</title></polyline>')
     for r in d['regions']:
-        p=r['polygons'][0]['outer'];x,y=p[0]['x'],p[0]['y'];w=p[1]['x']-x;h=p[2]['y']-y
-        parts.append(f'<rect id="{r["id"]}" x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>{escape(r["label"])}</title><desc>{escape(r["description"])}</desc></rect>')
+        p=r['polygons'][0]['outer'];x,y=min(v['x'] for v in p),min(v['y'] for v in p);w=max(v['x'] for v in p)-x;h=max(v['y'] for v in p)-y
+        shape=' '.join(f'{v["x"]},{v["y"]}' for v in p)
+        parts.append(f'<polygon id="{r["id"]}" points="{shape}" fill="#d7e9c7" stroke="#24544c" stroke-width="2"><title>{escape(r["label"])}</title><desc>{escape(r["description"])}</desc></polygon>')
         if d['charts']:
             value=next(v for s in d['charts'][0]['series'] for v in s['values'] if v['regionId']==r['id'])
             parts.append(f'<text id="{value["id"]}" x="{x+w/2}" y="{y-12}" text-anchor="middle" font-size="19">{value["value"] if value["value"] is not None else "Unknown"}</text><text x="{x+w/2}" y="390" text-anchor="middle" font-size="18">{value["x"]}</text>')
@@ -111,8 +122,8 @@ def generate_audio(item,folder,args):
 
 def package(d,folder):
     (folder/'diagram.json').write_bytes(encoded(d))
-    paths=['diagram.json',d['source']['path']]+[a['path'] for a in d['audio']]
-    assets=[dict(path=p,sha256=sha((folder/p).read_bytes()),bytes=(folder/p).stat().st_size,mediaType='application/json' if p.endswith('.json') else 'image/svg+xml' if p.endswith('.svg') else 'audio/wav') for p in paths]
+    paths=['diagram.json',d['source']['path'],d['source']['previewPath']]+[a['path'] for a in d['audio']]
+    assets=[dict(path=p,sha256=sha((folder/p).read_bytes()),bytes=(folder/p).stat().st_size,mediaType='application/json' if p.endswith('.json') else 'image/svg+xml' if p.endswith('.svg') else 'image/png' if p.endswith('.png') else 'audio/wav') for p in paths]
     m=dict(schemaVersion=1,packageId=d['packageId'],revision=d['revision'],title=d['title'],language=d['language'],author=dict(name='TouchMap example author',declaration='Original illustration and explicitly authored facts. Reviewed against the source by the implementation team. This declaration is not independent accessibility certification.'),license='CC-BY-4.0; generated audio subject to ElevenLabs terms',assets=assets)
     (folder/'manifest.json').write_bytes(encoded(m))
     with zipfile.ZipFile(ROOT/'samples'/f'{d["packageId"]}.touchmap','w',zipfile.ZIP_DEFLATED) as archive:
@@ -142,6 +153,8 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--cloud-consent',action='store_true');parser.add_argument('--voice',default=VOICE);args=parser.parse_args();reports=[]
     for d in diagrams():
         folder=ROOT/'samples'/d['packageId'];folder.mkdir(parents=True,exist_ok=True);source=svg(d);(folder/'source.svg').write_bytes(source);d['source']['sha256']=sha(source)
+        preview=render_preview(source)
+        (folder/'source-preview.png').write_bytes(preview);d['source']['previewPath']='source-preview.png';d['source']['previewSha256']=sha(preview)
         with ThreadPoolExecutor(max_workers=2) as executor:d['audio']=[a for a in executor.map(lambda item:generate_audio(item,folder,args),texts(d)) if a]
         reports.append(package(d,folder))
     corpus();(ROOT/'docs').mkdir(exist_ok=True);(ROOT/'docs/sample-generation.json').write_bytes(encoded({'samples':reports,'provider':'ElevenLabs' if args.cloud_consent else 'existing audio only','model':'eleven_flash_v2_5','voice':args.voice,'contents':'Owned nonsensitive authored teaching text only; no user uploads.'}));print(json.dumps(reports))

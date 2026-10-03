@@ -32,12 +32,13 @@ export function applyAction(d: Diagram, p: Progress, a: Action): ActionResult {
     case 'describe': {const r=d.regions.find(r=>r.id===(target||state.lastRegionId));if(!r)throw new Error('Choose an object first');feedback=r.description||r.label;break;}
     case 'openQuestion': {
       const q=question(d,target);const issues=validateQuestion(d,q);if(!reviewed(q.review)||issues.length)throw new Error('This question requires review on the current material revision');
-      state.activeQuestionId=q.id;state.selectedAnswers=[];state.status='answering';feedback=q.prompt;break;
+      if (state.activeQuestionId !== q.id || state.status !== 'answering') state.selectedAnswers=[];
+      state.activeQuestionId=q.id;state.status='answering';feedback=q.prompt;break;
     }
     case 'selectAnswer': {
       const q=question(d,state.activeQuestionId);const answers=a.answerIds||[target];
-      if(!answers.length||new Set(answers).size!==answers.length||answers.some(id=>!q.options.some(o=>o.id===id)))throw new Error('Choose valid answer options');
-      state.selectedAnswers=answers.slice();state.status='answering';feedback='Answer selected. Submit when you are ready.';break;
+      if(new Set(answers).size!==answers.length||answers.some(id=>!q.options.some(o=>o.id===id)))throw new Error('Choose valid answer options');
+      state.selectedAnswers=answers.slice();state.status='answering';feedback=answers.length?'Answer selected. Submit when you are ready.':'Selection cleared. Choose an answer when ready.';break;
     }
     case 'submitAnswer': {
       const q=question(d,state.activeQuestionId);if(validateQuestion(d,q).length||!reviewed(q.review))throw new Error('Question no longer matches reviewed facts');
@@ -45,7 +46,7 @@ export function applyAction(d: Diagram, p: Progress, a: Action): ActionResult {
       correct=q.type==='sequence'?state.selectedAnswers.join('\0')===q.acceptedAnswers.join('\0'):state.selectedAnswers.slice().sort().join('\0')===q.acceptedAnswers.slice().sort().join('\0');
       state.submissions.push({questionId:q.id,answers:state.selectedAnswers.slice(),correct,eventId:a.eventId,timestamp:a.timestamp||Date.now()});state.status='submitted';feedback=`${correct?'Correct.':'Try exploring this relationship again.'} ${q.explanation}`;break;
     }
-    case 'pause':state.paused=true;feedback='Progress saved. Your unfinished answer has not been submitted.';break;
+    case 'pause':state.paused=true;feedback=state.status==='answering'?'Progress saved. Your unfinished answer has not been submitted.':'Progress saved.';break;
     case 'resume':state.paused=false;feedback=resumeContext(d,state);break;
     case 'back':state.activeRelationId='';feedback='Exploration stopped.';break;
     case 'viewport':if(!a.viewport||a.viewport.scale<0.1||a.viewport.scale>8||![a.viewport.scale,a.viewport.offsetX,a.viewport.offsetY,a.viewport.rotation].every(Number.isFinite))throw new Error('Invalid viewport');else state.viewport=a.viewport;feedback='View updated';break;

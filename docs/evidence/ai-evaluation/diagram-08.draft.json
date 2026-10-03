@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-c0b831ac0d16",
+  "revision": 1,
+  "title": "Block diagram of a sequential process involving Input 8, Gate 8, and Output 8",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "8f5118cae9706f490e31a9a95f6626b098896b235e2f484a71b83630f9ad9c60",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region_input_8",
+      "label": "Input 8",
+      "description": "Rectangular block labeled Input 8",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.72,
+              "y": 114.24
+            },
+            {
+              "x": 185.6,
+              "y": 114.24
+            },
+            {
+              "x": 185.6,
+              "y": 199.68
+            },
+            {
+              "x": 30.72,
+              "y": 199.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 8",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_gate_8",
+      "label": "Gate 8",
+      "description": "Rectangular block labeled Gate 8",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 114.56
+            },
+            {
+              "x": 390.4,
+              "y": 114.56
+            },
+            {
+              "x": 390.4,
+              "y": 199.04
+            },
+            {
+              "x": 235.52,
+              "y": 199.04
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 8",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_output_8",
+      "label": "Output 8",
+      "description": "Rectangular block labeled Output 8",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 114.88
+            },
+            {
+              "x": 595.2,
+              "y": 114.88
+            },
+            {
+              "x": 595.2,
+              "y": 199.04
+            },
+            {
+              "x": 440.32,
+              "y": 199.04
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 8",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_input_to_gate",
+      "fromId": "region_input_8",
+      "toId": "region_gate_8",
+      "label": "flows to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel_gate_to_output",
+      "fromId": "region_gate_8",
+      "toId": "region_output_8",
+      "label": "flows to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A three-block diagram showing a forward directional flow from Input 8 through Gate 8 to Output 8 connected by directional arrows."
+}

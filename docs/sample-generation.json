@@ -1,0 +1,32 @@
+{
+  "samples": [
+    {
+      "id": "water-cycle",
+      "audioAssets": 15,
+      "requiredAudio": 15,
+      "sourceHash": "111d60536b14d49285fafa57e66c8f80261c46fa26a5f170002df8732f50a0f3"
+    },
+    {
+      "id": "lumina-process",
+      "audioAssets": 17,
+      "requiredAudio": 17,
+      "sourceHash": "feee77284b819aabd42fa82404acadc5380dccf1d0614ae80d7ff7868084d525"
+    },
+    {
+      "id": "rainfall-chart",
+      "audioAssets": 9,
+      "requiredAudio": 9,
+      "sourceHash": "8d3d9cb36f17f43e5301477ffa9d4e7b7b71b5aca9ea7024a3b9dc7ef2ab3cb3"
+    },
+    {
+      "id": "tutorial",
+      "audioAssets": 7,
+      "requiredAudio": 7,
+      "sourceHash": "be3b06fe2953584672241e24880e62fe04acdaae943f94505749715acad2a271"
+    }
+  ],
+  "provider": "existing audio only",
+  "model": "eleven_flash_v2_5",
+  "voice": "hpp4J3VqNfWAUOO0d1Us",
+  "contents": "Owned nonsensitive authored teaching text only; no user uploads."
+}

@@ -1,0 +1,79 @@
+{
+  "id": "diagram-19",
+  "variant": "ambiguous-arrow",
+  "split": "held-out",
+  "model": "gemini-3.8-flash",
+  "schemaSuccess": true,
+  "usableDraft": true,
+  "labelRecall": 1.0,
+  "directionAccuracy": 1.0,
+  "regionCount": 3,
+  "relationCount": 2,
+  "unsupportedNumericFacts": false,
+  "report": {
+    "unsupported": [],
+    "unresolved": [
+      "The connecting lines between the blocks lack explicit arrowheads, so the exact causal flow direction is marked as unknown."
+    ]
+  },
+  "usage": {
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 193
+      },
+      {
+        "modality": "image",
+        "tokens": 1081
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_input_tokens": 1274,
+    "total_output_tokens": 553,
+    "total_thought_tokens": 0,
+    "total_tokens": 1827,
+    "total_tool_use_tokens": 0,
+    "raw_prompt_token": 3230,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1081
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 569
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1081
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 569
+          }
+        ]
+      }
+    ]
+  },
+  "durationMs": 4609
+}

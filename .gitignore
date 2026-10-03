@@ -20,5 +20,6 @@ local.properties
 signing-config.json
 .native-build-path
 .psst/
+.state/
 *.log
 *.sqlite*

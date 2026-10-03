@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-77eccac1a92a",
+  "revision": 1,
+  "title": "Block Diagram of Input 17, Gate 17, and Output 17",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "5c0f86027d107fe45999c9fee44a974b55398b78e462d59a2e17eaa019b44ade",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region-input-17",
+      "label": "Input 17",
+      "description": "Rectangular block labeled Input 17",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.72,
+              "y": 115.52
+            },
+            {
+              "x": 184.96,
+              "y": 115.52
+            },
+            {
+              "x": 184.96,
+              "y": 200.64
+            },
+            {
+              "x": 30.72,
+              "y": 200.64
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 17",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-gate-17",
+      "label": "Gate 17",
+      "description": "Rectangular block labeled Gate 17",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 115.52
+            },
+            {
+              "x": 390.4,
+              "y": 115.52
+            },
+            {
+              "x": 390.4,
+              "y": 200.64
+            },
+            {
+              "x": 235.52,
+              "y": 200.64
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 17",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-output-17",
+      "label": "Output 17",
+      "description": "Rectangular block labeled Output 17",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 115.52
+            },
+            {
+              "x": 595.2,
+              "y": 115.52
+            },
+            {
+              "x": 595.2,
+              "y": 200.64
+            },
+            {
+              "x": 440.32,
+              "y": 200.64
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 17",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel-input-to-gate",
+      "fromId": "region-input-17",
+      "toId": "region-gate-17",
+      "label": "flows to",
+      "type": "causal",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel-gate-to-output",
+      "fromId": "region-gate-17",
+      "toId": "region-output-17",
+      "label": "flows to",
+      "type": "causal",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A linear sequence of three rectangular blocks showing a flow from Input 17 to Gate 17 and then to Output 17 connected by rightward-pointing arrows."
+}

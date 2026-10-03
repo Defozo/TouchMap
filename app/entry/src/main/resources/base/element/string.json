@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Accessible diagrams and reviewed offline lessons"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Explore diagrams with touch, audio and accessible controls"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "TouchMap"
+    }
+  ]
+}

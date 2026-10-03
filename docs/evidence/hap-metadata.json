@@ -1,0 +1,10 @@
+{
+  "sha256": "ae7f46d80be15b123e65915eaef3553892098b0a4d19881c603e2c0aeb9b07bf",
+  "bytes": 8361198,
+  "bundleName": "org.touchmap.app",
+  "minAPIVersion": 20,
+  "targetAPIVersion": 20,
+  "apiReleaseType": "Beta1",
+  "module": "entry",
+  "signatureVerification": "hap-sign-tool verify-app must pass before this script runs; installation recorded separately"
+}

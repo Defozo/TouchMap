@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-ea55ad9be7af",
+  "revision": 1,
+  "title": "Block Diagram: Input 4, Gate 4, and Output 4",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "703cbbb4efba7db58a79f3a29a8d5b9d3b2f7a7afd15e598adcade98038cb821",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region_input_4",
+      "label": "Input 4",
+      "description": "Rectangular block representing Input 4 on the left",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 29.44,
+              "y": 100.48
+            },
+            {
+              "x": 185.6,
+              "y": 100.48
+            },
+            {
+              "x": 185.6,
+              "y": 183.68
+            },
+            {
+              "x": 29.44,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 4",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_gate_4",
+      "label": "Gate 4",
+      "description": "Rectangular block representing Gate 4 in the center",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 234.24,
+              "y": 100.48
+            },
+            {
+              "x": 391.04,
+              "y": 100.48
+            },
+            {
+              "x": 391.04,
+              "y": 183.68
+            },
+            {
+              "x": 234.24,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 4",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_output_4",
+      "label": "Output 4",
+      "description": "Rectangular block representing Output 4 on the right",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 439.68,
+              "y": 100.48
+            },
+            {
+              "x": 595.84,
+              "y": 100.48
+            },
+            {
+              "x": 595.84,
+              "y": 183.68
+            },
+            {
+              "x": 439.68,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 4",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_input4_to_gate4",
+      "fromId": "region_input_4",
+      "toId": "region_gate_4",
+      "label": "connected to",
+      "type": "connection",
+      "direction": "unknown",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Visual relation proposed by model",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel_gate4_to_output4",
+      "fromId": "region_gate_4",
+      "toId": "region_output_4",
+      "label": "connected to",
+      "type": "connection",
+      "direction": "unknown",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Visual relation proposed by model",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A schematic block diagram showing three rectangular blocks labeled 'Input 4', 'Gate 4', and 'Output 4' connected horizontally in series by straight line segments without explicit arrowheads."
+}

@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-6d8e0290452e",
+  "revision": 1,
+  "title": "Block diagram of Input 19, Gate 19, and Output 19",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "8ed49a31b2693c4e97c92aad3e2271fba86de8b28158aa1b16c6df7d153a5b8a",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region_input_19",
+      "label": "Input 19",
+      "description": "Rectangular box labeled Input 19 on the left",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.08,
+              "y": 100.16
+            },
+            {
+              "x": 185.6,
+              "y": 100.16
+            },
+            {
+              "x": 185.6,
+              "y": 183.68
+            },
+            {
+              "x": 30.08,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 19",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_gate_19",
+      "label": "Gate 19",
+      "description": "Rectangular box labeled Gate 19 in the center",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 100.16
+            },
+            {
+              "x": 390.4,
+              "y": 100.16
+            },
+            {
+              "x": 390.4,
+              "y": 184.0
+            },
+            {
+              "x": 235.52,
+              "y": 184.0
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 19",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_output_19",
+      "label": "Output 19",
+      "description": "Rectangular box labeled Output 19 on the right",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 100.16
+            },
+            {
+              "x": 595.2,
+              "y": 100.16
+            },
+            {
+              "x": 595.2,
+              "y": 184.0
+            },
+            {
+              "x": 440.32,
+              "y": 184.0
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 19",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_input_gate",
+      "fromId": "region_input_19",
+      "toId": "region_gate_19",
+      "label": "connection",
+      "type": "connection",
+      "direction": "unknown",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Visual relation proposed by model",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel_gate_output",
+      "fromId": "region_gate_19",
+      "toId": "region_output_19",
+      "label": "connection",
+      "type": "connection",
+      "direction": "unknown",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Visual relation proposed by model",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A horizontal sequence of three rectangular blocks labeled 'Input 19', 'Gate 19', and 'Output 19', connected by horizontal lines without visible arrowheads."
+}

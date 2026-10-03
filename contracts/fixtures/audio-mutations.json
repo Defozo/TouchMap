@@ -1,0 +1,9 @@
+[
+  {"name":"wrong RIFF signature","offset":0,"bytes":[82,73,70,88]},
+  {"name":"invalid PCM encoding","offset":20,"bytes":[3,0]},
+  {"name":"zero channels","offset":22,"bytes":[0,0]},
+  {"name":"zero sample rate","offset":24,"bytes":[0,0,0,0]},
+  {"name":"wrong byte rate","offset":28,"bytes":[1,0,0,0]},
+  {"name":"wrong block alignment","offset":32,"bytes":[7,0]},
+  {"name":"unsupported sample size","offset":34,"bytes":[12,0]}
+]

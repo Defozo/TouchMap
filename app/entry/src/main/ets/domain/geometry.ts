@@ -41,11 +41,13 @@ export class SpatialGrid {
   constructor(private diagram: Diagram, private cellSize: number = 64) {
     for (const region of diagram.regions) {
       const points: Point[] = region.line.slice();
-      region.polygons.forEach(p => points.push(...p.outer));
+      region.polygons.forEach(p => p.outer.forEach(point => points.push(point)));
       if (!points.length) continue;
       const pad = region.line.length ? region.lineWidth / 2 : 0;
-      const minX = Math.floor((Math.min(...points.map(p => p.x)) - pad) / cellSize), maxX = Math.floor((Math.max(...points.map(p => p.x)) + pad) / cellSize);
-      const minY = Math.floor((Math.min(...points.map(p => p.y)) - pad) / cellSize), maxY = Math.floor((Math.max(...points.map(p => p.y)) + pad) / cellSize);
+      let lowX=Infinity,highX=-Infinity,lowY=Infinity,highY=-Infinity;
+      for(const point of points){lowX=Math.min(lowX,point.x);highX=Math.max(highX,point.x);lowY=Math.min(lowY,point.y);highY=Math.max(highY,point.y);}
+      const minX = Math.floor((lowX - pad) / cellSize), maxX = Math.floor((highX + pad) / cellSize);
+      const minY = Math.floor((lowY - pad) / cellSize), maxY = Math.floor((highY + pad) / cellSize);
       if ((maxX - minX + 1) * (maxY - minY + 1) > 200000) throw new Error('Geometry exceeds grid budget');
       for (let x = minX; x <= maxX; x++) for (let y = minY; y <= maxY; y++) {
         const key = `${x}:${y}`, items = this.cells.get(key) || [];

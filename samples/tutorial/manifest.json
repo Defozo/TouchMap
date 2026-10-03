@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "packageId": "tutorial",
+  "revision": 1,
+  "title": "Learn to explore",
+  "language": "en",
+  "author": {
+    "name": "TouchMap example author",
+    "declaration": "Original illustration and explicitly authored facts. Reviewed against the source by the implementation team. This declaration is not independent accessibility certification."
+  },
+  "license": "CC-BY-4.0; generated audio subject to ElevenLabs terms",
+  "assets": [
+    {
+      "path": "diagram.json",
+      "sha256": "604b77225ebc68cf5ec14b030d63f10b88ecfebdda0fd808001c2012823267aa",
+      "bytes": 13532,
+      "mediaType": "application/json"
+    },
+    {
+      "path": "source.svg",
+      "sha256": "be3b06fe2953584672241e24880e62fe04acdaae943f94505749715acad2a271",
+      "bytes": 3650,
+      "mediaType": "image/svg+xml"
+    },
+    {
+      "path": "source-preview.png",
+      "sha256": "431d36840134132c02317fa0919e5e62b3d1b835d33f35d4287e8f39639b01fa",
+      "bytes": 12004,
+      "mediaType": "image/png"
+    },
+    {
+      "path": "audio/tutorial-overview.wav",
+      "sha256": "66fd4c36025f99bb2565ddf7a81649ba5c9b00290f435efd4675a85c7ed5ffcb",
+      "bytes": 552864,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/circle-label.wav",
+      "sha256": "a7b466ee5b10fa8d8dd4a35382044f72f02d4beb55b50ccd30bbdb9a11a7a52e",
+      "bytes": 29022,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/circle-description.wav",
+      "sha256": "9b7ad6cca1f235daa1714cabec9161968ae2bb8b3f098e08110b0fa2308b6708",
+      "bytes": 80292,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/square-label.wav",
+      "sha256": "2a32955005cda2dc5a81abe5606d15fa079acd6d159aa1083585767affba74cf",
+      "bytes": 31252,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/square-description.wav",
+      "sha256": "ab1bad465984f3222a11a5e0e055917903d20a98d9e08fca740f3de65590e30c",
+      "bytes": 98126,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/triangle-label.wav",
+      "sha256": "708609eced1e34e48ac0a4840cb3eb7594b9eddfae805ff3ab76cbcdfc911d7a",
+      "bytes": 42398,
+      "mediaType": "audio/wav"
+    },
+    {
+      "path": "audio/triangle-description.wav",
+      "sha256": "6463f1a27c44fa5f18d1315e178e6feeb0b8fa99d06c5c1df2983e9b97014899",
+      "bytes": 95896,
+      "mediaType": "audio/wav"
+    }
+  ]
+}

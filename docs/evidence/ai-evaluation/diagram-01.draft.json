@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-4fba697b8383",
+  "revision": 1,
+  "title": "Block diagram of a single-input, single-output gate system",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "cd2e8daaf9cbbf7a8efe28ecdb131982c1a35fea2e91e61ad1373c8d01b6549b",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region-input-1",
+      "label": "Input 1",
+      "description": "First block on the left labeled Input 1",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.08,
+              "y": 100.16
+            },
+            {
+              "x": 185.6,
+              "y": 100.16
+            },
+            {
+              "x": 185.6,
+              "y": 183.68
+            },
+            {
+              "x": 30.08,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 1",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-gate-1",
+      "label": "Gate 1",
+      "description": "Middle block labeled Gate 1",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 100.16
+            },
+            {
+              "x": 391.04,
+              "y": 100.16
+            },
+            {
+              "x": 391.04,
+              "y": 183.68
+            },
+            {
+              "x": 235.52,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 1",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-output-1",
+      "label": "Output 1",
+      "description": "Rightmost block labeled Output 1",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 100.16
+            },
+            {
+              "x": 595.84,
+              "y": 100.16
+            },
+            {
+              "x": 595.84,
+              "y": 183.68
+            },
+            {
+              "x": 440.32,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 1",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel-input1-to-gate1",
+      "fromId": "region-input-1",
+      "toId": "region-gate-1",
+      "label": "flows to",
+      "type": "causal",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "->",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel-gate1-to-output1",
+      "fromId": "region-gate-1",
+      "toId": "region-output-1",
+      "label": "flows to",
+      "type": "causal",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "->",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A horizontal sequence of three rectangular blocks showing a flow from Input 1 through Gate 1 to Output 1 via directed arrows."
+}

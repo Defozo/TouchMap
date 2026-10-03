@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-e607355c1346",
+  "revision": 1,
+  "title": "Three-Stage Flow: Input 18 to Gate 18 to Output 18",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "2c0e295c8e831a79cda8c50a1a167c5cfeaa1b96fd0e101994a1e4a57441bc03",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region_input_18",
+      "label": "Input 18",
+      "description": "First block on the left containing the rotated text 'Input 18'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.72,
+              "y": 131.2
+            },
+            {
+              "x": 185.6,
+              "y": 131.2
+            },
+            {
+              "x": 185.6,
+              "y": 212.16
+            },
+            {
+              "x": 30.72,
+              "y": 212.16
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 18",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_gate_18",
+      "label": "Gate 18",
+      "description": "Middle block containing the rotated text 'Gate 18'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 131.2
+            },
+            {
+              "x": 391.04,
+              "y": 131.2
+            },
+            {
+              "x": 391.04,
+              "y": 212.16
+            },
+            {
+              "x": 235.52,
+              "y": 212.16
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 18",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_output_18",
+      "label": "Output 18",
+      "description": "Rightmost block containing the rotated text 'Output 18'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 131.2
+            },
+            {
+              "x": 595.2,
+              "y": 131.2
+            },
+            {
+              "x": 595.2,
+              "y": 212.16
+            },
+            {
+              "x": 440.32,
+              "y": 212.16
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 18",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_input_to_gate",
+      "fromId": "region_input_18",
+      "toId": "region_gate_18",
+      "label": "points to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "arrow pointing right from Input 18 to Gate 18",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel_gate_to_output",
+      "fromId": "region_gate_18",
+      "toId": "region_output_18",
+      "label": "points to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "arrow pointing right from Gate 18 to Output 18",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A horizontal sequence of three rectangular blocks connected by forward arrows, labeled 'Input 18', 'Gate 18', and 'Output 18'."
+}

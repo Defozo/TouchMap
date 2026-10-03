@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-375a7539ca08",
+  "revision": 1,
+  "title": "Three-Stage Process Flow: Input 6, Gate 6, Output 6",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "b8db9ce8bf6d745efb7676ca14292fa9815730259520f16e6bf390956491e824",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region-input-6",
+      "label": "Input 6",
+      "description": "Rectangular block representing Input 6",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.72,
+              "y": 130.56
+            },
+            {
+              "x": 186.88,
+              "y": 130.56
+            },
+            {
+              "x": 186.88,
+              "y": 215.68
+            },
+            {
+              "x": 30.72,
+              "y": 215.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 6",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-gate-6",
+      "label": "Gate 6",
+      "description": "Rectangular block representing Gate 6",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 130.56
+            },
+            {
+              "x": 391.04,
+              "y": 130.56
+            },
+            {
+              "x": 391.04,
+              "y": 215.68
+            },
+            {
+              "x": 235.52,
+              "y": 215.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 6",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-output-6",
+      "label": "Output 6",
+      "description": "Rectangular block representing Output 6",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 439.04,
+              "y": 130.56
+            },
+            {
+              "x": 595.2,
+              "y": 130.56
+            },
+            {
+              "x": 595.2,
+              "y": 215.68
+            },
+            {
+              "x": 439.04,
+              "y": 215.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 6",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel-input-to-gate",
+      "fromId": "region-input-6",
+      "toId": "region-gate-6",
+      "label": "flows to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel-gate-to-output",
+      "fromId": "region-gate-6",
+      "toId": "region-output-6",
+      "label": "flows to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A horizontal sequence of three rectangular blocks connected by forward-pointing arrows showing the progression from Input 6 through Gate 6 to Output 6."
+}

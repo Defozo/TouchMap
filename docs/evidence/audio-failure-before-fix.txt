@@ -1,0 +1,168 @@
+10-03 22:20:30.044  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.058  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230049080,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9220 us
+10-03 22:20:30.059  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.070  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.103  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230092992,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9870 us
+10-03 22:20:30.103  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.132  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.141  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230130335,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 10232 us
+10-03 22:20:30.142  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.167  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.179  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230164343,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 13096 us
+10-03 22:20:30.179  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.208  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230198726,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9273 us
+10-03 22:20:30.208  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.210  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.240  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230229943,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 7971 us
+10-03 22:20:30.240  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.250  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.260  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230250787,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9592 us
+10-03 22:20:30.260  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.270  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.270  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230263170,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 7019 us
+10-03 22:20:30.270  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.288  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230276801,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 11337 us
+10-03 22:20:30.289  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.296  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.315  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.323  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230312838,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 10294 us
+10-03 22:20:30.323  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.354  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230344048,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9650 us
+10-03 22:20:30.354  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.355  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.387  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230377960,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 7775 us
+10-03 22:20:30.387  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.388  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.409  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.419  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230409488,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9572 us
+10-03 22:20:30.419  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.430  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230424874,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 5649 us
+10-03 22:20:30.430  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.436  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.445  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230437437,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 6153 us
+10-03 22:20:30.445  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.453  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.462  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230454206,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8581 us
+10-03 22:20:30.462  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.470  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.482  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230471624,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 10322 us
+10-03 22:20:30.482  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.489  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.498  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230490877,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 7592 us
+10-03 22:20:30.498  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.505  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.516  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230506780,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8343 us
+10-03 22:20:30.517  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.527  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.540  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.547  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230534621,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 12307 us
+10-03 22:20:30.547  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.566  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230558036,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8026 us
+10-03 22:20:30.566  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.580  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.596  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.598  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230589499,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8742 us
+10-03 22:20:30.598  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.626  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230617715,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8045 us
+10-03 22:20:30.626  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.631  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.656  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230647180,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8598 us
+10-03 22:20:30.656  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.664  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.678  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230670098,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8217 us
+10-03 22:20:30.678  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.684  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.696  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230685728,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 10217 us
+10-03 22:20:30.696  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.701  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.713  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230706701,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 6934 us
+10-03 22:20:30.714  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.714  4395  5252 I C02805/InputKeyFlow: [|67]Ffrt PE:1027 1177
+10-03 22:20:30.718  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.727  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230718876,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 8513 us
+10-03 22:20:30.727  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.735  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.748  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230739696,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9050 us
+10-03 22:20:30.749  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.757  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.774  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230761427,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 13046 us
+10-03 22:20:30.774  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.783  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.795  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230786028,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9362 us
+10-03 22:20:30.796  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.796  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.797  4395  4395 I C02805/InputKeyFlow: [P:U:1188|648]recv
+10-03 22:20:30.797  4395  4395 I C04213/InputKeyFlow: input_transfer_station.cpp HandleInputEvent: eid:19,InputId:1188,wid:15,ac:4
+10-03 22:20:30.797  4395  4395 E C02d66/XPERF_SERVICE: [CheckClientValid]: Failed to get SystemAbility[XPERF_SA_ID].
+10-03 22:20:30.798  4395  4395 I C03934/AceUIEvent: [ressched_touch_optimizer.cpp(775)-(100000:100000:scope)] TpFlush end by up event
+10-03 22:20:30.798  4395  4395 I C0391e/AceGesture: [velocity_tracker.cpp(232)-(100000:100000:scope)] xAxis [20] x 0.955825 y 0.000000 [19] x 0.942895 y 0.000000 [18] x 0.933090 y 0.000000 [17] x 0.926621 y 0.000000 [16] x 0.915849 y 0.000000 [15] x 0.907017 y 0.000000 [14] x 0.900443 y 0.000000 [13] x 0.892635 y 0.000000 [12] x 0.886045 y 0.000000 [11] x 0.879571 y 0.000000 [10] x 0.872207 y 0.000000 [9] x 0.865271 y 0.000000 [8] x 0.856143 y 0.000000 [7] x 0.849075 y 0.000000 [6] x 0.842377 y 0.000000 [5] x 0.835615 y 0.000000 [4] x 0.825801 y 0.000000 [3] x 0.816851 y 0.000000 [2] x 0.792837 y 0.000000 [1] x 0.785872 y 0.000000
+10-03 22:20:30.798  4395  4395 I C0391e/AceGesture: [velocity_tracker.cpp(232)-(100000:100000:scope)] yAxis [20] x 0.955825 y -337.000000 [19] x 0.942895 y -333.000000 [18] x 0.933090 y -330.000000 [17] x 0.926621 y -326.000000 [16] x 0.915849 y -323.000000 [15] x 0.907017 y -319.000000 [14] x 0.900443 y -316.000000 [13] x 0.892635 y -312.000000 [12] x 0.886045 y -309.000000 [11] x 0.879571 y -305.000000 [10] x 0.872207 y -302.000000 [9] x 0.865271 y -298.000000 [8] x 0.856143 y -295.000000 [7] x 0.849075 y -291.000000 [6] x 0.842377 y -288.000000 [5] x 0.835615 y -284.000000 [4] x 0.825801 y -281.000000 [3] x 0.816851 y -277.000000 [2] x 0.792837 y -274.000000 [1] x 0.785872 y -270.000000
+10-03 22:20:30.798  4395  4395 I C0390b/AceScrollable: [scrollable.cpp(853)-(100000:100000:scope)] Scroll drag end, velocity is -336.154600 id:19, tag:Scroll, dragCnt:1
+10-03 22:20:30.798  4395  4395 I C0390b/AceScrollable: [scrollable_pattern.cpp(521)-(100000:100000:scope)] ScrollablePattern::SetUiDvsyncSwitch SetUiDvsyncSwitch true
+10-03 22:20:30.799  4395  4395 I C03919/AceInputTracking: [event_manager.cpp(2244)-(100000:100000:scope)] Consumed id:1188, last id:1187
+10-03 22:20:30.808  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.816  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230801341,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 14858 us
+10-03 22:20:30.816  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.845  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.845  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230832444,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 10661 us
+10-03 22:20:30.846  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.875  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.881  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230870604,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9797 us
+10-03 22:20:30.881  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.908  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230896792,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 11063 us
+10-03 22:20:30.908  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.931  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.964  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230948602,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 14411 us
+10-03 22:20:30.964  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:30.967  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:30.969  4395  4395 I C02d66/Hiview-PerfMonitor: ProcessJank: JankFrameMonitor::ProcessJank jank >= threshold
+10-03 22:20:30.970  4395  4395 I C02d06/XCollie: StartScrollProfile durationTime: 60 ms, sampleInterval: 50 isScroll: 1.
+10-03 22:20:30.971  4395  4808 E C02d06/XCollie: ThreadSampler initialize failed.
+10-03 22:20:30.971  4395  4808 I C02d06/XCollie: Detect sample stack task complete.
+10-03 22:20:31.004  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:31.004  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037230988730,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 14414 us
+10-03 22:20:31.005  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:31.039  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:31.061  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037231035905,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 24923 us
+10-03 22:20:31.061  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:31.066  4395  4395 I C02d66/Hiview-PerfMonitor: ProcessJank: JankFrameMonitor::ProcessJank jank >= threshold
+10-03 22:20:31.067  4395  4395 I C02d06/XCollie: StartScrollProfile durationTime: 54 ms, sampleInterval: 50 isScroll: 1.
+10-03 22:20:31.068  4395  4808 E C02d06/XCollie: ThreadSampler initialize failed.
+10-03 22:20:31.068  4395  4808 I C02d06/XCollie: Detect sample stack task complete.
+10-03 22:20:31.084  4395  4395 E C01707/CONCUR: [Interface] task 4395 belong to user 20010040 open qos node failed, errno = 2
+10-03 22:20:31.084  4395  4395 E C01707/CONCUR: [Interface] task 4395 belong to user 20010040 open qos node failed, errno = 2
+10-03 22:20:31.084  4395  4395 E C01707/CONCUR: [Interface] task 4395 belong to user 20010040 open qos node failed, errno = 2
+10-03 22:20:31.089  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:31.090  4395  4395 E C01707/CONCUR: [Interface] task 4395 belong to user 20010040 open qos node failed, errno = 2
+10-03 22:20:31.091  4395  4395 E C01707/CONCUR: [Interface] task 4395 belong to user 20010040 open qos node failed, errno = 2
+10-03 22:20:31.091  4395  4395 E C01707/CONCUR: [Interface] task 4395 belong to user 20010040 open qos node failed, errno = 2
+10-03 22:20:31.104  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037231096004,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 7244 us
+10-03 22:20:31.104  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:31.158  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037231145364,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 9977 us
+10-03 22:20:31.158  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:31.162  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:31.163  4395  4395 I C02d66/Hiview-PerfMonitor: ProcessJank: JankFrameMonitor::ProcessJank jank >= threshold
+10-03 22:20:31.168  4395  4395 I C0390b/AceScrollable: [scrollable_pattern.cpp(527)-(100000:100000:scope)] ScrollablePattern::SetUiDvsyncSwitch SetUiDvsyncSwitch false
+10-03 22:20:31.169  4395  4395 I C01706/ueaClient-FrameWindowMgr: fling end
+10-03 22:20:31.201  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:31.204  4395  4395 I C02b61/ImageSource: CreatePixelMap success, id:1791037231192417,dSize:(640,440),srcSize: (640,440),dHdr:1,sHdr:1,memType: 2,cost 10071 us
+10-03 22:20:31.204  4395  4395 E C02b61/PixelMap: set ashmem name failed
+10-03 22:20:33.221  4395  4395 I C01406/OHOS::RS: [RenderAnimation] Id: 18876381265940 SetExpectedFrameRateRange{0, 90, 15}
+10-03 22:20:33.338  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 2
+10-03 22:20:33.338  4395  4903 I C01d10/accessibility_napi: [napi_accessibility_system_ability_client.cpp(OnStateChanged:1885)]
+10-03 22:20:33.338  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:33.338  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 0
+10-03 22:20:33.338  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 1
+10-03 22:20:33.338  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 0
+10-03 22:20:33.339  4395  4395 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(RegisterElementOperator:392)]Register windowId[15] start
+10-03 22:20:33.354  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 1
+10-03 22:20:33.412  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:33.497  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:33.564  4395  4832 E C01406/OHOS::RS: QueryEglBufferAge: eglQuerySurface is failed
+10-03 22:20:35.394  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 2
+10-03 22:20:35.394  4395  4903 I C01d10/accessibility_napi: [napi_accessibility_system_ability_client.cpp(OnStateChanged:1885)]
+10-03 22:20:35.395  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 0
+10-03 22:20:35.395  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 1
+10-03 22:20:35.395  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 0
+10-03 22:20:35.395  4395  4395 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(DeregisterElementOperator:471)]Deregister windowId[15] start
+10-03 22:20:35.449  4395  4903 I C01d02/accessibility_asacfwk: [accessibility_system_ability_client_impl.cpp(NotifyStateChanged:709)]observers size is 1

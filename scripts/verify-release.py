@@ -1,0 +1,66 @@
+"""Validate release bytes and report declared evidence gates without inventing them."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+import zipfile
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'backend'))
+from touchmap.packages import validate_package
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--require-all-gates', action='store_true')
+    args = parser.parse_args()
+    required = ['README.md', 'ARCHITECTURE.md', 'AI_WORKFLOW.md', 'AI_INTEGRATION.md',
+                'THIRD_PARTY.md', 'LICENSE', 'TEAM.json', 'SUBMISSION.md', 'toolchain.lock.json',
+                'docs/TEST_REPORT.md', 'docs/PRIVACY.md', 'docs/ACCESSIBILITY.md',
+                'docs/platform.md', 'docs/backend.md', 'contracts/CONTRACT.md',
+                'contracts/diagram.schema.json', 'contracts/manifest.schema.json',
+                'app/oh-package-lock.json5', 'backend/uv.lock', 'package-lock.json']
+    failures = [f'Missing {p}' for p in required if not (ROOT / p).is_file()]
+    team = json.loads((ROOT / 'TEAM.json').read_text(encoding='utf-8'))
+    for name in ['README.md', 'SUBMISSION.md', 'LICENSE']:
+        content = (ROOT / name).read_text(encoding='utf-8')
+        if team['team_name'] not in content or any(member not in content for member in team['members']):
+            failures.append(f'Team attribution differs in {name}')
+    samples = []
+    for path in sorted((ROOT / 'samples').glob('*.touchmap')):
+        try:
+            manifest, diagram, report, assets = validate_package(path.read_bytes())
+            samples.append({'file': path.name, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'report': report})
+            if not report['publishable'] or not report['readyOffline']:
+                failures.append(f'{path.name} is not reviewed and ready offline')
+        except Exception as error:
+            failures.append(f'{path.name}: {error}')
+    hap = ROOT / 'dist/touchmap-signed.hap'
+    hap_info = None
+    if not hap.exists():
+        failures.append('Missing signed HAP')
+    else:
+        with zipfile.ZipFile(hap) as archive:
+            metadata = json.loads(archive.read('module.json'))
+        native = metadata['app']
+        hap_info = {'sha256': hashlib.sha256(hap.read_bytes()).hexdigest(), 'bytes': hap.stat().st_size,
+                    'bundleName': native['bundleName'], 'minimumApi': native['minAPIVersion'], 'targetApi': native['targetAPIVersion']}
+        if native['bundleName'] != 'org.touchmap.app' or int(native['minAPIVersion']) != 20:
+            failures.append('Unexpected HAP identity or minimum API')
+        saved = ROOT / 'docs/evidence/hap-metadata.json'
+        if not saved.exists() or json.loads(saved.read_text())['sha256'] != hap_info['sha256']:
+            failures.append('HAP does not match verification evidence')
+    gates_path = ROOT / 'docs/evidence/release-gates.json'
+    gates = json.loads(gates_path.read_text(encoding='utf-8')) if gates_path.exists() else {'evidenceManifest': {'status': 'pending'}}
+    outstanding = [key for key, value in gates.items() if value.get('status') != 'passed']
+    result = {'team': team, 'sourceCommit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+              'hap': hap_info, 'samples': samples, 'artifactFailures': failures, 'gates': gates,
+              'outstandingGates': outstanding, 'competitionSubmitted': False}
+    (ROOT / 'dist').mkdir(exist_ok=True)
+    (ROOT / 'dist/release-verification.json').write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    print(json.dumps({'artifactFailures': failures, 'outstandingGates': outstanding, 'sampleCount': len(samples)}, indent=2))
+    raise SystemExit(1 if failures or (args.require_all_gates and outstanding) else 0)
+
+if __name__ == '__main__':
+    main()

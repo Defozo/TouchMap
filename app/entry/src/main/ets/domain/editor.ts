@@ -1,4 +1,4 @@
-import { Chart, Diagram, Question, Region, Relation, Review } from './types';
+import { Chart, Diagram, Question, Region, Relation, Review, Source } from './types';
 import { publicationIssues } from './validate';
 function clone(d:Diagram):Diagram {return JSON.parse(JSON.stringify(d));}
 function pending(revision:number):Review{return {status:'needs_review',revision,reviewer:'',issues:[]};}
@@ -42,7 +42,13 @@ export class DraftEditor {
     const old=this.current.charts.find(c=>c.id===chart.id);const affected=[chart.id];if(old)old.series.forEach(s=>s.values.forEach(v=>affected.push(v.id)));chart.series.forEach(s=>s.values.forEach(v=>affected.push(v.id)));
     this.edit(d=>{const c:Chart=JSON.parse(JSON.stringify(chart));c.review=pending(d.revision);const i=d.charts.findIndex(x=>x.id===c.id);if(i<0)d.charts.push(c);else d.charts[i]=c;},affected);
   }
+  removeChart(id:string):void {
+    const chart=this.current.charts.find(c=>c.id===id);if(!chart)throw new Error('Chart not found');
+    const affected=[id];chart.series.forEach(s=>s.values.forEach(v=>affected.push(v.id)));
+    this.edit(d=>{d.charts=d.charts.filter(c=>c.id!==id);},affected);
+  }
   setTitle(title:string):void{this.edit(d=>{d.title=title;},[this.current.packageId]);}
+  setDescription(description:string):void{this.edit(d=>{d.description=description;},[this.current.packageId]);}
   markReviewed(id:string,kind:string,reviewer:string):void {
     if(!reviewer.trim())throw new Error('Reviewer declaration required');
     const next=clone(this.current),review:Review={status:'reviewed',revision:next.revision,reviewer:reviewer.trim(),issues:[]};
@@ -55,7 +61,10 @@ export class DraftEditor {
   replaceFromJob(result:Diagram,sourceHash:string,baseRevision:number):boolean {
     if(this.current.source.sha256!==sourceHash||this.current.revision!==baseRevision)return false;
     if(result.source.sha256!==sourceHash||result.packageId!==this.current.packageId)throw new Error('Preparation result identity mismatch');
-    this.edit(d=>{d.regions=result.regions;d.relations=result.relations;d.charts=result.charts;d.questions=[];d.audio=[];d.regions.forEach(r=>{r.geometryReview=pending(d.revision);r.meaningReview=pending(d.revision);});d.relations.forEach(r=>r.review=pending(d.revision));d.charts.forEach(c=>c.review=pending(d.revision));},[],true);return true;
+    if(result.source.width!==this.current.source.width||result.source.height!==this.current.source.height)throw new Error('Preparation result dimensions differ from the source');
+    const source=JSON.parse(JSON.stringify(this.current.source)) as Source;
+    if(result.source.previewPath&&result.source.previewSha256){source.previewPath=result.source.previewPath;source.previewSha256=result.source.previewSha256;}
+    this.edit(d=>{d.source=source;d.regions=result.regions;d.relations=result.relations;d.charts=result.charts;d.questions=[];d.audio=[];d.regions.forEach(r=>{r.geometryReview=pending(d.revision);r.meaningReview=pending(d.revision);});d.relations.forEach(r=>r.review=pending(d.revision));d.charts.forEach(c=>c.review=pending(d.revision));},[],true);return true;
   }
   undo():boolean{const previous=this.undoStack.pop();if(!previous)return false;this.redoStack.push(clone(this.current));this.current=previous;return true;}
   redo():boolean{const next=this.redoStack.pop();if(!next)return false;this.undoStack.push(clone(this.current));this.current=next;return true;}

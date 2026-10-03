@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-62143c4ee817",
+  "revision": 1,
+  "title": "Block diagram of a system with Input 13, Gate 13, and Output 13",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "93920d9b4f9c104aaf9f79d4f0bf084f3108049f65d991c44f4af85e12f8730c",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "box_input_13",
+      "label": "Input 13",
+      "description": "Rectangular block labeled 'Input 13'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.08,
+              "y": 100.16
+            },
+            {
+              "x": 186.88,
+              "y": 100.16
+            },
+            {
+              "x": 186.88,
+              "y": 183.68
+            },
+            {
+              "x": 30.08,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 13",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "box_gate_13",
+      "label": "Gate 13",
+      "description": "Rectangular block labeled 'Gate 13'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 100.16
+            },
+            {
+              "x": 391.04,
+              "y": 100.16
+            },
+            {
+              "x": 391.04,
+              "y": 183.36
+            },
+            {
+              "x": 235.52,
+              "y": 183.36
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 13",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "box_output_13",
+      "label": "Output 13",
+      "description": "Rectangular block labeled 'Output 13'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 100.16
+            },
+            {
+              "x": 595.84,
+              "y": 100.16
+            },
+            {
+              "x": 595.84,
+              "y": 183.68
+            },
+            {
+              "x": 440.32,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 13",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_input_to_gate",
+      "fromId": "box_input_13",
+      "toId": "box_gate_13",
+      "label": "flows to",
+      "type": "arrow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel_gate_to_output",
+      "fromId": "box_gate_13",
+      "toId": "box_output_13",
+      "label": "flows to",
+      "type": "arrow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A three-stage flow diagram showing 'Input 13' directed to 'Gate 13', which in turn directs to 'Output 13' via right-pointing horizontal arrows."
+}

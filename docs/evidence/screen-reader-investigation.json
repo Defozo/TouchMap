@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-03",
+  "runtime": "Oniro v6.1 / OpenHarmony 6.1.0.31, API 23, x86_64 QEMU",
+  "status": "not verified: no genuine spoken screen reader available on the tested image",
+  "runtimeEvidence": [
+    "emulator-installed-bundles.txt contains no screen reader bundle",
+    "accessibility-runtime.txt records touchGuide=0, gesture=0 and accessible=0 before the separate extension probe",
+    "Settings accessibility shortcut lists High contrast text, Mono audio and Invert color; no spoken reader",
+    "The installed development hover probe is not a screen reader and is excluded from reader acceptance evidence"
+  ],
+  "sourceInvestigation": [
+    {
+      "url": "https://github.com/openharmony/accessibility",
+      "finding": "Official repository describes accessibility application/framework/service layers. Recursive master tree contains only screen-reader state fuzz-test filenames matching screenreader; no screen reader application, HAP or application build profile was found."
+    },
+    {
+      "url": "https://github.com/eclipse-oniro4openharmony/device_board_oniro/releases/tag/v6.1",
+      "finding": "This is the actual pinned runtime image. No additional reader package was installed from an unverified third party."
+    },
+    {
+      "url": "https://github.com/openharmony/docs/blob/master/en/application-dev/reference/apis-accessibility-kit/js-apis-accessibility-config-sys.md",
+      "finding": "Accessibility configuration APIs are system APIs. TouchMap remains a normal application and does not elevate its signing privileges to force-enable a substitute reader."
+    }
+  ],
+  "requiredFollowup": "Run the full import, tutorial, hover, list, lesson and resume flow on a supported OpenHarmony/HarmonyOS device or image with a genuine English spoken reader. Check 200-percent text, gesture conflicts, focus order and audio coordination."
+}

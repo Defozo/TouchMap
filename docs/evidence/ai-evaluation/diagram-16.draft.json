@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-4d4979ed0325",
+  "revision": 1,
+  "title": "Block diagram of sequential process involving Input 16, Gate 16, and Output 16",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "479f526d3ac87bc1d45e75aead6ec062587002aad4d5b1aeb66e33df8b27b968",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region-input-16",
+      "label": "Input 16",
+      "description": "First rectangular block containing the text 'Input 16'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.08,
+              "y": 100.48
+            },
+            {
+              "x": 185.6,
+              "y": 100.48
+            },
+            {
+              "x": 185.6,
+              "y": 183.68
+            },
+            {
+              "x": 30.08,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 16",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-gate-16",
+      "label": "Gate 16",
+      "description": "Middle rectangular block containing the text 'Gate 16'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 100.48
+            },
+            {
+              "x": 390.4,
+              "y": 100.48
+            },
+            {
+              "x": 390.4,
+              "y": 183.68
+            },
+            {
+              "x": 235.52,
+              "y": 183.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 16",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region-output-16",
+      "label": "Output 16",
+      "description": "Third rectangular block containing the text 'Output 16'",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 100.48
+            },
+            {
+              "x": 595.84,
+              "y": 100.48
+            },
+            {
+              "x": 595.84,
+              "y": 184.32
+            },
+            {
+              "x": 440.32,
+              "y": 184.32
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 16",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel-input-to-gate",
+      "fromId": "region-input-16",
+      "toId": "region-gate-16",
+      "label": "flows to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel-gate-to-output",
+      "fromId": "region-gate-16",
+      "toId": "region-output-16",
+      "label": "flows to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A three-block linear diagram where 'Input 16' connects via a forward arrow to 'Gate 16', which connects via another forward arrow to 'Output 16'."
+}

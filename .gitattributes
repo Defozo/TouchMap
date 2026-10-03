@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.wav binary
+*.mp3 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.touchmap binary
+*.hap binary
+*.mp4 binary

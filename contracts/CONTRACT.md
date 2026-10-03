@@ -6,7 +6,7 @@ Authoritative implementation wire contract. Coordinates are source coordinates, 
 
 `Diagram = {schemaVersion:1, packageId:string, revision:number, title:string, language:string, source:Source, regions:Region[], relations:Relation[], charts:Chart[], questions:Question[], audio:Audio[], description:string}`.
 
-`Source = {id:string, sha256:string, width:number, height:number, path:string, attribution:string, license:string, viewBox:number[]}` (viewBox x,y,width,height).
+`Source = {id:string, sha256:string, width:number, height:number, path:string, attribution:string, license:string, viewBox:number[], previewPath?:string, previewSha256?:string}` (viewBox x,y,width,height). The optional preview fields occur together and identify a PNG rasterization of the source at exactly its declared dimensions. The original source remains the provenance/evidence reference. SVG preparation includes a PNG because the tested native SVG decoder omits text and markers. Both original and preview must pass manifest and source hashes; a preview is never reconstructed from proposed AI semantics.
 
 `Evidence = {sourceId:string, reference:string, origin:'source-derived'|'human-authored'|'AI-proposed'}`.
 

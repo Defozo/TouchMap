@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-b139f885d8c3",
+  "revision": 1,
+  "title": "Block diagram of sequential process",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "73c502310f697d36e7e14d523527c012d764b887f07e39709c2297584052865d",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region_input_12",
+      "label": "Input 12",
+      "description": "First block representing the input stage",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.72,
+              "y": 130.56
+            },
+            {
+              "x": 186.24,
+              "y": 130.56
+            },
+            {
+              "x": 186.24,
+              "y": 215.68
+            },
+            {
+              "x": 30.72,
+              "y": 215.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 12",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_gate_12",
+      "label": "Gate 12",
+      "description": "Middle block representing the gate/processing stage",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 130.56
+            },
+            {
+              "x": 390.4,
+              "y": 130.56
+            },
+            {
+              "x": 390.4,
+              "y": 215.68
+            },
+            {
+              "x": 235.52,
+              "y": 215.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 12",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_output_12",
+      "label": "Output 12",
+      "description": "Final block representing the output stage",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 130.56
+            },
+            {
+              "x": 595.2,
+              "y": 130.56
+            },
+            {
+              "x": 595.2,
+              "y": 215.68
+            },
+            {
+              "x": 440.32,
+              "y": 215.68
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 12",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_input_to_gate",
+      "fromId": "region_input_12",
+      "toId": "region_gate_12",
+      "label": "feeds into",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel_gate_to_output",
+      "fromId": "region_gate_12",
+      "toId": "region_output_12",
+      "label": "leads to",
+      "type": "flow",
+      "direction": "forward",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "\u2192",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A three-stage linear block diagram showing data or signal progression from Input 12, through Gate 12, to Output 12."
+}

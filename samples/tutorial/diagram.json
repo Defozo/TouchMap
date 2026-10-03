@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "packageId": "tutorial",
+  "revision": 1,
+  "title": "Learn to explore",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "be3b06fe2953584672241e24880e62fe04acdaae943f94505749715acad2a271",
+    "width": 640,
+    "height": 440,
+    "path": "source.svg",
+    "attribution": "Original TouchMap educational illustration, 2026",
+    "license": "CC-BY-4.0",
+    "viewBox": [
+      0,
+      0,
+      640,
+      440
+    ],
+    "previewPath": "source-preview.png",
+    "previewSha256": "431d36840134132c02317fa0919e5e62b3d1b835d33f35d4287e8f39639b01fa"
+  },
+  "regions": [
+    {
+      "id": "circle",
+      "label": "Circle",
+      "description": "A round shape on the left.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 190.0,
+              "y": 245.0
+            },
+            {
+              "x": 189.63885450041477,
+              "y": 252.35128552471704
+            },
+            {
+              "x": 188.5588960302423,
+              "y": 259.63177415120964
+            },
+            {
+              "x": 186.77052517991567,
+              "y": 266.7713507940847
+            },
+            {
+              "x": 184.29096493834652,
+              "y": 273.70125742738173
+            },
+            {
+              "x": 181.14409482612663,
+              "y": 280.35475526194983
+            },
+            {
+              "x": 177.3602209226909,
+              "y": 286.66776747647015
+            },
+            {
+              "x": 172.97578400220527,
+              "y": 292.5794963122734
+            },
+            {
+              "x": 168.03300858899107,
+              "y": 298.03300858899104
+            },
+            {
+              "x": 162.57949631227342,
+              "y": 302.9757840022053
+            },
+            {
+              "x": 156.66776747647017,
+              "y": 307.36022092269087
+            },
+            {
+              "x": 150.35475526194983,
+              "y": 311.1440948261266
+            },
+            {
+              "x": 143.70125742738173,
+              "y": 314.2909649383465
+            },
+            {
+              "x": 136.77135079408467,
+              "y": 316.7705251799157
+            },
+            {
+              "x": 129.6317741512096,
+              "y": 318.5588960302423
+            },
+            {
+              "x": 122.35128552471706,
+              "y": 319.63885450041477
+            },
+            {
+              "x": 115.0,
+              "y": 320.0
+            },
+            {
+              "x": 107.64871447528296,
+              "y": 319.63885450041477
+            },
+            {
+              "x": 100.36822584879039,
+              "y": 318.5588960302423
+            },
+            {
+              "x": 93.22864920591533,
+              "y": 316.7705251799157
+            },
+            {
+              "x": 86.29874257261827,
+              "y": 314.2909649383465
+            },
+            {
+              "x": 79.64524473805017,
+              "y": 311.14409482612666
+            },
+            {
+              "x": 73.33223252352985,
+              "y": 307.3602209226909
+            },
+            {
+              "x": 67.4205036877266,
+              "y": 302.9757840022053
+            },
+            {
+              "x": 61.96699141100894,
+              "y": 298.03300858899104
+            },
+            {
+              "x": 57.02421599779473,
+              "y": 292.5794963122734
+            },
+            {
+              "x": 52.6397790773091,
+              "y": 286.66776747647015
+            },
+            {
+              "x": 48.85590517387338,
+              "y": 280.35475526194983
+            },
+            {
+              "x": 45.709035061653495,
+              "y": 273.70125742738173
+            },
+            {
+              "x": 43.229474820084334,
+              "y": 266.7713507940847
+            },
+            {
+              "x": 41.44110396975772,
+              "y": 259.63177415120964
+            },
+            {
+              "x": 40.361145499585234,
+              "y": 252.35128552471707
+            },
+            {
+              "x": 40.0,
+              "y": 245.0
+            },
+            {
+              "x": 40.361145499585234,
+              "y": 237.64871447528296
+            },
+            {
+              "x": 41.44110396975772,
+              "y": 230.36822584879036
+            },
+            {
+              "x": 43.229474820084334,
+              "y": 223.22864920591533
+            },
+            {
+              "x": 45.70903506165348,
+              "y": 216.29874257261827
+            },
+            {
+              "x": 48.85590517387337,
+              "y": 209.64524473805017
+            },
+            {
+              "x": 52.63977907730909,
+              "y": 203.33223252352985
+            },
+            {
+              "x": 57.02421599779472,
+              "y": 197.4205036877266
+            },
+            {
+              "x": 61.96699141100893,
+              "y": 191.96699141100893
+            },
+            {
+              "x": 67.42050368772655,
+              "y": 187.02421599779476
+            },
+            {
+              "x": 73.33223252352984,
+              "y": 182.6397790773091
+            },
+            {
+              "x": 79.64524473805017,
+              "y": 178.8559051738734
+            },
+            {
+              "x": 86.29874257261822,
+              "y": 175.7090350616535
+            },
+            {
+              "x": 93.22864920591532,
+              "y": 173.22947482008433
+            },
+            {
+              "x": 100.36822584879035,
+              "y": 171.4411039697577
+            },
+            {
+              "x": 107.64871447528297,
+              "y": 170.36114549958523
+            },
+            {
+              "x": 114.99999999999999,
+              "y": 170.0
+            },
+            {
+              "x": 122.35128552471701,
+              "y": 170.36114549958523
+            },
+            {
+              "x": 129.6317741512096,
+              "y": 171.4411039697577
+            },
+            {
+              "x": 136.77135079408464,
+              "y": 173.22947482008433
+            },
+            {
+              "x": 143.70125742738176,
+              "y": 175.7090350616535
+            },
+            {
+              "x": 150.35475526194983,
+              "y": 178.85590517387337
+            },
+            {
+              "x": 156.66776747647015,
+              "y": 182.6397790773091
+            },
+            {
+              "x": 162.57949631227342,
+              "y": 187.02421599779473
+            },
+            {
+              "x": 168.03300858899104,
+              "y": 191.96699141100893
+            },
+            {
+              "x": 172.97578400220524,
+              "y": 197.42050368772655
+            },
+            {
+              "x": 177.3602209226909,
+              "y": 203.33223252352985
+            },
+            {
+              "x": 181.1440948261266,
+              "y": 209.64524473805017
+            },
+            {
+              "x": 184.2909649383465,
+              "y": 216.2987425726182
+            },
+            {
+              "x": 186.77052517991567,
+              "y": 223.2286492059153
+            },
+            {
+              "x": 188.5588960302423,
+              "y": 230.36822584879036
+            },
+            {
+              "x": 189.63885450041477,
+              "y": 237.64871447528296
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#circle",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "square",
+      "label": "Square",
+      "description": "A four-sided shape in the centre.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 245,
+              "y": 170
+            },
+            {
+              "x": 395,
+              "y": 170
+            },
+            {
+              "x": 395,
+              "y": 320
+            },
+            {
+              "x": 245,
+              "y": 320
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#square",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    },
+    {
+      "id": "triangle",
+      "label": "Triangle",
+      "description": "A three-sided shape on the right.",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 525,
+              "y": 170
+            },
+            {
+              "x": 600,
+              "y": 320
+            },
+            {
+              "x": 450,
+              "y": 320
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 0,
+      "zIndex": 1,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "#triangle",
+          "origin": "human-authored"
+        }
+      ],
+      "geometryReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      },
+      "meaningReview": {
+        "status": "reviewed",
+        "revision": 1,
+        "reviewer": "TouchMap example author",
+        "issues": []
+      }
+    }
+  ],
+  "relations": [],
+  "charts": [],
+  "questions": [],
+  "audio": [
+    {
+      "id": "audio-tutorial-overview",
+      "targetId": "tutorial",
+      "kind": "overview",
+      "path": "audio/tutorial-overview.wav",
+      "textHash": "718f5582740db11821840d00ad6b2c8c99722075f35234da7b93f1cdd4b7f2fc",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "66fd4c36025f99bb2565ddf7a81649ba5c9b00290f435efd4675a85c7ed5ffcb",
+      "durationMs": 11517
+    },
+    {
+      "id": "audio-circle-label",
+      "targetId": "circle",
+      "kind": "label",
+      "path": "audio/circle-label.wav",
+      "textHash": "b93d3bcecff5d7493a58a41ea44f7196a46295f6512ebc06940510676a666384",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "a7b466ee5b10fa8d8dd4a35382044f72f02d4beb55b50ccd30bbdb9a11a7a52e",
+      "durationMs": 604
+    },
+    {
+      "id": "audio-circle-description",
+      "targetId": "circle",
+      "kind": "description",
+      "path": "audio/circle-description.wav",
+      "textHash": "cad91d55bad052e27c909b05f1ce345c2de9d82fb3b7d90f9908d890d79293dd",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "9b7ad6cca1f235daa1714cabec9161968ae2bb8b3f098e08110b0fa2308b6708",
+      "durationMs": 1672
+    },
+    {
+      "id": "audio-square-label",
+      "targetId": "square",
+      "kind": "label",
+      "path": "audio/square-label.wav",
+      "textHash": "c11092bc0861591e9ce5d9a97e83d4fae3c6954a318977865fa85f5b3eeafda8",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "2a32955005cda2dc5a81abe5606d15fa079acd6d159aa1083585767affba74cf",
+      "durationMs": 650
+    },
+    {
+      "id": "audio-square-description",
+      "targetId": "square",
+      "kind": "description",
+      "path": "audio/square-description.wav",
+      "textHash": "eee02ac423f03c2d7fae2bfddf089a3ef3e42ab9035bdf0391dc585778a8b906",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "ab1bad465984f3222a11a5e0e055917903d20a98d9e08fca740f3de65590e30c",
+      "durationMs": 2043
+    },
+    {
+      "id": "audio-triangle-label",
+      "targetId": "triangle",
+      "kind": "label",
+      "path": "audio/triangle-label.wav",
+      "textHash": "a0252691b5dc54b1d67f9d35a120e8c49187f20f0735574a61713c6317df6f72",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "708609eced1e34e48ac0a4840cb3eb7594b9eddfae805ff3ab76cbcdfc911d7a",
+      "durationMs": 882
+    },
+    {
+      "id": "audio-triangle-description",
+      "targetId": "triangle",
+      "kind": "description",
+      "path": "audio/triangle-description.wav",
+      "textHash": "679acb6eb3fa8af546aeb4122fc1a6d96abca3a10868a35860602d2c205a5ff6",
+      "language": "en",
+      "provider": "ElevenLabs eleven_flash_v2_5",
+      "voice": "hpp4J3VqNfWAUOO0d1Us",
+      "sha256": "6463f1a27c44fa5f18d1315e178e6feeb0b8fa99d06c5c1df2983e9b97014899",
+      "durationMs": 1997
+    }
+  ],
+  "description": "Explore three shapes. Move onto a shape and pause to hear its name. Use Next object or the list for the same action. Use Stop speech or Back at any time."
+}

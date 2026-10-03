@@ -2,7 +2,7 @@ export interface Point { x: number; y: number }
 export interface Polygon { outer: Point[]; holes: Point[][] }
 export interface Evidence { sourceId: string; reference: string; origin: 'source-derived' | 'human-authored' | 'AI-proposed' }
 export interface Review { status: 'draft' | 'needs_review' | 'reviewed'; revision: number; reviewer: string; issues: string[] }
-export interface Source { id: string; sha256: string; width: number; height: number; path: string; attribution: string; license: string; viewBox: number[] }
+export interface Source { id: string; sha256: string; width: number; height: number; path: string; attribution: string; license: string; viewBox: number[]; previewPath?: string; previewSha256?: string }
 export interface Region { id: string; label: string; description: string; polygons: Polygon[]; line: Point[]; lineWidth: number; zIndex: number; readingOrder: number; evidence: Evidence[]; geometryReview: Review; meaningReview: Review }
 export interface Relation { id: string; fromId: string; toId: string; label: string; type: string; direction: 'forward' | 'both' | 'unknown'; path: Point[] | null; evidence: Evidence[]; review: Review }
 export interface Tick { value: number; label: string }

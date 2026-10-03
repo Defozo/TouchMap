@@ -1,0 +1,77 @@
+{
+  "id": "diagram-03",
+  "variant": "rotated-text",
+  "split": "development",
+  "model": "gemini-3.8-flash",
+  "schemaSuccess": true,
+  "usableDraft": true,
+  "labelRecall": 1.0,
+  "directionAccuracy": 1.0,
+  "regionCount": 3,
+  "relationCount": 2,
+  "unsupportedNumericFacts": false,
+  "report": {
+    "unsupported": [],
+    "unresolved": []
+  },
+  "usage": {
+    "input_tokens_by_modality": [
+      {
+        "modality": "image",
+        "tokens": 1081
+      },
+      {
+        "modality": "text",
+        "tokens": 193
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_input_tokens": 1274,
+    "total_output_tokens": 517,
+    "total_thought_tokens": 0,
+    "total_tokens": 1791,
+    "total_tool_use_tokens": 0,
+    "raw_prompt_token": 3230,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1081
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 533
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 2149
+          },
+          {
+            "modality": "image",
+            "tokens": 1081
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 533
+          }
+        ]
+      }
+    ]
+  },
+  "durationMs": 5984
+}

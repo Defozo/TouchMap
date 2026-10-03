@@ -1,0 +1,17 @@
+{
+  "device": "127.0.0.1:55555",
+  "action": "apply",
+  "cards": "0 [AudioPCI       ]: ENS1370 - Ensoniq AudioPCI\n                      Ensoniq AudioPCI ENS1370 at 0xc000, irq 21",
+  "mapping": {
+    "adapters": [
+      {
+        "name": "primary",
+        "cardId": 0,
+        "cardName": "AudioPCI"
+      }
+    ]
+  },
+  "controlNode": "crw-rw---- 1 system audio 116,   0 2026-10-03 19:57 /dev/snd/controlC0",
+  "scope": "Development emulator image configuration; no application privilege changes; audio services restarted, app not stopped.",
+  "restore": "python3 scripts/configure-emulator-audio.py --device 127.0.0.1:55555 restore"
+}

@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "packageId": "material-7bd084e2df2b",
+  "revision": 1,
+  "title": "Block diagram of Input 14, Gate 14, and Output 14",
+  "language": "en",
+  "source": {
+    "id": "source",
+    "sha256": "28bb86d0c5f67963bedee9e807f21895af5ee61538aad7451d87bfa2eb7c386d",
+    "width": 640.0,
+    "height": 320.0,
+    "path": "source/source.png",
+    "attribution": "Author must confirm source attribution",
+    "license": "Unspecified",
+    "viewBox": [
+      0.0,
+      0.0,
+      640.0,
+      320.0
+    ]
+  },
+  "regions": [
+    {
+      "id": "region_input_14",
+      "label": "Input 14",
+      "description": "Leftmost rectangular block labeled Input 14",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 30.72,
+              "y": 115.52
+            },
+            {
+              "x": 185.6,
+              "y": 115.52
+            },
+            {
+              "x": 185.6,
+              "y": 200.32
+            },
+            {
+              "x": 30.72,
+              "y": 200.32
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 0,
+      "readingOrder": 0,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Input 14",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_gate_14",
+      "label": "Gate 14",
+      "description": "Center rectangular block labeled Gate 14",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 235.52,
+              "y": 115.52
+            },
+            {
+              "x": 390.4,
+              "y": 115.52
+            },
+            {
+              "x": 390.4,
+              "y": 200.32
+            },
+            {
+              "x": 235.52,
+              "y": 200.32
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 1,
+      "readingOrder": 1,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Gate 14",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    },
+    {
+      "id": "region_output_14",
+      "label": "Output 14",
+      "description": "Rightmost rectangular block labeled Output 14",
+      "polygons": [
+        {
+          "outer": [
+            {
+              "x": 440.32,
+              "y": 115.52
+            },
+            {
+              "x": 595.2,
+              "y": 115.52
+            },
+            {
+              "x": 595.2,
+              "y": 200.32
+            },
+            {
+              "x": 440.32,
+              "y": 200.32
+            }
+          ],
+          "holes": []
+        }
+      ],
+      "line": [],
+      "lineWidth": 1.0,
+      "zIndex": 2,
+      "readingOrder": 2,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Output 14",
+          "origin": "AI-proposed"
+        }
+      ],
+      "geometryReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI bounding box requires geometry review"
+        ]
+      },
+      "meaningReview": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "AI text requires source review"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "rel_input_to_gate",
+      "fromId": "region_input_14",
+      "toId": "region_gate_14",
+      "label": "connected to",
+      "type": "connection",
+      "direction": "unknown",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Visual relation proposed by model",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    },
+    {
+      "id": "rel_gate_to_output",
+      "fromId": "region_gate_14",
+      "toId": "region_output_14",
+      "label": "connected to",
+      "type": "connection",
+      "direction": "unknown",
+      "path": null,
+      "evidence": [
+        {
+          "sourceId": "source",
+          "reference": "Visual relation proposed by model",
+          "origin": "AI-proposed"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "revision": 1,
+        "reviewer": "",
+        "issues": [
+          "Confirm relation endpoints and direction in source"
+        ]
+      }
+    }
+  ],
+  "charts": [],
+  "questions": [],
+  "audio": [],
+  "description": "A horizontal sequence of three interconnected rectangular blocks labeled Input 14, Gate 14, and Output 14 connected by un-arrowed horizontal line segments."
+}

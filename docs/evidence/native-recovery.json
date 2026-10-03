@@ -1,0 +1,1530 @@
+{
+  "status": "passed",
+  "device": "127.0.0.1:55556",
+  "forcedRestartsVerified": 100,
+  "scope": "Real process death after fsynced post-commit acknowledgements across save, unfinished answer, submit/idempotent replay and ZIP import; not mid-transaction fault injection.",
+  "nativeMetrics": {
+    "events": 100,
+    "clock": "Date.now milliseconds",
+    "hitTestP95Ms": 1,
+    "hitTestMaxMs": 2,
+    "progressReadP95Ms": 2,
+    "progressReadMaxMs": 13,
+    "scope": "Warm native hit tests and committed checkpoint reads; excludes cold launch, UI rendering and human tasks"
+  },
+  "records": [
+    {
+      "status": "committed",
+      "cycle": 0,
+      "phase": "save",
+      "verifiedPrevious": false,
+      "stateRevision": 2,
+      "submissions": 0,
+      "selected": [],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4433
+    },
+    {
+      "status": "committed",
+      "cycle": 1,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 5,
+      "submissions": 0,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4013
+    },
+    {
+      "status": "committed",
+      "cycle": 2,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 7,
+      "submissions": 1,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3954
+    },
+    {
+      "status": "committed",
+      "cycle": 3,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 7,
+      "submissions": 1,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "native-recovery-import-3@1",
+      "error": "",
+      "launchAndWorkMs": 4686
+    },
+    {
+      "status": "committed",
+      "cycle": 4,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 9,
+      "submissions": 1,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3486
+    },
+    {
+      "status": "committed",
+      "cycle": 5,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 12,
+      "submissions": 1,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4490
+    },
+    {
+      "status": "committed",
+      "cycle": 6,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 14,
+      "submissions": 2,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3158
+    },
+    {
+      "status": "committed",
+      "cycle": 7,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 14,
+      "submissions": 2,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "native-recovery-import-7@1",
+      "error": "",
+      "launchAndWorkMs": 4635
+    },
+    {
+      "status": "committed",
+      "cycle": 8,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 16,
+      "submissions": 2,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2913
+    },
+    {
+      "status": "committed",
+      "cycle": 9,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 19,
+      "submissions": 2,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 9020
+    },
+    {
+      "status": "committed",
+      "cycle": 10,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 21,
+      "submissions": 3,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 7038
+    },
+    {
+      "status": "committed",
+      "cycle": 11,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 21,
+      "submissions": 3,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "native-recovery-import-11@1",
+      "error": "",
+      "launchAndWorkMs": 7393
+    },
+    {
+      "status": "committed",
+      "cycle": 12,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 23,
+      "submissions": 3,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3372
+    },
+    {
+      "status": "committed",
+      "cycle": 13,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 26,
+      "submissions": 3,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3377
+    },
+    {
+      "status": "committed",
+      "cycle": 14,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 28,
+      "submissions": 4,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4876
+    },
+    {
+      "status": "committed",
+      "cycle": 15,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 28,
+      "submissions": 4,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "native-recovery-import-15@1",
+      "error": "",
+      "launchAndWorkMs": 3514
+    },
+    {
+      "status": "committed",
+      "cycle": 16,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 30,
+      "submissions": 4,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3664
+    },
+    {
+      "status": "committed",
+      "cycle": 17,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 33,
+      "submissions": 4,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3006
+    },
+    {
+      "status": "committed",
+      "cycle": 18,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 35,
+      "submissions": 5,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3432
+    },
+    {
+      "status": "committed",
+      "cycle": 19,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 35,
+      "submissions": 5,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "native-recovery-import-19@1",
+      "error": "",
+      "launchAndWorkMs": 3403
+    },
+    {
+      "status": "committed",
+      "cycle": 20,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 37,
+      "submissions": 5,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3064
+    },
+    {
+      "status": "committed",
+      "cycle": 21,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 40,
+      "submissions": 5,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 6810
+    },
+    {
+      "status": "committed",
+      "cycle": 22,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 42,
+      "submissions": 6,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 6049
+    },
+    {
+      "status": "committed",
+      "cycle": 23,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 42,
+      "submissions": 6,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "native-recovery-import-23@1",
+      "error": "",
+      "launchAndWorkMs": 3908
+    },
+    {
+      "status": "committed",
+      "cycle": 24,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 44,
+      "submissions": 6,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3496
+    },
+    {
+      "status": "committed",
+      "cycle": 25,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 47,
+      "submissions": 6,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2381
+    },
+    {
+      "status": "committed",
+      "cycle": 26,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 49,
+      "submissions": 7,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3595
+    },
+    {
+      "status": "committed",
+      "cycle": 27,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 49,
+      "submissions": 7,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "native-recovery-import-27@1",
+      "error": "",
+      "launchAndWorkMs": 5364
+    },
+    {
+      "status": "committed",
+      "cycle": 28,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 51,
+      "submissions": 7,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 7084
+    },
+    {
+      "status": "committed",
+      "cycle": 29,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 54,
+      "submissions": 7,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 6224
+    },
+    {
+      "status": "committed",
+      "cycle": 30,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 56,
+      "submissions": 8,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3282
+    },
+    {
+      "status": "committed",
+      "cycle": 31,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 56,
+      "submissions": 8,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "native-recovery-import-31@1",
+      "error": "",
+      "launchAndWorkMs": 3861
+    },
+    {
+      "status": "committed",
+      "cycle": 32,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 58,
+      "submissions": 8,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4325
+    },
+    {
+      "status": "committed",
+      "cycle": 33,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 61,
+      "submissions": 8,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2806
+    },
+    {
+      "status": "committed",
+      "cycle": 34,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 63,
+      "submissions": 9,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4311
+    },
+    {
+      "status": "committed",
+      "cycle": 35,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 63,
+      "submissions": 9,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "native-recovery-import-35@1",
+      "error": "",
+      "launchAndWorkMs": 4050
+    },
+    {
+      "status": "committed",
+      "cycle": 36,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 65,
+      "submissions": 9,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3770
+    },
+    {
+      "status": "committed",
+      "cycle": 37,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 68,
+      "submissions": 9,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3434
+    },
+    {
+      "status": "committed",
+      "cycle": 38,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 70,
+      "submissions": 10,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3615
+    },
+    {
+      "status": "committed",
+      "cycle": 39,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 70,
+      "submissions": 10,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "native-recovery-import-39@1",
+      "error": "",
+      "launchAndWorkMs": 3337
+    },
+    {
+      "status": "committed",
+      "cycle": 40,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 72,
+      "submissions": 10,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3880
+    },
+    {
+      "status": "committed",
+      "cycle": 41,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 75,
+      "submissions": 10,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 6157
+    },
+    {
+      "status": "committed",
+      "cycle": 42,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 77,
+      "submissions": 11,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 5545
+    },
+    {
+      "status": "committed",
+      "cycle": 43,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 77,
+      "submissions": 11,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "native-recovery-import-43@1",
+      "error": "",
+      "launchAndWorkMs": 7010
+    },
+    {
+      "status": "committed",
+      "cycle": 44,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 79,
+      "submissions": 11,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2972
+    },
+    {
+      "status": "committed",
+      "cycle": 45,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 82,
+      "submissions": 11,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 6155
+    },
+    {
+      "status": "committed",
+      "cycle": 46,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 84,
+      "submissions": 12,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3184
+    },
+    {
+      "status": "committed",
+      "cycle": 47,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 84,
+      "submissions": 12,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "native-recovery-import-47@1",
+      "error": "",
+      "launchAndWorkMs": 5575
+    },
+    {
+      "status": "committed",
+      "cycle": 48,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 86,
+      "submissions": 12,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3704
+    },
+    {
+      "status": "committed",
+      "cycle": 49,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 89,
+      "submissions": 12,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4276
+    },
+    {
+      "status": "committed",
+      "cycle": 50,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 91,
+      "submissions": 13,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 7472
+    },
+    {
+      "status": "committed",
+      "cycle": 51,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 91,
+      "submissions": 13,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "native-recovery-import-51@1",
+      "error": "",
+      "launchAndWorkMs": 4512
+    },
+    {
+      "status": "committed",
+      "cycle": 52,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 93,
+      "submissions": 13,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3452
+    },
+    {
+      "status": "committed",
+      "cycle": 53,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 96,
+      "submissions": 13,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2765
+    },
+    {
+      "status": "committed",
+      "cycle": 54,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 98,
+      "submissions": 14,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3050
+    },
+    {
+      "status": "committed",
+      "cycle": 55,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 98,
+      "submissions": 14,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "native-recovery-import-55@1",
+      "error": "",
+      "launchAndWorkMs": 3090
+    },
+    {
+      "status": "committed",
+      "cycle": 56,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 100,
+      "submissions": 14,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3722
+    },
+    {
+      "status": "committed",
+      "cycle": 57,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 103,
+      "submissions": 14,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4228
+    },
+    {
+      "status": "committed",
+      "cycle": 58,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 105,
+      "submissions": 15,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2798
+    },
+    {
+      "status": "committed",
+      "cycle": 59,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 105,
+      "submissions": 15,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "native-recovery-import-59@1",
+      "error": "",
+      "launchAndWorkMs": 3326
+    },
+    {
+      "status": "committed",
+      "cycle": 60,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 107,
+      "submissions": 15,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3268
+    },
+    {
+      "status": "committed",
+      "cycle": 61,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 110,
+      "submissions": 15,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3536
+    },
+    {
+      "status": "committed",
+      "cycle": 62,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 112,
+      "submissions": 16,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3742
+    },
+    {
+      "status": "committed",
+      "cycle": 63,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 112,
+      "submissions": 16,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "native-recovery-import-63@1",
+      "error": "",
+      "launchAndWorkMs": 3902
+    },
+    {
+      "status": "committed",
+      "cycle": 64,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 114,
+      "submissions": 16,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 5389
+    },
+    {
+      "status": "committed",
+      "cycle": 65,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 117,
+      "submissions": 16,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4468
+    },
+    {
+      "status": "committed",
+      "cycle": 66,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 119,
+      "submissions": 17,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2830
+    },
+    {
+      "status": "committed",
+      "cycle": 67,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 119,
+      "submissions": 17,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "native-recovery-import-67@1",
+      "error": "",
+      "launchAndWorkMs": 4518
+    },
+    {
+      "status": "committed",
+      "cycle": 68,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 121,
+      "submissions": 17,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4313
+    },
+    {
+      "status": "committed",
+      "cycle": 69,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 124,
+      "submissions": 17,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3786
+    },
+    {
+      "status": "committed",
+      "cycle": 70,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 126,
+      "submissions": 18,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3378
+    },
+    {
+      "status": "committed",
+      "cycle": 71,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 126,
+      "submissions": 18,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "native-recovery-import-71@1",
+      "error": "",
+      "launchAndWorkMs": 3775
+    },
+    {
+      "status": "committed",
+      "cycle": 72,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 128,
+      "submissions": 18,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3698
+    },
+    {
+      "status": "committed",
+      "cycle": 73,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 131,
+      "submissions": 18,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4405
+    },
+    {
+      "status": "committed",
+      "cycle": 74,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 133,
+      "submissions": 19,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2537
+    },
+    {
+      "status": "committed",
+      "cycle": 75,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 133,
+      "submissions": 19,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "native-recovery-import-75@1",
+      "error": "",
+      "launchAndWorkMs": 4007
+    },
+    {
+      "status": "committed",
+      "cycle": 76,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 135,
+      "submissions": 19,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2565
+    },
+    {
+      "status": "committed",
+      "cycle": 77,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 138,
+      "submissions": 19,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3605
+    },
+    {
+      "status": "committed",
+      "cycle": 78,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 140,
+      "submissions": 20,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2613
+    },
+    {
+      "status": "committed",
+      "cycle": 79,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 140,
+      "submissions": 20,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "native-recovery-import-79@1",
+      "error": "",
+      "launchAndWorkMs": 3759
+    },
+    {
+      "status": "committed",
+      "cycle": 80,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 142,
+      "submissions": 20,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2903
+    },
+    {
+      "status": "committed",
+      "cycle": 81,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 145,
+      "submissions": 20,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2645
+    },
+    {
+      "status": "committed",
+      "cycle": 82,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 147,
+      "submissions": 21,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2615
+    },
+    {
+      "status": "committed",
+      "cycle": 83,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 147,
+      "submissions": 21,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "native-recovery-import-83@1",
+      "error": "",
+      "launchAndWorkMs": 3000
+    },
+    {
+      "status": "committed",
+      "cycle": 84,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 149,
+      "submissions": 21,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2874
+    },
+    {
+      "status": "committed",
+      "cycle": 85,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 152,
+      "submissions": 21,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 2389
+    },
+    {
+      "status": "committed",
+      "cycle": 86,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 154,
+      "submissions": 22,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3020
+    },
+    {
+      "status": "committed",
+      "cycle": 87,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 154,
+      "submissions": 22,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "native-recovery-import-87@1",
+      "error": "",
+      "launchAndWorkMs": 5202
+    },
+    {
+      "status": "committed",
+      "cycle": 88,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 156,
+      "submissions": 22,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4713
+    },
+    {
+      "status": "committed",
+      "cycle": 89,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 159,
+      "submissions": 22,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3384
+    },
+    {
+      "status": "committed",
+      "cycle": 90,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 161,
+      "submissions": 23,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4395
+    },
+    {
+      "status": "committed",
+      "cycle": 91,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 161,
+      "submissions": 23,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "condensation",
+      "importedKey": "native-recovery-import-91@1",
+      "error": "",
+      "launchAndWorkMs": 3787
+    },
+    {
+      "status": "committed",
+      "cycle": 92,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 163,
+      "submissions": 23,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3594
+    },
+    {
+      "status": "committed",
+      "cycle": 93,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 166,
+      "submissions": 23,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3747
+    },
+    {
+      "status": "committed",
+      "cycle": 94,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 168,
+      "submissions": 24,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3578
+    },
+    {
+      "status": "committed",
+      "cycle": 95,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 168,
+      "submissions": 24,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "precipitation",
+      "importedKey": "native-recovery-import-95@1",
+      "error": "",
+      "launchAndWorkMs": 5038
+    },
+    {
+      "status": "committed",
+      "cycle": 96,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 170,
+      "submissions": 24,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3368
+    },
+    {
+      "status": "committed",
+      "cycle": 97,
+      "phase": "unfinished-selection",
+      "verifiedPrevious": true,
+      "stateRevision": 173,
+      "submissions": 24,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 4444
+    },
+    {
+      "status": "committed",
+      "cycle": 98,
+      "phase": "submit-duplicate",
+      "verifiedPrevious": true,
+      "stateRevision": 175,
+      "submissions": 25,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3318
+    },
+    {
+      "status": "committed",
+      "cycle": 99,
+      "phase": "package-import",
+      "verifiedPrevious": true,
+      "stateRevision": 175,
+      "submissions": 25,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "collection",
+      "importedKey": "native-recovery-import-99@1",
+      "error": "",
+      "launchAndWorkMs": 4826
+    },
+    {
+      "status": "committed",
+      "cycle": 100,
+      "phase": "save",
+      "verifiedPrevious": true,
+      "stateRevision": 177,
+      "submissions": 25,
+      "selected": [
+        "condensation"
+      ],
+      "lastRegion": "evaporation",
+      "importedKey": "",
+      "error": "",
+      "launchAndWorkMs": 3647
+    }
+  ]
+}
