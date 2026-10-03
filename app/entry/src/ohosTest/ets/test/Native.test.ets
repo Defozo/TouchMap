@@ -183,7 +183,7 @@ export default function nativeSuite(): void {
       const stop = await driver.findComponent(ON.id('stop-audio')); await stop.click();
       const library = await driver.findComponent(ON.id('nav-library')); await library.click();
       await driver.delayMs(300);
-      expect(await driver.findComponent(ON.text('A world you can explore.')) !== null).assertTrue();
+      expect(await driver.findComponent(ON.text('Explore diagrams by touch and sound.')) !== null).assertTrue();
     });
     it('tutorial_labels_react_to_each_step', 0, async () => {
       const driver = Driver.create();

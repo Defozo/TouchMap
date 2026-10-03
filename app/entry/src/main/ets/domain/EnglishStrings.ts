@@ -293,7 +293,7 @@ export function englishText(key: string): string {
     case "tm_726e701a83fe": return "Invalid WAV format chunk";
     case "tm_729bceeec816": return "New connection";
     case "tm_72ed767cd17d": return "Source: {0} · {1}";
-    case "tm_73a3e7573256": return "A world you can explore.";
+    case "tm_73a3e7573256": return "Explore diagrams by touch and sound.";
     case "tm_74273989b096": return "Redo";
     case "tm_74532a87507f": return "Listen to selected recording";
     case "tm_747380d4bc83": return "Geometry, meanings and lesson questions are marked reviewed by the author.";
@@ -949,7 +949,7 @@ export function englishKey(value: string): string {
     case "Invalid WAV format chunk": return "tm_726e701a83fe";
     case "New connection": return "tm_729bceeec816";
     case "Source: {0} · {1}": return "tm_72ed767cd17d";
-    case "A world you can explore.": return "tm_73a3e7573256";
+    case "Explore diagrams by touch and sound.": return "tm_73a3e7573256";
     case "Redo": return "tm_74273989b096";
     case "Listen to selected recording": return "tm_74532a87507f";
     case "Geometry, meanings and lesson questions are marked reviewed by the author.": return "tm_747380d4bc83";
