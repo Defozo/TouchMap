@@ -519,7 +519,7 @@ export function englishText(key: string): string {
     case "tm_c67c9cb8ec87": return "Exact source value, leave blank for unknown";
     case "tm_c67f2a65967e": return "Manifest expanded asset size exceeds limit";
     case "tm_c74dc961ee67": return "Delete learning history and bookmarks";
-    case "tm_c7b1eaaed7bc": return "{0} submitted attempts. Hearing a label never completes a question.";
+    case "tm_c7b1eaaed7bc": return "Submitted attempts: {0}.";
     case "tm_c821dead4cbe": return "External SVG URL rejected";
     case "tm_c8bfe9d7ec8f": return "Invalid viewBox";
     case "tm_c9046f7a37ad": return "description";
@@ -1175,7 +1175,7 @@ export function englishKey(value: string): string {
     case "Exact source value, leave blank for unknown": return "tm_c67c9cb8ec87";
     case "Manifest expanded asset size exceeds limit": return "tm_c67f2a65967e";
     case "Delete learning history and bookmarks": return "tm_c74dc961ee67";
-    case "{0} submitted attempts. Hearing a label never completes a question.": return "tm_c7b1eaaed7bc";
+    case "Submitted attempts: {0}.": return "tm_c7b1eaaed7bc";
     case "External SVG URL rejected": return "tm_c821dead4cbe";
     case "Invalid viewBox": return "tm_c8bfe9d7ec8f";
     case "description": return "tm_c9046f7a37ad";

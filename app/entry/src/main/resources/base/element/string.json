@@ -2086,7 +2086,7 @@
     },
     {
       "name": "tm_c7b1eaaed7bc",
-      "value": "{0} submitted attempts. Hearing a label never completes a question."
+      "value": "Submitted attempts: {0}."
     },
     {
       "name": "tm_c821dead4cbe",
