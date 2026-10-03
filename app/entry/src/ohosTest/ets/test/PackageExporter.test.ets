@@ -40,13 +40,26 @@ export default function packageExporterSuite(): void {
     it('native_export_handles_more_than_50MiB_expanded_with_portable_ratio', 0, async () => {
       // Best compression exceeds the 200:1 import policy for this repeating
       // alphabet. Huffman-only would exceed 50 MiB; fast DEFLATE fits both limits.
+      const phaseAt = Date.now();
+      console.info(`TOUCHMAP_EXPORT_TEST_PHASE fixture_begin ms=${Date.now()-phaseAt}`);
       const content = new Uint8Array(18 * 1024 * 1024);
-      for (let i = 0; i < content.length; i++) { content[i] = i & 255; }
+      // Preserve i & 255 exactly without an 18-million-iteration UI-thread loop.
+      const block = new Uint8Array(1024 * 1024);
+      for (let i = 0; i < 256; i++) { block[i] = i; }
+      for (let filled = 256; filled < block.length; filled *= 2) { block.set(block.subarray(0, filled), filled); }
+      for (let offset = 0; offset < content.length; offset += block.length) {
+        content.set(block, offset);
+        await new Promise<void>((resolve) => { setTimeout(resolve, 0); });
+      }
+      console.info(`TOUCHMAP_EXPORT_TEST_PHASE fixture_end ms=${Date.now()-phaseAt}`);
+      expect(await digest(content)).assertEqual('0b90571decc49a1bd765fcb126a0f2d945c20cf82b3bab6ec796e697bf269dbe');
       const files: ArchiveFile[] = [
         {name:'manifest.json',bytes:encode('{}')}, {name:'diagram.json',bytes:encode('{}')},
         {name:'audio/a.wav',bytes:content}, {name:'audio/b.wav',bytes:content}, {name:'audio/c.wav',bytes:content}
       ];
+      console.info(`TOUCHMAP_EXPORT_TEST_PHASE pack_begin ms=${Date.now()-phaseAt}`);
       const bytes = await packPortable(files, cache);
+      console.info(`TOUCHMAP_EXPORT_TEST_PHASE pack_end ms=${Date.now()-phaseAt}`);
       const entries = inspectZip(bytes);
       expect(entries.reduce((total, entry) => total + entry.expanded, 0) > 50 * 1024 * 1024).assertTrue();
       expect(bytes.length < 50 * 1024 * 1024).assertTrue();
