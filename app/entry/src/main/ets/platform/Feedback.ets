@@ -37,6 +37,7 @@ export class Feedback {
   onPlaybackStarted: (onsetMs: number, targetId: string) => void = () => {};
   onPlaybackFailure: (message: string) => void = () => {};
   onPlaybackTrace: (trace: AudioOnsetTrace) => void = () => {};
+  onWritePending: (targetId: string, byteCount: number) => void = () => {};
   async initialize(): Promise<void> {
     try { this.reader = accessibility.isScreenReaderOpenSync(); } catch (error) { this.reader = false; }
     accessibility.on('screenReaderStateChange', (enabled: boolean) => { this.reader = enabled; this.stop(); });
@@ -180,7 +181,10 @@ export class Feedback {
     const end = pcm.dataOffset + pcm.dataLength;
     while (offset < end && token === this.generation) {
       if (this.paused) { await new Promise<void>((resolve) => { this.resumeWaiter = resolve; }); if (token !== this.generation) { return; } }
-      const sourceChunk = bytes.slice(offset, Math.min(end, offset + chunkSize));
+      // Keep the first native buffer small for onset. Batch following buffers so
+      // scheduling one promise per 20 ms cannot starve playback on a busy host.
+      const writeSize = onsetLogged ? chunkSize * 4 : chunkSize;
+      const sourceChunk = bytes.slice(offset, Math.min(end, offset + writeSize));
       // OpenHarmony's legacy write bridge ignores a remaining buffer of <=4 bytes.
       // Pad only the transport buffer with complete silent frames, never the verified WAV.
       let chunk = sourceChunk;
@@ -192,6 +196,7 @@ export class Feedback {
       const writeAt = Date.now();
       if (!onsetLogged) { if (trace.writeAttemptsBeforeOnset === 0) { trace.firstWriteDispatchMs = writeAt - decisionAt; trace.firstWriteBytes = chunk.length; trace.firstWriteDurationMs = chunk.length * 1000 / (pcm.sampleRate * pcm.blockAlign); } trace.writeAttemptsBeforeOnset++; }
       const pending = renderer.write(chunk.buffer); this.pendingWrite = pending;
+      this.onWritePending(target, chunk.length);
       let written = 0;
       try { written = await pending; } finally { if (this.pendingWrite === pending) { this.pendingWrite = undefined; } }
       if (token !== this.generation) { return; }

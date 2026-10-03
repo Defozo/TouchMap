@@ -228,7 +228,7 @@ export function englishText(key: string): string {
     case "tm_4f6a8fb5912c": return "Authoring session paired. Image and speech uploads still require separate consent.";
     case "tm_4f7ef923b337": return "Review target missing";
     case "tm_50d33b6c8c20": return "Answer options: one ID|label on each line";
-    case "tm_50e3bb39718a": return "Pick up your thread.";
+    case "tm_50e3bb39718a": return "Continue your lesson.";
     case "tm_51375b3563ed": return "Use an uncompressed PCM WAV recording";
     case "tm_52bcdf071634": return "Importing and validating your selected material. Large packages may take a moment.";
     case "tm_53a3b0b0d31c": return "Connection does not exist";
@@ -884,7 +884,7 @@ export function englishKey(value: string): string {
     case "Authoring session paired. Image and speech uploads still require separate consent.": return "tm_4f6a8fb5912c";
     case "Review target missing": return "tm_4f7ef923b337";
     case "Answer options: one ID|label on each line": return "tm_50d33b6c8c20";
-    case "Pick up your thread.": return "tm_50e3bb39718a";
+    case "Continue your lesson.": return "tm_50e3bb39718a";
     case "Use an uncompressed PCM WAV recording": return "tm_51375b3563ed";
     case "Importing and validating your selected material. Large packages may take a moment.": return "tm_52bcdf071634";
     case "Connection does not exist": return "tm_53a3b0b0d31c";

@@ -5,7 +5,8 @@ import { Repository, Material, defaultProfile, encode, writeBytes, digest } from
 import { Feedback } from '../../../main/ets/platform/Feedback';
 
 interface AudioControlCheck { name: string; passed: boolean; detail: string; }
-interface AudioControlReport { status: string; checks: AudioControlCheck[]; error: string; scope: string; }
+interface AudioControlObservation { elapsedMs: number; kind: string; value: string; }
+interface AudioControlReport { status: string; checks: AudioControlCheck[]; error: string; scope: string; observations: AudioControlObservation[]; }
 function delay(milliseconds: number): Promise<void> { return new Promise<void>((resolve) => { setTimeout(resolve, milliseconds); }); }
 async function until(predicate: () => boolean, milliseconds: number): Promise<void> {
   const deadline = Date.now() + milliseconds;
@@ -23,9 +24,11 @@ function tailFixture(): Uint8Array {
 export async function runAudioControls(mode: string = 'all'): Promise<void> {
   const context = await nativeContext(); const delegator = abilityDelegatorRegistry.getAbilityDelegator();
   const playback = new Feedback();
-  const phase = (name: string): void => { writeBytes(`${context.filesDir}/audio-controls-progress.json`, encode(JSON.stringify({phase:name,utc:Date.now()}))); console.info(`TOUCHMAP_AUDIO_CONTROL_PHASE ${name}`); };
+  const observedAt = Date.now(); const observations: AudioControlObservation[] = [];
+  const observe = (kind: string, value: string): void => { observations.push({elapsedMs:Date.now()-observedAt,kind:kind,value:value}); };
+  const phase = (name: string): void => { observe('phase',name); writeBytes(`${context.filesDir}/audio-controls-progress.json`, encode(JSON.stringify({phase:name,utc:Date.now(),observations:observations}))); console.info(`TOUCHMAP_AUDIO_CONTROL_PHASE ${name}`); };
   phase('initialize');
-  const report: AudioControlReport = { status:'running',checks:[],error:'',scope:'Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics.' };
+  const report: AudioControlReport = { status:'running',checks:[],error:'',scope:'Actual native Feedback scheduling, PCM target callbacks, AudioRenderer pause/resume and natural completion. These checks do not measure physical speaker acoustics.',observations:observations };
   try {
     const repository = new Repository(context); await repository.initialize(); await playback.initialize();
     const material = (await repository.list()).find((item: Material) => item.diagram.packageId === 'water-cycle' && !item.draft && item.ready)!;
@@ -33,9 +36,9 @@ export async function runAudioControls(mode: string = 'all'): Promise<void> {
     const profile = defaultProfile(); profile.vibration = false; profile.readerSpeech = false; profile.dwell = 250;
     const first = material.diagram.regions[0].id, second = material.diagram.regions[1].id;
     const started: string[] = []; const statuses: string[] = []; const failures: string[] = [];
-    playback.onPlaybackStarted = (_onset: number, target: string) => { started.push(target); };
-    playback.onStatus = (message: string) => { statuses.push(message); };
-    playback.onPlaybackFailure = (message: string) => { failures.push(message); };
+    playback.onPlaybackStarted = (_onset: number, target: string) => { started.push(target); observe('started',target); };
+    playback.onStatus = (message: string) => { statuses.push(message); observe('status',message); };
+    playback.onPlaybackFailure = (message: string) => { failures.push(message); observe('failure',message); };
     if (mode !== 'tail') {
     phase('stop_before_dwell');
     playback.speak(material, first, 'label', profile, false); playback.stop(); await delay(600);
@@ -56,6 +59,21 @@ export async function runAudioControls(mode: string = 'all'): Promise<void> {
     phase('resume_call'); await playback.resumeRecording(); phase('resume_complete');
     await until(() => statuses.includes('Recording finished') || failures.length > 0, recording.durationMs + 5000);
     report.checks.push({name:'pause_resume_finishes_same_recording',passed:pausedWithoutFinish && statuses.includes('Recording resumed at the saved position.') && statuses.includes('Recording finished') && started.length === 1 && failures.length === 0,detail:statuses.join(' | ')});
+
+    phase('replace_pending_batched_write');
+    started.length = 0; statuses.length = 0; failures.length = 0;
+    let firstWriteBytes = 0, replacedWriteBytes = 0;
+    playback.onPlaybackTrace = (trace) => { if (trace.target === first) { firstWriteBytes = trace.firstWriteBytes; } };
+    playback.onWritePending = (target: string, byteCount: number) => {
+      if (target === first && firstWriteBytes > 0 && byteCount > firstWriteBytes && replacedWriteBytes === 0) {
+        replacedWriteBytes = byteCount; observe('replaceNativeWritePending',String(byteCount));
+        playback.speak(material,second,'label',profile,true);
+      }
+    };
+    playback.speak(material,first,recording.kind,profile,true);
+    await until(() => statuses.includes('Recording finished') || failures.length > 0,5000);
+    playback.onWritePending = () => {}; playback.onPlaybackTrace = () => {};
+    report.checks.push({name:'replace_pending_batched_write_finishes_latest_only',passed:replacedWriteBytes > firstWriteBytes && firstWriteBytes > 0 && started.length === 2 && started[0] === first && started[1] === second && statuses.filter((value:string) => value === 'Recording finished').length === 1 && failures.length === 0,detail:`Replaced actual pending ${replacedWriteBytes}-byte native write after ${firstWriteBytes}-byte onset; targets: ${started.join(',')}; ${statuses.join(' | ')}`});
     }
     phase('four_byte_tail');
     started.length = 0; statuses.length = 0; failures.length = 0;
