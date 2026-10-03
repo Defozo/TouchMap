@@ -9,7 +9,7 @@ import { publicationIssues } from '../domain/validate';
 import { Repository, Material, Profile, defaultProfile, uid, readBytes, writeBytes, digest, decode } from '../platform/Repository';
 import { Preparation, sanitizeImage, Crop } from '../platform/Preparation';
 import { feedback } from '../platform/Feedback';
-import { RestorationFrame, RestorationObservation } from '../platform/RestorationFrame';
+import { RestorationFrame, RestorationObservation, RestorationFramePhases } from '../platform/RestorationFrame';
 import { EditorPanel } from '../components/EditorPanel';
 
 @Entry
@@ -105,6 +105,7 @@ struct Index {
     try {
       feedback.stop(); this.stopScan(); this.active = material;
       const restored = await this.repository!.progress(material);
+      const checkpointLoadedAtMs = Date.now();
       if (this.active?.key !== material.key) { return false; }
       this.progress = restored;
       this.overlaps = [];
@@ -116,11 +117,17 @@ struct Index {
       this.status = tr('tm_ce0923cb334c', [String(material.diagram.regions.length), String(material.diagram.relations.length), String(material.ready ? tr('tm_c96bc61756af') : tr('tm_f579e0746646'))]);
       if (measure) {
         const expectedPage = this.page;
-        this.getUIContext().postFrameCallback(new RestorationFrame(() => {
+        const stateAppliedAtMs = Date.now();
+        const frameQueuedAtMs = Date.now();
+        this.getUIContext().postFrameCallback(new RestorationFrame(this.getUIContext(), (phases: RestorationFramePhases) => {
           if (sequence !== this.restorationSequence || this.active?.key !== material.key || this.page !== expectedPage || !this.progress) { return; }
-          const frameEndedAtMs = Date.now();
-          const report: RestorationObservation = { sequence: sequence, intentAtMs: intentAtMs, frameEndedAtMs: frameEndedAtMs,
-            durationMs: frameEndedAtMs - intentAtMs, page: this.page, packageId: material.diagram.packageId,
+          const idleAtMs = Date.now();
+          const report: RestorationObservation = { sequence: sequence, intentAtMs: intentAtMs, idleAtMs: idleAtMs,
+            checkpointLoadedAtMs: checkpointLoadedAtMs, stateAppliedAtMs: stateAppliedAtMs,
+            frameQueuedAtMs: frameQueuedAtMs, frameStartedAtMs: phases.frameStartedAtMs,
+            layoutDoneAtMs: phases.layoutDoneAtMs, drawCommandAtMs: phases.drawCommandAtMs,
+            idleDurationMs: idleAtMs - intentAtMs,
+            durationMs: phases.drawCommandAtMs - intentAtMs, page: this.page, packageId: material.diagram.packageId,
             contentRevision: material.diagram.revision, stateRevision: this.progress.stateRevision, lastRegionId: this.progress.lastRegionId,
             activeQuestionId: this.progress.activeQuestionId, selectedAnswers: this.progress.selectedAnswers.slice(),
             submittedCount: this.progress.submissions.length, paused: this.progress.paused,
@@ -324,7 +331,9 @@ struct Index {
   }
   private async remove(material: Material): Promise<void> {
     try {
-      await this.repository!.deleteMaterial(material); this.items = await this.repository!.list(); this.deleteId = '';
+      await this.repository!.deleteMaterial(material);
+      this.cancelTouch(); this.stopScan(); feedback.release();
+      this.items = await this.repository!.list(); this.deleteId = '';
       if (this.active?.key === material.key) { this.active = undefined; this.progress = undefined; }
       this.status = tr('tm_a6b0a1a757c5', [String(material.diagram.revision)]);
     } catch (error) { this.fail(error as Error); }

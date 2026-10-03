@@ -30,6 +30,7 @@ REQUIRED = [
     'app/oh-package-lock.json5', 'backend/uv.lock', 'package-lock.json',
     'samples/LICENSE.md', 'samples/water-cycle.touchmap', 'samples/lumina-process.touchmap',
     'samples/rainfall-chart.touchmap', 'samples/tutorial.touchmap',
+    'docs/evidence/demo-manifest.json', 'docs/demo-storyboard.json',
 ]
 TOP_DOCS = ['README.md', 'ARCHITECTURE.md', 'AI_WORKFLOW.md', 'AI_INTEGRATION.md',
             'THIRD_PARTY.md', 'LICENSE', 'TEAM.json', 'SUBMISSION.md', 'toolchain.lock.json']
@@ -165,6 +166,15 @@ def prepare(root: Path, commit: str, hap: Path, demo: Path, verification: Path,
         demo_metadata = inspect_demo(demo)
         # Use the verified bytes once. They are hashed and archived together.
         demo_bytes = demo.read_bytes()
+        demo_review = json.loads(files['docs/evidence/demo-manifest.json'])
+        if demo_review.get('reviewed') is not True:
+            raise ValueError('Demonstration has no completed committed review')
+        if demo_review.get('videoSha256') != sha256(demo_bytes):
+            raise ValueError('Demonstration hash differs from the reviewed committed manifest')
+        if demo_review.get('storyboardSha256') != sha256(files['docs/demo-storyboard.json']):
+            raise ValueError('Committed storyboard differs from the reviewed demonstration')
+        if abs(float(demo_review.get('durationSeconds', 0)) - float(demo_metadata['format']['duration'])) > 0.1:
+            raise ValueError('Demonstration duration differs from the reviewed committed manifest')
         bundle = {'source.zip': deterministic_zip(files), 'touchmap-signed.hap': hap_bytes,
                   'demo/touchmap-demo.mp4': demo_bytes, 'release-verification.json': canonical_json(report)}
         for name, data in files.items():

@@ -7,6 +7,7 @@ import { runAudioControls } from './AudioControls';
 import { runFailureChecks } from './FailureRunner';
 import { runRestoreBenchmark } from './RestoreBenchmark';
 import { runPreparationChecks } from './PreparationRunner';
+import { runTransactionFailure } from './TransactionFailureRunner';
 
 export default class OpenHarmonyTestRunner implements TestRunner {
   onPrepare(): void { console.info('TOUCHMAP_NATIVE_TEST_PREPARE'); }
@@ -14,6 +15,8 @@ export default class OpenHarmonyTestRunner implements TestRunner {
     const delegator = abilityDelegatorRegistry.getAbilityDelegator();
     const args = abilityDelegatorRegistry.getArguments();
     console.info(`TOUCHMAP_TEST_ARGUMENT_KEYS ${Object.keys(args.parameters).join(',')}`);
+    const transaction = args.parameters['transactionFailure'] || args.parameters['-s transactionFailure'];
+    if (transaction !== undefined && transaction !== '') { runTransactionFailure(`${transaction}`); return; }
     const restoration = args.parameters['restoreBenchmark'] || args.parameters['-s restoreBenchmark'];
     if (restoration !== undefined && restoration !== '') { runRestoreBenchmark(Number(restoration)); return; }
     const preparation = args.parameters['preparationChecks'] || args.parameters['-s preparationChecks'];

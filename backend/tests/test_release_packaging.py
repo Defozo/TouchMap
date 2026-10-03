@@ -20,11 +20,16 @@ def candidate(tmp_path,monkeypatch):
         path=root/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text('Fixture Team\nFixture Member\n')
     team={'team_name':'Fixture Team','members':['Fixture Member'],'human_member_count':1}
     (root/'TEAM.json').write_text(json.dumps(team));(root/'toolchain.lock.json').write_text('{"fixture":true}')
+    demo_bytes=b'synthetic media; never a release artifact'
+    (root/'docs/demo-storyboard.json').write_text('{"scenes":[{"duration":1}]}')
+    (root/'docs/evidence/demo-manifest.json').write_text(json.dumps({'reviewed':True,
+        'videoSha256':release.sha256(demo_bytes),'durationSeconds':1,
+        'storyboardSha256':release.sha256((root/'docs/demo-storyboard.json').read_bytes())}))
     (root/'.gitignore').write_text('dist/\n')
     git('add','.');git('commit','-m','Isolated fixture');commit=git('rev-parse','HEAD')
     dist=root/'dist';dist.mkdir();hap=dist/'test.hap';demo=dist/'test.mp4';verification=dist/'verification.json'
     with zipfile.ZipFile(hap,'w') as archive:archive.writestr('module.json',json.dumps({'app':{'bundleName':'org.touchmap.app','minAPIVersion':20}}))
-    demo.write_bytes(b'synthetic media; never a release artifact')
+    demo.write_bytes(demo_bytes)
     monkeypatch.setattr(release,'inspect_demo',lambda path:{'format':{'duration':'1'},'streams':[{'codec_type':'video'}]})
     report={'sourceCommit':commit,'team':team,'artifactFailures':[],'hap':{'sha256':release.sha256(hap.read_bytes()),
             'appSourceSha256':release.committed_app_fingerprint(release.source_files(root,commit)),'buildInputGitHead':commit},
@@ -83,3 +88,25 @@ def test_release_binds_app_bytes_across_documentation_only_commits(candidate):
     report['sourceCommit']=release.git(root,'rev-parse','HEAD').decode().strip();verification.write_text(json.dumps(report))
     result,_=release.prepare(root,report['sourceCommit'],hap,demo,verification)
     assert result['status']=='failed' and 'build inputs' in result['failures'][0]
+
+
+@pytest.mark.parametrize('change,expected',[
+    ('video','Demonstration hash'),('review','completed committed review'),
+    ('storyboard','Committed storyboard'),('duration','Demonstration duration')])
+def test_release_requires_review_of_exact_demo(candidate,change,expected):
+    root,commit,hap,demo,verification=candidate
+    manifest_path=root/'docs/evidence/demo-manifest.json'
+    manifest=json.loads(manifest_path.read_text())
+    if change=='video':demo.write_bytes(b'different demo cut')
+    elif change=='review':manifest['reviewed']=False
+    elif change=='duration':manifest['durationSeconds']=180
+    else:(root/'docs/demo-storyboard.json').write_text('{"scenes":[{"duration":180}]}')
+    manifest_path.write_text(json.dumps(manifest))
+    release.git(root,'add','docs')
+    if change!='video':release.git(root,'commit','-m','Changed demo review fixture')
+    commit=release.git(root,'rev-parse','HEAD').decode().strip()
+    verification_report=json.loads(verification.read_text());verification_report['sourceCommit']=commit
+    verification.write_text(json.dumps(verification_report))
+    result,files=release.prepare(root,commit,hap,demo,verification)
+    assert result['status']=='failed' and files=={}
+    assert expected in result['failures'][0]

@@ -29,11 +29,20 @@ def main():
                 'testHapSha256': hashlib.sha256((ROOT/'dist/touchmap-tests-signed.hap').read_bytes()).hexdigest()}
     metadata = json.loads((ROOT/'docs/evidence/hap-metadata.json').read_text())
     artifact['sourceFingerprint'] = metadata['sourceFingerprint']
+    def host_snapshot():
+        names = subprocess.check_output(['ps', '-eo', 'comm='], text=True).splitlines()
+        return {'at':datetime.now(timezone.utc).isoformat(),'logicalCpuCount':os.cpu_count(),'loadAverage':list(os.getloadavg()),
+                'buildProcesses':{name:names.count(name) for name in ['java','hvigorw','clang','ninja','ffmpeg']}}
     output.write_text(json.dumps({'status':'running','device':args.device,'requested':args.count})+'\n')
+    monitor = None
+    monitor_log = None
     try:
         command('shell', 'aa', 'force-stop', 'org.touchmap.app')
         command('shell', 'rm', '-f', APP_FILES+'/restore-benchmark.json', APP_FILES+'/restore-benchmark-progress.json')
         command('shell', 'uitest', 'start-daemon', 'default')
+        artifact['hostBefore'] = host_snapshot()
+        monitor_log = (ROOT/'docs/evidence/native-restore-host-vmstat.txt').open('w')
+        monitor = subprocess.Popen(['vmstat','-t','1'],stdout=monitor_log)
         log = command('shell', 'aa', 'test', '-b', 'org.touchmap.app', '-m', 'entry_test', '-s', 'unittest',
                       'OpenHarmonyTestRunner', '-s', 'restoreBenchmark', str(args.count), '-w', '1200000', timeout=args.count*30+60)
         (ROOT/'docs/evidence/native-restore-results.txt').write_text(log)
@@ -43,7 +52,21 @@ def main():
         print(json.dumps({key:value for key,value in report.items() if key!='samples'},indent=2))
         if report.get('status') != 'passed' or len(report.get('samples',[])) != args.count:
             raise RuntimeError('Native rendered restoration target was not met.')
+    except Exception as error:
+        artifact['status'] = 'failed'
+        artifact['error'] = str(error)
+        report = json.loads(output.read_text())
+        if report.get('status') == 'running':
+            report.update(status='failed', error=str(error))
+            output.write_text(json.dumps(report,indent=2)+'\n')
+        raise
     finally:
+        if monitor:
+            monitor.terminate()
+            monitor.wait(timeout=5)
+        if monitor_log:
+            monitor_log.close()
+        artifact['hostAfter'] = host_snapshot()
         artifact['finishedUtc'] = datetime.now(timezone.utc).isoformat()
         (ROOT/'docs/evidence/native-restore-artifact.json').write_text(json.dumps(artifact,indent=2)+'\n')
         command('shell', 'aa', 'force-stop', 'org.touchmap.app')
