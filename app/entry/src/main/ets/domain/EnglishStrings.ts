@@ -99,7 +99,7 @@ export function englishText(key: string): string {
     case "tm_24fb80d91f7c": return "Current order: ";
     case "tm_25884fb4eb21": return "Horizontal domain minimum and maximum, comma separated for numerical axes";
     case "tm_25b953a5005d": return "Question prompt";
-    case "tm_260f59cb0bbb": return "Built for curiosity. Your pace, your path.";
+    case "tm_260f59cb0bbb": return "TouchMap · Offline diagram lessons";
     case "tm_263f36611134": return "Zoom −";
     case "tm_26abf7f1d651": return "Vertical domain minimum";
     case "tm_27020c7859b2": return "Compressed output exceeds the portable 50 MiB limit.";
@@ -755,7 +755,7 @@ export function englishKey(value: string): string {
     case "Current order: ": return "tm_24fb80d91f7c";
     case "Horizontal domain minimum and maximum, comma separated for numerical axes": return "tm_25884fb4eb21";
     case "Question prompt": return "tm_25b953a5005d";
-    case "Built for curiosity. Your pace, your path.": return "tm_260f59cb0bbb";
+    case "TouchMap · Offline diagram lessons": return "tm_260f59cb0bbb";
     case "Zoom −": return "tm_263f36611134";
     case "Vertical domain minimum": return "tm_26abf7f1d651";
     case "Compressed output exceeds the portable 50 MiB limit.": return "tm_27020c7859b2";
