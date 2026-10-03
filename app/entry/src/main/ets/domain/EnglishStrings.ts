@@ -212,7 +212,7 @@ export function englishText(key: string): string {
     case "tm_49680943ba2c": return "Huffman repeat exceeds alphabet";
     case "tm_4a1668bca31c": return "Choose or create a chart.";
     case "tm_4aace0fa58f1": return "The export filename is invalid.";
-    case "tm_4ab1408d52fb": return "Touch a diagram. Hear what matters. Follow the connections at your own pace.";
+    case "tm_4ab1408d52fb": return "Hear object names and follow connections. Choose touch, a list or scanning.";
     case "tm_4ab8f40b5319": return "Visit the source of this incoming connection";
     case "tm_4b330d8b0572": return "Preparing a portable compressed package.";
     case "tm_4bdc35de4949": return "Choose a connection first";
@@ -408,7 +408,7 @@ export function englishText(key: string): string {
     case "tm_a01c6d8c016f": return "The source needs a prepared raster preview. Only region outlines are shown. Reviewed labels and connections remain available in the object list. Ask the author to export a version with a faithful preview.";
     case "tm_a0362561d1b4": return "Import a material or source";
     case "tm_a067633a2e89": return "Recording does not match the current text or language.";
-    case "tm_a14ac52cbf2e": return "UNDERSTAND THROUGH EXPLORATION";
+    case "tm_a14ac52cbf2e": return "DIAGRAMS WITH SPOKEN LABELS";
     case "tm_a19403240930": return "Optional hint";
     case "tm_a1fcd5327c96": return "Invalid speech result: {0}";
     case "tm_a241984ca8f3": return "Source object ID";
@@ -491,7 +491,7 @@ export function englishText(key: string): string {
     case "tm_be8f46901c59": return "Save rectangular region";
     case "tm_be91bf9e8d5a": return "SVG viewport dimensions must use pixels. Normalize other units with the computer converter.";
     case "tm_be91f9952bc3": return "Speech response must contain recordings.";
-    case "tm_beaa2b2db8bb": return "OFFLINE BY DESIGN";
+    case "tm_beaa2b2db8bb": return "WORKS OFFLINE";
     case "tm_bebf86f6c07b": return "{0}: invalid geometry metadata";
     case "tm_bee4ebaebc2c": return "No material matches this search. Clear the search to see your library.";
     case "tm_bef593642651": return "New question";
@@ -868,7 +868,7 @@ export function englishKey(value: string): string {
     case "Huffman repeat exceeds alphabet": return "tm_49680943ba2c";
     case "Choose or create a chart.": return "tm_4a1668bca31c";
     case "The export filename is invalid.": return "tm_4aace0fa58f1";
-    case "Touch a diagram. Hear what matters. Follow the connections at your own pace.": return "tm_4ab1408d52fb";
+    case "Hear object names and follow connections. Choose touch, a list or scanning.": return "tm_4ab1408d52fb";
     case "Visit the source of this incoming connection": return "tm_4ab8f40b5319";
     case "Preparing a portable compressed package.": return "tm_4b330d8b0572";
     case "Choose a connection first": return "tm_4bdc35de4949";
@@ -1064,7 +1064,7 @@ export function englishKey(value: string): string {
     case "The source needs a prepared raster preview. Only region outlines are shown. Reviewed labels and connections remain available in the object list. Ask the author to export a version with a faithful preview.": return "tm_a01c6d8c016f";
     case "Import a material or source": return "tm_a0362561d1b4";
     case "Recording does not match the current text or language.": return "tm_a067633a2e89";
-    case "UNDERSTAND THROUGH EXPLORATION": return "tm_a14ac52cbf2e";
+    case "DIAGRAMS WITH SPOKEN LABELS": return "tm_a14ac52cbf2e";
     case "Optional hint": return "tm_a19403240930";
     case "Invalid speech result: {0}": return "tm_a1fcd5327c96";
     case "Source object ID": return "tm_a241984ca8f3";
@@ -1147,7 +1147,7 @@ export function englishKey(value: string): string {
     case "Save rectangular region": return "tm_be8f46901c59";
     case "SVG viewport dimensions must use pixels. Normalize other units with the computer converter.": return "tm_be91bf9e8d5a";
     case "Speech response must contain recordings.": return "tm_be91f9952bc3";
-    case "OFFLINE BY DESIGN": return "tm_beaa2b2db8bb";
+    case "WORKS OFFLINE": return "tm_beaa2b2db8bb";
     case "{0}: invalid geometry metadata": return "tm_bebf86f6c07b";
     case "No material matches this search. Clear the search to see your library.": return "tm_bee4ebaebc2c";
     case "New question": return "tm_bef593642651";
