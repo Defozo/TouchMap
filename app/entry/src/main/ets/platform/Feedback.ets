@@ -101,7 +101,18 @@ export class Feedback {
   async pauseRecording(): Promise<void> {
     const renderer = this.renderer; const token = this.generation;
     if (!renderer || !this.playing || this.paused) { this.onStatus(tr('tm_1c4331f4276e')); return; }
-    try { this.paused = true; await this.serialize(async () => { if (token === this.generation) { await renderer.pause(); } }); if (token === this.generation) { this.onStatus(tr('tm_cf90ba16af2d')); } }
+    try {
+      this.paused = true;
+      const writing = this.pendingWrite;
+      await this.serialize(async () => {
+        if (token !== this.generation) { return; }
+        // The legacy native write bridge can remain active until its buffer is
+        // accepted. Keep the renderer running while that bounded write settles.
+        if (writing) { await this.settleWrite(writing); }
+        if (token === this.generation) { await renderer.pause(); }
+      });
+      if (token === this.generation) { this.onStatus(tr('tm_cf90ba16af2d')); }
+    }
     catch (error) { if (token === this.generation) { this.paused = false; const wake = this.resumeWaiter; this.resumeWaiter = undefined; if (wake) { wake(); } this.onStatus(tr('tm_65eda82062f1')); } }
   }
   async resumeRecording(): Promise<void> {
