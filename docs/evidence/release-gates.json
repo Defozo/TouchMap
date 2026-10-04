@@ -160,39 +160,6 @@
     ],
     "result": "Four source-attributed local packages, integrity/semantic validation and native/backend contract parity fixtures pass."
   },
-  "documentationAttribution": {
-    "status": "passed",
-    "evidence": [
-      "TEAM.json",
-      "SUBMISSION.md",
-      "AI_WORKFLOW.md",
-      "AI_INTEGRATION.md",
-      "THIRD_PARTY.md"
-    ],
-    "result": "DEFOZO SOFTWARE HOUSE; sole human team member Michał Kiełtyka. Developer attestations are separately labelled."
-  },
-  "secretAndLinksSnapshot": {
-    "status": "passed",
-    "evidence": [
-      "docs/evidence/secret-scan.json",
-      "docs/evidence/documentation-links.json"
-    ],
-    "result": "Earlier working-tree vault snapshot: 474 scanner-selected text files, 537 reviewed public-algorithm matches, 0 unresolved. The relative documentation-target audit records its own timestamp and zero failures. Final staged changes and Git history are separately recorded; neither snapshot certifies later edits."
-  },
-  "finalSourceFreeze": {
-    "status": "passed",
-    "evidence": [
-      "docs/evidence/hap-metadata.json",
-      "docs/evidence/stage-input-fingerprint.json",
-      "docs/evidence/native-test-artifact.json",
-      "docs/evidence/native-audio-controls-artifact.json",
-      "docs/evidence/pitch-copy-source-binding.json"
-    ],
-    "commit": "17b51cb44b3a0272477cc70eb4f74cfbb77786b7",
-    "appSourceSha256": "c4f22e847a194700ceafc0645596d4470269193f4636657c7ffbbff9f26248ee",
-    "productionHapSha256": "e0a62c9bf865ef6333c708cfd4f51957c5f14447d368694df96a5b87e194a367",
-    "result": "Final signed production HAP e0a62c9b and passing native integration/audio controls share exact committed app inputs from 17b51cb. Of 122 app inputs, 119 match the d1ad20df measurement checkpoint; two contain declared English-copy changes and one is the independently hashed test-fixture generator. Production audio and exporter code are unchanged. Later media/documentation commits do not relabel the original build HEAD."
-  },
   "finalCleanBuildAndSignature": {
     "status": "passed",
     "evidence": [
@@ -274,95 +241,33 @@
     "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
     "certifiesCurrentRelease": false
   },
-  "finalEnglishDemo": {
-    "durationSeconds": 179.916667,
-    "status": "passed",
-    "evidence": [
-      "docs/evidence/demo-manifest.json",
-      "docs/evidence/demo-qc.json",
-      "docs/evidence/demo-review.json",
-      "docs/evidence/demo-independent-review.json",
-      "docs/evidence/demo-pitch-audio-provenance.json",
-      "docs/evidence/demo-pitch-audio-review.json",
-      "docs/evidence/demo-audio-transcript.json",
-      "docs/evidence/demo-repair-integration.json"
-    ],
-    "videoSha256": "93d78eb05db424c70720c94aabd3a2f7c0c8d8c3435097f5babc77fe64e43dce",
-    "result": "Reviewed soundtrack repair: 179.916667 s, 4,318 decoded frames, 16 retained narration intervals and the original Evaporation label at 35.2 to 36.5 s. Existing music restored across 32.3 to 48.7 s with ducking around native speech; no new TTS or composition. Two final static frames removed. Fresh complete actual-audio review passed, including the reported gap near 46 s. Independent review covered 23 sampled frames and source/audio evidence; no full-motion or direct human-listening claim. Renderer reproduced exact video bytes, rejected five negative preflight cases and passed all 26 packaging tests.",
-    "releaseVersion": "v1.0.1",
-    "decodedFrames": 4318,
-    "sizeBytes": 7568817,
-    "historicalFullAvReview": {
-      "masterSha256": "520bbabfb297d0d70a5b3bd806b4da0179151e5eeea8b5dc4cf3bd651b4d616b",
-      "scope": "The prior full-MP4 model review applies only to the retained earlier master, not current video bytes.",
-      "record": "docs/evidence/demo-independent-av-review.json"
-    }
-  },
-  "finalReleaseArchive": {
-    "status": "pending",
-    "reason": "Pre-construction snapshot. The final ZIP is constructed after this committed source freeze; its independent .verification.json sidecar verifies exact archive bytes, complete checksums, HAP/source identity and reviewed media after construction."
-  },
-  "finalReleaseSecretScan": {
-    "status": "passed",
-    "evidence": [
-      "docs/evidence/pitch-final-secret-scan.json",
-      "docs/evidence/pitch-repaired-media-secret-scan.json",
-      "docs/evidence/pitch-media-secret-scan.json",
-      "docs/evidence/history-secret-scan.json"
-    ],
-    "result": "Staged release source and curated evidence were scanned against vault values, and every reported match was reviewed against indexed Git bytes. No unresolved match remains; allowed matches are public algorithm literals and this project's public repository references. The repaired-media commit e4fc0386 has a separate retained staged review. Exact counts, index-path identities and timestamps are recorded in each report. This is bounded snapshot review, not a guarantee about unknown secrets or uninspected binary contents.",
-    "scope": "The staged snapshots named by the linked reports; each excludes its own subsequent report addition. Later restaging requires its own recorded scan.",
-    "previousReleaseVerification": {
-      "status": "passed",
-      "evidence": [
-        "docs/evidence/final-staged-secret-scan.json",
-        "docs/evidence/history-secret-scan.json"
-      ],
-      "result": "Final staged changes reviewed together with the previously scanned source history and checkpoint. Matches are public algorithm literals or the public repository owner within project URLs;0 unresolved. Private task intake, local credentials, signing material and redundant raw playback are excluded.",
-      "scope": "Historical staged scan before the v1.0.1 source and media revision.",
-      "certifiesCurrentRelease": false
-    }
-  },
   "genuineScreenReader": {
-    "status": "blocked_environment",
+    "status": "not_verified",
+    "result": "A full walkthrough with a genuine spoken reader has not been executed; the pinned emulator only supports the recorded event/control probes.",
     "evidence": [
-      "docs/evidence/screen-reader-investigation.json",
       "docs/ACCESSIBILITY.md"
-    ],
-    "reason": "No genuine spoken reader is available on the pinned emulator. The hover probe is not a reader. Full reader-enabled learner/editor flows remain unverified."
+    ]
   },
   "physicalHardware": {
-    "status": "pending_external",
+    "status": "not_verified",
+    "result": "Physical vibration, headphone routing and simultaneous reader/application audio have not been verified on a physical device.",
     "evidence": [
-      "docs/ACCESSIBILITY.md"
-    ],
-    "reason": "No HarmonyOS/OpenHarmony physical target is available, as confirmed by the user on2026-10-03. Physical vibration, assistive switches, headphone removal and audio routes remain unverified."
+      "docs/TEST_REPORT.md"
+    ]
   },
   "representativeLearnerStudy": {
-    "status": "pending_external",
+    "status": "not_verified",
+    "result": "No representative learner study has been completed.",
     "evidence": [
       "docs/STUDY_PROTOCOL.md"
-    ],
-    "reason": "No consenting blind/low-vision participant study comparing linear audio, structured list and exploration has been conducted; usefulness remains a hypothesis."
+    ]
   },
   "representativeAuthorStudy": {
-    "status": "pending_external",
+    "status": "not_verified",
+    "result": "No representative author study has been completed.",
     "evidence": [
       "docs/STUDY_PROTOCOL.md"
-    ],
-    "reason": "No teacher comparison of manual and AI-assisted preparation through source review, residual error, transfer and setup has been conducted."
-  },
-  "competitionProjectCreated": {
-    "status": "passed",
-    "provenance": "User-confirmed on2026-10-03.",
-    "result": "TouchMap already exists in HackTribe. This confirms project creation only; final material submission remains unconfirmed."
-  },
-  "competitionFinalSubmission": {
-    "status": "unconfirmed",
-    "evidence": [
-      "docs/SUBMISSION_REQUIREMENTS.md"
-    ],
-    "reason": "The existing project is confirmed; no separate irreversible final-submission action or finalization is claimed. Material draft save is tracked separately."
+    ]
   },
   "nativeManualRecordingImport": {
     "status": "passed",
@@ -402,13 +307,6 @@
     "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
     "certifiesCurrentRelease": false
   },
-  "sourceHistorySecretAudit": {
-    "evidence": [
-      "docs/evidence/history-secret-scan.json"
-    ],
-    "result": "All505 distinct UTF-8 text blobs reachable from four commits,506 files with index, were scanned.897 matches were reviewed as public sha256 literals;0 unresolved.118 binary blobs excluded. Later hook commit and final staged release scan are separate.",
-    "status": "passed"
-  },
   "currentProductionUi": {
     "status": "passed",
     "evidence": [
@@ -427,24 +325,6 @@
       "scope": "Historical v1.0.0 production UI verification on HAP 1209c871.",
       "certifiesCurrentRelease": false
     }
-  },
-  "publicSourceAccess": {
-    "status": "passed",
-    "evidence": [
-      "docs/evidence/public-source-access.json"
-    ],
-    "repositoryUrl": "https://github.com/Defozo/TouchMap",
-    "result": "Anonymous readback verified public metadata, main commit12eea57 and four exact source files with no authorization, cookies or environment credentials. Human reproduction and release asset publication remain separate.",
-    "scope": "Historical native/source verification recorded before the v1.0.1 revision.",
-    "certifiesCurrentRelease": false
-  },
-  "competitionMaterialDraftSave": {
-    "status": "pending",
-    "evidence": [
-      "docs/SUBMISSION_REQUIREMENTS.md"
-    ],
-    "reason": "Chronological pre-publication snapshot. The user explicitly authorized saving the existing TouchMap project while preserving New Idea and current visibility. Public assets must be published before the form is saved and read back. The separate post-publication HackTribe result resolves this snapshot after execution; no finalization action is implied.",
-    "scope": "Before external release publication and authorized form save."
   },
   "finalEnglishPresentation": {
     "status": "passed",

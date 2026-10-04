@@ -65,9 +65,13 @@ uv sync --frozen
 uv run pytest
 ```
 
-Run `scripts/verify-release.ps1` for package integrity, schemas, native metadata, documentation and evidence checks. It reports unfulfilled platform/research gates rather than treating a build as full verification. [Test results](docs/TEST_REPORT.md) distinguish host unit tests, real provider inference, native device tests and research gaps. [Release packaging](docs/RELEASE.md) explains how the committed sources, signed HAP, reviewed English demo, examples and checksums form one traceable local bundle.
+Run `scripts/verify-release.ps1` for package integrity, schemas, native metadata and recorded technical verification. Its output distinguishes artifact errors from compatibility and participant checks that have not been performed. [Test results](docs/TEST_REPORT.md) distinguish host unit tests, real provider inference, native device tests and research gaps. [Release packaging](docs/RELEASE.md) explains how the committed sources, signed HAP, reviewed English demo, examples and checksums form one traceable local bundle.
 
-Host JavaScript tests exercise the same pure modules imported by the native app. They are not a substitute for native file, database, screen-reader, audio or lifecycle tests. The 100 host state roundtrips are explicitly not 100 forced native process restarts.
+Host JavaScript tests exercise the same pure modules imported by the native app. They are not a substitute for native file, database, screen-reader, audio or lifecycle tests. Native execution, physical hardware and participant evaluation have separate coverage in the test report.
+
+## Deployment and maintenance
+
+Prepared lessons need no hosted service or recurring inference. An optional preparation backend can be operated by a school or content author with their own provider accounts. See [deployment, maintenance and product value](docs/OPERATIONS.md) for installation records, package backups, updates, credentials, health checks and cost controls.
 
 ## Repository map
 
@@ -79,4 +83,4 @@ Host JavaScript tests exercise the same pure modules imported by the native app.
 - `scripts/`: setup, build, install, doctor, sample generation and release validation.
 - `docs/`: platform, accessibility, privacy, measurements, study protocol and demo script.
 
-[Architecture](ARCHITECTURE.md), [AI development workflow](AI_WORKFLOW.md), [AI integration](AI_INTEGRATION.md), [third-party notices](THIRD_PARTY.md), and [sample provenance](samples/LICENSE.md) describe implementation and evidence boundaries. The selected specification is `official-2026-10-03/PLAN.md`; the root planning file is historical.
+[Architecture](ARCHITECTURE.md), [AI development workflow](AI_WORKFLOW.md), [AI integration](AI_INTEGRATION.md), [third-party notices](THIRD_PARTY.md), and [sample provenance](samples/LICENSE.md) describe implementation and evidence boundaries.

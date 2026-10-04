@@ -25,7 +25,7 @@ Next, try **Lumina** to explore an unfamiliar process, or the rainfall chart to 
 Follow the prerequisites in [platform setup](platform.md). With the documented Windows/WSL2 environment ready, download and install the signed release:
 
 ```powershell
-git clone --branch v1.0.1 --depth 1 https://github.com/Defozo/TouchMap.git
+git clone --branch main --depth 1 https://github.com/Defozo/TouchMap.git
 cd TouchMap
 ./scripts/setup-platform.ps1
 New-Item -ItemType Directory -Force dist

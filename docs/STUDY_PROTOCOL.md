@@ -1,6 +1,6 @@
 # Formative evaluation protocol
 
-No participant results are implied by this protocol. Participant recruitment and representative usefulness evidence remain unfulfilled until consenting learners and authors complete the sessions.
+This protocol defines a future evaluation with learners and authors. No participant results have been collected under it.
 
 Recruit 6-10 consenting blind or low-vision learners, with optional smaller formative sessions explicitly reported as such, and 2-4 teachers/content authors. Explain what is collected, allow withdrawal and breaks, and use participant codes without names. Do not collect a diagnosis or unrelated personal information. Physical help must be recorded as assistance, not silently supplied.
 
