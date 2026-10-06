@@ -7,6 +7,8 @@ An arrow on a worksheet can explain a whole process. TouchMap makes that connect
 
 Teachers turn diagrams into portable lessons with reviewed labels, relationships and questions. Learners choose touch, a list or single-button scanning, practise at their own pace and pick up an unfinished answer after a restart. Prepared lessons work offline without an account.
 
+The lesson preserves how objects connect: learners can follow an arrow to its destination, explore overlapping layers, return to a bookmark and answer questions about the same material. Teachers control the source, meaning and accepted answers before publication. This connects lesson preparation with independent practice in one native application.
+
 [Watch the narrated demo and download TouchMap](https://github.com/Defozo/TouchMap/releases/tag/v1.0.1), or follow the [guided native demo](docs/DEMO_ACCESS.md). The release includes the signed application, an English presentation and an editable PPTX with speaker notes. TouchMap runs as a native ArkTS/ArkUI application on OpenHarmony, with API 20 as its declared minimum. The Python preparation service and CLI support optional authoring workflows.
 
 ## Start the native application
@@ -35,11 +37,13 @@ The emulator wrapper runs headless. Connect a local VNC viewer to `127.0.0.1:590
 5. Begin another answer, leave or terminate the application, then reopen it. **Resume** restores the last explored object, submitted answer and unfinished selection. **Repeat context** describes the committed state.
 6. Export the teaching package and import it into a second installation. History and local acceptance are deliberately absent from teaching packages. History export is a separate action.
 
-The other examples are an unfamiliar branching **Lumina workshop** and a **rainfall chart** whose June value is explicitly unknown. The app must not interpret missing chart data as zero.
+The other examples are an unfamiliar branching **Lumina workshop** and a **rainfall chart** whose June value is explicitly unknown. Unknown values remain explicit throughout the lesson, so learners can distinguish a missing measurement from zero.
 
 ## Prepare and review a material
 
 Use **Import** to choose SVG, PNG/JPEG or an existing package. A raster source can be authored manually without a cloud call. The editor provides source overlays and coordinate forms, region and relationship edits, evidence, separate geometry/meaning review, chart values, question authoring, undo/redo and autosaved drafts. Editing creates a new content revision and invalidates affected reviews, questions and audio.
+
+Review stays attached to the material it describes. A question opens only when it has been reviewed and its facts match the lesson revision. Teachers can correct a diagram and see which related content needs another review before learners use it. Portable teaching packages keep reusable content separate from personal learning history.
 
 SVG conversion is available through the local CLI or a configured preparation service. Raster analysis is optional and requires explicit consent for the selected image. Generated content is a draft. Review arrow direction, labels, units, unknowns and question answers against the source before publishing. The **Ready offline** state additionally requires matching local assets and recordings. It is distinct from publication and from local acceptance of an imported author declaration.
 
@@ -65,9 +69,7 @@ uv sync --frozen
 uv run pytest
 ```
 
-Run `scripts/verify-release.ps1` for package integrity, schemas, native metadata and recorded technical verification. Its output distinguishes artifact errors from compatibility and participant checks that have not been performed. [Test results](docs/TEST_REPORT.md) distinguish host unit tests, real provider inference, native device tests and research gaps. [Release packaging](docs/RELEASE.md) explains how the committed sources, signed HAP, reviewed English demo, examples and checksums form one traceable local bundle.
-
-Host JavaScript tests exercise the same pure modules imported by the native app. They are not a substitute for native file, database, screen-reader, audio or lifecycle tests. Native execution, physical hardware and participant evaluation have separate coverage in the test report.
+Run `scripts/verify-release.ps1` for package integrity, schemas, native metadata and recorded technical verification. Host JavaScript tests exercise the same pure modules imported by the native app. Native checks run on the API 23 emulator; the [test report](docs/TEST_REPORT.md) records their results, supported environment and use limits. [Release packaging](docs/RELEASE.md) links the committed sources, signed HAP, reviewed English demo, examples and checksums into one traceable bundle.
 
 ## Deployment and maintenance
 
